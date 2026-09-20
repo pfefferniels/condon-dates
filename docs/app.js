@@ -160,8 +160,12 @@ function drawRegistry(data) {
   });
 
   const strip = el("div", "strip");
-  data.singles.forEach(({ druid, reading }) =>
-    strip.append(signature(druid, data.rolls[druid], reading)));
+  data.singles.forEach(({ druid, reading, note }) => {
+    const hand = el("div", "hand");
+    hand.append(signature(druid, data.rolls[druid], reading));
+    hand.append(el("div", "tag", [reading || "unread", note].filter(Boolean).join(" · ")));
+    strip.append(hand);
+  });
   document.getElementById("singles").append(strip);
 }
 

@@ -299,6 +299,15 @@ a { color: inherit; }
   background: var(--hover);
 }
 
+.hand .tag {
+  margin-top: 5px;
+  font-size: 11px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 footer {
   margin-top: 96px;
   padding-top: 24px;

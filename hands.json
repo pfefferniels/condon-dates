@@ -6,10 +6,10 @@
       "id": "wissler",
       "reading": "Wissler",
       "role": "countersignature",
-      "note": "Long, legible, double-s and -ler, umlaut bar over the second letter. 1911-1913.",
-      "rolls": ["nq087cp3030", "zx463rv8885", "xc665jf8254", "xp003dy0437", "wp442mf3514",
-                "sc188ff2842", "gs573tj9547", "bq744nq5945", "pv279zy5193", "vw531zy4220",
-                "jg717nb8731"]
+      "note": "Bar over the letter after the W, double-s, terminal -er. Written out from 1911; the 1909 specimen is the same hand at speed, with the -iss- collapsed into minims. 1909-1913.",
+      "rolls": ["ps751km7125", "nq087cp3030", "zx463rv8885", "xc665jf8254", "xp003dy0437",
+                "wp442mf3514", "sc188ff2842", "gs573tj9547", "bq744nq5945", "pv279zy5193",
+                "vw531zy4220", "jg717nb8731"]
     },
     {
       "id": "fritz",
@@ -123,8 +123,7 @@
     {"druid": "bj606rp8160", "reading": "J. H. M."},
     {"druid": "hh466mq4616", "reading": "Hauser"},
     {"druid": "xc665jf8254", "reading": null},
-    {"druid": "fv104hn7521", "reading": "Würth", "note": "the countersignature, not the Hohnrieder line above it"},
-    {"druid": "ps751km7125", "reading": null, "note": "the countersignature, not the Roth line above it"},
+    {"druid": "fv104hn7521", "reading": "Würth", "note": "countersignature"},
     {"druid": "ym420hv4366", "reading": "Langenbach"},
     {"druid": "rn154dd5329", "reading": "Mohr"},
     {"druid": "kg488qt3887", "reading": null},
