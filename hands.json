@@ -108,23 +108,28 @@
       "role": "signature",
       "note": "The only pencil hand among the early rolls. Oct 1907 - Apr 1908.",
       "rolls": ["sr504pc8797", "yr287jf4422", "yg150mb0559"]
+    },
+    {
+      "id": "mo",
+      "reading": "Mo.",
+      "role": "signature",
+      "note": "May-Aug 1913.",
+      "rolls": ["ky458kj7325", "gg920pz0818"]
     }
   ],
 
   "singles": [
-    {"druid": "zb497jz4405", "reading": "Hofmann"},
+    {"druid": "zb497jz4405", "reading": null},
     {"druid": "qq244fh1388", "reading": "E. Naumann"},
     {"druid": "bj606rp8160", "reading": "J. H. M."},
     {"druid": "hh466mq4616", "reading": "Hauser"},
     {"druid": "xc665jf8254", "reading": null},
     {"druid": "ym420hv4366", "reading": "Langenbach"},
-    {"druid": "rn154dd5329", "reading": "Mohr"},
+    {"druid": "rn154dd5329", "reading": null},
     {"druid": "kg488qt3887", "reading": null},
     {"druid": "tj337qh7786", "reading": "Schiffh[..]"},
     {"druid": "xx912rs1788", "reading": "Hst."},
     {"druid": "kr645mg0298", "reading": "A. Feaster"},
-    {"druid": "gg920pz0818", "reading": "Mb."},
-    {"druid": "ky458kj7325", "reading": "Mo."},
     {"druid": "pz175wg5571", "reading": "Smith"},
     {"druid": "vj052cw2158", "reading": null},
     {"druid": "vm423wb2944", "reading": null},
