@@ -6,7 +6,7 @@
       "id": "wissler",
       "reading": "Wissler",
       "role": "countersignature",
-      "note": "One hand writing its s two ways: the Kurrent long s, tall and descending, until early 1911, and the round Latin s from April 1911 on. Constant throughout are the double-arch W, the bar over the i and the terminal -er. 1909-1913.",
+      "note": "Changing from Kurrent to Latin from April 1911 on? 1909-1913.",
       "rolls": ["fv104hn7521", "ps751km7125", "nk632jz1564", "ys288dd6430", "bp952tr1116",
                 "zw485gh6070", "hh466mq4616", "qj203cn5343", "jt308hp0877", "dq276yn8963",
                 "xc665jf8254", "nq087cp3030", "zx463rv8885", "xp003dy0437", "wp442mf3514",
@@ -17,7 +17,7 @@
       "id": "fritz",
       "reading": "Fritz",
       "role": "signature",
-      "note": "Ornate F with a horizontal top bar. Writes the month as a word (Novb, Dezb, Jan, Febr). Nov 1908 - Feb 1909. This is the hand of roll 225.",
+      "note": "Writes month as word (Novb, Dezb, Jan, Febr). Nov 1908 - Feb 1909.",
       "rolls": ["mf320jq4997", "td134mh2760", "gq898yv9510", "gh208gz5033", "ch197br4742",
                 "ww627mg3287", "mh255vw4599", "yn137rt9938", "qg121rz6125"]
     },
@@ -25,7 +25,7 @@
       "id": "b-schaefer",
       "reading": "B. Schäfer",
       "role": "signature",
-      "note": "Broad nib, heavily looped and intertwined, signed without a roll number on some. 1904-1909. Distinct from the fine M. Schäfer.",
+      "note": "Signed without a roll number on some. 1904-1909. Distinct from the fine M. Schäfer.",
       "rolls": ["rv790qz2532", "xk500gs5691", "dj406yq6980", "hm523dq5554", "tp302mb4101",
                 "rp146dk0477", "cp145vd3423", "pd354nj6106", "mf940cg4339"]
     },
@@ -33,7 +33,7 @@
       "id": "kopf",
       "reading": "Kopf",
       "role": "signature",
-      "note": "Looped K, terminal f crossed by a slash. Five of these were transcribed only as an illegible word or name.",
+      "note": "",
       "rolls": ["mz508vq7890", "wj177bx9196", "jn782fq7439", "wb381qd3151", "sq235zh0909",
                 "jv484vp9065", "ps108fn1431"]
     },
@@ -41,7 +41,7 @@
       "id": "roth",
       "reading": "Roth",
       "role": "signature",
-      "note": "Small, sharply slanted, looped R. 1908-1911.",
+      "note": "1908-1911.",
       "rolls": ["ys288dd6430", "zx463rv8885", "vm096df0179", "ps751km7125", "zw485gh6070",
                 "dq276yn8963", "qj203cn5343"]
     },
@@ -49,7 +49,7 @@
       "id": "hohnrieder",
       "reading": "Hohnrieder",
       "role": "signature",
-      "note": "Two-stroke H with a looped left arm. Transcribed variously as Hohnrich, Hohmüller, Hohnreich and Hohn; the letterforms are one hand. 1908-1912.",
+      "note": "1908-1912.",
       "rolls": ["mv259zt7103", "fv104hn7521", "wj488tq5861", "vw531zy4220", "gs573tj9547",
                 "pv279zy5193"]
     },
@@ -57,56 +57,56 @@
       "id": "kraemer",
       "reading": "Krämer",
       "role": "signature",
-      "note": "Looped K, umlaut over the a. 1909-1912.",
+      "note": "Umlaut over the a. 1909-1912.",
       "rolls": ["qq914np5449", "xp003dy0437", "wp442mf3514", "sc188ff2842", "jt308hp0877"]
     },
     {
       "id": "kummer",
       "reading": "Kummer",
       "role": "signature",
-      "note": "Looped K with a curved left arm, long terminal stroke. 1907-1910.",
+      "note": "1907-1910.",
       "rolls": ["mx460bt7026", "dp563zh2166", "dc021nq1464", "bp952tr1116"]
     },
     {
       "id": "sph",
       "reading": "Sph.",
       "role": "signature",
-      "note": "An abbreviation, not a full name: a large looped initial and two short letters. 1913.",
+      "note": "Abbreviation. Only 1913.",
       "rolls": ["nq087cp3030", "bq744nq5945", "jg717nb8731"]
     },
     {
       "id": "herrmann",
       "reading": "J. Herrmann",
       "role": "signature",
-      "note": "Fine copperplate, no roll number and no date. The initial was read once as C and once as J; it is the same glyph.",
+      "note": "No roll number and no date.",
       "rolls": ["xn796bh4368", "qt363fp0799"]
     },
     {
       "id": "m-schaefer",
       "reading": "M. Schäfer",
       "role": "signature",
-      "note": "Fine copperplate, written along the roll rather than across it. No date.",
+      "note": "Written along the roll rather than across. No date.",
       "rolls": ["hq933dq4264", "tb707nd8515"]
     },
     {
       "id": "guendner",
       "reading": "Gündner",
       "role": "signature",
-      "note": "G with a deep descending loop, long flat terminal. Jan-Mar 1909.",
+      "note": "Jan-Mar 1909.",
       "rolls": ["vm351pv9656", "dw005gw3358"]
     },
     {
       "id": "schlegel",
       "reading": "Schlegel",
       "role": "signature",
-      "note": "A Kurrent name opening with a tall descending ligature, then -legel with a looped l. The ligature reads as Sch or as Pfl, so the name is equally Schlegel or Pflugel; on rb625rv7300 it follows the words Hans u. Two of the three are 1909-1910; the third is December 1919, a decade later, and its year has been checked at native resolution.",
+      "note": "Maybe Pflugel? On rb625rv7300 it follows the words Hans u. Two of the three are 1909-1910; the third is December 1919.",
       "rolls": ["nk632jz1564", "pj688nx2384", "rb625rv7300"]
     },
     {
       "id": "pencil-monogram",
       "reading": "M. W.?",
       "role": "signature",
-      "note": "A short pencil word: hooked initial, a narrow letter under a diacritic, a tall looped ascender. The only pencil hand among the early rolls. Read as M. W. here and as Wild on sr504pc8797, neither securely. Oct 1907 - Apr 1908.",
+      "note": "The only pencil hand among the early rolls. Oct 1907 - Apr 1908.",
       "rolls": ["sr504pc8797", "yr287jf4422", "yg150mb0559"]
     }
   ],
@@ -120,7 +120,7 @@
     {"druid": "ym420hv4366", "reading": "Langenbach"},
     {"druid": "rn154dd5329", "reading": "Mohr"},
     {"druid": "kg488qt3887", "reading": null},
-    {"druid": "tj337qh7786", "reading": "Schiff[..]"},
+    {"druid": "tj337qh7786", "reading": "Schiffh[..]"},
     {"druid": "xx912rs1788", "reading": "Hst."},
     {"druid": "kr645mg0298", "reading": "A. Feaster"},
     {"druid": "gg920pz0818", "reading": "Mb."},
