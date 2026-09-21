@@ -1,15 +1,17 @@
 {
-  "_": "Signature clusters, made by comparing the inscription images. The transcribed `hand` field in candidates.json was used only as corroboration: it both splits one person (Roth / Roth, Wisler / Krämer, Wössler) and merges two (the short countersignature transcribed Wössler on the 1910-11 rolls is a different hand from the long Wössler of 1911-13). `reading` is what the cluster's clearest specimen seems to say, not an identification.",
+  "_": "Signature clusters, made by comparing the inscription images. The transcribed `hand` field in candidates.json was used only as corroboration, since it splits one person across several spellings (Roth / Roth, Wisler; Hohnrich / Hohmüller / Hohn). The commonest trap is the Kurrent long s, which reads as pf or as f and makes one hand look like two. `reading` is what the cluster's clearest specimen seems to say, not an identification. A roll carrying two hands appears under both.",
 
   "clusters": [
     {
       "id": "wissler",
       "reading": "Wissler",
       "role": "countersignature",
-      "note": "Bar over the letter after the W, double-s, terminal -er. Written out from 1911; the 1909 specimen is the same hand at speed, with the -iss- collapsed into minims. 1909-1913.",
-      "rolls": ["ps751km7125", "nq087cp3030", "zx463rv8885", "xc665jf8254", "xp003dy0437",
-                "wp442mf3514", "sc188ff2842", "gs573tj9547", "bq744nq5945", "pv279zy5193",
-                "vw531zy4220", "jg717nb8731"]
+      "note": "One hand writing its s two ways: the Kurrent long s, tall and descending, until early 1911, and the round Latin s from April 1911 on. Constant throughout are the double-arch W, the bar over the i and the terminal -er. 1909-1913.",
+      "rolls": ["fv104hn7521", "ps751km7125", "nk632jz1564", "ys288dd6430", "bp952tr1116",
+                "zw485gh6070", "hh466mq4616", "qj203cn5343", "jt308hp0877", "dq276yn8963",
+                "xc665jf8254", "nq087cp3030", "zx463rv8885", "xp003dy0437", "wp442mf3514",
+                "sc188ff2842", "gs573tj9547", "bq744nq5945", "pv279zy5193", "vw531zy4220",
+                "jg717nb8731"]
     },
     {
       "id": "fritz",
@@ -42,14 +44,6 @@
       "note": "Small, sharply slanted, looped R. 1908-1911.",
       "rolls": ["ys288dd6430", "zx463rv8885", "vm096df0179", "ps751km7125", "zw485gh6070",
                 "dq276yn8963", "qj203cn5343"]
-    },
-    {
-      "id": "wipfel",
-      "reading": "Wipfel",
-      "role": "countersignature",
-      "note": "Short and compressed: W, i, a tall looped ascender, a short tail. 1910-1911. Transcribed as Wössler on several rolls, but it is not the Wissler hand.",
-      "rolls": ["ys288dd6430", "bp952tr1116", "zw485gh6070", "dq276yn8963", "qj203cn5343",
-                "jt308hp0877", "hh466mq4616"]
     },
     {
       "id": "hohnrieder",
@@ -105,8 +99,8 @@
       "id": "schlegel",
       "reading": "Schlegel",
       "role": "signature",
-      "note": "Long looped initial, thin even line. 1909-1910.",
-      "rolls": ["nk632jz1564", "pj688nx2384"]
+      "note": "A Kurrent name opening with a tall descending ligature, then -legel with a looped l. The ligature reads as Sch or as Pfl, so the name is equally Schlegel or Pflugel; on rb625rv7300 it follows the words Hans u. 1909-1919.",
+      "rolls": ["nk632jz1564", "pj688nx2384", "rb625rv7300"]
     },
     {
       "id": "pencil-monogram",
@@ -123,7 +117,6 @@
     {"druid": "bj606rp8160", "reading": "J. H. M."},
     {"druid": "hh466mq4616", "reading": "Hauser"},
     {"druid": "xc665jf8254", "reading": null},
-    {"druid": "fv104hn7521", "reading": "Würth", "note": "countersignature"},
     {"druid": "ym420hv4366", "reading": "Langenbach"},
     {"druid": "rn154dd5329", "reading": "Mohr"},
     {"druid": "kg488qt3887", "reading": null},
@@ -137,7 +130,6 @@
     {"druid": "vm423wb2944", "reading": null},
     {"druid": "ky445sz4630", "reading": null},
     {"druid": "qc650tp0469", "reading": null},
-    {"druid": "jw822wm2644", "reading": null},
-    {"druid": "rb625rv7300", "reading": "Hans u. Pflugel"}
+    {"druid": "jw822wm2644", "reading": null}
   ]
 }
