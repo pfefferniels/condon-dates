@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Regenerate docs/data/rolls.json from the dating run and the signature clustering.
+"""Regenerate docs/data/rolls.json from the roll data and the signature clustering.
 
-candidates.json belongs to another working copy and is read, never written.
+Both inputs live in this repo, so a clone rebuilds the site on its own. Refresh
+data/rolls.source.json with sync.py when the dating run re-emits candidates.json.
 """
 import html
 import json
@@ -10,11 +11,9 @@ from datetime import date
 from pathlib import Path
 
 HERE = Path(__file__).parent
-SOURCE = Path("/Users/nielspfeffer/Projects/welte225.org/punch-225/dates/candidates.json")
+SOURCE = HERE / "data" / "rolls.source.json"
 HANDS = HERE / "hands.json"
 TARGET = HERE / "docs" / "data" / "rolls.json"
-
-IIIF = re.compile(r"/iiif/[^/]+/(?P<box>[\d,]+)/[^/]+/(?P<rot>\d+)/default\.jpg$")
 
 
 def read_region(roll):
@@ -36,11 +35,7 @@ def read_region(roll):
 
 def image(region, variant):
     """The wider, more readable box, as a IIIF box and rotation the page can resize."""
-    view = region.get(variant) or region.get("view") or {}
-    match = IIIF.search(view.get("url") or "")
-    if not match:
-        return None
-    return {"box": match["box"], "rot": int(match["rot"])}
+    return region.get(variant) or region.get("view")
 
 
 def roll_entry(roll):
