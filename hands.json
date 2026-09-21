@@ -1,5 +1,5 @@
 {
-  "_": "Signature clusters, made by comparing the inscription images. The transcribed `hand` field in candidates.json was used only as corroboration, since it splits one person across several spellings (Roth / Roth, Wisler; Hohnrich / Hohmüller / Hohn). The commonest trap is the Kurrent long s, which reads as pf or as f and makes one hand look like two. `reading` is what the cluster's clearest specimen seems to say, not an identification. A roll carrying two hands appears under both.",
+  "_": "Signature clusters, made by comparing the inscription images. The transcribed `hand` field in candidates.json was used only as corroboration, since it splits one person across several spellings (Roth / Roth, Wisler; Hohnrich / Hohmüller / Hohn). The commonest trap is the Kurrent long s, which reads as pf or as f and makes one hand look like two. Judge any letterform on the crop fetched at /full/ from the IIIF endpoint, never on the cached 1500 px view: the downscale is harmless for reading a date and fatal for reading a hand. `reading` is what the cluster's clearest specimen seems to say, not an identification. A roll carrying two hands appears under both.",
 
   "clusters": [
     {
@@ -99,7 +99,7 @@
       "id": "schlegel",
       "reading": "Schlegel",
       "role": "signature",
-      "note": "A Kurrent name opening with a tall descending ligature, then -legel with a looped l. The ligature reads as Sch or as Pfl, so the name is equally Schlegel or Pflugel; on rb625rv7300 it follows the words Hans u. 1909-1919.",
+      "note": "A Kurrent name opening with a tall descending ligature, then -legel with a looped l. The ligature reads as Sch or as Pfl, so the name is equally Schlegel or Pflugel; on rb625rv7300 it follows the words Hans u. Two of the three are 1909-1910; the third is December 1919, a decade later, and its year has been checked at native resolution.",
       "rolls": ["nk632jz1564", "pj688nx2384", "rb625rv7300"]
     },
     {
