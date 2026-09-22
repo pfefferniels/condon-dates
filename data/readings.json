@@ -50,7 +50,7 @@
   "hand": null,
   "crop": {
    "box": "3510,517209,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-19.json",
   "notes": "pencil, four figures without separators, read from the lower panel; day, month, two-figure year as elsewhere in the corpus. The first figure carries the crossbar and stem of an open 4, and the second has two closed loops."
@@ -64,7 +64,7 @@
   "hand": null,
   "crop": {
    "box": "3487,198603,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-20.json",
   "notes": "crop 1, lower panel upright, pencil, one line in two groups; crop 2 is a torn roll end with no writing. The writing sits hard against the top edge of the crop, so the upper third of every figure is cut off, in both panels alike. Group 1 reads 1450. and is taken as the roll number. Group 2 is 11 . X . 14 .: the day 11 and the year 14 are firm, the month figure is a thick stroke with a base sweeping right, either a 2 or a 3, and the clipped top is exactly what would tell them apart. Day and year alone give 1914; the month is left open rather than guessed."
@@ -257,7 +257,7 @@
   "hand": null,
   "crop": {
    "box": "3470,119040,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-32.json",
   "notes": "stamped, upright in the lower panel and running slightly uphill. All six figures plain: 1 2 1 2 2 4, so 12.12.24. The same small serifed face as rd899zb5188, here evenly inked."
@@ -469,7 +469,7 @@
   "hand": null,
   "crop": {
    "box": "3474,219413,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-22.json",
   "notes": "crop 1, lower panel upright; ink, one line, no name. Number 2000 with a full stop, then the date with its own stops. The month is a closed loop carrying a descender below the line, a 9 and not the plain oval the three 0s of 2000 and 30 show. Year 13."
@@ -754,7 +754,7 @@
   "hand": null,
   "crop": {
    "box": "3499,483104,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-19.json",
   "notes": "pencil, four figures without separators, read from the lower panel; taken as day, month, two-figure year on the pattern of the other undivided dates in the corpus. The second figure has a closed upper loop and crossing strokes, so it is an 8 and not a 6; the first and third are the same 2."
@@ -1000,7 +1000,7 @@
   "hand": null,
   "crop": {
    "box": "3030,352446,780,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-22.json",
   "notes": "stamped in type, not written, lower panel upright; six figures without separators, read as ddmmyy on the pattern of 311022 = 31.10.1922 given in the instructions"
@@ -1437,7 +1437,7 @@
   "hand": null,
   "crop": {
    "box": "3491,259581,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-22.json",
   "notes": "fine pencil, lower panel upright; both year figures have the same hooked lead-in and downstroke as the day's '1' and the month's '1', with no crossbar, so the year is 11 and not 14; no puncher's name in the crop"
@@ -1591,7 +1591,7 @@
   "hand": null,
   "crop": {
    "box": "3523,556969,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-20.json",
   "notes": "crop 1, lower panel upright; pencil, one short line, nothing else in the crop. Six figures in two groups, 14 and 1123, all plain: the two 1s of the month repeat the flag of the first figure, and the 2 and 3 are distinct. Read as 14.11.23."
@@ -1778,7 +1778,7 @@
   "hand": null,
   "crop": {
    "box": "3551,192085,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-22.json",
   "notes": "crop 1, lower panel upright; pencil, five figures run together with no separators, read as 24.2.22. Figures 1, 3, 4 and 5 are the same 2, drawn with a top curl and a base sweeping right. Figure 2 is the arguable one: two arms meeting at a point with a single stem running well below the baseline. I take it for a 4; a crossed 7 would give 27.2.22, but a 7 in these hands sits on the line and is cut by a bar at mid height, and this glyph has neither. Crop 2 carries a separate small ink initial with a stop, not a date."
@@ -1976,7 +1976,7 @@
   "hand": null,
   "crop": {
    "box": "3501,100245,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-19.json",
   "notes": "ink, read from the lower panel. Six figures written without separators, the first five joined and the sixth after a pen lift: 2, 3, 1, 1, 2, 2. Both 2s carry the same loop, diagonal and foot, so the last figure is a 2 and not a 7. Day first gives 23.11.22. No roll number and no name in this crop."
@@ -2017,8 +2017,8 @@
   "roll_number": null,
   "hand": null,
   "crop": {
-   "box": "1502,225312,1244,6068",
-   "rot": 90
+   "box": "3372,236952,720,2300",
+   "rot": 270
   },
   "source": "deep-01.json",
   "notes": "Lower panel upright. Five pencil figures on bare paper, nothing else in the crop and no name. 2 (looped top, base swept right), 8 (two stacked loops), 7 (crossed, with the diagonal running below the baseline), 2, 2. The fourth figure has no descender, so it is a 2 and not the 9 a first glance suggests. The fifth is over-inked at the top but has the same looped top and right-swept base as the first and fourth. Read as the run-together day-month-year of the corpus, 28.7.22; the parse rests on that convention, since no separators are written."
@@ -2238,7 +2238,7 @@
   "hand": null,
   "crop": {
    "box": "3508,141922,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-22.json",
   "notes": "crop 1, lower panel upright; pencil, one line, no number and no name. Three groups with stops between them and a stop at the end. The day is the continental 7, a top stroke and a long diagonal with a short bar across it; the month is the same diagonal without the bar, a 1. The year is a 2 with a base sweeping right and a closed narrow 0."
@@ -2459,7 +2459,7 @@
   "hand": null,
   "crop": {
    "box": "3502,508992,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-22.json",
   "notes": "pencil, lower panel upright; six figures without separators, ddmmyy; no roll number or name in the crop"
@@ -2515,7 +2515,7 @@
   "hand": null,
   "crop": {
    "box": "3514,188785,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-09.json",
   "notes": "Fine dark strokes, one line, lower panel upright. Six figures run together without separators, 25 10 22. All six are plain; the two 2s at the end match the 2 that opens the line. No roll number or name in this crop."
@@ -2927,7 +2927,7 @@
   "hand": null,
   "crop": {
    "box": "3508,525898,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-18.json",
   "notes": "pencil, five figures without separators, read from the lower panel. Every figure is plain; the 8 has both bowls closed."
@@ -2983,7 +2983,7 @@
   "hand": null,
   "crop": {
    "box": "3493,401701,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-20.json",
   "notes": "crops 1-3 carry no writing, only creases and the paper edge; crop 4 lower panel upright, dark grainy scan. Day and month plain; the last figure is a stacked double bowl, read as 3, and only came out under a median filter."
@@ -3265,7 +3265,7 @@
   "hand": null,
   "crop": {
    "box": "3464,167168,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-20.json",
   "notes": "crop 1, lower panel upright; pencil, one line, no name. The line settles its own 6/8 question: the 8 of the day 18 is two closed bowls, while the month figure repeats the single-bowl open-topped form of the 6 in the number 1569. Year 12."
@@ -3378,7 +3378,7 @@
   "hand": "Smith",
   "crop": {
    "box": "3514,163708,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-18.json",
   "notes": "ink, a single line read from the lower panel. The three 4s are written alike, as an open 4, which settles the month and the year against 9. The name is read as Smith, the t and h sharing one long crossbar; Smits or Smitz would also fit the final letter."
@@ -3563,7 +3563,7 @@
   "hand": null,
   "crop": {
    "box": "3290,131531,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-33.json",
   "notes": "stamped, upright in the lower panel; all six figures plain, the 7 with a German crossbar. Same stamp face as xr433hz5827."
@@ -3605,7 +3605,7 @@
   "hand": null,
   "crop": {
    "box": "3465,184762,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-18.json",
   "notes": "pencil, large figures read from the lower panel. Both 8s have a closed upper loop and crossing strokes, so they are not 6s; the 2 carries a foot and a flourished tail."
@@ -3756,7 +3756,7 @@
   "hand": null,
   "crop": {
    "box": "3508,248598,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-19.json",
   "notes": "pencil, one short line read from the lower panel, nothing else on the roll here. The 9 has a closed bowl and a tail below the line; the two 1s are written alike."
@@ -3770,7 +3770,7 @@
   "hand": null,
   "crop": {
    "box": "3515,153594,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-32.json",
   "notes": "stamped, upright in the lower panel. Five plain figures, 8 1 1 2 4, preceded by a heavily inked mark: a vertical with two bars projecting to the right and a detached blob below. I first took that mark for an over-inked 1 and read 18.11.24. The same mark, with the same detached blob, precedes the figures on yk645sm6970 in batch 33 and on jd143sb1087 in this batch, and on yk645sm6970 it cannot be a digit, since no six-figure grouping of what follows gives a date. Read as a fixed slug, so the figures are 8.11.24. All three rolls carry the mark and five figures, the leading zeros dropped."
@@ -4097,7 +4097,7 @@
   "hand": null,
   "crop": {
    "box": "3532,192798,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-16.json",
   "notes": "pencil, single line, read from the lower panel. The 1 and 2 of the closing 12 match the opening 1262, which settles those figures; the 20 resolves to 2 + 0 under threshold."
@@ -4234,7 +4234,7 @@
   "hand": null,
   "crop": {
    "box": "3511,113987,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-22.json",
   "notes": "crop 1, lower panel upright; pencil, one line, no name. Six figures in two groups, 11 and 1019: three 1s sharing the same flag, a narrow closed 0, and a 9 with a round head and a descender below the line. Read as 11.10.19."
@@ -4361,7 +4361,7 @@
   "hand": null,
   "crop": {
    "box": "3500,73267,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-07.json",
   "notes": "ink on dark red paper, reads upright in the lower panel"
@@ -4663,7 +4663,7 @@
   "hand": null,
   "crop": {
    "box": "3535,113352,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-11.json",
   "notes": "Pencil, one line, lower panel upright. Five figures run together without separators, 15 2 24. The 1 and 5 are plain, the two middle figures are the same 2 with its flat base stroke, and the 4 is the open-top form. No roll number or name in this crop."
@@ -4856,7 +4856,7 @@
   "hand": null,
   "crop": {
    "box": "3497,110820,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-11.json",
   "notes": "Fine pencil, one line, lower panel upright. Dots separate the three groups. No roll number or name."
@@ -4968,7 +4968,7 @@
   "hand": null,
   "crop": {
    "box": "3504,198644,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-20.json",
   "notes": "crop 1, lower panel upright; pencil, nothing else in the crop. Five figures, no separators: 1 9 8 1 4. The 8 has both bowls closed and crossing, so it is not the open-topped 6 that reading.md warns of; the 9 has a closed head and a descender; the two 1s share the same leading flag. Read as 19.8.14."
@@ -5123,7 +5123,7 @@
   "hand": null,
   "crop": {
    "box": "3567,145496,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-32.json",
   "notes": "ink, upright in the lower panel, the same steeply leaning hand as xg976jt9573; read after shearing the line upright. Six figures without separators: 1, 4, 1, 1, 2, 4, giving 14.11.24. The two 4s are written alike, a crossbar with a descender, and are the least certain figures; the 2 has the usual base stroke."
@@ -5344,7 +5344,7 @@
   "hand": null,
   "crop": {
    "box": "3505,207441,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-32.json",
   "notes": "ink, upright in the lower panel, a steeply right-leaning hand; read after shearing the line upright. Six figures, evenly spaced and without separators: 1, 4, 1, 9, 2, 5. The 9 is a closed loop with a plain descender, distinct from the 2 beside it, which carries the usual base stroke. Of the possible groupings only 1 | 4 | 1925 gives a date, so 1 April 1925; 14 | 19 | 25 would need a nineteenth month. The 4 is the least certain figure. Crop 2 carries a pencilled four-figure number, 5571 or 5521, its third figure crossed like a 7; crop 3 shows the printed label, WELTE-MIGNON No. 5521, 'My Isle of Golden Dreams', Waltz, Walter Blaufuss, played by Henry Dark. Crop 4 not needed."
@@ -5719,7 +5719,7 @@
   "hand": null,
   "crop": {
    "box": "2766,163582,516,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-33.json",
   "notes": "stamped, running down the roll at about sixty degrees, upright in the lower panel after rotation. A heavily inked mark, a vertical with two bars projecting to the right and a detached blob below it, stands before five plain figures, 1 8 1 2 8. The same mark, down to the detached blob, precedes the figures on rd899zb5188 and jd143sb1087 in batch 32, and on none of the three can it be read as a figure without destroying the date, so I take it for a fixed slug rather than a digit. Five figures with the leading zeros dropped give 18.1.28. Later than the 1904-1926 span reading.md reports, as is md908xy8241."
@@ -5761,7 +5761,7 @@
   "hand": null,
   "crop": {
    "box": "3499,453430,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-20.json",
   "notes": "crops 1-2 hold only creases and scanner lines; crop 3 lower panel upright, pencil, no other writing in the crop. Five figures run together with no separators, all five plain: 1 8 1 2 3. Grouped as day-month-year after the convention reading.md gives for 14114, which makes it 18.1.23. The alternative grouping 18.12. would leave a one-figure year, so it is set aside."
@@ -5803,7 +5803,7 @@
   "hand": null,
   "crop": {
    "box": "3504,453980,460,1900",
-   "rot": 90
+   "rot": 270
   },
   "source": "batch-20.json",
   "notes": "crop 1, lower panel upright; ink, strongly slanted, nothing else written in the crop. Five figures run together, closed by a full stop: 3 0 4 2 0. The second and fifth are the same narrow slanted oval, which fixes both as 0; the 4 is plain; the 2 is the softest figure. Read as day-month-year, 30.4.20. A 31 for the day is excluded by the shape and by April having 30 days."
