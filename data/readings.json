@@ -157,7 +157,6 @@
   "confidence": "high",
   "roll_number": "699",
   "hand": "Kummer",
-  "hand_source": "the short countersignature, as on ys288dd6430",
   "crop": {
    "box": "3398,283057,584,1900",
    "rot": 90
@@ -630,7 +629,6 @@
   "confidence": "high",
   "roll_number": "1445",
   "hand": "Roth, Wißler",
-  "hand_source": "the short countersignature, as on ys288dd6430",
   "crop": {
    "box": "3478,156525,478,1900",
    "rot": 90
@@ -1577,7 +1575,6 @@
   "confidence": "high",
   "roll_number": "296",
   "hand": "Hauser / Wipfel(?)",
-  "hand_source": "the reader's own guess at Wipfel, confirmed against the five rolls above",
   "crop": {
    "box": "3422,165266,565,1900",
    "rot": 90
@@ -2073,7 +2070,6 @@
   "confidence": "high",
   "roll_number": "2148",
   "hand": "Kummer",
-  "hand_source": "the short countersignature, as on ys288dd6430",
   "crop": {
    "box": "3505,180845,460,1900",
    "rot": 90
@@ -3523,7 +3519,6 @@
   "confidence": "high",
   "roll_number": "1459",
   "hand": "Roth, Wißler",
-  "hand_source": "the short countersignature, as on ys288dd6430",
   "crop": {
    "box": "3454,119353,488,1964",
    "rot": 90
@@ -5834,7 +5829,6 @@
   "confidence": "high",
   "roll_number": "118",
   "hand": "Roth / Wössler",
-  "hand_source": "the short countersignature, W with one tall looped ascender and a short tail, no double-s and no -ler; not the long Wissler of 1911-13 that the transcriptions merged it with",
   "crop": {
    "box": "3278,190000,667,1900",
    "rot": 90
@@ -6145,7 +6139,6 @@
   "confidence": "high",
   "roll_number": "1184",
   "hand": "Roth",
-  "hand_source": "the short countersignature, as on ys288dd6430",
   "crop": {
    "box": "3438,142211,550,1900",
    "rot": 90
