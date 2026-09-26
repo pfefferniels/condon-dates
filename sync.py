@@ -4,8 +4,9 @@
     python3 sync.py [punch-225/dates]
 
 That working copy is owned by another project and is read, never written. It supplies
-what Stanford catalogues about each roll, whether a scan of it exists and the columns at
-which the paper begins and ends in it, and the two sweeps that measured the perforator on
+what Stanford catalogues about each roll, whether a scan of it exists and where in it the
+paper lies (its first and last columns, its length, and the rows of its first and last
+hole), and the two sweeps that measured the perforator on
 every scan: pitch.json (chain pitch, slot, bridge, Teilung, the parser's hole width) and
 step.json (the advance). The scripts that take those measurements stay in punch-225; this
 repo keeps and publishes their results, together with the commit of welte225.org they were
@@ -27,7 +28,8 @@ ROLL_FIELDS = ("druid", "welte_number", "callnum", "title", "performer")
 
 def trim(roll):
     return {**{f: roll.get(f) for f in ROLL_FIELDS}, "scanned": bool(roll.get("regions")),
-            "paper": roll.get("paper_columns")}
+            "paper": roll.get("paper_columns"), "length": roll.get("image_length"),
+            "holes": [roll.get("first_hole"), roll.get("last_hole")]}
 
 
 def keyed(rows):
