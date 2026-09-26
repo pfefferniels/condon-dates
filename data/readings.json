@@ -4750,18 +4750,18 @@
   "notes": "read here at magnification. The day's first figure could be 2 or 9, which does not matter. This copy has the new pitch, 2.503 mm, two and a half years before roll 225's January 1914 copy has the old one."
  },
  "vj052cw2158": {
-  "inscription": "1354 .  B[...]  1. 2. 16",
-  "reading": "1. 2. 16",
-  "date_iso": "1916-02-01",
-  "confidence": "medium",
+  "inscription": "1354 .  B[...]  1. 2. 10",
+  "reading": "1. 2. 10",
+  "date_iso": "1910-02-01",
+  "confidence": "high",
   "roll_number": "1354",
   "hand": null,
   "crop": {
    "box": "3490,190129,460,1900",
    "rot": 90
   },
-  "source": "batch-20.json",
-  "notes": "crop 1, upper panel upright; pencil over the scanner's ruled lines. Number 1354, then a surname in a capital B and a run of minims that I cannot resolve and have not guessed, then the date. Day 1 and month 2 are plain. The year is 1 followed by a figure made of one descending curve closing into a single bowl on the baseline, with a short detached tick at its right: a 6 rather than the two-stroke 8 reading.md warns of, whose limbs would converge into a V above the bowl. No other 6 or 8 stands on the line to compare, so the 8 cannot be ruled out entirely."
+  "source": "authoritative.json",
+  "notes": "read by the editor on the scan on 2026-09-26: the year is 10. The reader gave 16, taking the 1 and the 0 of the year for a single 6. The question was raised by the paper, ruled paper otherwise found only on copies punched between January 1907 and January 1910, and by its advance of 0.5 mm, used only from December 1909. The number written on the paper is 1354, against the catalogue's 1534; the surname after it, a capital B and a run of minims, is not resolved."
  },
  "vj076nk8220": {
   "inscription": "81123",
