@@ -14,39 +14,39 @@
   {
    "@id": "papers#red-warm",
    "name": "warm red paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/cd3932716af5225da002e2c9a130d308c47bec32/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/f6ec84ec54d2a4d2ff50c2898cebea36b6a66516/paper/colour.py",
    "comment": "Paper whose corrected colour has a* at least 10 and b* at least 15."
   },
   {
    "@id": "papers#red-warm-bright",
    "name": "bright warm red paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/cd3932716af5225da002e2c9a130d308c47bec32/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/f6ec84ec54d2a4d2ff50c2898cebea36b6a66516/paper/colour.py",
    "comment": "Paper whose corrected colour has warm red with a* at least 32.",
    "broader": "papers#red-warm"
   },
   {
    "@id": "papers#red-cool",
    "name": "cool red paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/cd3932716af5225da002e2c9a130d308c47bec32/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/f6ec84ec54d2a4d2ff50c2898cebea36b6a66516/paper/colour.py",
    "comment": "Paper whose corrected colour has a* at least 10 and b* under 15."
   },
   {
    "@id": "papers#red-cool-light",
    "name": "light cool red paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/cd3932716af5225da002e2c9a130d308c47bec32/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/f6ec84ec54d2a4d2ff50c2898cebea36b6a66516/paper/colour.py",
    "comment": "Paper whose corrected colour has cool red with L* at least 38.",
    "broader": "papers#red-cool"
   },
   {
    "@id": "papers#buff",
    "name": "buff paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/cd3932716af5225da002e2c9a130d308c47bec32/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/f6ec84ec54d2a4d2ff50c2898cebea36b6a66516/paper/colour.py",
    "comment": "Paper whose corrected colour has a* from 3 to under 10."
   },
   {
    "@id": "papers#green",
    "name": "green paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/cd3932716af5225da002e2c9a130d308c47bec32/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/f6ec84ec54d2a4d2ff50c2898cebea36b6a66516/paper/colour.py",
    "comment": "Paper whose corrected colour has a* under 3."
   }
  ]
