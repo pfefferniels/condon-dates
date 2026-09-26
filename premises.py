@@ -49,6 +49,11 @@ PUBLISHER = {"name": "Niels Pfeffer", "sameAs": []}
 # medium (dates/reading.md), and dated to the day, since a bound is a day.
 DATED = ("high", "medium")
 
+# A bound rests on the copy at its edge alone, so that copy's reading has to be sure: graded
+# high, or verified by the editor on the scan (`verified` in data/readings.json). A premise
+# whose edge copy is read at medium confidence and not yet verified is held possible at most,
+# and its note names the copy to read again.
+
 # The advance counts where the slot lengths keep it at this strength, and it is the early
 # setting in this band and the late one below the second figure; a period of 1.4 to 1.6 mm
 # is noise (dates/summary.py).
@@ -82,7 +87,8 @@ RULED = {"id": "ruled", "name": "ruled paper", "rule": "printed with a line alon
                        "paper/ruling.py finds as the periodic component of the paper's profile at the track pitch."}
 
 # What is stated of a class, and how firmly: a bound held likely rests on many dated
-# copies, one held possible on a handful.
+# copies, one held possible on a handful. A bound resting on a reading not yet sure is held
+# possible whatever it says here (held()).
 PAPER_PREMISES = [("ruled", "before", "likely"), ("red-cool", "after", "likely"), ("red-warm-bright", "between", "likely"),
                   ("red-cool-light", "between", "possible"), ("buff", "between", "possible"),
                   ("green", "between", "possible")]
@@ -131,10 +137,34 @@ def setting(name, advance):
             "condition": {"conditionType": "setting", "advance": {"value": advance, "unit": "mm"}}}
 
 
-def reread(row, readings):
-    """A sentence saying that a bounding copy's date is the editor's own reading, where it is."""
-    return (f" The date of Welte {row['welte']} is the editor's reading on the scan (data/readings.json)."
-            if readings[row["druid"]].get("source") == "authoritative.json" else "")
+def sure(row, readings):
+    """Whether a copy's reading may carry a bound: graded high, or verified by the editor."""
+    reading = readings[row["druid"]]
+    return reading["confidence"] == "high" or bool(reading.get("verified"))
+
+
+def edges(rows, readings):
+    """What the note says of the copies a bound rests on: verified, or wanting a second reading."""
+    said = []
+    for row in rows:
+        if readings[row["druid"]].get("verified"):
+            said.append(f"The date of Welte {row['welte']} is the editor's reading on the scan "
+                        "(data/readings.json).")
+        elif not sure(row, readings):
+            said.append(f"The date of Welte {row['welte']} is read at medium confidence and wants reading "
+                        "again on the scan (data/readings.json); until it is, the premise is held possible.")
+    return "".join(" " + sentence for sentence in said)
+
+
+def held(certainty, rows, readings):
+    """The certainty a premise can be held with, given the copies its bounds rest on."""
+    return "possible" if certainty == "likely" and not all(sure(row, readings) for row in rows) else certainty
+
+
+def unsure(productions_rows, readings):
+    """The copies bounds rest on whose readings want verifying, for the build to list."""
+    return sorted({(row["date"], row["welte"], row["druid"]) for rows in productions_rows for row in rows
+                   if not sure(row, readings)})
 
 
 def advance_premises(evidence, readings, used):
@@ -147,21 +177,21 @@ def advance_premises(evidence, readings, used):
     return [
         {"@id": "premises#advance-1mm", "company": WELTE, "system": {"@id": T100},
          "perforator": setting("advance-1mm", statistics.median(row["advance"] for row in early)),
-         "date": {"before": first_late["date"], **believed("advance-1mm", "likely", [{
+         "date": {"before": first_late["date"], **believed("advance-1mm", held("likely", [first_late], readings), [{
              "@type": "inference", "premises": [], "used": used,
              "note": f"{counted} The perforator was re-set to the late advance by the day of the first late "
                      f"copy, {copy_of(first_late)}, and the bound rests on that copy's date alone. The early "
                      "advance resolves on the rolls of three hands only, and on none before 1908, so it is "
                      "attested on fewer rolls than it was used on (dates/README.md)."
-                     + reread(first_late, readings)}])}},
+                     + edges([first_late], readings)}])}},
         {"@id": "premises#advance-half-mm", "company": WELTE, "system": {"@id": T100},
          "perforator": setting("advance-half-mm", statistics.median(row["advance"] for row in late)),
-         "date": {"after": last_early["date"], **believed("advance-half-mm", "likely", [{
+         "date": {"after": last_early["date"], **believed("advance-half-mm", held("likely", [last_early], readings), [{
              "@type": "inference", "premises": [], "used": used,
              "note": f"{counted} The perforator was still at the early advance on the day of the last early "
                      f"copy, {copy_of(last_early)}, and the bound rests on that copy's date alone. The rolls "
                      "before it that do not resolve are not late-advance rolls hiding: a comb at 0.5 mm is the "
-                     "easier of the two to see (dates/README.md)." + reread(last_early, readings)}])}},
+                     "easier of the two to see (dates/README.md)." + edges([last_early], readings)}])}},
     ]
 
 
@@ -215,11 +245,21 @@ def chance(narrow, broad):
     return observed, float(np.median(draws)), int((draws <= observed).sum())
 
 
+def bounding(paper, bound):
+    """The dated copies a class's bounds rest on."""
+    first, last = paper["copies"][0], paper["copies"][-1]
+    return {"after": [first], "before": [last]}.get(bound, [first, last])
+
+
+def copies(n):
+    return f"{n} dated cop{'y' if n == 1 else 'ies'}"
+
+
 def paper_note(paper, bound, classes, dated, readings):
-    copies, first, last = paper["copies"], paper["copies"][0], paper["copies"][-1]
+    first, last = paper["copies"][0], paper["copies"][-1]
     how = paper["rule"] if paper["id"] == "ruled" else f"{paper['rule']}, corrected CIELAB"
     note = [f"{paper['members']} rolls measure as {paper['name']} ({how}), "
-            f"{len(copies)} of them dated to the day at high or medium confidence, from {first['date']} "
+            f"{len(paper['copies'])} of them dated to the day at high or medium confidence, from {first['date']} "
             f"to {last['date']}."]
     wide, narrow = paper["machines"]["wide"], paper["machines"]["narrow"]
     note.append(f"All {narrow} whose chain pitch is measured were punched on the narrow perforator." if not wide
@@ -250,17 +290,14 @@ def paper_note(paper, bound, classes, dated, readings):
                     f"the ninetieth percentile, against {median:.1f} years for random groups of as many dated "
                     f"copies of {broad['name']}, of which {as_close} in {DRAWS} were as close.")
         outside = [d for d in paper["edge"] if not first["date"] <= d <= last["date"]]
-        note.append(f"Within a unit of the rule's edge lie {len(paper['edge'])} dated copies"
+        note.append(f"Within a unit of the rule's edge {'lies' if len(paper['edge']) == 1 else 'lie'} "
+                    f"{copies(len(paper['edge']))}"
                     + ((f"; that of {outside[0]} lies" if len(outside) == 1 else f"; those of {', '.join(outside)} lie")
                        + " outside the window and would widen it under a looser rule." if outside
                        else ", all inside the window."))
-    bounding = {"after": [first], "before": [last]}.get(bound, [first, last])
-    reread = [row for row in bounding if readings[row["druid"]].get("source") == "authoritative.json"]
-    for row in reread:
-        note.append(f"The date of Welte {row['welte']} is the editor's reading on the scan (data/readings.json).")
-    if len(copies) < 10:
-        note.append(f"The class is attested on {len(copies)} dated copies only.")
-    return " ".join(note)
+    if len(paper["copies"]) < 10:
+        note.append(f"The class is attested on {copies(len(paper['copies']))} only.")
+    return " ".join(note) + edges(bounding(paper, bound), readings)
 
 
 def paper_premises(classes, dated, readings, used):
@@ -273,7 +310,7 @@ def paper_premises(classes, dated, readings, used):
         productions.append({
             "@id": f"premises#{name}", "company": WELTE, "system": {"@id": T100},
             "paper": {"@id": f"papers#{pid}", "name": paper["name"]},
-            "date": {**span, **believed(name, certainty, [{
+            "date": {**span, **believed(name, held(certainty, bounding(paper, bound), readings), [{
                 "@type": "inference", "premises": [], "used": used,
                 "note": paper_note(paper, bound, classes, dated, readings)}])},
         })
@@ -370,4 +407,8 @@ def build(docs, catalogue, readings, perforator, colours, rulings, published):
         "productions": productions,
     })
     write(docs / "context.jsonld", context())
+    wanting = unsure([[evidence["late"][0]], [evidence["early"][-1]]]
+                     + [bounding(classes[pid], bound) for pid, bound, _ in PAPER_PREMISES], readings)
+    for day, welte, druid in wanting:
+        print(f"a bound rests on Welte {welte} of {day} ({druid}), read at medium confidence: verify it")
     return productions

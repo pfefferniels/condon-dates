@@ -84,6 +84,16 @@ just outside the rule's edge, so that a reader sees what the rule decides. A dat
 a class that falls outside its window is worth reading again: Welte 292 and Welte 1534
 were, and both were misread, the one as 1914 for 1924, the other as 1916 for 1910.
 
+Every bound rests on the dated copy at its edge alone, so that copy's reading has to be
+sure. The premises count every reading graded high or medium (`dates/reading.md`: medium
+has one figure arguable but the date not in doubt), since leaving a reading out can only
+narrow a window, never make it safer. But a bound may rest only on a reading graded high
+or verified by the editor on the scan (`verified` in `data/readings.json`). Where it rests
+on a medium reading not yet verified, the premise is held possible at most and its reasons
+name the copy to read again; each build lists those copies. The grade is no guarantee
+either way: of the six readings the editor has corrected, three had been graded high by
+their readers and a fourth raised to high on a second look.
+
 The counts, the bounds and the copies each bound rests on are worked out from
 `data/readings.json`, `data/perforator.json`, `paper/colour.json` and `paper/ruling.json` on
 every build, so a

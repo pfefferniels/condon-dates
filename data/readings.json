@@ -1531,6 +1531,7 @@
   "reading": "23 23",
   "date_iso": "1923-03-02",
   "confidence": "high",
+  "verified": "2026-09-26",
   "roll_number": null,
   "hand": null,
   "crop": {
@@ -1933,6 +1934,7 @@
   "reading": "23. 8. 19",
   "date_iso": "1919-08-23",
   "confidence": "high",
+  "verified": "2026-09-26",
   "roll_number": null,
   "hand": null,
   "crop": {
@@ -3724,6 +3726,7 @@
   "reading": "16.12.09",
   "date_iso": "1909-12-16",
   "confidence": "high",
+  "verified": "2026-09-22",
   "roll_number": "569",
   "hand": "Hans u. Pflugel",
   "crop": {
@@ -4740,6 +4743,7 @@
   "reading": "29. 8. 19",
   "date_iso": "1919-08-29",
   "confidence": "high",
+  "verified": "2026-09-26",
   "roll_number": null,
   "hand": null,
   "crop": {
@@ -4754,6 +4758,7 @@
   "reading": "1. 2. 10",
   "date_iso": "1910-02-01",
   "confidence": "high",
+  "verified": "2026-09-26",
   "roll_number": "1354",
   "hand": null,
   "crop": {
@@ -5880,6 +5885,7 @@
   "reading": "25624",
   "date_iso": "1924-06-25",
   "confidence": "high",
+  "verified": "2026-09-26",
   "roll_number": null,
   "hand": null,
   "crop": {

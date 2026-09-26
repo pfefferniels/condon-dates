@@ -97,6 +97,12 @@ One record per roll, whether or not anything was found:
   arguable but the date is not in doubt; `low` if the reading could be a
   different date; `none` if nothing was read.
 
+Readers do not set one field that `../data/readings.json` carries:
+
+- `verified` — the day the editor read the date again on the scan and
+  confirmed it, where they have. A premise's bound may rest on a reading at
+  medium confidence only once it is verified (`../premises.py`).
+
 A roll can carry writing that is not a date at all: a title, a performer's
 name, a later owner's note. Record it in `inscription` with
 `confidence: "none"` and `date_iso: null`, and say in `notes` what it seems
