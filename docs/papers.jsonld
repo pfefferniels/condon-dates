@@ -14,45 +14,45 @@
   {
    "@id": "papers#red-warm",
    "name": "warm red paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/851bc53eeaae4b4297524079af957fcf778d0620/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/efdffef9c7ea0fc1c36c2ed8d965da3e8db6dd1b/paper/colour.py",
    "comment": "Paper whose corrected colour has a* at least 10 and b* at least 15."
   },
   {
    "@id": "papers#red-warm-bright",
    "name": "bright warm red paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/851bc53eeaae4b4297524079af957fcf778d0620/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/efdffef9c7ea0fc1c36c2ed8d965da3e8db6dd1b/paper/colour.py",
    "comment": "Paper whose corrected colour has warm red with a* at least 32.",
    "broader": "papers#red-warm"
   },
   {
    "@id": "papers#red-cool",
    "name": "cool red paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/851bc53eeaae4b4297524079af957fcf778d0620/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/efdffef9c7ea0fc1c36c2ed8d965da3e8db6dd1b/paper/colour.py",
    "comment": "Paper whose corrected colour has a* at least 10 and b* under 15."
   },
   {
    "@id": "papers#red-cool-light",
    "name": "light cool red paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/851bc53eeaae4b4297524079af957fcf778d0620/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/efdffef9c7ea0fc1c36c2ed8d965da3e8db6dd1b/paper/colour.py",
    "comment": "Paper whose corrected colour has cool red with L* at least 38.",
    "broader": "papers#red-cool"
   },
   {
    "@id": "papers#buff",
    "name": "buff paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/851bc53eeaae4b4297524079af957fcf778d0620/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/efdffef9c7ea0fc1c36c2ed8d965da3e8db6dd1b/paper/colour.py",
    "comment": "Paper whose corrected colour has a* from 3 to under 10."
   },
   {
    "@id": "papers#green",
    "name": "green paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/851bc53eeaae4b4297524079af957fcf778d0620/paper/colour.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/efdffef9c7ea0fc1c36c2ed8d965da3e8db6dd1b/paper/colour.py",
    "comment": "Paper whose corrected colour has a* under 3."
   },
   {
    "@id": "papers#ruled",
    "name": "ruled paper",
-   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/851bc53eeaae4b4297524079af957fcf778d0620/paper/ruling.py",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/efdffef9c7ea0fc1c36c2ed8d965da3e8db6dd1b/paper/ruling.py",
    "comment": "Paper printed with a fine dark line along each track, on the track centres, which paper/ruling.py finds as the periodic component of the paper's profile at the track pitch."
   }
  ]
