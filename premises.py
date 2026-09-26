@@ -16,7 +16,7 @@ link the dated copies it rests on, the data and the scripts, at the commits they
     docs/evidence/<name>.json    the copies a premise rests on, at evidence/<name>
     docs/context.jsonld          the terms linked-rolls does not have yet
 
-Who signed the rolls is not a premise but an identity, and names.py publishes it apart.
+Who signed the rolls is not a premise but an identity, and hands.py publishes it apart.
 
 The IRIs stand on w3id.org, which w3id/welte-premises/.htaccess redirects to the files on
 GitHub Pages. They are named after what they state, never numbered, so a rebuild keeps
@@ -36,7 +36,7 @@ CONDON_DATES = "https://github.com/pfefferniels/condon-dates/blob/{commit}/"
 PUNCH_225 = "https://github.com/pfefferniels/welte225.org/blob/{commit}/punch-225/"
 
 T100 = "https://w3id.org/reo/type/system/welte-t100"
-WELTE = {"name": "M. Welte & Söhne", "sameAs": []}
+WELTE = {"name": "M. Welte & Söhne", "sameAs": ["https://d-nb.info/gnd/5125268-5"]}
 PUBLISHER = {"name": "Niels Pfeffer", "sameAs": []}
 
 # A copy counts as dated where its date is held true or likely: a reading graded high or

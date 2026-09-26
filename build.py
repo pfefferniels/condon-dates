@@ -5,7 +5,7 @@ signature clustering and the perforator measurements.
 All four live in this repo, so a clone rebuilds the site on its own. data/readings.json
 is the record of what was read off each roll and is corrected by hand here. Refresh
 data/catalogue.json and data/perforator.json with sync.py when punch-225 re-indexes or
-re-measures the rolls. premises.py writes the premises the measurements allow, names.py
+re-measures the rolls. premises.py writes the premises the measurements allow, hands.py
 the hands as authority records.
 """
 import html
@@ -15,7 +15,7 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
-import names
+import hands as hand_records
 import premises
 
 HERE = Path(__file__).parent
@@ -105,9 +105,9 @@ def main():
     print(f"wrote {TARGET.relative_to(HERE)} ({TARGET.stat().st_size // 1024} kB)")
 
     stated = premises.build(DOCS, rolls, readings, perforator, today)
-    named = names.build(DOCS, hands)
+    named = hand_records.build(DOCS, hands)
     print(f"wrote {len(stated)} premises to docs/premises.jsonld with their evidence in docs/evidence/, "
-          f"and {len(named)} hands to docs/names/hands.jsonld")
+          f"and {len(named)} hands to docs/hands.jsonld")
 
 
 if __name__ == "__main__":
