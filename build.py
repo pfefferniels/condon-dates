@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Regenerate docs/data/rolls.json and the premises from the catalogue, the readings, the
-signature clustering and the perforator measurements.
+"""Regenerate the site and the premises from what this repository holds.
 
-All four live in this repo, so a clone rebuilds the site on its own. data/readings.json
-is the record of what was read off each roll and is corrected by hand here. Refresh
-data/catalogue.json and data/perforator.json with sync.py when punch-225 re-indexes or
-re-measures the rolls. premises.py writes the premises the measurements allow, hands.py
-the hands as authority records.
+Everything lives here, so a clone rebuilds the site on its own. data/readings.json is the
+record of what was read off each roll and is corrected by hand here. The index of the rolls
+comes from the search of the scans in dates/candidates.json, the perforator from the two
+sweeps in perforator/, the paper from paper/, the hands from hands.json. data/catalogue.json
+and data/perforator.json are written from them on every build, as the trimmed views the
+other scripts read; they are not edited. premises.py writes the premises the measurements
+allow, hands.py the hands as authority records.
 """
 import html
 import json
@@ -21,6 +22,8 @@ import hands as hand_records
 import premises
 
 HERE = Path(__file__).parent
+CANDIDATES = HERE / "dates" / "candidates.json"
+SWEEPS = HERE / "perforator"
 CATALOGUE = HERE / "data" / "catalogue.json"
 READINGS = HERE / "data" / "readings.json"
 HANDS = HERE / "hands.json"
@@ -32,6 +35,30 @@ TARGET = DOCS / "data" / "rolls.json"
 MEASURES = DOCS / "data" / "measures.json"
 
 ISO_DATE = re.compile(r"\d{4}(-\d{2}(-\d{2})?)?")
+
+ROLL_FIELDS = ("druid", "welte_number", "callnum", "title", "performer")
+
+
+def index():
+    """Write the trimmed views of the scan search and the two sweeps that the scripts read.
+
+    The catalogue keeps what Stanford catalogues about each roll, whether it has a scan and
+    where the paper lies in it; the perforator keeps each roll's row of pitch.json and of
+    step.json, a row that measured nothing being left out.
+    """
+    rolls = json.loads(CANDIDATES.read_text())
+    CATALOGUE.write_text(json.dumps([
+        {**{f: roll.get(f) for f in ROLL_FIELDS}, "scanned": bool(roll.get("regions")),
+         "paper": roll.get("paper_columns"), "length": roll.get("image_length"),
+         "holes": [roll.get("first_hole"), roll.get("last_hole")]} for roll in rolls
+    ], ensure_ascii=False, separators=(",", ":")))
+    sweeps = {name: {row["druid"]: {k: v for k, v in row.items() if k != "druid"}
+                     for row in json.loads((SWEEPS / f"{name}.json").read_text()) if row.get("n")}
+              for name in ("pitch", "step")}
+    PERFORATOR.write_text(json.dumps({"rolls": {
+        druid: {name: sweeps[name][druid] for name in ("pitch", "step") if druid in sweeps[name]}
+        for druid in sorted(sweeps["pitch"].keys() | sweeps["step"].keys())
+    }}, ensure_ascii=False, separators=(",", ":")))
 
 
 def check(readings, measured, druids):
@@ -124,6 +151,7 @@ def measures(rolls, readings, perforator, colours, rulings):
 
 
 def main():
+    index()
     rolls = json.loads(CATALOGUE.read_text())
     readings = json.loads(READINGS.read_text())
     hands = json.loads(HANDS.read_text())

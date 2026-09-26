@@ -5,7 +5,7 @@ inscription images. It is the one thing about these rolls no authority file hold
 gets records of its own; everything else an edition names, the company or a pianist, it
 names by the GND. A hand is not a premise: an edition names it as the actor of the act
 that wrote an inscription and takes nothing from it to date a copy, since the hand and the
-date come off the same inscription (punch-225/README.md).
+date come off the same inscription (perforator/README.md).
 
 Each hand has an IRI of its own under https://w3id.org/welte-hands/, made of the id of its
 cluster in hands.json, e.g. https://w3id.org/welte-hands/fritz, which w3id redirects to the

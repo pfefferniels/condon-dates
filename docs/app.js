@@ -238,7 +238,7 @@ function drawPerforator(measures, evidence, premises) {
   const advance = el("div", "timeline");
   section.append(
     el("h3", null, "The chain pitch against the date"),
-    el("p", "rule", "Each dot is a dated copy. Above 2.75 mm the copy was cut on the wide perforator, below it on the narrow one; the two ran side by side for more than ten years, so the pitch says which machine cut a copy, not when (punch-225)."),
+    el("p", "rule", "Each dot is a dated copy. Above 2.75 mm the copy was cut on the wide perforator, below it on the narrow one; the two ran side by side for more than ten years, so the pitch says which machine cut a copy, not when (perforator/README.md)."),
     pitch,
     el("h3", null, "The advance against the date"),
     el("p", "rule", `Counted: copies ${evidence.rule}. The advance halved once, and both premises on it are drawn.`),

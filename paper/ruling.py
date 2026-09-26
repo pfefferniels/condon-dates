@@ -5,7 +5,7 @@ Some red rolls are cut from paper printed with fine dark lines running along the
 one line per track. On the scans such a line is three or four pixels wide and a few grey
 levels to a few tens darker than the paper around it, and it runs unbroken over the whole
 width and length, through the bridges between the holes of a track. The pattern is
-periodic at the track pitch, which punch-225 measured on every scan (the Teilung of
+periodic at the track pitch, which perforator/pitch.py measured on every scan (the Teilung of
 data/perforator.json), so it is looked for at that period and nowhere else.
 
 For each roll, twelve windows are spread evenly between the first and the last hole. Each

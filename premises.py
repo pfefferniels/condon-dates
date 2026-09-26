@@ -40,19 +40,18 @@ REO = "https://w3id.org/reo/context.jsonld"
 
 PURL = "https://purl.stanford.edu"
 CONDON_DATES = "https://github.com/pfefferniels/condon-dates/blob/{commit}/"
-PUNCH_225 = "https://github.com/pfefferniels/welte225.org/blob/{commit}/punch-225/"
 
 T100 = "https://w3id.org/reo/type/system/welte-t100"
 WELTE = {"name": "M. Welte & Söhne", "sameAs": ["https://d-nb.info/gnd/5125268-5"]}
 PUBLISHER = {"name": "Niels Pfeffer", "sameAs": []}
 
 # A copy counts as dated where its date is held true or likely: a reading graded high or
-# medium (punch-225/dates/reading.md), and dated to the day, since a bound is a day.
+# medium (dates/reading.md), and dated to the day, since a bound is a day.
 DATED = ("high", "medium")
 
 # The advance counts where the slot lengths keep it at this strength, and it is the early
 # setting in this band and the late one below the second figure; a period of 1.4 to 1.6 mm
-# is noise (punch-225/dates/summary.py).
+# is noise (dates/summary.py).
 RESOLVED = 0.25
 EARLY = (0.85, 1.15)
 LATE = 0.75
@@ -88,7 +87,7 @@ PAPER_PREMISES = [("ruled", "before", "likely"), ("red-cool", "after", "likely")
                   ("red-cool-light", "between", "possible"), ("buff", "between", "possible"),
                   ("green", "between", "possible")]
 
-WIDE = 2.75        # mm of chain pitch and over: the wide perforator (punch-225/README.md)
+WIDE = 2.75        # mm of chain pitch and over: the wide perforator (perforator/README.md)
 DRAWS = 10000      # random groups a narrower class's dates are held against
 
 
@@ -153,7 +152,7 @@ def advance_premises(evidence, readings, used):
              "note": f"{counted} The perforator was re-set to the late advance by the day of the first late "
                      f"copy, {copy_of(first_late)}, and the bound rests on that copy's date alone. The early "
                      "advance resolves on the rolls of three hands only, and on none before 1908, so it is "
-                     "attested on fewer rolls than it was used on (punch-225/dates/README.md)."
+                     "attested on fewer rolls than it was used on (dates/README.md)."
                      + reread(first_late, readings)}])}},
         {"@id": "premises#advance-half-mm", "company": WELTE, "system": {"@id": T100},
          "perforator": setting("advance-half-mm", statistics.median(row["advance"] for row in late)),
@@ -162,7 +161,7 @@ def advance_premises(evidence, readings, used):
              "note": f"{counted} The perforator was still at the early advance on the day of the last early "
                      f"copy, {copy_of(last_early)}, and the bound rests on that copy's date alone. The rolls "
                      "before it that do not resolve are not late-advance rolls hiding: a comb at 0.5 mm is the "
-                     "easier of the two to see (punch-225/dates/README.md)." + reread(last_early, readings)}])}},
+                     "easier of the two to see (dates/README.md)." + reread(last_early, readings)}])}},
     ]
 
 
@@ -344,7 +343,7 @@ def build(docs, catalogue, readings, perforator, colours, rulings, published):
         ],
     })
     used = [BASE + "evidence/advance", condon + "data/readings.json", condon + "data/perforator.json",
-            condon + "premises.py", PUNCH_225.format(commit=perforator["commit"] or "main") + "dates/step.py"]
+            condon + "premises.py", condon + "perforator/step.py"]
     productions = advance_premises(evidence, readings, used)
 
     classes, dated = paper_evidence(catalogue, readings, colours, perforator["rolls"], rulings)

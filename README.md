@@ -14,22 +14,29 @@ hot-linked from Stanford's IIIF endpoint; nothing is bundled.
 
 ## Data
 
+Everything measured or read on these rolls is kept here, each thing once.
+
 `data/readings.json` is the record of what was read off each roll, keyed by druid: the
 inscription, the date as written and as ISO, its confidence, the written roll number, the
 hand, the reader's notes and the IIIF crop the reading was made from. Corrections are made
-there and nowhere else. The readings were first made in `welte225.org/punch-225/dates`, and
-`source` names the file there that each one came from.
+there and nowhere else. `source` names the file in `dates/readings/` each reading came from,
+or `authoritative.json` for one the editor read again on the scan.
 
-`data/catalogue.json` holds what Stanford catalogues about each roll, whether it has a
-scan and where the paper lies in it. `data/perforator.json` holds how the perforator was
-set on each roll, from the two sweeps of punch-225: `pitch.json` (chain pitch, slot, bridge,
-Teilung, the parser's hole width) and `step.json` (the advance). Both are refreshed from
-punch-225 with `sync.py`, which also records the commit of welte225.org they came from; the
-scripts that take the measurements stay there. `hands.json` holds the signature clusters.
-`paper/` measures the paper on the scans themselves: `paper/colour.json` holds the colour
-of each roll's paper, corrected against the grey card scanned above its leader (see
-`paper/README.md`). `build.py` turns them into `docs/data/rolls.json` and the linked data
-below.
+| Directory | Content |
+|---|---|
+| `dates/` | the search of every scan for its punch date: the index of the rolls (`candidates.json`), the crops, what the readers were told and what they wrote (see `dates/README.md`) |
+| `perforator/` | the perforator measured on every scan: the chain pitch (`pitch.json`), the advance (`step.json`), the corpus check and the libraries that take a perforation apart (see `perforator/README.md`) |
+| `paper/` | the paper measured on every scan: its colour against the grey card, and its ruling (see `paper/README.md`) |
+| `review/` | the page the date candidates were reviewed on |
+
+These moved here from `punch-225` in welte225.org on 26 September 2026, whose history holds
+how they came about; punch-225 keeps only the measurement of the copies of WM 225 and takes
+its libraries and sweeps from here. `hands.json` holds the signature clusters.
+
+`build.py` writes `data/catalogue.json`, what Stanford catalogues about each roll, whether it
+has a scan and where the paper lies in it, and `data/perforator.json`, each roll's row of the
+two sweeps, as trimmed views the other scripts read; they are not edited. It then turns all
+of it into `docs/data/rolls.json`, `docs/data/measures.json` and the linked data below.
 
 ## Premises
 
@@ -53,7 +60,8 @@ rests on.
 | `docs/hands.jsonld` | `https://w3id.org/welte-hands/<id>` | the hands, as authority records |
 
 Eight premises stand. Two are on the advance, the one quantity of the perforator that
-punch-225 found to date a roll; the punch and the pitch say which machine cut it, not when.
+the study in `perforator/` found to date a roll; the punch and the pitch say which machine
+cut it, not when.
 `premises#advance-1mm-belief` holds that the 1.0 mm advance was not used after the day of
 the first dated copy with the late one, and `premises#advance-half-mm-belief` that the
 0.5 mm advance was not used before the day of the last dated copy with the early one.
