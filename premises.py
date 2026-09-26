@@ -132,7 +132,13 @@ def setting(name, advance):
             "condition": {"conditionType": "setting", "advance": {"value": advance, "unit": "mm"}}}
 
 
-def advance_premises(evidence, used):
+def reread(row, readings):
+    """A sentence saying that a bounding copy's date is the editor's own reading, where it is."""
+    return (f" The date of Welte {row['welte']} is the editor's reading on the scan (data/readings.json)."
+            if readings[row["druid"]].get("source") == "authoritative.json" else "")
+
+
+def advance_premises(evidence, readings, used):
     early, late = evidence["early"], evidence["late"]
     last_early, first_late = early[-1], late[0]
     counted = (f"The advance resolves, at a strength of at least {RESOLVED}, at {EARLY[0]} to {EARLY[1]} mm "
@@ -147,7 +153,8 @@ def advance_premises(evidence, used):
              "note": f"{counted} The perforator was re-set to the late advance by the day of the first late "
                      f"copy, {copy_of(first_late)}, and the bound rests on that copy's date alone. The early "
                      "advance resolves on the rolls of three hands only, and on none before 1908, so it is "
-                     "attested on fewer rolls than it was used on (punch-225/dates/README.md)."}])}},
+                     "attested on fewer rolls than it was used on (punch-225/dates/README.md)."
+                     + reread(first_late, readings)}])}},
         {"@id": "premises#advance-half-mm", "company": WELTE, "system": {"@id": T100},
          "perforator": setting("advance-half-mm", statistics.median(row["advance"] for row in late)),
          "date": {"after": last_early["date"], **believed("advance-half-mm", "likely", [{
@@ -155,7 +162,7 @@ def advance_premises(evidence, used):
              "note": f"{counted} The perforator was still at the early advance on the day of the last early "
                      f"copy, {copy_of(last_early)}, and the bound rests on that copy's date alone. The rolls "
                      "before it that do not resolve are not late-advance rolls hiding: a comb at 0.5 mm is the "
-                     "easier of the two to see (punch-225/dates/README.md)."}])}},
+                     "easier of the two to see (punch-225/dates/README.md)." + reread(last_early, readings)}])}},
     ]
 
 
@@ -338,7 +345,7 @@ def build(docs, catalogue, readings, perforator, colours, rulings, published):
     })
     used = [BASE + "evidence/advance", condon + "data/readings.json", condon + "data/perforator.json",
             condon + "premises.py", PUNCH_225.format(commit=perforator["commit"] or "main") + "dates/step.py"]
-    productions = advance_premises(evidence, used)
+    productions = advance_premises(evidence, readings, used)
 
     classes, dated = paper_evidence(catalogue, readings, colours, perforator["rolls"], rulings)
     premised = dict((pid, f"paper-{pid}") for pid, _, _ in PAPER_PREMISES)
