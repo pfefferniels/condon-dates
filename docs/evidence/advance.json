@@ -324,13 +324,6 @@
      "strength": 0.52
     },
     {
-     "druid": "yx139bt6626",
-     "welte": 292,
-     "date": "1914-06-25",
-     "advance": 0.501,
-     "strength": 0.468
-    },
-    {
      "druid": "vz717bq6543",
      "welte": 1480,
      "date": "1914-08-19",
@@ -1029,6 +1022,13 @@
      "date": "1924-05-08",
      "advance": 0.499,
      "strength": 0.4389
+    },
+    {
+     "druid": "yx139bt6626",
+     "welte": 292,
+     "date": "1924-06-25",
+     "advance": 0.501,
+     "strength": 0.468
     },
     {
      "druid": "zw755dp8285",
