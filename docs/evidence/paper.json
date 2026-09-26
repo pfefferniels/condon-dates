@@ -849,21 +849,6 @@
      ]
     },
     {
-     "druid": "jh696my0069",
-     "welte": 1765,
-     "date": "1911-08-23",
-     "lab": [
-      27.1,
-      27.5,
-      22.0
-     ],
-     "rgb": [
-      108,
-      44,
-      32
-     ]
-    },
-    {
      "druid": "vb685pd6967",
      "welte": 192,
      "date": "1911-10-10",
@@ -1404,21 +1389,6 @@
      ]
     },
     {
-     "druid": "yw484ky7093",
-     "welte": 589,
-     "date": "1917-06-04",
-     "lab": [
-      25.4,
-      27.3,
-      22.6
-     ],
-     "rgb": [
-      103,
-      41,
-      28
-     ]
-    },
-    {
      "druid": "pc364sy7115",
      "welte": 2609,
      "date": "1917-09-19",
@@ -1446,6 +1416,21 @@
       110,
       45,
       30
+     ]
+    },
+    {
+     "druid": "jh696my0069",
+     "welte": 1765,
+     "date": "1919-08-23",
+     "lab": [
+      27.1,
+      27.5,
+      22.0
+     ],
+     "rgb": [
+      108,
+      44,
+      32
      ]
     },
     {
@@ -1977,7 +1962,7 @@
   },
   {
    "id": "red-warm-bright",
-   "label": "bright warm red paper, warm red with a* at least 32",
+   "label": "bright warm red paper, a* at least 32 and b* at least 15",
    "premise": "paper-red-warm-bright",
    "copies": [
     {
@@ -2228,36 +2213,6 @@
    "premise": "paper-red-cool",
    "copies": [
     {
-     "druid": "vf252dc4872",
-     "welte": 1697,
-     "date": "1911-08-24",
-     "lab": [
-      36.7,
-      14.8,
-      9.0
-     ],
-     "rgb": [
-      114,
-      77,
-      72
-     ]
-    },
-    {
-     "druid": "hg709nf1997",
-     "welte": 3019,
-     "date": "1913-09-20",
-     "lab": [
-      37.0,
-      22.4,
-      12.2
-     ],
-     "rgb": [
-      126,
-      72,
-      68
-     ]
-    },
-    {
      "druid": "vz717bq6543",
      "welte": 1480,
      "date": "1914-08-19",
@@ -2270,6 +2225,21 @@
       110,
       60,
       57
+     ]
+    },
+    {
+     "druid": "vf252dc4872",
+     "welte": 1697,
+     "date": "1919-08-29",
+     "lab": [
+      36.7,
+      14.8,
+      9.0
+     ],
+     "rgb": [
+      114,
+      77,
+      72
      ]
     },
     {
@@ -2975,6 +2945,21 @@
       109,
       58,
       58
+     ]
+    },
+    {
+     "druid": "hg709nf1997",
+     "welte": 3019,
+     "date": "1923-03-02",
+     "lab": [
+      37.0,
+      22.4,
+      12.2
+     ],
+     "rgb": [
+      126,
+      72,
+      68
      ]
     },
     {
@@ -3911,7 +3896,7 @@
   },
   {
    "id": "red-cool-light",
-   "label": "light cool red paper, cool red with L* at least 38",
+   "label": "light cool red paper, a* at least 10, b* under 15 and L* at least 38",
    "premise": "paper-red-cool-light",
    "copies": [
     {

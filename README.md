@@ -72,7 +72,7 @@ red, buff and green were punched on the narrow perforator alone, warm red on bot
 kind says something of the machine as well as of the time. Two narrower classes, a bright
 warm red and a light cool red, are dated closer together than random groups of their kind
 allow, and are taken for stocks or batches of paper. Each premise states the window its
-dated copies span: cool red not before 24 August 1911, bright warm red between November
+dated copies span: cool red not before 19 August 1914, bright warm red between November
 1923 and November 1925, light cool red between October 1921 and February 1922, buff between
 November 1919 and July 1922, green between January 1918 and November 1922. Ruled paper, printed
 with a line along each track, is a class of its own, found by `paper/ruling.py`: 30 rolls,

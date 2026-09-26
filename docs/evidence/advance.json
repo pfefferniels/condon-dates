@@ -156,20 +156,6 @@
      "strength": 0.3955
     },
     {
-     "druid": "jh696my0069",
-     "welte": 1765,
-     "date": "1911-08-23",
-     "advance": 0.521,
-     "strength": 0.5692
-    },
-    {
-     "druid": "vf252dc4872",
-     "welte": 1697,
-     "date": "1911-08-24",
-     "advance": 0.499,
-     "strength": 0.5486
-    },
-    {
      "druid": "vb685pd6967",
      "welte": 192,
      "date": "1911-10-10",
@@ -359,13 +345,6 @@
      "strength": 0.5569
     },
     {
-     "druid": "yw484ky7093",
-     "welte": 589,
-     "date": "1917-06-04",
-     "advance": 0.491,
-     "strength": 0.3573
-    },
-    {
      "druid": "pc364sy7115",
      "welte": 2609,
      "date": "1917-09-19",
@@ -385,6 +364,20 @@
      "date": "1918-08-20",
      "advance": 0.499,
      "strength": 0.5514
+    },
+    {
+     "druid": "jh696my0069",
+     "welte": 1765,
+     "date": "1919-08-23",
+     "advance": 0.521,
+     "strength": 0.5692
+    },
+    {
+     "druid": "vf252dc4872",
+     "welte": 1697,
+     "date": "1919-08-29",
+     "advance": 0.499,
+     "strength": 0.5486
     },
     {
      "druid": "xg670df7262",
