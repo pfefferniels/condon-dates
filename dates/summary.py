@@ -49,7 +49,8 @@ def machines(records: list[dict]) -> list[str]:
 
     Two quantities separate the states, and they do not agree about what kind
     of criterion they are. The pitch names which of two perforators cut a
-    copy, and both were in service for a decade, so it cannot bound a date.
+    copy, and both were in service from 1914 to 1917, so it bounds a date on
+    one side only.
     The advance changed once, and every dated copy falls on the right side of
     it.
     """

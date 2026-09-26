@@ -1527,9 +1527,9 @@
   "notes": "ink on red paper, the date with its points and a four-figure number beside it. The day is the open-bowl form that can be 6 or 8; I read 6, and the month and year are plain. The number's first figure could be 7 or 1, the rest is 033"
  },
  "hg709nf1997": {
-  "inscription": "20 913",
-  "reading": "20 913",
-  "date_iso": "1913-09-20",
+  "inscription": "23 23",
+  "reading": "23 23",
+  "date_iso": "1923-03-02",
   "confidence": "high",
   "roll_number": null,
   "hand": null,
@@ -1537,8 +1537,8 @@
    "box": "3504,412523,460,1900",
    "rot": 90
   },
-  "source": "batch-28.json",
-  "notes": "pencil, read from the lower (180 degree) panel; separators dropped, as in the documented 14114 pattern, so 20 | 9 | 13"
+  "source": "authoritative.json",
+  "notes": "read by the editor on the scan on 2026-09-26: 23 23, day, month and year run together as this machine's dates often are (26323, 28722), so 2. 3. 23. The reader gave 20 913, taking the 3 of the first group for a 0, the 2 of the second for a 9 and a stroke across that 2 for a 1. Pencil, read from the lower (180 degree) panel. The copy was cut on the narrow machine at a pitch of 2.507 mm on cool red paper; as 1913 it had been the only narrow copy dated before 1914 once Welte 1697 and 1765 were read as 1919."
  },
  "hh095vc8073": {
   "inscription": "2424",
@@ -1929,9 +1929,9 @@
   "notes": "all 4 crops seen; blank paper, roll end and perforated music area, no writing"
  },
  "jh696my0069": {
-  "inscription": "23. 8. 11",
-  "reading": "23. 8. 11",
-  "date_iso": "1911-08-23",
+  "inscription": "23. 8. 19",
+  "reading": "23. 8. 19",
+  "date_iso": "1919-08-23",
   "confidence": "high",
   "roll_number": null,
   "hand": null,
@@ -1939,8 +1939,8 @@
    "box": "3504,132202,460,1900",
    "rot": 90
   },
-  "source": "batch-21.json",
-  "notes": "Pencil. Same hand and layout as vf252dc4872, dated a day earlier. No name or roll number in the crop."
+  "source": "authoritative.json",
+  "notes": "read by the editor on the scan on 2026-09-26: the year is 19. The reader gave 11. The year's second figure is a closed loop with a long descender, the 9 of this hand as it stands in the day of vf252dc4872 and of xg670df7262, both 29. 8. 19. The perforator agrees: the copy was cut on the narrow machine at a pitch of 2.59 mm and an advance of 0.521 mm, as were copies of 11 October and 17 December 1919, while every other copy dated 1911 to 1913 but one was cut on the wide machine. Pencil, same hand and layout as vf252dc4872, dated six days later. No name or roll number in the crop."
  },
  "jj589sc7898": {
   "inscription": null,
@@ -4736,9 +4736,9 @@
   "notes": "pencil note by a later owner, dated 1 July 1994, running along the leader; the same note appears cut off in crop 1, crop 3 is blank. Not a punch date, so date_iso left null"
  },
  "vf252dc4872": {
-  "inscription": "24. 8. 11",
-  "reading": "24. 8. 11",
-  "date_iso": "1911-08-24",
+  "inscription": "29. 8. 19",
+  "reading": "29. 8. 19",
+  "date_iso": "1919-08-29",
   "confidence": "high",
   "roll_number": null,
   "hand": null,
@@ -4747,7 +4747,7 @@
    "rot": 90
   },
   "source": "authoritative.json",
-  "notes": "read here at magnification. The day's first figure could be 2 or 9, which does not matter. This copy has the new pitch, 2.503 mm, two and a half years before roll 225's January 1914 copy has the old one."
+  "notes": "read by the editor on the scan on 2026-09-26: the year is 19. It had been read here as 24. 8. 11. The day's second figure and the year's are the same closed loop with a long descender, the 9 of this hand, and the line matches xg670df7262, 29. 8. 19, figure for figure. The copy was cut on the narrow machine at a pitch of 2.503 mm on cool red paper, as xg670df7262 of the same day and ps656vb4839 of 5 September 1919 were; dated 1911, it had stood two years before any other narrow copy."
  },
  "vj052cw2158": {
   "inscription": "1354 .  B[...]  1. 2. 10",
@@ -5865,15 +5865,15 @@
   "inscription": "588. 4. 6. 17.",
   "reading": "4. 6. 17",
   "date_iso": "1917-06-04",
-  "confidence": "high",
+  "confidence": "low",
   "roll_number": "588",
   "hand": null,
   "crop": {
    "box": "3286,115596,664,1900",
    "rot": 90
   },
-  "source": "batch-09.json",
-  "notes": "Ink, written along the roll so the crop has to be turned a quarter turn; both panels carry it and both read once turned. Roll number 588, then the three date groups separated by dots. The 4 and the 6 are plain. The year is a plain 1 followed by a crossed 7, the bar across the stem visible under magnification, so 17 and not 11. No name in this crop."
+  "source": "authoritative.json",
+  "notes": "the year is arguable: 17 as first read, or 12. The editor doubted the 17 on the scan on 2026-09-26. Its second figure has a small hook curling left at the top rather than a flat bar, and the stroke taken for the bar of a crossed 7 crosses the lower third of the stem, where a 2 of this hand would loop. Set aside until the year is settled; the perforator does not decide it, the copy being wide at 2.988 mm, as copies of both 1912 and 1917 are. Ink, written along the roll so the crop has to be turned a quarter turn; both panels carry it and both read once turned. Roll number 588, then the three date groups separated by dots. The 4 and the 6 are plain. The year is a plain 1 followed by a crossed 7, the bar across the stem visible under magnification, so 17 and not 11. No name in this crop."
  },
  "yx139bt6626": {
   "inscription": "25624",

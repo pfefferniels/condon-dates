@@ -1,5 +1,5 @@
 Punch dates read off the scans of Stanford's red Welte rolls.
-456 rolls searched, 259 with a date read, 244 of those measured by the parser.
+456 rolls searched, 258 with a date read, 243 of those measured by the parser.
 
 Dated copies against their punch, as AVG_HOLE_WIDTH of the SUPRA index:
 the same quantity whose bimodality ../perforator/corpus.txt reports, so the two
@@ -54,8 +54,6 @@ width measured at half contrast in welte225.org's punch-225/punch.txt.
   1911-04-27    719  2.126 mm  xc665jf8254  1714    27. 4. 11.  [name, not read] / Wössler
   1911-06-24    239  2.120 mm  gm170gy7498  239.  24.  6. 11
   1911-07-21   1260  2.191 mm  sc188ff2842  1260    21. 7. 11    Krämer / Wössler
-  1911-08-23   1765  1.841 mm  jh696my0069  23. 8. 11
-  1911-08-24   1697  1.882 mm  vf252dc4872  24. 8. 11
   1911-10-10    192  2.182 mm  vb685pd6967  192.  10.  10.  11
   1911-11-09    931  2.061 mm  wj177bx9196  [cursive name] 9 1111
   1911-11-11   1085  2.184 mm  dc661yr7679  10[??]. 11. 11. 11
@@ -79,7 +77,6 @@ width measured at half contrast in welte225.org's punch-225/punch.txt.
   1913-07-18   1196  2.074 mm  ts972sy8288  1196.  18.7.13.
   1913-08-05    415  2.037 mm  gg920pz0818  415  5. 8. 13. Mb.
   1913-09-04    570  2.145 mm  ng103jj1150  5700.  4. 9. 13.
-  1913-09-20   3019  1.832 mm  hg709nf1997  20 913
   1913-09-30   2000  2.183 mm  cw427tw4145  2000.    30. 9.13
   1913-12-06   1033  2.156 mm  hg282mg9396  6.12.13   7033
   1913-12-18   2703  2.220 mm  jg717nb8731  2713  18.12.13  Sph. / Wössler Sph.
@@ -94,10 +91,11 @@ width measured at half contrast in welte225.org's punch-225/punch.txt.
   1915-05-28    545  1.716 mm  zc614qh7060  28.5.15.
   1916-11-14    767  1.738 mm  vq976gr5492  14.11.16.
   1917-04-27   2948  1.751 mm  fb100cb2366  27. 4. 17.
-  1917-06-04    589  2.155 mm  yw484ky7093  588. 4. 6. 17.
   1917-09-19   2609  2.207 mm  pc364sy7115  2609. 19.9. 17.
   1918-01-08   2261  1.716 mm  dy191sv5188  8. 1. 18.
   1918-08-20   1398  1.759 mm  qp506dy4541  20. 8. 18
+  1919-08-23   1765  1.841 mm  jh696my0069  23. 8. 19
+  1919-08-29   1697  1.882 mm  vf252dc4872  29. 8. 19
   1919-08-29   2466  1.814 mm  xg670df7262  29. 8. 19.
   1919-09-05   2086  1.858 mm  ps656vb4839  5. 9. 19
   1919-10-11   2021  1.827 mm  sk925fn6049  11 1019
@@ -168,6 +166,7 @@ width measured at half contrast in welte225.org's punch-225/punch.txt.
   1923-01-10   2739  1.770 mm  ws250sr1272  10123
   1923-01-18   1478  1.740 mm  ym773gh2267  18123
   1923-02-08   3357  1.704 mm  kw215gn3365  8223
+  1923-03-02   3019  1.832 mm  hg709nf1997  23 23
   1923-03-15    274  1.821 mm  hh429fw8081  15323
   1923-03-16   1324  1.848 mm  xy699sy1462  16.323
   1923-03-24   2539  1.814 mm  cd435bw2771  24323
@@ -260,19 +259,19 @@ Median punch by year of punching.
   1908       9      2.171 mm         100 %
   1909      14      2.198 mm         100 %
   1910      12      2.191 mm         100 %
-  1911      13      2.182 mm          85 %
+  1911      11      2.184 mm         100 %
   1912      12      2.090 mm         100 %
-  1913      11      2.145 mm          82 %
+  1913      10      2.151 mm          90 %
   1914       7      1.831 mm          43 %
   1915       1      1.716 mm           0 %
   1916       1      1.738 mm           0 %
-  1917       3      2.155 mm          67 %
+  1917       2      1.979 mm          50 %
   1918       2      1.738 mm           0 %
-  1919       6      1.825 mm           0 %
+  1919       8      1.834 mm           0 %
   1920       8      1.710 mm           0 %
   1921       5      1.832 mm           0 %
   1922      47      1.727 mm           2 %
-  1923      19      1.770 mm           0 %
+  1923      20      1.770 mm           0 %
   1924      34      1.741 mm           0 %
   1925      21      1.733 mm           0 %
   1926       3      1.837 mm           0 %
@@ -282,18 +281,18 @@ Median punch by year of punching.
 The change in the punch, as the dated copies bound it.
 
   latest wide punch    1922-04-25  Welte 1275  2.428 mm  jw822wm2644
-  earliest narrow      1911-08-23  Welte 1765  1.841 mm  jh696my0069
+  earliest narrow      1914-02-24  Welte 1247  1.757 mm  xm993qd2681
 
-  71 dated copies with a wide punch, 164 with a narrow one.
-  Overlapping: 25 wide copies dated after the earliest narrow one.
+  70 dated copies with a wide punch, 164 with a narrow one.
+  Overlapping: 3 wide copies dated after the earliest narrow one.
 
 The two quantities that separate the states of the machine.
 
-  pitch 2.75 mm and over        90 copies   1904-08-08 to 1922-04-25
-  pitch under 2.75 mm          169 copies   1911-08-23 to 1928-06-19
+  pitch 2.75 mm and over        89 copies   1904-08-08 to 1922-04-25
+  pitch under 2.75 mm          169 copies   1914-02-24 to 1928-06-19
 
   advance 0.75 mm and over      11 copies   1908-11-20 to 1909-12-16
-  advance under 0.75 mm        193 copies   1910-02-01 to 1928-06-19
+  advance under 0.75 mm        192 copies   1910-02-01 to 1928-06-19
 
   The advance changed once, between 1909-12-16 and 1910-02-01.
   Copies with the long advance dated after that: none.
@@ -337,6 +336,7 @@ Dates read but not used, one figure or the grouping being arguable.
   1914          369  bb988jx6754  369.  30. ?. 14
   1914          378  hs635sh6729  7?14
   1914         1480  bf644yy6536  1450.  11.[2 or 3].14.
+  1917-06-04    589  yw484ky7093  588. 4. 6. 17.
   1921         3162  bd915bs0646  30821
   1921-11-08   2998  fk269mx8427  8. 11. 21
   1922-02-21   1212  wq296df7434  21222

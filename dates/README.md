@@ -6,11 +6,12 @@ punched it. This directory reads that inscription off every scan in
 Stanford's SUPRA archive and asks what the dates say about the two criteria
 the literature offers for dating a roll from its perforations.
 
-The short of it: the punch does not date a roll. Two perforators with
-different punches were in service side by side for at least a decade, so the
-size of a perforation says which machine cut a copy, not when. The advance
+The short of it: the punch dates a roll on one side only. A second
+perforator with a narrower punch came into use early in 1914, and the first
+went on beside it until 1917 at least, so a narrow perforation puts a copy
+after the turn of 1913 to 1914 while a wide one says little. The advance
 does date one, and closely: it halved once, between December 1909 and
-February 1910, and none of the 204 copies dated at high or medium confidence whose
+February 1910, and none of the 203 copies dated at high or medium confidence whose
 advance resolves falls on the wrong side of that.
 
 ## What was searched, and what was found
@@ -42,22 +43,26 @@ rather than to the title, since Stanford holds twelve titles both ways. What
 it could not do is date the change, having only roll 225's copy of January
 1914 and a control of November 1922 to bound it.
 
-**The punch, and the pitch that goes with it, is not a date.** On 248 dated
-copies the two states overlap for ten years and eight months. A copy punched
-24 August 1911 (`vf252dc4872`, Welte 1697) has the new pitch of 2.503 mm,
-two and a half years before roll 225's copy of January 1914 has the old one
-at 2.999 mm; and a copy punched 25 April 1922 (`jw822wm2644`, Welte 1275)
-still has the old pitch at 3.004 mm, seven months before the control of
-November 1922 has the new one at 2.496 mm. Both were read at magnification
-rather than taken from a reader. Three more old-pitch copies fall between,
-dated 1914 and 1917 twice; a fourth, Welte 1534, once read as 1916, was
-punched on 1 February 1910 (see ../perforator/README.md).
+**The punch, and the pitch that goes with it, is half a date.** On the 258
+dated copies whose pitch is measured, all 86 dated before 24 February 1914
+have the old pitch, and the new one begins on that day (`xm993qd2681`,
+Welte 1247, at 2.512 mm), a month after roll 225's copy of January 1914 has
+the old one at 2.999 mm. The old pitch goes on beside it: in March 1914, in
+September 1917, and once more on 25 April 1922 (`jw822wm2644`,
+Welte 1275, at 3.004 mm), seven months after the control of November 1922
+has the new one at 2.496 mm. The new pitch had seemed to start earlier, in
+August 1911 and September 1913, on three copies the editor has since read on
+the scans as 1919, 1919 and 1923 (`jh696my0069`, `vf252dc4872`, `hg709nf1997`; 26 September 2026);
+and Welte 1534, once read as 1916, was punched on 1 February 1910 (see
+../perforator/README.md).
 
 So Hagmann's "rot-alt until about 1910 and rot-neu after" is wrong in a way
-a corrected date would not repair: the two were never consecutive states of
-one machine. What survives is a tendency. Essentially every copy dated
-before 1911 has the old punch and essentially every copy after 1920 the new
-one, so the punch indicates a period without bounding one.
+a corrected date would not wholly repair: the new punch came about four years
+later, and the two were not consecutive states of one machine. What survives
+is a bound on one side and a tendency on the other. No copy dated before
+1914 has the new punch, and every copy after 1917 but one has it, so a
+narrow punch bounds a copy from below while a wide one only makes it likely
+early.
 
 **The advance is a date.** Read as the period the slot lengths keep
 (`../perforator/advance.py`), and counting only the rolls where that period is actually
@@ -66,7 +71,7 @@ resolved:
 | | copies | span |
 |---|---|---|
 | advance 1.00 to 1.03 mm | 11 | 20 November 1908 to 16 December 1909 |
-| advance 0.49 to 0.52 mm | 193 | 1 February 1910 to 19 June 1928 |
+| advance 0.49 to 0.52 mm | 192 | 1 February 1910 to 19 June 1928 |
 
 The latest copy with the old advance is `rb625rv7300`, Welte 569, which
 advances 1.001 mm at R = 0.80 and has the old pitch, 3.026 mm. Its
@@ -119,8 +124,8 @@ step and how many steps pass between firings:
 |---|---|---|---|---|---|
 | wide | 1.00 mm | 3rd | 3.00 mm | 17 | Nov 1908 – Dec 1909 |
 | wide | 0.50 mm | 6th | 3.00 mm | 39 | Feb 1910 – Sep 1917 |
-| narrow | 0.50 mm | 5th | 2.50 mm | 159 | 1911 – 1928 |
-| narrow | 0.52 mm | 5th | 2.60 mm | 75 | 1911 – 1928 |
+| narrow | 0.50 mm | 5th | 2.50 mm | 159 | 1914 – 1928 |
+| narrow | 0.52 mm | 5th | 2.60 mm | 75 | 1915 – 1928 |
 
 The first two rows are one change seen from both sides. Between December
 1909 and February 1910 the wide machine's step halved and it fired twice as often,
@@ -128,7 +133,7 @@ so its pitch stayed at 3.0 mm. That is why the advance moves there while the
 pitch does not, which roll 225's two copies had shown without explaining.
 
 The last two are two steps of the narrow punch, with nothing measured between
-0.506 and 0.514 mm, and both occur in nearly every year from 1911 to 1928 —
+0.506 and 0.514 mm, and both occur in nearly every year from 1915 to 1928 —
 25 and 16 copies in 1922, 23 and 10 in 1924. The difference is in the step,
 not the scan: slot over width is 1.065 in one group and 1.064 in the other,
 where a scale error would have stretched the holes.
@@ -136,7 +141,7 @@ where a scale error would have stretched the holes.
 How many machines that makes is an inference, and it rests on one
 assumption: that running a second perforator is likelier than re-fitting one
 back and forth for years. On that assumption there were at least two — the
-two punches were in use together from 1911 to 1922 — and most economically
+two punches were in use together from 1914 to 1917, and once more in 1922 — and most economically
 three: one wide machine, re-geared once, and two narrow ones at the two
 steps. Two further narrow groups, 0.62 mm every 4th step (14 rolls) and
 0.40 mm every 6th (25), are too thinly dated to place, and the second could
@@ -149,20 +154,25 @@ which fits its shortened bridge, but its advance resolves on only two of its
 
 Two kinds of evidence bear on it, and they point different ways.
 
-**The workshop practice separates the machines.** In 1911–1914, when both
-ran, 15 of 42 wide-punch copies are signed — every name German, written in
-the Kurrent hand with the roll number first — while one of 12 narrow-punch
-copies is signed, and the name is "Smith". The narrow copies carry the date
-alone, often run together, and rarely a number. Over the same years that is
-two crews with different habits, not one crew over time.
+**The workshop practice separates the periods, not the machines.** Up to
+1913 the wide-punch copies are often signed, 48 of 84 at high or medium
+confidence — every name German, written in the Kurrent hand with the roll
+number first. From 1914 hardly a copy is signed on either machine: none of
+the four wide copies of 1914 to 1917, one of the seven narrow ones, and the
+name is "Smith". The narrow copies carry the date alone, often run
+together, and rarely a number. An earlier draft read two crews with
+different habits into 1911–1914, on narrow copies of 1911 and 1913 that
+have since been read as 1919 and 1923; what is left is one habit ending as
+the narrow machine arrived, on too few copies to say which way it ran.
 
 **The label language does not.** Stanford transcribed each title from the
 roll (`labels.py`), so its language says which market the copy was labelled
 for. Across the corpus the wide punch looks German, 76 %, and the narrow
 English, 31 %. But the German share falls with the date whichever machine cut
 the copy — 90 % before 1911, about a third in the 1920s — and the narrow
-machine is the one running in the 1920s. Within one period the machines
-differ little, on counts of six and eight.
+machine is the one running in the 1920s. Within one period there are too
+few narrow copies to compare: three with a labelled language in 1911–1914,
+against 25 wide ones.
 
 Nor are labels necessarily contemporary with the punching. The narrow machine
 has genuinely German-labelled rolls punched in January and August 1918
@@ -176,7 +186,7 @@ Two further things are worth weighing against a simple "the narrow machine
 was American". Its dates are written day first, which the strings show
 without any help from how they were parsed: `26323`, `311022` and `28722`
 open with a day above twelve, and a month-first writer would have written
-26 March 1923 as `32623`. And it was running by August 1911. Whether and when
+26 March 1923 as `32623`. And it was running by February 1914. Whether and when
 Welte perforated rolls in America is a documentary question these scans
 cannot answer, and the answer would settle much of this.
 
