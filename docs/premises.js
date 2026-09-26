@@ -36,10 +36,15 @@ const evidencePath = (iri) =>
 
 const beliefOf = (premise) => premise.date["@annotation"].belief;
 
+/* A measured value as it is shown: a number in its unit, or a colour as L* a* b*. */
+const shown = (value, unit) =>
+  Array.isArray(value) ? `L* ${value[0]} · a* ${value[1]} · b* ${value[2]}` : `${value} ${unit}`;
+
 /* What the premise holds, in a sentence: the setting or paper, then the bound. */
 function statement(premise) {
   const advance = premise.perforator?.condition?.advance;
-  const what = advance ? `Punched with an advance of ${advance.value.toFixed(1)} mm` : "Punched";
+  const what = advance ? `Punched with an advance of ${advance.value.toFixed(1)} mm`
+    : premise.paper ? `Punched on ${premise.paper.name}` : "Punched";
   const { after, before } = premise.date;
   if (after && before) return `${what}: between ${day(after)} and ${day(before)}`;
   if (before) return `${what}: not after ${day(before)}`;
@@ -51,6 +56,7 @@ function usedLabel(iri) {
   const blob = iri.match(/github\.com\/pfefferniels\/([^/]+)\/blob\/([0-9a-f]{7})[0-9a-f]*\/(.+)$/);
   if (blob) return [`${blob[3]}`, ` in ${blob[1]} at ${blob[2]}`];
   if (evidencePath(iri)) return ["the dated copies", ` (${iri.slice(BASE.length)})`];
+  if (iri === `${BASE}papers`) return ["the classes of paper", " (papers)"];
   return [iri, ""];
 }
 
@@ -93,6 +99,7 @@ function drawPremise(premise) {
   const gnd = company?.sameAs?.find((s) => s.includes("d-nb.info/gnd"));
   if (company) field(facts, "Company", gnd ? link(gnd, company.name) : company.name);
   if (premise.system) field(facts, "System", link(premise.system["@id"], premise.system["@id"].split("/").pop()));
+  if (premise.paper) field(facts, "Paper", link(`#${fragment(premise.paper["@id"])}`, premise.paper.name));
   block.append(facts);
 
   belief.reasons.forEach((reason) => {
@@ -103,7 +110,9 @@ function drawPremise(premise) {
         const [name, where] = usedLabel(u);
         const item = el("li");
         const path = evidencePath(u);
-        item.append(link(path ? `#evidence-${path.split("/").pop().replace(".json", "")}` : u, name));
+        const here = path ? `#evidence-${path.split("/").pop().replace(".json", "")}`
+          : u === `${BASE}papers` ? "#paper-classes" : u;
+        item.append(link(here, name));
         item.append(el("span", "where", where));
         list.append(item);
       });
@@ -136,11 +145,11 @@ function swarm(points, spacing) {
 const tip = el("div", "tip");
 
 function showTip(copy, quantity, unit, x, y) {
-  const value = el("strong", null, `${copy[quantity]} ${unit}`);
+  const value = el("strong", null, shown(copy[quantity], unit));
   tip.replaceChildren(
     value,
     el("div", null, `Welte ${copy.welte} · ${day(copy.date)}`),
-    el("div", "muted", `strength ${copy.strength} · opens at Stanford`)
+    el("div", "muted", `${copy.strength != null ? `strength ${copy.strength} · ` : ""}opens at Stanford`)
   );
   tip.classList.add("on");
   const box = tip.getBoundingClientRect();
@@ -178,24 +187,19 @@ function drawChart(holder, evidence, premises) {
 
     const premise = premises.find((p) => fragment(p["@id"]) === group.premise);
     if (premise) {
-      const bound = premise.date.before || premise.date.after;
-      const bx = x(bound);
-      chart.append(svg("line", { x1: bx, x2: bx, y1: labelY + 6, y2: bottom - 8, class: "bound" }));
-      const text = svg("text", {
-        x: premise.date.before ? bx - 6 : bx + 6,
-        y: labelY + 20,
-        class: "bound-label",
-        "text-anchor": premise.date.before ? "end" : "start",
-      });
-      text.textContent = premise.date.before ? `not after ${day(bound)}` : `not before ${day(bound)}`;
+      const { after, before } = premise.date;
+      [after, before].filter(Boolean).forEach((bound) =>
+        chart.append(svg("line", { x1: x(bound), x2: x(bound), y1: labelY + 6, y2: bottom - 8, class: "bound" })));
+      /* The label stands beside the later line, or the earlier where it would run off the chart. */
+      const words = after && before ? `between ${day(after)} and ${day(before)}`
+        : before ? `not after ${day(before)}` : `not before ${day(after)}`;
+      const right = x(before || after) + 6;
+      const text = svg("text", { x: right, y: labelY + 20, class: "bound-label", "text-anchor": "start" });
+      text.textContent = words;
       chart.append(text);
-      /* A label that would run off the chart goes to the other side of its line. */
       const w = text.getComputedTextLength();
-      if (premise.date.before && bx - 6 - w < 0) {
-        text.setAttribute("x", bx + 6);
-        text.setAttribute("text-anchor", "start");
-      } else if (premise.date.after && bx + 6 + w > width) {
-        text.setAttribute("x", bx - 6);
+      if (right + w > width) {
+        text.setAttribute("x", x(after || before) - 6);
         text.setAttribute("text-anchor", "end");
       }
     }
@@ -272,8 +276,9 @@ function drawTable(evidence) {
   details.append(el("summary", null, `All ${total} copies as a table`));
   const table = el("table");
   const head = el("tr");
-  ["Welte", "Punched", "Group", `${evidence.quantity} (${evidence.unit})`, "Strength", ""].forEach((h) =>
-    head.append(el("th", null, h)));
+  const strength = evidence.groups.some((g) => g.copies.some((c) => c.strength != null));
+  ["Welte", "Punched", "Group", `${evidence.quantity === "lab" ? "Colour" : evidence.quantity} (${evidence.unit})`,
+    ...(strength ? ["Strength"] : []), ""].forEach((h) => head.append(el("th", null, h)));
   table.append(head);
   evidence.groups.forEach((group) =>
     group.copies.forEach((copy) => {
@@ -282,9 +287,9 @@ function drawTable(evidence) {
         el("td", "num", copy.welte),
         el("td", "num", copy.date),
         el("td", null, group.label),
-        el("td", "num", copy[evidence.quantity]),
-        el("td", "num", copy.strength)
+        el("td", "num", Array.isArray(copy[evidence.quantity]) ? copy[evidence.quantity].join(" / ") : copy[evidence.quantity])
       );
+      if (strength) row.append(el("td", "num", copy.strength));
       const cell = el("td");
       cell.append(link(`${PURL}/${copy.druid}`, "Stanford"));
       row.append(cell);
@@ -300,7 +305,7 @@ async function drawEvidence(iri, premises) {
   const name = path.split("/").pop().replace(".json", "");
   const section = el("section", "evidence");
   section.id = `evidence-${name}`;
-  section.append(el("h2", null, `Evidence: the ${evidence.quantity} of dated copies`));
+  section.append(el("h2", null, `Evidence: the ${evidence.quantity === "lab" ? "paper" : evidence.quantity} of dated copies`));
   section.append(el("p", "rule", `Counted: copies ${evidence.rule}. Each dot is a copy; hover or use the arrow keys for its values, click to open it at Stanford.`));
   const holder = el("div", "timeline");
   section.append(holder, drawTable(evidence));
@@ -310,6 +315,25 @@ async function drawEvidence(iri, premises) {
   render();
   new ResizeObserver(() => holder.clientWidth !== Number(holder.firstChild?.getAttribute("width")) && render())
     .observe(holder);
+}
+
+async function drawPapers() {
+  const papers = await (await fetch("papers.jsonld")).json();
+  const section = el("section", "papers");
+  section.id = "paper-classes";
+  section.append(el("h2", null, "Paper classes"));
+  section.append(el("p", "rule", papers.comment));
+  const list = el("dl", "facts classes");
+  papers["@included"].forEach((paper) => {
+    const term = el("dt", null, paper.name);
+    term.id = fragment(paper["@id"]);
+    const broader = paper.broader ? papers["@included"].find((p) => p["@id"] === paper.broader) : null;
+    const dd = el("dd", null, paper.comment + (broader ? ` A narrower class of ${broader.name}.` : ""));
+    dd.append(" ", el("code", "muted", BASE + paper["@id"]));
+    list.append(term, dd);
+  });
+  section.append(list);
+  document.getElementById("evidence").before(section);
 }
 
 async function main() {
@@ -322,6 +346,7 @@ async function main() {
   document.getElementById("published").textContent = catalogue.creation.publicationDate;
   const list = document.getElementById("premises");
   premises.forEach((p) => list.append(drawPremise(p)));
+  if (premises.some((p) => p.paper)) await drawPapers();
 
   const evidence = [...new Set(premises.flatMap((p) => beliefOf(p).reasons.flatMap((r) => r.used || [])))]
     .filter(evidencePath);

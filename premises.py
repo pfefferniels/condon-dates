@@ -1,8 +1,8 @@
 """The premises for dating a Welte roll, as linked data.
 
 The catalogue states no roll. It states what measuring all of them allows an edition to
-conclude about any one: that a setting of the perforator was used only before or only
-after a day, and, once the paper is classified, that a kind of paper was. An edition
+conclude about any one: that a setting of the perforator, or a class of paper, was used
+only before a day, only after one, or only between two. An edition
 measures its own copy, states the measurement itself, and takes a premise from here to
 date the copy, so that it stays whole on its own and each document reasons about what it
 owns.
@@ -13,6 +13,7 @@ date carries the belief an edition names as a premise, and the reasons of that b
 link the dated copies it rests on, the data and the scripts, at the commits they stood at.
 
     docs/premises.jsonld         the premises, at premises
+    docs/papers.jsonld           the classes of paper the premises name, at papers
     docs/evidence/<name>.json    the copies a premise rests on, at evidence/<name>, in groups,
                                  each naming the premise it bears on
     docs/premises.html           the page that shows them, for a reader who follows an IRI
@@ -27,7 +28,11 @@ them while the bounds and the certainty of a premise move with the evidence.
 import json
 import statistics
 import subprocess
+from collections import Counter
+from datetime import date
 from pathlib import Path
+
+import numpy as np
 
 BASE = "https://w3id.org/welte-premises/"
 LICENSE = "https://creativecommons.org/licenses/by/4.0/"
@@ -51,6 +56,34 @@ DATED = ("high", "medium")
 RESOLVED = 0.25
 EARLY = (0.85, 1.15)
 LATE = 0.75
+
+# The classes of paper, by the colour paper/colour.py measures on a scan and corrects
+# against the grey card hanging above its leader (CIELAB, D65). Four are kinds; two are
+# narrower classes within a kind whose copies are dated closer together than chance
+# allows, each with the band just outside its rule, to say what the rule's edge decides.
+PAPERS = [
+    {"id": "red-warm", "name": "warm red paper", "rule": "a* at least 10 and b* at least 15",
+     "test": lambda l, a, b: a >= 10 and b >= 15},
+    {"id": "red-warm-bright", "name": "bright warm red paper", "broader": "red-warm",
+     "rule": "warm red with a* at least 32",
+     "test": lambda l, a, b: a >= 32 and b >= 15, "edge": lambda l, a, b: 31 <= a < 32 and b >= 15},
+    {"id": "red-cool", "name": "cool red paper", "rule": "a* at least 10 and b* under 15",
+     "test": lambda l, a, b: a >= 10 and b < 15},
+    {"id": "red-cool-light", "name": "light cool red paper", "broader": "red-cool",
+     "rule": "cool red with L* at least 38",
+     "test": lambda l, a, b: a >= 10 and b < 15 and l >= 38, "edge": lambda l, a, b: a >= 10 and b < 15 and 37 <= l < 38},
+    {"id": "buff", "name": "buff paper", "rule": "a* from 3 to under 10", "test": lambda l, a, b: 3 <= a < 10},
+    {"id": "green", "name": "green paper", "rule": "a* under 3", "test": lambda l, a, b: a < 3},
+]
+
+# What is stated of a class, and how firmly: a bound held likely rests on many dated
+# copies, one held possible on a handful.
+PAPER_PREMISES = [("red-cool", "after", "likely"), ("red-warm-bright", "between", "likely"),
+                  ("red-cool-light", "between", "possible"), ("buff", "between", "possible"),
+                  ("green", "between", "possible")]
+
+WIDE = 2.75        # mm of chain pitch and over: the wide perforator (punch-225/README.md)
+DRAWS = 10000      # random groups a narrower class's dates are held against
 
 
 def head(repo):
@@ -120,6 +153,109 @@ def advance_premises(evidence, used):
     ]
 
 
+def year(iso):
+    day = date.fromisoformat(iso)
+    return day.year + (day.timetuple().tm_yday - 1) / 365.25
+
+
+def spread(dates):
+    """The years between the tenth and the ninetieth percentile of the dates."""
+    years = np.array([year(d) for d in dates])
+    return float(np.subtract(*np.percentile(years, [90, 10])))
+
+
+def paper_evidence(catalogue, readings, colours, measured):
+    """Each class of paper with the copies measured as of it and those of them dated to the day."""
+    welte = {roll["druid"]: roll["welte_number"] for roll in catalogue}
+    lab = {druid: e["corrected"]["lab"] for druid, e in colours.items() if e.get("corrected")}
+    dated = {druid: r["date_iso"] for druid, r in readings.items()
+             if druid in lab and r["confidence"] in DATED and len(r.get("date_iso") or "") == 10}
+    pitch = {druid: m.get("pitch", {}).get("pitch") for druid, m in measured.items()}
+    classes = {}
+    for paper in PAPERS:
+        members = [druid for druid in lab if paper["test"](*lab[druid])]
+        copies = sorted(({"druid": d, "welte": welte[d], "date": dated[d], "lab": lab[d]} for d in members if d in dated),
+                        key=lambda row: row["date"])
+        machines = Counter("wide" if pitch[d] >= WIDE else "narrow" for d in members if pitch.get(d))
+        edge = [dated[d] for d in lab if d in dated and paper.get("edge", lambda *_: False)(*lab[d])]
+        classes[paper["id"]] = {**paper, "members": len(members), "copies": copies, "machines": machines,
+                                "edge": sorted(edge)}
+    return classes, dated
+
+
+def chance(narrow, broad):
+    """How often random groups of the broader class's dated copies are as close in date as the narrower."""
+    rng = np.random.default_rng(0)
+    pool = [row["date"] for row in broad["copies"]]
+    observed = spread([row["date"] for row in narrow["copies"]])
+    draws = np.array([spread(rng.choice(pool, len(narrow["copies"]), replace=False)) for _ in range(DRAWS)])
+    return observed, float(np.median(draws)), int((draws <= observed).sum())
+
+
+def paper_note(paper, bound, classes, dated):
+    copies, first, last = paper["copies"], paper["copies"][0], paper["copies"][-1]
+    note = [f"{paper['members']} rolls measure as {paper['name']} ({paper['rule']}, corrected CIELAB), "
+            f"{len(copies)} of them dated to the day at high or medium confidence, from {first['date']} "
+            f"to {last['date']}."]
+    wide, narrow = paper["machines"]["wide"], paper["machines"]["narrow"]
+    note.append(f"All {narrow} whose chain pitch is measured were punched on the narrow perforator." if not wide
+                else f"{wide} of them {'was' if wide == 1 else 'were'} punched on the wide perforator and "
+                     f"{narrow} on the narrow one.")
+    if bound == "after":
+        before = sum(1 for d in dated.values() if d < first["date"])
+        note.append(f"The bound rests on the first dated copy, {copy_of(first)}, alone; the {before} "
+                    "dated copies before it are all of other paper.")
+    else:
+        note.append(f"The bounds rest on the first and the last dated copy, {copy_of(first)} and {copy_of(last)}.")
+    if paper.get("broader"):
+        broad = classes[paper["broader"]]
+        observed, median, as_close = chance(paper, broad)
+        note.append(f"Its dates lie closer together than chance allows: {observed:.1f} years between the tenth and "
+                    f"the ninetieth percentile, against {median:.1f} years for random groups of as many dated "
+                    f"copies of {broad['name']}, of which {as_close} in {DRAWS} were as close.")
+        outside = [d for d in paper["edge"] if not first["date"] <= d <= last["date"]]
+        note.append(f"Within a unit of the rule's edge lie {len(paper['edge'])} dated copies"
+                    + ((f"; that of {outside[0]} lies" if len(outside) == 1 else f"; those of {', '.join(outside)} lie")
+                       + " outside the window and would widen it under a looser rule." if outside
+                       else ", all inside the window."))
+    if len(copies) < 10:
+        note.append(f"The class is attested on {len(copies)} dated copies only.")
+    return " ".join(note)
+
+
+def paper_premises(classes, dated, used):
+    productions = []
+    for pid, bound, certainty in PAPER_PREMISES:
+        paper = classes[pid]
+        first, last = paper["copies"][0]["date"], paper["copies"][-1]["date"]
+        span = {"after": first} if bound == "after" else {"after": first, "before": last}
+        name = f"paper-{pid}"
+        productions.append({
+            "@id": f"premises#{name}", "company": WELTE, "system": {"@id": T100},
+            "paper": {"@id": f"papers#{pid}", "name": paper["name"]},
+            "date": {**span, **believed(name, certainty, [{
+                "@type": "inference", "premises": [], "used": used,
+                "note": paper_note(paper, bound, classes, dated)}])},
+        })
+    return productions
+
+
+def papers_document(classes, method):
+    return {
+        "@context": contexts(),
+        "@id": "papers",
+        "title": "Classes of paper of the red Welte rolls, by their colour",
+        "license": LICENSE,
+        "comment": "Each class is defined by the colour of the blank paper as paper/colour.py measures it on a "
+                   "scan, corrected against the grey card scanned above the leader, in CIELAB with a D65 white. "
+                   "The rules were drawn on Stanford's scans of the Condon collection, all from one scanner.",
+        "@included": [{"@id": f"papers#{p['id']}", "name": p["name"], "seeAlso": method,
+                       "comment": f"Paper whose corrected colour has {p['rule']}.",
+                       **({"broader": f"papers#{p['broader']}"} if p.get("broader") else {})}
+                      for p in classes.values()],
+    }
+
+
 def context():
     """The terms a catalogue of premises needs and linked-rolls does not yet have.
 
@@ -128,6 +264,8 @@ def context():
     """
     return {"@context": {
         "comment": "rdfs:comment",
+        "seeAlso": {"@id": "rdfs:seeAlso", "@type": "@id"},
+        "broader": {"@id": "http://www.w3.org/2004/02/skos/core#broader", "@type": "@id"},
         "productions": {"@id": "crm:P70_documents", "@context": {
             "system": "crm:P32_used_general_technique",
             "perforator": {"@id": "crm:P16_used_specific_object", "@context": {
@@ -147,8 +285,8 @@ def write(target, document, indent=1):
     target.write_text(json.dumps(document, ensure_ascii=False, indent=indent) + "\n")
 
 
-def build(docs, catalogue, readings, perforator, published):
-    """Write the premises, their evidence and the context into docs/."""
+def build(docs, catalogue, readings, perforator, colours, published):
+    """Write the premises, the paper classes, their evidence and the context into docs/."""
     here = Path(__file__).parent
     condon = CONDON_DATES.format(commit=head(here))
     evidence = advance_evidence(catalogue, readings, perforator["rolls"])
@@ -166,6 +304,21 @@ def build(docs, catalogue, readings, perforator, published):
     used = [BASE + "evidence/advance", condon + "data/readings.json", condon + "data/perforator.json",
             condon + "premises.py", PUNCH_225.format(commit=perforator["commit"] or "main") + "dates/step.py"]
     productions = advance_premises(evidence, used)
+
+    classes, dated = paper_evidence(catalogue, readings, colours, perforator["rolls"])
+    premised = dict((pid, f"paper-{pid}") for pid, _, _ in PAPER_PREMISES)
+    write(docs / "evidence" / "paper.json", {
+        "rule": f"dated to the day at confidence {' or '.join(DATED)}; colour as paper/colour.py measures it, "
+                "corrected against the grey card",
+        "quantity": "lab",
+        "unit": "L* a* b*",
+        "groups": [{"id": pid, "label": f"{c['name']}, {c['rule']}", "premise": premised.get(pid),
+                    "copies": c["copies"]} for pid, c in classes.items()],
+    })
+    write(docs / "papers.jsonld", papers_document(classes, condon + "paper/colour.py"))
+    productions += paper_premises(classes, dated, [
+        BASE + "evidence/paper", BASE + "papers", condon + "paper/colour.json", condon + "paper/colour.py",
+        condon + "data/readings.json", condon + "data/perforator.json", condon + "premises.py"])
     write(docs / "premises.jsonld", {
         "@context": contexts(),
         "@id": "premises",

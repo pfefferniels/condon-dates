@@ -23,6 +23,7 @@ CATALOGUE = HERE / "data" / "catalogue.json"
 READINGS = HERE / "data" / "readings.json"
 HANDS = HERE / "hands.json"
 PERFORATOR = HERE / "data" / "perforator.json"
+COLOURS = HERE / "paper" / "colour.json"
 DOCS = HERE / "docs"
 TARGET = DOCS / "data" / "rolls.json"
 
@@ -104,7 +105,8 @@ def main():
     print(f"{len(controllers)} controllers, {len(singles)} single hands")
     print(f"wrote {TARGET.relative_to(HERE)} ({TARGET.stat().st_size // 1024} kB)")
 
-    stated = premises.build(DOCS, rolls, readings, perforator, today)
+    colours = json.loads(COLOURS.read_text())
+    stated = premises.build(DOCS, rolls, readings, perforator, colours, today)
     named = hand_records.build(DOCS, hands)
     print(f"wrote {len(stated)} premises to docs/premises.jsonld with their evidence in docs/evidence/, "
           f"and {len(named)} hands to docs/hands.jsonld")

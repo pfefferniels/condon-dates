@@ -20,7 +20,10 @@ set on each roll, from the two sweeps of punch-225: `pitch.json` (chain pitch, s
 Teilung, the parser's hole width) and `step.json` (the advance). Both are refreshed from
 punch-225 with `sync.py`, which also records the commit of welte225.org they came from; the
 scripts that take the measurements stay there. `hands.json` holds the signature clusters.
-`build.py` turns the four into `docs/data/rolls.json` and the linked data below.
+`paper/` measures the paper on the scans themselves: `paper/colour.json` holds the colour
+of each roll's paper, corrected against the grey card scanned above its leader (see
+`paper/README.md`). `build.py` turns them into `docs/data/rolls.json` and the linked data
+below.
 
 ## Premises
 
@@ -37,19 +40,36 @@ rests on.
 | File | IRI | Content |
 |---|---|---|
 | `docs/premises.jsonld` | `https://w3id.org/welte-premises/premises` | the premises |
+| `docs/papers.jsonld` | `https://w3id.org/welte-premises/papers#<id>` | the classes of paper the premises name |
 | `docs/evidence/<name>.json` | `https://w3id.org/welte-premises/evidence/<name>` | the copies a premise rests on |
 | `docs/premises.html` | | the page a browser following a premise IRI is shown |
 | `docs/context.jsonld` | `https://w3id.org/welte-premises/context.jsonld` | the terms linked-rolls does not have yet |
 | `docs/hands.jsonld` | `https://w3id.org/welte-hands/<id>` | the hands, as authority records |
 
-Two premises stand so far, both on the advance, the one quantity of the perforator that
+Seven premises stand. Two are on the advance, the one quantity of the perforator that
 punch-225 found to date a roll; the punch and the pitch say which machine cut it, not when.
 `premises#advance-1mm-belief` holds that the 1.0 mm advance was not used after the day of
 the first dated copy with the late one, and `premises#advance-half-mm-belief` that the
-0.5 mm advance was not used before the day of the last dated copy with the early one. The
-counts, the bounds and the copies each bound rests on are worked out from
-`data/readings.json` and `data/perforator.json` on every build, so a corrected reading
-moves the premise and not its IRI. An edition should record the commit of the premise it
+0.5 mm advance was not used before the day of the last dated copy with the early one.
+
+Five are on the paper, by its colour. Four kinds are told apart: warm red, cool red, buff
+and green, each defined in `docs/papers.jsonld` by a rule on the corrected colour. Cool
+red, buff and green were punched on the narrow perforator alone, warm red on both, so a
+kind says something of the machine as well as of the time. Two narrower classes, a bright
+warm red and a light cool red, are dated closer together than random groups of their kind
+allow, and are taken for stocks or batches of paper. Each premise states the window its
+dated copies span: cool red not before 24 August 1911, bright warm red between November
+1923 and November 1925, light cool red between October 1921 and February 1922, buff between
+November 1919 and July 1922, green between January 1918 and November 1922. A class attested
+on few dated copies is held possible, and the reasons of every paper premise say how many
+copies it rests on, whether the dates are closer than chance, and which dated copies lie
+just outside the rule's edge, so that a reader sees what the rule decides. A dated copy of
+a class that falls outside its window is worth reading again: Welte 292 was, and was
+misread.
+
+The counts, the bounds and the copies each bound rests on are worked out from
+`data/readings.json`, `data/perforator.json` and `paper/colour.json` on every build, so a
+corrected reading moves the premise and not its IRI. An edition should record the commit of the premise it
 cites. The premises link `premises.py` at the commit the checkout stands at, so build after
 committing a change to it.
 

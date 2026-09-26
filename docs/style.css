@@ -404,6 +404,14 @@ code {
 
 .evidence { margin-top: 72px; }
 
+.papers { margin-top: 72px; }
+
+.classes dt { color: var(--ink); font-weight: 600; scroll-margin-top: 24px; }
+
+.classes dd { color: var(--muted); margin-bottom: 8px; }
+
+.classes code { display: block; font-size: 12px; }
+
 .rule {
   margin: -8px 0 20px;
   max-width: 72ch;

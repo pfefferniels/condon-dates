@@ -12,6 +12,9 @@ RewriteEngine on
 RewriteCond %{HTTP_ACCEPT} text/html
 RewriteRule ^premises$ https://pfefferniels.github.io/condon-dates/premises.html [R=303,L]
 RewriteRule ^premises$ https://pfefferniels.github.io/condon-dates/premises.jsonld [R=302,L]
+RewriteCond %{HTTP_ACCEPT} text/html
+RewriteRule ^papers$ https://pfefferniels.github.io/condon-dates/premises.html [R=303,L]
+RewriteRule ^papers$ https://pfefferniels.github.io/condon-dates/papers.jsonld [R=302,L]
 RewriteRule ^evidence/([a-z0-9-]+)$ https://pfefferniels.github.io/condon-dates/evidence/$1.json [R=302,L]
 RewriteRule ^context\.jsonld$ https://pfefferniels.github.io/condon-dates/context.jsonld [R=302,L]
 RewriteRule ^.*$ https://pfefferniels.github.io/condon-dates/premises.html [R=302,L]
