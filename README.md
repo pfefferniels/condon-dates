@@ -73,7 +73,7 @@ kind says something of the machine as well as of the time. Two narrower classes,
 warm red and a light cool red, are dated closer together than random groups of their kind
 allow, and are taken for stocks or batches of paper. Each premise states the window its
 dated copies span: cool red not before 19 August 1914, bright warm red between November
-1923 and November 1925, light cool red between October 1921 and February 1922, buff between
+1923 and August 1925, light cool red between October 1921 and February 1922, buff between
 November 1919 and July 1922, green between January 1918 and November 1922. Ruled paper, printed
 with a line along each track, is a class of its own, found by `paper/ruling.py`: 30 rolls,
 all warm red and all cut on the wide perforator, and the premise holds that it was not used
@@ -91,7 +91,7 @@ narrow a window, never make it safer. But a bound may rest only on a reading gra
 or verified by the editor on the scan (`verified` in `data/readings.json`). Where it rests
 on a medium reading not yet verified, the premise is held possible at most and its reasons
 name the copy to read again; each build lists those copies. The grade is no guarantee
-either way: of the six readings the editor has corrected, three had been graded high by
+either way: of the seven readings the editor has corrected, three had been graded high by
 their readers and a fourth raised to high on a second look.
 
 The counts, the bounds and the copies each bound rests on are worked out from

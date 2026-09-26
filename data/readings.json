@@ -475,18 +475,19 @@
   "notes": "crop 1, lower panel upright; ink, one line, no name. Number 2000 with a full stop, then the date with its own stops. The month is a closed loop carrying a descender below the line, a 9 and not the plain oval the three 0s of 2000 and 30 show. Year 13."
  },
  "cw965qx3168": {
-  "inscription": "211125",
-  "reading": "211125",
-  "date_iso": "1925-11-21",
-  "confidence": "medium",
+  "inscription": "211123",
+  "reading": "211123",
+  "date_iso": "1923-11-21",
+  "confidence": "high",
+  "verified": "2026-09-26",
   "roll_number": null,
   "hand": null,
   "crop": {
    "box": "3470,160995,460,1900",
    "rot": 90
   },
-  "source": "batch-32.json",
-  "notes": "stamped, upright in the upper panel. 2 1 1 1 2 5, so 21.11.25. The fourth figure is over-inked into a solid block but keeps the flag and base of the two plain 1s before it; the closing 5 is lightly inked, though its top bar and bowl are both there."
+  "source": "authoritative.json",
+  "notes": "read by the editor on the scan on 2026-09-26: 21. 11. 23. The reader gave 211125, the closing figure being lightly inked. It stands before Stanford's publication year for Welte 5661, 1925, as the copy of Welte 5634 of 12 December 1924 does too. The question was raised by the premise on bright warm red paper, whose upper bound rested on this copy's reading at medium confidence. stamped, upright in the upper panel. 2 1 1 1 2 5, so 21.11.25. The fourth figure is over-inked into a solid block but keeps the flag and base of the two plain 1s before it; the closing 5 is lightly inked, though its top bar and bowl are both there."
  },
  "cz847th6835": {
   "inscription": "and placed / during the / on. / less condi-  |  e  |  90.",
