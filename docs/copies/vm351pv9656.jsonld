@@ -1,0 +1,210 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/vm351pv9656.jsonld",
+ "title": "Condon Roll 75, WM 253",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/vm351pv9656.jsonld#copy",
+   "label": "Condon Roll 75",
+   "identifier": "Stanford Libraries CONDON ROLL 75",
+   "seeAlso": "https://purl.stanford.edu/vm351pv9656",
+   "exemplifies": {
+    "catalogueNumber": "WM 253",
+    "label": "Zscherneck, Georg: Intermezzo aus Cavalleria rusticana"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1952,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/vm351pv9656.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 9270.05,
+        "to": 9430.78
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/vm351pv9656%2Fvm351pv9656_0001/3525,109580,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/vm351pv9656.jsonld#inscription-text",
+        "text": "No 253  Gündner  25. 3. 09."
+       }
+      }
+     ],
+     "actor": {
+      "name": "Gündner",
+      "sameAs": [],
+      "@id": "hands.jsonld#guendner",
+      "@annotation": {
+       "@id": "copies/vm351pv9656.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/vm351pv9656.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/vm351pv9656.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Gündner\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/vm351pv9656%2Fvm351pv9656_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1909-03-25",
+     "@annotation": {
+      "@id": "copies/vm351pv9656.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/vm351pv9656.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/vm351pv9656.jsonld#inscription-text"
+         ],
+         "note": "pencil on ruled red paper, the figures plain. The name is less certain than the date: it carries an umlaut and reads as Gündner, though Gärtner would also fit the strokes."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/vm351pv9656.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2672,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/vm351pv9656.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/vm351pv9656.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/v/vm351pv9656_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.9952,
+       "unit": "mm",
+       "slot": 2.3957,
+       "bridge": 0.6041,
+       "n": 349,
+       "@annotation": {
+        "@id": "copies/vm351pv9656.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/vm351pv9656.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 349 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/vm351pv9656%2Fvm351pv9656_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.022,
+       "unit": "mm",
+       "strength": 0.853,
+       "n": 7474,
+       "@annotation": {
+        "@id": "copies/vm351pv9656.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/vm351pv9656.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 7474 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.34 mm at 0.342, 0.51 mm at 0.6087. The chain pitch is 2.931 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/v/vm351pv9656_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

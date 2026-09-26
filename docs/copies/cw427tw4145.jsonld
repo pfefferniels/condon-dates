@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/cw427tw4145.jsonld",
+ "title": "Condon Roll 549, WM 2000",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/cw427tw4145.jsonld#copy",
+   "label": "Condon Roll 549",
+   "identifier": "Stanford Libraries CONDON ROLL 549",
+   "seeAlso": "https://purl.stanford.edu/cw427tw4145",
+   "exemplifies": {
+    "catalogueNumber": "WM 2000",
+    "label": "Goraïnoff, Irina (1897-1980): Rondo capriccioso"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1914,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/cw427tw4145.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 18561.5,
+        "to": 18722.23
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/cw427tw4145%2Fcw427tw4145_0001/3474,219413,460,1900/full/270/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/cw427tw4145.jsonld#inscription-text",
+        "text": "2000.    30. 9.13"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/cw427tw4145%2Fcw427tw4145_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1913-09-30",
+     "@annotation": {
+      "@id": "copies/cw427tw4145.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/cw427tw4145.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/cw427tw4145.jsonld#inscription-text"
+         ],
+         "note": "crop 1, lower panel upright; ink, one line, no name. Number 2000 with a full stop, then the date with its own stops. The month is a closed loop carrying a descender below the line, a 9 and not the plain oval the three 0s of 2000 and 30 show. Year 13."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/cw427tw4145.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1826,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/cw427tw4145.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cw427tw4145.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/cw427tw4145_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0436,
+       "unit": "mm",
+       "slot": 2.3532,
+       "bridge": 0.687,
+       "n": 206,
+       "@annotation": {
+        "@id": "copies/cw427tw4145.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cw427tw4145.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 206 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/cw427tw4145%2Fcw427tw4145_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.489,
+       "unit": "mm",
+       "strength": 0.1702,
+       "n": 11325,
+       "@annotation": {
+        "@id": "copies/cw427tw4145.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cw427tw4145.jsonld#advance-belief",
+         "certainty": "unlikely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 11325 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.604 mm at 0.0563, 0.997 mm at 0.063. The chain pitch is 6.224 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/cw427tw4145_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

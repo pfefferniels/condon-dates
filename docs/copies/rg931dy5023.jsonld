@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/rg931dy5023.jsonld",
+ "title": "Condon Roll 708, WM 2944",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/rg931dy5023.jsonld#copy",
+   "label": "Condon Roll 708",
+   "identifier": "Stanford Libraries CONDON ROLL 708",
+   "seeAlso": "https://purl.stanford.edu/rg931dy5023",
+   "exemplifies": {
+    "catalogueNumber": "WM 2944",
+    "label": "Cor de Las, A: Faust Reminiscenzen a. d. III. und IV. Akt"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1823,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/rg931dy5023.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 42239.71,
+        "to": 42400.45
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/rg931dy5023%2Frg931dy5023_0001/3511,499310,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/rg931dy5023.jsonld#inscription-text",
+        "text": "19428"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/rg931dy5023%2Frg931dy5023_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1928-04-19",
+     "@annotation": {
+      "@id": "copies/rg931dy5023.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/rg931dy5023.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/rg931dy5023.jsonld#inscription-text"
+         ],
+         "note": "Pencil, treble edge, near the tail of the roll. Five figures, no separators, split 3 + 2 by spacing. The 1 is a plain caret, the 9 a closed bowl with a descender matching the 9 of the roll number, the 4 the looped form this hand uses in the number. The last figure is a closed double loop, both lobes inked on the left, so an 8 and not the open-left 3; if it were a 3 the year would be 23. Crop 1 holds only an ink blot; the roll number 2944 is written at the head of the roll (crop 3)."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/rg931dy5023.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7765,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/rg931dy5023.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rg931dy5023.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/r/rg931dy5023_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5012,
+       "unit": "mm",
+       "slot": 1.9091,
+       "bridge": 0.5925,
+       "n": 382,
+       "@annotation": {
+        "@id": "copies/rg931dy5023.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rg931dy5023.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 382 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/rg931dy5023%2Frg931dy5023_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.499,
+       "unit": "mm",
+       "strength": 0.4592,
+       "n": 39483,
+       "@annotation": {
+        "@id": "copies/rg931dy5023.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rg931dy5023.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 39483 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.362 mm at 0.0254, 0.899 mm at 0.0433. The chain pitch is 5.012 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/r/rg931dy5023_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

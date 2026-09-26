@@ -1,0 +1,210 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/vm096df0179.jsonld",
+ "title": "Condon Roll 104, WM 363",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/vm096df0179.jsonld#copy",
+   "label": "Condon Roll 104",
+   "identifier": "Stanford Libraries CONDON ROLL 104",
+   "seeAlso": "https://purl.stanford.edu/vm096df0179",
+   "exemplifies": {
+    "catalogueNumber": "WM 363",
+    "label": "Carreño, Teresa (1853-1917): Fantasie C-Dur, op. 17"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1965,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/vm096df0179.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 32339.59,
+        "to": 32500.33
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/vm096df0179%2Fvm096df0179_0001/3488,382282,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/vm096df0179.jsonld#inscription-text",
+        "text": "№ 363.  7. 1108.  Roth"
+       }
+      }
+     ],
+     "actor": {
+      "name": "Roth",
+      "sameAs": [],
+      "@id": "hands.jsonld#roth",
+      "@annotation": {
+       "@id": "copies/vm096df0179.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/vm096df0179.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/vm096df0179.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Roth\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/vm096df0179%2Fvm096df0179_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1908-11-07",
+     "@annotation": {
+      "@id": "copies/vm096df0179.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/vm096df0179.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/vm096df0179.jsonld#inscription-text"
+         ],
+         "note": "Faint pencil. '№ 363.' and 'Roth' are clear. The four figures after the day read 1-1-0-8, i.e. month 11 and year 08 with the separators dropped; if the second figure were a 9 the group would be the year '1908' and the inscription would carry no month. The day is written with a flat top bar and could be a 1 rather than a 7."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/vm096df0179.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1487,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/vm096df0179.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/vm096df0179.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/v/vm096df0179_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.8328,
+       "unit": "mm",
+       "slot": 2.2659,
+       "bridge": 0.5527,
+       "n": 339,
+       "@annotation": {
+        "@id": "copies/vm096df0179.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/vm096df0179.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 339 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/vm096df0179%2Fvm096df0179_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.015,
+       "unit": "mm",
+       "strength": 0.1301,
+       "n": 32049,
+       "@annotation": {
+        "@id": "copies/vm096df0179.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/vm096df0179.jsonld#advance-belief",
+         "certainty": "unlikely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 32049 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.442 mm at 0.0271, 0.545 mm at 0.0408, 0.708 mm at 0.0726. The chain pitch is 2.791 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/v/vm096df0179_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

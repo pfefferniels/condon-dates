@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/ys288dd6430.jsonld",
+ "title": "Condon Roll 14, WM 118",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/ys288dd6430.jsonld#copy",
+   "label": "Condon Roll 14",
+   "identifier": "Stanford Libraries CONDON ROLL 14",
+   "seeAlso": "https://purl.stanford.edu/ys288dd6430",
+   "exemplifies": {
+    "catalogueNumber": "WM 118",
+    "label": "Adam-Benard, Eugenie: Schwanenlied aus Lohengrin"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1996,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/ys288dd6430.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 16073.27,
+        "to": 16234.0
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 84,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/ys288dd6430%2Fys288dd6430_0001/3278,190000,667,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/ys288dd6430.jsonld#inscription-text",
+        "text": "118  14.4.10  Roth / Wössler"
+       },
+       "medium": "ink"
+      }
+     ],
+     "actor": {
+      "name": "Roth",
+      "sameAs": [],
+      "@id": "hands.jsonld#roth",
+      "@annotation": {
+       "@id": "copies/ys288dd6430.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/ys288dd6430.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/ys288dd6430.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Roth / Wössler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/ys288dd6430%2Fys288dd6430_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1910-04-14",
+     "@annotation": {
+      "@id": "copies/ys288dd6430.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/ys288dd6430.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/ys288dd6430.jsonld#inscription-text"
+         ],
+         "note": "ink. The date line is plain. A second name stands below it in a smaller hand with an umlaut stroke; I read it as Wössler, with less certainty than the rest."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/ys288dd6430.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.3611,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/ys288dd6430.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ys288dd6430.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/ys288dd6430_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0501,
+       "unit": "mm",
+       "slot": 2.2998,
+       "bridge": 0.7191,
+       "n": 415,
+       "@annotation": {
+        "@id": "copies/ys288dd6430.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ys288dd6430.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 415 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/ys288dd6430%2Fys288dd6430_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.06,
+       "unit": "mm",
+       "strength": 0.1929,
+       "n": 12122,
+       "@annotation": {
+        "@id": "copies/ys288dd6430.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ys288dd6430.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 12122 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.663 mm at 0.1343, 0.752 mm at 0.1368, 0.865 mm at 0.1389. The chain pitch is 2.877 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/ys288dd6430_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

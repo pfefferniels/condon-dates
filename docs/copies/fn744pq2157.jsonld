@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/fn744pq2157.jsonld",
+ "title": "Condon Roll 542, WM 1990",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/fn744pq2157.jsonld#copy",
+   "label": "Condon Roll 542",
+   "identifier": "Stanford Libraries CONDON ROLL 542",
+   "seeAlso": "https://purl.stanford.edu/fn744pq2157",
+   "exemplifies": {
+    "catalogueNumber": "WM 1990",
+    "label": "Lemba, Artur (1885-1963): Grande valse de concert : op. 47, D major"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1961,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/fn744pq2157.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 29815.58,
+        "to": 29976.31
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 77,
+        "to": 99
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/fn744pq2157%2Ffn744pq2157_0001/3030,352446,780,1900/full/270/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/fn744pq2157.jsonld#inscription-text",
+        "text": "201125"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/fn744pq2157%2Ffn744pq2157_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1925-11-20",
+     "@annotation": {
+      "@id": "copies/fn744pq2157.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/fn744pq2157.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/fn744pq2157.jsonld#inscription-text"
+         ],
+         "note": "stamped in type, not written, lower panel upright; six figures without separators, read as ddmmyy on the pattern of 311022 = 31.10.1922 given in the instructions"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/fn744pq2157.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7334,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/fn744pq2157.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fn744pq2157.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/f/fn744pq2157_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.6112,
+       "unit": "mm",
+       "slot": 1.8195,
+       "bridge": 0.7878,
+       "n": 183,
+       "@annotation": {
+        "@id": "copies/fn744pq2157.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fn744pq2157.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 183 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/fn744pq2157%2Ffn744pq2157_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.52,
+       "unit": "mm",
+       "strength": 0.5451,
+       "n": 24205,
+       "@annotation": {
+        "@id": "copies/fn744pq2157.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fn744pq2157.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 24205 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.682 mm at 0.0811, 0.981 mm at 0.0598. The chain pitch is 5.022 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/f/fn744pq2157_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

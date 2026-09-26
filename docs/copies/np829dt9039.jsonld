@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/np829dt9039.jsonld",
+ "title": "Condon Roll 425, WM 1386",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/np829dt9039.jsonld#copy",
+   "label": "Condon Roll 425",
+   "identifier": "Stanford Libraries CONDON ROLL 425",
+   "seeAlso": "https://purl.stanford.edu/np829dt9039",
+   "exemplifies": {
+    "catalogueNumber": "WM 1386",
+    "label": "Timanoff, Vera (1855-1924): I. Ungarische Rhapsodie"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1932,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/np829dt9039.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 44488.96,
+        "to": 44649.69
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/np829dt9039%2Fnp829dt9039_0001/3508,525898,460,1900/full/270/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/np829dt9039.jsonld#inscription-text",
+        "text": "21824"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/np829dt9039%2Fnp829dt9039_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1924-08-21",
+     "@annotation": {
+      "@id": "copies/np829dt9039.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/np829dt9039.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/np829dt9039.jsonld#inscription-text"
+         ],
+         "note": "pencil, five figures without separators, read from the lower panel. Every figure is plain; the 8 has both bowls closed."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/np829dt9039.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7647,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/np829dt9039.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/np829dt9039.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/n/np829dt9039_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5096,
+       "unit": "mm",
+       "slot": 1.8832,
+       "bridge": 0.6331,
+       "n": 357,
+       "@annotation": {
+        "@id": "copies/np829dt9039.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/np829dt9039.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 357 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/np829dt9039%2Fnp829dt9039_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.5,
+       "unit": "mm",
+       "strength": 0.6543,
+       "n": 30720,
+       "@annotation": {
+        "@id": "copies/np829dt9039.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/np829dt9039.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 30720 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.311 mm at 0.0346, 0.411 mm at 0.1201. The chain pitch is 5.019 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/n/np829dt9039_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

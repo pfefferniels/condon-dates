@@ -1,0 +1,132 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/cd381jt9273.jsonld",
+ "title": "Condon Roll 749, WM 3172",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/cd381jt9273.jsonld#copy",
+   "label": "Condon Roll 749",
+   "identifier": "Stanford Libraries CONDON ROLL 749",
+   "seeAlso": "https://purl.stanford.edu/cd381jt9273",
+   "exemplifies": {
+    "catalogueNumber": "WM 3172",
+    "label": "Kiek, Georges: 3th symphony"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1946,
+     "unit": "mm"
+    }
+   },
+   "modifications": [],
+   "scan": "https://stacks.stanford.edu/image/iiif/cd381jt9273%2Fcd381jt9273_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/cd381jt9273.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7207,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/cd381jt9273.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cd381jt9273.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/cd381jt9273_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5908,
+       "unit": "mm",
+       "slot": 1.8156,
+       "bridge": 0.7736,
+       "n": 340,
+       "@annotation": {
+        "@id": "copies/cd381jt9273.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cd381jt9273.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 340 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/cd381jt9273%2Fcd381jt9273_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.517,
+       "unit": "mm",
+       "strength": 0.5526,
+       "n": 31694,
+       "@annotation": {
+        "@id": "copies/cd381jt9273.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cd381jt9273.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 31694 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.304 mm at 0.0386, 0.703 mm at 0.0943. The chain pitch is 5.011 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/cd381jt9273_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

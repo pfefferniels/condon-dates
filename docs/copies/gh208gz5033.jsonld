@@ -1,0 +1,210 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/gh208gz5033.jsonld",
+ "title": "Condon Roll 247, WM 763",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/gh208gz5033.jsonld#copy",
+   "label": "Condon Roll 247",
+   "identifier": "Stanford Libraries CONDON ROLL 247",
+   "seeAlso": "https://purl.stanford.edu/gh208gz5033",
+   "exemplifies": {
+    "catalogueNumber": "WM 763",
+    "label": "Mero, Yolanda (1887-1963): Staccato caprice"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1916,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/gh208gz5033.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 10399.66,
+        "to": 10572.58
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 82,
+        "to": 95
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/gh208gz5033%2Fgh208gz5033_0001/3202,122933,460,2044/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/gh208gz5033.jsonld#inscription-text",
+        "text": "763. Fritz. 18 Dezbr 1908."
+       }
+      }
+     ],
+     "actor": {
+      "name": "Fritz",
+      "sameAs": [],
+      "@id": "hands.jsonld#fritz",
+      "@annotation": {
+       "@id": "copies/gh208gz5033.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/gh208gz5033.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/gh208gz5033.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Fritz\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/gh208gz5033%2Fgh208gz5033_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1908-12-18",
+     "@annotation": {
+      "@id": "copies/gh208gz5033.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/gh208gz5033.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/gh208gz5033.jsonld#inscription-text"
+         ],
+         "note": "Pencil on ruled paper, one line, upper panel upright. Roll number 763 and the name Fritz are plain, as are the day 18 and the year 1908. The month is written as a word abbreviated to about five letters; the initial capital reads to me as D (Dezbr, December), but a capital O (Octbr, October) cannot be ruled out from this crop, and the middle letters are indistinct. Region 2 of this roll carries perforations only, no writing."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/gh208gz5033.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2951,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/gh208gz5033.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/gh208gz5033.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/g/gh208gz5033_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0086,
+       "unit": "mm",
+       "slot": 2.4196,
+       "bridge": 0.5764,
+       "n": 100,
+       "@annotation": {
+        "@id": "copies/gh208gz5033.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/gh208gz5033.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 100 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/gh208gz5033%2Fgh208gz5033_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.003,
+       "unit": "mm",
+       "strength": 0.873,
+       "n": 5921,
+       "@annotation": {
+        "@id": "copies/gh208gz5033.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/gh208gz5033.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 5921 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.335 mm at 0.3312, 0.502 mm at 0.6033. The chain pitch is 3.000 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/g/gh208gz5033_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

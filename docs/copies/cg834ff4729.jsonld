@@ -1,0 +1,132 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/cg834ff4729.jsonld",
+ "title": "Condon Roll 825, WM 3647",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/cg834ff4729.jsonld#copy",
+   "label": "Condon Roll 825",
+   "identifier": "Stanford Libraries CONDON ROLL 825",
+   "seeAlso": "https://purl.stanford.edu/cg834ff4729",
+   "exemplifies": {
+    "catalogueNumber": "WM 3647",
+    "label": "Heineck, Franz: Lilac domino : hesitation waltz"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1919,
+     "unit": "mm"
+    }
+   },
+   "modifications": [],
+   "scan": "https://stacks.stanford.edu/image/iiif/cg834ff4729%2Fcg834ff4729_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/cg834ff4729.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7359,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/cg834ff4729.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cg834ff4729.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/cg834ff4729_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.4831,
+       "unit": "mm",
+       "slot": 1.8598,
+       "bridge": 0.6282,
+       "n": 177,
+       "@annotation": {
+        "@id": "copies/cg834ff4729.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cg834ff4729.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 177 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/cg834ff4729%2Fcg834ff4729_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.494,
+       "unit": "mm",
+       "strength": 0.5701,
+       "n": 8109,
+       "@annotation": {
+        "@id": "copies/cg834ff4729.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cg834ff4729.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 8109 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.331 mm at 0.0269, 0.385 mm at 0.0631. The chain pitch is 5.027 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/cg834ff4729_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/ym420hv4366.jsonld",
+ "title": "Condon Roll 3, WM 231",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/ym420hv4366.jsonld#copy",
+   "label": "Condon Roll 3",
+   "identifier": "Stanford Libraries CONDON ROLL 3",
+   "seeAlso": "https://purl.stanford.edu/ym420hv4366",
+   "exemplifies": {
+    "catalogueNumber": "WM 231",
+    "label": "Möhle, Hermann: Lied ohne Worte, op. 62, [no. 4], no. 28"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1879,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/ym420hv4366.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 9678.39,
+        "to": 9839.13
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 83,
+        "to": 96
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/ym420hv4366%2Fym420hv4366_0001/3290,114407,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/ym420hv4366.jsonld#inscription-text",
+        "text": "Langenbach"
+       }
+      }
+     ],
+     "actor": {
+      "name": "Langenbach",
+      "sameAs": [],
+      "@annotation": {
+       "@id": "copies/ym420hv4366.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/ym420hv4366.jsonld#hand-belief",
+        "certainty": "possible",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/ym420hv4366.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Langenbach\"."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/ym420hv4366%2Fym420hv4366_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/ym420hv4366.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2477,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/ym420hv4366.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ym420hv4366.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/ym420hv4366_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.9733,
+       "unit": "mm",
+       "slot": 2.41,
+       "bridge": 0.5525,
+       "n": 313,
+       "@annotation": {
+        "@id": "copies/ym420hv4366.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ym420hv4366.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 313 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/ym420hv4366%2Fym420hv4366_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.572,
+       "unit": "mm",
+       "strength": 0.2685,
+       "n": 7406,
+       "@annotation": {
+        "@id": "copies/ym420hv4366.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ym420hv4366.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 7406 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.561 mm at 0.0827, 0.736 mm at 0.1258, 1.019 mm at 0.1881. The chain pitch is 1.891 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/ym420hv4366_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/jx095ty1753.jsonld",
+ "title": "Condon Roll 332, WM 1204",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/jx095ty1753.jsonld#copy",
+   "label": "Condon Roll 332",
+   "identifier": "Stanford Libraries CONDON ROLL 332",
+   "seeAlso": "https://purl.stanford.edu/jx095ty1753",
+   "exemplifies": {
+    "catalogueNumber": "WM 1204",
+    "label": "Pachmann, Vladimir de (1848-1933): Sonate, A-Dur, Nr. 9"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1947,
+     "unit": "mm"
+    }
+   },
+   "modifications": [],
+   "scan": "https://stacks.stanford.edu/image/iiif/jx095ty1753%2Fjx095ty1753_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/jx095ty1753.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2426,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/jx095ty1753.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/jx095ty1753.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/j/jx095ty1753_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0061,
+       "unit": "mm",
+       "slot": 2.3215,
+       "bridge": 0.6838,
+       "n": 310,
+       "@annotation": {
+        "@id": "copies/jx095ty1753.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/jx095ty1753.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 310 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/jx095ty1753%2Fjx095ty1753_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.02,
+       "unit": "mm",
+       "strength": 0.8252,
+       "n": 24104,
+       "@annotation": {
+        "@id": "copies/jx095ty1753.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/jx095ty1753.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 24104 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.341 mm at 0.2014, 0.51 mm at 0.486. The chain pitch is 2.947 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/j/jx095ty1753_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

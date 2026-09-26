@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/mh255vw4599.jsonld",
+ "title": "Condon Roll 399, WM 1276",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/mh255vw4599.jsonld#copy",
+   "label": "Condon Roll 399",
+   "identifier": "Stanford Libraries CONDON ROLL 399",
+   "seeAlso": "https://purl.stanford.edu/mh255vw4599",
+   "exemplifies": {
+    "catalogueNumber": "WM 1276",
+    "label": "Grieg, Edvard (1843-1907): Norwegischer Brautzug im Vorüberziehen"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1923,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/mh255vw4599.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 13074.93,
+        "to": 13244.46
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 82,
+        "to": 95
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/mh255vw4599%2Fmh255vw4599_0001/3262,154557,460,2004/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/mh255vw4599.jsonld#inscription-text",
+        "text": "N. 1236. Fritz 20 Novb 1908."
+       },
+       "medium": "pencil"
+      }
+     ],
+     "actor": {
+      "name": "Fritz",
+      "sameAs": [],
+      "@id": "hands.jsonld#fritz",
+      "@annotation": {
+       "@id": "copies/mh255vw4599.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/mh255vw4599.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/mh255vw4599.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Fritz\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/mh255vw4599%2Fmh255vw4599_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1908-11-20",
+     "@annotation": {
+      "@id": "copies/mh255vw4599.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/mh255vw4599.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/mh255vw4599.jsonld#inscription-text"
+         ],
+         "note": "pencil, one line above a row of perforations; the month is written out as Novb. The figures of the roll number are fainter than the date, the reading 1236 is the best I can make of them."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/mh255vw4599.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2274,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/mh255vw4599.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/mh255vw4599.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/m/mh255vw4599_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0196,
+       "unit": "mm",
+       "slot": 2.3152,
+       "bridge": 0.7029,
+       "n": 192,
+       "@annotation": {
+        "@id": "copies/mh255vw4599.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/mh255vw4599.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 192 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/mh255vw4599%2Fmh255vw4599_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.998,
+       "unit": "mm",
+       "strength": 0.789,
+       "n": 6101,
+       "@annotation": {
+        "@id": "copies/mh255vw4599.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/mh255vw4599.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 6101 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.335 mm at 0.186, 0.502 mm at 0.4638. The chain pitch is 3.026 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/m/mh255vw4599_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

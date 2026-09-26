@@ -1,0 +1,201 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/bj606rp8160.jsonld",
+ "title": "Condon Roll 1, WM 367",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/bj606rp8160.jsonld#copy",
+   "label": "Condon Roll 1",
+   "identifier": "Stanford Libraries CONDON ROLL 109 COPY 1",
+   "seeAlso": "https://purl.stanford.edu/bj606rp8160",
+   "exemplifies": {
+    "catalogueNumber": "WM 367",
+    "label": "Carreño, Teresa (1853-1917): Ballade op. 23, G minor"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.2006,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/bj606rp8160.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 29090.68,
+        "to": 29251.41
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/bj606rp8160%2Fbj606rp8160_0001/3524,343877,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/bj606rp8160.jsonld#inscription-text",
+        "text": "367.  14. 9. 10.  J. H. M. / II."
+       }
+      }
+     ],
+     "actor": {
+      "name": "J. H. M.",
+      "sameAs": [],
+      "@annotation": {
+       "@id": "copies/bj606rp8160.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/bj606rp8160.jsonld#hand-belief",
+        "certainty": "possible",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/bj606rp8160.jsonld#inscription-text"
+          ],
+          "note": "Read as \"J. H. M.\"."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/bj606rp8160%2Fbj606rp8160_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1910-09-14",
+     "@annotation": {
+      "@id": "copies/bj606rp8160.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/bj606rp8160.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/bj606rp8160.jsonld#inscription-text"
+         ],
+         "note": "read here at magnification after two readers disagreed, one giving 19.9.10 and 867, the other 14.4.10 and 864. The number reads 367, which matches the catalogue, and that agreement is the reason to prefer this reading of the figures."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/bj606rp8160.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1885,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/bj606rp8160.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bj606rp8160.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bj606rp8160_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0446,
+       "unit": "mm",
+       "slot": 2.2902,
+       "bridge": 0.7595,
+       "n": 290,
+       "@annotation": {
+        "@id": "copies/bj606rp8160.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bj606rp8160.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 290 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/bj606rp8160%2Fbj606rp8160_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.508,
+       "unit": "mm",
+       "strength": 0.4889,
+       "n": 19136,
+       "@annotation": {
+        "@id": "copies/bj606rp8160.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bj606rp8160.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 19136 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.733 mm at 0.0726, 0.86 mm at 0.0544. The chain pitch is 5.993 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bj606rp8160_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

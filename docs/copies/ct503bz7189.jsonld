@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/ct503bz7189.jsonld",
+ "title": "Condon Roll 848, WM 3842",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/ct503bz7189.jsonld#copy",
+   "label": "Condon Roll 848",
+   "identifier": "Stanford Libraries CONDON ROLL 848",
+   "seeAlso": "https://purl.stanford.edu/ct503bz7189",
+   "exemplifies": {
+    "catalogueNumber": "WM 3842",
+    "label": "Heinemann, Käthe (1893-): Märchenbilder"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1872,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/ct503bz7189.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 29584.38,
+        "to": 29745.11
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/ct503bz7189%2Fct503bz7189_0001/3508,349713,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/ct503bz7189.jsonld#inscription-text",
+        "text": "2111.23"
+       },
+       "medium": "ink"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/ct503bz7189%2Fct503bz7189_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1923-11-21",
+     "@annotation": {
+      "@id": "copies/ct503bz7189.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/ct503bz7189.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/ct503bz7189.jsonld#inscription-text"
+         ],
+         "note": "ink, written across the roll; the point before the year marks 2111 as day and month, so 21.11.23. Same hand as qv976bq3639"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/ct503bz7189.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.84,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/ct503bz7189.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ct503bz7189.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/ct503bz7189_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.4895,
+       "unit": "mm",
+       "slot": 1.9554,
+       "bridge": 0.5362,
+       "n": 367,
+       "@annotation": {
+        "@id": "copies/ct503bz7189.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ct503bz7189.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 367 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/ct503bz7189%2Fct503bz7189_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.499,
+       "unit": "mm",
+       "strength": 0.5073,
+       "n": 24593,
+       "@annotation": {
+        "@id": "copies/ct503bz7189.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ct503bz7189.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 24593 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.407 mm at 0.0444, 1.25 mm at 0.0376. The chain pitch is 4.989 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/ct503bz7189_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/hc229ht1024.jsonld",
+ "title": "Condon Roll 370, WM 1249",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/hc229ht1024.jsonld#copy",
+   "label": "Condon Roll 370",
+   "identifier": "Stanford Libraries CONDON ROLL 370",
+   "seeAlso": "https://purl.stanford.edu/hc229ht1024",
+   "exemplifies": {
+    "catalogueNumber": "WM 1249",
+    "label": "Paderewski, Ignace Jan (1860-1941): Ballade op. 47, A flat major"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1857,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/hc229ht1024.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 27424.47,
+        "to": 27585.2
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/hc229ht1024%2Fhc229ht1024_0001/3496,324181,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/hc229ht1024.jsonld#inscription-text",
+        "text": "7 10-24"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/hc229ht1024%2Fhc229ht1024_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1924-10-07",
+     "@annotation": {
+      "@id": "copies/hc229ht1024.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/hc229ht1024.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/hc229ht1024.jsonld#inscription-text"
+         ],
+         "note": "Stamped, not written, in black on the bare red paper; the impression is uneven. The figures 7, 1, 0 and 2, 4 are plain, with a hyphen between the 0 and the 2, read 7.10.24. A small broken mark stands a digit's width to the left of the 7 and matching marks and a short vertical rule stand at the right end, which I take for the stamp's frame rather than figures; if the left mark were a weakly struck figure the day would be 17 instead of 7."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/hc229ht1024.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.8078,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/hc229ht1024.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/hc229ht1024.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/h/hc229ht1024_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5098,
+       "unit": "mm",
+       "slot": 1.9296,
+       "bridge": 0.5781,
+       "n": 363,
+       "@annotation": {
+        "@id": "copies/hc229ht1024.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/hc229ht1024.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 363 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/hc229ht1024%2Fhc229ht1024_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.501,
+       "unit": "mm",
+       "strength": 0.5173,
+       "n": 26991,
+       "@annotation": {
+        "@id": "copies/hc229ht1024.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/hc229ht1024.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 26991 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.358 mm at 0.053, 0.405 mm at 0.0953. The chain pitch is 5.010 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/h/hc229ht1024_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/bd915bs0646.jsonld",
+ "title": "Condon Roll 750, WM 3162",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/bd915bs0646.jsonld#copy",
+   "label": "Condon Roll 750",
+   "identifier": "Stanford Libraries CONDON ROLL 750",
+   "seeAlso": "https://purl.stanford.edu/bd915bs0646",
+   "exemplifies": {
+    "catalogueNumber": "WM 3162",
+    "label": "Kiek, Georges: Capriccio brilliante B major"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1951,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/bd915bs0646.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 39212.69,
+        "to": 39373.43
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/bd915bs0646%2Fbd915bs0646_0001/3541,463528,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/bd915bs0646.jsonld#inscription-text",
+        "text": "30821"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/bd915bs0646%2Fbd915bs0646_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "after": "1921-01-01",
+     "before": "1921-12-31",
+     "@annotation": {
+      "@id": "copies/bd915bs0646.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/bd915bs0646.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/bd915bs0646.jsonld#inscription-text"
+         ],
+         "note": "Pencil, treble edge, at the tail of the roll. Five small figures, about 27 px each, cut along the top by the crop edge. The last two are secure: the 2 matches the 2 of the roll number written at the head of the roll (crop 4) and the 1 is a plain stroke, so the year is 21. My best reading of the rest is 30 and 8, giving 30 August, but the first figure could be a 2 (day 20) and the third could be a 6 (June), so I have left date_iso at the year alone rather than complete it. Crop 2 carries a short pencil tick, crop 3 creases, crop 5 the leader join."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/bd915bs0646.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.741,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/bd915bs0646.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bd915bs0646.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bd915bs0646_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.6019,
+       "unit": "mm",
+       "slot": 1.8378,
+       "bridge": 0.7574,
+       "n": 289,
+       "@annotation": {
+        "@id": "copies/bd915bs0646.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bd915bs0646.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 289 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/bd915bs0646%2Fbd915bs0646_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.521,
+       "unit": "mm",
+       "strength": 0.5143,
+       "n": 25133,
+       "@annotation": {
+        "@id": "copies/bd915bs0646.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bd915bs0646.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 25133 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.684 mm at 0.0769, 0.929 mm at 0.0607. The chain pitch is 4.994 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bd915bs0646_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

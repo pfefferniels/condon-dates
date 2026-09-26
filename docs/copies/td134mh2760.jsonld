@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/td134mh2760.jsonld",
+ "title": "Condon Roll 229, WM 660",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/td134mh2760.jsonld#copy",
+   "label": "Condon Roll 229",
+   "identifier": "Stanford Libraries CONDON ROLL 229",
+   "seeAlso": "https://purl.stanford.edu/td134mh2760",
+   "exemplifies": {
+    "catalogueNumber": "WM 660",
+    "label": "Hofmann, Josef (1876-1957): Melodie op. 3, F-Dur"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.19,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/td134mh2760.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 14395.73,
+        "to": 14572.03
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 80,
+        "to": 94
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/td134mh2760%2Ftd134mh2760_0001/3134,170170,508,2084/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/td134mh2760.jsonld#inscription-text",
+        "text": "660. Fritz 7 Dezb 1908"
+       },
+       "medium": "pencil"
+      }
+     ],
+     "actor": {
+      "name": "Fritz",
+      "sameAs": [],
+      "@id": "hands.jsonld#fritz",
+      "@annotation": {
+       "@id": "copies/td134mh2760.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/td134mh2760.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/td134mh2760.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Fritz\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/td134mh2760%2Ftd134mh2760_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1908-12-07",
+     "@annotation": {
+      "@id": "copies/td134mh2760.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/td134mh2760.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/td134mh2760.jsonld#inscription-text"
+         ],
+         "note": "pencil, same hand and same date as gq898yv9510"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/td134mh2760.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1851,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/td134mh2760.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/td134mh2760.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/t/td134mh2760_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0182,
+       "unit": "mm",
+       "slot": 2.3216,
+       "bridge": 0.6927,
+       "n": 242,
+       "@annotation": {
+        "@id": "copies/td134mh2760.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/td134mh2760.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 242 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/td134mh2760%2Ftd134mh2760_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.022,
+       "unit": "mm",
+       "strength": 0.8138,
+       "n": 12862,
+       "@annotation": {
+        "@id": "copies/td134mh2760.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/td134mh2760.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 12862 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.342 mm at 0.175, 0.511 mm at 0.4565. The chain pitch is 2.953 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/t/td134mh2760_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

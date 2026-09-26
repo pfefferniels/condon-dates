@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/pk349zj4179.jsonld",
+ "title": "Condon Roll 242, WM 797",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/pk349zj4179.jsonld#copy",
+   "label": "Condon Roll 242",
+   "identifier": "Stanford Libraries CONDON ROLL 242",
+   "seeAlso": "https://purl.stanford.edu/pk349zj4179",
+   "exemplifies": {
+    "catalogueNumber": "WM 797",
+    "label": "Saint-Saëns, Camille (1835-1921): Samson and Delilah"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1935,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/pk349zj4179.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 16245.0,
+        "to": 16405.74
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/pk349zj4179%2Fpk349zj4179_0001/3478,192030,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/pk349zj4179.jsonld#inscription-text",
+        "text": "1 9 6 2 8  (stamped)   ||  e2, in pencil: 797"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/pk349zj4179%2Fpk349zj4179_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1928-06-19",
+     "@annotation": {
+      "@id": "copies/pk349zj4179.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/pk349zj4179.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/pk349zj4179.jsonld#inscription-text"
+         ],
+         "note": "Stamped along the paper in e1, five figures, cleanly inked: 1 9 6 2 8, which day first gives 19 June 1928. The one thing that could change this is the leading figure. It is not the slug mark the instruction warns about: that mark, which I saw on qw257qp8232 in this same batch, is a squat block of horizontal bars followed by a hyphen, while this is a well formed 1 with its own flag and foot serif, the same weight and spacing as the other four, and no hyphen follows. If it were discounted the date would be 9.6.28. Worth noting that qw257qp8232 carries a stamp of the same kind reading 5.6.28, so both fall in June 1928. e2 has 797 in pencil at the edge, a crossed 7, a 9 and a second crossed 7, agreeing with the leader label in e3: 'WELTE-MIGNON No. 797, Samson and Delilah, Finale, Act I, C. Saint-Saens', M. Welte & Soehne, Freiburg i. Br."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/pk349zj4179.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.6581,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/pk349zj4179.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pk349zj4179.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/pk349zj4179_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5089,
+       "unit": "mm",
+       "slot": 1.7917,
+       "bridge": 0.7199,
+       "n": 346,
+       "@annotation": {
+        "@id": "copies/pk349zj4179.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pk349zj4179.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 346 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/pk349zj4179%2Fpk349zj4179_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.498,
+       "unit": "mm",
+       "strength": 0.5488,
+       "n": 14390,
+       "@annotation": {
+        "@id": "copies/pk349zj4179.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pk349zj4179.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 14390 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.311 mm at 0.0193, 0.408 mm at 0.1063. The chain pitch is 5.038 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/pk349zj4179_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

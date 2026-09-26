@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/zv884mc0794.jsonld",
+ "title": "Condon Roll 375, WM 1259",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/zv884mc0794.jsonld#copy",
+   "label": "Condon Roll 375",
+   "identifier": "Stanford Libraries CONDON ROLL 375",
+   "seeAlso": "https://purl.stanford.edu/zv884mc0794",
+   "exemplifies": {
+    "catalogueNumber": "WM 1259",
+    "label": "Paderewski, Ignace Jan (1860-1941): 10th Hungarian rhapsody"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1952,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/zv884mc0794.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 19635.53,
+        "to": 19796.27
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 87,
+        "to": 100
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/zv884mc0794%2Fzv884mc0794_0001/3406,232109,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/zv884mc0794.jsonld#inscription-text",
+        "text": "29825"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/zv884mc0794%2Fzv884mc0794_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1925-08-29",
+     "@annotation": {
+      "@id": "copies/zv884mc0794.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/zv884mc0794.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/zv884mc0794.jsonld#inscription-text"
+         ],
+         "note": "Stamped in black on the bare red paper, the line running diagonally across the roll at about sixty degrees; read after rotating. Five figures with no separators, 2 9 8 2 5, so 29.8.25 on the corpus convention. The third figure is blotted, but thresholding shows two loops each closed on the left, which makes it an 8 and not a 3."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/zv884mc0794.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7977,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/zv884mc0794.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zv884mc0794.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/z/zv884mc0794_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.6017,
+       "unit": "mm",
+       "slot": 1.9546,
+       "bridge": 0.6502,
+       "n": 334,
+       "@annotation": {
+        "@id": "copies/zv884mc0794.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zv884mc0794.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 334 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/zv884mc0794%2Fzv884mc0794_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.517,
+       "unit": "mm",
+       "strength": 0.4815,
+       "n": 10998,
+       "@annotation": {
+        "@id": "copies/zv884mc0794.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zv884mc0794.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 10998 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.413 mm at 0.0714, 0.677 mm at 0.1169. The chain pitch is 5.032 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/z/zv884mc0794_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

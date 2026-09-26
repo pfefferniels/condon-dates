@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/ps656vb4839.jsonld",
+ "title": "Condon Roll 573, WM 2086",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/ps656vb4839.jsonld#copy",
+   "label": "Condon Roll 573",
+   "identifier": "Stanford Libraries CONDON ROLL 573",
+   "seeAlso": "https://purl.stanford.edu/ps656vb4839",
+   "exemplifies": {
+    "catalogueNumber": "WM 2086",
+    "label": "Schorr, David: Slumber song"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1864,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/ps656vb4839.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 15385.84,
+        "to": 15546.58
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/ps656vb4839%2Fps656vb4839_0001/3517,181874,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/ps656vb4839.jsonld#inscription-text",
+        "text": "5. 9. 19"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/ps656vb4839%2Fps656vb4839_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1919-09-05",
+     "@annotation": {
+      "@id": "copies/ps656vb4839.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/ps656vb4839.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/ps656vb4839.jsonld#inscription-text"
+         ],
+         "note": "pencil/ink, one line, strongly slanted cursive; the 9s are written as a narrow closed loop with a long tail running down to the left, the 1 as a bare diagonal. Day 5 plain; month 9 arguable against 1 but the two glyph shapes differ consistently."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/ps656vb4839.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.8577,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/ps656vb4839.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ps656vb4839.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/ps656vb4839_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5015,
+       "unit": "mm",
+       "slot": 1.9878,
+       "bridge": 0.5068,
+       "n": 317,
+       "@annotation": {
+        "@id": "copies/ps656vb4839.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ps656vb4839.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 317 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/ps656vb4839%2Fps656vb4839_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.499,
+       "unit": "mm",
+       "strength": 0.5754,
+       "n": 10935,
+       "@annotation": {
+        "@id": "copies/ps656vb4839.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ps656vb4839.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 10935 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.407 mm at 0.0474, 0.642 mm at 0.0607. The chain pitch is 5.013 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/ps656vb4839_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

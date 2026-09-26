@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/dc920rk8870.jsonld",
+ "title": "Condon Roll 584, WM 2733",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/dc920rk8870.jsonld#copy",
+   "label": "Condon Roll 584",
+   "identifier": "Stanford Libraries CONDON ROLL 584",
+   "seeAlso": "https://purl.stanford.edu/dc920rk8870",
+   "exemplifies": {
+    "catalogueNumber": "WM 2733",
+    "label": "Debussy, Claude (1862-1918): Children's corner"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1907,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/dc920rk8870.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 42637.48,
+        "to": 42798.22
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/dc920rk8870%2Fdc920rk8870_0001/3520,504012,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/dc920rk8870.jsonld#inscription-text",
+        "text": "91125"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/dc920rk8870%2Fdc920rk8870_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1925-11-09",
+     "@annotation": {
+      "@id": "copies/dc920rk8870.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/dc920rk8870.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/dc920rk8870.jsonld#inscription-text"
+         ],
+         "note": "pencil, five figures run together with no separators; read from the lower (180-degree) panel. A 9 with a closed top loop over a long descender, two plain slanted 1s, a 2 finished with a horizontal base, and a 5 with its top bar and lower bowl. Five figures admit only the reading 9.11.25."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/dc920rk8870.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7621,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/dc920rk8870.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/dc920rk8870.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/d/dc920rk8870_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.6092,
+       "unit": "mm",
+       "slot": 1.8835,
+       "bridge": 0.723,
+       "n": 376,
+       "@annotation": {
+        "@id": "copies/dc920rk8870.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/dc920rk8870.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 376 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/dc920rk8870%2Fdc920rk8870_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.517,
+       "unit": "mm",
+       "strength": 0.5813,
+       "n": 33501,
+       "@annotation": {
+        "@id": "copies/dc920rk8870.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/dc920rk8870.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 33501 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.685 mm at 0.0387, 0.945 mm at 0.0482. The chain pitch is 5.047 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/d/dc920rk8870_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

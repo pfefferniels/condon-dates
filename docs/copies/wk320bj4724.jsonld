@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/wk320bj4724.jsonld",
+ "title": "Condon Roll 83, WM 322",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/wk320bj4724.jsonld#copy",
+   "label": "Condon Roll 83",
+   "identifier": "Stanford Libraries CONDON ROLL 83",
+   "seeAlso": "https://purl.stanford.edu/wk320bj4724",
+   "exemplifies": {
+    "catalogueNumber": "WM 322",
+    "label": "Reisenauer, Alfred (1863-1907): Carneval"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1991,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/wk320bj4724.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 38832.6,
+        "to": 38993.34
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/wk320bj4724%2Fwk320bj4724_0001/3520,459035,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/wk320bj4724.jsonld#inscription-text",
+        "text": "10422"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/wk320bj4724%2Fwk320bj4724_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1922-04-10",
+     "@annotation": {
+      "@id": "copies/wk320bj4724.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/wk320bj4724.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/wk320bj4724.jsonld#inscription-text"
+         ],
+         "note": "pencil, separators dropped, read as 10.4.22; crops 1 and 2 hold only ruled pencil lines. The third figure carries an extra top stroke that the two following 2s lack, so read as 4"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/wk320bj4724.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7368,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/wk320bj4724.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/wk320bj4724.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/w/wk320bj4724_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.4298,
+       "unit": "mm",
+       "slot": 1.8755,
+       "bridge": 0.5609,
+       "n": 420,
+       "@annotation": {
+        "@id": "copies/wk320bj4724.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/wk320bj4724.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 420 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/wk320bj4724%2Fwk320bj4724_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.481,
+       "unit": "mm",
+       "strength": 0.2251,
+       "n": 30243,
+       "@annotation": {
+        "@id": "copies/wk320bj4724.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/wk320bj4724.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 30243 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.389 mm at 0.0368, 0.746 mm at 0.0285. The chain pitch is 5.052 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/w/wk320bj4724_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

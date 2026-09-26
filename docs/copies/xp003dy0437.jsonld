@@ -1,0 +1,210 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/xp003dy0437.jsonld",
+ "title": "Condon Roll 261, WM 882",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/xp003dy0437.jsonld#copy",
+   "label": "Condon Roll 261",
+   "identifier": "Stanford Libraries CONDON ROLL 261",
+   "seeAlso": "https://purl.stanford.edu/xp003dy0437",
+   "exemplifies": {
+    "catalogueNumber": "WM 882",
+    "label": "Sauer, Emil von (1862-1942): Auf Flügeln des Gesangs"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.2027,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/xp003dy0437.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 13756.27,
+        "to": 13920.38
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/xp003dy0437%2Fxp003dy0437_0001/3531,162611,460,1940/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/xp003dy0437.jsonld#inscription-text",
+        "text": "882  31. 5. 12  Kramer / Wössler"
+       }
+      }
+     ],
+     "actor": {
+      "name": "Krämer",
+      "sameAs": [],
+      "@id": "hands.jsonld#kraemer",
+      "@annotation": {
+       "@id": "copies/xp003dy0437.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/xp003dy0437.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/xp003dy0437.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Kramer, Wössler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/xp003dy0437%2Fxp003dy0437_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1912-05-31",
+     "@annotation": {
+      "@id": "copies/xp003dy0437.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/xp003dy0437.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/xp003dy0437.jsonld#inscription-text"
+         ],
+         "note": "ink; two names, the first on the date line with two dots set above it (perhaps Krämer), Wössler on a second line below"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/xp003dy0437.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2503,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/xp003dy0437.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xp003dy0437.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xp003dy0437_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0224,
+       "unit": "mm",
+       "slot": 2.4029,
+       "bridge": 0.5918,
+       "n": 153,
+       "@annotation": {
+        "@id": "copies/xp003dy0437.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xp003dy0437.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 153 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/xp003dy0437%2Fxp003dy0437_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.056,
+       "unit": "mm",
+       "strength": 0.0998,
+       "n": 5625,
+       "@annotation": {
+        "@id": "copies/xp003dy0437.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xp003dy0437.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 5625 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.449 mm at 0.0241, 0.542 mm at 0.0364, 0.729 mm at 0.0602. The chain pitch is 2.862 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xp003dy0437_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

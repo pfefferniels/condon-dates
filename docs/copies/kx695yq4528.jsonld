@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/kx695yq4528.jsonld",
+ "title": "Condon Roll 402, WM 1301",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/kx695yq4528.jsonld#copy",
+   "label": "Condon Roll 402",
+   "identifier": "Stanford Libraries CONDON ROLL 402",
+   "seeAlso": "https://purl.stanford.edu/kx695yq4528",
+   "exemplifies": {
+    "catalogueNumber": "WM 1301",
+    "label": "Lhévinne, Josef (1874-1944): Toccata C major, op. 7"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1917,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/kx695yq4528.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 22848.75,
+        "to": 23009.48
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/kx695yq4528%2Fkx695yq4528_0001/3519,270092,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/kx695yq4528.jsonld#inscription-text",
+        "text": "23924"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/kx695yq4528%2Fkx695yq4528_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1924-09-23",
+     "@annotation": {
+      "@id": "copies/kx695yq4528.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/kx695yq4528.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/kx695yq4528.jsonld#inscription-text"
+         ],
+         "note": "Stamped, not written: five figures in a small serif type on the lower (upright) panel, with a faint point after the 3 and a short double rule to the right of the 4. Separators dropped, so 23.9.24. Nothing else in the crop."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/kx695yq4528.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.785,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/kx695yq4528.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/kx695yq4528.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/k/kx695yq4528_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5126,
+       "unit": "mm",
+       "slot": 1.8681,
+       "bridge": 0.6442,
+       "n": 346,
+       "@annotation": {
+        "@id": "copies/kx695yq4528.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/kx695yq4528.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 346 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/kx695yq4528%2Fkx695yq4528_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.496,
+       "unit": "mm",
+       "strength": 0.4175,
+       "n": 18068,
+       "@annotation": {
+        "@id": "copies/kx695yq4528.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/kx695yq4528.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 18068 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.397 mm at 0.072, 0.653 mm at 0.1052. The chain pitch is 5.066 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/k/kx695yq4528_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

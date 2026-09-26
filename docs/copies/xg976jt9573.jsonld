@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/xg976jt9573.jsonld",
+ "title": "Condon Roll 936, WM 5521",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/xg976jt9573.jsonld#copy",
+   "label": "Condon Roll 936",
+   "identifier": "Stanford Libraries CONDON ROLL 936",
+   "seeAlso": "https://purl.stanford.edu/xg976jt9573",
+   "exemplifies": {
+    "catalogueNumber": "WM 5521",
+    "label": "Dark, Henry: My isle of golden dreams : waltz"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1902,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/xg976jt9573.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 17548.71,
+        "to": 17709.45
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/xg976jt9573%2Fxg976jt9573_0001/3505,207441,460,1900/full/270/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/xg976jt9573.jsonld#inscription-text",
+        "text": "141925"
+       },
+       "medium": "ink"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/xg976jt9573%2Fxg976jt9573_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1925-04-01",
+     "@annotation": {
+      "@id": "copies/xg976jt9573.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/xg976jt9573.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/xg976jt9573.jsonld#inscription-text"
+         ],
+         "note": "ink, upright in the lower panel, a steeply right-leaning hand; read after shearing the line upright. Six figures, evenly spaced and without separators: 1, 4, 1, 9, 2, 5. The 9 is a closed loop with a plain descender, distinct from the 2 beside it, which carries the usual base stroke. Of the possible groupings only 1 | 4 | 1925 gives a date, so 1 April 1925; 14 | 19 | 25 would need a nineteenth month. The 4 is the least certain figure. Crop 2 carries a pencilled four-figure number, 5571 or 5521, its third figure crossed like a 7; crop 3 shows the printed label, WELTE-MIGNON No. 5521, 'My Isle of Golden Dreams', Waltz, Walter Blaufuss, played by Henry Dark. Crop 4 not needed."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/xg976jt9573.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.8518,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/xg976jt9573.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xg976jt9573.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xg976jt9573_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5086,
+       "unit": "mm",
+       "slot": 1.9821,
+       "bridge": 0.5204,
+       "n": 254,
+       "@annotation": {
+        "@id": "copies/xg976jt9573.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xg976jt9573.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 254 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/xg976jt9573%2Fxg976jt9573_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.499,
+       "unit": "mm",
+       "strength": 0.6656,
+       "n": 12670,
+       "@annotation": {
+        "@id": "copies/xg976jt9573.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xg976jt9573.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 12670 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.408 mm at 0.0883, 0.643 mm at 0.1241. The chain pitch is 5.027 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xg976jt9573_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,210 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/rv790qz2532.jsonld",
+ "title": "Condon Roll 52, WM 226",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/rv790qz2532.jsonld#copy",
+   "label": "Condon Roll 52",
+   "identifier": "Stanford Libraries CONDON ROLL 52",
+   "seeAlso": "https://purl.stanford.edu/rv790qz2532",
+   "exemplifies": {
+    "catalogueNumber": "WM 226",
+    "label": "Popper, Hugo (1857-1910): Sei mir gut : Walzerlied"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1855,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/rv790qz2532.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 10416.58,
+        "to": 10577.31
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 85,
+        "to": 98
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/rv790qz2532%2Frv790qz2532_0001/3342,123133,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/rv790qz2532.jsonld#inscription-text",
+        "text": "20. 12. 04.  [signature]"
+       }
+      }
+     ],
+     "actor": {
+      "name": "B. Schäfer",
+      "sameAs": [],
+      "@id": "hands.jsonld#b-schaefer",
+      "@annotation": {
+       "@id": "copies/rv790qz2532.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/rv790qz2532.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/rv790qz2532.jsonld#inscription-text"
+          ],
+          "note": "No name was read off it."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/rv790qz2532%2Frv790qz2532_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1904-12-20",
+     "@annotation": {
+      "@id": "copies/rv790qz2532.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/rv790qz2532.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/rv790qz2532.jsonld#inscription-text"
+         ],
+         "note": "ink; the three figure groups are plain, with the year written as 0 and 4. A signature follows which I cannot read; it seems to begin with a capital and then something like 'Sch'. 1904 sits just before the range given for the corpus, so the year may be worth a second reader."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/rv790qz2532.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1251,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/rv790qz2532.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rv790qz2532.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/r/rv790qz2532_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.792,
+       "unit": "mm",
+       "slot": 2.2052,
+       "bridge": 0.588,
+       "n": 327,
+       "@annotation": {
+        "@id": "copies/rv790qz2532.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rv790qz2532.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 327 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/rv790qz2532%2Frv790qz2532_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.554,
+       "unit": "mm",
+       "strength": 0.1408,
+       "n": 6792,
+       "@annotation": {
+        "@id": "copies/rv790qz2532.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rv790qz2532.jsonld#advance-belief",
+         "certainty": "unlikely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 6792 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.452 mm at 0.037, 0.627 mm at 0.0512, 0.924 mm at 0.0894. The chain pitch is 1.797 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/r/rv790qz2532_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

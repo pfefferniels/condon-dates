@@ -1,0 +1,132 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/qg041hb4569.jsonld",
+ "title": "Condon Roll 706, WM 2993",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/qg041hb4569.jsonld#copy",
+   "label": "Condon Roll 706",
+   "identifier": "Stanford Libraries CONDON ROLL 706",
+   "seeAlso": "https://purl.stanford.edu/qg041hb4569",
+   "exemplifies": {
+    "catalogueNumber": "WM 2993",
+    "label": "Albert, Eugen d' (1864-1932): March grotesque"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1972,
+     "unit": "mm"
+    }
+   },
+   "modifications": [],
+   "scan": "https://stacks.stanford.edu/image/iiif/qg041hb4569%2Fqg041hb4569_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/qg041hb4569.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.6539,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/qg041hb4569.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/qg041hb4569.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/q/qg041hb4569_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5109,
+       "unit": "mm",
+       "slot": 1.764,
+       "bridge": 0.7281,
+       "n": 161,
+       "@annotation": {
+        "@id": "copies/qg041hb4569.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/qg041hb4569.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 161 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/qg041hb4569%2Fqg041hb4569_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.488,
+       "unit": "mm",
+       "strength": 0.2259,
+       "n": 3989,
+       "@annotation": {
+        "@id": "copies/qg041hb4569.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/qg041hb4569.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 3989 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.604 mm at 0.0587, 0.876 mm at 0.0639. The chain pitch is 5.145 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/q/qg041hb4569_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

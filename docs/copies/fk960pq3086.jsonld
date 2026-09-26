@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/fk960pq3086.jsonld",
+ "title": "Condon Roll 707, WM 2995",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/fk960pq3086.jsonld#copy",
+   "label": "Condon Roll 707",
+   "identifier": "Stanford Libraries CONDON ROLL 707",
+   "seeAlso": "https://purl.stanford.edu/fk960pq3086",
+   "exemplifies": {
+    "catalogueNumber": "WM 2995",
+    "label": "Albert, Eugen d' (1864-1932): Casse noisette suite : op. 71, part 1"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1936,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/fk960pq3086.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 40850.05,
+        "to": 41010.79
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/fk960pq3086%2Ffk960pq3086_0001/3515,482883,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/fk960pq3086.jsonld#inscription-text",
+        "text": "19 10 20."
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/fk960pq3086%2Ffk960pq3086_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1920-10-19",
+     "@annotation": {
+      "@id": "copies/fk960pq3086.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/fk960pq3086.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/fk960pq3086.jsonld#inscription-text"
+         ],
+         "note": "Pencil, treble edge. Six figures grouped 2 + 2 + 2 with a closing period. The crop cuts the tops of the figures at the panel edge, but each is traceable: two plain carets for the 1s, a bowl with a descender for the 9, plain loops for the 0s."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/fk960pq3086.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7055,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/fk960pq3086.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fk960pq3086.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/f/fk960pq3086_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.4997,
+       "unit": "mm",
+       "slot": 1.83,
+       "bridge": 0.6652,
+       "n": 372,
+       "@annotation": {
+        "@id": "copies/fk960pq3086.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fk960pq3086.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 372 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/fk960pq3086%2Ffk960pq3086_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.499,
+       "unit": "mm",
+       "strength": 0.521,
+       "n": 25433,
+       "@annotation": {
+        "@id": "copies/fk960pq3086.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fk960pq3086.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 25433 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.408 mm at 0.0493, 0.659 mm at 0.0687. The chain pitch is 5.009 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/f/fk960pq3086_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

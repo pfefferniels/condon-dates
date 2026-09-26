@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/jv484vp9065.jsonld",
+ "title": "Condon Roll 364, WM 1248",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/jv484vp9065.jsonld#copy",
+   "label": "Condon Roll 364",
+   "identifier": "Stanford Libraries CONDON ROLL 364",
+   "seeAlso": "https://purl.stanford.edu/jv484vp9065",
+   "exemplifies": {
+    "catalogueNumber": "WM 1248",
+    "label": "Paderewski, Ignace Jan (1860-1941): Impromptu op. 142, B-Dur"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.2033,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/jv484vp9065.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 41790.0,
+        "to": 41950.73
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/jv484vp9065%2Fjv484vp9065_0001/3509,493994,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/jv484vp9065.jsonld#inscription-text",
+        "text": "[cursive word] 20204 No 1248"
+       },
+       "medium": "ink"
+      }
+     ],
+     "actor": {
+      "name": "Kopf",
+      "sameAs": [],
+      "@id": "hands.jsonld#kopf",
+      "@annotation": {
+       "@id": "copies/jv484vp9065.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/jv484vp9065.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/jv484vp9065.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Kopf\". The same signature as mz508vq7890 and wj177bx9196."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/jv484vp9065%2Fjv484vp9065_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1904-02-20",
+     "@annotation": {
+      "@id": "copies/jv484vp9065.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/jv484vp9065.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/jv484vp9065.jsonld#inscription-text"
+         ],
+         "note": "Ink, one line: a cursive word of five or six letters that I cannot letter out, then five figures with no separators, then an abbreviated No with four figures. The five figures read 2 0 2 0 4, so 20.2.04 on the corpus convention. Two reservations. The second figure is a closed oval with a short stroke rising from its upper left, so it could be a 6 rather than a 0, which would give 26.2.04. And the trailing number, which I read as 1248 though its middle figures are not firm, would sit oddly with 1904: another roll in this batch carries the printed label No. 1247 with a punch date of 1914. I record what the paper gives and leave that tension standing. Crop 2 is blank paper."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/jv484vp9065.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.3095,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/jv484vp9065.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/jv484vp9065.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/j/jv484vp9065_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0739,
+       "unit": "mm",
+       "slot": 2.4052,
+       "bridge": 0.6671,
+       "n": 280,
+       "@annotation": {
+        "@id": "copies/jv484vp9065.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/jv484vp9065.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 280 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/jv484vp9065%2Fjv484vp9065_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.073,
+       "unit": "mm",
+       "strength": 0.1083,
+       "n": 32928,
+       "@annotation": {
+        "@id": "copies/jv484vp9065.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/jv484vp9065.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 32928 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.451 mm at 0.0308, 0.587 mm at 0.035, 0.746 mm at 0.0579. The chain pitch is 2.865 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/j/jv484vp9065_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

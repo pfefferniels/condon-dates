@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/zf673fy4620.jsonld",
+ "title": "Condon Roll 553, WM 2068",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/zf673fy4620.jsonld#copy",
+   "label": "Condon Roll 553",
+   "identifier": "Stanford Libraries CONDON ROLL 553",
+   "seeAlso": "https://purl.stanford.edu/zf673fy4620",
+   "exemplifies": {
+    "catalogueNumber": "WM 2068",
+    "label": "Scriabin, Aleksandr Nikolayevich (1872-1915): Poême : op. 32, no. 1"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1883,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/zf673fy4620.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 12621.66,
+        "to": 12816.24
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 84,
+        "to": 104
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/zf673fy4620%2Fzf673fy4620_0001/3304,149199,720,2300/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/zf673fy4620.jsonld#inscription-text",
+        "text": "26525 [heavy mark]  ||  2068"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/zf673fy4620%2Fzf673fy4620_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1925-05-26",
+     "@annotation": {
+      "@id": "copies/zf673fy4620.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/zf673fy4620.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/zf673fy4620.jsonld#inscription-text"
+         ],
+         "note": "Stamped, not written. e1 carries five plain stamped figures, 26525, clear of the edge and whole, followed by a heavy over-inked mark. There is no blob before the figures, so the leading-mark trap does not apply here; the heavy mark falls after the last 5 and I cannot make out what it is, possibly a second slug. Read as day, month, two-figure year this is 26.5.25, and no other parse of five figures gives a possible date. The roll number is separate: a pencil 2068 at the edge in e2, matching the printed leader label in e4, 'WELTE-MIGNON. No. 2068 / Poeme / Op. 32, No. 1 / A. Scriabine / Played by A. Scriabine', which itself carries no date. e3 shows perforations only."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/zf673fy4620.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7723,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/zf673fy4620.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zf673fy4620.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/z/zf673fy4620_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.4992,
+       "unit": "mm",
+       "slot": 1.8923,
+       "bridge": 0.6114,
+       "n": 377,
+       "@annotation": {
+        "@id": "copies/zf673fy4620.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zf673fy4620.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 377 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/zf673fy4620%2Fzf673fy4620_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.502,
+       "unit": "mm",
+       "strength": 0.6394,
+       "n": 9405,
+       "@annotation": {
+        "@id": "copies/zf673fy4620.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zf673fy4620.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 9405 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.601 mm at 0.1764, 0.742 mm at 0.0819. The chain pitch is 4.978 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/z/zf673fy4620_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

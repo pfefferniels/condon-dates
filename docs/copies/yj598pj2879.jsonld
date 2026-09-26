@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/yj598pj2879.jsonld",
+ "title": "Condon Roll 99, WM 360",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/yj598pj2879.jsonld#copy",
+   "label": "Condon Roll 99",
+   "identifier": "Stanford Libraries CONDON ROLL 99",
+   "seeAlso": "https://purl.stanford.edu/yj598pj2879",
+   "exemplifies": {
+    "catalogueNumber": "WM 360",
+    "label": "Carreño, Teresa (1853-1917): Soirée de Vienne, no. 6"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1935,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/yj598pj2879.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 24777.71,
+        "to": 24938.44
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/yj598pj2879%2Fyj598pj2879_0001/3501,292894,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/yj598pj2879.jsonld#inscription-text",
+        "text": "211222"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/yj598pj2879%2Fyj598pj2879_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1922-12-21",
+     "@annotation": {
+      "@id": "copies/yj598pj2879.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/yj598pj2879.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/yj598pj2879.jsonld#inscription-text"
+         ],
+         "note": "Six plain figures with no separators. 21|12|22 is the only split that yields a valid day and month, so 21 December 1922. Crops 1-3 show only creases."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/yj598pj2879.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.8256,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/yj598pj2879.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/yj598pj2879.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/yj598pj2879_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.4981,
+       "unit": "mm",
+       "slot": 1.909,
+       "bridge": 0.5871,
+       "n": 257,
+       "@annotation": {
+        "@id": "copies/yj598pj2879.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/yj598pj2879.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 257 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/yj598pj2879%2Fyj598pj2879_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.495,
+       "unit": "mm",
+       "strength": 0.2527,
+       "n": 15192,
+       "@annotation": {
+        "@id": "copies/yj598pj2879.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/yj598pj2879.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 15192 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.611 mm at 0.1012, 0.883 mm at 0.0669. The chain pitch is 5.047 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/yj598pj2879_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

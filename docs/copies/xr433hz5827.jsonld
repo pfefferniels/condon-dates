@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/xr433hz5827.jsonld",
+ "title": "Condon Roll 907, WM 5718",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/xr433hz5827.jsonld#copy",
+   "label": "Condon Roll 907",
+   "identifier": "Stanford Libraries CONDON ROLL 907",
+   "seeAlso": "https://purl.stanford.edu/xr433hz5827",
+   "exemplifies": {
+    "catalogueNumber": "WM 5718",
+    "label": "Johnson, Edward: When you and I were seventeen"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1905,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/xr433hz5827.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 7654.77,
+        "to": 7815.5
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 83,
+        "to": 97
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/xr433hz5827%2Fxr433hz5827_0001/3258,90486,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/xr433hz5827.jsonld#inscription-text",
+        "text": "241025"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/xr433hz5827%2Fxr433hz5827_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1925-10-24",
+     "@annotation": {
+      "@id": "copies/xr433hz5827.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/xr433hz5827.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/xr433hz5827.jsonld#inscription-text"
+         ],
+         "note": "stamped across the roll, upright in the upper panel, smudged and seemingly struck twice. The second figure carries a diagonal and a crossbar, so a 4 rather than the 1 of the third figure; the fourth is a 0 with a stray hooked stroke above it. The closing 5 is inked only along its top bar and stem."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/xr433hz5827.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.6132,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/xr433hz5827.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xr433hz5827.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xr433hz5827_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5039,
+       "unit": "mm",
+       "slot": 1.7555,
+       "bridge": 0.7452,
+       "n": 256,
+       "@annotation": {
+        "@id": "copies/xr433hz5827.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xr433hz5827.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 256 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/xr433hz5827%2Fxr433hz5827_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.497,
+       "unit": "mm",
+       "strength": 0.561,
+       "n": 5682,
+       "@annotation": {
+        "@id": "copies/xr433hz5827.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xr433hz5827.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 5682 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.399 mm at 0.0966, 0.642 mm at 0.126. The chain pitch is 5.038 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xr433hz5827_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

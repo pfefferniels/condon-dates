@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/bs533ns1949.jsonld",
+ "title": "Condon Roll 798, WM 3398",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/bs533ns1949.jsonld#copy",
+   "label": "Condon Roll 798",
+   "identifier": "Stanford Libraries CONDON ROLL 798",
+   "seeAlso": "https://purl.stanford.edu/bs533ns1949",
+   "exemplifies": {
+    "catalogueNumber": "WM 3398",
+    "label": "Blumen, Alfred: Naïla : Walzer"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1918,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/bs533ns1949.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 26029.73,
+        "to": 26190.47
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/bs533ns1949%2Fbs533ns1949_0001/3498,307694,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/bs533ns1949.jsonld#inscription-text",
+        "text": "5220"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/bs533ns1949%2Fbs533ns1949_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1920-02-05",
+     "@annotation": {
+      "@id": "copies/bs533ns1949.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/bs533ns1949.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/bs533ns1949.jsonld#inscription-text"
+         ],
+         "note": "Pencil, four figures, read as 5.2.20. 3398 is written on region 2 and printed on the leader label (Naïla-Walzer, L. Delibes, Bearbeitung von Ernst von Dohnányi, gespielt von Alfred Grünfeld), so 5220 is not the catalogue number. Region 3 holds only brush marks."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/bs533ns1949.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.6657,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/bs533ns1949.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bs533ns1949.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bs533ns1949_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.6109,
+       "unit": "mm",
+       "slot": 1.7995,
+       "bridge": 0.8111,
+       "n": 325,
+       "@annotation": {
+        "@id": "copies/bs533ns1949.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bs533ns1949.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 325 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/bs533ns1949%2Fbs533ns1949_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.52,
+       "unit": "mm",
+       "strength": 0.5147,
+       "n": 13805,
+       "@annotation": {
+        "@id": "copies/bs533ns1949.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bs533ns1949.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 13805 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.327 mm at 0.0296, 0.883 mm at 0.0652. The chain pitch is 5.021 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bs533ns1949_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/bb988jx6754.jsonld",
+ "title": "Condon Roll 115, WM 369",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/bb988jx6754.jsonld#copy",
+   "label": "Condon Roll 115",
+   "identifier": "Stanford Libraries CONDON ROLL 115",
+   "seeAlso": "https://purl.stanford.edu/bb988jx6754",
+   "exemplifies": {
+    "catalogueNumber": "WM 369",
+    "label": "Carreño, Teresa (1853-1917): Ballade op. 47, A flat major"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1962,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/bb988jx6754.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 27643.32,
+        "to": 27804.05
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/bb988jx6754%2Fbb988jx6754_0001/3501,326768,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/bb988jx6754.jsonld#inscription-text",
+        "text": "369.  30. ?. 14"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/bb988jx6754%2Fbb988jx6754_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "after": "1914-01-01",
+     "before": "1914-12-31",
+     "@annotation": {
+      "@id": "copies/bb988jx6754.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/bb988jx6754.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/bb988jx6754.jsonld#inscription-text"
+         ],
+         "note": "Pencil, faint, written close to the treble edge of the paper so that the tops of the figures run into the edge; read from the lower (180-degree) panel and checked against the upper one. The roll number 369, the day 30 and the year 14 are plain. Between them stand one or two upright strokes with a small entry hook, which could be a single 1 (30.1.14) or a pair 11 (30.11.14); the scan does not carry enough of their heads to decide, so the month is left open. Region 2 shows only a mended perforation, no writing."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/bb988jx6754.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.0548,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/bb988jx6754.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bb988jx6754.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bb988jx6754_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0051,
+       "unit": "mm",
+       "slot": 2.1629,
+       "bridge": 0.8322,
+       "n": 277,
+       "@annotation": {
+        "@id": "copies/bb988jx6754.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bb988jx6754.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 277 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/bb988jx6754%2Fbb988jx6754_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.499,
+       "unit": "mm",
+       "strength": 0.5389,
+       "n": 21289,
+       "@annotation": {
+        "@id": "copies/bb988jx6754.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bb988jx6754.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 21289 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.631 mm at 0.0453, 0.86 mm at 0.0508. The chain pitch is 6.022 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bb988jx6754_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

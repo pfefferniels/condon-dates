@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/dc021nq1464.jsonld",
+ "title": "Condon Roll 384, WM 1263",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/dc021nq1464.jsonld#copy",
+   "label": "Condon Roll 384",
+   "identifier": "Stanford Libraries CONDON ROLL 384",
+   "seeAlso": "https://purl.stanford.edu/dc021nq1464",
+   "exemplifies": {
+    "catalogueNumber": "WM 1263",
+    "label": "Paderewski, Ignace Jan (1860-1941): Menuett op. 14, no. 1"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1929,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/dc021nq1464.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 14284.49,
+        "to": 14445.22
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/dc021nq1464%2Fdc021nq1464_0001/3537,168855,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/dc021nq1464.jsonld#inscription-text",
+        "text": "1863  6 3 09  Kummer"
+       },
+       "medium": "pencil"
+      }
+     ],
+     "actor": {
+      "name": "Kummer",
+      "sameAs": [],
+      "@id": "hands.jsonld#kummer",
+      "@annotation": {
+       "@id": "copies/dc021nq1464.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/dc021nq1464.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/dc021nq1464.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Kummer\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/dc021nq1464%2Fdc021nq1464_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1909-03-06",
+     "@annotation": {
+      "@id": "copies/dc021nq1464.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/dc021nq1464.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/dc021nq1464.jsonld#inscription-text"
+         ],
+         "note": "pencil, one line; final year figure loops shut only faintly, read as 9 rather than 4"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/dc021nq1464.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.0819,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/dc021nq1464.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/dc021nq1464.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/d/dc021nq1464_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.9422,
+       "unit": "mm",
+       "slot": 2.2451,
+       "bridge": 0.6401,
+       "n": 72,
+       "@annotation": {
+        "@id": "copies/dc021nq1464.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/dc021nq1464.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 72 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/dc021nq1464%2Fdc021nq1464_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.996,
+       "unit": "mm",
+       "strength": 0.0835,
+       "n": 7405,
+       "@annotation": {
+        "@id": "copies/dc021nq1464.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/dc021nq1464.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 7405 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.419 mm at 0.0273, 0.538 mm at 0.0375, 0.689 mm at 0.0403. The chain pitch is 2.954 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/d/dc021nq1464_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

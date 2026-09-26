@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/fn111kx0654.jsonld",
+ "title": "Condon Roll 344, WM 1213",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/fn111kx0654.jsonld#copy",
+   "label": "Condon Roll 344",
+   "identifier": "Stanford Libraries CONDON ROLL 344",
+   "seeAlso": "https://purl.stanford.edu/fn111kx0654",
+   "exemplifies": {
+    "catalogueNumber": "WM 1213",
+    "label": "Pachmann, Vladimir de (1848-1933): Prélude op. 28, no. 20, c-Moll"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.2032,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/fn111kx0654.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 6212.57,
+        "to": 6373.31
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/fn111kx0654%2Ffn111kx0654_0001/3502,73438,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/fn111kx0654.jsonld#inscription-text",
+        "text": "1213.  18. 4. 12"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/fn111kx0654%2Ffn111kx0654_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1912-04-18",
+     "@annotation": {
+      "@id": "copies/fn111kx0654.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/fn111kx0654.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/fn111kx0654.jsonld#inscription-text"
+         ],
+         "note": "Pencil, one line along the roll edge, read after a contrast stretch. Figures of 1213 and of the 4 and 12 are plain. The day figure is the open-loop form: a lower bowl with a broad upper arch hooked to the right, so 8 rather than 6, but that one figure is of the ambiguous kind the instruction warns of."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/fn111kx0654.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1039,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/fn111kx0654.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fn111kx0654.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/f/fn111kx0654_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0016,
+       "unit": "mm",
+       "slot": 2.2364,
+       "bridge": 0.7613,
+       "n": 533,
+       "@annotation": {
+        "@id": "copies/fn111kx0654.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fn111kx0654.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 533 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/fn111kx0654%2Ffn111kx0654_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.501,
+       "unit": "mm",
+       "strength": 0.6464,
+       "n": 4828,
+       "@annotation": {
+        "@id": "copies/fn111kx0654.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fn111kx0654.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 4828 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.409 mm at 0.0817, 0.644 mm at 0.1032. The chain pitch is 5.991 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/f/fn111kx0654_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

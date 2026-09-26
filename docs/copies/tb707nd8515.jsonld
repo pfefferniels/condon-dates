@@ -1,0 +1,191 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/tb707nd8515.jsonld",
+ "title": "Condon Roll 287, WM 993",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/tb707nd8515.jsonld#copy",
+   "label": "Condon Roll 287",
+   "identifier": "Stanford Libraries CONDON ROLL 287",
+   "seeAlso": "https://purl.stanford.edu/tb707nd8515",
+   "exemplifies": {
+    "catalogueNumber": "WM 993",
+    "label": "Elvyn, Myrtle: Widmung"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1941,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/tb707nd8515.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 10802.93,
+        "to": 10963.66
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 86,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/tb707nd8515%2Ftb707nd8515_0001/3366,127700,590,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/tb707nd8515.jsonld#inscription-text",
+        "text": "M. Schäfer."
+       },
+       "medium": "ink"
+      }
+     ],
+     "actor": {
+      "name": "M. Schäfer",
+      "sameAs": [],
+      "@id": "hands.jsonld#m-schaefer",
+      "@annotation": {
+       "@id": "copies/tb707nd8515.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/tb707nd8515.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/tb707nd8515.jsonld#inscription-text"
+          ],
+          "note": "Read as \"M. Schäfer\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/tb707nd8515%2Ftb707nd8515_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/tb707nd8515.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.8239,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/tb707nd8515.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/tb707nd8515.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/t/tb707nd8515_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.7804,
+       "unit": "mm",
+       "slot": 1.9773,
+       "bridge": 0.8034,
+       "n": 318,
+       "@annotation": {
+        "@id": "copies/tb707nd8515.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/tb707nd8515.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 318 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/tb707nd8515%2Ftb707nd8515_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.407,
+       "unit": "mm",
+       "strength": 0.1562,
+       "n": 11717,
+       "@annotation": {
+        "@id": "copies/tb707nd8515.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/tb707nd8515.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 11717 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.418 mm at 0.055, 0.542 mm at 0.0684, 0.771 mm at 0.0849. The chain pitch is 1.976 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/t/tb707nd8515_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

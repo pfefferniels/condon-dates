@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/yg667ds7662.jsonld",
+ "title": "Condon Roll 172, WM 446",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/yg667ds7662.jsonld#copy",
+   "label": "Condon Roll 172",
+   "identifier": "Stanford Libraries CONDON ROLL 172",
+   "seeAlso": "https://purl.stanford.edu/yg667ds7662",
+   "exemplifies": {
+    "catalogueNumber": "WM 446",
+    "label": "Busoni, Ferruccio (1866-1924): Hungarian march : (Hungarian melodies)"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.199,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/yg667ds7662.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 16100.51,
+        "to": 16261.24
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/yg667ds7662%2Fyg667ds7662_0001/3503,190322,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/yg667ds7662.jsonld#inscription-text",
+        "text": "7125"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/yg667ds7662%2Fyg667ds7662_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1925-01-07",
+     "@annotation": {
+      "@id": "copies/yg667ds7662.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/yg667ds7662.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/yg667ds7662.jsonld#inscription-text"
+         ],
+         "note": "Stamped, not written, in a plain sans-serif numeral type; here the UPPER panel is the upright one. The four figures are perfectly clear, the 2 filled in with ink, and two faint marks stand a little to the right of the 5, perhaps the remains of a further stamped character. Read as the usual run without separators, 7 1 25 gives 7 January 1925, which fits the corpus. What I cannot show from the image is that the group is a date at all rather than a roll or serial number, and there is no hand or separator to corroborate it, so the confidence is low for that reason and not because of any figure. Region 2 carries no writing."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/yg667ds7662.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7072,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/yg667ds7662.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/yg667ds7662.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/yg667ds7662_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5157,
+       "unit": "mm",
+       "slot": 1.7861,
+       "bridge": 0.7324,
+       "n": 324,
+       "@annotation": {
+        "@id": "copies/yg667ds7662.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/yg667ds7662.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 324 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/yg667ds7662%2Fyg667ds7662_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.501,
+       "unit": "mm",
+       "strength": 0.4452,
+       "n": 11711,
+       "@annotation": {
+        "@id": "copies/yg667ds7662.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/yg667ds7662.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 11711 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.337 mm at 0.0162, 0.408 mm at 0.0687. The chain pitch is 5.021 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/yg667ds7662_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

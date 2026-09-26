@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/ys250pr2232.jsonld",
+ "title": "Condon Roll 913, WM 5736",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/ys250pr2232.jsonld#copy",
+   "label": "Condon Roll 913",
+   "identifier": "Stanford Libraries CONDON ROLL 913",
+   "seeAlso": "https://purl.stanford.edu/ys250pr2232",
+   "exemplifies": {
+    "catalogueNumber": "WM 5736",
+    "label": "Johnson, Edward: Indian love call : fox-trot"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1952,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/ys250pr2232.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 11019.92,
+        "to": 11180.65
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 88,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/ys250pr2232%2Fys250pr2232_0001/3474,130265,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/ys250pr2232.jsonld#inscription-text",
+        "text": "211125"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/ys250pr2232%2Fys250pr2232_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1925-11-21",
+     "@annotation": {
+      "@id": "copies/ys250pr2232.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/ys250pr2232.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/ys250pr2232.jsonld#inscription-text"
+         ],
+         "note": "stamped in a lighter, unevenly inked face, upright in the upper panel. The first and fifth figures are the same character, a closed curl with a tail running down to the left and no base stroke, which taken alone would read as a 9; read as 2, since 911195 gives neither a day nor a year while 211125 gives 21.11.25. The three 1s and the closing 5 are plain. Crop 2 carries a pencilled 5436, crop 3 only a crease."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/ys250pr2232.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.6234,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/ys250pr2232.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ys250pr2232.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/ys250pr2232_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5114,
+       "unit": "mm",
+       "slot": 1.7631,
+       "bridge": 0.7403,
+       "n": 292,
+       "@annotation": {
+        "@id": "copies/ys250pr2232.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ys250pr2232.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 292 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/ys250pr2232%2Fys250pr2232_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.497,
+       "unit": "mm",
+       "strength": 0.4994,
+       "n": 7309,
+       "@annotation": {
+        "@id": "copies/ys250pr2232.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ys250pr2232.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 7309 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.399 mm at 0.0929, 0.635 mm at 0.1118. The chain pitch is 5.053 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/y/ys250pr2232_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/bm016sg7202.jsonld",
+ "title": "Condon Roll 473, WM 1671",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/bm016sg7202.jsonld#copy",
+   "label": "Condon Roll 473",
+   "identifier": "Stanford Libraries CONDON ROLL 473",
+   "seeAlso": "https://purl.stanford.edu/bm016sg7202",
+   "exemplifies": {
+    "catalogueNumber": "WM 1671",
+    "label": "Margolies, Vera: Polonaise : (polonaise militaire) : op. 40, no. 1"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.2009,
+     "unit": "mm"
+    }
+   },
+   "modifications": [],
+   "scan": "https://stacks.stanford.edu/image/iiif/bm016sg7202%2Fbm016sg7202_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/bm016sg7202.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.8087,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/bm016sg7202.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bm016sg7202.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bm016sg7202_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5072,
+       "unit": "mm",
+       "slot": 1.932,
+       "bridge": 0.5678,
+       "n": 288,
+       "@annotation": {
+        "@id": "copies/bm016sg7202.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bm016sg7202.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 288 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/bm016sg7202%2Fbm016sg7202_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.5,
+       "unit": "mm",
+       "strength": 0.5629,
+       "n": 9581,
+       "@annotation": {
+        "@id": "copies/bm016sg7202.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bm016sg7202.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 9581 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.413 mm at 0.1191, 0.621 mm at 0.1417. The chain pitch is 5.014 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bm016sg7202_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

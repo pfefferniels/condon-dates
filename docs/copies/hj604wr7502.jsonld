@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/hj604wr7502.jsonld",
+ "title": "Condon Roll 509, WM 1526",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/hj604wr7502.jsonld#copy",
+   "label": "Condon Roll 509",
+   "identifier": "Stanford Libraries CONDON ROLL 509",
+   "seeAlso": "https://purl.stanford.edu/hj604wr7502",
+   "exemplifies": {
+    "catalogueNumber": "WM 1526",
+    "label": "Utz, Paula: Potpourri aus \"Der fidele Bauer\""
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1893,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/hj604wr7502.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 47117.44,
+        "to": 47278.18
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 104
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/hj604wr7502%2Fhj604wr7502_0001/3523,556969,460,1900/full/270/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/hj604wr7502.jsonld#inscription-text",
+        "text": "14 11 23"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/hj604wr7502%2Fhj604wr7502_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1923-11-14",
+     "@annotation": {
+      "@id": "copies/hj604wr7502.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/hj604wr7502.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/hj604wr7502.jsonld#inscription-text"
+         ],
+         "note": "crop 1, lower panel upright; pencil, one short line, nothing else in the crop. Six figures in two groups, 14 and 1123, all plain: the two 1s of the month repeat the flag of the first figure, and the 2 and 3 are distinct. Read as 14.11.23."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/hj604wr7502.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7401,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/hj604wr7502.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/hj604wr7502.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/h/hj604wr7502_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5914,
+       "unit": "mm",
+       "slot": 1.8577,
+       "bridge": 0.7354,
+       "n": 347,
+       "@annotation": {
+        "@id": "copies/hj604wr7502.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/hj604wr7502.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 347 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/hj604wr7502%2Fhj604wr7502_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.52,
+       "unit": "mm",
+       "strength": 0.5816,
+       "n": 39999,
+       "@annotation": {
+        "@id": "copies/hj604wr7502.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/hj604wr7502.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 39999 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.421 mm at 0.0652, 0.676 mm at 0.077. The chain pitch is 4.983 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/h/hj604wr7502_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

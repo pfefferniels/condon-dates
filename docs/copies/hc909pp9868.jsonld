@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/hc909pp9868.jsonld",
+ "title": "Condon Roll 111, WM 371",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/hc909pp9868.jsonld#copy",
+   "label": "Condon Roll 111",
+   "identifier": "Stanford Libraries CONDON ROLL 111",
+   "seeAlso": "https://purl.stanford.edu/hc909pp9868",
+   "exemplifies": {
+    "catalogueNumber": "WM 371",
+    "label": "Carreño, Teresa (1853-1917): Little waltz"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1988,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/hc909pp9868.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 11623.34,
+        "to": 11784.08
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 104
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/hc909pp9868%2Fhc909pp9868_0001/3535,137398,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/hc909pp9868.jsonld#inscription-text",
+        "text": "201122"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/hc909pp9868%2Fhc909pp9868_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1922-11-20",
+     "@annotation": {
+      "@id": "copies/hc909pp9868.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/hc909pp9868.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/hc909pp9868.jsonld#inscription-text"
+         ],
+         "note": "Pencil on grey-green paper, read from the lower (180-degree) panel. Six figures run together without separators, 20 11 22; the two closing figures are both the same cursive 2 with a base stroke carried to the right, the last one looped. Nothing else is written in the crop."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/hc909pp9868.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.653,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/hc909pp9868.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/hc909pp9868.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/h/hc909pp9868_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5137,
+       "unit": "mm",
+       "slot": 1.7152,
+       "bridge": 0.7954,
+       "n": 354,
+       "@annotation": {
+        "@id": "copies/hc909pp9868.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/hc909pp9868.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 354 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/hc909pp9868%2Fhc909pp9868_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.498,
+       "unit": "mm",
+       "strength": 0.1388,
+       "n": 7022,
+       "@annotation": {
+        "@id": "copies/hc909pp9868.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/hc909pp9868.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 7022 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.746 mm at 0.042, 0.848 mm at 0.0346. The chain pitch is 5.048 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/h/hc909pp9868_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

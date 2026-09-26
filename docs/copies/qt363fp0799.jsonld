@@ -1,0 +1,190 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/qt363fp0799.jsonld",
+ "title": "Condon Roll 387, WM 1262",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/qt363fp0799.jsonld#copy",
+   "label": "Condon Roll 387",
+   "identifier": "Stanford Libraries CONDON ROLL 387",
+   "seeAlso": "https://purl.stanford.edu/qt363fp0799",
+   "exemplifies": {
+    "catalogueNumber": "WM 1262",
+    "label": "Paderewski, Ignace Jan (1860-1941): Nocturne op. 16, no. 4"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1968,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/qt363fp0799.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 15484.82,
+        "to": 15648.26
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 84,
+        "to": 97
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/qt363fp0799%2Fqt363fp0799_0001/3258,183044,460,1932/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/qt363fp0799.jsonld#inscription-text",
+        "text": "J. Herrmann"
+       }
+      }
+     ],
+     "actor": {
+      "name": "J. Herrmann",
+      "sameAs": [],
+      "@id": "hands.jsonld#herrmann",
+      "@annotation": {
+       "@id": "copies/qt363fp0799.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/qt363fp0799.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/qt363fp0799.jsonld#inscription-text"
+          ],
+          "note": "No name was read off it."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/qt363fp0799%2Fqt363fp0799_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/qt363fp0799.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.4694,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/qt363fp0799.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/qt363fp0799.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/q/qt363fp0799_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.2823,
+       "unit": "mm",
+       "slot": 2.5711,
+       "bridge": 0.7177,
+       "n": 297,
+       "@annotation": {
+        "@id": "copies/qt363fp0799.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/qt363fp0799.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 297 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/qt363fp0799%2Fqt363fp0799_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.033,
+       "unit": "mm",
+       "strength": 0.1187,
+       "n": 11631,
+       "@annotation": {
+        "@id": "copies/qt363fp0799.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/qt363fp0799.jsonld#advance-belief",
+         "certainty": "unlikely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 11631 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.363 mm at 0.0693, 0.529 mm at 0.0687, 0.719 mm at 0.0848. The chain pitch is 3.177 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/q/qt363fp0799_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

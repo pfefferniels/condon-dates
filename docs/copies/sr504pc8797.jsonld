@@ -1,0 +1,210 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/sr504pc8797.jsonld",
+ "title": "Condon Roll 122, WM 376",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/sr504pc8797.jsonld#copy",
+   "label": "Condon Roll 122",
+   "identifier": "Stanford Libraries CONDON ROLL 122",
+   "seeAlso": "https://purl.stanford.edu/sr504pc8797",
+   "exemplifies": {
+    "catalogueNumber": "WM 376",
+    "label": "Wendling, Carl: Lohengrin"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1861,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/sr504pc8797.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 19072.04,
+        "to": 19232.77
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 88,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/sr504pc8797%2Fsr504pc8797_0001/3454,225448,505,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/sr504pc8797.jsonld#inscription-text",
+        "text": "Wild / 5/10/1907"
+       }
+      }
+     ],
+     "actor": {
+      "name": "M. W.?",
+      "sameAs": [],
+      "@id": "hands.jsonld#pencil-monogram",
+      "@annotation": {
+       "@id": "copies/sr504pc8797.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/sr504pc8797.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/sr504pc8797.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Wild\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/sr504pc8797%2Fsr504pc8797_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1907-10-05",
+     "@annotation": {
+      "@id": "copies/sr504pc8797.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/sr504pc8797.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/sr504pc8797.jsonld#inscription-text"
+         ],
+         "note": "Pencil in two lines, the name above the date, separated by slashes and with the year written out. Here the UPPER panel is the upright one. Day, month and the first three figures of the year are plain. The last figure I read as a 7: its right-hand stroke rises above the small loop and comes down as the bar and diagonal of a 7, unlike the plainly round-bowled 9 two places earlier. 1909 cannot be entirely excluded."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/sr504pc8797.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.9838,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/sr504pc8797.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/sr504pc8797.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/s/sr504pc8797_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.8082,
+       "unit": "mm",
+       "slot": 1.9825,
+       "bridge": 0.8187,
+       "n": 521,
+       "@annotation": {
+        "@id": "copies/sr504pc8797.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/sr504pc8797.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 521 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/sr504pc8797%2Fsr504pc8797_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.376,
+       "unit": "mm",
+       "strength": 0.2351,
+       "n": 19521,
+       "@annotation": {
+        "@id": "copies/sr504pc8797.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/sr504pc8797.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 19521 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.426 mm at 0.0594, 0.554 mm at 0.0608, 0.78 mm at 0.1072. The chain pitch is 2.041 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/s/sr504pc8797_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

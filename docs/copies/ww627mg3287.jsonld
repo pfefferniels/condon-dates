@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/ww627mg3287.jsonld",
+ "title": "Condon Roll 297, WM 1035",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/ww627mg3287.jsonld#copy",
+   "label": "Condon Roll 297",
+   "identifier": "Stanford Libraries CONDON ROLL 297",
+   "seeAlso": "https://purl.stanford.edu/ww627mg3287",
+   "exemplifies": {
+    "catalogueNumber": "WM 1035",
+    "label": "Stavenhagen, Bernhard (1862-1914): Chant polonaise : Ges-Dur : (nach persönlichen Erinnerungen)"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1944,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/ww627mg3287.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 13743.75,
+        "to": 13904.48
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 81,
+        "to": 94
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/ww627mg3287%2Fww627mg3287_0001/3182,162463,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/ww627mg3287.jsonld#inscription-text",
+        "text": "1035 Fritz 26 Novb. 1908."
+       },
+       "medium": "ink"
+      }
+     ],
+     "actor": {
+      "name": "Fritz",
+      "sameAs": [],
+      "@id": "hands.jsonld#fritz",
+      "@annotation": {
+       "@id": "copies/ww627mg3287.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/ww627mg3287.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/ww627mg3287.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Fritz\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/ww627mg3287%2Fww627mg3287_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1908-11-26",
+     "@annotation": {
+      "@id": "copies/ww627mg3287.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/ww627mg3287.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/ww627mg3287.jsonld#inscription-text"
+         ],
+         "note": "ink, a full line across the roll: number, puncher, day, month spelt Novb. and the year in full. Every figure plain"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/ww627mg3287.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1902,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/ww627mg3287.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ww627mg3287.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/w/ww627mg3287_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0034,
+       "unit": "mm",
+       "slot": 2.3161,
+       "bridge": 0.6869,
+       "n": 216,
+       "@annotation": {
+        "@id": "copies/ww627mg3287.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ww627mg3287.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 216 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/ww627mg3287%2Fww627mg3287_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.024,
+       "unit": "mm",
+       "strength": 0.8335,
+       "n": 7127,
+       "@annotation": {
+        "@id": "copies/ww627mg3287.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ww627mg3287.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 7127 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.341 mm at 0.2295, 0.512 mm at 0.5099. The chain pitch is 2.933 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/w/ww627mg3287_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

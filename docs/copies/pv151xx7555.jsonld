@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/pv151xx7555.jsonld",
+ "title": "Condon Roll 312, WM 1083",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/pv151xx7555.jsonld#copy",
+   "label": "Condon Roll 312",
+   "identifier": "Stanford Libraries CONDON ROLL 312",
+   "seeAlso": "https://purl.stanford.edu/pv151xx7555",
+   "exemplifies": {
+    "catalogueNumber": "WM 1083",
+    "label": "Esipova, Anna Nikolaevna (1851-1914): Rigoletto (paraphrase)"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.208,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/pv151xx7555.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 24405.66,
+        "to": 24566.39
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/pv151xx7555%2Fpv151xx7555_0001/3488,288496,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/pv151xx7555.jsonld#inscription-text",
+        "text": "17.12.19"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/pv151xx7555%2Fpv151xx7555_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1919-12-17",
+     "@annotation": {
+      "@id": "copies/pv151xx7555.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/pv151xx7555.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/pv151xx7555.jsonld#inscription-text"
+         ],
+         "note": "pencil, three groups separated by points. The month 12 and the year 19 are plain; in the day the second figure has a flat hooked top unlike the plain 1 that opens the other two groups, so I read 7, though 11.12.19 is not impossible"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/pv151xx7555.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7224,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/pv151xx7555.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pv151xx7555.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/pv151xx7555_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.6153,
+       "unit": "mm",
+       "slot": 1.8112,
+       "bridge": 0.8005,
+       "n": 398,
+       "@annotation": {
+        "@id": "copies/pv151xx7555.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pv151xx7555.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 398 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/pv151xx7555%2Fpv151xx7555_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.52,
+       "unit": "mm",
+       "strength": 0.5449,
+       "n": 13881,
+       "@annotation": {
+        "@id": "copies/pv151xx7555.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pv151xx7555.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 13881 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.363 mm at 0.0421, 0.414 mm at 0.0839. The chain pitch is 5.029 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/pv151xx7555_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

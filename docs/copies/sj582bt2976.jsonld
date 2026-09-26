@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/sj582bt2976.jsonld",
+ "title": "Condon Roll 683, WM 2799",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/sj582bt2976.jsonld#copy",
+   "label": "Condon Roll 683",
+   "identifier": "Stanford Libraries CONDON ROLL 683",
+   "seeAlso": "https://purl.stanford.edu/sj582bt2976",
+   "exemplifies": {
+    "catalogueNumber": "WM 2799",
+    "label": "Gayraud, P: Faust : Selection I"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1918,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/sj582bt2976.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 45430.34,
+        "to": 45650.29
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 73,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/sj582bt2976%2Fsj582bt2976_0001/2914,537026,1100,2600/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/sj582bt2976.jsonld#inscription-text",
+        "text": "19825."
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/sj582bt2976%2Fsj582bt2976_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "after": "1925-08-01",
+     "before": "1925-08-31",
+     "@annotation": {
+      "@id": "copies/sj582bt2976.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/sj582bt2976.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/sj582bt2976.jsonld#inscription-text"
+         ],
+         "note": "A stamp, not a hand, set across the roll in w1 and well clear of the crop edge. Five marks and a point: a heavy leading mark shaped like a serif 1 but carrying a smear of ink at its foot, then 9, 8, an over-inked figure with a counter above a solid base which I take for 2, and 5. Read straight through this is 19. 8. 25. The warning about the stamped rolls applies here: the figures without the leading mark, 9825, already make a possible date, 9. 8. 25., so the day is either 9 or 19 and I cannot choose between them from this impression alone. August 1925 is firm; the fourth figure would have to be a 0 for 1905, and it is not an even ring. w2-w4 show a torn edge, tissue and perforations, with no second impression of the same stamp to compare the leading mark against."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/sj582bt2976.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7105,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/sj582bt2976.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/sj582bt2976.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/s/sj582bt2976_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5133,
+       "unit": "mm",
+       "slot": 1.8469,
+       "bridge": 0.6598,
+       "n": 397,
+       "@annotation": {
+        "@id": "copies/sj582bt2976.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/sj582bt2976.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 397 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/sj582bt2976%2Fsj582bt2976_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.498,
+       "unit": "mm",
+       "strength": 0.5624,
+       "n": 43726,
+       "@annotation": {
+        "@id": "copies/sj582bt2976.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/sj582bt2976.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 43726 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.317 mm at 0.0207, 0.402 mm at 0.0881. The chain pitch is 5.047 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/s/sj582bt2976_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

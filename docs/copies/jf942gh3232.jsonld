@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/jf942gh3232.jsonld",
+ "title": "Condon Roll 65, WM 258",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/jf942gh3232.jsonld#copy",
+   "label": "Condon Roll 65",
+   "identifier": "Stanford Libraries CONDON ROLL 65",
+   "seeAlso": "https://purl.stanford.edu/jf942gh3232",
+   "exemplifies": {
+    "catalogueNumber": "WM 258",
+    "label": "Zscherneck, Georg: Barcarole aus \"Hoffmann's Erzählungen\""
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1986,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/jf942gh3232.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 12924.52,
+        "to": 13085.25
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/jf942gh3232%2Fjf942gh3232_0001/3546,152779,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/jf942gh3232.jsonld#inscription-text",
+        "text": "258.  27.  12  13."
+       },
+       "medium": "ink"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/jf942gh3232%2Fjf942gh3232_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1913-12-27",
+     "@annotation": {
+      "@id": "copies/jf942gh3232.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/jf942gh3232.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/jf942gh3232.jsonld#inscription-text"
+         ],
+         "note": "ink, slanted hand that loops the top of 2 and 7; the day's second figure has no closed bowl and its stroke runs down to the left, so read as 7 rather than 9; the number's last figure is the least certain and could be 9"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/jf942gh3232.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2587,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/jf942gh3232.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/jf942gh3232.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/j/jf942gh3232_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.9956,
+       "unit": "mm",
+       "slot": 2.3884,
+       "bridge": 0.6141,
+       "n": 339,
+       "@annotation": {
+        "@id": "copies/jf942gh3232.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/jf942gh3232.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 339 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/jf942gh3232%2Fjf942gh3232_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.499,
+       "unit": "mm",
+       "strength": 0.4677,
+       "n": 9487,
+       "@annotation": {
+        "@id": "copies/jf942gh3232.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/jf942gh3232.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 9487 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.716 mm at 0.0476, 0.909 mm at 0.0672. The chain pitch is 6.003 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/j/jf942gh3232_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

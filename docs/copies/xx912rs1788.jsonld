@@ -1,0 +1,202 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/xx912rs1788.jsonld",
+ "title": "Condon Roll 450, WM 1346",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/xx912rs1788.jsonld#copy",
+   "label": "Condon Roll 450",
+   "identifier": "Stanford Libraries CONDON ROLL 450",
+   "seeAlso": "https://purl.stanford.edu/xx912rs1788",
+   "exemplifies": {
+    "catalogueNumber": "WM 1346",
+    "label": "Mottl, Felix (1856-1911): Vorspiel zu Parsival"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1962,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/xx912rs1788.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 45567.98,
+        "to": 45728.71
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/xx912rs1788%2Fxx912rs1788_0001/3510,538653,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/xx912rs1788.jsonld#inscription-text",
+        "text": "No 1346  12. 11. 10.  Hst."
+       },
+       "medium": "ink"
+      }
+     ],
+     "actor": {
+      "name": "Hst.",
+      "sameAs": [],
+      "@annotation": {
+       "@id": "copies/xx912rs1788.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/xx912rs1788.jsonld#hand-belief",
+        "certainty": "possible",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/xx912rs1788.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Hst.\"."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/xx912rs1788%2Fxx912rs1788_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1910-11-12",
+     "@annotation": {
+      "@id": "copies/xx912rs1788.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/xx912rs1788.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/xx912rs1788.jsonld#inscription-text"
+         ],
+         "note": "Ink, one line on the lower (upright) panel, in the order number, date, initials. The three pairs of the date are each plain, 12 and 11 as parallel strokes and 10 as a 1 beside an oval. Two reservations that do not touch the date: the second figure of the roll number has a flat top stroke over a single bowl and could be read 5, giving 1546 instead of 1346; and the initials at the end are three letters closed by a point, whose capital could be H or K, so Hst. is the best I can make of them."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/xx912rs1788.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1411,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/xx912rs1788.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xx912rs1788.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xx912rs1788_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.067,
+       "unit": "mm",
+       "slot": 2.2422,
+       "bridge": 0.8167,
+       "n": 444,
+       "@annotation": {
+        "@id": "copies/xx912rs1788.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xx912rs1788.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 444 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/xx912rs1788%2Fxx912rs1788_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.508,
+       "unit": "mm",
+       "strength": 0.4435,
+       "n": 33878,
+       "@annotation": {
+        "@id": "copies/xx912rs1788.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xx912rs1788.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 33878 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.86 mm at 0.1191, 1.026 mm at 0.136. The chain pitch is 6.037 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xx912rs1788_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

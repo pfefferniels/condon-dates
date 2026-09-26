@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/mh156nr8259.jsonld",
+ "title": "Condon Roll 432, WM 1442",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/mh156nr8259.jsonld#copy",
+   "label": "Condon Roll 432",
+   "identifier": "Stanford Libraries CONDON ROLL 432",
+   "seeAlso": "https://purl.stanford.edu/mh156nr8259",
+   "exemplifies": {
+    "catalogueNumber": "WM 1442",
+    "label": "Schelling, Ernest (1876-1939): Sonata appassionata : op. 57, F minor"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1971,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/mh156nr8259.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 32386.54,
+        "to": 32547.28
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 81,
+        "to": 95
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/mh156nr8259%2Fmh156nr8259_0001/3174,382837,492,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/mh156nr8259.jsonld#inscription-text",
+        "text": "101026"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/mh156nr8259%2Fmh156nr8259_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1926-10-10",
+     "@annotation": {
+      "@id": "copies/mh156nr8259.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/mh156nr8259.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/mh156nr8259.jsonld#inscription-text"
+         ],
+         "note": "stamped in black, six figures without separators, set across the roll at roughly 55 degrees rather than along it; read after rotating. Figures 2 and 4 are filled with ink but keep their oval outline, which is why the reading is not called high; 1, 3, 5 and 6 are plain."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/mh156nr8259.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.8459,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/mh156nr8259.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/mh156nr8259.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/m/mh156nr8259_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5969,
+       "unit": "mm",
+       "slot": 1.9574,
+       "bridge": 0.644,
+       "n": 429,
+       "@annotation": {
+        "@id": "copies/mh156nr8259.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/mh156nr8259.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 429 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/mh156nr8259%2Fmh156nr8259_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.521,
+       "unit": "mm",
+       "strength": 0.6316,
+       "n": 24698,
+       "@annotation": {
+        "@id": "copies/mh156nr8259.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/mh156nr8259.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 24698 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.421 mm at 0.1039, 0.681 mm at 0.1307. The chain pitch is 4.984 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/m/mh156nr8259_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/rt595wj4442.jsonld",
+ "title": "Condon Roll 157, WM 28",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/rt595wj4442.jsonld#copy",
+   "label": "Condon Roll 157",
+   "identifier": "Stanford Libraries CONDON ROLL 157",
+   "seeAlso": "https://purl.stanford.edu/rt595wj4442",
+   "exemplifies": {
+    "catalogueNumber": "WM 28",
+    "label": "Adam-Benard, Eugenie: Klavierconcert a-Moll, op. 54"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1877,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/rt595wj4442.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 43121.04,
+        "to": 43281.77
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/rt595wj4442%2Frt595wj4442_0001/3490,509728,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/rt595wj4442.jsonld#inscription-text",
+        "text": "27. 4. 14"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/rt595wj4442%2Frt595wj4442_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1914-04-27",
+     "@annotation": {
+      "@id": "copies/rt595wj4442.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/rt595wj4442.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/rt595wj4442.jsonld#inscription-text"
+         ],
+         "note": "read here at magnification after the first reader left it low. The last figure carries the same crossed form as the month's 4, so the year is 14; the day could be read 24 with the month 7, which does not move the year."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/rt595wj4442.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.8307,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/rt595wj4442.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rt595wj4442.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/r/rt595wj4442_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5037,
+       "unit": "mm",
+       "slot": 1.9319,
+       "bridge": 0.5672,
+       "n": 304,
+       "@annotation": {
+        "@id": "copies/rt595wj4442.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rt595wj4442.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 304 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/rt595wj4442%2Frt595wj4442_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.501,
+       "unit": "mm",
+       "strength": 0.52,
+       "n": 46912,
+       "@annotation": {
+        "@id": "copies/rt595wj4442.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rt595wj4442.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 46912 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.408 mm at 0.06, 0.64 mm at 0.0551. The chain pitch is 4.997 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/r/rt595wj4442_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

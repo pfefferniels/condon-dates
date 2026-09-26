@@ -1,0 +1,210 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/xk500gs5691.jsonld",
+ "title": "Condon Roll 96, WM 337",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/xk500gs5691.jsonld#copy",
+   "label": "Condon Roll 96",
+   "identifier": "Stanford Libraries CONDON ROLL 96",
+   "seeAlso": "https://purl.stanford.edu/xk500gs5691",
+   "exemplifies": {
+    "catalogueNumber": "WM 337",
+    "label": "Kupfernagel, Albrecht: Berliner Luft : Marsch"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1999,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/xk500gs5691.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 10265.41,
+        "to": 10426.14
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 85,
+        "to": 98
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/xk500gs5691%2Fxk500gs5691_0001/3322,121346,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/xk500gs5691.jsonld#inscription-text",
+        "text": "22. 10. 8  [signature]"
+       }
+      }
+     ],
+     "actor": {
+      "name": "B. Schäfer",
+      "sameAs": [],
+      "@id": "hands.jsonld#b-schaefer",
+      "@annotation": {
+       "@id": "copies/xk500gs5691.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/xk500gs5691.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/xk500gs5691.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Schäfer?\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/xk500gs5691%2Fxk500gs5691_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1908-10-22",
+     "@annotation": {
+      "@id": "copies/xk500gs5691.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/xk500gs5691.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/xk500gs5691.jsonld#inscription-text"
+         ],
+         "note": "Faint pencil. '22' is plain and the last figure is an 8, so 1908 is safe; the middle is either '10' with a single-figure year 8 (22 October 1908) or a month '1' with the year '08' (22 January 1908). I read the marks as '10' then '8' from their spacing, but the other reading is possible. The flourished signature that follows may be Schäfer. Crop 3 shows the leader label 'No. 337 / Berliner Luft / Marsch / P. Lincke / Gespielt von Albrecht Kupfernagel / 4. IV. 05.' — that printed date belongs to the label, not to the punching."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/xk500gs5691.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.3222,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/xk500gs5691.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xk500gs5691.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xk500gs5691_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0448,
+       "unit": "mm",
+       "slot": 2.499,
+       "bridge": 0.5425,
+       "n": 203,
+       "@annotation": {
+        "@id": "copies/xk500gs5691.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xk500gs5691.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 203 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/xk500gs5691%2Fxk500gs5691_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.532,
+       "unit": "mm",
+       "strength": 0.1238,
+       "n": 5218,
+       "@annotation": {
+        "@id": "copies/xk500gs5691.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xk500gs5691.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 5218 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.488 mm at 0.034, 0.649 mm at 0.0482, 0.904 mm at 0.0748. The chain pitch is 1.987 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xk500gs5691_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

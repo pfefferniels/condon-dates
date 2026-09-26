@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/bf644yy6536.jsonld",
+ "title": "Condon Roll 489, WM 1480",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/bf644yy6536.jsonld#copy",
+   "label": "Condon Roll 489",
+   "identifier": "Stanford Libraries CONDON ROLL 489",
+   "seeAlso": "https://purl.stanford.edu/bf644yy6536",
+   "exemplifies": {
+    "catalogueNumber": "WM 1480",
+    "label": "Samaroff Stokowski, Olga (1882-1948): Peer Gynt suite II"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.2,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/bf644yy6536.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 16801.05,
+        "to": 16961.79
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/bf644yy6536%2Fbf644yy6536_0001/3487,198603,460,1900/full/270/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/bf644yy6536.jsonld#inscription-text",
+        "text": "1450.  11.[2 or 3].14."
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/bf644yy6536%2Fbf644yy6536_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "after": "1914-01-01",
+     "before": "1914-12-31",
+     "@annotation": {
+      "@id": "copies/bf644yy6536.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/bf644yy6536.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/bf644yy6536.jsonld#inscription-text"
+         ],
+         "note": "crop 1, lower panel upright, pencil, one line in two groups; crop 2 is a torn roll end with no writing. The writing sits hard against the top edge of the crop, so the upper third of every figure is cut off, in both panels alike. Group 1 reads 1450. and is taken as the roll number. Group 2 is 11 . X . 14 .: the day 11 and the year 14 are firm, the month figure is a thick stroke with a base sweeping right, either a 2 or a 3, and the clipped top is exactly what would tell them apart. Day and year alone give 1914; the month is left open rather than guessed."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/bf644yy6536.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1479,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/bf644yy6536.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bf644yy6536.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bf644yy6536_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0253,
+       "unit": "mm",
+       "slot": 2.2325,
+       "bridge": 0.7917,
+       "n": 191,
+       "@annotation": {
+        "@id": "copies/bf644yy6536.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bf644yy6536.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 191 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/bf644yy6536%2Fbf644yy6536_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.491,
+       "unit": "mm",
+       "strength": 0.1689,
+       "n": 6884,
+       "@annotation": {
+        "@id": "copies/bf644yy6536.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bf644yy6536.jsonld#advance-belief",
+         "certainty": "unlikely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 6884 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.389 mm at 0.0426, 0.646 mm at 0.0687. The chain pitch is 6.162 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bf644yy6536_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/zw485gh6070.jsonld",
+ "title": "Condon Roll 333, WM 1184",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/zw485gh6070.jsonld#copy",
+   "label": "Condon Roll 333",
+   "identifier": "Stanford Libraries CONDON ROLL 333",
+   "seeAlso": "https://purl.stanford.edu/zw485gh6070",
+   "exemplifies": {
+    "catalogueNumber": "WM 1184",
+    "label": "Strauss, Richard (1864-1949): Liebesscene a. \"Heldenleben\""
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1916,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/zw485gh6070.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 12030.51,
+        "to": 12191.24
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 87,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/zw485gh6070%2Fzw485gh6070_0001/3438,142211,550,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/zw485gh6070.jsonld#inscription-text",
+        "text": "1184   3. 8. 10   Roth / [second hand, illegible]"
+       },
+       "medium": "ink"
+      }
+     ],
+     "actor": {
+      "name": "Roth",
+      "sameAs": [],
+      "@id": "hands.jsonld#roth",
+      "@annotation": {
+       "@id": "copies/zw485gh6070.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/zw485gh6070.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/zw485gh6070.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Roth\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/zw485gh6070%2Fzw485gh6070_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1910-08-03",
+     "@annotation": {
+      "@id": "copies/zw485gh6070.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/zw485gh6070.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/zw485gh6070.jsonld#inscription-text"
+         ],
+         "note": "Ink, large and unhurried, on clear paper. Third figure of the number is the open-topped 8 of these hands, not a 6; the 8 of the date is a closed figure-eight. A second short signature sits below and right of Roth, four or five cursive letters, which I cannot letter out with any confidence."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/zw485gh6070.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2393,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/zw485gh6070.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zw485gh6070.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/z/zw485gh6070_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0246,
+       "unit": "mm",
+       "slot": 2.2554,
+       "bridge": 0.7512,
+       "n": 266,
+       "@annotation": {
+        "@id": "copies/zw485gh6070.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zw485gh6070.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 266 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/zw485gh6070%2Fzw485gh6070_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.014,
+       "unit": "mm",
+       "strength": 0.1486,
+       "n": 9510,
+       "@annotation": {
+        "@id": "copies/zw485gh6070.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zw485gh6070.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 9510 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.486 mm at 0.0621, 0.529 mm at 0.0579, 0.691 mm at 0.0673. The chain pitch is 2.983 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/z/zw485gh6070_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

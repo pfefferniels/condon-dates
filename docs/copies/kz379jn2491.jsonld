@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/kz379jn2491.jsonld",
+ "title": "Condon Roll 221, WM 570",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/kz379jn2491.jsonld#copy",
+   "label": "Condon Roll 221",
+   "identifier": "Stanford Libraries CONDON ROLL 221",
+   "seeAlso": "https://purl.stanford.edu/kz379jn2491",
+   "exemplifies": {
+    "catalogueNumber": "WM 570",
+    "label": "Lamond, Frederic (1868-1948): Liebestraum"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1925,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/kz379jn2491.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 15970.49,
+        "to": 16131.22
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/kz379jn2491%2Fkz379jn2491_0001/3514,188785,460,1900/full/270/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/kz379jn2491.jsonld#inscription-text",
+        "text": "251022"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/kz379jn2491%2Fkz379jn2491_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1922-10-25",
+     "@annotation": {
+      "@id": "copies/kz379jn2491.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/kz379jn2491.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/kz379jn2491.jsonld#inscription-text"
+         ],
+         "note": "Fine dark strokes, one line, lower panel upright. Six figures run together without separators, 25 10 22. All six are plain; the two 2s at the end match the 2 that opens the line. No roll number or name in this crop."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/kz379jn2491.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.6911,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/kz379jn2491.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/kz379jn2491.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/k/kz379jn2491_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5853,
+       "unit": "mm",
+       "slot": 1.8251,
+       "bridge": 0.7504,
+       "n": 414,
+       "@annotation": {
+        "@id": "copies/kz379jn2491.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/kz379jn2491.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 414 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/kz379jn2491%2Fkz379jn2491_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.521,
+       "unit": "mm",
+       "strength": 0.5901,
+       "n": 13887,
+       "@annotation": {
+        "@id": "copies/kz379jn2491.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/kz379jn2491.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 13887 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.353 mm at 0.0174, 0.673 mm at 0.0847. The chain pitch is 4.962 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/k/kz379jn2491_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

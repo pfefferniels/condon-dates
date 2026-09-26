@@ -1,0 +1,182 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/dq126tp4234.jsonld",
+ "title": "Condon Roll 744, WM 3143",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/dq126tp4234.jsonld#copy",
+   "label": "Condon Roll 744",
+   "identifier": "Stanford Libraries CONDON ROLL 744",
+   "seeAlso": "https://purl.stanford.edu/dq126tp4234",
+   "exemplifies": {
+    "catalogueNumber": "WM 3143",
+    "label": "Ritter, Franz: Don Juan"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1947,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/dq126tp4234.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 20430.65,
+        "to": 20591.38
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/dq126tp4234%2Fdq126tp4234_0001/3473,241508,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/dq126tp4234.jsonld#inscription-text",
+        "text": "2[?] 10 22"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/dq126tp4234%2Fdq126tp4234_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "after": "1922-10-01",
+     "before": "1922-10-31",
+     "@annotation": {
+      "@id": "copies/dq126tp4234.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/dq126tp4234.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/dq126tp4234.jsonld#inscription-text"
+         ],
+         "note": "Pencil, treble edge. Six figures grouped 2 + 2 + 2, all of them cut along the top by the crop edge, which begins at the first row of ink. The last two are the same figure, a hooked top with a diagonal and a base, giving the year 22; the middle pair are a plain diagonal and an oval, giving the month 10; the first is a 2. The second figure shows two lobes and looks like the open-topped 8, which would make the day 28, but it is not legible enough to fix and I have not completed it. Crops 2 to 4 carry only a repair patch and stains."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/dq126tp4234.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7334,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/dq126tp4234.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/dq126tp4234.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/d/dq126tp4234_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5991,
+       "unit": "mm",
+       "slot": 1.7946,
+       "bridge": 0.8015,
+       "n": 334,
+       "@annotation": {
+        "@id": "copies/dq126tp4234.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/dq126tp4234.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 334 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/dq126tp4234%2Fdq126tp4234_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.521,
+       "unit": "mm",
+       "strength": 0.4553,
+       "n": 16192,
+       "@annotation": {
+        "@id": "copies/dq126tp4234.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/dq126tp4234.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 16192 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.326 mm at 0.0225, 0.342 mm at 0.0237. The chain pitch is 4.989 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/d/dq126tp4234_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

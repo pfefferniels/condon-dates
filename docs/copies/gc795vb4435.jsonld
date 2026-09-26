@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/gc795vb4435.jsonld",
+ "title": "Condon Roll 408, WM 1319",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/gc795vb4435.jsonld#copy",
+   "label": "Condon Roll 408",
+   "identifier": "Stanford Libraries CONDON ROLL 408",
+   "seeAlso": "https://purl.stanford.edu/gc795vb4435",
+   "exemplifies": {
+    "catalogueNumber": "WM 1319",
+    "label": "Busoni, Ferruccio (1866-1924): Prelude op. 28, Nr. 15, D flat"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1946,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/gc795vb4435.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 19019.59,
+        "to": 19180.32
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/gc795vb4435%2Fgc795vb4435_0001/3536,224828,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/gc795vb4435.jsonld#inscription-text",
+        "text": "26422"
+       },
+       "medium": "ink"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/gc795vb4435%2Fgc795vb4435_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1922-04-26",
+     "@annotation": {
+      "@id": "copies/gc795vb4435.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/gc795vb4435.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/gc795vb4435.jsonld#inscription-text"
+         ],
+         "note": "Ink, separators dropped: 26.4.22. All five figures plain; the two closing 2s carry the same base tick as the opening 2."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/gc795vb4435.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.6919,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/gc795vb4435.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/gc795vb4435.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/g/gc795vb4435_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.479,
+       "unit": "mm",
+       "slot": 1.7844,
+       "bridge": 0.7113,
+       "n": 323,
+       "@annotation": {
+        "@id": "copies/gc795vb4435.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/gc795vb4435.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 323 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/gc795vb4435%2Fgc795vb4435_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.495,
+       "unit": "mm",
+       "strength": 0.3584,
+       "n": 15936,
+       "@annotation": {
+        "@id": "copies/gc795vb4435.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/gc795vb4435.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 15936 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.409 mm at 0.0427, 0.63 mm at 0.0461. The chain pitch is 5.008 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/g/gc795vb4435_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

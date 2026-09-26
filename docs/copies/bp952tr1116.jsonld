@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/bp952tr1116.jsonld",
+ "title": "Condon Roll 126, WM 399",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/bp952tr1116.jsonld#copy",
+   "label": "Condon Roll 126",
+   "identifier": "Stanford Libraries CONDON ROLL 126",
+   "seeAlso": "https://purl.stanford.edu/bp952tr1116",
+   "exemplifies": {
+    "catalogueNumber": "WM 399",
+    "label": "Weiss, Josef (1864-1924): II Rhapsodie op. 11"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.2026,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/bp952tr1116.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 23945.54,
+        "to": 24106.27
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 86,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/bp952tr1116%2Fbp952tr1116_0001/3398,283057,584,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/bp952tr1116.jsonld#inscription-text",
+        "text": "699  19. 4. 10  Kumer (overbar on the m) / [second signature, illegible]"
+       },
+       "medium": "ink"
+      }
+     ],
+     "actor": {
+      "name": "Kummer",
+      "sameAs": [],
+      "@id": "hands.jsonld#kummer",
+      "@annotation": {
+       "@id": "copies/bp952tr1116.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/bp952tr1116.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/bp952tr1116.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Kummer\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/bp952tr1116%2Fbp952tr1116_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1910-04-19",
+     "@annotation": {
+      "@id": "copies/bp952tr1116.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/bp952tr1116.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/bp952tr1116.jsonld#inscription-text"
+         ],
+         "note": "ink, two lines; the first name is written Kumer with an overbar over the m, so Kummer. A second cursive signature on the line below is not legible to me; it may be the Woessler hand seen elsewhere in the corpus, but I cannot make it out. The roll number's first figure is a single downstroke into a closed bowl, so 6 rather than 8; the two following figures match the 9 of 19 in the date"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/bp952tr1116.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.0667,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/bp952tr1116.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bp952tr1116.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bp952tr1116_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.9681,
+       "unit": "mm",
+       "slot": 2.1525,
+       "bridge": 0.81,
+       "n": 237,
+       "@annotation": {
+        "@id": "copies/bp952tr1116.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bp952tr1116.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 237 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/bp952tr1116%2Fbp952tr1116_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.918,
+       "unit": "mm",
+       "strength": 0.0825,
+       "n": 17194,
+       "@annotation": {
+        "@id": "copies/bp952tr1116.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/bp952tr1116.jsonld#advance-belief",
+         "certainty": "unlikely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 17194 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.386 mm at 0.0323, 0.481 mm at 0.033, 0.651 mm at 0.0564. The chain pitch is 3.233 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/b/bp952tr1116_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

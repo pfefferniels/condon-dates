@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/cm852bp8620.jsonld",
+ "title": "Condon Roll 774, WM 3313",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/cm852bp8620.jsonld#copy",
+   "label": "Condon Roll 774",
+   "identifier": "Stanford Libraries CONDON ROLL 774",
+   "seeAlso": "https://purl.stanford.edu/cm852bp8620",
+   "exemplifies": {
+    "catalogueNumber": "WM 3313",
+    "label": "Backhaus, Wilhelm (1884-1969): Wanderer-Fantasie"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1925,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/cm852bp8620.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 24578.4,
+        "to": 24739.13
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 83,
+        "to": 99
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/cm852bp8620%2Fcm852bp8620_0001/3214,290538,564,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/cm852bp8620.jsonld#inscription-text",
+        "text": "21528"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/cm852bp8620%2Fcm852bp8620_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1928-05-21",
+     "@annotation": {
+      "@id": "copies/cm852bp8620.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/cm852bp8620.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/cm852bp8620.jsonld#inscription-text"
+         ],
+         "note": "stamped and lightly struck; the first figure is faint, but its bowl, diagonal and foot match the clearly struck 2 later in the same stamp. Crop 3 carries a separate pencilled number, about 3313; crop 2 is blank"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/cm852bp8620.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.8264,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/cm852bp8620.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cm852bp8620.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/cm852bp8620_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5104,
+       "unit": "mm",
+       "slot": 1.9358,
+       "bridge": 0.5743,
+       "n": 290,
+       "@annotation": {
+        "@id": "copies/cm852bp8620.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cm852bp8620.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 290 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/cm852bp8620%2Fcm852bp8620_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.5,
+       "unit": "mm",
+       "strength": 0.4045,
+       "n": 19209,
+       "@annotation": {
+        "@id": "copies/cm852bp8620.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/cm852bp8620.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 19209 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.388 mm at 0.0562, 0.855 mm at 0.0669. The chain pitch is 5.021 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/cm852bp8620_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

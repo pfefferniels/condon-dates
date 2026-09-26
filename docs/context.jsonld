@@ -1,0 +1,16 @@
+{
+ "@context": {
+  "label": "rdfs:label",
+  "comment": "rdfs:comment",
+  "identifier": "dcterms:identifier",
+  "seeAlso": {
+   "@id": "rdfs:seeAlso",
+   "@type": "@id"
+  },
+  "isPartOf": {
+   "@id": "dcterms:isPartOf",
+   "@type": "@id"
+  },
+  "exemplifies": "lrmoo:R7_exemplifies"
+ }
+}

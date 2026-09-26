@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Regenerate docs/data/rolls.json from the catalogue, the readings and the signature clustering.
+"""Regenerate docs/data/rolls.json and the linked data from the catalogue, the readings,
+the signature clustering and the perforator measurements.
 
-All three live in this repo, so a clone rebuilds the site on its own. data/readings.json
+All four live in this repo, so a clone rebuilds the site on its own. data/readings.json
 is the record of what was read off each roll and is corrected by hand here. Refresh
-data/catalogue.json with sync.py when punch-225 re-indexes the rolls.
+data/catalogue.json and data/perforator.json with sync.py when punch-225 re-indexes or
+re-measures the rolls. linked.py writes the linked data.
 """
 import html
 import json
@@ -12,22 +14,28 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+import linked
+
 HERE = Path(__file__).parent
 CATALOGUE = HERE / "data" / "catalogue.json"
 READINGS = HERE / "data" / "readings.json"
 HANDS = HERE / "hands.json"
-TARGET = HERE / "docs" / "data" / "rolls.json"
+PERFORATOR = HERE / "data" / "perforator.json"
+DOCS = HERE / "docs"
+TARGET = DOCS / "data" / "rolls.json"
 
 ISO_DATE = re.compile(r"\d{4}(-\d{2}(-\d{2})?)?")
 
 
-def check(readings, druids):
+def check(readings, measured, druids):
     """Refuse a hand edit the page would otherwise drop or mis-sort without a word."""
     unknown = sorted(readings.keys() - druids)
     malformed = sorted(d for d, r in readings.items()
                        if r.get("date_iso") and not ISO_DATE.fullmatch(r["date_iso"]))
     if unknown or malformed:
         raise SystemExit(f"readings.json: unknown druids {unknown}, malformed date_iso {malformed}")
+    if measured.keys() - druids:
+        raise SystemExit(f"perforator.json: unknown druids {sorted(measured.keys() - druids)}")
 
 
 def roll_entry(roll, reading):
@@ -66,7 +74,8 @@ def main():
     rolls = json.loads(CATALOGUE.read_text())
     readings = json.loads(READINGS.read_text())
     hands = json.loads(HANDS.read_text())
-    check(readings, {r["druid"] for r in rolls})
+    perforator = json.loads(PERFORATOR.read_text())
+    check(readings, perforator["rolls"], {r["druid"] for r in rolls})
 
     dated = {d for d, r in readings.items() if r.get("date_iso")}
     wanted = {d for c in hands["clusters"] for d in c["rolls"]}
@@ -78,9 +87,10 @@ def main():
     controllers, singles = registry(hands, by_druid)
     scanned = sum(1 for r in rolls if r["scanned"])
 
+    today = date.today().isoformat()
     TARGET.parent.mkdir(parents=True, exist_ok=True)
     TARGET.write_text(json.dumps({
-        "generated": date.today().isoformat(),
+        "generated": today,
         "totals": {"rolls": len(rolls), "scanned": scanned, "dated": len(dated)},
         "years": year_counts(readings[d]["date_iso"] for d in dated),
         "rolls": by_druid,
@@ -91,6 +101,10 @@ def main():
     print(f"{len(rolls)} rolls, {scanned} scanned, {len(dated)} dated")
     print(f"{len(controllers)} controllers, {len(singles)} single hands")
     print(f"wrote {TARGET.relative_to(HERE)} ({TARGET.stat().st_size // 1024} kB)")
+
+    copies = linked.build(DOCS, rolls, readings, hands, perforator, today)
+    print(f"wrote {len(copies)} copies to docs/copies/, the register docs/copies.jsonld "
+          f"({(DOCS / 'copies.jsonld').stat().st_size // 1024} kB) and docs/hands.jsonld")
 
 
 if __name__ == "__main__":

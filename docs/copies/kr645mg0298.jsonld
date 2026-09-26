@@ -1,0 +1,81 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/kr645mg0298.jsonld",
+ "title": "Condon Roll 431, WM 1405",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/kr645mg0298.jsonld#copy",
+   "label": "Condon Roll 431",
+   "identifier": "Stanford Libraries CONDON ROLL 431",
+   "seeAlso": "https://purl.stanford.edu/kr645mg0298",
+   "exemplifies": {
+    "catalogueNumber": "WM 1405",
+    "label": "Orlando, N: Love land"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    }
+   },
+   "modifications": [],
+   "scan": "https://stacks.stanford.edu/image/iiif/kr645mg0298%2Fkr645mg0298_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/kr645mg0298.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "advance": {
+       "value": 1.254,
+       "unit": "mm",
+       "strength": 0.0729,
+       "n": 6516,
+       "@annotation": {
+        "@id": "copies/kr645mg0298.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/kr645mg0298.jsonld#advance-belief",
+         "certainty": "unlikely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 6516 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.747 mm at 0.0485, 0.862 mm at 0.0563, 1.026 mm at 0.0633. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/k/kr645mg0298_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

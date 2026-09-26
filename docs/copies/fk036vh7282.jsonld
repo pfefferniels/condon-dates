@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/fk036vh7282.jsonld",
+ "title": "Condon Roll 561, WM 2254",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/fk036vh7282.jsonld#copy",
+   "label": "Condon Roll 561",
+   "identifier": "Stanford Libraries CONDON ROLL 561",
+   "seeAlso": "https://purl.stanford.edu/fk036vh7282",
+   "exemplifies": {
+    "catalogueNumber": "WM 2254",
+    "label": "Epstein, Richard (1869-1919): Madam Butterfly : selection"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1943,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/fk036vh7282.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 24148.23,
+        "to": 24308.96
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/fk036vh7282%2Ffk036vh7282_0001/3504,285453,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/fk036vh7282.jsonld#inscription-text",
+        "text": "21824"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/fk036vh7282%2Ffk036vh7282_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1924-08-21",
+     "@annotation": {
+      "@id": "copies/fk036vh7282.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/fk036vh7282.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/fk036vh7282.jsonld#inscription-text"
+         ],
+         "note": "pencil, five figures run together, close under the paper edge; small and slanted. First 2, third 8 and fifth 4 are plain. The second is read as 1 against the 1 of the roll number on crop 2, written by the same hand, but a 2 is possible, which would give 22.8.24. The fourth carries the same top loop as that hand's 2. Roll number 2154 stands alone on crop 2; the series 2148, 2154, 2160, 2161 runs through this batch. Crop 3 carries a later English note in ink across the roll, 'good condition' over '1. 12. 198-' with the last figure of the year running off the crop: an archive hand, not a punch date. Crop 4 blank."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/fk036vh7282.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7528,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/fk036vh7282.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fk036vh7282.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/f/fk036vh7282_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.5122,
+       "unit": "mm",
+       "slot": 1.8463,
+       "bridge": 0.6569,
+       "n": 438,
+       "@annotation": {
+        "@id": "copies/fk036vh7282.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fk036vh7282.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 438 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/fk036vh7282%2Ffk036vh7282_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.499,
+       "unit": "mm",
+       "strength": 0.6129,
+       "n": 20910,
+       "@annotation": {
+        "@id": "copies/fk036vh7282.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/fk036vh7282.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 20910 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.314 mm at 0.0278, 0.403 mm at 0.0995. The chain pitch is 5.034 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/f/fk036vh7282_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

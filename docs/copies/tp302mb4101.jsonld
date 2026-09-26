@@ -1,0 +1,212 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/tp302mb4101.jsonld",
+ "title": "Condon Roll 410, WM 1321",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/tp302mb4101.jsonld#copy",
+   "label": "Condon Roll 410",
+   "identifier": "Stanford Libraries CONDON ROLL 410",
+   "seeAlso": "https://purl.stanford.edu/tp302mb4101",
+   "exemplifies": {
+    "catalogueNumber": "WM 1321",
+    "label": "Busoni, Ferruccio (1866-1924): Norma : Fantasie"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1914,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/tp302mb4101.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 43899.07,
+        "to": 44059.8
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 87,
+        "to": 100
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/tp302mb4101%2Ftp302mb4101_0001/3382,518925,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/tp302mb4101.jsonld#inscription-text",
+        "text": "[19].10.08. [signature]"
+       },
+       "medium": "pencil"
+      }
+     ],
+     "actor": {
+      "name": "B. Schäfer",
+      "sameAs": [],
+      "@id": "hands.jsonld#b-schaefer",
+      "@annotation": {
+       "@id": "copies/tp302mb4101.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/tp302mb4101.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/tp302mb4101.jsonld#inscription-text"
+          ],
+          "note": "No name was read off it."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/tp302mb4101%2Ftp302mb4101_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "after": "1908-10-01",
+     "before": "1908-10-31",
+     "@annotation": {
+      "@id": "copies/tp302mb4101.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/tp302mb4101.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/tp302mb4101.jsonld#inscription-text"
+         ],
+         "note": "Pencil, upper panel upright, small and rubbed. Six figures in three pairs followed by a flourished signature I could not resolve. The month 10 and the year 08 I read with reasonable confidence; the first pair is muddied past the resolution of the scan and looks like 19, but I will not vouch for the day, so date_iso gives only the month. A quite separate later hand, in English pencil across crop 3, notes the roll's condition, is signed D. F. C. and dated 1985, and there says the roll is \"dated ... 10. 1908\"; that is an archive note, not the workshop, and I did not use it to settle the figures above. Crops 2 and 4 are blank."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/tp302mb4101.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2316,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/tp302mb4101.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/tp302mb4101.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/t/tp302mb4101_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.7843,
+       "unit": "mm",
+       "slot": 2.3551,
+       "bridge": 0.4357,
+       "n": 289,
+       "@annotation": {
+        "@id": "copies/tp302mb4101.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/tp302mb4101.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 289 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/tp302mb4101%2Ftp302mb4101_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.483,
+       "unit": "mm",
+       "strength": 0.1302,
+       "n": 31972,
+       "@annotation": {
+        "@id": "copies/tp302mb4101.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/tp302mb4101.jsonld#advance-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 31972 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.489 mm at 0.0412, 0.637 mm at 0.0501, 0.89 mm at 0.079. The chain pitch is 1.877 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/t/tp302mb4101_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

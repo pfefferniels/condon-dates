@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/xc665jf8254.jsonld",
+ "title": "Condon Roll 150, WM 719",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/xc665jf8254.jsonld#copy",
+   "label": "Condon Roll 150",
+   "identifier": "Stanford Libraries CONDON ROLL 150",
+   "seeAlso": "https://purl.stanford.edu/xc665jf8254",
+   "exemplifies": {
+    "catalogueNumber": "WM 719",
+    "label": "Motta, José Vianna da (1868-1948): Scherzo E-Dur, op. 54"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.2002,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/xc665jf8254.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 37411.89,
+        "to": 37572.63
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/xc665jf8254%2Fxc665jf8254_0001/3485,442241,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/xc665jf8254.jsonld#inscription-text",
+        "text": "1714    27. 4. 11.  [name, not read] / Wössler"
+       },
+       "medium": "pencil"
+      }
+     ],
+     "actor": {
+      "name": "Wissler",
+      "sameAs": [],
+      "@id": "hands.jsonld#wissler",
+      "@annotation": {
+       "@id": "copies/xc665jf8254.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/xc665jf8254.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/xc665jf8254.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Wössler\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/xc665jf8254%2Fxc665jf8254_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1911-04-27",
+     "@annotation": {
+      "@id": "copies/xc665jf8254.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/xc665jf8254.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/xc665jf8254.jsonld#inscription-text"
+         ],
+         "note": "pencil, upper panel upright; a second name stands above Wössler on the same line as the date and I could not read it, roughly seven cursive letters with a u-bow over the penultimate"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/xc665jf8254.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1259,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/xc665jf8254.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xc665jf8254.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xc665jf8254_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0194,
+       "unit": "mm",
+       "slot": 2.1677,
+       "bridge": 0.8281,
+       "n": 316,
+       "@annotation": {
+        "@id": "copies/xc665jf8254.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xc665jf8254.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 316 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/xc665jf8254%2Fxc665jf8254_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.928,
+       "unit": "mm",
+       "strength": 0.1223,
+       "n": 34388,
+       "@annotation": {
+        "@id": "copies/xc665jf8254.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/xc665jf8254.jsonld#advance-belief",
+         "certainty": "unlikely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 34388 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.407 mm at 0.0354, 0.49 mm at 0.0325, 0.638 mm at 0.0642. The chain pitch is 3.254 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/x/xc665jf8254_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,211 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/ch197br4742.jsonld",
+ "title": "Condon Roll 369, WM 881",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/ch197br4742.jsonld#copy",
+   "label": "Condon Roll 369",
+   "identifier": "Stanford Libraries CONDON ROLL 369",
+   "seeAlso": "https://purl.stanford.edu/ch197br4742",
+   "exemplifies": {
+    "catalogueNumber": "WM 881",
+    "label": "Sauer, Emil von (1862-1942): Etude op. 25, no. 9 : (staccato)"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1942,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/ch197br4742.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 5367.29,
+        "to": 5540.2
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 82,
+        "to": 95
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/ch197br4742%2Fch197br4742_0001/3198,63446,460,2044/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/ch197br4742.jsonld#inscription-text",
+        "text": "881 Fritz 21 Dezb 1908"
+       },
+       "medium": "pencil"
+      }
+     ],
+     "actor": {
+      "name": "Fritz",
+      "sameAs": [],
+      "@id": "hands.jsonld#fritz",
+      "@annotation": {
+       "@id": "copies/ch197br4742.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/ch197br4742.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/ch197br4742.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Fritz\"."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/ch197br4742%2Fch197br4742_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1908-12-21",
+     "@annotation": {
+      "@id": "copies/ch197br4742.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/ch197br4742.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/ch197br4742.jsonld#inscription-text"
+         ],
+         "note": "pencil, cursive; figures 21 and 1908 plain, the month is an abbreviated word read as Dezb (Dezember), the capital could conceivably be another letter"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/ch197br4742.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.1792,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/ch197br4742.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ch197br4742.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/ch197br4742_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.001,
+       "unit": "mm",
+       "slot": 2.2975,
+       "bridge": 0.7045,
+       "n": 14,
+       "@annotation": {
+        "@id": "copies/ch197br4742.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ch197br4742.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 14 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/ch197br4742%2Fch197br4742_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 1.007,
+       "unit": "mm",
+       "strength": 0.7454,
+       "n": 1897,
+       "@annotation": {
+        "@id": "copies/ch197br4742.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/ch197br4742.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 1897 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.337 mm at 0.1948, 0.503 mm at 0.4493. The chain pitch is 2.980 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/c/ch197br4742_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/pc364sy7115.jsonld",
+ "title": "Condon Roll 647, WM 2609",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/pc364sy7115.jsonld#copy",
+   "label": "Condon Roll 647",
+   "identifier": "Stanford Libraries CONDON ROLL 647",
+   "seeAlso": "https://purl.stanford.edu/pc364sy7115",
+   "exemplifies": {
+    "catalogueNumber": "WM 2609",
+    "label": "Goodall, B: Graf von Luxemburg : Selektion I"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1936,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/pc364sy7115.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 40720.7,
+        "to": 40881.44
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 82,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/pc364sy7115%2Fpc364sy7115_0001/3222,481354,721,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/pc364sy7115.jsonld#inscription-text",
+        "text": "2609. 19.9. 17."
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/pc364sy7115%2Fpc364sy7115_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1917-09-19",
+     "@annotation": {
+      "@id": "copies/pc364sy7115.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/pc364sy7115.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/pc364sy7115.jsonld#inscription-text"
+         ],
+         "note": "pencil, written along the roll; read from the upper panel rotated a quarter turn. Day and month plain: both 9s are a small closed bowl over a straight descender, no apex or crossbar, so 19.9 and not 14.4. The year pair is thinner and slightly rubbed, but the second figure carries a horizontal top bar, hence 17. The fourth figure of the number descends below the line, so 2609 and not 2600."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/pc364sy7115.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.2071,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/pc364sy7115.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pc364sy7115.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/pc364sy7115_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.9836,
+       "unit": "mm",
+       "slot": 2.3223,
+       "bridge": 0.6579,
+       "n": 262,
+       "@annotation": {
+        "@id": "copies/pc364sy7115.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pc364sy7115.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 262 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/pc364sy7115%2Fpc364sy7115_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.496,
+       "unit": "mm",
+       "strength": 0.4863,
+       "n": 23551,
+       "@annotation": {
+        "@id": "copies/pc364sy7115.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pc364sy7115.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 23551 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.662 mm at 0.0592, 0.813 mm at 0.0628. The chain pitch is 6.015 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/pc364sy7115_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

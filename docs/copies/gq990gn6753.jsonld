@@ -1,0 +1,182 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/gq990gn6753.jsonld",
+ "title": "Condon Roll 120, WM 375",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/gq990gn6753.jsonld#copy",
+   "label": "Condon Roll 120",
+   "identifier": "Stanford Libraries CONDON ROLL 120",
+   "seeAlso": "https://purl.stanford.edu/gq990gn6753",
+   "exemplifies": {
+    "catalogueNumber": "WM 375",
+    "label": "Wendling, Carl: Rustle of spring : op. 32, no. 3"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1896,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/gq990gn6753.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 8557.49,
+        "to": 8718.23
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/gq990gn6753%2Fgq990gn6753_0001/3517,101157,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/gq990gn6753.jsonld#inscription-text",
+        "text": "141?23"
+       },
+       "medium": "pencil"
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/gq990gn6753%2Fgq990gn6753_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "after": "1923-01-01",
+     "before": "1923-12-31",
+     "@annotation": {
+      "@id": "copies/gq990gn6753.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/gq990gn6753.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/gq990gn6753.jsonld#inscription-text"
+         ],
+         "note": "Pencil, read from the lower (180-degree) panel. A run of figures without separators, written close to the edge of the paper. The closing 2 and 3 are plain, so the year is 1923, and the run opens with a narrow 1 followed by a figure with a closed head, most likely 14 though 19 is possible. Between them stand two upright strokes joined by a short bar at mid height, which read either as a single open 4 (14.4.23) or as two figures, 11 (14.11.23) or 17 (no month). I cannot settle the middle group from this scan, so only the year is recorded. The roll number comes from region 2, which carries 375 alone, the 7 there crossed and carried on a long top bar."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/gq990gn6753.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7731,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/gq990gn6753.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/gq990gn6753.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/g/gq990gn6753_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.4961,
+       "unit": "mm",
+       "slot": 1.8473,
+       "bridge": 0.6506,
+       "n": 225,
+       "@annotation": {
+        "@id": "copies/gq990gn6753.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/gq990gn6753.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 225 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/gq990gn6753%2Fgq990gn6753_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.496,
+       "unit": "mm",
+       "strength": 0.4449,
+       "n": 5154,
+       "@annotation": {
+        "@id": "copies/gq990gn6753.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/gq990gn6753.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 5154 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.412 mm at 0.0686, 0.608 mm at 0.0938. The chain pitch is 5.032 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/g/gq990gn6753_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

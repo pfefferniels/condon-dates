@@ -1,0 +1,201 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/rn154dd5329.jsonld",
+ "title": "Condon Roll 98, WM 357",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/rn154dd5329.jsonld#copy",
+   "label": "Condon Roll 98",
+   "identifier": "Stanford Libraries CONDON ROLL 98",
+   "seeAlso": "https://purl.stanford.edu/rn154dd5329",
+   "exemplifies": {
+    "catalogueNumber": "WM 357",
+    "label": "Brzeziński, Franciszek (1867-1944): An der schönen blauen Donau"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1947,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/rn154dd5329.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 25022.36,
+        "to": 25183.1
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/rn154dd5329%2Frn154dd5329_0001/3502,295786,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/rn154dd5329.jsonld#inscription-text",
+        "text": "357  3. 4. 11.  Mohr"
+       }
+      }
+     ],
+     "actor": {
+      "name": "Mohr",
+      "sameAs": [],
+      "@annotation": {
+       "@id": "copies/rn154dd5329.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/rn154dd5329.jsonld#hand-belief",
+        "certainty": "possible",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/rn154dd5329.jsonld#inscription-text"
+          ],
+          "note": "Read as \"Mohr\"."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/rn154dd5329%2Frn154dd5329_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1911-04-03",
+     "@annotation": {
+      "@id": "copies/rn154dd5329.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/rn154dd5329.jsonld#date-belief",
+       "certainty": "possible",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/rn154dd5329.jsonld#inscription-text"
+         ],
+         "note": "'357' and '3. 4.' are plain. What I read as the year '11.' is two tall strokes with entry ticks and could instead be an initial 'M.' belonging to the name, in which case the inscription gives no year at all. The surname is not certainly legible; 'Mohr' is my best reading."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/rn154dd5329.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.0844,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/rn154dd5329.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rn154dd5329.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/r/rn154dd5329_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.006,
+       "unit": "mm",
+       "slot": 2.2147,
+       "bridge": 0.8,
+       "n": 241,
+       "@annotation": {
+        "@id": "copies/rn154dd5329.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rn154dd5329.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 241 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/rn154dd5329%2Frn154dd5329_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.497,
+       "unit": "mm",
+       "strength": 0.3855,
+       "n": 15105,
+       "@annotation": {
+        "@id": "copies/rn154dd5329.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/rn154dd5329.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 15105 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.628 mm at 0.0641, 1.042 mm at 0.066. The chain pitch is 6.048 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/r/rn154dd5329_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

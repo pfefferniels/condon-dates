@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/vy193qr6005.jsonld",
+ "title": "Condon Roll 702, WM 2988",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/vy193qr6005.jsonld#copy",
+   "label": "Condon Roll 702",
+   "identifier": "Stanford Libraries CONDON ROLL 702",
+   "seeAlso": "https://purl.stanford.edu/vy193qr6005",
+   "exemplifies": {
+    "catalogueNumber": "WM 2988",
+    "label": "Albert, Eugen d' (1864-1932): Sonata B minor, 2nd part"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1976,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/vy193qr6005.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 25049.6,
+        "to": 25210.34
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 83,
+        "to": 98
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/vy193qr6005%2Fvy193qr6005_0001/3222,296108,540,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/vy193qr6005.jsonld#inscription-text",
+        "text": "161025"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/vy193qr6005%2Fvy193qr6005_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1925-10-16",
+     "@annotation": {
+      "@id": "copies/vy193qr6005.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/vy193qr6005.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/vy193qr6005.jsonld#inscription-text"
+         ],
+         "note": "Stamped, running across the roll rather than along it; every figure plain."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/vy193qr6005.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.7604,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/vy193qr6005.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/vy193qr6005.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/v/vy193qr6005_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.6007,
+       "unit": "mm",
+       "slot": 1.8156,
+       "bridge": 0.7791,
+       "n": 392,
+       "@annotation": {
+        "@id": "copies/vy193qr6005.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/vy193qr6005.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 392 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/vy193qr6005%2Fvy193qr6005_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.521,
+       "unit": "mm",
+       "strength": 0.5181,
+       "n": 19792,
+       "@annotation": {
+        "@id": "copies/vy193qr6005.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/vy193qr6005.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 19792 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.733 mm at 0.0356, 1.03 mm at 0.0494. The chain pitch is 4.992 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/v/vy193qr6005_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "hands.jsonld",
+ "title": "The hands that signed the Condon Welte rolls",
+ "comment": "Signature clusters, made by comparing the inscription images. The transcribed `hand` field in data/readings.json was used only as corroboration, since it splits one person across several spellings (Roth / Roth, Wisler; Hohnrich / Hohmüller / Hohn). The commonest trap is the Kurrent long s, which reads as pf or as f and makes one hand look like two. Judge any letterform on the crop fetched at /full/ from the IIIF endpoint, never on the cached 1500 px view: the downscale is harmless for reading a date and fatal for reading a hand. `reading` is what the cluster's clearest specimen seems to say, not an identification. A roll carrying two hands appears under both. Signatures on the printed leader label stay out, including ink ones: the label's date is the recording, in the construction `Gespielt von [name] 20. I. 1905`, and roll 225 shows copies punched in 1909 and 1914 from a January 1905 recording. Admitting one would put a roll years into the wrong place.",
+ "@included": [
+  {
+   "@id": "hands.jsonld#wissler",
+   "name": "Wissler",
+   "sameAs": [],
+   "comment": "Changing from Kurrent to Latin from April 1911 on? 1909-1913."
+  },
+  {
+   "@id": "hands.jsonld#fritz",
+   "name": "Fritz",
+   "sameAs": [],
+   "comment": "Writes month as word (Novb, Dezb, Jan, Febr). Nov 1908 - Feb 1909."
+  },
+  {
+   "@id": "hands.jsonld#b-schaefer",
+   "name": "B. Schäfer",
+   "sameAs": [],
+   "comment": "Signed without a roll number on some. 1904-1909. Distinct from the fine M. Schäfer."
+  },
+  {
+   "@id": "hands.jsonld#kopf",
+   "name": "Kopf",
+   "sameAs": [],
+   "comment": ""
+  },
+  {
+   "@id": "hands.jsonld#roth",
+   "name": "Roth",
+   "sameAs": [],
+   "comment": "1908-1911."
+  },
+  {
+   "@id": "hands.jsonld#hohnrieder",
+   "name": "Hohnrieder",
+   "sameAs": [],
+   "comment": "1908-1912."
+  },
+  {
+   "@id": "hands.jsonld#kraemer",
+   "name": "Krämer",
+   "sameAs": [],
+   "comment": "Umlaut over the a. 1909-1912."
+  },
+  {
+   "@id": "hands.jsonld#kummer",
+   "name": "Kummer",
+   "sameAs": [],
+   "comment": "1907-1910."
+  },
+  {
+   "@id": "hands.jsonld#sph",
+   "name": "Sph.",
+   "sameAs": [],
+   "comment": "Abbreviation. Only 1913."
+  },
+  {
+   "@id": "hands.jsonld#herrmann",
+   "name": "J. Herrmann",
+   "sameAs": [],
+   "comment": "No roll number and no date."
+  },
+  {
+   "@id": "hands.jsonld#m-schaefer",
+   "name": "M. Schäfer",
+   "sameAs": [],
+   "comment": "Written along the roll rather than across. No date."
+  },
+  {
+   "@id": "hands.jsonld#guendner",
+   "name": "Gündner",
+   "sameAs": [],
+   "comment": "Jan-Mar 1909."
+  },
+  {
+   "@id": "hands.jsonld#schlegel",
+   "name": "Schlegel",
+   "sameAs": [],
+   "comment": "Maybe Pflugel? On rb625rv7300 it follows the words Hans u. Nov 1909 - Jan 1910."
+  },
+  {
+   "@id": "hands.jsonld#pencil-monogram",
+   "name": "M. W.?",
+   "sameAs": [],
+   "comment": "The only pencil hand among the early rolls. Oct 1907 - Apr 1908."
+  },
+  {
+   "@id": "hands.jsonld#mo",
+   "name": "Mo.",
+   "sameAs": [],
+   "comment": "May-Aug 1913."
+  }
+ ]
+}

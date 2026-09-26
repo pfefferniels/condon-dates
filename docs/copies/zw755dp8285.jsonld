@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/zw755dp8285.jsonld",
+ "title": "Condon Roll 183, WM 483",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/zw755dp8285.jsonld#copy",
+   "label": "Condon Roll 183",
+   "identifier": "Stanford Libraries CONDON ROLL 183",
+   "seeAlso": "https://purl.stanford.edu/zw755dp8285",
+   "exemplifies": {
+    "catalogueNumber": "WM 483",
+    "label": "Ripper, Alice: Faust-Walzer"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.188,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/zw755dp8285.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 27882.9,
+        "to": 28043.63
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 90,
+        "to": 103
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/zw755dp8285%2Fzw755dp8285_0001/3525,329600,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/zw755dp8285.jsonld#inscription-text",
+        "text": "5724"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/zw755dp8285%2Fzw755dp8285_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1924-07-05",
+     "@annotation": {
+      "@id": "copies/zw755dp8285.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/zw755dp8285.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/zw755dp8285.jsonld#inscription-text"
+         ],
+         "note": "four cursive digits at the roll edge, read as 5.7.24; not the catalogue number, since the printed leader label in region 3 reads 'WELTE-MIGNON No. 483 / Faust-Walzer / Fr. Liszt / Gespielt von [facsimile signature]'"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/zw755dp8285.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 1.785,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/zw755dp8285.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zw755dp8285.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/z/zw755dp8285_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.512,
+       "unit": "mm",
+       "slot": 1.9234,
+       "bridge": 0.5935,
+       "n": 352,
+       "@annotation": {
+        "@id": "copies/zw755dp8285.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zw755dp8285.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 352 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/zw755dp8285%2Fzw755dp8285_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.497,
+       "unit": "mm",
+       "strength": 0.3923,
+       "n": 20701,
+       "@annotation": {
+        "@id": "copies/zw755dp8285.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/zw755dp8285.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 20701 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.401 mm at 0.0886. The chain pitch is 5.054 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/z/zw755dp8285_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

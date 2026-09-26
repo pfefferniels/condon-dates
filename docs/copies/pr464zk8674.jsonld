@@ -1,0 +1,180 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/pr464zk8674.jsonld",
+ "title": "Condon Roll 464, WM 1567",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/pr464zk8674.jsonld#copy",
+   "label": "Condon Roll 464",
+   "identifier": "Stanford Libraries CONDON ROLL 464",
+   "seeAlso": "https://purl.stanford.edu/pr464zk8674",
+   "exemplifies": {
+    "catalogueNumber": "WM 1567",
+    "label": "Pintel, Jacques: Prélude D-Dur"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.2002,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/pr464zk8674.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 14141.77,
+        "to": 14302.51
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 89,
+        "to": 102
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/pr464zk8674%2Fpr464zk8674_0001/3464,167168,460,1900/full/270/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/pr464zk8674.jsonld#inscription-text",
+        "text": "1569.   18.   6.12"
+       }
+      }
+     ]
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/pr464zk8674%2Fpr464zk8674_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1912-06-18",
+     "@annotation": {
+      "@id": "copies/pr464zk8674.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/pr464zk8674.jsonld#date-belief",
+       "certainty": "true",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/pr464zk8674.jsonld#inscription-text"
+         ],
+         "note": "crop 1, lower panel upright; pencil, one line, no name. The line settles its own 6/8 question: the 8 of the day 18 is two closed bowls, while the month figure repeats the single-bowl open-topped form of the 6 in the number 1569. Year 12."
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/pr464zk8674.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.0083,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/pr464zk8674.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pr464zk8674.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/pr464zk8674_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 3.0169,
+       "unit": "mm",
+       "slot": 2.155,
+       "bridge": 0.8449,
+       "n": 146,
+       "@annotation": {
+        "@id": "copies/pr464zk8674.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pr464zk8674.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 146 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/pr464zk8674%2Fpr464zk8674_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.498,
+       "unit": "mm",
+       "strength": 0.397,
+       "n": 7257,
+       "@annotation": {
+        "@id": "copies/pr464zk8674.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/pr464zk8674.jsonld#advance-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 7257 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.627 mm at 0.053, 0.968 mm at 0.063. The chain pitch is 6.058 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/p/pr464zk8674_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

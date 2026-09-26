@@ -1,0 +1,210 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  {
+   "@base": "https://pfefferniels.github.io/condon-dates/"
+  }
+ ],
+ "@id": "copies/wj177bx9196.jsonld",
+ "title": "Condon Roll 271, WM 931",
+ "isPartOf": "copies.jsonld",
+ "copies": [
+  {
+   "@type": "RollCopy",
+   "@id": "copies/wj177bx9196.jsonld#copy",
+   "label": "Condon Roll 271",
+   "identifier": "Stanford Libraries CONDON ROLL 271",
+   "seeAlso": "https://purl.stanford.edu/wj177bx9196",
+   "exemplifies": {
+    "catalogueNumber": "WM 931",
+    "label": "Hambourg, Mark (1879-1960): Mazurka a-Moll : (posthume)"
+   },
+   "keeper": {
+    "name": "Stanford University Libraries",
+    "sameAs": []
+   },
+   "conditions": [],
+   "measurements": {
+    "scanResolution": {
+     "value": 300.25,
+     "unit": "px/in"
+    },
+    "holeSeparation": {
+     "value": 3.1933,
+     "unit": "mm"
+    }
+   },
+   "modifications": [
+    {
+     "@type": "Alteration",
+     "purpose": "control",
+     "produced": [
+      {
+       "@type": "Writing",
+       "@id": "copies/wj177bx9196.jsonld#inscription",
+       "technique": "handwriting",
+       "horizontal": {
+        "unit": "mm",
+        "from": 13926.14,
+        "to": 14086.87
+       },
+       "vertical": {
+        "unit": "track",
+        "from": 87,
+        "to": 100
+       },
+       "depiction": "https://stacks.stanford.edu/image/iiif/wj177bx9196%2Fwj177bx9196_0001/3410,164619,460,1900/full/90/default.jpg",
+       "transcription": {
+        "@type": "text",
+        "@id": "copies/wj177bx9196.jsonld#inscription-text",
+        "text": "[cursive name] 9 1111"
+       }
+      }
+     ],
+     "actor": {
+      "name": "Kopf",
+      "sameAs": [],
+      "@id": "hands.jsonld#kopf",
+      "@annotation": {
+       "@id": "copies/wj177bx9196.jsonld#hand-annotation",
+       "belief": {
+        "@type": "belief",
+        "@id": "copies/wj177bx9196.jsonld#hand-belief",
+        "certainty": "likely",
+        "reasons": [
+         {
+          "@type": "meaningComprehension",
+          "comprehends": [
+           "copies/wj177bx9196.jsonld#inscription-text"
+          ],
+          "note": "No name was read off it."
+         },
+         {
+          "@type": "inference",
+          "premises": [],
+          "used": [
+           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+          ],
+          "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
+         }
+        ]
+       }
+      }
+     }
+    }
+   ],
+   "scan": "https://stacks.stanford.edu/image/iiif/wj177bx9196%2Fwj177bx9196_0001/",
+   "readFrom": {
+    "kind": "scan"
+   },
+   "production": {
+    "company": {
+     "name": "M. Welte & Söhne",
+     "sameAs": []
+    },
+    "system": {
+     "@id": "https://w3id.org/reo/type/system/welte-t100"
+    },
+    "date": {
+     "within": "1911-11-09",
+     "@annotation": {
+      "@id": "copies/wj177bx9196.jsonld#date-annotation",
+      "belief": {
+       "@type": "belief",
+       "@id": "copies/wj177bx9196.jsonld#date-belief",
+       "certainty": "likely",
+       "reasons": [
+        {
+         "@type": "meaningComprehension",
+         "comprehends": [
+          "copies/wj177bx9196.jsonld#inscription-text"
+         ],
+         "note": "ink on red paper. A flourished cursive name (perhaps Hopf or Kopf, I cannot settle it) followed by a 9 and four plain 1-strokes; separators dropped, and 9 | 11 | 11 is the only split that gives a valid day and month"
+        }
+       ]
+      }
+     }
+    },
+    "perforator": {
+     "@type": "Perforator",
+     "@id": "copies/wj177bx9196.jsonld#perforator",
+     "condition": {
+      "conditionType": "setting",
+      "punchDiameter": {
+       "value": 2.0608,
+       "unit": "mm",
+       "@annotation": {
+        "@id": "copies/wj177bx9196.jsonld#punch-diameter-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/wj177bx9196.jsonld#punch-diameter-belief",
+         "certainty": "possible",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "AVG_HOLE_WIDTH of the roll's SUPRA analysis: the parser's box at its own grey level, averaged over every perforation it kept, so that a tear or a run of dust drags it. On the three copies measured both ways, an edge at half the contrast put the punch 0.10 to 0.15 mm wider (punch-225/README.md).",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/w/wj177bx9196_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "chainPitch": {
+       "value": 2.9751,
+       "unit": "mm",
+       "slot": 2.0695,
+       "bridge": 0.8978,
+       "n": 269,
+       "@annotation": {
+        "@id": "copies/wj177bx9196.jsonld#chain-pitch-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/wj177bx9196.jsonld#chain-pitch-belief",
+         "certainty": "likely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "Median over 269 pitches of held notes, measured on the IIIF image by punch-225/dates/pitch.py; slot and bridge are medians of their own.",
+           "used": [
+            "https://stacks.stanford.edu/image/iiif/wj177bx9196%2Fwj177bx9196_0001/",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/pitch.py"
+           ]
+          }
+         ]
+        }
+       }
+      },
+      "advance": {
+       "value": 0.902,
+       "unit": "mm",
+       "strength": 0.1285,
+       "n": 11063,
+       "@annotation": {
+        "@id": "copies/wj177bx9196.jsonld#advance-annotation",
+        "belief": {
+         "@type": "belief",
+         "@id": "copies/wj177bx9196.jsonld#advance-belief",
+         "certainty": "unlikely",
+         "reasons": [
+          {
+           "@type": "measurement",
+           "note": "The strongest period the 11063 slot lengths keep, by punch-225/advance.py (punch-225/dates/step.py); runners-up 0.388 mm at 0.035, 0.467 mm at 0.041, 0.625 mm at 0.0759. The chain pitch is 3.298 of it. Held likely when found at a strength of at least 0.35 with the pitch within 0.15 of a whole number of it, possible when one of the two holds, unlikely when neither does.",
+           "used": [
+            "https://raw.githubusercontent.com/pianoroll/piano-roll-analyses/main/analysis/w/wj177bx9196_analysis.txt.bz2",
+            "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}
