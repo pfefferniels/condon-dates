@@ -926,6 +926,13 @@
      "strength": 0.5073
     },
     {
+     "druid": "cw965qx3168",
+     "welte": 5661,
+     "date": "1923-11-21",
+     "advance": 0.52,
+     "strength": 0.5271
+    },
+    {
      "druid": "qp421cd7297",
      "welte": 2613,
      "date": "1923-11-22",
@@ -1295,13 +1302,6 @@
      "date": "1925-11-20",
      "advance": 0.52,
      "strength": 0.5451
-    },
-    {
-     "druid": "cw965qx3168",
-     "welte": 5661,
-     "date": "1925-11-21",
-     "advance": 0.52,
-     "strength": 0.5271
     },
     {
      "druid": "pp798fc0175",
