@@ -53,9 +53,9 @@
         "premises": [],
         "used": [
          "https://w3id.org/welte-premises/evidence/advance",
-         "https://github.com/pfefferniels/condon-dates/blob/15ec051edbc53311341bbea80fe818d04d7935b3/data/readings.json",
-         "https://github.com/pfefferniels/condon-dates/blob/15ec051edbc53311341bbea80fe818d04d7935b3/data/perforator.json",
-         "https://github.com/pfefferniels/condon-dates/blob/15ec051edbc53311341bbea80fe818d04d7935b3/premises.py",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/readings.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/perforator.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/premises.py",
          "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
         ],
         "note": "The advance resolves, at a strength of at least 0.25, at 0.85 to 1.15 mm on 11 copies dated to the day at high or medium confidence, from 1908-11-20 to 1909-12-16, and under 0.75 mm on 191, from 1910-05-21 to 1928-06-19; no dated copy falls on the wrong side. The perforator was re-set to the late advance by the day of the first late copy, Welte 1211 of 1910-05-21 (https://purl.stanford.edu/tj337qh7786), and the bound rests on that copy's date alone. The early advance resolves on the rolls of three hands only, and on none before 1908, so it is attested on fewer rolls than it was used on (punch-225/dates/README.md)."
@@ -101,12 +101,231 @@
         "premises": [],
         "used": [
          "https://w3id.org/welte-premises/evidence/advance",
-         "https://github.com/pfefferniels/condon-dates/blob/15ec051edbc53311341bbea80fe818d04d7935b3/data/readings.json",
-         "https://github.com/pfefferniels/condon-dates/blob/15ec051edbc53311341bbea80fe818d04d7935b3/data/perforator.json",
-         "https://github.com/pfefferniels/condon-dates/blob/15ec051edbc53311341bbea80fe818d04d7935b3/premises.py",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/readings.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/perforator.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/premises.py",
          "https://github.com/pfefferniels/welte225.org/blob/0f6bcfb85154f3d2c2928049b7518463fad1d1c9/punch-225/dates/step.py"
         ],
         "note": "The advance resolves, at a strength of at least 0.25, at 0.85 to 1.15 mm on 11 copies dated to the day at high or medium confidence, from 1908-11-20 to 1909-12-16, and under 0.75 mm on 191, from 1910-05-21 to 1928-06-19; no dated copy falls on the wrong side. The perforator was still at the early advance on the day of the last early copy, Welte 569 of 1909-12-16 (https://purl.stanford.edu/rb625rv7300), and the bound rests on that copy's date alone. The rolls before it that do not resolve are not late-advance rolls hiding: a comb at 0.5 mm is the easier of the two to see (punch-225/dates/README.md)."
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "@id": "premises#paper-red-cool",
+   "company": {
+    "name": "M. Welte & Söhne",
+    "sameAs": [
+     "https://d-nb.info/gnd/5125268-5"
+    ]
+   },
+   "system": {
+    "@id": "https://w3id.org/reo/type/system/welte-t100"
+   },
+   "paper": {
+    "@id": "papers#red-cool",
+    "name": "cool red paper"
+   },
+   "date": {
+    "after": "1911-08-24",
+    "@annotation": {
+     "@id": "premises#paper-red-cool-annotation",
+     "belief": {
+      "@type": "belief",
+      "@id": "premises#paper-red-cool-belief",
+      "certainty": "likely",
+      "reasons": [
+       {
+        "@type": "inference",
+        "premises": [],
+        "used": [
+         "https://w3id.org/welte-premises/evidence/paper",
+         "https://w3id.org/welte-premises/papers",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/readings.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/perforator.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/premises.py"
+        ],
+        "note": "148 rolls measure as cool red paper (a* at least 10 and b* under 15, corrected CIELAB), 112 of them dated to the day at high or medium confidence, from 1911-08-24 to 1928-06-19. All 148 whose chain pitch is measured were punched on the narrow perforator. The bound rests on the first dated copy, Welte 1697 of 1911-08-24 (https://purl.stanford.edu/vf252dc4872), alone; the 56 dated copies before it are all of other paper."
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "@id": "premises#paper-red-warm-bright",
+   "company": {
+    "name": "M. Welte & Söhne",
+    "sameAs": [
+     "https://d-nb.info/gnd/5125268-5"
+    ]
+   },
+   "system": {
+    "@id": "https://w3id.org/reo/type/system/welte-t100"
+   },
+   "paper": {
+    "@id": "papers#red-warm-bright",
+    "name": "bright warm red paper"
+   },
+   "date": {
+    "after": "1923-11-08",
+    "before": "1925-11-21",
+    "@annotation": {
+     "@id": "premises#paper-red-warm-bright-annotation",
+     "belief": {
+      "@type": "belief",
+      "@id": "premises#paper-red-warm-bright-belief",
+      "certainty": "likely",
+      "reasons": [
+       {
+        "@type": "inference",
+        "premises": [],
+        "used": [
+         "https://w3id.org/welte-premises/evidence/paper",
+         "https://w3id.org/welte-premises/papers",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/readings.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/perforator.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/premises.py"
+        ],
+        "note": "24 rolls measure as bright warm red paper (warm red with a* at least 32, corrected CIELAB), 16 of them dated to the day at high or medium confidence, from 1923-11-08 to 1925-11-21. All 24 whose chain pitch is measured were punched on the narrow perforator. The bounds rest on the first and the last dated copy, Welte 1213 of 1923-11-08 (https://purl.stanford.edu/vj076nk8220) and Welte 5661 of 1925-11-21 (https://purl.stanford.edu/cw965qx3168). Its dates lie closer together than chance allows: 1.4 years between the tenth and the ninetieth percentile, against 14.6 years for random groups of as many dated copies of warm red paper, of which 0 in 10000 were as close. Within a unit of the rule's edge lie 2 dated copies; that of 1922-05-14 lies outside the window and would widen it under a looser rule."
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "@id": "premises#paper-red-cool-light",
+   "company": {
+    "name": "M. Welte & Söhne",
+    "sameAs": [
+     "https://d-nb.info/gnd/5125268-5"
+    ]
+   },
+   "system": {
+    "@id": "https://w3id.org/reo/type/system/welte-t100"
+   },
+   "paper": {
+    "@id": "papers#red-cool-light",
+    "name": "light cool red paper"
+   },
+   "date": {
+    "after": "1921-10-04",
+    "before": "1922-02-23",
+    "@annotation": {
+     "@id": "premises#paper-red-cool-light-annotation",
+     "belief": {
+      "@type": "belief",
+      "@id": "premises#paper-red-cool-light-belief",
+      "certainty": "possible",
+      "reasons": [
+       {
+        "@type": "inference",
+        "premises": [],
+        "used": [
+         "https://w3id.org/welte-premises/evidence/paper",
+         "https://w3id.org/welte-premises/papers",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/readings.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/perforator.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/premises.py"
+        ],
+        "note": "11 rolls measure as light cool red paper (cool red with L* at least 38, corrected CIELAB), 5 of them dated to the day at high or medium confidence, from 1921-10-04 to 1922-02-23. All 11 whose chain pitch is measured were punched on the narrow perforator. The bounds rest on the first and the last dated copy, Welte 2540 of 1921-10-04 (https://purl.stanford.edu/tr243mz6407) and Welte 1773 of 1922-02-23 (https://purl.stanford.edu/ds710xd1794). Its dates lie closer together than chance allows: 0.3 years between the tenth and the ninetieth percentile, against 3.4 years for random groups of as many dated copies of cool red paper, of which 5 in 10000 were as close. Within a unit of the rule's edge lie 3 dated copies; those of 1913-09-20, 1922-10-09, 1923-03-15 lie outside the window and would widen it under a looser rule. The class is attested on 5 dated copies only."
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "@id": "premises#paper-buff",
+   "company": {
+    "name": "M. Welte & Söhne",
+    "sameAs": [
+     "https://d-nb.info/gnd/5125268-5"
+    ]
+   },
+   "system": {
+    "@id": "https://w3id.org/reo/type/system/welte-t100"
+   },
+   "paper": {
+    "@id": "papers#buff",
+    "name": "buff paper"
+   },
+   "date": {
+    "after": "1919-11-18",
+    "before": "1922-07-18",
+    "@annotation": {
+     "@id": "premises#paper-buff-annotation",
+     "belief": {
+      "@type": "belief",
+      "@id": "premises#paper-buff-belief",
+      "certainty": "possible",
+      "reasons": [
+       {
+        "@type": "inference",
+        "premises": [],
+        "used": [
+         "https://w3id.org/welte-premises/evidence/paper",
+         "https://w3id.org/welte-premises/papers",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/readings.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/perforator.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/premises.py"
+        ],
+        "note": "9 rolls measure as buff paper (a* from 3 to under 10, corrected CIELAB), 6 of them dated to the day at high or medium confidence, from 1919-11-18 to 1922-07-18. All 9 whose chain pitch is measured were punched on the narrow perforator. The bounds rest on the first and the last dated copy, Welte 384 of 1919-11-18 (https://purl.stanford.edu/xh403hj3866) and Welte 3056 of 1922-07-18 (https://purl.stanford.edu/rb861vm6094). The class is attested on 6 dated copies only."
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "@id": "premises#paper-green",
+   "company": {
+    "name": "M. Welte & Söhne",
+    "sameAs": [
+     "https://d-nb.info/gnd/5125268-5"
+    ]
+   },
+   "system": {
+    "@id": "https://w3id.org/reo/type/system/welte-t100"
+   },
+   "paper": {
+    "@id": "papers#green",
+    "name": "green paper"
+   },
+   "date": {
+    "after": "1918-01-08",
+    "before": "1922-11-20",
+    "@annotation": {
+     "@id": "premises#paper-green-annotation",
+     "belief": {
+      "@type": "belief",
+      "@id": "premises#paper-green-belief",
+      "certainty": "possible",
+      "reasons": [
+       {
+        "@type": "inference",
+        "premises": [],
+        "used": [
+         "https://w3id.org/welte-premises/evidence/paper",
+         "https://w3id.org/welte-premises/papers",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/readings.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/data/perforator.json",
+         "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/premises.py"
+        ],
+        "note": "37 rolls measure as green paper (a* under 3, corrected CIELAB), 4 of them dated to the day at high or medium confidence, from 1918-01-08 to 1922-11-20. 1 of them was punched on the wide perforator and 36 on the narrow one. The bounds rest on the first and the last dated copy, Welte 2261 of 1918-01-08 (https://purl.stanford.edu/dy191sv5188) and Welte 371 of 1922-11-20 (https://purl.stanford.edu/hc909pp9868). The class is attested on 4 dated copies only."
        }
       ]
      }

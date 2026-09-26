@@ -1,6 +1,14 @@
 {
  "@context": {
   "comment": "rdfs:comment",
+  "seeAlso": {
+   "@id": "rdfs:seeAlso",
+   "@type": "@id"
+  },
+  "broader": {
+   "@id": "http://www.w3.org/2004/02/skos/core#broader",
+   "@type": "@id"
+  },
   "productions": {
    "@id": "crm:P70_documents",
    "@context": {

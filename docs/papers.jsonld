@@ -1,0 +1,53 @@
+{
+ "@context": [
+  "https://w3id.org/reo/context.jsonld",
+  "https://w3id.org/welte-premises/context.jsonld",
+  {
+   "@base": "https://w3id.org/welte-premises/"
+  }
+ ],
+ "@id": "papers",
+ "title": "Classes of paper of the red Welte rolls, by their colour",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "comment": "Each class is defined by the colour of the blank paper as paper/colour.py measures it on a scan, corrected against the grey card scanned above the leader, in CIELAB with a D65 white. The rules were drawn on Stanford's scans of the Condon collection, all from one scanner.",
+ "@included": [
+  {
+   "@id": "papers#red-warm",
+   "name": "warm red paper",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+   "comment": "Paper whose corrected colour has a* at least 10 and b* at least 15."
+  },
+  {
+   "@id": "papers#red-warm-bright",
+   "name": "bright warm red paper",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+   "comment": "Paper whose corrected colour has warm red with a* at least 32.",
+   "broader": "papers#red-warm"
+  },
+  {
+   "@id": "papers#red-cool",
+   "name": "cool red paper",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+   "comment": "Paper whose corrected colour has a* at least 10 and b* under 15."
+  },
+  {
+   "@id": "papers#red-cool-light",
+   "name": "light cool red paper",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+   "comment": "Paper whose corrected colour has cool red with L* at least 38.",
+   "broader": "papers#red-cool"
+  },
+  {
+   "@id": "papers#buff",
+   "name": "buff paper",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+   "comment": "Paper whose corrected colour has a* from 3 to under 10."
+  },
+  {
+   "@id": "papers#green",
+   "name": "green paper",
+   "seeAlso": "https://github.com/pfefferniels/condon-dates/blob/ed9fd6950c8affde0d4b3c3cd18837b14ecd6ae2/paper/colour.py",
+   "comment": "Paper whose corrected colour has a* under 3."
+  }
+ ]
+}
