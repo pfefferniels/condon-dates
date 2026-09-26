@@ -238,7 +238,7 @@ function drawPerforator(measures, evidence, premises) {
   const advance = el("div", "timeline");
   section.append(
     el("h3", null, "The chain pitch against the date"),
-    el("p", "rule", "Each dot is a dated copy. Above 2.75 mm the copy was cut on the wide perforator, below it on the narrow one; the narrow one first appears in February 1914 and the wide one ran beside it until 1917 at least, so a narrow pitch bounds a copy from below and a wide one says little (perforator/README.md)."),
+    el("p", "rule", "Each dot is a dated copy. Above 2.75 mm the copy was cut on the wide perforator, below it on the narrow one; the narrow one first appears in February 1914, and the wide one is found after that only in March 1914 and once in 1922, so a narrow pitch bounds a copy from below and a wide one only makes it likely earlier (perforator/README.md)."),
     pitch,
     el("h3", null, "The advance against the date"),
     el("p", "rule", `Counted: copies ${evidence.rule}. The advance halved once, and both premises on it are drawn.`),

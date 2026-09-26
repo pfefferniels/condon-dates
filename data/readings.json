@@ -3134,15 +3134,15 @@
   "inscription": "2609. 19.9. 17.",
   "reading": "19.9.17",
   "date_iso": "1917-09-19",
-  "confidence": "medium",
+  "confidence": "low",
   "roll_number": "2609",
   "hand": null,
   "crop": {
    "box": "3222,481354,721,1900",
    "rot": 90
   },
-  "source": "batch-25.json",
-  "notes": "pencil, written along the roll; read from the upper panel rotated a quarter turn. Day and month plain: both 9s are a small closed bowl over a straight descender, no apex or crossbar, so 19.9 and not 14.4. The year pair is thinner and slightly rubbed, but the second figure carries a horizontal top bar, hence 17. The fourth figure of the number descends below the line, so 2609 and not 2600."
+  "source": "authoritative.json",
+  "notes": "the year is arguable: 17 as first read, or 11. The editor doubted the 17 on the scan on 2026-09-26. The year's two figures open with the same hook, and what was taken for the top bar of a 7 is a short stub. Set aside until the year is settled; the perforator does not decide it, the copy being wide at 2.98 mm with an advance of 0.496 mm, as copies of both 1911 and 1917 are. pencil, written along the roll; read from the upper panel rotated a quarter turn. Day and month plain: both 9s are a small closed bowl over a straight descender, no apex or crossbar, so 19.9 and not 14.4. The year pair is thinner and slightly rubbed, but the second figure carries a horizontal top bar, hence 17. The fourth figure of the number descends below the line, so 2609 and not 2600."
  },
  "pd354nj6106": {
   "inscription": "1454   24…9   [cursive signature]",

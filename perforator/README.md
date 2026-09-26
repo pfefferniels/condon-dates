@@ -54,7 +54,7 @@ So the two figures are real. What they are *not* is two consecutive
 states of one machine, which is what Hagmann's table says and what the
 dated copies, once there were enough of them, refuse.
 
-### Two perforators, side by side from 1914
+### The narrow perforator from 1914
 
 An earlier draft of this file dated the change to thirteen weeks in the
 spring of 1914. On the nineteen dated copies then available, no
@@ -79,7 +79,7 @@ neither is shrunken paper. Set against the punch dates:
 
 | year | 3.00 mm | 2.50 mm | | year | 3.00 mm | 2.50 mm |
 |---|---|---|---|---|---|---|
-| 1904 | 2 | 0 | | 1917 | 1 | 1 |
+| 1904 | 2 | 0 | | 1917 | 0 | 1 |
 | 1907 | 5 | 0 | | 1918 | 0 | 2 |
 | 1908 | 11 | 0 | | 1919 | 0 | 8 |
 | 1909 | 18 | 0 | | 1920 | 0 | 8 |
@@ -92,18 +92,18 @@ neither is shrunken paper. Set against the punch dates:
 | 1916 | 0 | 1 | | 1927 | 0 | 2 |
 | | | | | 1928 | 0 | 8 |
 
-Counted over the 258 copies dated at high or medium confidence whose pitch
+Counted over the 257 copies dated at high or medium confidence whose pitch
 is measured; the 2.50 mm column holds the 2.60 mm setting as well.
 
-The old pitch runs from August 1904 to April 1922 over 89 copies, the new
+The old pitch runs from August 1904 to April 1922 over 88 copies, the new
 one from February 1914 to June 1928 over 169. All 86 copies dated before
-24 February 1914 are old pitch. From then the two run together: seven
-narrow copies from 1914 to 1917, and two old-pitch copies after the first
-narrow one, W1254 of 6 March 1914 and W2609 of 19 September 1917, the
-second read at medium confidence. A third, W589 `yw484ky7093` of 4 June
-1917, is set aside: the editor reads its year as 17 or 12 (26 September
-2026). After 1917 the old pitch is found once. The first narrow copy and
-that last old one each stand alone:
+24 February 1914 are old pitch, and from then on the new pitch holds with
+two exceptions: W1254 of 6 March 1914, a fortnight after the first narrow
+copy, and W1275 of 25 April 1922. Two more old-pitch copies had stood in
+1917 and are set aside, the editor reading their years as 17 or 12 (W589
+`yw484ky7093`, 4 June) and as 17 or 11 (W2609 `pc364sy7115`, 19 September;
+both 26 September 2026). The first narrow copy and the last old one each
+stand alone:
 
 | Copy | Inscription | Punched | pitch | Teilung |
 |---|---|---|---|---|
@@ -114,7 +114,8 @@ The second is legible at a glance and its written number matches the
 catalogue. A roll cut on the 3.00 mm machine in April 1922 stands seven
 months later than the 3309 control cut on the 2.50 mm machine. The first
 is read at medium confidence; without it the new pitch begins with W1447
-`pz175wg5571` of 24 April 1914, signed Smith. Either way it begins after
+`pz175wg5571` of 24 April 1914, signed Smith, W1254 falls before it, and
+W1275 is the one old-pitch copy after the change. Either way it begins after
 roll 225's own copy of January 1914, which is 3.00 mm, and after W326 of
 26 January 1914. Three misreadings have now been found at this edge, all
 of narrow copies read early, which is where the next one would show.
@@ -157,30 +158,32 @@ reads 1450 against the catalogue's 1480 — the same mismatch that flagged
 
 So the pairs corroborate that a title could go to either machine, and
 they agree with the dated copies on when the narrow machine came. That
-the two ran together rests on three old-pitch copies, each alone: W1254
-of March 1914, a fortnight after the first narrow one, W2609 of September
-1917, read at medium confidence, and `jw822wm2644` of April 1922.
+the two ran together rests on two old-pitch copies, each alone: W1254 of
+March 1914, a fortnight after a first narrow copy that is itself read at
+medium confidence, and `jw822wm2644` of April 1922. The first could be
+the old machine's last weeks; only the second puts it years past the
+change.
 
 **What this does to the criterion.** The punch bounds a red Welte roll's
 date on one side only. No narrow copy is dated before 24 February 1914,
 so on the dated copies as they stand a narrow punch puts a copy after
-the turn of 1913 to 1914. A wide punch says much less, since the wide
-machine ran beside the narrow one until 1917 at least and was still in
-use in 1922. "rot-alt until about 1910, rot-neu after" is wrong twice: the
-new punch came some four years later than that, and the old one was not
-retired when it came.
+the turn of 1913 to 1914. A wide punch points before 1914 without bounding
+it, since the wide machine was still in use in March 1914 and once in
+April 1922. "rot-alt until about 1910, rot-neu after" is wrong in its date,
+the new punch coming some four years later than that, and the old machine
+was not wholly retired when it came.
 
 What survives on the wide side is a tendency, and it wants stating
-carefully. Before 1914 everything is old pitch, after 1917 all but one
-copy is new, and the years between are mixed. So a wide punch makes a
+carefully. Before 24 February 1914 everything is old pitch, and after
+March 1914 everything is new but one copy of 1922. So a wide punch makes a
 roll *likely* early without making it so. And the counts carry their own
 caveat: these are the copies Denis Condon happened to collect, so the
 year-by-year counts describe what survived in one collection as much as
 what Welte was running, and the data cannot separate the two.
 
 The twelve titles held at Stanford in both states now have a plain
-explanation. One matrix, two machines, and from 1914 the copies need
-not be years apart at all.
+explanation: one matrix, cut on the wide machine before 1914 and on the
+narrow one after.
 
 **The corpus pitch: two families, and a low shoulder.** Swept over 453
 rolls (`pitch.json`), the pitch has two hard gaps and one soft one.

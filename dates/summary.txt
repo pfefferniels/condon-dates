@@ -1,5 +1,5 @@
 Punch dates read off the scans of Stanford's red Welte rolls.
-456 rolls searched, 258 with a date read, 243 of those measured by the parser.
+456 rolls searched, 257 with a date read, 242 of those measured by the parser.
 
 Dated copies against their punch, as AVG_HOLE_WIDTH of the SUPRA index:
 the same quantity whose bimodality ../perforator/corpus.txt reports, so the two
@@ -91,7 +91,6 @@ width measured at half contrast in welte225.org's punch-225/punch.txt.
   1915-05-28    545  1.716 mm  zc614qh7060  28.5.15.
   1916-11-14    767  1.738 mm  vq976gr5492  14.11.16.
   1917-04-27   2948  1.751 mm  fb100cb2366  27. 4. 17.
-  1917-09-19   2609  2.207 mm  pc364sy7115  2609. 19.9. 17.
   1918-01-08   2261  1.716 mm  dy191sv5188  8. 1. 18.
   1918-08-20   1398  1.759 mm  qp506dy4541  20. 8. 18
   1919-08-23   1765  1.841 mm  jh696my0069  23. 8. 19
@@ -265,7 +264,7 @@ Median punch by year of punching.
   1914       7      1.831 mm          43 %
   1915       1      1.716 mm           0 %
   1916       1      1.738 mm           0 %
-  1917       2      1.979 mm          50 %
+  1917       1      1.751 mm           0 %
   1918       2      1.738 mm           0 %
   1919       8      1.834 mm           0 %
   1920       8      1.710 mm           0 %
@@ -283,16 +282,16 @@ The change in the punch, as the dated copies bound it.
   latest wide punch    1922-04-25  Welte 1275  2.428 mm  jw822wm2644
   earliest narrow      1914-02-24  Welte 1247  1.757 mm  xm993qd2681
 
-  70 dated copies with a wide punch, 164 with a narrow one.
-  Overlapping: 3 wide copies dated after the earliest narrow one.
+  69 dated copies with a wide punch, 164 with a narrow one.
+  Overlapping: 2 wide copies dated after the earliest narrow one.
 
 The two quantities that separate the states of the machine.
 
-  pitch 2.75 mm and over        89 copies   1904-08-08 to 1922-04-25
+  pitch 2.75 mm and over        88 copies   1904-08-08 to 1922-04-25
   pitch under 2.75 mm          169 copies   1914-02-24 to 1928-06-19
 
   advance 0.75 mm and over      11 copies   1908-11-20 to 1909-12-16
-  advance under 0.75 mm        192 copies   1910-02-01 to 1928-06-19
+  advance under 0.75 mm        191 copies   1910-02-01 to 1928-06-19
 
   The advance changed once, between 1909-12-16 and 1910-02-01.
   Copies with the long advance dated after that: none.
@@ -337,6 +336,7 @@ Dates read but not used, one figure or the grouping being arguable.
   1914          378  hs635sh6729  7?14
   1914         1480  bf644yy6536  1450.  11.[2 or 3].14.
   1917-06-04    589  yw484ky7093  588. 4. 6. 17.
+  1917-09-19   2609  pc364sy7115  2609. 19.9. 17.
   1921         3162  bd915bs0646  30821
   1921-11-08   2998  fk269mx8427  8. 11. 21
   1922-02-21   1212  wq296df7434  21222
