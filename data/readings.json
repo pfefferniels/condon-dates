@@ -5876,18 +5876,18 @@
   "notes": "Ink, written along the roll so the crop has to be turned a quarter turn; both panels carry it and both read once turned. Roll number 588, then the three date groups separated by dots. The 4 and the 6 are plain. The year is a plain 1 followed by a crossed 7, the bar across the stem visible under magnification, so 17 and not 11. No name in this crop."
  },
  "yx139bt6626": {
-  "inscription": "25614",
-  "reading": "25614",
-  "date_iso": "1914-06-25",
-  "confidence": "medium",
+  "inscription": "25624",
+  "reading": "25624",
+  "date_iso": "1924-06-25",
+  "confidence": "high",
   "roll_number": null,
   "hand": null,
   "crop": {
    "box": "3511,232175,460,1900",
    "rot": 90
   },
-  "source": "batch-04.json",
-  "notes": "pencil, separators dropped, read as 25.6.14; the tops of the figures sit right on the edge of the crop and the last two are less plain than 256"
+  "source": "authoritative.json",
+  "notes": "read by the editor on the scan on 2026-09-26: the year is 24. The reader gave 25614, noting that the last two figures were less plain than the rest. The question was raised by the paper, a redder warm red otherwise found only on copies punched between November 1923 and November 1925."
  },
  "yx536mq2915": {
   "inscription": "291122",
