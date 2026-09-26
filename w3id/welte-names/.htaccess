@@ -1,0 +1,10 @@
+# Authority records for the people and things behind Welte rolls, as linked data: at
+# present the hands that signed the red rolls of the Condon collection, each known by a
+# signature. hands#fritz is one of them. The records are served from GitHub Pages; moving
+# them, for instance to a repository of their own, means changing this file only.
+
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule ^hands$ https://pfefferniels.github.io/condon-dates/names/hands.jsonld [R=302,L]
+RewriteRule ^.*$ https://pfefferniels.github.io/condon-dates/ [R=302,L]

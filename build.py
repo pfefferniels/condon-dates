@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Regenerate docs/data/rolls.json and the linked data from the catalogue, the readings,
-the signature clustering and the perforator measurements.
+"""Regenerate docs/data/rolls.json and the premises from the catalogue, the readings, the
+signature clustering and the perforator measurements.
 
 All four live in this repo, so a clone rebuilds the site on its own. data/readings.json
 is the record of what was read off each roll and is corrected by hand here. Refresh
 data/catalogue.json and data/perforator.json with sync.py when punch-225 re-indexes or
-re-measures the rolls. linked.py writes the linked data.
+re-measures the rolls. premises.py writes the premises the measurements allow, names.py
+the hands as authority records.
 """
 import html
 import json
@@ -14,7 +15,8 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
-import linked
+import names
+import premises
 
 HERE = Path(__file__).parent
 CATALOGUE = HERE / "data" / "catalogue.json"
@@ -102,9 +104,10 @@ def main():
     print(f"{len(controllers)} controllers, {len(singles)} single hands")
     print(f"wrote {TARGET.relative_to(HERE)} ({TARGET.stat().st_size // 1024} kB)")
 
-    copies = linked.build(DOCS, rolls, readings, hands, perforator, today)
-    print(f"wrote {len(copies)} copies to docs/copies/, the register docs/copies.jsonld "
-          f"({(DOCS / 'copies.jsonld').stat().st_size // 1024} kB) and docs/hands.jsonld")
+    stated = premises.build(DOCS, rolls, readings, perforator, today)
+    named = names.build(DOCS, hands)
+    print(f"wrote {len(stated)} premises to docs/premises.jsonld with their evidence in docs/evidence/, "
+          f"and {len(named)} hands to docs/names/hands.jsonld")
 
 
 if __name__ == "__main__":

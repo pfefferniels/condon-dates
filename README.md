@@ -22,56 +22,42 @@ punch-225 with `sync.py`, which also records the commit of welte225.org they cam
 scripts that take the measurements stay there. `hands.json` holds the signature clusters.
 `build.py` turns the four into `docs/data/rolls.json` and the linked data below.
 
-## Linked data
+## Premises
 
-Every roll is also published in the format of
-[linked-rolls](https://github.com/pfefferniels/linked-rolls), as the `RollCopy` an edition
-lists among its copies. It holds only what this repo knows about the copy: who keeps it
-and where its scan is, which roll it is a copy of, the inscription on its paper and the
-hand that wrote it, when it was punched, and how the perforator was set. A value that rests
-on a judgement carries the belief it rests on, with its certainty and reasons, as
-linked-rolls annotates any statement, so an edition can take the copy's date or setting
-as a premise instead of restating it.
+The measurements are published not roll by roll but as premises for dating a roll: what
+measuring all of them allows an edition to conclude about any one. An edition measures
+its own copy and states that measurement itself, and names a premise from here in the
+inference that dates the copy, so it stays whole on its own and each document reasons
+about what it owns. The premises are in the format of
+[linked-rolls](https://github.com/pfefferniels/linked-rolls): each is a production that
+stands for many copies, "the red rolls punched with an advance of 1.0 mm", and its date
+carries the belief an edition names, with the dated copies, the data and the scripts it
+rests on.
 
 | File | IRI | Content |
 |---|---|---|
-| `docs/copies/<druid>.jsonld` | `copies/<druid>` | one copy, the document to cite |
-| `docs/copies.jsonld` | `copies` | the register, every copy in one document |
-| `docs/hands.jsonld` | `hands` | the hands of `hands.json`, which the copies name as actors |
-| `docs/context.jsonld` | `context.jsonld` | the terms linked-rolls does not have yet |
+| `docs/premises.jsonld` | `https://w3id.org/welte-premises/premises` | the premises |
+| `docs/evidence/<name>.json` | `https://w3id.org/welte-premises/evidence/<name>` | the copies a premise rests on |
+| `docs/context.jsonld` | `https://w3id.org/welte-premises/context.jsonld` | the terms linked-rolls does not have yet |
+| `docs/names/hands.jsonld` | `https://w3id.org/welte-names/hands` | the hands, as authority records |
 
-The IRIs stand on `https://w3id.org/condon-rolls/`, which `w3id/condon-rolls/.htaccess`
-redirects to the files on GitHub Pages, so the site can move without a citation breaking.
-They are fragments of the document that states them, and are built from the druid and the
-role of the node, so a rebuild keeps them. `copies/mf320jq4997#copy` is Condon Roll 47;
-`#inscription-text` is the transcription of what is written or stamped at its end;
-`#transcription-belief`, `#date-belief`, `#hand-belief`, `#punch-diameter-belief`,
-`#chain-pitch-belief` and `#advance-belief` are the beliefs an edition can take as
-premises. Every record validates against the `RollCopy` of the linked-rolls schema, and
-every term in it expands. The data are published under CC BY 4.0.
+Two premises stand so far, both on the advance, the one quantity of the perforator that
+punch-225 found to date a roll; the punch and the pitch say which machine cut it, not when.
+`premises#advance-1mm-belief` holds that the 1.0 mm advance was not used after the day of
+the first dated copy with the late one, and `premises#advance-half-mm-belief` that the
+0.5 mm advance was not used before the day of the last dated copy with the early one. The
+counts, the bounds and the copies each bound rests on are worked out from
+`data/readings.json` and `data/perforator.json` on every build, so a corrected reading
+moves the premise and not its IRI. An edition should record the commit of the premise it
+cites. The premises link `premises.py` at the commit the checkout stands at, so build after
+committing a change to it.
 
-How a certainty is chosen is set at the top of `linked.py` and repeated in the reasons of
-each belief. The reading of the inscription and the date read out of it are two beliefs:
+The hands are not premises. An edition names one as the actor of the act that wrote an
+inscription, the way it names a pianist by the GND, and takes nothing from it to date a
+copy: the hand and the date come off the same inscription. They stand under a prefix of
+their own, `welte-names`, since an identity should outlast the evidence that moves a
+premise, and are written from here until they move.
 
-- **The transcription** carries the reader's grade, which is a grade of the figures: true
-  where every figure is plain, likely where one is arguable, possible where they could give
-  another date. A reading that gives no date was not graded and is held possible.
-- **The date** takes the transcription as its premise and is held no surer than it. Where
-  the paper runs the figures together, as in `24323` or St2's `14. 114.`, the figures are
-  read but their grouping into day, month and year is inferred, and the date is held no
-  surer than likely.
-- **A hand** is likely where it is clustered with other rolls by letterform, possible where
-  it is only read.
-- **The chain pitch** is likely; **the parser's hole width** only possible, since it moves
-  with the grey level an edge is put at. **An advance** is held as `settings225.py` holds it
-  for the edition of 225.
-
-What it does not do yet:
-
-- Neither `w3id.org/condon-rolls` nor `w3id.org/reo`, whose context every document names,
-  is registered. `w3id/condon-rolls/` is the folder to submit to
-  [perma-id/w3id.org](https://github.com/perma-id/w3id.org).
-- An inscription is placed by the crop it was read from, not by its ink, and on the scanner's
-  track numbering rather than the tracker bar's, since no hole was read here to fix it.
-- An act has one actor in linked-rolls, so a countersignature is named only in a note.
-- Colour is not measured, and linked-rolls has no term for it.
+The data are published under CC BY 4.0. Neither prefix, nor `w3id.org/reo`, whose context
+the documents name, is registered yet: `w3id/welte-premises/` and `w3id/welte-names/` are
+the folders to submit to [perma-id/w3id.org](https://github.com/perma-id/w3id.org).

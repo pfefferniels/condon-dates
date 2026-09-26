@@ -1,0 +1,13 @@
+# Premises for dating Welte rolls: what measuring the rolls of a collection allows an
+# edition to conclude about one of them, as linked data. Each IRI names a JSON-LD
+# document without its extension, and its fragments name what the document states:
+# premises#advance-1mm-belief is the belief that the 1.0 mm advance was not used after a
+# day. The documents are served from GitHub Pages; moving them means changing this file.
+
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule ^premises$ https://pfefferniels.github.io/condon-dates/premises.jsonld [R=302,L]
+RewriteRule ^evidence/([a-z0-9-]+)$ https://pfefferniels.github.io/condon-dates/evidence/$1.json [R=302,L]
+RewriteRule ^context\.jsonld$ https://pfefferniels.github.io/condon-dates/context.jsonld [R=302,L]
+RewriteRule ^.*$ https://pfefferniels.github.io/condon-dates/ [R=302,L]
