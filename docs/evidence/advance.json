@@ -93,6 +93,13 @@
    "premise": "advance-half-mm",
    "copies": [
     {
+     "druid": "vj052cw2158",
+     "welte": 1534,
+     "date": "1910-02-01",
+     "advance": 0.499,
+     "strength": 0.5582
+    },
+    {
      "druid": "tj337qh7786",
      "welte": 1211,
      "date": "1910-05-21",
@@ -336,13 +343,6 @@
      "date": "1915-05-28",
      "advance": 0.518,
      "strength": 0.4224
-    },
-    {
-     "druid": "vj052cw2158",
-     "welte": 1534,
-     "date": "1916-02-01",
-     "advance": 0.499,
-     "strength": 0.5582
     },
     {
      "druid": "vq976gr5492",
