@@ -52,7 +52,7 @@ rests on.
 | `docs/context.jsonld` | `https://w3id.org/welte-premises/context.jsonld` | the terms linked-rolls does not have yet |
 | `docs/hands.jsonld` | `https://w3id.org/welte-hands/<id>` | the hands, as authority records |
 
-Seven premises stand. Two are on the advance, the one quantity of the perforator that
+Eight premises stand. Two are on the advance, the one quantity of the perforator that
 punch-225 found to date a roll; the punch and the pitch say which machine cut it, not when.
 `premises#advance-1mm-belief` holds that the 1.0 mm advance was not used after the day of
 the first dated copy with the late one, and `premises#advance-half-mm-belief` that the
@@ -66,15 +66,19 @@ warm red and a light cool red, are dated closer together than random groups of t
 allow, and are taken for stocks or batches of paper. Each premise states the window its
 dated copies span: cool red not before 24 August 1911, bright warm red between November
 1923 and November 1925, light cool red between October 1921 and February 1922, buff between
-November 1919 and July 1922, green between January 1918 and November 1922. A class attested
+November 1919 and July 1922, green between January 1918 and November 1922. Ruled paper, printed
+with a line along each track, is a class of its own, found by `paper/ruling.py`: 30 rolls,
+all warm red and all cut on the wide perforator, and the premise holds that it was not used
+after the last of them, 1 February 1910. A class attested
 on few dated copies is held possible, and the reasons of every paper premise say how many
 copies it rests on, whether the dates are closer than chance, and which dated copies lie
 just outside the rule's edge, so that a reader sees what the rule decides. A dated copy of
-a class that falls outside its window is worth reading again: Welte 292 was, and was
-misread.
+a class that falls outside its window is worth reading again: Welte 292 and Welte 1534
+were, and both were misread, the one as 1914 for 1924, the other as 1916 for 1910.
 
 The counts, the bounds and the copies each bound rests on are worked out from
-`data/readings.json`, `data/perforator.json` and `paper/colour.json` on every build, so a
+`data/readings.json`, `data/perforator.json`, `paper/colour.json` and `paper/ruling.json` on
+every build, so a
 corrected reading moves the premise and not its IRI. An edition should record the commit of the premise it
 cites. The premises link `premises.py` at the commit the checkout stands at, so build after
 committing a change to it.

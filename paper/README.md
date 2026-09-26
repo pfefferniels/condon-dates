@@ -16,9 +16,10 @@ within a roll the corrected colour varies by less than one unit of L*, a* or b*.
 
 `ruling.py` looks for the fine dark lines some red paper is printed with, one along each
 track, as the periodic component of the paper's profile across the roll at the track pitch,
-and compares their phase with that of the holes. On St1, punched in 1909, the lines lie on
-the track centres at 3.198 mm; the rolls of 1918 to 1925 checked so far have none. Its run
-over the corpus, `ruling.json`, is not in yet, and nothing is concluded from it.
+and compares their phase with that of the holes. The strengths fall in two groups with
+nothing between 2 and 25: 30 rolls are ruled, 421 are not, 3 are uncertain. Every ruled roll
+is warm red, was cut on the wide perforator, and has its lines on the track centres at
+3.198 mm; its dated copies run from January 1907 to February 1910. Writes `ruling.json`.
 
     python3 paper/colour.py [druid ...]
     python3 paper/ruling.py [druid ...]

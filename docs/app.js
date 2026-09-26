@@ -180,7 +180,10 @@ function drawPaper(measures, evidence, premises) {
   measures.papers.forEach((paper) => {
     const card = el("div", `paper-class${paper.broader ? " narrower" : ""}`);
     const swatch = el("span", "swatch");
-    swatch.style.background = rgb(paper.rgb);
+    /* A ruled class shows its lines on the swatch: they are what defines it. */
+    swatch.style.background = paper.ruled
+      ? `repeating-linear-gradient(90deg, rgba(17, 24, 39, 0.6) 0 1px, transparent 1px 5px), ${rgb(paper.rgb)}`
+      : rgb(paper.rgb);
     swatch.title = `median colour of its ${paper.count} rolls`;
     const head = el("div", "head");
     head.append(swatch, el("span", "label", paper.name), el("span", "tally", `${paper.count} rolls`));
@@ -205,8 +208,10 @@ function drawPaper(measures, evidence, premises) {
     el("h3", null, "The dated copies of each class"),
     el("p", "rule", `Counted: copies ${evidence.rule}. Where a class is a premise, its bounds are drawn.`),
     byDate,
-    tableView(`All ${rolls.length} rolls as a table`, ["Welte", "Punched", "Paper", "L* / a* / b*"],
-      rolls.map(([druid, r]) => ({ druid, cells: [r.no, r.date, name[r.batch || r.paper], r.lab.join(" / ")] }))));
+    tableView(`All ${rolls.length} rolls as a table`, ["Welte", "Punched", "Paper", "Ruled", "L* / a* / b*"],
+      rolls.map(([druid, r]) => ({
+        druid, cells: [r.no, r.date, name[r.batch || r.paper], r.ruled ? "ruled" : "", r.lab.join(" / ")],
+      }))));
 
   const points = rolls.map(([druid, r]) => ({ druid, x: r.lab[1], y: r.lab[2], ...r }));
   responsive(map, () => scatter(map, {
@@ -216,7 +221,7 @@ function drawPaper(measures, evidence, premises) {
     guides: [{ axis: "x", at: 3, note: "a* 3" }, { axis: "x", at: 10, note: "a* 10" }, { axis: "y", at: 15, note: "b* 15" }],
     fill: (p) => rgb(p.rgb),
     tipOf: (p) => [lab(p.lab), `Welte ${p.no}${p.date ? ` · ${day(p.date)}` : ", not dated"}`,
-      `${name[p.batch || p.paper]} · opens at Stanford`],
+      `${name[p.batch || p.paper]}${p.ruled ? ", ruled" : ""} · opens at Stanford`],
   }));
   responsive(byDate, () => timeline(byDate, {
     groups: evidence.groups, premises,

@@ -76,9 +76,15 @@ PAPERS = [
     {"id": "green", "name": "green paper", "rule": "a* under 3", "test": lambda l, a, b: a < 3},
 ]
 
+# Ruling is read apart from the colour: paper/ruling.py calls a roll ruled where lines
+# printed along it, one a track, stand out of its profile at the track pitch.
+RULED = {"id": "ruled", "name": "ruled paper", "rule": "printed with a line along each track",
+         "definition": "Paper printed with a fine dark line along each track, on the track centres, which "
+                       "paper/ruling.py finds as the periodic component of the paper's profile at the track pitch."}
+
 # What is stated of a class, and how firmly: a bound held likely rests on many dated
 # copies, one held possible on a handful.
-PAPER_PREMISES = [("red-cool", "after", "likely"), ("red-warm-bright", "between", "likely"),
+PAPER_PREMISES = [("ruled", "before", "likely"), ("red-cool", "after", "likely"), ("red-warm-bright", "between", "likely"),
                   ("red-cool-light", "between", "possible"), ("buff", "between", "possible"),
                   ("green", "between", "possible")]
 
@@ -164,7 +170,7 @@ def spread(dates):
     return float(np.subtract(*np.percentile(years, [90, 10])))
 
 
-def paper_evidence(catalogue, readings, colours, measured):
+def paper_evidence(catalogue, readings, colours, measured, rulings):
     """Each class of paper with the copies measured as of it and those of them dated to the day."""
     welte = {roll["druid"]: roll["welte_number"] for roll in catalogue}
     lab = {druid: e["corrected"]["lab"] for druid, e in colours.items() if e.get("corrected")}
@@ -181,6 +187,16 @@ def paper_evidence(catalogue, readings, colours, measured):
         edge = [dated[d] for d in lab if d in dated and paper.get("edge", lambda *_: False)(*lab[d])]
         classes[paper["id"]] = {**paper, "members": len(members), "copies": copies, "machines": machines,
                                 "edge": sorted(edge)}
+    kinds = [p for p in PAPERS if not p.get("broader")]
+    members = [druid for druid, r in rulings.items() if r["call"] == "ruled" and druid in lab]
+    classes["ruled"] = {
+        **RULED, "members": len(members), "edge": [],
+        "copies": sorted(({"druid": d, "welte": welte[d], "date": dated[d], "lab": lab[d], "rgb": rgb[d]}
+                          for d in members if d in dated), key=lambda row: row["date"]),
+        "machines": Counter("wide" if pitch[d] >= WIDE else "narrow" for d in members if pitch.get(d)),
+        "kinds": Counter(next(k["name"] for k in kinds if k["test"](*lab[d])) for d in members),
+        "uncertain": sum(1 for r in rulings.values() if r["call"] == "uncertain"),
+    }
     return classes, dated
 
 
@@ -193,19 +209,32 @@ def chance(narrow, broad):
     return observed, float(np.median(draws)), int((draws <= observed).sum())
 
 
-def paper_note(paper, bound, classes, dated):
+def paper_note(paper, bound, classes, dated, readings):
     copies, first, last = paper["copies"], paper["copies"][0], paper["copies"][-1]
-    note = [f"{paper['members']} rolls measure as {paper['name']} ({paper['rule']}, corrected CIELAB), "
+    how = paper["rule"] if paper["id"] == "ruled" else f"{paper['rule']}, corrected CIELAB"
+    note = [f"{paper['members']} rolls measure as {paper['name']} ({how}), "
             f"{len(copies)} of them dated to the day at high or medium confidence, from {first['date']} "
             f"to {last['date']}."]
     wide, narrow = paper["machines"]["wide"], paper["machines"]["narrow"]
     note.append(f"All {narrow} whose chain pitch is measured were punched on the narrow perforator." if not wide
+                else f"All {wide} whose chain pitch is measured were punched on the wide perforator." if not narrow
                 else f"{wide} of them {'was' if wide == 1 else 'were'} punched on the wide perforator and "
                      f"{narrow} on the narrow one.")
+    if paper.get("kinds"):
+        note.append(f"All {paper['members']} are {next(iter(paper['kinds']))}." if len(paper["kinds"]) == 1 else
+                    "They are " + ", ".join(f"{n} {k}" for k, n in paper["kinds"].items()) + ".")
+    if paper.get("uncertain"):
+        note.append(f"{paper['uncertain']} rolls whose ruling is uncertain are left out.")
     if bound == "after":
         before = sum(1 for d in dated.values() if d < first["date"])
         note.append(f"The bound rests on the first dated copy, {copy_of(first)}, alone; the {before} "
                     "dated copies before it are all of other paper.")
+    elif bound == "before":
+        after = sum(1 for d in dated.values() if d > last["date"])
+        before = sum(1 for d in dated.values() if d < first["date"])
+        note.append(f"The bound rests on the last dated copy, {copy_of(last)}, alone; the {after} dated copies "
+                    f"after it are all of other paper. The first dated copy is {copy_of(first)}, and only {before} "
+                    "dated copies stand before it, too few to bound the class from below.")
     else:
         note.append(f"The bounds rest on the first and the last dated copy, {copy_of(first)} and {copy_of(last)}.")
     if paper.get("broader"):
@@ -219,24 +248,28 @@ def paper_note(paper, bound, classes, dated):
                     + ((f"; that of {outside[0]} lies" if len(outside) == 1 else f"; those of {', '.join(outside)} lie")
                        + " outside the window and would widen it under a looser rule." if outside
                        else ", all inside the window."))
+    bounding = {"after": [first], "before": [last]}.get(bound, [first, last])
+    reread = [row for row in bounding if readings[row["druid"]].get("source") == "authoritative.json"]
+    for row in reread:
+        note.append(f"The date of Welte {row['welte']} is the editor's reading on the scan (data/readings.json).")
     if len(copies) < 10:
         note.append(f"The class is attested on {len(copies)} dated copies only.")
     return " ".join(note)
 
 
-def paper_premises(classes, dated, used):
+def paper_premises(classes, dated, readings, used):
     productions = []
     for pid, bound, certainty in PAPER_PREMISES:
         paper = classes[pid]
         first, last = paper["copies"][0]["date"], paper["copies"][-1]["date"]
-        span = {"after": first} if bound == "after" else {"after": first, "before": last}
+        span = {"after": {"after": first}, "before": {"before": last}}.get(bound, {"after": first, "before": last})
         name = f"paper-{pid}"
         productions.append({
             "@id": f"premises#{name}", "company": WELTE, "system": {"@id": T100},
             "paper": {"@id": f"papers#{pid}", "name": paper["name"]},
             "date": {**span, **believed(name, certainty, [{
                 "@type": "inference", "premises": [], "used": used,
-                "note": paper_note(paper, bound, classes, dated)}])},
+                "note": paper_note(paper, bound, classes, dated, readings)}])},
         })
     return productions
 
@@ -248,10 +281,11 @@ def papers_document(classes, method):
         "title": "Classes of paper of the red Welte rolls, by their colour",
         "license": LICENSE,
         "comment": "Each class is defined by the colour of the blank paper as paper/colour.py measures it on a "
-                   "scan, corrected against the grey card scanned above the leader, in CIELAB with a D65 white. "
-                   "The rules were drawn on Stanford's scans of the Condon collection, all from one scanner.",
-        "@included": [{"@id": f"papers#{p['id']}", "name": p["name"], "seeAlso": method,
-                       "comment": f"Paper whose corrected colour has {p['rule']}.",
+                   "scan, corrected against the grey card scanned above the leader, in CIELAB with a D65 white, "
+                   "or by the lines printed on it, as paper/ruling.py finds them. The rules were drawn on "
+                   "Stanford's scans of the Condon collection, all from one scanner.",
+        "@included": [{"@id": f"papers#{p['id']}", "name": p["name"], "seeAlso": method[p["id"] == "ruled"],
+                       "comment": p.get("definition") or f"Paper whose corrected colour has {p['rule']}.",
                        **({"broader": f"papers#{p['broader']}"} if p.get("broader") else {})}
                       for p in classes.values()],
     }
@@ -286,7 +320,7 @@ def write(target, document, indent=1):
     target.write_text(json.dumps(document, ensure_ascii=False, indent=indent) + "\n")
 
 
-def build(docs, catalogue, readings, perforator, colours, published):
+def build(docs, catalogue, readings, perforator, colours, rulings, published):
     """Write the premises, the paper classes, their evidence and the context into docs/."""
     here = Path(__file__).parent
     condon = CONDON_DATES.format(commit=head(here))
@@ -306,7 +340,7 @@ def build(docs, catalogue, readings, perforator, colours, published):
             condon + "premises.py", PUNCH_225.format(commit=perforator["commit"] or "main") + "dates/step.py"]
     productions = advance_premises(evidence, used)
 
-    classes, dated = paper_evidence(catalogue, readings, colours, perforator["rolls"])
+    classes, dated = paper_evidence(catalogue, readings, colours, perforator["rolls"], rulings)
     premised = dict((pid, f"paper-{pid}") for pid, _, _ in PAPER_PREMISES)
     write(docs / "evidence" / "paper.json", {
         "rule": f"dated to the day at confidence {' or '.join(DATED)}; colour as paper/colour.py measures it, "
@@ -316,9 +350,10 @@ def build(docs, catalogue, readings, perforator, colours, published):
         "groups": [{"id": pid, "label": f"{c['name']}, {c['rule']}", "premise": premised.get(pid),
                     "copies": c["copies"]} for pid, c in classes.items()],
     })
-    write(docs / "papers.jsonld", papers_document(classes, condon + "paper/colour.py"))
-    productions += paper_premises(classes, dated, [
+    write(docs / "papers.jsonld", papers_document(classes, [condon + "paper/colour.py", condon + "paper/ruling.py"]))
+    productions += paper_premises(classes, dated, readings, [
         BASE + "evidence/paper", BASE + "papers", condon + "paper/colour.json", condon + "paper/colour.py",
+        condon + "paper/ruling.json", condon + "paper/ruling.py",
         condon + "data/readings.json", condon + "data/perforator.json", condon + "premises.py"])
     write(docs / "premises.jsonld", {
         "@context": contexts(),

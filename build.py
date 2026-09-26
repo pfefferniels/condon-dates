@@ -26,6 +26,7 @@ READINGS = HERE / "data" / "readings.json"
 HANDS = HERE / "hands.json"
 PERFORATOR = HERE / "data" / "perforator.json"
 COLOURS = HERE / "paper" / "colour.json"
+RULINGS = HERE / "paper" / "ruling.json"
 DOCS = HERE / "docs"
 TARGET = DOCS / "data" / "rolls.json"
 MEASURES = DOCS / "data" / "measures.json"
@@ -76,7 +77,7 @@ def registry(hands, by_druid):
     return controllers, singles
 
 
-def measures(rolls, readings, perforator, colours):
+def measures(rolls, readings, perforator, colours, rulings):
     """Every scanned roll's paper and perforator, with its date where it is held true or likely.
 
     The page shows the corpus from it: the colour of every roll, the class of paper that
@@ -98,6 +99,8 @@ def measures(rolls, readings, perforator, colours):
             batch = next((p["id"] for p in narrower if p["test"](*colour["lab"])), None)
             if batch:
                 entry["batch"] = batch
+        if rulings.get(druid, {}).get("call") == "ruled":
+            entry["ruled"] = True
         if measured.get("pitch", {}).get("pitch"):
             entry["pitch"] = measured["pitch"]["pitch"]
         step = measured.get("step")
@@ -107,11 +110,13 @@ def measures(rolls, readings, perforator, colours):
             entries[druid] = entry
 
     papers = []
-    for paper in premises.PAPERS:
-        members = [e for e in entries.values() if paper["id"] in (e.get("paper"), e.get("batch"))]
+    for paper in [*premises.PAPERS, premises.RULED]:
+        members = [e for e in entries.values()
+                   if paper["id"] in (e.get("paper"), e.get("batch")) or (paper["id"] == "ruled" and e.get("ruled"))]
         days = sorted(e["date"] for e in members if len(e.get("date", "")) == 10)
         papers.append({"id": paper["id"], "name": paper["name"], "rule": paper["rule"],
-                       "broader": paper.get("broader"), "count": len(members), "dated": len(days),
+                       "broader": paper.get("broader"), "ruled": paper["id"] == "ruled",
+                       "count": len(members), "dated": len(days),
                        "span": [days[0], days[-1]] if days else None,
                        "rgb": [round(float(v)) for v in np.median([e["rgb"] for e in members], 0)]})
     MEASURES.write_text(json.dumps({"papers": papers, "rolls": entries}, ensure_ascii=False, separators=(",", ":")))
@@ -151,8 +156,9 @@ def main():
     print(f"wrote {TARGET.relative_to(HERE)} ({TARGET.stat().st_size // 1024} kB)")
 
     colours = json.loads(COLOURS.read_text())
-    stated = premises.build(DOCS, rolls, readings, perforator, colours, today)
-    measured = measures(rolls, readings, perforator, colours)
+    rulings = json.loads(RULINGS.read_text())
+    stated = premises.build(DOCS, rolls, readings, perforator, colours, rulings, today)
+    measured = measures(rolls, readings, perforator, colours, rulings)
     print(f"wrote the paper and perforator of {len(measured)} rolls to {MEASURES.relative_to(HERE)} "
           f"({MEASURES.stat().st_size // 1024} kB)")
     named = hand_records.build(DOCS, hands)
