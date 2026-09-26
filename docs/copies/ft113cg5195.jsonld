@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ft113cg5195.jsonld",
+ "@id": "copies/ft113cg5195",
  "title": "Condon Roll 691, WM 2810",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ft113cg5195.jsonld#copy",
+   "@id": "copies/ft113cg5195#copy",
    "label": "Condon Roll 691",
    "identifier": "Stanford Libraries CONDON ROLL 691",
    "seeAlso": "https://purl.stanford.edu/ft113cg5195",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ft113cg5195.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/ft113cg5195#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 39119.13,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ft113cg5195%2Fft113cg5195_0001/3022,462422,540,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ft113cg5195.jsonld#inscription-text",
-        "text": "16428"
+        "@id": "copies/ft113cg5195#inscription-text",
+        "text": "16428",
+        "@annotation": {
+         "@id": "copies/ft113cg5195#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ft113cg5195#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ft113cg5195#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Stamped, not written, running along the roll; read from crop 2 turned a quarter turn. Every figure is plain, 1 6 4 2 8, the 4 with its apex and crossbar and the 8 with both counters open, and five figures admit only the parse 16.4.28. The confidence is medium not for the figures but for the parse: a stamp of five figures could in principle be a serial rather than a date, though 16428 is too long for a Welte catalogue number, and 1928 falls after the 1904 to 1926 range of the dates read so far in this corpus. A broken partial impression stands just before the 1 and is not legible. Crop 1 shows a tear repair patch and perforations, no writing."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1928-04-16",
      "@annotation": {
-      "@id": "copies/ft113cg5195.jsonld#date-annotation",
+      "@id": "copies/ft113cg5195#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ft113cg5195.jsonld#date-belief",
+       "@id": "copies/ft113cg5195#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ft113cg5195.jsonld#inscription-text"
+          "copies/ft113cg5195#inscription-text"
          ],
-         "note": "stamped, not written, running along the roll; read from crop 2 turned a quarter turn. Every figure is plain, 1 6 4 2 8, the 4 with its apex and crossbar and the 8 with both counters open, and five figures admit only the parse 16.4.28. The confidence is medium not for the figures but for the parse: a stamp of five figures could in principle be a serial rather than a date, though 16428 is too long for a Welte catalogue number, and 1928 falls after the 1904 to 1926 range of the dates read so far in this corpus. A broken partial impression stands just before the 1 and is not legible. Crop 1 shows a tear repair patch and perforations, no writing."
+         "note": "The figures of \"16428\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ft113cg5195#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ft113cg5195.jsonld#perforator",
+     "@id": "copies/ft113cg5195#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7774,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ft113cg5195.jsonld#punch-diameter-annotation",
+        "@id": "copies/ft113cg5195#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ft113cg5195.jsonld#punch-diameter-belief",
+         "@id": "copies/ft113cg5195#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6989,
        "n": 326,
        "@annotation": {
-        "@id": "copies/ft113cg5195.jsonld#chain-pitch-annotation",
+        "@id": "copies/ft113cg5195#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ft113cg5195.jsonld#chain-pitch-belief",
+         "@id": "copies/ft113cg5195#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5335,
        "n": 28859,
        "@annotation": {
-        "@id": "copies/ft113cg5195.jsonld#advance-annotation",
+        "@id": "copies/ft113cg5195#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ft113cg5195.jsonld#advance-belief",
+         "@id": "copies/ft113cg5195#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

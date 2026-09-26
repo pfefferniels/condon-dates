@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/qm069fy5200.jsonld",
+ "@id": "copies/qm069fy5200",
  "title": "Condon Roll 765, WM 3332",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/qm069fy5200.jsonld#copy",
+   "@id": "copies/qm069fy5200#copy",
    "label": "Condon Roll 765",
    "identifier": "Stanford Libraries CONDON ROLL 765",
    "seeAlso": "https://purl.stanford.edu/qm069fy5200",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/qm069fy5200.jsonld#inscription",
+       "@id": "copies/qm069fy5200#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/qm069fy5200%2Fqm069fy5200_0001/3525,388971,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/qm069fy5200.jsonld#inscription-text",
-        "text": "6123"
+        "@id": "copies/qm069fy5200#inscription-text",
+        "text": "6123",
+        "@annotation": {
+         "@id": "copies/qm069fy5200#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/qm069fy5200#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/qm069fy5200#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink, every figure plain, but no separators, so the grouping 6.1.23 rests on the usual practice rather than on the paper. Not the catalogue number: crop 2 gives 3332 and the leader label in crop 3 reads 'WELTE-MIGNON Nr. 3332, Symphony Pathetique Op. 74, No. 6, Part IV, P. Tschaikowsky'"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1923-01-06",
      "@annotation": {
-      "@id": "copies/qm069fy5200.jsonld#date-annotation",
+      "@id": "copies/qm069fy5200#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/qm069fy5200.jsonld#date-belief",
+       "@id": "copies/qm069fy5200#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/qm069fy5200.jsonld#inscription-text"
+          "copies/qm069fy5200#inscription-text"
          ],
-         "note": "ink, every figure plain, but no separators, so the grouping 6.1.23 rests on the usual practice rather than on the paper. Not the catalogue number: crop 2 gives 3332 and the leader label in crop 3 reads 'WELTE-MIGNON Nr. 3332, Symphony Pathetique Op. 74, No. 6, Part IV, P. Tschaikowsky'"
+         "note": "The figures of \"6123\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/qm069fy5200#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/qm069fy5200.jsonld#perforator",
+     "@id": "copies/qm069fy5200#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7604,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/qm069fy5200.jsonld#punch-diameter-annotation",
+        "@id": "copies/qm069fy5200#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qm069fy5200.jsonld#punch-diameter-belief",
+         "@id": "copies/qm069fy5200#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6532,
        "n": 541,
        "@annotation": {
-        "@id": "copies/qm069fy5200.jsonld#chain-pitch-annotation",
+        "@id": "copies/qm069fy5200#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qm069fy5200.jsonld#chain-pitch-belief",
+         "@id": "copies/qm069fy5200#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6342,
        "n": 36608,
        "@annotation": {
-        "@id": "copies/qm069fy5200.jsonld#advance-annotation",
+        "@id": "copies/qm069fy5200#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qm069fy5200.jsonld#advance-belief",
+         "@id": "copies/qm069fy5200#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ys288dd6430.jsonld",
+ "@id": "copies/ys288dd6430",
  "title": "Condon Roll 14, WM 118",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ys288dd6430.jsonld#copy",
+   "@id": "copies/ys288dd6430#copy",
    "label": "Condon Roll 14",
    "identifier": "Stanford Libraries CONDON ROLL 14",
    "seeAlso": "https://purl.stanford.edu/ys288dd6430",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ys288dd6430.jsonld#inscription",
+       "@id": "copies/ys288dd6430#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ys288dd6430%2Fys288dd6430_0001/3278,190000,667,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ys288dd6430.jsonld#inscription-text",
-        "text": "118  14.4.10  Roth / Wössler"
+        "@id": "copies/ys288dd6430#inscription-text",
+        "text": "118  14.4.10  Roth / Wössler",
+        "@annotation": {
+         "@id": "copies/ys288dd6430#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ys288dd6430#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ys288dd6430#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink. The date line is plain. A second name stands below it in a smaller hand with an umlaut stroke; I read it as Wössler, with less certainty than the rest."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Roth",
       "sameAs": [],
-      "@id": "hands.jsonld#roth",
+      "@id": "hands#roth",
       "@annotation": {
-       "@id": "copies/ys288dd6430.jsonld#hand-annotation",
+       "@id": "copies/ys288dd6430#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/ys288dd6430.jsonld#hand-belief",
+        "@id": "copies/ys288dd6430#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/ys288dd6430.jsonld#inscription-text"
+           "copies/ys288dd6430#inscription-text"
           ],
-          "note": "Read as \"Roth / Wössler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Roth / Wössler\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1910-04-14",
      "@annotation": {
-      "@id": "copies/ys288dd6430.jsonld#date-annotation",
+      "@id": "copies/ys288dd6430#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ys288dd6430.jsonld#date-belief",
+       "@id": "copies/ys288dd6430#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ys288dd6430.jsonld#inscription-text"
+          "copies/ys288dd6430#inscription-text"
          ],
-         "note": "ink. The date line is plain. A second name stands below it in a smaller hand with an umlaut stroke; I read it as Wössler, with less certainty than the rest."
+         "note": "\"14.4.10\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ys288dd6430#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ys288dd6430.jsonld#perforator",
+     "@id": "copies/ys288dd6430#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.3611,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ys288dd6430.jsonld#punch-diameter-annotation",
+        "@id": "copies/ys288dd6430#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ys288dd6430.jsonld#punch-diameter-belief",
+         "@id": "copies/ys288dd6430#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.7191,
        "n": 415,
        "@annotation": {
-        "@id": "copies/ys288dd6430.jsonld#chain-pitch-annotation",
+        "@id": "copies/ys288dd6430#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ys288dd6430.jsonld#chain-pitch-belief",
+         "@id": "copies/ys288dd6430#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.1929,
        "n": 12122,
        "@annotation": {
-        "@id": "copies/ys288dd6430.jsonld#advance-annotation",
+        "@id": "copies/ys288dd6430#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ys288dd6430.jsonld#advance-belief",
+         "@id": "copies/ys288dd6430#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

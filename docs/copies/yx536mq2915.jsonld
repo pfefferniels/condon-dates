@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/yx536mq2915.jsonld",
+ "@id": "copies/yx536mq2915",
  "title": "Condon Roll 105, WM 365",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/yx536mq2915.jsonld#copy",
+   "@id": "copies/yx536mq2915#copy",
    "label": "Condon Roll 105",
    "identifier": "Stanford Libraries CONDON ROLL 105",
    "seeAlso": "https://purl.stanford.edu/yx536mq2915",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/yx536mq2915.jsonld#inscription",
+       "@id": "copies/yx536mq2915#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/yx536mq2915%2Fyx536mq2915_0001/3503,329742,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/yx536mq2915.jsonld#inscription-text",
-        "text": "291122"
+        "@id": "copies/yx536mq2915#inscription-text",
+        "text": "291122",
+        "@annotation": {
+         "@id": "copies/yx536mq2915#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/yx536mq2915#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/yx536mq2915#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, six figures without separators, read from the lower (180-degree) panel; the 2 is the German cursive form with a base stroke and the second figure a closed-bowl 9"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-11-29",
      "@annotation": {
-      "@id": "copies/yx536mq2915.jsonld#date-annotation",
+      "@id": "copies/yx536mq2915#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/yx536mq2915.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/yx536mq2915#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/yx536mq2915.jsonld#inscription-text"
+          "copies/yx536mq2915#inscription-text"
          ],
-         "note": "pencil, six figures without separators, read from the lower (180-degree) panel; the 2 is the German cursive form with a base stroke and the second figure a closed-bowl 9"
+         "note": "The figures of \"291122\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/yx536mq2915#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/yx536mq2915.jsonld#perforator",
+     "@id": "copies/yx536mq2915#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7046,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/yx536mq2915.jsonld#punch-diameter-annotation",
+        "@id": "copies/yx536mq2915#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yx536mq2915.jsonld#punch-diameter-belief",
+         "@id": "copies/yx536mq2915#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6334,
        "n": 428,
        "@annotation": {
-        "@id": "copies/yx536mq2915.jsonld#chain-pitch-annotation",
+        "@id": "copies/yx536mq2915#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yx536mq2915.jsonld#chain-pitch-belief",
+         "@id": "copies/yx536mq2915#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5409,
        "n": 17991,
        "@annotation": {
-        "@id": "copies/yx536mq2915.jsonld#advance-annotation",
+        "@id": "copies/yx536mq2915#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yx536mq2915.jsonld#advance-belief",
+         "@id": "copies/yx536mq2915#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

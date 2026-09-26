@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hg282mg9396.jsonld",
+ "@id": "copies/hg282mg9396",
  "title": "Condon Roll 294, WM 1033",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hg282mg9396.jsonld#copy",
+   "@id": "copies/hg282mg9396#copy",
    "label": "Condon Roll 294",
    "identifier": "Stanford Libraries CONDON ROLL 294",
    "seeAlso": "https://purl.stanford.edu/hg282mg9396",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hg282mg9396.jsonld#inscription",
+       "@id": "copies/hg282mg9396#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hg282mg9396%2Fhg282mg9396_0001/3488,315651,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hg282mg9396.jsonld#inscription-text",
-        "text": "6.12.13   7033"
+        "@id": "copies/hg282mg9396#inscription-text",
+        "text": "6.12.13   7033",
+        "@annotation": {
+         "@id": "copies/hg282mg9396#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hg282mg9396#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hg282mg9396#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink on red paper, the date with its points and a four-figure number beside it. The day is the open-bowl form that can be 6 or 8; I read 6, and the month and year are plain. The number's first figure could be 7 or 1, the rest is 033"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1913-12-06",
      "@annotation": {
-      "@id": "copies/hg282mg9396.jsonld#date-annotation",
+      "@id": "copies/hg282mg9396#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hg282mg9396.jsonld#date-belief",
+       "@id": "copies/hg282mg9396#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hg282mg9396.jsonld#inscription-text"
+          "copies/hg282mg9396#inscription-text"
          ],
-         "note": "ink on red paper, the date with its points and a four-figure number beside it. The day is the open-bowl form that can be 6 or 8; I read 6, and the month and year are plain. The number's first figure could be 7 or 1, the rest is 033"
+         "note": "\"6.12.13\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hg282mg9396#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hg282mg9396.jsonld#perforator",
+     "@id": "copies/hg282mg9396#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1564,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hg282mg9396.jsonld#punch-diameter-annotation",
+        "@id": "copies/hg282mg9396#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hg282mg9396.jsonld#punch-diameter-belief",
+         "@id": "copies/hg282mg9396#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7602,
        "n": 267,
        "@annotation": {
-        "@id": "copies/hg282mg9396.jsonld#chain-pitch-annotation",
+        "@id": "copies/hg282mg9396#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hg282mg9396.jsonld#chain-pitch-belief",
+         "@id": "copies/hg282mg9396#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4285,
        "n": 13310,
        "@annotation": {
-        "@id": "copies/hg282mg9396.jsonld#advance-annotation",
+        "@id": "copies/hg282mg9396#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hg282mg9396.jsonld#advance-belief",
+         "@id": "copies/hg282mg9396#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

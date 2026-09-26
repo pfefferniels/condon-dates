@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rd899zb5188.jsonld",
+ "@id": "copies/rd899zb5188",
  "title": "Condon Roll 942, WM 5608",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rd899zb5188.jsonld#copy",
+   "@id": "copies/rd899zb5188#copy",
    "label": "Condon Roll 942",
    "identifier": "Stanford Libraries CONDON ROLL 942",
    "seeAlso": "https://purl.stanford.edu/rd899zb5188",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rd899zb5188.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/rd899zb5188#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 12993.46,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rd899zb5188%2Frd899zb5188_0001/3515,153594,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rd899zb5188.jsonld#inscription-text",
-        "text": "[stamped mark] 81124"
+        "@id": "copies/rd899zb5188#inscription-text",
+        "text": "[stamped mark] 81124",
+        "@annotation": {
+         "@id": "copies/rd899zb5188#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rd899zb5188#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rd899zb5188#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Stamped, upright in the lower panel. Five plain figures, 8 1 1 2 4, preceded by a heavily inked mark: a vertical with two bars projecting to the right and a detached blob below. I first took that mark for an over-inked 1 and read 18.11.24. The same mark, with the same detached blob, precedes the figures on yk645sm6970 in batch 33 and on jd143sb1087 in this batch, and on yk645sm6970 it cannot be a digit, since no six-figure grouping of what follows gives a date. Read as a fixed slug, so the figures are 8.11.24. All three rolls carry the mark and five figures, the leading zeros dropped."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-11-08",
      "@annotation": {
-      "@id": "copies/rd899zb5188.jsonld#date-annotation",
+      "@id": "copies/rd899zb5188#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rd899zb5188.jsonld#date-belief",
+       "@id": "copies/rd899zb5188#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rd899zb5188.jsonld#inscription-text"
+          "copies/rd899zb5188#inscription-text"
          ],
-         "note": "stamped, upright in the lower panel. Five plain figures, 8 1 1 2 4, preceded by a heavily inked mark: a vertical with two bars projecting to the right and a detached blob below. I first took that mark for an over-inked 1 and read 18.11.24. The same mark, with the same detached blob, precedes the figures on yk645sm6970 in batch 33 and on jd143sb1087 in this batch, and on yk645sm6970 it cannot be a digit, since no six-figure grouping of what follows gives a date. Read as a fixed slug, so the figures are 8.11.24. All three rolls carry the mark and five figures, the leading zeros dropped."
+         "note": "The figures of \"81124\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rd899zb5188#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rd899zb5188.jsonld#perforator",
+     "@id": "copies/rd899zb5188#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7055,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rd899zb5188.jsonld#punch-diameter-annotation",
+        "@id": "copies/rd899zb5188#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rd899zb5188.jsonld#punch-diameter-belief",
+         "@id": "copies/rd899zb5188#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7017,
        "n": 366,
        "@annotation": {
-        "@id": "copies/rd899zb5188.jsonld#chain-pitch-annotation",
+        "@id": "copies/rd899zb5188#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rd899zb5188.jsonld#chain-pitch-belief",
+         "@id": "copies/rd899zb5188#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5218,
        "n": 11292,
        "@annotation": {
-        "@id": "copies/rd899zb5188.jsonld#advance-annotation",
+        "@id": "copies/rd899zb5188#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rd899zb5188.jsonld#advance-belief",
+         "@id": "copies/rd899zb5188#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

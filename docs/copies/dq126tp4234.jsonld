@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/dq126tp4234.jsonld",
+ "@id": "copies/dq126tp4234",
  "title": "Condon Roll 744, WM 3143",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/dq126tp4234.jsonld#copy",
+   "@id": "copies/dq126tp4234#copy",
    "label": "Condon Roll 744",
    "identifier": "Stanford Libraries CONDON ROLL 744",
    "seeAlso": "https://purl.stanford.edu/dq126tp4234",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/dq126tp4234.jsonld#inscription",
+       "@id": "copies/dq126tp4234#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/dq126tp4234%2Fdq126tp4234_0001/3473,241508,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/dq126tp4234.jsonld#inscription-text",
-        "text": "2[?] 10 22"
+        "@id": "copies/dq126tp4234#inscription-text",
+        "text": "2[?] 10 22",
+        "@annotation": {
+         "@id": "copies/dq126tp4234#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/dq126tp4234#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/dq126tp4234#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, treble edge. Six figures grouped 2 + 2 + 2, all of them cut along the top by the crop edge, which begins at the first row of ink. The last two are the same figure, a hooked top with a diagonal and a base, giving the year 22; the middle pair are a plain diagonal and an oval, giving the month 10; the first is a 2. The second figure shows two lobes and looks like the open-topped 8, which would make the day 28, but it is not legible enough to fix and I have not completed it. Crops 2 to 4 carry only a repair patch and stains."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -81,18 +99,25 @@
      "after": "1922-10-01",
      "before": "1922-10-31",
      "@annotation": {
-      "@id": "copies/dq126tp4234.jsonld#date-annotation",
+      "@id": "copies/dq126tp4234#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/dq126tp4234.jsonld#date-belief",
+       "@id": "copies/dq126tp4234#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/dq126tp4234.jsonld#inscription-text"
+          "copies/dq126tp4234#inscription-text"
          ],
-         "note": "Pencil, treble edge. Six figures grouped 2 + 2 + 2, all of them cut along the top by the crop edge, which begins at the first row of ink. The last two are the same figure, a hooked top with a diagonal and a base, giving the year 22; the middle pair are a plain diagonal and an oval, giving the month 10; the first is a 2. The second figure shows two lobes and looks like the open-topped 8, which would make the day 28, but it is not legible enough to fix and I have not completed it. Crops 2 to 4 carry only a repair patch and stains."
+         "note": "The figures of \"2?1022\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/dq126tp4234#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -100,17 +125,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/dq126tp4234.jsonld#perforator",
+     "@id": "copies/dq126tp4234#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7334,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/dq126tp4234.jsonld#punch-diameter-annotation",
+        "@id": "copies/dq126tp4234#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dq126tp4234.jsonld#punch-diameter-belief",
+         "@id": "copies/dq126tp4234#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -132,10 +157,10 @@
        "bridge": 0.8015,
        "n": 334,
        "@annotation": {
-        "@id": "copies/dq126tp4234.jsonld#chain-pitch-annotation",
+        "@id": "copies/dq126tp4234#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dq126tp4234.jsonld#chain-pitch-belief",
+         "@id": "copies/dq126tp4234#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -156,10 +181,10 @@
        "strength": 0.4553,
        "n": 16192,
        "@annotation": {
-        "@id": "copies/dq126tp4234.jsonld#advance-annotation",
+        "@id": "copies/dq126tp4234#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dq126tp4234.jsonld#advance-belief",
+         "@id": "copies/dq126tp4234#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/nk632jz1564.jsonld",
+ "@id": "copies/nk632jz1564",
  "title": "Condon Roll 162, WM 501",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/nk632jz1564.jsonld#copy",
+   "@id": "copies/nk632jz1564#copy",
    "label": "Condon Roll 162",
    "identifier": "Stanford Libraries CONDON ROLL 162",
    "seeAlso": "https://purl.stanford.edu/nk632jz1564",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/nk632jz1564.jsonld#inscription",
+       "@id": "copies/nk632jz1564#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,34 +58,51 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/nk632jz1564%2Fnk632jz1564_0001/3462,157239,498,2404/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/nk632jz1564.jsonld#inscription-text",
-        "text": "501  4.1.10  [name] / [name]"
+        "@id": "copies/nk632jz1564#inscription-text",
+        "text": "501  4.1.10  [name] / [name]",
+        "@annotation": {
+         "@id": "copies/nk632jz1564#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/nk632jz1564#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/nk632jz1564#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink on ruled red paper; two names stand beside and below the date in Kurrent, the upper apparently beginning Sch- and the lower W- with an umlaut, neither read with confidence"
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Schlegel",
       "sameAs": [],
-      "@id": "hands.jsonld#schlegel",
+      "@id": "hands#schlegel",
       "@annotation": {
-       "@id": "copies/nk632jz1564.jsonld#hand-annotation",
+       "@id": "copies/nk632jz1564#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/nk632jz1564.jsonld#hand-belief",
+        "@id": "copies/nk632jz1564#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/nk632jz1564.jsonld#inscription-text"
+           "copies/nk632jz1564#inscription-text"
           ],
-          "note": "Read as \"Wössler, abbreviated\". The mark the reader could not resolve is the countersigner's name abbreviated, as on fv104hn7521. Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Wössler, abbreviated\". The mark the reader could not resolve is the countersigner's name abbreviated, as on fv104hn7521. Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1910-01-04",
      "@annotation": {
-      "@id": "copies/nk632jz1564.jsonld#date-annotation",
+      "@id": "copies/nk632jz1564#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/nk632jz1564.jsonld#date-belief",
+       "@id": "copies/nk632jz1564#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/nk632jz1564.jsonld#inscription-text"
+          "copies/nk632jz1564#inscription-text"
          ],
-         "note": "ink on ruled red paper; two names stand beside and below the date in Kurrent, the upper apparently beginning Sch- and the lower W- with an umlaut, neither read with confidence"
+         "note": "\"4.1.10\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/nk632jz1564#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/nk632jz1564.jsonld#perforator",
+     "@id": "copies/nk632jz1564#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2866,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/nk632jz1564.jsonld#punch-diameter-annotation",
+        "@id": "copies/nk632jz1564#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nk632jz1564.jsonld#punch-diameter-belief",
+         "@id": "copies/nk632jz1564#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.5001,
        "n": 235,
        "@annotation": {
-        "@id": "copies/nk632jz1564.jsonld#chain-pitch-annotation",
+        "@id": "copies/nk632jz1564#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nk632jz1564.jsonld#chain-pitch-belief",
+         "@id": "copies/nk632jz1564#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.1526,
        "n": 10085,
        "@annotation": {
-        "@id": "copies/nk632jz1564.jsonld#advance-annotation",
+        "@id": "copies/nk632jz1564#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nk632jz1564.jsonld#advance-belief",
+         "@id": "copies/nk632jz1564#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

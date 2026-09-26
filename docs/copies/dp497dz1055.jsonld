@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/dp497dz1055.jsonld",
+ "@id": "copies/dp497dz1055",
  "title": "Condon Roll 180, WM 469",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/dp497dz1055.jsonld#copy",
+   "@id": "copies/dp497dz1055#copy",
    "label": "Condon Roll 180",
    "identifier": "Stanford Libraries CONDON ROLL 180",
    "seeAlso": "https://purl.stanford.edu/dp497dz1055",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/dp497dz1055.jsonld#inscription",
+       "@id": "copies/dp497dz1055#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/dp497dz1055%2Fdp497dz1055_0001/3515,107439,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/dp497dz1055.jsonld#inscription-text",
-        "text": "26323"
+        "@id": "copies/dp497dz1055#inscription-text",
+        "text": "26323",
+        "@annotation": {
+         "@id": "copies/dp497dz1055#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/dp497dz1055#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/dp497dz1055#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Two readers disagreed on the fourth figure, one giving 26323 and 26 March 1923, the other 26303, which would be 1903 and so outside the corpus. Read again at native resolution the fourth figure is a 2, identical in form to the first figure of the line, and nothing like the closed loop of the 6 beside it. 26 March 1923."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1923-03-26",
      "@annotation": {
-      "@id": "copies/dp497dz1055.jsonld#date-annotation",
+      "@id": "copies/dp497dz1055#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/dp497dz1055.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/dp497dz1055#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/dp497dz1055.jsonld#inscription-text"
+          "copies/dp497dz1055#inscription-text"
          ],
-         "note": "two readers disagreed on the fourth figure, one giving 26323 and 26 March 1923, the other 26303, which would be 1903 and so outside the corpus. Read again at native resolution the fourth figure is a 2, identical in form to the first figure of the line, and nothing like the closed loop of the 6 beside it. 26 March 1923."
+         "note": "The figures of \"26323\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/dp497dz1055#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/dp497dz1055.jsonld#perforator",
+     "@id": "copies/dp497dz1055#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7681,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/dp497dz1055.jsonld#punch-diameter-annotation",
+        "@id": "copies/dp497dz1055#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dp497dz1055.jsonld#punch-diameter-belief",
+         "@id": "copies/dp497dz1055#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7413,
        "n": 238,
        "@annotation": {
-        "@id": "copies/dp497dz1055.jsonld#chain-pitch-annotation",
+        "@id": "copies/dp497dz1055#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dp497dz1055.jsonld#chain-pitch-belief",
+         "@id": "copies/dp497dz1055#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5557,
        "n": 5240,
        "@annotation": {
-        "@id": "copies/dp497dz1055.jsonld#advance-annotation",
+        "@id": "copies/dp497dz1055#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dp497dz1055.jsonld#advance-belief",
+         "@id": "copies/dp497dz1055#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

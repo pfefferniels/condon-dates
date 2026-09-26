@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/dt352gh2011.jsonld",
+ "@id": "copies/dt352gh2011",
  "title": "Condon Roll 597, WM 2457",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/dt352gh2011.jsonld#copy",
+   "@id": "copies/dt352gh2011#copy",
    "label": "Condon Roll 597",
    "identifier": "Stanford Libraries CONDON ROLL 597",
    "seeAlso": "https://purl.stanford.edu/dt352gh2011",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/dt352gh2011.jsonld#inscription",
+       "@id": "copies/dt352gh2011#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/dt352gh2011%2Fdt352gh2011_0001/3472,305210,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/dt352gh2011.jsonld#inscription-text",
-        "text": "2454.  20  5.12"
+        "@id": "copies/dt352gh2011#inscription-text",
+        "text": "2454.  20  5.12",
+        "@annotation": {
+         "@id": "copies/dt352gh2011#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/dt352gh2011#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/dt352gh2011#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, one line, no name; day written apart from month and year"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1912-05-20",
      "@annotation": {
-      "@id": "copies/dt352gh2011.jsonld#date-annotation",
+      "@id": "copies/dt352gh2011#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/dt352gh2011.jsonld#date-belief",
+       "@id": "copies/dt352gh2011#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/dt352gh2011.jsonld#inscription-text"
+          "copies/dt352gh2011#inscription-text"
          ],
-         "note": "pencil, one line, no name; day written apart from month and year"
+         "note": "\"20  5.12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/dt352gh2011#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/dt352gh2011.jsonld#perforator",
+     "@id": "copies/dt352gh2011#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0295,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/dt352gh2011.jsonld#punch-diameter-annotation",
+        "@id": "copies/dt352gh2011#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dt352gh2011.jsonld#punch-diameter-belief",
+         "@id": "copies/dt352gh2011#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.8402,
        "n": 312,
        "@annotation": {
-        "@id": "copies/dt352gh2011.jsonld#chain-pitch-annotation",
+        "@id": "copies/dt352gh2011#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dt352gh2011.jsonld#chain-pitch-belief",
+         "@id": "copies/dt352gh2011#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4079,
        "n": 14813,
        "@annotation": {
-        "@id": "copies/dt352gh2011.jsonld#advance-annotation",
+        "@id": "copies/dt352gh2011#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dt352gh2011.jsonld#advance-belief",
+         "@id": "copies/dt352gh2011#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

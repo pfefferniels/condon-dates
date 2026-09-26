@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jt308hp0877.jsonld",
+ "@id": "copies/jt308hp0877",
  "title": "Condon Roll 562, WM 2198",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jt308hp0877.jsonld#copy",
+   "@id": "copies/jt308hp0877#copy",
    "label": "Condon Roll 562",
    "identifier": "Stanford Libraries CONDON ROLL 562",
    "seeAlso": "https://purl.stanford.edu/jt308hp0877",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jt308hp0877.jsonld#inscription",
+       "@id": "copies/jt308hp0877#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jt308hp0877%2Fjt308hp0877_0001/3505,180845,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jt308hp0877.jsonld#inscription-text",
-        "text": "2148   2. 12. 10  Kummer / [second, illegible signature below]"
+        "@id": "copies/jt308hp0877#inscription-text",
+        "text": "2148   2. 12. 10  Kummer / [second, illegible signature below]",
+        "@annotation": {
+         "@id": "copies/jt308hp0877#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jt308hp0877#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jt308hp0877#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, large hand, both panels agree. Date figures plain. The name is read as Kummer, the ending is cramped; a second scrawled signature sits below the date and is not legible."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Krämer",
       "sameAs": [],
-      "@id": "hands.jsonld#kraemer",
+      "@id": "hands#kraemer",
       "@annotation": {
-       "@id": "copies/jt308hp0877.jsonld#hand-annotation",
+       "@id": "copies/jt308hp0877#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/jt308hp0877.jsonld#hand-belief",
+        "@id": "copies/jt308hp0877#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/jt308hp0877.jsonld#inscription-text"
+           "copies/jt308hp0877#inscription-text"
           ],
-          "note": "Read as \"Kummer\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Kummer\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1910-12-02",
      "@annotation": {
-      "@id": "copies/jt308hp0877.jsonld#date-annotation",
+      "@id": "copies/jt308hp0877#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jt308hp0877.jsonld#date-belief",
+       "@id": "copies/jt308hp0877#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jt308hp0877.jsonld#inscription-text"
+          "copies/jt308hp0877#inscription-text"
          ],
-         "note": "ink, large hand, both panels agree. Date figures plain. The name is read as Kummer, the ending is cramped; a second scrawled signature sits below the date and is not legible."
+         "note": "\"2. 12. 10\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jt308hp0877#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jt308hp0877.jsonld#perforator",
+     "@id": "copies/jt308hp0877#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2215,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jt308hp0877.jsonld#punch-diameter-annotation",
+        "@id": "copies/jt308hp0877#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jt308hp0877.jsonld#punch-diameter-belief",
+         "@id": "copies/jt308hp0877#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.6851,
        "n": 294,
        "@annotation": {
-        "@id": "copies/jt308hp0877.jsonld#chain-pitch-annotation",
+        "@id": "copies/jt308hp0877#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jt308hp0877.jsonld#chain-pitch-belief",
+         "@id": "copies/jt308hp0877#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.142,
        "n": 8419,
        "@annotation": {
-        "@id": "copies/jt308hp0877.jsonld#advance-annotation",
+        "@id": "copies/jt308hp0877#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jt308hp0877.jsonld#advance-belief",
+         "@id": "copies/jt308hp0877#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

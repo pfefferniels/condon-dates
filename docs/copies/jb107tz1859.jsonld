@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jb107tz1859.jsonld",
+ "@id": "copies/jb107tz1859",
  "title": "Condon Roll 519, WM 1772",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jb107tz1859.jsonld#copy",
+   "@id": "copies/jb107tz1859#copy",
    "label": "Condon Roll 519",
    "identifier": "Stanford Libraries CONDON ROLL 519",
    "seeAlso": "https://purl.stanford.edu/jb107tz1859",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jb107tz1859.jsonld#inscription",
+       "@id": "copies/jb107tz1859#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jb107tz1859%2Fjb107tz1859_0001/3494,258801,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jb107tz1859.jsonld#inscription-text",
-        "text": "23222"
+        "@id": "copies/jb107tz1859#inscription-text",
+        "text": "23222",
+        "@annotation": {
+         "@id": "copies/jb107tz1859#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jb107tz1859#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jb107tz1859#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, no separators: 23 2 22. Region 2 shows the leader label 'WELTE-MIGNON No. 1772 / Kinderscenen 1-6 / R. Schumann / Played by [signature] / 28. III. 09.' - a printed label date, not the punch date. ds710xd1794, whose pencilled roll number is 1773, carries the same five figures, which fits two consecutive rolls punched on one day."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-02-23",
      "@annotation": {
-      "@id": "copies/jb107tz1859.jsonld#date-annotation",
+      "@id": "copies/jb107tz1859#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jb107tz1859.jsonld#date-belief",
+       "@id": "copies/jb107tz1859#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jb107tz1859.jsonld#inscription-text"
+          "copies/jb107tz1859#inscription-text"
          ],
-         "note": "Pencil, no separators: 23 2 22. Region 2 shows the leader label 'WELTE-MIGNON No. 1772 / Kinderscenen 1-6 / R. Schumann / Played by [signature] / 28. III. 09.' - a printed label date, not the punch date. ds710xd1794, whose pencilled roll number is 1773, carries the same five figures, which fits two consecutive rolls punched on one day."
+         "note": "The figures of \"23222\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jb107tz1859#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jb107tz1859.jsonld#perforator",
+     "@id": "copies/jb107tz1859#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8298,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jb107tz1859.jsonld#punch-diameter-annotation",
+        "@id": "copies/jb107tz1859#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jb107tz1859.jsonld#punch-diameter-belief",
+         "@id": "copies/jb107tz1859#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6588,
        "n": 320,
        "@annotation": {
-        "@id": "copies/jb107tz1859.jsonld#chain-pitch-annotation",
+        "@id": "copies/jb107tz1859#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jb107tz1859.jsonld#chain-pitch-belief",
+         "@id": "copies/jb107tz1859#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5983,
        "n": 19452,
        "@annotation": {
-        "@id": "copies/jb107tz1859.jsonld#advance-annotation",
+        "@id": "copies/jb107tz1859#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jb107tz1859.jsonld#advance-belief",
+         "@id": "copies/jb107tz1859#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

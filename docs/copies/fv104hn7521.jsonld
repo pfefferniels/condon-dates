@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/fv104hn7521.jsonld",
+ "@id": "copies/fv104hn7521",
  "title": "Condon Roll 79, WM 304",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/fv104hn7521.jsonld#copy",
+   "@id": "copies/fv104hn7521#copy",
    "label": "Condon Roll 79",
    "identifier": "Stanford Libraries CONDON ROLL 79",
    "seeAlso": "https://purl.stanford.edu/fv104hn7521",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/fv104hn7521.jsonld#inscription",
+       "@id": "copies/fv104hn7521#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,34 +58,51 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/fv104hn7521%2Ffv104hn7521_0001/3446,384871,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/fv104hn7521.jsonld#inscription-text",
-        "text": "N° 304  8. 10. 09  Hummel(?) / Würth(?)"
+        "@id": "copies/fv104hn7521#inscription-text",
+        "text": "N° 304  8. 10. 09  Hummel(?) / Würth(?)",
+        "@annotation": {
+         "@id": "copies/fv104hn7521#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/fv104hn7521#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/fv104hn7521#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil; the number and date are plain, both names are guesses at a rapid hand and should be checked"
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Hohnrieder",
       "sameAs": [],
-      "@id": "hands.jsonld#hohnrieder",
+      "@id": "hands#hohnrieder",
       "@annotation": {
-       "@id": "copies/fv104hn7521.jsonld#hand-annotation",
+       "@id": "copies/fv104hn7521#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/fv104hn7521.jsonld#hand-belief",
+        "@id": "copies/fv104hn7521#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/fv104hn7521.jsonld#inscription-text"
+           "copies/fv104hn7521#inscription-text"
           ],
-          "note": "Read as \"Hummel(?) / Wössler, abbreviated\". The second line is not a separate name but the usual countersigner abbreviated, \"Wiſſl.\" with a full stop; the reader's \"Würth(?)\" was a guess at the same word. The first line is left as the reader gave it. Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Hummel(?) / Wössler, abbreviated\". The second line is not a separate name but the usual countersigner abbreviated, \"Wiſſl.\" with a full stop; the reader's \"Würth(?)\" was a guess at the same word. The first line is left as the reader gave it. Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1909-10-08",
      "@annotation": {
-      "@id": "copies/fv104hn7521.jsonld#date-annotation",
+      "@id": "copies/fv104hn7521#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/fv104hn7521.jsonld#date-belief",
+       "@id": "copies/fv104hn7521#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/fv104hn7521.jsonld#inscription-text"
+          "copies/fv104hn7521#inscription-text"
          ],
-         "note": "pencil; the number and date are plain, both names are guesses at a rapid hand and should be checked"
+         "note": "\"8. 10. 09\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/fv104hn7521#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/fv104hn7521.jsonld#perforator",
+     "@id": "copies/fv104hn7521#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0379,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/fv104hn7521.jsonld#punch-diameter-annotation",
+        "@id": "copies/fv104hn7521#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fv104hn7521.jsonld#punch-diameter-belief",
+         "@id": "copies/fv104hn7521#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.8896,
        "n": 359,
        "@annotation": {
-        "@id": "copies/fv104hn7521.jsonld#chain-pitch-annotation",
+        "@id": "copies/fv104hn7521#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fv104hn7521.jsonld#chain-pitch-belief",
+         "@id": "copies/fv104hn7521#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.0975,
        "n": 26979,
        "@annotation": {
-        "@id": "copies/fv104hn7521.jsonld#advance-annotation",
+        "@id": "copies/fv104hn7521#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fv104hn7521.jsonld#advance-belief",
+         "@id": "copies/fv104hn7521#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

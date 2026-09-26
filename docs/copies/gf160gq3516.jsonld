@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gf160gq3516.jsonld",
+ "@id": "copies/gf160gq3516",
  "title": "Condon Roll 704, WM 2979",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gf160gq3516.jsonld#copy",
+   "@id": "copies/gf160gq3516#copy",
    "label": "Condon Roll 704",
    "identifier": "Stanford Libraries CONDON ROLL 704",
    "seeAlso": "https://purl.stanford.edu/gf160gq3516",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gf160gq3516.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/gf160gq3516#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 15287.46,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gf160gq3516%2Fgf160gq3516_0001/3509,180711,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gf160gq3516.jsonld#inscription-text",
-        "text": "12 11 24"
+        "@id": "copies/gf160gq3516#inscription-text",
+        "text": "12 11 24",
+        "@annotation": {
+         "@id": "copies/gf160gq3516#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gf160gq3516#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gf160gq3516#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Stamped, not written; every figure plain."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-11-12",
      "@annotation": {
-      "@id": "copies/gf160gq3516.jsonld#date-annotation",
+      "@id": "copies/gf160gq3516#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gf160gq3516.jsonld#date-belief",
+       "@id": "copies/gf160gq3516#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gf160gq3516.jsonld#inscription-text"
+          "copies/gf160gq3516#inscription-text"
          ],
-         "note": "Stamped, not written; every figure plain."
+         "note": "\"12 11 24\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gf160gq3516#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gf160gq3516.jsonld#perforator",
+     "@id": "copies/gf160gq3516#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6894,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gf160gq3516.jsonld#punch-diameter-annotation",
+        "@id": "copies/gf160gq3516#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gf160gq3516.jsonld#punch-diameter-belief",
+         "@id": "copies/gf160gq3516#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7934,
        "n": 446,
        "@annotation": {
-        "@id": "copies/gf160gq3516.jsonld#chain-pitch-annotation",
+        "@id": "copies/gf160gq3516#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gf160gq3516.jsonld#chain-pitch-belief",
+         "@id": "copies/gf160gq3516#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5473,
        "n": 10922,
        "@annotation": {
-        "@id": "copies/gf160gq3516.jsonld#advance-annotation",
+        "@id": "copies/gf160gq3516#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gf160gq3516.jsonld#advance-belief",
+         "@id": "copies/gf160gq3516#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

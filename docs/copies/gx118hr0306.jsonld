@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gx118hr0306.jsonld",
+ "@id": "copies/gx118hr0306",
  "title": "Condon Roll 531, WM 1957",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gx118hr0306.jsonld#copy",
+   "@id": "copies/gx118hr0306#copy",
    "label": "Condon Roll 531",
    "identifier": "Stanford Libraries CONDON ROLL 531",
    "seeAlso": "https://purl.stanford.edu/gx118hr0306",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gx118hr0306.jsonld#inscription",
+       "@id": "copies/gx118hr0306#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gx118hr0306%2Fgx118hr0306_0001/3491,259581,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gx118hr0306.jsonld#inscription-text",
-        "text": "1957.   10. 1. 11."
+        "@id": "copies/gx118hr0306#inscription-text",
+        "text": "1957.   10. 1. 11.",
+        "@annotation": {
+         "@id": "copies/gx118hr0306#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gx118hr0306#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gx118hr0306#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Fine pencil, lower panel upright; both year figures have the same hooked lead-in and downstroke as the day's '1' and the month's '1', with no crossbar, so the year is 11 and not 14; no puncher's name in the crop"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1911-01-10",
      "@annotation": {
-      "@id": "copies/gx118hr0306.jsonld#date-annotation",
+      "@id": "copies/gx118hr0306#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gx118hr0306.jsonld#date-belief",
+       "@id": "copies/gx118hr0306#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gx118hr0306.jsonld#inscription-text"
+          "copies/gx118hr0306#inscription-text"
          ],
-         "note": "fine pencil, lower panel upright; both year figures have the same hooked lead-in and downstroke as the day's '1' and the month's '1', with no crossbar, so the year is 11 and not 14; no puncher's name in the crop"
+         "note": "\"10. 1. 11.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gx118hr0306#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gx118hr0306.jsonld#perforator",
+     "@id": "copies/gx118hr0306#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0557,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gx118hr0306.jsonld#punch-diameter-annotation",
+        "@id": "copies/gx118hr0306#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gx118hr0306.jsonld#punch-diameter-belief",
+         "@id": "copies/gx118hr0306#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.807,
        "n": 212,
        "@annotation": {
-        "@id": "copies/gx118hr0306.jsonld#chain-pitch-annotation",
+        "@id": "copies/gx118hr0306#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gx118hr0306.jsonld#chain-pitch-belief",
+         "@id": "copies/gx118hr0306#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4111,
        "n": 11750,
        "@annotation": {
-        "@id": "copies/gx118hr0306.jsonld#advance-annotation",
+        "@id": "copies/gx118hr0306#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gx118hr0306.jsonld#advance-belief",
+         "@id": "copies/gx118hr0306#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

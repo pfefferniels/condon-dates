@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hk752ck1008.jsonld",
+ "@id": "copies/hk752ck1008",
  "title": "Condon Roll 767, WM 3330",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hk752ck1008.jsonld#copy",
+   "@id": "copies/hk752ck1008#copy",
    "label": "Condon Roll 767",
    "identifier": "Stanford Libraries CONDON ROLL 767",
    "seeAlso": "https://purl.stanford.edu/hk752ck1008",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hk752ck1008.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/hk752ck1008#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 27750.17,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hk752ck1008%2Fhk752ck1008_0001/3310,328031,532,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hk752ck1008.jsonld#inscription-text",
-        "text": "161125"
+        "@id": "copies/hk752ck1008#inscription-text",
+        "text": "161125",
+        "@annotation": {
+         "@id": "copies/hk752ck1008#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hk752ck1008#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hk752ck1008#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Stamped, crisp. At full magnification the first figure is a 1 with a flag and a base serif, not a 4. Roll number 3330 from crop 2 and the leader label in crop 3, 'Symphony Pathetique Op. 74, No. 6, Part II, P. Tschaikowsky'"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1925-11-16",
      "@annotation": {
-      "@id": "copies/hk752ck1008.jsonld#date-annotation",
+      "@id": "copies/hk752ck1008#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hk752ck1008.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/hk752ck1008#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hk752ck1008.jsonld#inscription-text"
+          "copies/hk752ck1008#inscription-text"
          ],
-         "note": "stamped, crisp. At full magnification the first figure is a 1 with a flag and a base serif, not a 4. Roll number 3330 from crop 2 and the leader label in crop 3, 'Symphony Pathetique Op. 74, No. 6, Part II, P. Tschaikowsky'"
+         "note": "The figures of \"161125\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hk752ck1008#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hk752ck1008.jsonld#perforator",
+     "@id": "copies/hk752ck1008#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6919,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hk752ck1008.jsonld#punch-diameter-annotation",
+        "@id": "copies/hk752ck1008#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hk752ck1008.jsonld#punch-diameter-belief",
+         "@id": "copies/hk752ck1008#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7776,
        "n": 277,
        "@annotation": {
-        "@id": "copies/hk752ck1008.jsonld#chain-pitch-annotation",
+        "@id": "copies/hk752ck1008#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hk752ck1008.jsonld#chain-pitch-belief",
+         "@id": "copies/hk752ck1008#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5519,
        "n": 28203,
        "@annotation": {
-        "@id": "copies/hk752ck1008.jsonld#advance-annotation",
+        "@id": "copies/hk752ck1008#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hk752ck1008.jsonld#advance-belief",
+         "@id": "copies/hk752ck1008#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xm978sg7252.jsonld",
+ "@id": "copies/xm978sg7252",
  "title": "Condon Roll 222, WM 592",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xm978sg7252.jsonld#copy",
+   "@id": "copies/xm978sg7252#copy",
    "label": "Condon Roll 222",
    "identifier": "Stanford Libraries CONDON ROLL 222",
    "seeAlso": "https://purl.stanford.edu/xm978sg7252",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xm978sg7252.jsonld#inscription",
+       "@id": "copies/xm978sg7252#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xm978sg7252%2Fxm978sg7252_0001/3513,127078,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xm978sg7252.jsonld#inscription-text",
-        "text": "91824  (e4 separately: 592)"
+        "@id": "copies/xm978sg7252#inscription-text",
+        "text": "91824  (e4 separately: 592)",
+        "@annotation": {
+         "@id": "copies/xm978sg7252#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xm978sg7252#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xm978sg7252#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Five pencil figures in e2, written right at the paper edge, with the top of every figure sheared off by that edge even in the extended crop; the lower halves are clear. Read 9 1 8 2 4. The first figure is built exactly like the 9 of the 592 written in e4 (closed oval with the stroke descending to the lower left), not like that hand's 2, which has a flat base to the right. The closing 2 matches the hand's 2; the last figure I take for a 4 from its lower half only. How to group them I cannot settle from the image: 9-18-24 (month first) gives 18 September 1924, while a 2 in place of the 9 would allow 21.8.24 or 2-18-24. The roll is a Welte-Mignon no. 592 with an English label (Brahms waltzes, played by G. Galston, e5), so I cannot assume the German day-first order here. Year 1924 is the part I would stand behind; the day and month I have deliberately left out. e1, e3 blank; e6 colour target."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -80,18 +98,25 @@
      "after": "1924-01-01",
      "before": "1924-12-31",
      "@annotation": {
-      "@id": "copies/xm978sg7252.jsonld#date-annotation",
+      "@id": "copies/xm978sg7252#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/xm978sg7252.jsonld#date-belief",
+       "@id": "copies/xm978sg7252#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/xm978sg7252.jsonld#inscription-text"
+          "copies/xm978sg7252#inscription-text"
          ],
-         "note": "Five pencil figures in e2, written right at the paper edge, with the top of every figure sheared off by that edge even in the extended crop; the lower halves are clear. Read 9 1 8 2 4. The first figure is built exactly like the 9 of the 592 written in e4 (closed oval with the stroke descending to the lower left), not like that hand's 2, which has a flat base to the right. The closing 2 matches the hand's 2; the last figure I take for a 4 from its lower half only. How to group them I cannot settle from the image: 9-18-24 (month first) gives 18 September 1924, while a 2 in place of the 9 would allow 21.8.24 or 2-18-24. The roll is a Welte-Mignon no. 592 with an English label (Brahms waltzes, played by G. Galston, e5), so I cannot assume the German day-first order here. Year 1924 is the part I would stand behind; the day and month I have deliberately left out. e1, e3 blank; e6 colour target."
+         "note": "The figures of \"91824\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md). Only the year is read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/xm978sg7252#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xm978sg7252.jsonld#perforator",
+     "@id": "copies/xm978sg7252#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7579,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xm978sg7252.jsonld#punch-diameter-annotation",
+        "@id": "copies/xm978sg7252#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xm978sg7252.jsonld#punch-diameter-belief",
+         "@id": "copies/xm978sg7252#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6196,
        "n": 155,
        "@annotation": {
-        "@id": "copies/xm978sg7252.jsonld#chain-pitch-annotation",
+        "@id": "copies/xm978sg7252#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xm978sg7252.jsonld#chain-pitch-belief",
+         "@id": "copies/xm978sg7252#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4423,
        "n": 8105,
        "@annotation": {
-        "@id": "copies/xm978sg7252.jsonld#advance-annotation",
+        "@id": "copies/xm978sg7252#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xm978sg7252.jsonld#advance-belief",
+         "@id": "copies/xm978sg7252#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

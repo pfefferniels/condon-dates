@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/kw738fg7467.jsonld",
+ "@id": "copies/kw738fg7467",
  "title": "Condon Roll 669, WM 2588",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/kw738fg7467.jsonld#copy",
+   "@id": "copies/kw738fg7467#copy",
    "label": "Condon Roll 669",
    "identifier": "Stanford Libraries CONDON ROLL 669",
    "seeAlso": "https://purl.stanford.edu/kw738fg7467",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/kw738fg7467.jsonld#inscription",
+       "@id": "copies/kw738fg7467#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/kw738fg7467%2Fkw738fg7467_0001/3503,502722,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/kw738fg7467.jsonld#inscription-text",
-        "text": "8622"
+        "@id": "copies/kw738fg7467#inscription-text",
+        "text": "8622",
+        "@annotation": {
+         "@id": "copies/kw738fg7467#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/kw738fg7467#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/kw738fg7467#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Four pencil figures on crop 1, written right at the top edge of the paper so the upper part of each is clipped; read from the lower, upright panel and cross-checked against the rotated one. Separators dropped, so 8.6.22. The first figure is the open-loop form that can be taken for a 6, but it crosses at the waist and the second figure, a plain 6 beside it, has no such crossing, so I read 8 then 6; if the first were a 6 the date would be 6.6.22. Roll number 2588 written in pencil on crop 4, from a different part of the roll than the date. Crop 3 carries a later English note, 'Finish of Funeral March.', with a long rule; crop 2 has pencil clipped away almost entirely at the paper edge, crop 5 is blank."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-06-08",
      "@annotation": {
-      "@id": "copies/kw738fg7467.jsonld#date-annotation",
+      "@id": "copies/kw738fg7467#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/kw738fg7467.jsonld#date-belief",
+       "@id": "copies/kw738fg7467#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/kw738fg7467.jsonld#inscription-text"
+          "copies/kw738fg7467#inscription-text"
          ],
-         "note": "Four pencil figures on crop 1, written right at the top edge of the paper so the upper part of each is clipped; read from the lower, upright panel and cross-checked against the rotated one. Separators dropped, so 8.6.22. The first figure is the open-loop form that can be taken for a 6, but it crosses at the waist and the second figure, a plain 6 beside it, has no such crossing, so I read 8 then 6; if the first were a 6 the date would be 6.6.22. Roll number 2588 written in pencil on crop 4, from a different part of the roll than the date. Crop 3 carries a later English note, 'Finish of Funeral March.', with a long rule; crop 2 has pencil clipped away almost entirely at the paper edge, crop 5 is blank."
+         "note": "The figures of \"8622\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/kw738fg7467#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/kw738fg7467.jsonld#perforator",
+     "@id": "copies/kw738fg7467#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7156,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/kw738fg7467.jsonld#punch-diameter-annotation",
+        "@id": "copies/kw738fg7467#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kw738fg7467.jsonld#punch-diameter-belief",
+         "@id": "copies/kw738fg7467#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6443,
        "n": 554,
        "@annotation": {
-        "@id": "copies/kw738fg7467.jsonld#chain-pitch-annotation",
+        "@id": "copies/kw738fg7467#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kw738fg7467.jsonld#chain-pitch-belief",
+         "@id": "copies/kw738fg7467#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.2884,
        "n": 38972,
        "@annotation": {
-        "@id": "copies/kw738fg7467.jsonld#advance-annotation",
+        "@id": "copies/kw738fg7467#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kw738fg7467.jsonld#advance-belief",
+         "@id": "copies/kw738fg7467#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

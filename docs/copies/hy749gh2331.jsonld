@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hy749gh2331.jsonld",
+ "@id": "copies/hy749gh2331",
  "title": "Condon Roll 572, WM 2086",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hy749gh2331.jsonld#copy",
+   "@id": "copies/hy749gh2331#copy",
    "label": "Condon Roll 572",
    "identifier": "Stanford Libraries CONDON ROLL 572",
    "seeAlso": "https://purl.stanford.edu/hy749gh2331",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hy749gh2331.jsonld#inscription",
+       "@id": "copies/hy749gh2331#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hy749gh2331%2Fhy749gh2331_0001/3551,192085,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hy749gh2331.jsonld#inscription-text",
-        "text": "24222"
+        "@id": "copies/hy749gh2331#inscription-text",
+        "text": "24222",
+        "@annotation": {
+         "@id": "copies/hy749gh2331#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hy749gh2331#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hy749gh2331#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Crop 1, lower panel upright; pencil, five figures run together with no separators, read as 24.2.22. Figures 1, 3, 4 and 5 are the same 2, drawn with a top curl and a base sweeping right. Figure 2 is the arguable one: two arms meeting at a point with a single stem running well below the baseline. I take it for a 4; a crossed 7 would give 27.2.22, but a 7 in these hands sits on the line and is cut by a bar at mid height, and this glyph has neither. Crop 2 carries a separate small ink initial with a stop, not a date."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-02-24",
      "@annotation": {
-      "@id": "copies/hy749gh2331.jsonld#date-annotation",
+      "@id": "copies/hy749gh2331#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hy749gh2331.jsonld#date-belief",
+       "@id": "copies/hy749gh2331#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hy749gh2331.jsonld#inscription-text"
+          "copies/hy749gh2331#inscription-text"
          ],
-         "note": "crop 1, lower panel upright; pencil, five figures run together with no separators, read as 24.2.22. Figures 1, 3, 4 and 5 are the same 2, drawn with a top curl and a base sweeping right. Figure 2 is the arguable one: two arms meeting at a point with a single stem running well below the baseline. I take it for a 4; a crossed 7 would give 27.2.22, but a 7 in these hands sits on the line and is cut by a bar at mid height, and this glyph has neither. Crop 2 carries a separate small ink initial with a stop, not a date."
+         "note": "The figures of \"24222\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hy749gh2331#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hy749gh2331.jsonld#perforator",
+     "@id": "copies/hy749gh2331#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6919,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hy749gh2331.jsonld#punch-diameter-annotation",
+        "@id": "copies/hy749gh2331#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hy749gh2331.jsonld#punch-diameter-belief",
+         "@id": "copies/hy749gh2331#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7281,
        "n": 314,
        "@annotation": {
-        "@id": "copies/hy749gh2331.jsonld#chain-pitch-annotation",
+        "@id": "copies/hy749gh2331#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hy749gh2331.jsonld#chain-pitch-belief",
+         "@id": "copies/hy749gh2331#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4139,
        "n": 11531,
        "@annotation": {
-        "@id": "copies/hy749gh2331.jsonld#advance-annotation",
+        "@id": "copies/hy749gh2331#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hy749gh2331.jsonld#advance-belief",
+         "@id": "copies/hy749gh2331#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

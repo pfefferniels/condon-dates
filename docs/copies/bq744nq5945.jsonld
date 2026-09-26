@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/bq744nq5945.jsonld",
+ "@id": "copies/bq744nq5945",
  "title": "Condon Roll 456, WM 1462",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/bq744nq5945.jsonld#copy",
+   "@id": "copies/bq744nq5945#copy",
    "label": "Condon Roll 456",
    "identifier": "Stanford Libraries CONDON ROLL 456",
    "seeAlso": "https://purl.stanford.edu/bq744nq5945",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/bq744nq5945.jsonld#inscription",
+       "@id": "copies/bq744nq5945#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/bq744nq5945%2Fbq744nq5945_0001/3374,379688,557,2140/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/bq744nq5945.jsonld#inscription-text",
-        "text": "1462   18. 2. 13   Sm.Kb. / Wössler"
+        "@id": "copies/bq744nq5945#inscription-text",
+        "text": "1462   18. 2. 13   Sm.Kb. / Wössler",
+        "@annotation": {
+         "@id": "copies/bq744nq5945#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/bq744nq5945#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/bq744nq5945#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, bass edge, two lines. Every figure of the date plain, the 8 with both bowls closed. The initials before Wössler are less certain; read as Sm.Kb., the capital could also be an I or L."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Sph.",
       "sameAs": [],
-      "@id": "hands.jsonld#sph",
+      "@id": "hands#sph",
       "@annotation": {
-       "@id": "copies/bq744nq5945.jsonld#hand-annotation",
+       "@id": "copies/bq744nq5945#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/bq744nq5945.jsonld#hand-belief",
+        "@id": "copies/bq744nq5945#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/bq744nq5945.jsonld#inscription-text"
+           "copies/bq744nq5945#inscription-text"
           ],
-          "note": "Read as \"Sm.Kb.; Wössler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Sm.Kb.; Wössler\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1913-02-18",
      "@annotation": {
-      "@id": "copies/bq744nq5945.jsonld#date-annotation",
+      "@id": "copies/bq744nq5945#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/bq744nq5945.jsonld#date-belief",
+       "@id": "copies/bq744nq5945#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/bq744nq5945.jsonld#inscription-text"
+          "copies/bq744nq5945#inscription-text"
          ],
-         "note": "ink, bass edge, two lines. Every figure of the date plain, the 8 with both bowls closed. The initials before Wössler are less certain; read as Sm.Kb., the capital could also be an I or L."
+         "note": "\"18. 2. 13\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/bq744nq5945#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/bq744nq5945.jsonld#perforator",
+     "@id": "copies/bq744nq5945#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2401,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/bq744nq5945.jsonld#punch-diameter-annotation",
+        "@id": "copies/bq744nq5945#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bq744nq5945.jsonld#punch-diameter-belief",
+         "@id": "copies/bq744nq5945#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.7298,
        "n": 267,
        "@annotation": {
-        "@id": "copies/bq744nq5945.jsonld#chain-pitch-annotation",
+        "@id": "copies/bq744nq5945#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bq744nq5945.jsonld#chain-pitch-belief",
+         "@id": "copies/bq744nq5945#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.0542,
        "n": 18652,
        "@annotation": {
-        "@id": "copies/bq744nq5945.jsonld#advance-annotation",
+        "@id": "copies/bq744nq5945#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bq744nq5945.jsonld#advance-belief",
+         "@id": "copies/bq744nq5945#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

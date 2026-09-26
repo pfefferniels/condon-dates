@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jv484vp9065.jsonld",
+ "@id": "copies/jv484vp9065",
  "title": "Condon Roll 364, WM 1248",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jv484vp9065.jsonld#copy",
+   "@id": "copies/jv484vp9065#copy",
    "label": "Condon Roll 364",
    "identifier": "Stanford Libraries CONDON ROLL 364",
    "seeAlso": "https://purl.stanford.edu/jv484vp9065",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jv484vp9065.jsonld#inscription",
+       "@id": "copies/jv484vp9065#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jv484vp9065%2Fjv484vp9065_0001/3509,493994,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jv484vp9065.jsonld#inscription-text",
-        "text": "[cursive word] 20204 No 1248"
+        "@id": "copies/jv484vp9065#inscription-text",
+        "text": "[cursive word] 20204 No 1248",
+        "@annotation": {
+         "@id": "copies/jv484vp9065#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jv484vp9065#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jv484vp9065#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Ink, one line: a cursive word of five or six letters that I cannot letter out, then five figures with no separators, then an abbreviated No with four figures. The five figures read 2 0 2 0 4, so 20.2.04 on the corpus convention. Two reservations. The second figure is a closed oval with a short stroke rising from its upper left, so it could be a 6 rather than a 0, which would give 26.2.04. And the trailing number, which I read as 1248 though its middle figures are not firm, would sit oddly with 1904: another roll in this batch carries the printed label No. 1247 with a punch date of 1914. I record what the paper gives and leave that tension standing. Crop 2 is blank paper."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "Kopf",
       "sameAs": [],
-      "@id": "hands.jsonld#kopf",
+      "@id": "hands#kopf",
       "@annotation": {
-       "@id": "copies/jv484vp9065.jsonld#hand-annotation",
+       "@id": "copies/jv484vp9065#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/jv484vp9065.jsonld#hand-belief",
+        "@id": "copies/jv484vp9065#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/jv484vp9065.jsonld#inscription-text"
+           "copies/jv484vp9065#inscription-text"
           ],
           "note": "Read as \"Kopf\". The same signature as mz508vq7890 and wj177bx9196."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1904-02-20",
      "@annotation": {
-      "@id": "copies/jv484vp9065.jsonld#date-annotation",
+      "@id": "copies/jv484vp9065#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jv484vp9065.jsonld#date-belief",
+       "@id": "copies/jv484vp9065#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jv484vp9065.jsonld#inscription-text"
+          "copies/jv484vp9065#inscription-text"
          ],
-         "note": "Ink, one line: a cursive word of five or six letters that I cannot letter out, then five figures with no separators, then an abbreviated No with four figures. The five figures read 2 0 2 0 4, so 20.2.04 on the corpus convention. Two reservations. The second figure is a closed oval with a short stroke rising from its upper left, so it could be a 6 rather than a 0, which would give 26.2.04. And the trailing number, which I read as 1248 though its middle figures are not firm, would sit oddly with 1904: another roll in this batch carries the printed label No. 1247 with a punch date of 1914. I record what the paper gives and leave that tension standing. Crop 2 is blank paper."
+         "note": "The figures of \"20204\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jv484vp9065#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jv484vp9065.jsonld#perforator",
+     "@id": "copies/jv484vp9065#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.3095,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jv484vp9065.jsonld#punch-diameter-annotation",
+        "@id": "copies/jv484vp9065#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jv484vp9065.jsonld#punch-diameter-belief",
+         "@id": "copies/jv484vp9065#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.6671,
        "n": 280,
        "@annotation": {
-        "@id": "copies/jv484vp9065.jsonld#chain-pitch-annotation",
+        "@id": "copies/jv484vp9065#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jv484vp9065.jsonld#chain-pitch-belief",
+         "@id": "copies/jv484vp9065#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.1083,
        "n": 32928,
        "@annotation": {
-        "@id": "copies/jv484vp9065.jsonld#advance-annotation",
+        "@id": "copies/jv484vp9065#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jv484vp9065.jsonld#advance-belief",
+         "@id": "copies/jv484vp9065#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

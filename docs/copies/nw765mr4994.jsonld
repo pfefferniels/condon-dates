@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/nw765mr4994.jsonld",
+ "@id": "copies/nw765mr4994",
  "title": "Condon Roll 837, WM 3790",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/nw765mr4994.jsonld#copy",
+   "@id": "copies/nw765mr4994#copy",
    "label": "Condon Roll 837",
    "identifier": "Stanford Libraries CONDON ROLL 837",
    "seeAlso": "https://purl.stanford.edu/nw765mr4994",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/nw765mr4994.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/nw765mr4994#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 9398.97,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/nw765mr4994%2Fnw765mr4994_0001/3522,111104,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/nw765mr4994.jsonld#inscription-text",
-        "text": "[?]4 11 24"
+        "@id": "copies/nw765mr4994#inscription-text",
+        "text": "[?]4 11 24",
+        "@annotation": {
+         "@id": "copies/nw765mr4994#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/nw765mr4994#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/nw765mr4994#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink stamp across the roll; the first digit of the day is buried under a heavy ink blot, so the day could be 14, 24 or 4, while 11 and 24 are plain. Roll number 3790 written in pencil in crop 2; crop 3 gives the box label, WELTE-MIGNON No. 3790, 'British Folkmusic, Settings Nr. 4, Shepherd's Hey', Percy Grainger, played by John Hare"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -80,18 +98,25 @@
      "after": "1924-11-01",
      "before": "1924-11-30",
      "@annotation": {
-      "@id": "copies/nw765mr4994.jsonld#date-annotation",
+      "@id": "copies/nw765mr4994#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/nw765mr4994.jsonld#date-belief",
+       "@id": "copies/nw765mr4994#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/nw765mr4994.jsonld#inscription-text"
+          "copies/nw765mr4994#inscription-text"
          ],
-         "note": "ink stamp across the roll; the first digit of the day is buried under a heavy ink blot, so the day could be 14, 24 or 4, while 11 and 24 are plain. Roll number 3790 written in pencil in crop 2; crop 3 gives the box label, WELTE-MIGNON No. 3790, 'British Folkmusic, Settings Nr. 4, Shepherd's Hey', Percy Grainger, played by John Hare"
+         "note": "\"?4 11 24\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/nw765mr4994#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/nw765mr4994.jsonld#perforator",
+     "@id": "copies/nw765mr4994#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6877,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/nw765mr4994.jsonld#punch-diameter-annotation",
+        "@id": "copies/nw765mr4994#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nw765mr4994.jsonld#punch-diameter-belief",
+         "@id": "copies/nw765mr4994#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7276,
        "n": 304,
        "@annotation": {
-        "@id": "copies/nw765mr4994.jsonld#chain-pitch-annotation",
+        "@id": "copies/nw765mr4994#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nw765mr4994.jsonld#chain-pitch-belief",
+         "@id": "copies/nw765mr4994#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.543,
        "n": 4585,
        "@annotation": {
-        "@id": "copies/nw765mr4994.jsonld#advance-annotation",
+        "@id": "copies/nw765mr4994#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nw765mr4994.jsonld#advance-belief",
+         "@id": "copies/nw765mr4994#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

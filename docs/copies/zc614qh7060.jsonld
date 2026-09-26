@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/zc614qh7060.jsonld",
+ "@id": "copies/zc614qh7060",
  "title": "Condon Roll 203, WM 545",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/zc614qh7060.jsonld#copy",
+   "@id": "copies/zc614qh7060#copy",
    "label": "Condon Roll 203",
    "identifier": "Stanford Libraries CONDON ROLL 203",
    "seeAlso": "https://purl.stanford.edu/zc614qh7060",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/zc614qh7060.jsonld#inscription",
+       "@id": "copies/zc614qh7060#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/zc614qh7060%2Fzc614qh7060_0001/3474,233752,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/zc614qh7060.jsonld#inscription-text",
-        "text": "28.5.15."
+        "@id": "copies/zc614qh7060#inscription-text",
+        "text": "28.5.15.",
+        "@annotation": {
+         "@id": "copies/zc614qh7060#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/zc614qh7060#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/zc614qh7060#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, single line, no number or name in the crop; second figure is the open-loop form that can also read as 6, so 26.5.15 is a possible alternative"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1915-05-28",
      "@annotation": {
-      "@id": "copies/zc614qh7060.jsonld#date-annotation",
+      "@id": "copies/zc614qh7060#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/zc614qh7060.jsonld#date-belief",
+       "@id": "copies/zc614qh7060#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/zc614qh7060.jsonld#inscription-text"
+          "copies/zc614qh7060#inscription-text"
          ],
-         "note": "pencil, single line, no number or name in the crop; second figure is the open-loop form that can also read as 6, so 26.5.15 is a possible alternative"
+         "note": "\"28.5.15\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/zc614qh7060#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/zc614qh7060.jsonld#perforator",
+     "@id": "copies/zc614qh7060#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7156,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/zc614qh7060.jsonld#punch-diameter-annotation",
+        "@id": "copies/zc614qh7060#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zc614qh7060.jsonld#punch-diameter-belief",
+         "@id": "copies/zc614qh7060#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.8029,
        "n": 221,
        "@annotation": {
-        "@id": "copies/zc614qh7060.jsonld#chain-pitch-annotation",
+        "@id": "copies/zc614qh7060#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zc614qh7060.jsonld#chain-pitch-belief",
+         "@id": "copies/zc614qh7060#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4224,
        "n": 11408,
        "@annotation": {
-        "@id": "copies/zc614qh7060.jsonld#advance-annotation",
+        "@id": "copies/zc614qh7060#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zc614qh7060.jsonld#advance-belief",
+         "@id": "copies/zc614qh7060#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

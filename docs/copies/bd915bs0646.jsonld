@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/bd915bs0646.jsonld",
+ "@id": "copies/bd915bs0646",
  "title": "Condon Roll 750, WM 3162",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/bd915bs0646.jsonld#copy",
+   "@id": "copies/bd915bs0646#copy",
    "label": "Condon Roll 750",
    "identifier": "Stanford Libraries CONDON ROLL 750",
    "seeAlso": "https://purl.stanford.edu/bd915bs0646",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/bd915bs0646.jsonld#inscription",
+       "@id": "copies/bd915bs0646#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/bd915bs0646%2Fbd915bs0646_0001/3541,463528,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/bd915bs0646.jsonld#inscription-text",
-        "text": "30821"
+        "@id": "copies/bd915bs0646#inscription-text",
+        "text": "30821",
+        "@annotation": {
+         "@id": "copies/bd915bs0646#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/bd915bs0646#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/bd915bs0646#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, treble edge, at the tail of the roll. Five small figures, about 27 px each, cut along the top by the crop edge. The last two are secure: the 2 matches the 2 of the roll number written at the head of the roll (crop 4) and the 1 is a plain stroke, so the year is 21. My best reading of the rest is 30 and 8, giving 30 August, but the first figure could be a 2 (day 20) and the third could be a 6 (June), so I have left date_iso at the year alone rather than complete it. Crop 2 carries a short pencil tick, crop 3 creases, crop 5 the leader join."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -81,18 +99,25 @@
      "after": "1921-01-01",
      "before": "1921-12-31",
      "@annotation": {
-      "@id": "copies/bd915bs0646.jsonld#date-annotation",
+      "@id": "copies/bd915bs0646#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/bd915bs0646.jsonld#date-belief",
+       "@id": "copies/bd915bs0646#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/bd915bs0646.jsonld#inscription-text"
+          "copies/bd915bs0646#inscription-text"
          ],
-         "note": "Pencil, treble edge, at the tail of the roll. Five small figures, about 27 px each, cut along the top by the crop edge. The last two are secure: the 2 matches the 2 of the roll number written at the head of the roll (crop 4) and the 1 is a plain stroke, so the year is 21. My best reading of the rest is 30 and 8, giving 30 August, but the first figure could be a 2 (day 20) and the third could be a 6 (June), so I have left date_iso at the year alone rather than complete it. Crop 2 carries a short pencil tick, crop 3 creases, crop 5 the leader join."
+         "note": "The figures of \"30821\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md). Only the year is read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/bd915bs0646#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -100,17 +125,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/bd915bs0646.jsonld#perforator",
+     "@id": "copies/bd915bs0646#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.741,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/bd915bs0646.jsonld#punch-diameter-annotation",
+        "@id": "copies/bd915bs0646#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bd915bs0646.jsonld#punch-diameter-belief",
+         "@id": "copies/bd915bs0646#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -132,10 +157,10 @@
        "bridge": 0.7574,
        "n": 289,
        "@annotation": {
-        "@id": "copies/bd915bs0646.jsonld#chain-pitch-annotation",
+        "@id": "copies/bd915bs0646#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bd915bs0646.jsonld#chain-pitch-belief",
+         "@id": "copies/bd915bs0646#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -156,10 +181,10 @@
        "strength": 0.5143,
        "n": 25133,
        "@annotation": {
-        "@id": "copies/bd915bs0646.jsonld#advance-annotation",
+        "@id": "copies/bd915bs0646#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bd915bs0646.jsonld#advance-belief",
+         "@id": "copies/bd915bs0646#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

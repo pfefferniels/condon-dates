@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/wh678yv0330.jsonld",
+ "@id": "copies/wh678yv0330",
  "title": "Condon Roll 125, WM 386",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/wh678yv0330.jsonld#copy",
+   "@id": "copies/wh678yv0330#copy",
    "label": "Condon Roll 125",
    "identifier": "Stanford Libraries CONDON ROLL 125",
    "seeAlso": "https://purl.stanford.edu/wh678yv0330",
@@ -37,7 +38,7 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/wh678yv0330.jsonld#perforator",
+     "@id": "copies/wh678yv0330#perforator",
      "condition": {
       "conditionType": "setting",
       "advance": {
@@ -46,10 +47,10 @@
        "strength": 0.1376,
        "n": 3800,
        "@annotation": {
-        "@id": "copies/wh678yv0330.jsonld#advance-annotation",
+        "@id": "copies/wh678yv0330#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wh678yv0330.jsonld#advance-belief",
+         "@id": "copies/wh678yv0330#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

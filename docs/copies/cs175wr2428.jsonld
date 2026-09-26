@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/cs175wr2428.jsonld",
+ "@id": "copies/cs175wr2428",
  "title": "Condon Roll 63, WM 248",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/cs175wr2428.jsonld#copy",
+   "@id": "copies/cs175wr2428#copy",
    "label": "Condon Roll 63",
    "identifier": "Stanford Libraries CONDON ROLL 63",
    "seeAlso": "https://purl.stanford.edu/cs175wr2428",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/cs175wr2428.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/cs175wr2428#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 30901.8,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/cs175wr2428%2Fcs175wr2428_0001/2822,365286,524,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/cs175wr2428.jsonld#inscription-text",
-        "text": "191126"
+        "@id": "copies/cs175wr2428#inscription-text",
+        "text": "191126",
+        "@annotation": {
+         "@id": "copies/cs175wr2428#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/cs175wr2428#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/cs175wr2428#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. A six-figure stamp set in a line along the roll, read as 1 9 1 1 2 6; the last figure is heavily inked but reads as 6 rather than 8 or 0. Taken as 19.11.26 on the day-first convention, but the grouping is my inference and the string would also sit as a number, so the date is not secure. Crop 3 carries an unrelated later note in English pencil, signed and dated '4.9.1987  D.C.', about the last part of the roll being tracked by hand; crop 2 shows a tear."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1926-11-19",
      "@annotation": {
-      "@id": "copies/cs175wr2428.jsonld#date-annotation",
+      "@id": "copies/cs175wr2428#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/cs175wr2428.jsonld#date-belief",
+       "@id": "copies/cs175wr2428#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/cs175wr2428.jsonld#inscription-text"
+          "copies/cs175wr2428#inscription-text"
          ],
-         "note": "A six-figure stamp set in a line along the roll, read as 1 9 1 1 2 6; the last figure is heavily inked but reads as 6 rather than 8 or 0. Taken as 19.11.26 on the day-first convention, but the grouping is my inference and the string would also sit as a number, so the date is not secure. Crop 3 carries an unrelated later note in English pencil, signed and dated '4.9.1987  D.C.', about the last part of the roll being tracked by hand; crop 2 shows a tear."
+         "note": "The figures of \"191126\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/cs175wr2428#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/cs175wr2428.jsonld#perforator",
+     "@id": "copies/cs175wr2428#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6894,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/cs175wr2428.jsonld#punch-diameter-annotation",
+        "@id": "copies/cs175wr2428#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cs175wr2428.jsonld#punch-diameter-belief",
+         "@id": "copies/cs175wr2428#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6997,
        "n": 407,
        "@annotation": {
-        "@id": "copies/cs175wr2428.jsonld#chain-pitch-annotation",
+        "@id": "copies/cs175wr2428#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cs175wr2428.jsonld#chain-pitch-belief",
+         "@id": "copies/cs175wr2428#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6544,
        "n": 29961,
        "@annotation": {
-        "@id": "copies/cs175wr2428.jsonld#advance-annotation",
+        "@id": "copies/cs175wr2428#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cs175wr2428.jsonld#advance-belief",
+         "@id": "copies/cs175wr2428#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

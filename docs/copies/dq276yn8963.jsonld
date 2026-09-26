@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/dq276yn8963.jsonld",
+ "@id": "copies/dq276yn8963",
  "title": "Condon Roll 529, WM 1945",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/dq276yn8963.jsonld#copy",
+   "@id": "copies/dq276yn8963#copy",
    "label": "Condon Roll 529",
    "identifier": "Stanford Libraries CONDON ROLL 529",
    "seeAlso": "https://purl.stanford.edu/dq276yn8963",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/dq276yn8963.jsonld#inscription",
+       "@id": "copies/dq276yn8963#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/dq276yn8963%2Fdq276yn8963_0001/3478,156525,478,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/dq276yn8963.jsonld#inscription-text",
-        "text": "1445   1. 2. 11.  Roth / Wißler"
+        "@id": "copies/dq276yn8963#inscription-text",
+        "text": "1445   1. 2. 11.  Roth / Wißler",
+        "@annotation": {
+         "@id": "copies/dq276yn8963#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/dq276yn8963#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/dq276yn8963#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, upper panel upright; the year figures are two 1s formed exactly like the '1.' of the day, and quite unlike the open-top 4s of the roll number 1445; second name written below the first, read as Wißler - possibly the hand recorded elsewhere in the corpus as Wössler"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Roth",
       "sameAs": [],
-      "@id": "hands.jsonld#roth",
+      "@id": "hands#roth",
       "@annotation": {
-       "@id": "copies/dq276yn8963.jsonld#hand-annotation",
+       "@id": "copies/dq276yn8963#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/dq276yn8963.jsonld#hand-belief",
+        "@id": "copies/dq276yn8963#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/dq276yn8963.jsonld#inscription-text"
+           "copies/dq276yn8963#inscription-text"
           ],
-          "note": "Read as \"Roth, Wißler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Roth, Wißler\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1911-02-01",
      "@annotation": {
-      "@id": "copies/dq276yn8963.jsonld#date-annotation",
+      "@id": "copies/dq276yn8963#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/dq276yn8963.jsonld#date-belief",
+       "@id": "copies/dq276yn8963#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/dq276yn8963.jsonld#inscription-text"
+          "copies/dq276yn8963#inscription-text"
          ],
-         "note": "ink, upper panel upright; the year figures are two 1s formed exactly like the '1.' of the day, and quite unlike the open-top 4s of the roll number 1445; second name written below the first, read as Wißler - possibly the hand recorded elsewhere in the corpus as Wössler"
+         "note": "\"1. 2. 11.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/dq276yn8963#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/dq276yn8963.jsonld#perforator",
+     "@id": "copies/dq276yn8963#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2866,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/dq276yn8963.jsonld#punch-diameter-annotation",
+        "@id": "copies/dq276yn8963#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dq276yn8963.jsonld#punch-diameter-belief",
+         "@id": "copies/dq276yn8963#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.6245,
        "n": 222,
        "@annotation": {
-        "@id": "copies/dq276yn8963.jsonld#chain-pitch-annotation",
+        "@id": "copies/dq276yn8963#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dq276yn8963.jsonld#chain-pitch-belief",
+         "@id": "copies/dq276yn8963#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.1464,
        "n": 11872,
        "@annotation": {
-        "@id": "copies/dq276yn8963.jsonld#advance-annotation",
+        "@id": "copies/dq276yn8963#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dq276yn8963.jsonld#advance-belief",
+         "@id": "copies/dq276yn8963#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

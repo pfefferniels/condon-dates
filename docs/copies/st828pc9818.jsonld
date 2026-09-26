@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/st828pc9818.jsonld",
+ "@id": "copies/st828pc9818",
  "title": "Condon Roll 101, WM 364",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/st828pc9818.jsonld#copy",
+   "@id": "copies/st828pc9818#copy",
    "label": "Condon Roll 101",
    "identifier": "Stanford Libraries CONDON ROLL 101",
    "seeAlso": "https://purl.stanford.edu/st828pc9818",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/st828pc9818.jsonld#inscription",
+       "@id": "copies/st828pc9818#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/st828pc9818%2Fst828pc9818_0001/3489,316951,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/st828pc9818.jsonld#inscription-text",
-        "text": "28724"
+        "@id": "copies/st828pc9818#inscription-text",
+        "text": "28724",
+        "@annotation": {
+         "@id": "copies/st828pc9818#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/st828pc9818#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/st828pc9818#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Five plain figures with no separators, preceded by a small dash. 28|7|24 is the only split giving a valid day and month, so 28 July 1924."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-07-28",
      "@annotation": {
-      "@id": "copies/st828pc9818.jsonld#date-annotation",
+      "@id": "copies/st828pc9818#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/st828pc9818.jsonld#date-belief",
+       "@id": "copies/st828pc9818#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/st828pc9818.jsonld#inscription-text"
+          "copies/st828pc9818#inscription-text"
          ],
-         "note": "Five plain figures with no separators, preceded by a small dash. 28|7|24 is the only split giving a valid day and month, so 28 July 1924."
+         "note": "The figures of \"28724\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/st828pc9818#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/st828pc9818.jsonld#perforator",
+     "@id": "copies/st828pc9818#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7351,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/st828pc9818.jsonld#punch-diameter-annotation",
+        "@id": "copies/st828pc9818#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/st828pc9818.jsonld#punch-diameter-belief",
+         "@id": "copies/st828pc9818#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6477,
        "n": 507,
        "@annotation": {
-        "@id": "copies/st828pc9818.jsonld#chain-pitch-annotation",
+        "@id": "copies/st828pc9818#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/st828pc9818.jsonld#chain-pitch-belief",
+         "@id": "copies/st828pc9818#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6804,
        "n": 32955,
        "@annotation": {
-        "@id": "copies/st828pc9818.jsonld#advance-annotation",
+        "@id": "copies/st828pc9818#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/st828pc9818.jsonld#advance-belief",
+         "@id": "copies/st828pc9818#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hn285vs3930.jsonld",
+ "@id": "copies/hn285vs3930",
  "title": "Condon Roll 316, WM 1064",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hn285vs3930.jsonld#copy",
+   "@id": "copies/hn285vs3930#copy",
    "label": "Condon Roll 316",
    "identifier": "Stanford Libraries CONDON ROLL 316",
    "seeAlso": "https://purl.stanford.edu/hn285vs3930",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hn285vs3930.jsonld#inscription",
+       "@id": "copies/hn285vs3930#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hn285vs3930%2Fhn285vs3930_0001/3514,287202,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hn285vs3930.jsonld#inscription-text",
-        "text": "91022."
+        "@id": "copies/hn285vs3930#inscription-text",
+        "text": "91022.",
+        "@annotation": {
+         "@id": "copies/hn285vs3930#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hn285vs3930#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hn285vs3930#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, five figures with no separators and a closing point, read as 9.10.22. The first figure is a looped 9, the rest plain"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-10-09",
      "@annotation": {
-      "@id": "copies/hn285vs3930.jsonld#date-annotation",
+      "@id": "copies/hn285vs3930#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hn285vs3930.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/hn285vs3930#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hn285vs3930.jsonld#inscription-text"
+          "copies/hn285vs3930#inscription-text"
          ],
-         "note": "pencil, five figures with no separators and a closing point, read as 9.10.22. The first figure is a looped 9, the rest plain"
+         "note": "The figures of \"91022\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hn285vs3930#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hn285vs3930.jsonld#perforator",
+     "@id": "copies/hn285vs3930#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7494,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hn285vs3930.jsonld#punch-diameter-annotation",
+        "@id": "copies/hn285vs3930#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hn285vs3930.jsonld#punch-diameter-belief",
+         "@id": "copies/hn285vs3930#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7721,
        "n": 291,
        "@annotation": {
-        "@id": "copies/hn285vs3930.jsonld#chain-pitch-annotation",
+        "@id": "copies/hn285vs3930#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hn285vs3930.jsonld#chain-pitch-belief",
+         "@id": "copies/hn285vs3930#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.2958,
        "n": 22374,
        "@annotation": {
-        "@id": "copies/hn285vs3930.jsonld#advance-annotation",
+        "@id": "copies/hn285vs3930#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hn285vs3930.jsonld#advance-belief",
+         "@id": "copies/hn285vs3930#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

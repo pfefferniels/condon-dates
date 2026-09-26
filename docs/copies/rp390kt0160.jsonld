@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rp390kt0160.jsonld",
+ "@id": "copies/rp390kt0160",
  "title": "Condon Roll 254, WM 879",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rp390kt0160.jsonld#copy",
+   "@id": "copies/rp390kt0160#copy",
    "label": "Condon Roll 254",
    "identifier": "Stanford Libraries CONDON ROLL 254",
    "seeAlso": "https://purl.stanford.edu/rp390kt0160",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rp390kt0160.jsonld#inscription",
+       "@id": "copies/rp390kt0160#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rp390kt0160%2Frp390kt0160_0001/3501,224339,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rp390kt0160.jsonld#inscription-text",
-        "text": "14 522"
+        "@id": "copies/rp390kt0160#inscription-text",
+        "text": "14 522",
+        "@annotation": {
+         "@id": "copies/rp390kt0160#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rp390kt0160#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rp390kt0160#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil; separators dropped, read as 14.5.22 on the gap after the day"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-05-14",
      "@annotation": {
-      "@id": "copies/rp390kt0160.jsonld#date-annotation",
+      "@id": "copies/rp390kt0160#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rp390kt0160.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/rp390kt0160#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rp390kt0160.jsonld#inscription-text"
+          "copies/rp390kt0160#inscription-text"
          ],
-         "note": "pencil; separators dropped, read as 14.5.22 on the gap after the day"
+         "note": "The figures of \"14 522\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rp390kt0160#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rp390kt0160.jsonld#perforator",
+     "@id": "copies/rp390kt0160#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7401,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rp390kt0160.jsonld#punch-diameter-annotation",
+        "@id": "copies/rp390kt0160#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rp390kt0160.jsonld#punch-diameter-belief",
+         "@id": "copies/rp390kt0160#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6501,
        "n": 361,
        "@annotation": {
-        "@id": "copies/rp390kt0160.jsonld#chain-pitch-annotation",
+        "@id": "copies/rp390kt0160#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rp390kt0160.jsonld#chain-pitch-belief",
+         "@id": "copies/rp390kt0160#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4065,
        "n": 15191,
        "@annotation": {
-        "@id": "copies/rp390kt0160.jsonld#advance-annotation",
+        "@id": "copies/rp390kt0160#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rp390kt0160.jsonld#advance-belief",
+         "@id": "copies/rp390kt0160#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

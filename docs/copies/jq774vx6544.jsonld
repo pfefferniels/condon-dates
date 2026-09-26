@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jq774vx6544.jsonld",
+ "@id": "copies/jq774vx6544",
  "title": "Condon Roll 776, WM 3309",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jq774vx6544.jsonld#copy",
+   "@id": "copies/jq774vx6544#copy",
    "label": "Condon Roll 776",
    "identifier": "Stanford Libraries CONDON ROLL 776",
    "seeAlso": "https://purl.stanford.edu/jq774vx6544",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jq774vx6544.jsonld#inscription",
+       "@id": "copies/jq774vx6544#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jq774vx6544%2Fjq774vx6544_0001/3510,218428,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jq774vx6544.jsonld#inscription-text",
-        "text": "221122"
+        "@id": "copies/jq774vx6544#inscription-text",
+        "text": "221122",
+        "@annotation": {
+         "@id": "copies/jq774vx6544#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jq774vx6544#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jq774vx6544#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Separators dropped; the two 1s of the month are thin cursive strokes. Crops 1 and 2 carry only long ruled lines along the roll"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-11-22",
      "@annotation": {
-      "@id": "copies/jq774vx6544.jsonld#date-annotation",
+      "@id": "copies/jq774vx6544#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jq774vx6544.jsonld#date-belief",
+       "@id": "copies/jq774vx6544#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jq774vx6544.jsonld#inscription-text"
+          "copies/jq774vx6544#inscription-text"
          ],
-         "note": "separators dropped; the two 1s of the month are thin cursive strokes. Crops 1 and 2 carry only long ruled lines along the roll"
+         "note": "The figures of \"221122\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jq774vx6544#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jq774vx6544.jsonld#perforator",
+     "@id": "copies/jq774vx6544#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7647,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jq774vx6544.jsonld#punch-diameter-annotation",
+        "@id": "copies/jq774vx6544#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jq774vx6544.jsonld#punch-diameter-belief",
+         "@id": "copies/jq774vx6544#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5752,
        "n": 176,
        "@annotation": {
-        "@id": "copies/jq774vx6544.jsonld#chain-pitch-annotation",
+        "@id": "copies/jq774vx6544#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jq774vx6544.jsonld#chain-pitch-belief",
+         "@id": "copies/jq774vx6544#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.3355,
        "n": 12355,
        "@annotation": {
-        "@id": "copies/jq774vx6544.jsonld#advance-annotation",
+        "@id": "copies/jq774vx6544#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jq774vx6544.jsonld#advance-belief",
+         "@id": "copies/jq774vx6544#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

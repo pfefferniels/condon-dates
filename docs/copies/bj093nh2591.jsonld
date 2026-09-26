@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/bj093nh2591.jsonld",
+ "@id": "copies/bj093nh2591",
  "title": "Condon Roll 156, WM 28",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/bj093nh2591.jsonld#copy",
+   "@id": "copies/bj093nh2591#copy",
    "label": "Condon Roll 156",
    "identifier": "Stanford Libraries CONDON ROLL 156",
    "seeAlso": "https://purl.stanford.edu/bj093nh2591",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/bj093nh2591.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/bj093nh2591#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 43693.08,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/bj093nh2591%2Fbj093nh2591_0001/3513,516490,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/bj093nh2591.jsonld#inscription-text",
-        "text": "81224"
+        "@id": "copies/bj093nh2591#inscription-text",
+        "text": "81224",
+        "@annotation": {
+         "@id": "copies/bj093nh2591#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/bj093nh2591#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/bj093nh2591#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Stamped; three short slashes of the stamp's bracket precede the figures. All five figures plain, read 8.12.24."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-12-08",
      "@annotation": {
-      "@id": "copies/bj093nh2591.jsonld#date-annotation",
+      "@id": "copies/bj093nh2591#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/bj093nh2591.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/bj093nh2591#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/bj093nh2591.jsonld#inscription-text"
+          "copies/bj093nh2591#inscription-text"
          ],
-         "note": "stamped; three short slashes of the stamp's bracket precede the figures. All five figures plain, read 8.12.24."
+         "note": "The figures of \"81224\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/bj093nh2591#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/bj093nh2591.jsonld#perforator",
+     "@id": "copies/bj093nh2591#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7664,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/bj093nh2591.jsonld#punch-diameter-annotation",
+        "@id": "copies/bj093nh2591#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bj093nh2591.jsonld#punch-diameter-belief",
+         "@id": "copies/bj093nh2591#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6449,
        "n": 346,
        "@annotation": {
-        "@id": "copies/bj093nh2591.jsonld#chain-pitch-annotation",
+        "@id": "copies/bj093nh2591#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bj093nh2591.jsonld#chain-pitch-belief",
+         "@id": "copies/bj093nh2591#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4105,
        "n": 46163,
        "@annotation": {
-        "@id": "copies/bj093nh2591.jsonld#advance-annotation",
+        "@id": "copies/bj093nh2591#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bj093nh2591.jsonld#advance-belief",
+         "@id": "copies/bj093nh2591#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/sk925fn6049.jsonld",
+ "@id": "copies/sk925fn6049",
  "title": "Condon Roll 551, WM 2021",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/sk925fn6049.jsonld#copy",
+   "@id": "copies/sk925fn6049#copy",
    "label": "Condon Roll 551",
    "identifier": "Stanford Libraries CONDON ROLL 551",
    "seeAlso": "https://purl.stanford.edu/sk925fn6049",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/sk925fn6049.jsonld#inscription",
+       "@id": "copies/sk925fn6049#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/sk925fn6049%2Fsk925fn6049_0001/3511,113987,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/sk925fn6049.jsonld#inscription-text",
-        "text": "11 1019"
+        "@id": "copies/sk925fn6049#inscription-text",
+        "text": "11 1019",
+        "@annotation": {
+         "@id": "copies/sk925fn6049#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/sk925fn6049#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/sk925fn6049#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Crop 1, lower panel upright; pencil, one line, no name. Six figures in two groups, 11 and 1019: three 1s sharing the same flag, a narrow closed 0, and a 9 with a round head and a descender below the line. Read as 11.10.19."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1919-10-11",
      "@annotation": {
-      "@id": "copies/sk925fn6049.jsonld#date-annotation",
+      "@id": "copies/sk925fn6049#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/sk925fn6049.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/sk925fn6049#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/sk925fn6049.jsonld#inscription-text"
+          "copies/sk925fn6049#inscription-text"
          ],
-         "note": "crop 1, lower panel upright; pencil, one line, no name. Six figures in two groups, 11 and 1019: three 1s sharing the same flag, a narrow closed 0, and a 9 with a round head and a descender below the line. Read as 11.10.19."
+         "note": "The figures of \"11 1019\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/sk925fn6049#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/sk925fn6049.jsonld#perforator",
+     "@id": "copies/sk925fn6049#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8273,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/sk925fn6049.jsonld#punch-diameter-annotation",
+        "@id": "copies/sk925fn6049#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sk925fn6049.jsonld#punch-diameter-belief",
+         "@id": "copies/sk925fn6049#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6646,
        "n": 288,
        "@annotation": {
-        "@id": "copies/sk925fn6049.jsonld#chain-pitch-annotation",
+        "@id": "copies/sk925fn6049#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sk925fn6049.jsonld#chain-pitch-belief",
+         "@id": "copies/sk925fn6049#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6334,
        "n": 4620,
        "@annotation": {
-        "@id": "copies/sk925fn6049.jsonld#advance-annotation",
+        "@id": "copies/sk925fn6049#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sk925fn6049.jsonld#advance-belief",
+         "@id": "copies/sk925fn6049#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

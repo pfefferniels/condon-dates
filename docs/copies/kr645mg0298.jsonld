@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/kr645mg0298.jsonld",
+ "@id": "copies/kr645mg0298",
  "title": "Condon Roll 431, WM 1405",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/kr645mg0298.jsonld#copy",
+   "@id": "copies/kr645mg0298#copy",
    "label": "Condon Roll 431",
    "identifier": "Stanford Libraries CONDON ROLL 431",
    "seeAlso": "https://purl.stanford.edu/kr645mg0298",
@@ -46,7 +47,7 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/kr645mg0298.jsonld#perforator",
+     "@id": "copies/kr645mg0298#perforator",
      "condition": {
       "conditionType": "setting",
       "advance": {
@@ -55,10 +56,10 @@
        "strength": 0.0729,
        "n": 6516,
        "@annotation": {
-        "@id": "copies/kr645mg0298.jsonld#advance-annotation",
+        "@id": "copies/kr645mg0298#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kr645mg0298.jsonld#advance-belief",
+         "@id": "copies/kr645mg0298#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

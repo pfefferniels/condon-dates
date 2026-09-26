@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/yg667ds7662.jsonld",
+ "@id": "copies/yg667ds7662",
  "title": "Condon Roll 172, WM 446",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/yg667ds7662.jsonld#copy",
+   "@id": "copies/yg667ds7662#copy",
    "label": "Condon Roll 172",
    "identifier": "Stanford Libraries CONDON ROLL 172",
    "seeAlso": "https://purl.stanford.edu/yg667ds7662",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/yg667ds7662.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/yg667ds7662#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 16100.51,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/yg667ds7662%2Fyg667ds7662_0001/3503,190322,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/yg667ds7662.jsonld#inscription-text",
-        "text": "7125"
+        "@id": "copies/yg667ds7662#inscription-text",
+        "text": "7125",
+        "@annotation": {
+         "@id": "copies/yg667ds7662#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/yg667ds7662#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/yg667ds7662#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Stamped, not written, in a plain sans-serif numeral type; here the UPPER panel is the upright one. The four figures are perfectly clear, the 2 filled in with ink, and two faint marks stand a little to the right of the 5, perhaps the remains of a further stamped character. Read as the usual run without separators, 7 1 25 gives 7 January 1925, which fits the corpus. What I cannot show from the image is that the group is a date at all rather than a roll or serial number, and there is no hand or separator to corroborate it, so the confidence is low for that reason and not because of any figure. Region 2 carries no writing."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1925-01-07",
      "@annotation": {
-      "@id": "copies/yg667ds7662.jsonld#date-annotation",
+      "@id": "copies/yg667ds7662#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/yg667ds7662.jsonld#date-belief",
+       "@id": "copies/yg667ds7662#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/yg667ds7662.jsonld#inscription-text"
+          "copies/yg667ds7662#inscription-text"
          ],
-         "note": "Stamped, not written, in a plain sans-serif numeral type; here the UPPER panel is the upright one. The four figures are perfectly clear, the 2 filled in with ink, and two faint marks stand a little to the right of the 5, perhaps the remains of a further stamped character. Read as the usual run without separators, 7 1 25 gives 7 January 1925, which fits the corpus. What I cannot show from the image is that the group is a date at all rather than a roll or serial number, and there is no hand or separator to corroborate it, so the confidence is low for that reason and not because of any figure. Region 2 carries no writing."
+         "note": "The figures of \"7125\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/yg667ds7662#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/yg667ds7662.jsonld#perforator",
+     "@id": "copies/yg667ds7662#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7072,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/yg667ds7662.jsonld#punch-diameter-annotation",
+        "@id": "copies/yg667ds7662#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yg667ds7662.jsonld#punch-diameter-belief",
+         "@id": "copies/yg667ds7662#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7324,
        "n": 324,
        "@annotation": {
-        "@id": "copies/yg667ds7662.jsonld#chain-pitch-annotation",
+        "@id": "copies/yg667ds7662#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yg667ds7662.jsonld#chain-pitch-belief",
+         "@id": "copies/yg667ds7662#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4452,
        "n": 11711,
        "@annotation": {
-        "@id": "copies/yg667ds7662.jsonld#advance-annotation",
+        "@id": "copies/yg667ds7662#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yg667ds7662.jsonld#advance-belief",
+         "@id": "copies/yg667ds7662#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hm523dq5554.jsonld",
+ "@id": "copies/hm523dq5554",
  "title": "Condon Roll 238, WM 876",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hm523dq5554.jsonld#copy",
+   "@id": "copies/hm523dq5554#copy",
    "label": "Condon Roll 238",
    "identifier": "Stanford Libraries CONDON ROLL 238",
    "seeAlso": "https://purl.stanford.edu/hm523dq5554",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hm523dq5554.jsonld#inscription",
+       "@id": "copies/hm523dq5554#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hm523dq5554%2Fhm523dq5554_0001/3358,511174,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hm523dq5554.jsonld#inscription-text",
-        "text": "876  26.3.09  [signature]"
+        "@id": "copies/hm523dq5554#inscription-text",
+        "text": "876  26.3.09  [signature]",
+        "@annotation": {
+         "@id": "copies/hm523dq5554#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hm523dq5554#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hm523dq5554#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink; month figure arguable (3, possibly 5); a cursive signature follows the date but I cannot read it"
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "B. Schäfer",
       "sameAs": [],
-      "@id": "hands.jsonld#b-schaefer",
+      "@id": "hands#b-schaefer",
       "@annotation": {
-       "@id": "copies/hm523dq5554.jsonld#hand-annotation",
+       "@id": "copies/hm523dq5554#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/hm523dq5554.jsonld#hand-belief",
+        "@id": "copies/hm523dq5554#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/hm523dq5554.jsonld#inscription-text"
+           "copies/hm523dq5554#inscription-text"
           ],
           "note": "No name was read off it."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1909-03-26",
      "@annotation": {
-      "@id": "copies/hm523dq5554.jsonld#date-annotation",
+      "@id": "copies/hm523dq5554#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hm523dq5554.jsonld#date-belief",
+       "@id": "copies/hm523dq5554#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hm523dq5554.jsonld#inscription-text"
+          "copies/hm523dq5554#inscription-text"
          ],
-         "note": "ink; month figure arguable (3, possibly 5); a cursive signature follows the date but I cannot read it"
+         "note": "\"26.3.09\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hm523dq5554#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hm523dq5554.jsonld#perforator",
+     "@id": "copies/hm523dq5554#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2663,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hm523dq5554.jsonld#punch-diameter-annotation",
+        "@id": "copies/hm523dq5554#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hm523dq5554.jsonld#punch-diameter-belief",
+         "@id": "copies/hm523dq5554#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.4936,
        "n": 266,
        "@annotation": {
-        "@id": "copies/hm523dq5554.jsonld#chain-pitch-annotation",
+        "@id": "copies/hm523dq5554#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hm523dq5554.jsonld#chain-pitch-belief",
+         "@id": "copies/hm523dq5554#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.16,
        "n": 32487,
        "@annotation": {
-        "@id": "copies/hm523dq5554.jsonld#advance-annotation",
+        "@id": "copies/hm523dq5554#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hm523dq5554.jsonld#advance-belief",
+         "@id": "copies/hm523dq5554#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

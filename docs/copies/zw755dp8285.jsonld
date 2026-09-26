@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/zw755dp8285.jsonld",
+ "@id": "copies/zw755dp8285",
  "title": "Condon Roll 183, WM 483",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/zw755dp8285.jsonld#copy",
+   "@id": "copies/zw755dp8285#copy",
    "label": "Condon Roll 183",
    "identifier": "Stanford Libraries CONDON ROLL 183",
    "seeAlso": "https://purl.stanford.edu/zw755dp8285",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/zw755dp8285.jsonld#inscription",
+       "@id": "copies/zw755dp8285#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/zw755dp8285%2Fzw755dp8285_0001/3525,329600,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/zw755dp8285.jsonld#inscription-text",
-        "text": "5724"
+        "@id": "copies/zw755dp8285#inscription-text",
+        "text": "5724",
+        "@annotation": {
+         "@id": "copies/zw755dp8285#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/zw755dp8285#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/zw755dp8285#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Four cursive digits at the roll edge, read as 5.7.24; not the catalogue number, since the printed leader label in region 3 reads 'WELTE-MIGNON No. 483 / Faust-Walzer / Fr. Liszt / Gespielt von [facsimile signature]'"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-07-05",
      "@annotation": {
-      "@id": "copies/zw755dp8285.jsonld#date-annotation",
+      "@id": "copies/zw755dp8285#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/zw755dp8285.jsonld#date-belief",
+       "@id": "copies/zw755dp8285#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/zw755dp8285.jsonld#inscription-text"
+          "copies/zw755dp8285#inscription-text"
          ],
-         "note": "four cursive digits at the roll edge, read as 5.7.24; not the catalogue number, since the printed leader label in region 3 reads 'WELTE-MIGNON No. 483 / Faust-Walzer / Fr. Liszt / Gespielt von [facsimile signature]'"
+         "note": "The figures of \"5724\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/zw755dp8285#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/zw755dp8285.jsonld#perforator",
+     "@id": "copies/zw755dp8285#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.785,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/zw755dp8285.jsonld#punch-diameter-annotation",
+        "@id": "copies/zw755dp8285#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zw755dp8285.jsonld#punch-diameter-belief",
+         "@id": "copies/zw755dp8285#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5935,
        "n": 352,
        "@annotation": {
-        "@id": "copies/zw755dp8285.jsonld#chain-pitch-annotation",
+        "@id": "copies/zw755dp8285#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zw755dp8285.jsonld#chain-pitch-belief",
+         "@id": "copies/zw755dp8285#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.3923,
        "n": 20701,
        "@annotation": {
-        "@id": "copies/zw755dp8285.jsonld#advance-annotation",
+        "@id": "copies/zw755dp8285#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zw755dp8285.jsonld#advance-belief",
+         "@id": "copies/zw755dp8285#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

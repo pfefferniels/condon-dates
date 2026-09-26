@@ -7,22 +7,24 @@ when it was punched, and how the perforator was set. Every value that rests on a
 carries the belief it rests on, as linked-rolls annotates a statement, and every belief
 has an IRI of its own, so that an edition can take it as the premise of its own.
 
-    docs/copies/<druid>.jsonld   one copy, the document to cite
-    docs/copies.jsonld           the register, every copy in one document
+    docs/copies/<druid>.jsonld   one copy, the document to cite, at copies/<druid>
+    docs/copies.jsonld           the register, every copy in one document, at copies
     docs/hands.jsonld            the hands of hands.json, which the copies name as actors
     docs/context.jsonld          the terms linked-rolls does not have yet
 
-The IRIs are fragments of the document that states them, so they resolve on a static
-host: copies/mf320jq4997.jsonld#copy is the roll, #date-belief the belief in its date.
-They are built from the druid and the role of the node and never from a random number,
-so that a rebuild keeps them.
+The IRIs stand on w3id.org, which w3id/.htaccess redirects to the files on GitHub Pages,
+and are fragments of the document that states them: copies/mf320jq4997#copy is the
+roll, copies/mf320jq4997#date-belief the belief in its date. They are built from the
+druid and the role of the node and never from a random number, so a rebuild keeps them.
 """
 import calendar
 import html
 import json
+import re
 from pathlib import Path
 
-BASE = "https://pfefferniels.github.io/condon-dates/"
+BASE = "https://w3id.org/condon-rolls/"
+LICENSE = "https://creativecommons.org/licenses/by/4.0/"
 REO = "https://w3id.org/reo/context.jsonld"
 
 STACKS = "https://stacks.stanford.edu/image/iiif"
@@ -39,10 +41,20 @@ DPI = 300.25                  # SUPRA's resolution, along the roll and across it
 MM_PER_INCH = 25.4
 TEILUNG = 3.194               # mm, the median track pitch of the red rolls, where a scan gives none
 
-# How sure a date is, from how plain its reading is (punch-225/dates/reading.md): every
-# figure plain, one figure arguable with the date not in doubt, or a reading that could
-# be another date.
-DATED = {"high": "true", "medium": "likely", "low": "possible"}
+# How sure a transcription is, from how plain the reader found the figures of its date
+# (punch-225/dates/reading.md). A reading that gives no date was not graded.
+GRADES = {
+    "high": ("true", "every figure is plain."),
+    "medium": ("likely", "one figure is arguable."),
+    "low": ("possible", "the figures could give another date."),
+}
+UNGRADED = "possible"
+
+# A date is held no surer than the transcription it is read from, and where the paper
+# runs its figures together, no surer than this: the figures are read, the grouping into
+# day, month and year is inferred.
+GROUPED = "likely"
+CERTAINTIES = ("true", "likely", "possible", "unlikely", "false")
 
 # A hand clustered by letterform with other rolls is likely the one named; one read off
 # a single roll, possibly.
@@ -58,7 +70,11 @@ LEAST_STRENGTH, WHOLE = 0.35, 0.15
 
 
 def iri(druid, part=None):
-    return f"copies/{druid}.jsonld" + (f"#{part}" if part else "")
+    return f"copies/{druid}" + (f"#{part}" if part else "")
+
+
+def least(*certainties):
+    return max(certainties, key=CERTAINTIES.index)
 
 
 def believed(druid, name, certainty, reasons):
@@ -97,6 +113,20 @@ def medium_of(notes):
     return first if first in ("pencil", "ink", "crayon") else None
 
 
+def technique_of(notes):
+    """Later rolls are stamped rather than written, and the reader says so."""
+    return "stamp" if re.search(r"\bstamp", notes or "", re.I) else "handwriting"
+
+
+def run_together(reading):
+    """Whether the paper leaves the grouping of the date's figures open, as in 24323 or 14. 114."""
+    return any(len(g) > 2 and not (len(g) == 4 and g.startswith("19")) for g in re.findall(r"\d+", reading or ""))
+
+
+def transcription_certainty(reading):
+    return GRADES[reading["confidence"]][0] if reading["confidence"] in GRADES else UNGRADED
+
+
 def inscription(druid, roll, reading, teilung):
     """The writing the date and the hand were read from, placed on the paper by its crop.
 
@@ -112,16 +142,28 @@ def inscription(druid, roll, reading, teilung):
     writing = {
         "@type": "Writing",
         "@id": iri(druid, "inscription"),
-        "technique": "handwriting",
+        "technique": technique_of(reading["notes"]),
         "horizontal": {"unit": "mm", "from": mm(y), "to": mm(y + h)},
         "vertical": {"unit": "track", "from": int((x - offset) // separation),
                      "to": -int(-(x + w - offset) // separation)},
         "depiction": f"{scan_of(druid)}{reading['crop']['box']}/full/{reading['crop']['rot']}/default.jpg",
         "transcription": {"@type": "text", "@id": iri(druid, "inscription-text"),
-                          "text": reading["inscription"]},
+                          "text": reading["inscription"],
+                          **believed(druid, "transcription", transcription_certainty(reading),
+                                     [transcribed(druid, reading)])},
     }
     medium = medium_of(reading["notes"])
     return {**writing, "medium": medium} if medium else writing
+
+
+def transcribed(druid, reading):
+    """The reading of the writing into text, graded on the figures of its date."""
+    grade = GRADES.get(reading["confidence"])
+    graded = (f"Graded {reading['confidence']} on the figures of the date: {grade[1]}" if grade
+              else "No date was read in it, so its figures were not graded.")
+    notes = reading["notes"] and reading["notes"][0].upper() + reading["notes"][1:]
+    return {"@type": "meaningComprehension", "comprehends": [iri(druid, "inscription")],
+            "note": " ".join(n for n in (graded, notes) if n)}
 
 
 def comprehension(druid, note):
@@ -138,23 +180,35 @@ def hand(druid, reading, clusters, single):
     read = f'Read as "{reading["hand"]}".' if reading["hand"] else "No name was read off it."
     source = reading.get("hand_source")
     notes = [read, source and f"{source[0].upper()}{source[1:].rstrip('.')}."]
-    notes += [f'Countersigned by {c["reading"]} ({BASE}hands.jsonld#{c["id"]}); an act has one actor '
+    notes += [f'Countersigned by {c["reading"]} ({BASE}hands#{c["id"]}); an act has one actor '
               "in linked-rolls, so the countersignature is stated here only." for c in clusters if c is not signer]
     reasons = [comprehension(druid, " ".join(n for n in notes if n))]
     if signer:
-        reasons.append({"@type": "inference", "premises": [], "used": [f"{BASE}hands.jsonld"],
+        reasons.append({"@type": "inference", "premises": [], "used": [f"{BASE}hands"],
                         "note": "The signature is clustered with the hand's other rolls by comparing "
                                 "the inscription images, not by the name read."})
-    actor = {"name": name, "sameAs": [], **({"@id": f"hands.jsonld#{signer['id']}"} if signer else {})}
+    actor = {"name": name, "sameAs": [], **({"@id": f"hands#{signer['id']}"} if signer else {})}
     return {**actor, **believed(druid, "hand", CLUSTERED if signer else UNCLUSTERED, reasons)}
 
 
 def dating(druid, reading):
-    certainty = DATED.get(reading["confidence"])
-    if not reading["date_iso"] or not certainty:
+    """The punch date, read out of the transcription and held no surer than it."""
+    iso, given = reading["date_iso"], reading["reading"]
+    if not iso or reading["confidence"] not in GRADES:
         return None
-    return {**span(reading["date_iso"]),
-            **believed(druid, "date", certainty, [comprehension(druid, reading["notes"])])}
+    grouped = run_together(given)
+    certainty = least(transcription_certainty(reading), *([GROUPED] if grouped else []))
+    read = (f'The figures of "{given}" are run together, and are grouped day, month, year, '
+            "the order the workshop wrote its dates in" if grouped
+            else f'"{given}" is read day first, as the workshop wrote its dates')
+    partial = {4: " Only the year is read.", 7: " The day is not read."}.get(len(iso), "")
+    held = ("It is held as sure as the transcription, and no surer than likely, since the paper "
+            "does not group the figures." if grouped else "It is held as sure as the transcription.")
+    return {**span(iso), **believed(druid, "date", certainty, [
+        comprehension(druid, f"{read}, with a two-digit year in the 1900s "
+                             f"(punch-225/dates/reading.md).{partial}"),
+        {"@type": "inference", "premises": [iri(druid, "transcription-belief")], "note": held},
+    ])}
 
 
 def measured(note, *used):
@@ -261,10 +315,11 @@ def contexts():
 def hands_document(hands):
     return {
         "@context": contexts(),
-        "@id": "hands.jsonld",
+        "@id": "hands",
         "title": "The hands that signed the Condon Welte rolls",
+        "license": LICENSE,
         "comment": hands["_"],
-        "@included": [{"@id": f"hands.jsonld#{c['id']}", "name": c["reading"], "sameAs": [],
+        "@included": [{"@id": f"hands#{c['id']}", "name": c["reading"], "sameAs": [],
                        "comment": c["note"]} for c in hands["clusters"]],
     }
 
@@ -289,15 +344,20 @@ def build(docs, catalogue, readings, hands, perforator, published):
                       singles.get(roll["druid"]), measures.get(roll["druid"], {}), perforator["commit"])
               for roll in catalogue]
 
-    for copy in copies:
-        document = copy["@id"].split("#")[0]
-        write(docs / document, {"@context": contexts(), "@id": document,
-                                "title": f"{copy['label']}, {copy['exemplifies']['catalogueNumber']}",
-                                "isPartOf": "copies.jsonld", "copies": [copy]}, indent=1)
+    for roll, copy in zip(catalogue, copies):
+        write(docs / "copies" / f"{roll['druid']}.jsonld", {
+            "@context": contexts(),
+            "@id": iri(roll["druid"]),
+            "title": f"{copy['label']}, {copy['exemplifies']['catalogueNumber']}",
+            "license": LICENSE,
+            "isPartOf": "copies",
+            "copies": [copy],
+        }, indent=1)
     write(docs / "copies.jsonld", {
         "@context": contexts(),
-        "@id": "copies.jsonld",
+        "@id": "copies",
         "title": "The red Welte rolls of the Condon collection at Stanford",
+        "license": LICENSE,
         "creation": {"publisher": PUBLISHER, "publicationDate": published},
         "copies": copies,
     })

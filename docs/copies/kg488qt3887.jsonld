@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/kg488qt3887.jsonld",
+ "@id": "copies/kg488qt3887",
  "title": "Condon Roll 453, WM 1447",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/kg488qt3887.jsonld#copy",
+   "@id": "copies/kg488qt3887#copy",
    "label": "Condon Roll 453",
    "identifier": "Stanford Libraries CONDON ROLL 453",
    "seeAlso": "https://purl.stanford.edu/kg488qt3887",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/kg488qt3887.jsonld#inscription",
+       "@id": "copies/kg488qt3887#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/kg488qt3887%2Fkg488qt3887_0001/3497,177140,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/kg488qt3887.jsonld#inscription-text",
-        "text": "1447  6 5 09  [short name, not read]"
+        "@id": "copies/kg488qt3887#inscription-text",
+        "text": "1447  6 5 09  [short name, not read]",
+        "@annotation": {
+         "@id": "copies/kg488qt3887#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/kg488qt3887#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/kg488qt3887#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, upper panel upright, no separators between the date figures. The 6 has a single bowl and a curved ascender, the 5 is the two-stroke form with its top bar written separately, and 09 is plain. In the roll number the fourth figure is not shaped like the leading 1: it reads most nearly as 7, though 9 cannot be excluded. A short surname follows the date, apparently beginning May- and ending in three minims; I could not read it with confidence."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1909-05-06",
      "@annotation": {
-      "@id": "copies/kg488qt3887.jsonld#date-annotation",
+      "@id": "copies/kg488qt3887#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/kg488qt3887.jsonld#date-belief",
+       "@id": "copies/kg488qt3887#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/kg488qt3887.jsonld#inscription-text"
+          "copies/kg488qt3887#inscription-text"
          ],
-         "note": "pencil, upper panel upright, no separators between the date figures. The 6 has a single bowl and a curved ascender, the 5 is the two-stroke form with its top bar written separately, and 09 is plain. In the roll number the fourth figure is not shaped like the leading 1: it reads most nearly as 7, though 9 cannot be excluded. A short surname follows the date, apparently beginning May- and ending in three minims; I could not read it with confidence."
+         "note": "\"6 5 09\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/kg488qt3887#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/kg488qt3887.jsonld#perforator",
+     "@id": "copies/kg488qt3887#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1868,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/kg488qt3887.jsonld#punch-diameter-annotation",
+        "@id": "copies/kg488qt3887#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kg488qt3887.jsonld#punch-diameter-belief",
+         "@id": "copies/kg488qt3887#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.5741,
        "n": 302,
        "@annotation": {
-        "@id": "copies/kg488qt3887.jsonld#chain-pitch-annotation",
+        "@id": "copies/kg488qt3887#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kg488qt3887.jsonld#chain-pitch-belief",
+         "@id": "copies/kg488qt3887#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.2177,
        "n": 12996,
        "@annotation": {
-        "@id": "copies/kg488qt3887.jsonld#advance-annotation",
+        "@id": "copies/kg488qt3887#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kg488qt3887.jsonld#advance-belief",
+         "@id": "copies/kg488qt3887#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

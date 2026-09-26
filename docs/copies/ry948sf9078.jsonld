@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ry948sf9078.jsonld",
+ "@id": "copies/ry948sf9078",
  "title": "Condon Roll 290, WM 1032",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ry948sf9078.jsonld#copy",
+   "@id": "copies/ry948sf9078#copy",
    "label": "Condon Roll 290",
    "identifier": "Stanford Libraries CONDON ROLL 290",
    "seeAlso": "https://purl.stanford.edu/ry948sf9078",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ry948sf9078.jsonld#inscription",
+       "@id": "copies/ry948sf9078#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ry948sf9078%2Fry948sf9078_0001/3509,292333,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ry948sf9078.jsonld#inscription-text",
-        "text": "7222"
+        "@id": "copies/ry948sf9078#inscription-text",
+        "text": "7222",
+        "@annotation": {
+         "@id": "copies/ry948sf9078#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ry948sf9078#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ry948sf9078#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, along the roll; four figures run together without separators, a crossed German 7 followed by three cursive 2s, so 7.2.22. All four figures are plain; the grouping into day, month and year follows the convention, no separators are written. The roll number comes from crop 1, which carries '110' in pencil and nothing else. No name with either."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-02-07",
      "@annotation": {
-      "@id": "copies/ry948sf9078.jsonld#date-annotation",
+      "@id": "copies/ry948sf9078#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ry948sf9078.jsonld#date-belief",
+       "@id": "copies/ry948sf9078#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ry948sf9078.jsonld#inscription-text"
+          "copies/ry948sf9078#inscription-text"
          ],
-         "note": "pencil, along the roll; four figures run together without separators, a crossed German 7 followed by three cursive 2s, so 7.2.22. All four figures are plain; the grouping into day, month and year follows the convention, no separators are written. The roll number comes from crop 1, which carries '110' in pencil and nothing else. No name with either."
+         "note": "\"7.2.22\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ry948sf9078#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ry948sf9078.jsonld#perforator",
+     "@id": "copies/ry948sf9078#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.664,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ry948sf9078.jsonld#punch-diameter-annotation",
+        "@id": "copies/ry948sf9078#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ry948sf9078.jsonld#punch-diameter-belief",
+         "@id": "copies/ry948sf9078#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.8874,
        "n": 219,
        "@annotation": {
-        "@id": "copies/ry948sf9078.jsonld#chain-pitch-annotation",
+        "@id": "copies/ry948sf9078#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ry948sf9078.jsonld#chain-pitch-belief",
+         "@id": "copies/ry948sf9078#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4051,
        "n": 16931,
        "@annotation": {
-        "@id": "copies/ry948sf9078.jsonld#advance-annotation",
+        "@id": "copies/ry948sf9078#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ry948sf9078.jsonld#advance-belief",
+         "@id": "copies/ry948sf9078#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

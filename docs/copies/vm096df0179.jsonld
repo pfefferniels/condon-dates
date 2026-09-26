@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/vm096df0179.jsonld",
+ "@id": "copies/vm096df0179",
  "title": "Condon Roll 104, WM 363",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/vm096df0179.jsonld#copy",
+   "@id": "copies/vm096df0179#copy",
    "label": "Condon Roll 104",
    "identifier": "Stanford Libraries CONDON ROLL 104",
    "seeAlso": "https://purl.stanford.edu/vm096df0179",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/vm096df0179.jsonld#inscription",
+       "@id": "copies/vm096df0179#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/vm096df0179%2Fvm096df0179_0001/3488,382282,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/vm096df0179.jsonld#inscription-text",
-        "text": "№ 363.  7. 1108.  Roth"
+        "@id": "copies/vm096df0179#inscription-text",
+        "text": "№ 363.  7. 1108.  Roth",
+        "@annotation": {
+         "@id": "copies/vm096df0179#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/vm096df0179#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/vm096df0179#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Faint pencil. '№ 363.' and 'Roth' are clear. The four figures after the day read 1-1-0-8, i.e. month 11 and year 08 with the separators dropped; if the second figure were a 9 the group would be the year '1908' and the inscription would carry no month. The day is written with a flat top bar and could be a 1 rather than a 7."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Roth",
       "sameAs": [],
-      "@id": "hands.jsonld#roth",
+      "@id": "hands#roth",
       "@annotation": {
-       "@id": "copies/vm096df0179.jsonld#hand-annotation",
+       "@id": "copies/vm096df0179#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/vm096df0179.jsonld#hand-belief",
+        "@id": "copies/vm096df0179#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/vm096df0179.jsonld#inscription-text"
+           "copies/vm096df0179#inscription-text"
           ],
           "note": "Read as \"Roth\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1908-11-07",
      "@annotation": {
-      "@id": "copies/vm096df0179.jsonld#date-annotation",
+      "@id": "copies/vm096df0179#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/vm096df0179.jsonld#date-belief",
+       "@id": "copies/vm096df0179#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/vm096df0179.jsonld#inscription-text"
+          "copies/vm096df0179#inscription-text"
          ],
-         "note": "Faint pencil. '№ 363.' and 'Roth' are clear. The four figures after the day read 1-1-0-8, i.e. month 11 and year 08 with the separators dropped; if the second figure were a 9 the group would be the year '1908' and the inscription would carry no month. The day is written with a flat top bar and could be a 1 rather than a 7."
+         "note": "\"7. 11. 08\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/vm096df0179#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/vm096df0179.jsonld#perforator",
+     "@id": "copies/vm096df0179#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1487,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/vm096df0179.jsonld#punch-diameter-annotation",
+        "@id": "copies/vm096df0179#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vm096df0179.jsonld#punch-diameter-belief",
+         "@id": "copies/vm096df0179#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.5527,
        "n": 339,
        "@annotation": {
-        "@id": "copies/vm096df0179.jsonld#chain-pitch-annotation",
+        "@id": "copies/vm096df0179#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vm096df0179.jsonld#chain-pitch-belief",
+         "@id": "copies/vm096df0179#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.1301,
        "n": 32049,
        "@annotation": {
-        "@id": "copies/vm096df0179.jsonld#advance-annotation",
+        "@id": "copies/vm096df0179#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vm096df0179.jsonld#advance-belief",
+         "@id": "copies/vm096df0179#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

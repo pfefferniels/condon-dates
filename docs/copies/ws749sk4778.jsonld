@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ws749sk4778.jsonld",
+ "@id": "copies/ws749sk4778",
  "title": "Condon Roll 341, WM 1203",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ws749sk4778.jsonld#copy",
+   "@id": "copies/ws749sk4778#copy",
    "label": "Condon Roll 341",
    "identifier": "Stanford Libraries CONDON ROLL 341",
    "seeAlso": "https://purl.stanford.edu/ws749sk4778",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ws749sk4778.jsonld#inscription",
+       "@id": "copies/ws749sk4778#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ws749sk4778%2Fws749sk4778_0001/3507,124533,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ws749sk4778.jsonld#inscription-text",
-        "text": "15825"
+        "@id": "copies/ws749sk4778#inscription-text",
+        "text": "15825",
+        "@annotation": {
+         "@id": "copies/ws749sk4778#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ws749sk4778#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ws749sk4778#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink, one sloping line of five figures with no separators, read 15.8.25 on the corpus convention. The third figure is the 8 of these hands: under threshold it resolves into an upper narrow loop and a lower bowl joined at a crossing node, not the single stroke of a 6. If it were a 6 the month would be June instead."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1925-08-15",
      "@annotation": {
-      "@id": "copies/ws749sk4778.jsonld#date-annotation",
+      "@id": "copies/ws749sk4778#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ws749sk4778.jsonld#date-belief",
+       "@id": "copies/ws749sk4778#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ws749sk4778.jsonld#inscription-text"
+          "copies/ws749sk4778#inscription-text"
          ],
-         "note": "Ink, one sloping line of five figures with no separators, read 15.8.25 on the corpus convention. The third figure is the 8 of these hands: under threshold it resolves into an upper narrow loop and a lower bowl joined at a crossing node, not the single stroke of a 6. If it were a 6 the month would be June instead."
+         "note": "The figures of \"15825\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ws749sk4778#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ws749sk4778.jsonld#perforator",
+     "@id": "copies/ws749sk4778#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7334,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ws749sk4778.jsonld#punch-diameter-annotation",
+        "@id": "copies/ws749sk4778#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ws749sk4778.jsonld#punch-diameter-belief",
+         "@id": "copies/ws749sk4778#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6419,
        "n": 272,
        "@annotation": {
-        "@id": "copies/ws749sk4778.jsonld#chain-pitch-annotation",
+        "@id": "copies/ws749sk4778#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ws749sk4778.jsonld#chain-pitch-belief",
+         "@id": "copies/ws749sk4778#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6594,
        "n": 4945,
        "@annotation": {
-        "@id": "copies/ws749sk4778.jsonld#advance-annotation",
+        "@id": "copies/ws749sk4778#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ws749sk4778.jsonld#advance-belief",
+         "@id": "copies/ws749sk4778#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

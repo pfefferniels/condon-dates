@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/bf644yy6536.jsonld",
+ "@id": "copies/bf644yy6536",
  "title": "Condon Roll 489, WM 1480",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/bf644yy6536.jsonld#copy",
+   "@id": "copies/bf644yy6536#copy",
    "label": "Condon Roll 489",
    "identifier": "Stanford Libraries CONDON ROLL 489",
    "seeAlso": "https://purl.stanford.edu/bf644yy6536",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/bf644yy6536.jsonld#inscription",
+       "@id": "copies/bf644yy6536#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/bf644yy6536%2Fbf644yy6536_0001/3487,198603,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/bf644yy6536.jsonld#inscription-text",
-        "text": "1450.  11.[2 or 3].14."
+        "@id": "copies/bf644yy6536#inscription-text",
+        "text": "1450.  11.[2 or 3].14.",
+        "@annotation": {
+         "@id": "copies/bf644yy6536#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/bf644yy6536#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/bf644yy6536#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Crop 1, lower panel upright, pencil, one line in two groups; crop 2 is a torn roll end with no writing. The writing sits hard against the top edge of the crop, so the upper third of every figure is cut off, in both panels alike. Group 1 reads 1450. and is taken as the roll number. Group 2 is 11 . X . 14 .: the day 11 and the year 14 are firm, the month figure is a thick stroke with a base sweeping right, either a 2 or a 3, and the clipped top is exactly what would tell them apart. Day and year alone give 1914; the month is left open rather than guessed."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -80,18 +98,25 @@
      "after": "1914-01-01",
      "before": "1914-12-31",
      "@annotation": {
-      "@id": "copies/bf644yy6536.jsonld#date-annotation",
+      "@id": "copies/bf644yy6536#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/bf644yy6536.jsonld#date-belief",
+       "@id": "copies/bf644yy6536#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/bf644yy6536.jsonld#inscription-text"
+          "copies/bf644yy6536#inscription-text"
          ],
-         "note": "crop 1, lower panel upright, pencil, one line in two groups; crop 2 is a torn roll end with no writing. The writing sits hard against the top edge of the crop, so the upper third of every figure is cut off, in both panels alike. Group 1 reads 1450. and is taken as the roll number. Group 2 is 11 . X . 14 .: the day 11 and the year 14 are firm, the month figure is a thick stroke with a base sweeping right, either a 2 or a 3, and the clipped top is exactly what would tell them apart. Day and year alone give 1914; the month is left open rather than guessed."
+         "note": "\"11.?.14\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). Only the year is read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/bf644yy6536#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/bf644yy6536.jsonld#perforator",
+     "@id": "copies/bf644yy6536#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1479,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/bf644yy6536.jsonld#punch-diameter-annotation",
+        "@id": "copies/bf644yy6536#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bf644yy6536.jsonld#punch-diameter-belief",
+         "@id": "copies/bf644yy6536#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7917,
        "n": 191,
        "@annotation": {
-        "@id": "copies/bf644yy6536.jsonld#chain-pitch-annotation",
+        "@id": "copies/bf644yy6536#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bf644yy6536.jsonld#chain-pitch-belief",
+         "@id": "copies/bf644yy6536#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.1689,
        "n": 6884,
        "@annotation": {
-        "@id": "copies/bf644yy6536.jsonld#advance-annotation",
+        "@id": "copies/bf644yy6536#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bf644yy6536.jsonld#advance-belief",
+         "@id": "copies/bf644yy6536#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

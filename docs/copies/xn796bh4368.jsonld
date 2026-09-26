@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xn796bh4368.jsonld",
+ "@id": "copies/xn796bh4368",
  "title": "Condon Roll 46, WM 216",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xn796bh4368.jsonld#copy",
+   "@id": "copies/xn796bh4368#copy",
    "label": "Condon Roll 46",
    "identifier": "Stanford Libraries CONDON ROLL 46",
    "seeAlso": "https://purl.stanford.edu/xn796bh4368",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xn796bh4368.jsonld#inscription",
+       "@id": "copies/xn796bh4368#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xn796bh4368%2Fxn796bh4368_0001/3190,104000,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xn796bh4368.jsonld#inscription-text",
-        "text": "C. Herrmann"
+        "@id": "copies/xn796bh4368#inscription-text",
+        "text": "C. Herrmann",
+        "@annotation": {
+         "@id": "copies/xn796bh4368#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xn796bh4368#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xn796bh4368#inscription"
+            ],
+            "note": "No date was read in it, so its figures were not graded. A signature in ink with a long flourish, no date anywhere in the crop. The initial is a looped capital read as C, but G or J would also fit; the surname reads Herrmann. Crops 2 to 4 blank."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "J. Herrmann",
       "sameAs": [],
-      "@id": "hands.jsonld#herrmann",
+      "@id": "hands#herrmann",
       "@annotation": {
-       "@id": "copies/xn796bh4368.jsonld#hand-annotation",
+       "@id": "copies/xn796bh4368#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/xn796bh4368.jsonld#hand-belief",
+        "@id": "copies/xn796bh4368#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/xn796bh4368.jsonld#inscription-text"
+           "copies/xn796bh4368#inscription-text"
           ],
           "note": "Read as \"C. Herrmann\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -108,17 +126,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xn796bh4368.jsonld#perforator",
+     "@id": "copies/xn796bh4368#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.9127,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xn796bh4368.jsonld#punch-diameter-annotation",
+        "@id": "copies/xn796bh4368#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xn796bh4368.jsonld#punch-diameter-belief",
+         "@id": "copies/xn796bh4368#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -140,10 +158,10 @@
        "bridge": 0.9359,
        "n": 448,
        "@annotation": {
-        "@id": "copies/xn796bh4368.jsonld#chain-pitch-annotation",
+        "@id": "copies/xn796bh4368#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xn796bh4368.jsonld#chain-pitch-belief",
+         "@id": "copies/xn796bh4368#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -164,10 +182,10 @@
        "strength": 0.2004,
        "n": 8683,
        "@annotation": {
-        "@id": "copies/xn796bh4368.jsonld#advance-annotation",
+        "@id": "copies/xn796bh4368#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xn796bh4368.jsonld#advance-belief",
+         "@id": "copies/xn796bh4368#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

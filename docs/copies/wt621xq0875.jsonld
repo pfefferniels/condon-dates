@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/wt621xq0875.jsonld",
+ "@id": "copies/wt621xq0875",
  "title": "Condon Roll 206, WM 561",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/wt621xq0875.jsonld#copy",
+   "@id": "copies/wt621xq0875#copy",
    "label": "Condon Roll 206",
    "identifier": "Stanford Libraries CONDON ROLL 206",
    "seeAlso": "https://purl.stanford.edu/wt621xq0875",
@@ -50,17 +51,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/wt621xq0875.jsonld#perforator",
+     "@id": "copies/wt621xq0875#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.3518,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/wt621xq0875.jsonld#punch-diameter-annotation",
+        "@id": "copies/wt621xq0875#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wt621xq0875.jsonld#punch-diameter-belief",
+         "@id": "copies/wt621xq0875#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -82,10 +83,10 @@
        "bridge": 0.3514,
        "n": 386,
        "@annotation": {
-        "@id": "copies/wt621xq0875.jsonld#chain-pitch-annotation",
+        "@id": "copies/wt621xq0875#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wt621xq0875.jsonld#chain-pitch-belief",
+         "@id": "copies/wt621xq0875#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -106,10 +107,10 @@
        "strength": 0.1996,
        "n": 15043,
        "@annotation": {
-        "@id": "copies/wt621xq0875.jsonld#advance-annotation",
+        "@id": "copies/wt621xq0875#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wt621xq0875.jsonld#advance-belief",
+         "@id": "copies/wt621xq0875#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

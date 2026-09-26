@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gq990gn6753.jsonld",
+ "@id": "copies/gq990gn6753",
  "title": "Condon Roll 120, WM 375",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gq990gn6753.jsonld#copy",
+   "@id": "copies/gq990gn6753#copy",
    "label": "Condon Roll 120",
    "identifier": "Stanford Libraries CONDON ROLL 120",
    "seeAlso": "https://purl.stanford.edu/gq990gn6753",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gq990gn6753.jsonld#inscription",
+       "@id": "copies/gq990gn6753#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gq990gn6753%2Fgq990gn6753_0001/3517,101157,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gq990gn6753.jsonld#inscription-text",
-        "text": "141?23"
+        "@id": "copies/gq990gn6753#inscription-text",
+        "text": "141?23",
+        "@annotation": {
+         "@id": "copies/gq990gn6753#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gq990gn6753#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gq990gn6753#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, read from the lower (180-degree) panel. A run of figures without separators, written close to the edge of the paper. The closing 2 and 3 are plain, so the year is 1923, and the run opens with a narrow 1 followed by a figure with a closed head, most likely 14 though 19 is possible. Between them stand two upright strokes joined by a short bar at mid height, which read either as a single open 4 (14.4.23) or as two figures, 11 (14.11.23) or 17 (no month). I cannot settle the middle group from this scan, so only the year is recorded. The roll number comes from region 2, which carries 375 alone, the 7 there crossed and carried on a long top bar."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -81,18 +99,25 @@
      "after": "1923-01-01",
      "before": "1923-12-31",
      "@annotation": {
-      "@id": "copies/gq990gn6753.jsonld#date-annotation",
+      "@id": "copies/gq990gn6753#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gq990gn6753.jsonld#date-belief",
+       "@id": "copies/gq990gn6753#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gq990gn6753.jsonld#inscription-text"
+          "copies/gq990gn6753#inscription-text"
          ],
-         "note": "Pencil, read from the lower (180-degree) panel. A run of figures without separators, written close to the edge of the paper. The closing 2 and 3 are plain, so the year is 1923, and the run opens with a narrow 1 followed by a figure with a closed head, most likely 14 though 19 is possible. Between them stand two upright strokes joined by a short bar at mid height, which read either as a single open 4 (14.4.23) or as two figures, 11 (14.11.23) or 17 (no month). I cannot settle the middle group from this scan, so only the year is recorded. The roll number comes from region 2, which carries 375 alone, the 7 there crossed and carried on a long top bar."
+         "note": "\"14 ? 23\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). Only the year is read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gq990gn6753#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -100,17 +125,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gq990gn6753.jsonld#perforator",
+     "@id": "copies/gq990gn6753#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7731,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gq990gn6753.jsonld#punch-diameter-annotation",
+        "@id": "copies/gq990gn6753#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gq990gn6753.jsonld#punch-diameter-belief",
+         "@id": "copies/gq990gn6753#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -132,10 +157,10 @@
        "bridge": 0.6506,
        "n": 225,
        "@annotation": {
-        "@id": "copies/gq990gn6753.jsonld#chain-pitch-annotation",
+        "@id": "copies/gq990gn6753#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gq990gn6753.jsonld#chain-pitch-belief",
+         "@id": "copies/gq990gn6753#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -156,10 +181,10 @@
        "strength": 0.4449,
        "n": 5154,
        "@annotation": {
-        "@id": "copies/gq990gn6753.jsonld#advance-annotation",
+        "@id": "copies/gq990gn6753#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gq990gn6753.jsonld#advance-belief",
+         "@id": "copies/gq990gn6753#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

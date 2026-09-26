@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/zx463rv8885.jsonld",
+ "@id": "copies/zx463rv8885",
  "title": "Condon Roll 66, WM 265",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/zx463rv8885.jsonld#copy",
+   "@id": "copies/zx463rv8885#copy",
    "label": "Condon Roll 66",
    "identifier": "Stanford Libraries CONDON ROLL 66",
    "seeAlso": "https://purl.stanford.edu/zx463rv8885",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/zx463rv8885.jsonld#inscription",
+       "@id": "copies/zx463rv8885#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/zx463rv8885%2Fzx463rv8885_0001/3508,245904,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/zx463rv8885.jsonld#inscription-text",
-        "text": "265   24 - 11 - 11   Roth / Wössler"
+        "@id": "copies/zx463rv8885#inscription-text",
+        "text": "265   24 - 11 - 11   Roth / Wössler",
+        "@annotation": {
+         "@id": "copies/zx463rv8885#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/zx463rv8885#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/zx463rv8885#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, two lines, Wössler written under Roth; the umlaut is a bar"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Roth",
       "sameAs": [],
-      "@id": "hands.jsonld#roth",
+      "@id": "hands#roth",
       "@annotation": {
-       "@id": "copies/zx463rv8885.jsonld#hand-annotation",
+       "@id": "copies/zx463rv8885#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/zx463rv8885.jsonld#hand-belief",
+        "@id": "copies/zx463rv8885#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/zx463rv8885.jsonld#inscription-text"
+           "copies/zx463rv8885#inscription-text"
           ],
-          "note": "Read as \"Roth / Wössler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Roth / Wössler\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1911-11-24",
      "@annotation": {
-      "@id": "copies/zx463rv8885.jsonld#date-annotation",
+      "@id": "copies/zx463rv8885#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/zx463rv8885.jsonld#date-belief",
+       "@id": "copies/zx463rv8885#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/zx463rv8885.jsonld#inscription-text"
+          "copies/zx463rv8885#inscription-text"
          ],
-         "note": "ink, two lines, Wössler written under Roth; the umlaut is a bar"
+         "note": "\"24 - 11 - 11\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/zx463rv8885#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/zx463rv8885.jsonld#perforator",
+     "@id": "copies/zx463rv8885#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2638,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/zx463rv8885.jsonld#punch-diameter-annotation",
+        "@id": "copies/zx463rv8885#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zx463rv8885.jsonld#punch-diameter-belief",
+         "@id": "copies/zx463rv8885#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.6172,
        "n": 218,
        "@annotation": {
-        "@id": "copies/zx463rv8885.jsonld#chain-pitch-annotation",
+        "@id": "copies/zx463rv8885#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zx463rv8885.jsonld#chain-pitch-belief",
+         "@id": "copies/zx463rv8885#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.1147,
        "n": 16305,
        "@annotation": {
-        "@id": "copies/zx463rv8885.jsonld#advance-annotation",
+        "@id": "copies/zx463rv8885#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zx463rv8885.jsonld#advance-belief",
+         "@id": "copies/zx463rv8885#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

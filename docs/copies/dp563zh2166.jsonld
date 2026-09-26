@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/dp563zh2166.jsonld",
+ "@id": "copies/dp563zh2166",
  "title": "Condon Roll 188, WM 492",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/dp563zh2166.jsonld#copy",
+   "@id": "copies/dp563zh2166#copy",
    "label": "Condon Roll 188",
    "identifier": "Stanford Libraries CONDON ROLL 188",
    "seeAlso": "https://purl.stanford.edu/dp563zh2166",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/dp563zh2166.jsonld#inscription",
+       "@id": "copies/dp563zh2166#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/dp563zh2166%2Fdp563zh2166_0001/3507,219882,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/dp563zh2166.jsonld#inscription-text",
-        "text": "27.12 07  Kummer"
+        "@id": "copies/dp563zh2166#inscription-text",
+        "text": "27.12 07  Kummer",
+        "@annotation": {
+         "@id": "copies/dp563zh2166#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/dp563zh2166#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/dp563zh2166#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink, along the roll; the second digit of the day could be read as 4, but its form matches the 7 of the year '07' stroke for stroke"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "Kummer",
       "sameAs": [],
-      "@id": "hands.jsonld#kummer",
+      "@id": "hands#kummer",
       "@annotation": {
-       "@id": "copies/dp563zh2166.jsonld#hand-annotation",
+       "@id": "copies/dp563zh2166#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/dp563zh2166.jsonld#hand-belief",
+        "@id": "copies/dp563zh2166#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/dp563zh2166.jsonld#inscription-text"
+           "copies/dp563zh2166#inscription-text"
           ],
           "note": "Read as \"Kummer\"."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1907-12-27",
      "@annotation": {
-      "@id": "copies/dp563zh2166.jsonld#date-annotation",
+      "@id": "copies/dp563zh2166#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/dp563zh2166.jsonld#date-belief",
+       "@id": "copies/dp563zh2166#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/dp563zh2166.jsonld#inscription-text"
+          "copies/dp563zh2166#inscription-text"
          ],
-         "note": "ink, along the roll; the second digit of the day could be read as 4, but its form matches the 7 of the year '07' stroke for stroke"
+         "note": "\"27.12 07\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/dp563zh2166#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/dp563zh2166.jsonld#perforator",
+     "@id": "copies/dp563zh2166#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2054,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/dp563zh2166.jsonld#punch-diameter-annotation",
+        "@id": "copies/dp563zh2166#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dp563zh2166.jsonld#punch-diameter-belief",
+         "@id": "copies/dp563zh2166#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.7451,
        "n": 198,
        "@annotation": {
-        "@id": "copies/dp563zh2166.jsonld#chain-pitch-annotation",
+        "@id": "copies/dp563zh2166#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dp563zh2166.jsonld#chain-pitch-belief",
+         "@id": "copies/dp563zh2166#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.1592,
        "n": 12844,
        "@annotation": {
-        "@id": "copies/dp563zh2166.jsonld#advance-annotation",
+        "@id": "copies/dp563zh2166#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dp563zh2166.jsonld#advance-belief",
+         "@id": "copies/dp563zh2166#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

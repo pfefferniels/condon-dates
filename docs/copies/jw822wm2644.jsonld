@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jw822wm2644.jsonld",
+ "@id": "copies/jw822wm2644",
  "title": "Condon Roll 401, WM 1275",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jw822wm2644.jsonld#copy",
+   "@id": "copies/jw822wm2644#copy",
    "label": "Condon Roll 401",
    "identifier": "Stanford Libraries CONDON ROLL 401",
    "seeAlso": "https://purl.stanford.edu/jw822wm2644",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jw822wm2644.jsonld#inscription",
+       "@id": "copies/jw822wm2644#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jw822wm2644%2Fjw822wm2644_0001/3382,87130,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jw822wm2644.jsonld#inscription-text",
-        "text": "1275. 25. 4. 22. [signature]"
+        "@id": "copies/jw822wm2644#inscription-text",
+        "text": "1275. 25. 4. 22. [signature]",
+        "@annotation": {
+         "@id": "copies/jw822wm2644#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jw822wm2644#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jw822wm2644#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Read here at magnification. This copy has the old pitch, 3.004 mm, at a date seven months before the 1922 control's 2.496 mm, and is one of the two rolls that show the two perforators running side by side."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-04-25",
      "@annotation": {
-      "@id": "copies/jw822wm2644.jsonld#date-annotation",
+      "@id": "copies/jw822wm2644#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jw822wm2644.jsonld#date-belief",
+       "@id": "copies/jw822wm2644#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jw822wm2644.jsonld#inscription-text"
+          "copies/jw822wm2644#inscription-text"
          ],
-         "note": "read here at magnification. This copy has the old pitch, 3.004 mm, at a date seven months before the 1922 control's 2.496 mm, and is one of the two rolls that show the two perforators running side by side."
+         "note": "\"25. 4. 22.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jw822wm2644#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jw822wm2644.jsonld#perforator",
+     "@id": "copies/jw822wm2644#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.4279,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jw822wm2644.jsonld#punch-diameter-annotation",
+        "@id": "copies/jw822wm2644#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jw822wm2644.jsonld#punch-diameter-belief",
+         "@id": "copies/jw822wm2644#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5281,
        "n": 145,
        "@annotation": {
-        "@id": "copies/jw822wm2644.jsonld#chain-pitch-annotation",
+        "@id": "copies/jw822wm2644#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jw822wm2644.jsonld#chain-pitch-belief",
+         "@id": "copies/jw822wm2644#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.0715,
        "n": 2276,
        "@annotation": {
-        "@id": "copies/jw822wm2644.jsonld#advance-annotation",
+        "@id": "copies/jw822wm2644#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jw822wm2644.jsonld#advance-belief",
+         "@id": "copies/jw822wm2644#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

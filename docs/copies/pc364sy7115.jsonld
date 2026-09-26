@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/pc364sy7115.jsonld",
+ "@id": "copies/pc364sy7115",
  "title": "Condon Roll 647, WM 2609",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/pc364sy7115.jsonld#copy",
+   "@id": "copies/pc364sy7115#copy",
    "label": "Condon Roll 647",
    "identifier": "Stanford Libraries CONDON ROLL 647",
    "seeAlso": "https://purl.stanford.edu/pc364sy7115",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/pc364sy7115.jsonld#inscription",
+       "@id": "copies/pc364sy7115#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/pc364sy7115%2Fpc364sy7115_0001/3222,481354,721,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/pc364sy7115.jsonld#inscription-text",
-        "text": "2609. 19.9. 17."
+        "@id": "copies/pc364sy7115#inscription-text",
+        "text": "2609. 19.9. 17.",
+        "@annotation": {
+         "@id": "copies/pc364sy7115#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/pc364sy7115#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/pc364sy7115#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, written along the roll; read from the upper panel rotated a quarter turn. Day and month plain: both 9s are a small closed bowl over a straight descender, no apex or crossbar, so 19.9 and not 14.4. The year pair is thinner and slightly rubbed, but the second figure carries a horizontal top bar, hence 17. The fourth figure of the number descends below the line, so 2609 and not 2600."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1917-09-19",
      "@annotation": {
-      "@id": "copies/pc364sy7115.jsonld#date-annotation",
+      "@id": "copies/pc364sy7115#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/pc364sy7115.jsonld#date-belief",
+       "@id": "copies/pc364sy7115#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/pc364sy7115.jsonld#inscription-text"
+          "copies/pc364sy7115#inscription-text"
          ],
-         "note": "pencil, written along the roll; read from the upper panel rotated a quarter turn. Day and month plain: both 9s are a small closed bowl over a straight descender, no apex or crossbar, so 19.9 and not 14.4. The year pair is thinner and slightly rubbed, but the second figure carries a horizontal top bar, hence 17. The fourth figure of the number descends below the line, so 2609 and not 2600."
+         "note": "\"19.9.17\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/pc364sy7115#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/pc364sy7115.jsonld#perforator",
+     "@id": "copies/pc364sy7115#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2071,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/pc364sy7115.jsonld#punch-diameter-annotation",
+        "@id": "copies/pc364sy7115#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pc364sy7115.jsonld#punch-diameter-belief",
+         "@id": "copies/pc364sy7115#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6579,
        "n": 262,
        "@annotation": {
-        "@id": "copies/pc364sy7115.jsonld#chain-pitch-annotation",
+        "@id": "copies/pc364sy7115#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pc364sy7115.jsonld#chain-pitch-belief",
+         "@id": "copies/pc364sy7115#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4863,
        "n": 23551,
        "@annotation": {
-        "@id": "copies/pc364sy7115.jsonld#advance-annotation",
+        "@id": "copies/pc364sy7115#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pc364sy7115.jsonld#advance-belief",
+         "@id": "copies/pc364sy7115#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

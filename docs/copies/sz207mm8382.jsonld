@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/sz207mm8382.jsonld",
+ "@id": "copies/sz207mm8382",
  "title": "Condon Roll 391, WM 1296",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/sz207mm8382.jsonld#copy",
+   "@id": "copies/sz207mm8382#copy",
    "label": "Condon Roll 391",
    "identifier": "Stanford Libraries CONDON ROLL 391",
    "seeAlso": "https://purl.stanford.edu/sz207mm8382",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/sz207mm8382.jsonld#inscription",
+       "@id": "copies/sz207mm8382#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/sz207mm8382%2Fsz207mm8382_0001/3484,121480,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/sz207mm8382.jsonld#inscription-text",
-        "text": "7 124."
+        "@id": "copies/sz207mm8382#inscription-text",
+        "text": "7 124.",
+        "@annotation": {
+         "@id": "copies/sz207mm8382#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/sz207mm8382#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/sz207mm8382#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, four figures on the lower (upright) panel, no other writing in the crop. Each figure is plain: a crossed 7, then 1, 2, 4, closed by a point. The separators are dropped, as reading.md describes, and the wider gap after the 7 groups them 7 | 124, so I read 7.1.24. The reservation is that the same four figures could be a roll number 7124 rather than a date; nothing else in the crop decides it, so the confidence is medium."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1924-01-07",
      "@annotation": {
-      "@id": "copies/sz207mm8382.jsonld#date-annotation",
+      "@id": "copies/sz207mm8382#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/sz207mm8382.jsonld#date-belief",
+       "@id": "copies/sz207mm8382#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/sz207mm8382.jsonld#inscription-text"
+          "copies/sz207mm8382#inscription-text"
          ],
-         "note": "Pencil, four figures on the lower (upright) panel, no other writing in the crop. Each figure is plain: a crossed 7, then 1, 2, 4, closed by a point. The separators are dropped, as reading.md describes, and the wider gap after the 7 groups them 7 | 124, so I read 7.1.24. The reservation is that the same four figures could be a roll number 7124 rather than a date; nothing else in the crop decides it, so the confidence is medium."
+         "note": "The figures of \"7 124\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/sz207mm8382#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/sz207mm8382.jsonld#perforator",
+     "@id": "copies/sz207mm8382#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7198,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/sz207mm8382.jsonld#punch-diameter-annotation",
+        "@id": "copies/sz207mm8382#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sz207mm8382.jsonld#punch-diameter-belief",
+         "@id": "copies/sz207mm8382#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6789,
        "n": 105,
        "@annotation": {
-        "@id": "copies/sz207mm8382.jsonld#chain-pitch-annotation",
+        "@id": "copies/sz207mm8382#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sz207mm8382.jsonld#chain-pitch-belief",
+         "@id": "copies/sz207mm8382#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5526,
        "n": 5249,
        "@annotation": {
-        "@id": "copies/sz207mm8382.jsonld#advance-annotation",
+        "@id": "copies/sz207mm8382#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sz207mm8382.jsonld#advance-belief",
+         "@id": "copies/sz207mm8382#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

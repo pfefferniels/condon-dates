@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/my670qk6863.jsonld",
+ "@id": "copies/my670qk6863",
  "title": "Condon Roll 648, WM 2673",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/my670qk6863.jsonld#copy",
+   "@id": "copies/my670qk6863#copy",
    "label": "Condon Roll 648",
    "identifier": "Stanford Libraries CONDON ROLL 648",
    "seeAlso": "https://purl.stanford.edu/my670qk6863",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/my670qk6863.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/my670qk6863#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 21142.87,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/my670qk6863%2Fmy670qk6863_0001/3190,249927,596,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/my670qk6863.jsonld#inscription-text",
-        "text": "[?][?] 4 25"
+        "@id": "copies/my670qk6863#inscription-text",
+        "text": "[?][?] 4 25",
+        "@annotation": {
+         "@id": "copies/my670qk6863#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/my670qk6863#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/my670qk6863#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Stamped, not written, running across the roll; five figures of which the last three (4, 2, 5) are plain. The first figure carries the foot serif and top flag of a 1 but is only half inked, and the second shows a bottom bowl alone, so the day is left unread. Any sane split of the five figures leaves month 4 and year 25, hence 1925-04. The roll number 2673 is in pencil in crop 2 and on the printed label in crop 4 (WELTE-MIGNON No. 2673, Hymns, played by E. Adam). Crop 3 perforations only."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -80,18 +98,25 @@
      "after": "1925-04-01",
      "before": "1925-04-30",
      "@annotation": {
-      "@id": "copies/my670qk6863.jsonld#date-annotation",
+      "@id": "copies/my670qk6863#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/my670qk6863.jsonld#date-belief",
+       "@id": "copies/my670qk6863#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/my670qk6863.jsonld#inscription-text"
+          "copies/my670qk6863#inscription-text"
          ],
-         "note": "stamped, not written, running across the roll; five figures of which the last three (4, 2, 5) are plain. The first figure carries the foot serif and top flag of a 1 but is only half inked, and the second shows a bottom bowl alone, so the day is left unread. Any sane split of the five figures leaves month 4 and year 25, hence 1925-04. The roll number 2673 is in pencil in crop 2 and on the printed label in crop 4 (WELTE-MIGNON No. 2673, Hymns, played by E. Adam). Crop 3 perforations only."
+         "note": "\"?.4.25\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/my670qk6863#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/my670qk6863.jsonld#perforator",
+     "@id": "copies/my670qk6863#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7841,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/my670qk6863.jsonld#punch-diameter-annotation",
+        "@id": "copies/my670qk6863#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/my670qk6863.jsonld#punch-diameter-belief",
+         "@id": "copies/my670qk6863#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6344,
        "n": 442,
        "@annotation": {
-        "@id": "copies/my670qk6863.jsonld#chain-pitch-annotation",
+        "@id": "copies/my670qk6863#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/my670qk6863.jsonld#chain-pitch-belief",
+         "@id": "copies/my670qk6863#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5129,
        "n": 22664,
        "@annotation": {
-        "@id": "copies/my670qk6863.jsonld#advance-annotation",
+        "@id": "copies/my670qk6863#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/my670qk6863.jsonld#advance-belief",
+         "@id": "copies/my670qk6863#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

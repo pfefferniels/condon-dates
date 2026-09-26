@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jn038xx9588.jsonld",
+ "@id": "copies/jn038xx9588",
  "title": "Condon Roll 419, WM 1348",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jn038xx9588.jsonld#copy",
+   "@id": "copies/jn038xx9588#copy",
    "label": "Condon Roll 419",
    "identifier": "Stanford Libraries CONDON ROLL 419",
    "seeAlso": "https://purl.stanford.edu/jn038xx9588",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jn038xx9588.jsonld#inscription",
+       "@id": "copies/jn038xx9588#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jn038xx9588%2Fjn038xx9588_0001/3372,236952,720,2300/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jn038xx9588.jsonld#inscription-text",
-        "text": "28722"
+        "@id": "copies/jn038xx9588#inscription-text",
+        "text": "28722",
+        "@annotation": {
+         "@id": "copies/jn038xx9588#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jn038xx9588#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jn038xx9588#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Lower panel upright. Five pencil figures on bare paper, nothing else in the crop and no name. 2 (looped top, base swept right), 8 (two stacked loops), 7 (crossed, with the diagonal running below the baseline), 2, 2. The fourth figure has no descender, so it is a 2 and not the 9 a first glance suggests. The fifth is over-inked at the top but has the same looped top and right-swept base as the first and fourth. Read as the run-together day-month-year of the corpus, 28.7.22; the parse rests on that convention, since no separators are written."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-07-28",
      "@annotation": {
-      "@id": "copies/jn038xx9588.jsonld#date-annotation",
+      "@id": "copies/jn038xx9588#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jn038xx9588.jsonld#date-belief",
+       "@id": "copies/jn038xx9588#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jn038xx9588.jsonld#inscription-text"
+          "copies/jn038xx9588#inscription-text"
          ],
-         "note": "Lower panel upright. Five pencil figures on bare paper, nothing else in the crop and no name. 2 (looped top, base swept right), 8 (two stacked loops), 7 (crossed, with the diagonal running below the baseline), 2, 2. The fourth figure has no descender, so it is a 2 and not the 9 a first glance suggests. The fifth is over-inked at the top but has the same looped top and right-swept base as the first and fourth. Read as the run-together day-month-year of the corpus, 28.7.22; the parse rests on that convention, since no separators are written."
+         "note": "The figures of \"28722\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jn038xx9588#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jn038xx9588.jsonld#perforator",
+     "@id": "copies/jn038xx9588#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7275,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jn038xx9588.jsonld#punch-diameter-annotation",
+        "@id": "copies/jn038xx9588#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jn038xx9588.jsonld#punch-diameter-belief",
+         "@id": "copies/jn038xx9588#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7447,
        "n": 514,
        "@annotation": {
-        "@id": "copies/jn038xx9588.jsonld#chain-pitch-annotation",
+        "@id": "copies/jn038xx9588#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jn038xx9588.jsonld#chain-pitch-belief",
+         "@id": "copies/jn038xx9588#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4727,
        "n": 18418,
        "@annotation": {
-        "@id": "copies/jn038xx9588.jsonld#advance-annotation",
+        "@id": "copies/jn038xx9588#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jn038xx9588.jsonld#advance-belief",
+         "@id": "copies/jn038xx9588#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

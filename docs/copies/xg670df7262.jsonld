@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xg670df7262.jsonld",
+ "@id": "copies/xg670df7262",
  "title": "Condon Roll 598, WM 2466",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xg670df7262.jsonld#copy",
+   "@id": "copies/xg670df7262#copy",
    "label": "Condon Roll 598",
    "identifier": "Stanford Libraries CONDON ROLL 598",
    "seeAlso": "https://purl.stanford.edu/xg670df7262",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xg670df7262.jsonld#inscription",
+       "@id": "copies/xg670df7262#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xg670df7262%2Fxg670df7262_0001/3546,169040,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xg670df7262.jsonld#inscription-text",
-        "text": "29. 8. 19."
+        "@id": "copies/xg670df7262#inscription-text",
+        "text": "29. 8. 19.",
+        "@annotation": {
+         "@id": "copies/xg670df7262#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xg670df7262#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xg670df7262#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink, one line, no number and no name; heavily slanted, read after deslanting. Month is the two-stroke 8 of this hand. The year's first figure is an open arch, so 1 rather than 0, and its second figure has the same closed loop and descender as the 9 of the day"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1919-08-29",
      "@annotation": {
-      "@id": "copies/xg670df7262.jsonld#date-annotation",
+      "@id": "copies/xg670df7262#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/xg670df7262.jsonld#date-belief",
+       "@id": "copies/xg670df7262#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/xg670df7262.jsonld#inscription-text"
+          "copies/xg670df7262#inscription-text"
          ],
-         "note": "ink, one line, no number and no name; heavily slanted, read after deslanting. Month is the two-stroke 8 of this hand. The year's first figure is an open arch, so 1 rather than 0, and its second figure has the same closed loop and descender as the 9 of the day"
+         "note": "\"29. 8. 19.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/xg670df7262#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xg670df7262.jsonld#perforator",
+     "@id": "copies/xg670df7262#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8137,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xg670df7262.jsonld#punch-diameter-annotation",
+        "@id": "copies/xg670df7262#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xg670df7262.jsonld#punch-diameter-belief",
+         "@id": "copies/xg670df7262#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.626,
        "n": 426,
        "@annotation": {
-        "@id": "copies/xg670df7262.jsonld#chain-pitch-annotation",
+        "@id": "copies/xg670df7262#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xg670df7262.jsonld#chain-pitch-belief",
+         "@id": "copies/xg670df7262#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.389,
        "n": 7707,
        "@annotation": {
-        "@id": "copies/xg670df7262.jsonld#advance-annotation",
+        "@id": "copies/xg670df7262#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xg670df7262.jsonld#advance-belief",
+         "@id": "copies/xg670df7262#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/wn516xn5163.jsonld",
+ "@id": "copies/wn516xn5163",
  "title": "Condon Roll 594, WM 2430",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/wn516xn5163.jsonld#copy",
+   "@id": "copies/wn516xn5163#copy",
    "label": "Condon Roll 594",
    "identifier": "Stanford Libraries CONDON ROLL 594",
    "seeAlso": "https://purl.stanford.edu/wn516xn5163",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/wn516xn5163.jsonld#inscription",
+       "@id": "copies/wn516xn5163#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/wn516xn5163%2Fwn516xn5163_0001/3498,172116,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/wn516xn5163.jsonld#inscription-text",
-        "text": "29622"
+        "@id": "copies/wn516xn5163#inscription-text",
+        "text": "29622",
+        "@annotation": {
+         "@id": "copies/wn516xn5163#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/wn516xn5163#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/wn516xn5163#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, five digits run together, no separators; grouped 29|6|22. The month figure is a single stroke closing into a bottom bowl, so a 6 rather than the two-stroke 8 of this hand, but it is the one arguable figure"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-06-29",
      "@annotation": {
-      "@id": "copies/wn516xn5163.jsonld#date-annotation",
+      "@id": "copies/wn516xn5163#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/wn516xn5163.jsonld#date-belief",
+       "@id": "copies/wn516xn5163#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/wn516xn5163.jsonld#inscription-text"
+          "copies/wn516xn5163#inscription-text"
          ],
-         "note": "pencil, five digits run together, no separators; grouped 29|6|22. The month figure is a single stroke closing into a bottom bowl, so a 6 rather than the two-stroke 8 of this hand, but it is the one arguable figure"
+         "note": "The figures of \"29622\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/wn516xn5163#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/wn516xn5163.jsonld#perforator",
+     "@id": "copies/wn516xn5163#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6725,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/wn516xn5163.jsonld#punch-diameter-annotation",
+        "@id": "copies/wn516xn5163#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wn516xn5163.jsonld#punch-diameter-belief",
+         "@id": "copies/wn516xn5163#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7116,
        "n": 315,
        "@annotation": {
-        "@id": "copies/wn516xn5163.jsonld#chain-pitch-annotation",
+        "@id": "copies/wn516xn5163#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wn516xn5163.jsonld#chain-pitch-belief",
+         "@id": "copies/wn516xn5163#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.1416,
        "n": 9126,
        "@annotation": {
-        "@id": "copies/wn516xn5163.jsonld#advance-annotation",
+        "@id": "copies/wn516xn5163#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wn516xn5163.jsonld#advance-belief",
+         "@id": "copies/wn516xn5163#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

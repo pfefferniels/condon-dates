@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gm170gy7498.jsonld",
+ "@id": "copies/gm170gy7498",
  "title": "Condon Roll 56, WM 239",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gm170gy7498.jsonld#copy",
+   "@id": "copies/gm170gy7498#copy",
    "label": "Condon Roll 56",
    "identifier": "Stanford Libraries CONDON ROLL 56",
    "seeAlso": "https://purl.stanford.edu/gm170gy7498",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gm170gy7498.jsonld#inscription",
+       "@id": "copies/gm170gy7498#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gm170gy7498%2Fgm170gy7498_0001/3531,429747,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gm170gy7498.jsonld#inscription-text",
-        "text": "239.  24.  6. 11"
+        "@id": "copies/gm170gy7498#inscription-text",
+        "text": "239.  24.  6. 11",
+        "@annotation": {
+         "@id": "copies/gm170gy7498#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gm170gy7498#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gm170gy7498#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Read here on a wider crop after the first reader, whose crop clipped the tops of the figures, gave the number as 234. It is 239, matching the catalogue."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1911-06-24",
      "@annotation": {
-      "@id": "copies/gm170gy7498.jsonld#date-annotation",
+      "@id": "copies/gm170gy7498#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gm170gy7498.jsonld#date-belief",
+       "@id": "copies/gm170gy7498#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gm170gy7498.jsonld#inscription-text"
+          "copies/gm170gy7498#inscription-text"
          ],
-         "note": "read here on a wider crop after the first reader, whose crop clipped the tops of the figures, gave the number as 234. It is 239, matching the catalogue."
+         "note": "\"24. 6. 11\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gm170gy7498#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gm170gy7498.jsonld#perforator",
+     "@id": "copies/gm170gy7498#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.12,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gm170gy7498.jsonld#punch-diameter-annotation",
+        "@id": "copies/gm170gy7498#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gm170gy7498.jsonld#punch-diameter-belief",
+         "@id": "copies/gm170gy7498#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.851,
        "n": 289,
        "@annotation": {
-        "@id": "copies/gm170gy7498.jsonld#chain-pitch-annotation",
+        "@id": "copies/gm170gy7498#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gm170gy7498.jsonld#chain-pitch-belief",
+         "@id": "copies/gm170gy7498#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.3955,
        "n": 22817,
        "@annotation": {
-        "@id": "copies/gm170gy7498.jsonld#advance-annotation",
+        "@id": "copies/gm170gy7498#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gm170gy7498.jsonld#advance-belief",
+         "@id": "copies/gm170gy7498#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

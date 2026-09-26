@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rv766dc1369.jsonld",
+ "@id": "copies/rv766dc1369",
  "title": "Condon Roll 764, WM 3328",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rv766dc1369.jsonld#copy",
+   "@id": "copies/rv766dc1369#copy",
    "label": "Condon Roll 764",
    "identifier": "Stanford Libraries CONDON ROLL 764",
    "seeAlso": "https://purl.stanford.edu/rv766dc1369",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rv766dc1369.jsonld#inscription",
+       "@id": "copies/rv766dc1369#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rv766dc1369%2Frv766dc1369_0001/3519,418376,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rv766dc1369.jsonld#inscription-text",
-        "text": "221122"
+        "@id": "copies/rv766dc1369#inscription-text",
+        "text": "221122",
+        "@annotation": {
+         "@id": "copies/rv766dc1369#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rv766dc1369#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rv766dc1369#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, separators dropped; the same hand and the same date as jq774vx6544 as far as I can see"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-11-22",
      "@annotation": {
-      "@id": "copies/rv766dc1369.jsonld#date-annotation",
+      "@id": "copies/rv766dc1369#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rv766dc1369.jsonld#date-belief",
+       "@id": "copies/rv766dc1369#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rv766dc1369.jsonld#inscription-text"
+          "copies/rv766dc1369#inscription-text"
          ],
-         "note": "pencil, separators dropped; the same hand and the same date as jq774vx6544 as far as I can see"
+         "note": "The figures of \"221122\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rv766dc1369#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rv766dc1369.jsonld#perforator",
+     "@id": "copies/rv766dc1369#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7122,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rv766dc1369.jsonld#punch-diameter-annotation",
+        "@id": "copies/rv766dc1369#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rv766dc1369.jsonld#punch-diameter-belief",
+         "@id": "copies/rv766dc1369#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7069,
        "n": 376,
        "@annotation": {
-        "@id": "copies/rv766dc1369.jsonld#chain-pitch-annotation",
+        "@id": "copies/rv766dc1369#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rv766dc1369.jsonld#chain-pitch-belief",
+         "@id": "copies/rv766dc1369#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.3533,
        "n": 31428,
        "@annotation": {
-        "@id": "copies/rv766dc1369.jsonld#advance-annotation",
+        "@id": "copies/rv766dc1369#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rv766dc1369.jsonld#advance-belief",
+         "@id": "copies/rv766dc1369#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

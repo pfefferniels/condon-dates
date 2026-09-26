@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/nq190zp1066.jsonld",
+ "@id": "copies/nq190zp1066",
  "title": "Condon Roll 449, WM 1341",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/nq190zp1066.jsonld#copy",
+   "@id": "copies/nq190zp1066#copy",
    "label": "Condon Roll 449",
    "identifier": "Stanford Libraries CONDON ROLL 449",
    "seeAlso": "https://purl.stanford.edu/nq190zp1066",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/nq190zp1066.jsonld#inscription",
+       "@id": "copies/nq190zp1066#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/nq190zp1066%2Fnq190zp1066_0001/3511,383554,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/nq190zp1066.jsonld#inscription-text",
-        "text": "21 12 21"
+        "@id": "copies/nq190zp1066#inscription-text",
+        "text": "21 12 21",
+        "@annotation": {
+         "@id": "copies/nq190zp1066#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/nq190zp1066#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/nq190zp1066#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Faint pencil, six figures in three pairs with the separators dropped: 21.12.21. The same line appears on crop 1, and on both it sits within a few millimetres of the crop's edge, so the upper halves of the figures lie in the shadow of the boundary; the reading is sure of the pairing and of the repeated 2 and 1 shapes, less sure of any single figure, hence medium. Crop 6 carries 1341 on its own, which I take for the roll number. Crop 3 shows one clipped mark, crop 4 a row of small pencil loops drawn round particular perforations, which look like a repairer's or inspector's marks rather than writing, and crop 5 the paper end."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1921-12-21",
      "@annotation": {
-      "@id": "copies/nq190zp1066.jsonld#date-annotation",
+      "@id": "copies/nq190zp1066#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/nq190zp1066.jsonld#date-belief",
+       "@id": "copies/nq190zp1066#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/nq190zp1066.jsonld#inscription-text"
+          "copies/nq190zp1066#inscription-text"
          ],
-         "note": "Faint pencil, six figures in three pairs with the separators dropped: 21.12.21. The same line appears on crop 1, and on both it sits within a few millimetres of the crop's edge, so the upper halves of the figures lie in the shadow of the boundary; the reading is sure of the pairing and of the repeated 2 and 1 shapes, less sure of any single figure, hence medium. Crop 6 carries 1341 on its own, which I take for the roll number. Crop 3 shows one clipped mark, crop 4 a row of small pencil loops drawn round particular perforations, which look like a repairer's or inspector's marks rather than writing, and crop 5 the paper end."
+         "note": "\"21 12 21\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/nq190zp1066#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/nq190zp1066.jsonld#perforator",
+     "@id": "copies/nq190zp1066#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8027,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/nq190zp1066.jsonld#punch-diameter-annotation",
+        "@id": "copies/nq190zp1066#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nq190zp1066.jsonld#punch-diameter-belief",
+         "@id": "copies/nq190zp1066#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5627,
        "n": 255,
        "@annotation": {
-        "@id": "copies/nq190zp1066.jsonld#chain-pitch-annotation",
+        "@id": "copies/nq190zp1066#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nq190zp1066.jsonld#chain-pitch-belief",
+         "@id": "copies/nq190zp1066#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.2659,
        "n": 22980,
        "@annotation": {
-        "@id": "copies/nq190zp1066.jsonld#advance-annotation",
+        "@id": "copies/nq190zp1066#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nq190zp1066.jsonld#advance-belief",
+         "@id": "copies/nq190zp1066#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

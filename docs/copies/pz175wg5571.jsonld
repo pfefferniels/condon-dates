@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/pz175wg5571.jsonld",
+ "@id": "copies/pz175wg5571",
  "title": "Condon Roll 454, WM 1447",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/pz175wg5571.jsonld#copy",
+   "@id": "copies/pz175wg5571#copy",
    "label": "Condon Roll 454",
    "identifier": "Stanford Libraries CONDON ROLL 454",
    "seeAlso": "https://purl.stanford.edu/pz175wg5571",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/pz175wg5571.jsonld#inscription",
+       "@id": "copies/pz175wg5571#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/pz175wg5571%2Fpz175wg5571_0001/3514,163708,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/pz175wg5571.jsonld#inscription-text",
-        "text": "24. 4. 14. Smith."
+        "@id": "copies/pz175wg5571#inscription-text",
+        "text": "24. 4. 14. Smith.",
+        "@annotation": {
+         "@id": "copies/pz175wg5571#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/pz175wg5571#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/pz175wg5571#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, a single line read from the lower panel. The three 4s are written alike, as an open 4, which settles the month and the year against 9. The name is read as Smith, the t and h sharing one long crossbar; Smits or Smitz would also fit the final letter."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -67,16 +85,16 @@
       "name": "Smith",
       "sameAs": [],
       "@annotation": {
-       "@id": "copies/pz175wg5571.jsonld#hand-annotation",
+       "@id": "copies/pz175wg5571#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/pz175wg5571.jsonld#hand-belief",
+        "@id": "copies/pz175wg5571#hand-belief",
         "certainty": "possible",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/pz175wg5571.jsonld#inscription-text"
+           "copies/pz175wg5571#inscription-text"
           ],
           "note": "Read as \"Smith\"."
          }
@@ -101,18 +119,25 @@
     "date": {
      "within": "1914-04-24",
      "@annotation": {
-      "@id": "copies/pz175wg5571.jsonld#date-annotation",
+      "@id": "copies/pz175wg5571#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/pz175wg5571.jsonld#date-belief",
+       "@id": "copies/pz175wg5571#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/pz175wg5571.jsonld#inscription-text"
+          "copies/pz175wg5571#inscription-text"
          ],
-         "note": "ink, a single line read from the lower panel. The three 4s are written alike, as an open 4, which settles the month and the year against 9. The name is read as Smith, the t and h sharing one long crossbar; Smits or Smitz would also fit the final letter."
+         "note": "\"24. 4. 14.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/pz175wg5571#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -120,17 +145,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/pz175wg5571.jsonld#perforator",
+     "@id": "copies/pz175wg5571#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.686,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/pz175wg5571.jsonld#punch-diameter-annotation",
+        "@id": "copies/pz175wg5571#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pz175wg5571.jsonld#punch-diameter-belief",
+         "@id": "copies/pz175wg5571#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -152,10 +177,10 @@
        "bridge": 0.7333,
        "n": 324,
        "@annotation": {
-        "@id": "copies/pz175wg5571.jsonld#chain-pitch-annotation",
+        "@id": "copies/pz175wg5571#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pz175wg5571.jsonld#chain-pitch-belief",
+         "@id": "copies/pz175wg5571#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -176,10 +201,10 @@
        "strength": 0.5799,
        "n": 14056,
        "@annotation": {
-        "@id": "copies/pz175wg5571.jsonld#advance-annotation",
+        "@id": "copies/pz175wg5571#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pz175wg5571.jsonld#advance-belief",
+         "@id": "copies/pz175wg5571#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/kx695yq4528.jsonld",
+ "@id": "copies/kx695yq4528",
  "title": "Condon Roll 402, WM 1301",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/kx695yq4528.jsonld#copy",
+   "@id": "copies/kx695yq4528#copy",
    "label": "Condon Roll 402",
    "identifier": "Stanford Libraries CONDON ROLL 402",
    "seeAlso": "https://purl.stanford.edu/kx695yq4528",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/kx695yq4528.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/kx695yq4528#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 22848.75,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/kx695yq4528%2Fkx695yq4528_0001/3519,270092,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/kx695yq4528.jsonld#inscription-text",
-        "text": "23924"
+        "@id": "copies/kx695yq4528#inscription-text",
+        "text": "23924",
+        "@annotation": {
+         "@id": "copies/kx695yq4528#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/kx695yq4528#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/kx695yq4528#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Stamped, not written: five figures in a small serif type on the lower (upright) panel, with a faint point after the 3 and a short double rule to the right of the 4. Separators dropped, so 23.9.24. Nothing else in the crop."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-09-23",
      "@annotation": {
-      "@id": "copies/kx695yq4528.jsonld#date-annotation",
+      "@id": "copies/kx695yq4528#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/kx695yq4528.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/kx695yq4528#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/kx695yq4528.jsonld#inscription-text"
+          "copies/kx695yq4528#inscription-text"
          ],
-         "note": "Stamped, not written: five figures in a small serif type on the lower (upright) panel, with a faint point after the 3 and a short double rule to the right of the 4. Separators dropped, so 23.9.24. Nothing else in the crop."
+         "note": "The figures of \"23924\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/kx695yq4528#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/kx695yq4528.jsonld#perforator",
+     "@id": "copies/kx695yq4528#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.785,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/kx695yq4528.jsonld#punch-diameter-annotation",
+        "@id": "copies/kx695yq4528#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kx695yq4528.jsonld#punch-diameter-belief",
+         "@id": "copies/kx695yq4528#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6442,
        "n": 346,
        "@annotation": {
-        "@id": "copies/kx695yq4528.jsonld#chain-pitch-annotation",
+        "@id": "copies/kx695yq4528#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kx695yq4528.jsonld#chain-pitch-belief",
+         "@id": "copies/kx695yq4528#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4175,
        "n": 18068,
        "@annotation": {
-        "@id": "copies/kx695yq4528.jsonld#advance-annotation",
+        "@id": "copies/kx695yq4528#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kx695yq4528.jsonld#advance-belief",
+         "@id": "copies/kx695yq4528#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

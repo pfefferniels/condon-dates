@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/pd354nj6106.jsonld",
+ "@id": "copies/pd354nj6106",
  "title": "Condon Roll 455, WM 1454",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/pd354nj6106.jsonld#copy",
+   "@id": "copies/pd354nj6106#copy",
    "label": "Condon Roll 455",
    "identifier": "Stanford Libraries CONDON ROLL 455",
    "seeAlso": "https://purl.stanford.edu/pd354nj6106",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/pd354nj6106.jsonld#inscription",
+       "@id": "copies/pd354nj6106#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/pd354nj6106%2Fpd354nj6106_0001/3338,260992,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/pd354nj6106.jsonld#inscription-text",
-        "text": "1454   24…9   [cursive signature]"
+        "@id": "copies/pd354nj6106#inscription-text",
+        "text": "1454   24…9   [cursive signature]",
+        "@annotation": {
+         "@id": "copies/pd354nj6106#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/pd354nj6106#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/pd354nj6106#inscription"
+            ],
+            "note": "No date was read in it, so its figures were not graded. Ink, bass edge. Roll number 1454 plain, and confirmed by the printed leader label in crop 4 (Welte-Mignon No. 1454, 'God save the King'). A five-figure date group follows: the first two read 24 and the last reads 9, but the three middle figures are broken and not separable at this resolution, so no date is given. A cursive signature follows the date; possibly beginning Sch-, but not legible enough to name."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "B. Schäfer",
       "sameAs": [],
-      "@id": "hands.jsonld#b-schaefer",
+      "@id": "hands#b-schaefer",
       "@annotation": {
-       "@id": "copies/pd354nj6106.jsonld#hand-annotation",
+       "@id": "copies/pd354nj6106#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/pd354nj6106.jsonld#hand-belief",
+        "@id": "copies/pd354nj6106#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/pd354nj6106.jsonld#inscription-text"
+           "copies/pd354nj6106#inscription-text"
           ],
           "note": "No name was read off it."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,17 +127,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/pd354nj6106.jsonld#perforator",
+     "@id": "copies/pd354nj6106#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2765,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/pd354nj6106.jsonld#punch-diameter-annotation",
+        "@id": "copies/pd354nj6106#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pd354nj6106.jsonld#punch-diameter-belief",
+         "@id": "copies/pd354nj6106#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -141,10 +159,10 @@
        "bridge": 0.6178,
        "n": 266,
        "@annotation": {
-        "@id": "copies/pd354nj6106.jsonld#chain-pitch-annotation",
+        "@id": "copies/pd354nj6106#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pd354nj6106.jsonld#chain-pitch-belief",
+         "@id": "copies/pd354nj6106#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -165,10 +183,10 @@
        "strength": 0.1083,
        "n": 27764,
        "@annotation": {
-        "@id": "copies/pd354nj6106.jsonld#advance-annotation",
+        "@id": "copies/pd354nj6106#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pd354nj6106.jsonld#advance-belief",
+         "@id": "copies/pd354nj6106#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

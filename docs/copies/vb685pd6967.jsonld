@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/vb685pd6967.jsonld",
+ "@id": "copies/vb685pd6967",
  "title": "Condon Roll 33, WM 192",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/vb685pd6967.jsonld#copy",
+   "@id": "copies/vb685pd6967#copy",
    "label": "Condon Roll 33",
    "identifier": "Stanford Libraries CONDON ROLL 33",
    "seeAlso": "https://purl.stanford.edu/vb685pd6967",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/vb685pd6967.jsonld#inscription",
+       "@id": "copies/vb685pd6967#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/vb685pd6967%2Fvb685pd6967_0001/3518,224777,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/vb685pd6967.jsonld#inscription-text",
-        "text": "192.  10.  10.  11"
+        "@id": "copies/vb685pd6967#inscription-text",
+        "text": "192.  10.  10.  11",
+        "@annotation": {
+         "@id": "copies/vb685pd6967#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/vb685pd6967#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/vb685pd6967#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil. Four groups: 192 with a stop, then three date groups. Read as roll number 192 and the date 10.10.11. The two 10s are each a 1 followed by a narrow open oval; 16 would need a bowl on the baseline and I do not see one."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1911-10-10",
      "@annotation": {
-      "@id": "copies/vb685pd6967.jsonld#date-annotation",
+      "@id": "copies/vb685pd6967#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/vb685pd6967.jsonld#date-belief",
+       "@id": "copies/vb685pd6967#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/vb685pd6967.jsonld#inscription-text"
+          "copies/vb685pd6967#inscription-text"
          ],
-         "note": "Pencil. Four groups: 192 with a stop, then three date groups. Read as roll number 192 and the date 10.10.11. The two 10s are each a 1 followed by a narrow open oval; 16 would need a bowl on the baseline and I do not see one."
+         "note": "\"10. 10. 11\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/vb685pd6967#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/vb685pd6967.jsonld#perforator",
+     "@id": "copies/vb685pd6967#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1817,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/vb685pd6967.jsonld#punch-diameter-annotation",
+        "@id": "copies/vb685pd6967#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vb685pd6967.jsonld#punch-diameter-belief",
+         "@id": "copies/vb685pd6967#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6652,
        "n": 227,
        "@annotation": {
-        "@id": "copies/vb685pd6967.jsonld#chain-pitch-annotation",
+        "@id": "copies/vb685pd6967#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vb685pd6967.jsonld#chain-pitch-belief",
+         "@id": "copies/vb685pd6967#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.2686,
        "n": 10338,
        "@annotation": {
-        "@id": "copies/vb685pd6967.jsonld#advance-annotation",
+        "@id": "copies/vb685pd6967#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vb685pd6967.jsonld#advance-belief",
+         "@id": "copies/vb685pd6967#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

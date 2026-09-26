@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gm296rz0673.jsonld",
+ "@id": "copies/gm296rz0673",
  "title": "Condon Roll 735, WM 3055",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gm296rz0673.jsonld#copy",
+   "@id": "copies/gm296rz0673#copy",
    "label": "Condon Roll 735",
    "identifier": "Stanford Libraries CONDON ROLL 735",
    "seeAlso": "https://purl.stanford.edu/gm296rz0673",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gm296rz0673.jsonld#inscription",
+       "@id": "copies/gm296rz0673#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gm296rz0673%2Fgm296rz0673_0001/3523,520590,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gm296rz0673.jsonld#inscription-text",
-        "text": "11822"
+        "@id": "copies/gm296rz0673#inscription-text",
+        "text": "11822",
+        "@annotation": {
+         "@id": "copies/gm296rz0673#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gm296rz0673#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gm296rz0673#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, treble edge, five figures without separators. Two plain carets for the 1s, a closed double loop for the 8, and two matching 2s."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-08-11",
      "@annotation": {
-      "@id": "copies/gm296rz0673.jsonld#date-annotation",
+      "@id": "copies/gm296rz0673#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gm296rz0673.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/gm296rz0673#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gm296rz0673.jsonld#inscription-text"
+          "copies/gm296rz0673#inscription-text"
          ],
-         "note": "Pencil, treble edge, five figures without separators. Two plain carets for the 1s, a closed double loop for the 8, and two matching 2s."
+         "note": "The figures of \"11822\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gm296rz0673#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gm296rz0673.jsonld#perforator",
+     "@id": "copies/gm296rz0673#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8146,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gm296rz0673.jsonld#punch-diameter-annotation",
+        "@id": "copies/gm296rz0673#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gm296rz0673.jsonld#punch-diameter-belief",
+         "@id": "copies/gm296rz0673#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.586,
        "n": 324,
        "@annotation": {
-        "@id": "copies/gm296rz0673.jsonld#chain-pitch-annotation",
+        "@id": "copies/gm296rz0673#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gm296rz0673.jsonld#chain-pitch-belief",
+         "@id": "copies/gm296rz0673#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4896,
        "n": 40408,
        "@annotation": {
-        "@id": "copies/gm296rz0673.jsonld#advance-annotation",
+        "@id": "copies/gm296rz0673#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gm296rz0673.jsonld#advance-belief",
+         "@id": "copies/gm296rz0673#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

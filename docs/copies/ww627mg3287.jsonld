@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ww627mg3287.jsonld",
+ "@id": "copies/ww627mg3287",
  "title": "Condon Roll 297, WM 1035",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ww627mg3287.jsonld#copy",
+   "@id": "copies/ww627mg3287#copy",
    "label": "Condon Roll 297",
    "identifier": "Stanford Libraries CONDON ROLL 297",
    "seeAlso": "https://purl.stanford.edu/ww627mg3287",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ww627mg3287.jsonld#inscription",
+       "@id": "copies/ww627mg3287#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ww627mg3287%2Fww627mg3287_0001/3182,162463,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ww627mg3287.jsonld#inscription-text",
-        "text": "1035 Fritz 26 Novb. 1908."
+        "@id": "copies/ww627mg3287#inscription-text",
+        "text": "1035 Fritz 26 Novb. 1908.",
+        "@annotation": {
+         "@id": "copies/ww627mg3287#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ww627mg3287#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ww627mg3287#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, a full line across the roll: number, puncher, day, month spelt Novb. and the year in full. Every figure plain"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "Fritz",
       "sameAs": [],
-      "@id": "hands.jsonld#fritz",
+      "@id": "hands#fritz",
       "@annotation": {
-       "@id": "copies/ww627mg3287.jsonld#hand-annotation",
+       "@id": "copies/ww627mg3287#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/ww627mg3287.jsonld#hand-belief",
+        "@id": "copies/ww627mg3287#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/ww627mg3287.jsonld#inscription-text"
+           "copies/ww627mg3287#inscription-text"
           ],
           "note": "Read as \"Fritz\"."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1908-11-26",
      "@annotation": {
-      "@id": "copies/ww627mg3287.jsonld#date-annotation",
+      "@id": "copies/ww627mg3287#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ww627mg3287.jsonld#date-belief",
+       "@id": "copies/ww627mg3287#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ww627mg3287.jsonld#inscription-text"
+          "copies/ww627mg3287#inscription-text"
          ],
-         "note": "ink, a full line across the roll: number, puncher, day, month spelt Novb. and the year in full. Every figure plain"
+         "note": "\"26 Novb. 1908\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ww627mg3287#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ww627mg3287.jsonld#perforator",
+     "@id": "copies/ww627mg3287#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1902,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ww627mg3287.jsonld#punch-diameter-annotation",
+        "@id": "copies/ww627mg3287#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ww627mg3287.jsonld#punch-diameter-belief",
+         "@id": "copies/ww627mg3287#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.6869,
        "n": 216,
        "@annotation": {
-        "@id": "copies/ww627mg3287.jsonld#chain-pitch-annotation",
+        "@id": "copies/ww627mg3287#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ww627mg3287.jsonld#chain-pitch-belief",
+         "@id": "copies/ww627mg3287#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.8335,
        "n": 7127,
        "@annotation": {
-        "@id": "copies/ww627mg3287.jsonld#advance-annotation",
+        "@id": "copies/ww627mg3287#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ww627mg3287.jsonld#advance-belief",
+         "@id": "copies/ww627mg3287#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

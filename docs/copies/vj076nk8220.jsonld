@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/vj076nk8220.jsonld",
+ "@id": "copies/vj076nk8220",
  "title": "Condon Roll 345, WM 1213",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/vj076nk8220.jsonld#copy",
+   "@id": "copies/vj076nk8220#copy",
    "label": "Condon Roll 345",
    "identifier": "Stanford Libraries CONDON ROLL 345",
    "seeAlso": "https://purl.stanford.edu/vj076nk8220",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/vj076nk8220.jsonld#inscription",
+       "@id": "copies/vj076nk8220#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/vj076nk8220%2Fvj076nk8220_0001/3505,77518,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/vj076nk8220.jsonld#inscription-text",
-        "text": "81123"
+        "@id": "copies/vj076nk8220#inscription-text",
+        "text": "81123",
+        "@annotation": {
+         "@id": "copies/vj076nk8220#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/vj076nk8220#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/vj076nk8220#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, one line, no separators: 8 1 1 2 3, read 8.11.23 on the corpus convention. The 8 is the fully closed crossed form, so it is not the 6-like variant. No number and no name in the crop."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1923-11-08",
      "@annotation": {
-      "@id": "copies/vj076nk8220.jsonld#date-annotation",
+      "@id": "copies/vj076nk8220#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/vj076nk8220.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/vj076nk8220#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/vj076nk8220.jsonld#inscription-text"
+          "copies/vj076nk8220#inscription-text"
          ],
-         "note": "Ink, one line, no separators: 8 1 1 2 3, read 8.11.23 on the corpus convention. The 8 is the fully closed crossed form, so it is not the 6-like variant. No number and no name in the crop."
+         "note": "The figures of \"81123\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/vj076nk8220#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/vj076nk8220.jsonld#perforator",
+     "@id": "copies/vj076nk8220#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7029,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/vj076nk8220.jsonld#punch-diameter-annotation",
+        "@id": "copies/vj076nk8220#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vj076nk8220.jsonld#punch-diameter-belief",
+         "@id": "copies/vj076nk8220#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7518,
        "n": 591,
        "@annotation": {
-        "@id": "copies/vj076nk8220.jsonld#chain-pitch-annotation",
+        "@id": "copies/vj076nk8220#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vj076nk8220.jsonld#chain-pitch-belief",
+         "@id": "copies/vj076nk8220#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.634,
        "n": 5394,
        "@annotation": {
-        "@id": "copies/vj076nk8220.jsonld#advance-annotation",
+        "@id": "copies/vj076nk8220#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vj076nk8220.jsonld#advance-belief",
+         "@id": "copies/vj076nk8220#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

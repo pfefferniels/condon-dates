@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/kq525dc4373.jsonld",
+ "@id": "copies/kq525dc4373",
  "title": "Condon Roll 539, WM 1755",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/kq525dc4373.jsonld#copy",
+   "@id": "copies/kq525dc4373#copy",
    "label": "Condon Roll 539",
    "identifier": "Stanford Libraries CONDON ROLL 539",
    "seeAlso": "https://purl.stanford.edu/kq525dc4373",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/kq525dc4373.jsonld#inscription",
+       "@id": "copies/kq525dc4373#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/kq525dc4373%2Fkq525dc4373_0001/3487,92214,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/kq525dc4373.jsonld#inscription-text",
-        "text": "30. 5. 23"
+        "@id": "copies/kq525dc4373#inscription-text",
+        "text": "30. 5. 23",
+        "@annotation": {
+         "@id": "copies/kq525dc4373#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/kq525dc4373#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/kq525dc4373#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, written along the roll. The 3s are written with closed bowls and could be read as 8s, but 80 is impossible as a day and the year figure has the same form as the day's first figure. The month figure matches the 5s of the pencilled roll number 1755 in region 4. Region 3 shows the leader label 'WELTE-MIGNON No. 1755. Accompaniment for Sopran / Widmung (Devotion) / R. Schumann / Played by [signature] / 25. III. 09.' - a printed label date, distinct from this punch date."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1923-05-30",
      "@annotation": {
-      "@id": "copies/kq525dc4373.jsonld#date-annotation",
+      "@id": "copies/kq525dc4373#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/kq525dc4373.jsonld#date-belief",
+       "@id": "copies/kq525dc4373#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/kq525dc4373.jsonld#inscription-text"
+          "copies/kq525dc4373#inscription-text"
          ],
-         "note": "Pencil, written along the roll. The 3s are written with closed bowls and could be read as 8s, but 80 is impossible as a day and the year figure has the same form as the day's first figure. The month figure matches the 5s of the pencilled roll number 1755 in region 4. Region 3 shows the leader label 'WELTE-MIGNON No. 1755. Accompaniment for Sopran / Widmung (Devotion) / R. Schumann / Played by [signature] / 25. III. 09.' - a printed label date, distinct from this punch date."
+         "note": "\"30. 5. 23\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/kq525dc4373#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/kq525dc4373.jsonld#perforator",
+     "@id": "copies/kq525dc4373#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8027,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/kq525dc4373.jsonld#punch-diameter-annotation",
+        "@id": "copies/kq525dc4373#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kq525dc4373.jsonld#punch-diameter-belief",
+         "@id": "copies/kq525dc4373#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6815,
        "n": 377,
        "@annotation": {
-        "@id": "copies/kq525dc4373.jsonld#chain-pitch-annotation",
+        "@id": "copies/kq525dc4373#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kq525dc4373.jsonld#chain-pitch-belief",
+         "@id": "copies/kq525dc4373#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5729,
        "n": 6433,
        "@annotation": {
-        "@id": "copies/kq525dc4373.jsonld#advance-annotation",
+        "@id": "copies/kq525dc4373#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kq525dc4373.jsonld#advance-belief",
+         "@id": "copies/kq525dc4373#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

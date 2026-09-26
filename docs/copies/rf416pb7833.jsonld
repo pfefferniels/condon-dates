@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rf416pb7833.jsonld",
+ "@id": "copies/rf416pb7833",
  "title": "Condon Roll 783, WM 3452",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rf416pb7833.jsonld#copy",
+   "@id": "copies/rf416pb7833#copy",
    "label": "Condon Roll 783",
    "identifier": "Stanford Libraries CONDON ROLL 783",
    "seeAlso": "https://purl.stanford.edu/rf416pb7833",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rf416pb7833.jsonld#inscription",
+       "@id": "copies/rf416pb7833#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rf416pb7833%2Frf416pb7833_0001/3495,160514,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rf416pb7833.jsonld#inscription-text",
-        "text": "8421"
+        "@id": "copies/rf416pb7833#inscription-text",
+        "text": "8421",
+        "@annotation": {
+         "@id": "copies/rf416pb7833#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rf416pb7833#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rf416pb7833#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, four figures, read as 8.4.21."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1921-04-08",
      "@annotation": {
-      "@id": "copies/rf416pb7833.jsonld#date-annotation",
+      "@id": "copies/rf416pb7833#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rf416pb7833.jsonld#date-belief",
+       "@id": "copies/rf416pb7833#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rf416pb7833.jsonld#inscription-text"
+          "copies/rf416pb7833#inscription-text"
          ],
-         "note": "Pencil, four figures, read as 8.4.21."
+         "note": "The figures of \"8421\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rf416pb7833#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rf416pb7833.jsonld#perforator",
+     "@id": "copies/rf416pb7833#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8603,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rf416pb7833.jsonld#punch-diameter-annotation",
+        "@id": "copies/rf416pb7833#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rf416pb7833.jsonld#punch-diameter-belief",
+         "@id": "copies/rf416pb7833#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6175,
        "n": 244,
        "@annotation": {
-        "@id": "copies/rf416pb7833.jsonld#chain-pitch-annotation",
+        "@id": "copies/rf416pb7833#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rf416pb7833.jsonld#chain-pitch-belief",
+         "@id": "copies/rf416pb7833#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4184,
        "n": 11515,
        "@annotation": {
-        "@id": "copies/rf416pb7833.jsonld#advance-annotation",
+        "@id": "copies/rf416pb7833#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rf416pb7833.jsonld#advance-belief",
+         "@id": "copies/rf416pb7833#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

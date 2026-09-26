@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/zw485gh6070.jsonld",
+ "@id": "copies/zw485gh6070",
  "title": "Condon Roll 333, WM 1184",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/zw485gh6070.jsonld#copy",
+   "@id": "copies/zw485gh6070#copy",
    "label": "Condon Roll 333",
    "identifier": "Stanford Libraries CONDON ROLL 333",
    "seeAlso": "https://purl.stanford.edu/zw485gh6070",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/zw485gh6070.jsonld#inscription",
+       "@id": "copies/zw485gh6070#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/zw485gh6070%2Fzw485gh6070_0001/3438,142211,550,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/zw485gh6070.jsonld#inscription-text",
-        "text": "1184   3. 8. 10   Roth / [second hand, illegible]"
+        "@id": "copies/zw485gh6070#inscription-text",
+        "text": "1184   3. 8. 10   Roth / [second hand, illegible]",
+        "@annotation": {
+         "@id": "copies/zw485gh6070#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/zw485gh6070#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/zw485gh6070#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, large and unhurried, on clear paper. Third figure of the number is the open-topped 8 of these hands, not a 6; the 8 of the date is a closed figure-eight. A second short signature sits below and right of Roth, four or five cursive letters, which I cannot letter out with any confidence."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Roth",
       "sameAs": [],
-      "@id": "hands.jsonld#roth",
+      "@id": "hands#roth",
       "@annotation": {
-       "@id": "copies/zw485gh6070.jsonld#hand-annotation",
+       "@id": "copies/zw485gh6070#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/zw485gh6070.jsonld#hand-belief",
+        "@id": "copies/zw485gh6070#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/zw485gh6070.jsonld#inscription-text"
+           "copies/zw485gh6070#inscription-text"
           ],
-          "note": "Read as \"Roth\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Roth\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1910-08-03",
      "@annotation": {
-      "@id": "copies/zw485gh6070.jsonld#date-annotation",
+      "@id": "copies/zw485gh6070#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/zw485gh6070.jsonld#date-belief",
+       "@id": "copies/zw485gh6070#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/zw485gh6070.jsonld#inscription-text"
+          "copies/zw485gh6070#inscription-text"
          ],
-         "note": "Ink, large and unhurried, on clear paper. Third figure of the number is the open-topped 8 of these hands, not a 6; the 8 of the date is a closed figure-eight. A second short signature sits below and right of Roth, four or five cursive letters, which I cannot letter out with any confidence."
+         "note": "\"3. 8. 10\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/zw485gh6070#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/zw485gh6070.jsonld#perforator",
+     "@id": "copies/zw485gh6070#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2393,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/zw485gh6070.jsonld#punch-diameter-annotation",
+        "@id": "copies/zw485gh6070#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zw485gh6070.jsonld#punch-diameter-belief",
+         "@id": "copies/zw485gh6070#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.7512,
        "n": 266,
        "@annotation": {
-        "@id": "copies/zw485gh6070.jsonld#chain-pitch-annotation",
+        "@id": "copies/zw485gh6070#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zw485gh6070.jsonld#chain-pitch-belief",
+         "@id": "copies/zw485gh6070#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.1486,
        "n": 9510,
        "@annotation": {
-        "@id": "copies/zw485gh6070.jsonld#advance-annotation",
+        "@id": "copies/zw485gh6070#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zw485gh6070.jsonld#advance-belief",
+         "@id": "copies/zw485gh6070#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

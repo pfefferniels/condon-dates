@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gb034mq5877.jsonld",
+ "@id": "copies/gb034mq5877",
  "title": "Condon Roll 134, WM 422",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gb034mq5877.jsonld#copy",
+   "@id": "copies/gb034mq5877#copy",
    "label": "Condon Roll 134",
    "identifier": "Stanford Libraries CONDON ROLL 134",
    "seeAlso": "https://purl.stanford.edu/gb034mq5877",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gb034mq5877.jsonld#inscription",
+       "@id": "copies/gb034mq5877#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gb034mq5877%2Fgb034mq5877_0001/3509,220252,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gb034mq5877.jsonld#inscription-text",
-        "text": "11822"
+        "@id": "copies/gb034mq5877#inscription-text",
+        "text": "11822",
+        "@annotation": {
+         "@id": "copies/gb034mq5877#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gb034mq5877#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gb034mq5877#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil. Region 1 holds only the five-digit group 11822, no separators and no name; region 3 carries the roll's number 422 on its own, region 2 is blank. Read as 11.8.22 on the pattern reading.md gives for 14114 = 14.1.1914, but the group may be a serial rather than a date. The third figure is the open-topped form that reading.md warns of, so 11.6.22 cannot be excluded."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-08-11",
      "@annotation": {
-      "@id": "copies/gb034mq5877.jsonld#date-annotation",
+      "@id": "copies/gb034mq5877#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gb034mq5877.jsonld#date-belief",
+       "@id": "copies/gb034mq5877#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gb034mq5877.jsonld#inscription-text"
+          "copies/gb034mq5877#inscription-text"
          ],
-         "note": "pencil. Region 1 holds only the five-digit group 11822, no separators and no name; region 3 carries the roll's number 422 on its own, region 2 is blank. Read as 11.8.22 on the pattern reading.md gives for 14114 = 14.1.1914, but the group may be a serial rather than a date. The third figure is the open-topped form that reading.md warns of, so 11.6.22 cannot be excluded."
+         "note": "The figures of \"11822\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gb034mq5877#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gb034mq5877.jsonld#perforator",
+     "@id": "copies/gb034mq5877#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6682,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gb034mq5877.jsonld#punch-diameter-annotation",
+        "@id": "copies/gb034mq5877#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gb034mq5877.jsonld#punch-diameter-belief",
+         "@id": "copies/gb034mq5877#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7341,
        "n": 454,
        "@annotation": {
-        "@id": "copies/gb034mq5877.jsonld#chain-pitch-annotation",
+        "@id": "copies/gb034mq5877#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gb034mq5877.jsonld#chain-pitch-belief",
+         "@id": "copies/gb034mq5877#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6076,
        "n": 16672,
        "@annotation": {
-        "@id": "copies/gb034mq5877.jsonld#advance-annotation",
+        "@id": "copies/gb034mq5877#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gb034mq5877.jsonld#advance-belief",
+         "@id": "copies/gb034mq5877#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

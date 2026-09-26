@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xn585zh2707.jsonld",
+ "@id": "copies/xn585zh2707",
  "title": "Condon Roll 679, WM 2805",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xn585zh2707.jsonld#copy",
+   "@id": "copies/xn585zh2707#copy",
    "label": "Condon Roll 679",
    "identifier": "Stanford Libraries CONDON ROLL 679",
    "seeAlso": "https://purl.stanford.edu/xn585zh2707",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xn585zh2707.jsonld#inscription",
+       "@id": "copies/xn585zh2707#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xn585zh2707%2Fxn585zh2707_0001/3485,359803,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xn585zh2707.jsonld#inscription-text",
-        "text": "6722"
+        "@id": "copies/xn585zh2707#inscription-text",
+        "text": "6722",
+        "@annotation": {
+         "@id": "copies/xn585zh2707#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xn585zh2707#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xn585zh2707#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, four small figures run together, read from the lower (180-degree) panel. A 6 as a large right-opening curve closing into a bottom bowl, then a 7 with its crossbar, then two 2s, each a closed top loop over a stroke that runs down to a long horizontal base. The two 2s are written slightly differently, one loop rounder than the other, and at this resolution the first of them could be taken for a 3, which would make the year 32; the base stroke is what decides it for 2, so 6.7.22."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-07-06",
      "@annotation": {
-      "@id": "copies/xn585zh2707.jsonld#date-annotation",
+      "@id": "copies/xn585zh2707#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/xn585zh2707.jsonld#date-belief",
+       "@id": "copies/xn585zh2707#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/xn585zh2707.jsonld#inscription-text"
+          "copies/xn585zh2707#inscription-text"
          ],
-         "note": "pencil, four small figures run together, read from the lower (180-degree) panel. A 6 as a large right-opening curve closing into a bottom bowl, then a 7 with its crossbar, then two 2s, each a closed top loop over a stroke that runs down to a long horizontal base. The two 2s are written slightly differently, one loop rounder than the other, and at this resolution the first of them could be taken for a 3, which would make the year 32; the base stroke is what decides it for 2, so 6.7.22."
+         "note": "The figures of \"6722\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/xn585zh2707#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xn585zh2707.jsonld#perforator",
+     "@id": "copies/xn585zh2707#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7731,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xn585zh2707.jsonld#punch-diameter-annotation",
+        "@id": "copies/xn585zh2707#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xn585zh2707.jsonld#punch-diameter-belief",
+         "@id": "copies/xn585zh2707#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6571,
        "n": 315,
        "@annotation": {
-        "@id": "copies/xn585zh2707.jsonld#chain-pitch-annotation",
+        "@id": "copies/xn585zh2707#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xn585zh2707.jsonld#chain-pitch-belief",
+         "@id": "copies/xn585zh2707#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.1705,
        "n": 22535,
        "@annotation": {
-        "@id": "copies/xn585zh2707.jsonld#advance-annotation",
+        "@id": "copies/xn585zh2707#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xn585zh2707.jsonld#advance-belief",
+         "@id": "copies/xn585zh2707#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

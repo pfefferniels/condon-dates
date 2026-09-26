@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hh466mq4616.jsonld",
+ "@id": "copies/hh466mq4616",
  "title": "Condon Roll 77, WM 296",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hh466mq4616.jsonld#copy",
+   "@id": "copies/hh466mq4616#copy",
    "label": "Condon Roll 77",
    "identifier": "Stanford Libraries CONDON ROLL 77",
    "seeAlso": "https://purl.stanford.edu/hh466mq4616",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hh466mq4616.jsonld#inscription",
+       "@id": "copies/hh466mq4616#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hh466mq4616%2Fhh466mq4616_0001/3422,165266,565,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hh466mq4616.jsonld#inscription-text",
-        "text": "296   3. 11. 10   Hauser / Wipfel(?)"
+        "@id": "copies/hh466mq4616#inscription-text",
+        "text": "296   3. 11. 10   Hauser / Wipfel(?)",
+        "@annotation": {
+         "@id": "copies/hh466mq4616#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hh466mq4616#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hh466mq4616#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink; date plain. The number's middle figure is a bowl with a long descender, read as 9, so 296 rather than 246. The second name on the line below Hauser is not certain"
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Wissler",
       "sameAs": [],
-      "@id": "hands.jsonld#wissler",
+      "@id": "hands#wissler",
       "@annotation": {
-       "@id": "copies/hh466mq4616.jsonld#hand-annotation",
+       "@id": "copies/hh466mq4616#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/hh466mq4616.jsonld#hand-belief",
+        "@id": "copies/hh466mq4616#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/hh466mq4616.jsonld#inscription-text"
+           "copies/hh466mq4616#inscription-text"
           ],
           "note": "Read as \"Hauser / Wipfel(?)\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1910-11-03",
      "@annotation": {
-      "@id": "copies/hh466mq4616.jsonld#date-annotation",
+      "@id": "copies/hh466mq4616#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hh466mq4616.jsonld#date-belief",
+       "@id": "copies/hh466mq4616#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hh466mq4616.jsonld#inscription-text"
+          "copies/hh466mq4616#inscription-text"
          ],
-         "note": "ink; date plain. The number's middle figure is a bowl with a long descender, read as 9, so 296 rather than 246. The second name on the line below Hauser is not certain"
+         "note": "\"3. 11. 10\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hh466mq4616#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hh466mq4616.jsonld#perforator",
+     "@id": "copies/hh466mq4616#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1893,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hh466mq4616.jsonld#punch-diameter-annotation",
+        "@id": "copies/hh466mq4616#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hh466mq4616.jsonld#punch-diameter-belief",
+         "@id": "copies/hh466mq4616#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.7526,
        "n": 199,
        "@annotation": {
-        "@id": "copies/hh466mq4616.jsonld#chain-pitch-annotation",
+        "@id": "copies/hh466mq4616#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hh466mq4616.jsonld#chain-pitch-belief",
+         "@id": "copies/hh466mq4616#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.0783,
        "n": 7149,
        "@annotation": {
-        "@id": "copies/hh466mq4616.jsonld#advance-annotation",
+        "@id": "copies/hh466mq4616#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hh466mq4616.jsonld#advance-belief",
+         "@id": "copies/hh466mq4616#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

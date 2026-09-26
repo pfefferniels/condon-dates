@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jt465zc6779.jsonld",
+ "@id": "copies/jt465zc6779",
  "title": "Condon Roll 941, WM 5658",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jt465zc6779.jsonld#copy",
+   "@id": "copies/jt465zc6779#copy",
    "label": "Condon Roll 941",
    "identifier": "Stanford Libraries CONDON ROLL 941",
    "seeAlso": "https://purl.stanford.edu/jt465zc6779",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jt465zc6779.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/jt465zc6779#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 11249.77,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jt465zc6779%2Fjt465zc6779_0001/3509,132982,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jt465zc6779.jsonld#inscription-text",
-        "text": "1 3 25"
+        "@id": "copies/jt465zc6779#inscription-text",
+        "text": "1 3 25",
+        "@annotation": {
+         "@id": "copies/jt465zc6779#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jt465zc6779#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jt465zc6779#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Stamped, with a heavy blob before the figures and a second ornament after them, both part of the slug; the figures alone give 1.3.25, so I have not read the leading blob as a 1. The four figures are crisp. The roll number is from the printed title label on the leader in e3, 'WELTE-MIGNON No. 5658 / Driftwood / Fox-trot / Lew Gold / Played by Ed. Johnson', with a rights slip of M. Welte & Söhne, Freiburg i. Br. — printed, not a written hand. e2, e4 and e5 are blank"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1925-03-01",
      "@annotation": {
-      "@id": "copies/jt465zc6779.jsonld#date-annotation",
+      "@id": "copies/jt465zc6779#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jt465zc6779.jsonld#date-belief",
+       "@id": "copies/jt465zc6779#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jt465zc6779.jsonld#inscription-text"
+          "copies/jt465zc6779#inscription-text"
          ],
-         "note": "stamped, with a heavy blob before the figures and a second ornament after them, both part of the slug; the figures alone give 1.3.25, so I have not read the leading blob as a 1. The four figures are crisp. The roll number is from the printed title label on the leader in e3, 'WELTE-MIGNON No. 5658 / Driftwood / Fox-trot / Lew Gold / Played by Ed. Johnson', with a rights slip of M. Welte & Söhne, Freiburg i. Br. — printed, not a written hand. e2, e4 and e5 are blank"
+         "note": "\"1.3.25\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jt465zc6779#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jt465zc6779.jsonld#perforator",
+     "@id": "copies/jt465zc6779#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6792,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jt465zc6779.jsonld#punch-diameter-annotation",
+        "@id": "copies/jt465zc6779#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jt465zc6779.jsonld#punch-diameter-belief",
+         "@id": "copies/jt465zc6779#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7251,
        "n": 143,
        "@annotation": {
-        "@id": "copies/jt465zc6779.jsonld#chain-pitch-annotation",
+        "@id": "copies/jt465zc6779#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jt465zc6779.jsonld#chain-pitch-belief",
+         "@id": "copies/jt465zc6779#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5723,
        "n": 10683,
        "@annotation": {
-        "@id": "copies/jt465zc6779.jsonld#advance-annotation",
+        "@id": "copies/jt465zc6779#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jt465zc6779.jsonld#advance-belief",
+         "@id": "copies/jt465zc6779#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

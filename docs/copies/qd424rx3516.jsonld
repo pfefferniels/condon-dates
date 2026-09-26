@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/qd424rx3516.jsonld",
+ "@id": "copies/qd424rx3516",
  "title": "Condon Roll 824, WM 3671",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/qd424rx3516.jsonld#copy",
+   "@id": "copies/qd424rx3516#copy",
    "label": "Condon Roll 824",
    "identifier": "Stanford Libraries CONDON ROLL 824",
    "seeAlso": "https://purl.stanford.edu/qd424rx3516",
@@ -50,17 +51,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/qd424rx3516.jsonld#perforator",
+     "@id": "copies/qd424rx3516#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8442,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/qd424rx3516.jsonld#punch-diameter-annotation",
+        "@id": "copies/qd424rx3516#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qd424rx3516.jsonld#punch-diameter-belief",
+         "@id": "copies/qd424rx3516#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -82,10 +83,10 @@
        "bridge": 0.5489,
        "n": 208,
        "@annotation": {
-        "@id": "copies/qd424rx3516.jsonld#chain-pitch-annotation",
+        "@id": "copies/qd424rx3516#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qd424rx3516.jsonld#chain-pitch-belief",
+         "@id": "copies/qd424rx3516#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -106,10 +107,10 @@
        "strength": 0.4738,
        "n": 19138,
        "@annotation": {
-        "@id": "copies/qd424rx3516.jsonld#advance-annotation",
+        "@id": "copies/qd424rx3516#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qd424rx3516.jsonld#advance-belief",
+         "@id": "copies/qd424rx3516#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/pb026mb0704.jsonld",
+ "@id": "copies/pb026mb0704",
  "title": "Condon Roll 270, WM 921",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/pb026mb0704.jsonld#copy",
+   "@id": "copies/pb026mb0704#copy",
    "label": "Condon Roll 270",
    "identifier": "Stanford Libraries CONDON ROLL 270",
    "seeAlso": "https://purl.stanford.edu/pb026mb0704",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/pb026mb0704.jsonld#inscription",
+       "@id": "copies/pb026mb0704#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/pb026mb0704%2Fpb026mb0704_0001/3507,204865,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/pb026mb0704.jsonld#inscription-text",
-        "text": "131220"
+        "@id": "copies/pb026mb0704#inscription-text",
+        "text": "131220",
+        "@annotation": {
+         "@id": "copies/pb026mb0704#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/pb026mb0704#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/pb026mb0704#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil on buff paper, six figures with no separators, read as 13.12.20"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1920-12-13",
      "@annotation": {
-      "@id": "copies/pb026mb0704.jsonld#date-annotation",
+      "@id": "copies/pb026mb0704#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/pb026mb0704.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/pb026mb0704#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/pb026mb0704.jsonld#inscription-text"
+          "copies/pb026mb0704#inscription-text"
          ],
-         "note": "pencil on buff paper, six figures with no separators, read as 13.12.20"
+         "note": "The figures of \"131220\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/pb026mb0704#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/pb026mb0704.jsonld#perforator",
+     "@id": "copies/pb026mb0704#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7258,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/pb026mb0704.jsonld#punch-diameter-annotation",
+        "@id": "copies/pb026mb0704#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pb026mb0704.jsonld#punch-diameter-belief",
+         "@id": "copies/pb026mb0704#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6866,
        "n": 291,
        "@annotation": {
-        "@id": "copies/pb026mb0704.jsonld#chain-pitch-annotation",
+        "@id": "copies/pb026mb0704#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pb026mb0704.jsonld#chain-pitch-belief",
+         "@id": "copies/pb026mb0704#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6055,
        "n": 12329,
        "@annotation": {
-        "@id": "copies/pb026mb0704.jsonld#advance-annotation",
+        "@id": "copies/pb026mb0704#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pb026mb0704.jsonld#advance-belief",
+         "@id": "copies/pb026mb0704#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

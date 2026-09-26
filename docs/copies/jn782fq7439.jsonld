@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jn782fq7439.jsonld",
+ "@id": "copies/jn782fq7439",
  "title": "Condon Roll 18, WM 134",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jn782fq7439.jsonld#copy",
+   "@id": "copies/jn782fq7439#copy",
    "label": "Condon Roll 18",
    "identifier": "Stanford Libraries CONDON ROLL 18",
    "seeAlso": "https://purl.stanford.edu/jn782fq7439",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jn782fq7439.jsonld#inscription",
+       "@id": "copies/jn782fq7439#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jn782fq7439%2Fjn782fq7439_0001/3486,213788,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jn782fq7439.jsonld#inscription-text",
-        "text": "[name, illegible]  18 2 09.  [?] 134"
+        "@id": "copies/jn782fq7439#inscription-text",
+        "text": "[name, illegible]  18 2 09.  [?] 134",
+        "@annotation": {
+         "@id": "copies/jn782fq7439#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jn782fq7439#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jn782fq7439#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, one line. A cursive word of five or six letters stands before the date and is illegible to me; it may begin Hoff-. The day's second figure is an 8 written as two strokes converging on a single bottom bowl, so the upper loop is open; 6 can be ruled out because two strokes descend into the bowl. A three-figure group, perhaps 134, preceded by a letter, follows the date; I could not read it with confidence and have left roll_number empty."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "Kopf",
       "sameAs": [],
-      "@id": "hands.jsonld#kopf",
+      "@id": "hands#kopf",
       "@annotation": {
-       "@id": "copies/jn782fq7439.jsonld#hand-annotation",
+       "@id": "copies/jn782fq7439#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/jn782fq7439.jsonld#hand-belief",
+        "@id": "copies/jn782fq7439#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/jn782fq7439.jsonld#inscription-text"
+           "copies/jn782fq7439#inscription-text"
           ],
           "note": "Read as \"Kopf\". The same signature as mz508vq7890 and wj177bx9196, which the reader recorded only as an illegible word."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1909-02-18",
      "@annotation": {
-      "@id": "copies/jn782fq7439.jsonld#date-annotation",
+      "@id": "copies/jn782fq7439#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jn782fq7439.jsonld#date-belief",
+       "@id": "copies/jn782fq7439#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jn782fq7439.jsonld#inscription-text"
+          "copies/jn782fq7439#inscription-text"
          ],
-         "note": "Pencil, one line. A cursive word of five or six letters stands before the date and is illegible to me; it may begin Hoff-. The day's second figure is an 8 written as two strokes converging on a single bottom bowl, so the upper loop is open; 6 can be ruled out because two strokes descend into the bowl. A three-figure group, perhaps 134, preceded by a letter, follows the date; I could not read it with confidence and have left roll_number empty."
+         "note": "\"18 2 09\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jn782fq7439#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jn782fq7439.jsonld#perforator",
+     "@id": "copies/jn782fq7439#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2858,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jn782fq7439.jsonld#punch-diameter-annotation",
+        "@id": "copies/jn782fq7439#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jn782fq7439.jsonld#punch-diameter-belief",
+         "@id": "copies/jn782fq7439#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.5369,
        "n": 317,
        "@annotation": {
-        "@id": "copies/jn782fq7439.jsonld#chain-pitch-annotation",
+        "@id": "copies/jn782fq7439#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jn782fq7439.jsonld#chain-pitch-belief",
+         "@id": "copies/jn782fq7439#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.1278,
        "n": 10946,
        "@annotation": {
-        "@id": "copies/jn782fq7439.jsonld#advance-annotation",
+        "@id": "copies/jn782fq7439#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jn782fq7439.jsonld#advance-belief",
+         "@id": "copies/jn782fq7439#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

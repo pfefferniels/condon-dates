@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/vf252dc4872.jsonld",
+ "@id": "copies/vf252dc4872",
  "title": "Condon Roll 513, WM 1697",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/vf252dc4872.jsonld#copy",
+   "@id": "copies/vf252dc4872#copy",
    "label": "Condon Roll 513",
    "identifier": "Stanford Libraries CONDON ROLL 513",
    "seeAlso": "https://purl.stanford.edu/vf252dc4872",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/vf252dc4872.jsonld#inscription",
+       "@id": "copies/vf252dc4872#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/vf252dc4872%2Fvf252dc4872_0001/3482,133914,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/vf252dc4872.jsonld#inscription-text",
-        "text": "24. 8. 11"
+        "@id": "copies/vf252dc4872#inscription-text",
+        "text": "24. 8. 11",
+        "@annotation": {
+         "@id": "copies/vf252dc4872#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/vf252dc4872#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/vf252dc4872#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Read here at magnification. The day's first figure could be 2 or 9, which does not matter. This copy has the new pitch, 2.503 mm, two and a half years before roll 225's January 1914 copy has the old one."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1911-08-24",
      "@annotation": {
-      "@id": "copies/vf252dc4872.jsonld#date-annotation",
+      "@id": "copies/vf252dc4872#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/vf252dc4872.jsonld#date-belief",
+       "@id": "copies/vf252dc4872#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/vf252dc4872.jsonld#inscription-text"
+          "copies/vf252dc4872#inscription-text"
          ],
-         "note": "read here at magnification. The day's first figure could be 2 or 9, which does not matter. This copy has the new pitch, 2.503 mm, two and a half years before roll 225's January 1914 copy has the old one."
+         "note": "\"24. 8. 11\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/vf252dc4872#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/vf252dc4872.jsonld#perforator",
+     "@id": "copies/vf252dc4872#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8823,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/vf252dc4872.jsonld#punch-diameter-annotation",
+        "@id": "copies/vf252dc4872#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vf252dc4872.jsonld#punch-diameter-belief",
+         "@id": "copies/vf252dc4872#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5066,
        "n": 291,
        "@annotation": {
-        "@id": "copies/vf252dc4872.jsonld#chain-pitch-annotation",
+        "@id": "copies/vf252dc4872#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vf252dc4872.jsonld#chain-pitch-belief",
+         "@id": "copies/vf252dc4872#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5486,
        "n": 6792,
        "@annotation": {
-        "@id": "copies/vf252dc4872.jsonld#advance-annotation",
+        "@id": "copies/vf252dc4872#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vf252dc4872.jsonld#advance-belief",
+         "@id": "copies/vf252dc4872#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/yr522jf5585.jsonld",
+ "@id": "copies/yr522jf5585",
  "title": "Condon Roll 485, WM 1478",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/yr522jf5585.jsonld#copy",
+   "@id": "copies/yr522jf5585#copy",
    "label": "Condon Roll 485",
    "identifier": "Stanford Libraries CONDON ROLL 485",
    "seeAlso": "https://purl.stanford.edu/yr522jf5585",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/yr522jf5585.jsonld#inscription",
+       "@id": "copies/yr522jf5585#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/yr522jf5585%2Fyr522jf5585_0001/3504,453980,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/yr522jf5585.jsonld#inscription-text",
-        "text": "30420."
+        "@id": "copies/yr522jf5585#inscription-text",
+        "text": "30420.",
+        "@annotation": {
+         "@id": "copies/yr522jf5585#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/yr522jf5585#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/yr522jf5585#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Crop 1, lower panel upright; ink, strongly slanted, nothing else written in the crop. Five figures run together, closed by a full stop: 3 0 4 2 0. The second and fifth are the same narrow slanted oval, which fixes both as 0; the 4 is plain; the 2 is the softest figure. Read as day-month-year, 30.4.20. A 31 for the day is excluded by the shape and by April having 30 days."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1920-04-30",
      "@annotation": {
-      "@id": "copies/yr522jf5585.jsonld#date-annotation",
+      "@id": "copies/yr522jf5585#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/yr522jf5585.jsonld#date-belief",
+       "@id": "copies/yr522jf5585#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/yr522jf5585.jsonld#inscription-text"
+          "copies/yr522jf5585#inscription-text"
          ],
-         "note": "crop 1, lower panel upright; ink, strongly slanted, nothing else written in the crop. Five figures run together, closed by a full stop: 3 0 4 2 0. The second and fifth are the same narrow slanted oval, which fixes both as 0; the 4 is plain; the 2 is the softest figure. Read as day-month-year, 30.4.20. A 31 for the day is excluded by the shape and by April having 30 days."
+         "note": "The figures of \"30420\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/yr522jf5585#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/yr522jf5585.jsonld#perforator",
+     "@id": "copies/yr522jf5585#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7283,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/yr522jf5585.jsonld#punch-diameter-annotation",
+        "@id": "copies/yr522jf5585#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yr522jf5585.jsonld#punch-diameter-belief",
+         "@id": "copies/yr522jf5585#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6681,
        "n": 399,
        "@annotation": {
-        "@id": "copies/yr522jf5585.jsonld#chain-pitch-annotation",
+        "@id": "copies/yr522jf5585#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yr522jf5585.jsonld#chain-pitch-belief",
+         "@id": "copies/yr522jf5585#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5463,
        "n": 31752,
        "@annotation": {
-        "@id": "copies/yr522jf5585.jsonld#advance-annotation",
+        "@id": "copies/yr522jf5585#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yr522jf5585.jsonld#advance-belief",
+         "@id": "copies/yr522jf5585#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

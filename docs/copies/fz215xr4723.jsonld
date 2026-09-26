@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/fz215xr4723.jsonld",
+ "@id": "copies/fz215xr4723",
  "title": "Condon Roll 434, WM 1443",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/fz215xr4723.jsonld#copy",
+   "@id": "copies/fz215xr4723#copy",
    "label": "Condon Roll 434",
    "identifier": "Stanford Libraries CONDON ROLL 434",
    "seeAlso": "https://purl.stanford.edu/fz215xr4723",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/fz215xr4723.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/fz215xr4723#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 40125.82,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/fz215xr4723%2Ffz215xr4723_0001/2944,474322,720,2300/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/fz215xr4723.jsonld#inscription-text",
-        "text": "[heavy slug mark] . 4128"
+        "@id": "copies/fz215xr4723#inscription-text",
+        "text": "[heavy slug mark] . 4128",
+        "@annotation": {
+         "@id": "copies/fz215xr4723#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/fz215xr4723#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/fz215xr4723#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. E1 carries a rubber stamp set diagonally across the paper, not writing: a heavy blotted mark with a tail, then a point, then four figures 4 1 [2 or 3] 8. The leading mark is the fixed blob reading.md warns about, so I have not counted it as a digit; the figures alone give 4.1.28. The third figure is clogged with ink and could as well be a 3, which would make it 4.1.38, so the year is the weak point. e4 carries the roll number 1443 in pencil, agreeing with the printed leader label in e5 (WELTE-MIGNON No. 1443, Sonata Appassionata Op. 57, 2nd and 3rd movements, Beethoven); e2, e3 and e6 are blank."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1928-01-04",
      "@annotation": {
-      "@id": "copies/fz215xr4723.jsonld#date-annotation",
+      "@id": "copies/fz215xr4723#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/fz215xr4723.jsonld#date-belief",
+       "@id": "copies/fz215xr4723#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/fz215xr4723.jsonld#inscription-text"
+          "copies/fz215xr4723#inscription-text"
          ],
-         "note": "e1 carries a rubber stamp set diagonally across the paper, not writing: a heavy blotted mark with a tail, then a point, then four figures 4 1 [2 or 3] 8. The leading mark is the fixed blob reading.md warns about, so I have not counted it as a digit; the figures alone give 4.1.28. The third figure is clogged with ink and could as well be a 3, which would make it 4.1.38, so the year is the weak point. e4 carries the roll number 1443 in pencil, agreeing with the printed leader label in e5 (WELTE-MIGNON No. 1443, Sonata Appassionata Op. 57, 2nd and 3rd movements, Beethoven); e2, e3 and e6 are blank."
+         "note": "\"4.1.28\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/fz215xr4723#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/fz215xr4723.jsonld#perforator",
+     "@id": "copies/fz215xr4723#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.763,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/fz215xr4723.jsonld#punch-diameter-annotation",
+        "@id": "copies/fz215xr4723#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fz215xr4723.jsonld#punch-diameter-belief",
+         "@id": "copies/fz215xr4723#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7353,
        "n": 410,
        "@annotation": {
-        "@id": "copies/fz215xr4723.jsonld#chain-pitch-annotation",
+        "@id": "copies/fz215xr4723#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fz215xr4723.jsonld#chain-pitch-belief",
+         "@id": "copies/fz215xr4723#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6268,
        "n": 35106,
        "@annotation": {
-        "@id": "copies/fz215xr4723.jsonld#advance-annotation",
+        "@id": "copies/fz215xr4723#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fz215xr4723.jsonld#advance-belief",
+         "@id": "copies/fz215xr4723#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

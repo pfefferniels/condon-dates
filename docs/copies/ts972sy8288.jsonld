@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ts972sy8288.jsonld",
+ "@id": "copies/ts972sy8288",
  "title": "Condon Roll 335, WM 1196",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ts972sy8288.jsonld#copy",
+   "@id": "copies/ts972sy8288#copy",
    "label": "Condon Roll 335",
    "identifier": "Stanford Libraries CONDON ROLL 335",
    "seeAlso": "https://purl.stanford.edu/ts972sy8288",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ts972sy8288.jsonld#inscription",
+       "@id": "copies/ts972sy8288#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ts972sy8288%2Fts972sy8288_0001/3496,279770,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ts972sy8288.jsonld#inscription-text",
-        "text": "1196.  18.7.13."
+        "@id": "copies/ts972sy8288#inscription-text",
+        "text": "1196.  18.7.13.",
+        "@annotation": {
+         "@id": "copies/ts972sy8288#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ts972sy8288#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ts972sy8288#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil on dark red paper, sloping up to the right. The last figure of the number is a closed-bowl 6, plainly not the open-looped 8 that opens the date. The month is a crossed German 7."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1913-07-18",
      "@annotation": {
-      "@id": "copies/ts972sy8288.jsonld#date-annotation",
+      "@id": "copies/ts972sy8288#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ts972sy8288.jsonld#date-belief",
+       "@id": "copies/ts972sy8288#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ts972sy8288.jsonld#inscription-text"
+          "copies/ts972sy8288#inscription-text"
          ],
-         "note": "Pencil on dark red paper, sloping up to the right. The last figure of the number is a closed-bowl 6, plainly not the open-looped 8 that opens the date. The month is a crossed German 7."
+         "note": "\"18.7.13\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ts972sy8288#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ts972sy8288.jsonld#perforator",
+     "@id": "copies/ts972sy8288#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0743,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ts972sy8288.jsonld#punch-diameter-annotation",
+        "@id": "copies/ts972sy8288#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ts972sy8288.jsonld#punch-diameter-belief",
+         "@id": "copies/ts972sy8288#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.8038,
        "n": 230,
        "@annotation": {
-        "@id": "copies/ts972sy8288.jsonld#chain-pitch-annotation",
+        "@id": "copies/ts972sy8288#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ts972sy8288.jsonld#chain-pitch-belief",
+         "@id": "copies/ts972sy8288#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5855,
        "n": 13695,
        "@annotation": {
-        "@id": "copies/ts972sy8288.jsonld#advance-annotation",
+        "@id": "copies/ts972sy8288#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ts972sy8288.jsonld#advance-belief",
+         "@id": "copies/ts972sy8288#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jf942gh3232.jsonld",
+ "@id": "copies/jf942gh3232",
  "title": "Condon Roll 65, WM 258",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jf942gh3232.jsonld#copy",
+   "@id": "copies/jf942gh3232#copy",
    "label": "Condon Roll 65",
    "identifier": "Stanford Libraries CONDON ROLL 65",
    "seeAlso": "https://purl.stanford.edu/jf942gh3232",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jf942gh3232.jsonld#inscription",
+       "@id": "copies/jf942gh3232#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jf942gh3232%2Fjf942gh3232_0001/3546,152779,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jf942gh3232.jsonld#inscription-text",
-        "text": "258.  27.  12  13."
+        "@id": "copies/jf942gh3232#inscription-text",
+        "text": "258.  27.  12  13.",
+        "@annotation": {
+         "@id": "copies/jf942gh3232#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jf942gh3232#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jf942gh3232#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink, slanted hand that loops the top of 2 and 7; the day's second figure has no closed bowl and its stroke runs down to the left, so read as 7 rather than 9; the number's last figure is the least certain and could be 9"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1913-12-27",
      "@annotation": {
-      "@id": "copies/jf942gh3232.jsonld#date-annotation",
+      "@id": "copies/jf942gh3232#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jf942gh3232.jsonld#date-belief",
+       "@id": "copies/jf942gh3232#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jf942gh3232.jsonld#inscription-text"
+          "copies/jf942gh3232#inscription-text"
          ],
-         "note": "ink, slanted hand that loops the top of 2 and 7; the day's second figure has no closed bowl and its stroke runs down to the left, so read as 7 rather than 9; the number's last figure is the least certain and could be 9"
+         "note": "\"27. 12. 13.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jf942gh3232#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jf942gh3232.jsonld#perforator",
+     "@id": "copies/jf942gh3232#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2587,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jf942gh3232.jsonld#punch-diameter-annotation",
+        "@id": "copies/jf942gh3232#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jf942gh3232.jsonld#punch-diameter-belief",
+         "@id": "copies/jf942gh3232#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6141,
        "n": 339,
        "@annotation": {
-        "@id": "copies/jf942gh3232.jsonld#chain-pitch-annotation",
+        "@id": "copies/jf942gh3232#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jf942gh3232.jsonld#chain-pitch-belief",
+         "@id": "copies/jf942gh3232#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4677,
        "n": 9487,
        "@annotation": {
-        "@id": "copies/jf942gh3232.jsonld#advance-annotation",
+        "@id": "copies/jf942gh3232#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jf942gh3232.jsonld#advance-belief",
+         "@id": "copies/jf942gh3232#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

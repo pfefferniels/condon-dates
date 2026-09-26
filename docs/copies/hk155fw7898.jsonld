@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hk155fw7898.jsonld",
+ "@id": "copies/hk155fw7898",
  "title": "Condon Roll 286, WM 1005",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hk155fw7898.jsonld#copy",
+   "@id": "copies/hk155fw7898#copy",
    "label": "Condon Roll 286",
    "identifier": "Stanford Libraries CONDON ROLL 286",
    "seeAlso": "https://purl.stanford.edu/hk155fw7898",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hk155fw7898.jsonld#inscription",
+       "@id": "copies/hk155fw7898#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hk155fw7898%2Fhk155fw7898_0001/3480,95944,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hk155fw7898.jsonld#inscription-text",
-        "text": "19522"
+        "@id": "copies/hk155fw7898#inscription-text",
+        "text": "19522",
+        "@annotation": {
+         "@id": "copies/hk155fw7898#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hk155fw7898#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hk155fw7898#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, along the roll edge; the tops of the figures are cut off by the edge of the paper, but the run of five reads 1 9 5 2 2. No number or name beside it."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-05-19",
      "@annotation": {
-      "@id": "copies/hk155fw7898.jsonld#date-annotation",
+      "@id": "copies/hk155fw7898#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hk155fw7898.jsonld#date-belief",
+       "@id": "copies/hk155fw7898#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hk155fw7898.jsonld#inscription-text"
+          "copies/hk155fw7898#inscription-text"
          ],
-         "note": "pencil, along the roll edge; the tops of the figures are cut off by the edge of the paper, but the run of five reads 1 9 5 2 2. No number or name beside it."
+         "note": "\"19.5.22\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hk155fw7898#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hk155fw7898.jsonld#perforator",
+     "@id": "copies/hk155fw7898#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6995,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hk155fw7898.jsonld#punch-diameter-annotation",
+        "@id": "copies/hk155fw7898#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hk155fw7898.jsonld#punch-diameter-belief",
+         "@id": "copies/hk155fw7898#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6858,
        "n": 217,
        "@annotation": {
-        "@id": "copies/hk155fw7898.jsonld#chain-pitch-annotation",
+        "@id": "copies/hk155fw7898#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hk155fw7898.jsonld#chain-pitch-belief",
+         "@id": "copies/hk155fw7898#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4609,
        "n": 3387,
        "@annotation": {
-        "@id": "copies/hk155fw7898.jsonld#advance-annotation",
+        "@id": "copies/hk155fw7898#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hk155fw7898.jsonld#advance-belief",
+         "@id": "copies/hk155fw7898#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

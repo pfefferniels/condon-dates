@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ns598kr8616.jsonld",
+ "@id": "copies/ns598kr8616",
  "title": "Condon Roll 482, WM 1474",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ns598kr8616.jsonld#copy",
+   "@id": "copies/ns598kr8616#copy",
    "label": "Condon Roll 482",
    "identifier": "Stanford Libraries CONDON ROLL 482",
    "seeAlso": "https://purl.stanford.edu/ns598kr8616",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ns598kr8616.jsonld#inscription",
+       "@id": "copies/ns598kr8616#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ns598kr8616%2Fns598kr8616_0001/3493,401701,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ns598kr8616.jsonld#inscription-text",
-        "text": "24 10 23"
+        "@id": "copies/ns598kr8616#inscription-text",
+        "text": "24 10 23",
+        "@annotation": {
+         "@id": "copies/ns598kr8616#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ns598kr8616#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ns598kr8616#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Crops 1-3 carry no writing, only creases and the paper edge; crop 4 lower panel upright, dark grainy scan. Day and month plain; the last figure is a stacked double bowl, read as 3, and only came out under a median filter."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1923-10-24",
      "@annotation": {
-      "@id": "copies/ns598kr8616.jsonld#date-annotation",
+      "@id": "copies/ns598kr8616#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ns598kr8616.jsonld#date-belief",
+       "@id": "copies/ns598kr8616#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ns598kr8616.jsonld#inscription-text"
+          "copies/ns598kr8616#inscription-text"
          ],
-         "note": "crops 1-3 carry no writing, only creases and the paper edge; crop 4 lower panel upright, dark grainy scan. Day and month plain; the last figure is a stacked double bowl, read as 3, and only came out under a median filter."
+         "note": "\"24 10 23\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ns598kr8616#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ns598kr8616.jsonld#perforator",
+     "@id": "copies/ns598kr8616#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6767,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ns598kr8616.jsonld#punch-diameter-annotation",
+        "@id": "copies/ns598kr8616#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ns598kr8616.jsonld#punch-diameter-belief",
+         "@id": "copies/ns598kr8616#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7328,
        "n": 265,
        "@annotation": {
-        "@id": "copies/ns598kr8616.jsonld#chain-pitch-annotation",
+        "@id": "copies/ns598kr8616#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ns598kr8616.jsonld#chain-pitch-belief",
+         "@id": "copies/ns598kr8616#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.3418,
        "n": 23453,
        "@annotation": {
-        "@id": "copies/ns598kr8616.jsonld#advance-annotation",
+        "@id": "copies/ns598kr8616#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ns598kr8616.jsonld#advance-belief",
+         "@id": "copies/ns598kr8616#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

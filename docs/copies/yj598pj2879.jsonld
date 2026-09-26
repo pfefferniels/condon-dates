@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/yj598pj2879.jsonld",
+ "@id": "copies/yj598pj2879",
  "title": "Condon Roll 99, WM 360",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/yj598pj2879.jsonld#copy",
+   "@id": "copies/yj598pj2879#copy",
    "label": "Condon Roll 99",
    "identifier": "Stanford Libraries CONDON ROLL 99",
    "seeAlso": "https://purl.stanford.edu/yj598pj2879",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/yj598pj2879.jsonld#inscription",
+       "@id": "copies/yj598pj2879#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/yj598pj2879%2Fyj598pj2879_0001/3501,292894,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/yj598pj2879.jsonld#inscription-text",
-        "text": "211222"
+        "@id": "copies/yj598pj2879#inscription-text",
+        "text": "211222",
+        "@annotation": {
+         "@id": "copies/yj598pj2879#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/yj598pj2879#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/yj598pj2879#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Six plain figures with no separators. 21|12|22 is the only split that yields a valid day and month, so 21 December 1922. Crops 1-3 show only creases."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-12-21",
      "@annotation": {
-      "@id": "copies/yj598pj2879.jsonld#date-annotation",
+      "@id": "copies/yj598pj2879#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/yj598pj2879.jsonld#date-belief",
+       "@id": "copies/yj598pj2879#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/yj598pj2879.jsonld#inscription-text"
+          "copies/yj598pj2879#inscription-text"
          ],
-         "note": "Six plain figures with no separators. 21|12|22 is the only split that yields a valid day and month, so 21 December 1922. Crops 1-3 show only creases."
+         "note": "The figures of \"211222\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/yj598pj2879#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/yj598pj2879.jsonld#perforator",
+     "@id": "copies/yj598pj2879#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8256,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/yj598pj2879.jsonld#punch-diameter-annotation",
+        "@id": "copies/yj598pj2879#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yj598pj2879.jsonld#punch-diameter-belief",
+         "@id": "copies/yj598pj2879#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5871,
        "n": 257,
        "@annotation": {
-        "@id": "copies/yj598pj2879.jsonld#chain-pitch-annotation",
+        "@id": "copies/yj598pj2879#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yj598pj2879.jsonld#chain-pitch-belief",
+         "@id": "copies/yj598pj2879#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.2527,
        "n": 15192,
        "@annotation": {
-        "@id": "copies/yj598pj2879.jsonld#advance-annotation",
+        "@id": "copies/yj598pj2879#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yj598pj2879.jsonld#advance-belief",
+         "@id": "copies/yj598pj2879#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

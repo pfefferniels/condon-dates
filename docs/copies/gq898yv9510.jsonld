@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gq898yv9510.jsonld",
+ "@id": "copies/gq898yv9510",
  "title": "Condon Roll 160, WM 665",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gq898yv9510.jsonld#copy",
+   "@id": "copies/gq898yv9510#copy",
    "label": "Condon Roll 160",
    "identifier": "Stanford Libraries CONDON ROLL 160",
    "seeAlso": "https://purl.stanford.edu/gq898yv9510",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gq898yv9510.jsonld#inscription",
+       "@id": "copies/gq898yv9510#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gq898yv9510%2Fgq898yv9510_0001/3218,195028,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gq898yv9510.jsonld#inscription-text",
-        "text": "665. Fritz 7 Dezb 1908"
+        "@id": "copies/gq898yv9510#inscription-text",
+        "text": "665. Fritz 7 Dezb 1908",
+        "@annotation": {
+         "@id": "copies/gq898yv9510#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gq898yv9510#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gq898yv9510#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, same hand and same date as td134mh2760"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "Fritz",
       "sameAs": [],
-      "@id": "hands.jsonld#fritz",
+      "@id": "hands#fritz",
       "@annotation": {
-       "@id": "copies/gq898yv9510.jsonld#hand-annotation",
+       "@id": "copies/gq898yv9510#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/gq898yv9510.jsonld#hand-belief",
+        "@id": "copies/gq898yv9510#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/gq898yv9510.jsonld#inscription-text"
+           "copies/gq898yv9510#inscription-text"
           ],
           "note": "Read as \"Fritz\"."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1908-12-07",
      "@annotation": {
-      "@id": "copies/gq898yv9510.jsonld#date-annotation",
+      "@id": "copies/gq898yv9510#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gq898yv9510.jsonld#date-belief",
+       "@id": "copies/gq898yv9510#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gq898yv9510.jsonld#inscription-text"
+          "copies/gq898yv9510#inscription-text"
          ],
-         "note": "pencil, same hand and same date as td134mh2760"
+         "note": "\"7 Dezb 1908\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gq898yv9510#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gq898yv9510.jsonld#perforator",
+     "@id": "copies/gq898yv9510#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1707,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gq898yv9510.jsonld#punch-diameter-annotation",
+        "@id": "copies/gq898yv9510#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gq898yv9510.jsonld#punch-diameter-belief",
+         "@id": "copies/gq898yv9510#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.7127,
        "n": 199,
        "@annotation": {
-        "@id": "copies/gq898yv9510.jsonld#chain-pitch-annotation",
+        "@id": "copies/gq898yv9510#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gq898yv9510.jsonld#chain-pitch-belief",
+         "@id": "copies/gq898yv9510#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.8511,
        "n": 12775,
        "@annotation": {
-        "@id": "copies/gq898yv9510.jsonld#advance-annotation",
+        "@id": "copies/gq898yv9510#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gq898yv9510.jsonld#advance-belief",
+         "@id": "copies/gq898yv9510#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xj540rr2929.jsonld",
+ "@id": "copies/xj540rr2929",
  "title": "Condon Roll 353, WM 1208",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xj540rr2929.jsonld#copy",
+   "@id": "copies/xj540rr2929#copy",
    "label": "Condon Roll 353",
    "identifier": "Stanford Libraries CONDON ROLL 353",
    "seeAlso": "https://purl.stanford.edu/xj540rr2929",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xj540rr2929.jsonld#inscription",
+       "@id": "copies/xj540rr2929#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xj540rr2929%2Fxj540rr2929_0001/3498,105818,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xj540rr2929.jsonld#inscription-text",
-        "text": "3. 8. 22."
+        "@id": "copies/xj540rr2929#inscription-text",
+        "text": "3. 8. 22.",
+        "@annotation": {
+         "@id": "copies/xj540rr2929#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xj540rr2929#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xj540rr2929#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Fine pencil, four figures with points between them and nothing else in the crop. Day and month are plain, the 8 showing both loops closed. The two year figures are the same glyph twice, a small top loop over a stroke that falls to the left and curls back at the foot, which I read as the cursive 2 of these hands; read as 9 it would give 1929, outside the range of the corpus. Crops 1 and 2 hold only creases and perforations."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-08-03",
      "@annotation": {
-      "@id": "copies/xj540rr2929.jsonld#date-annotation",
+      "@id": "copies/xj540rr2929#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/xj540rr2929.jsonld#date-belief",
+       "@id": "copies/xj540rr2929#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/xj540rr2929.jsonld#inscription-text"
+          "copies/xj540rr2929#inscription-text"
          ],
-         "note": "Fine pencil, four figures with points between them and nothing else in the crop. Day and month are plain, the 8 showing both loops closed. The two year figures are the same glyph twice, a small top loop over a stroke that falls to the left and curls back at the foot, which I read as the cursive 2 of these hands; read as 9 it would give 1929, outside the range of the corpus. Crops 1 and 2 hold only creases and perforations."
+         "note": "\"3. 8. 22.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/xj540rr2929#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xj540rr2929.jsonld#perforator",
+     "@id": "copies/xj540rr2929#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8197,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xj540rr2929.jsonld#punch-diameter-annotation",
+        "@id": "copies/xj540rr2929#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xj540rr2929.jsonld#punch-diameter-belief",
+         "@id": "copies/xj540rr2929#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.484,
        "n": 306,
        "@annotation": {
-        "@id": "copies/xj540rr2929.jsonld#chain-pitch-annotation",
+        "@id": "copies/xj540rr2929#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xj540rr2929.jsonld#chain-pitch-belief",
+         "@id": "copies/xj540rr2929#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4752,
        "n": 4872,
        "@annotation": {
-        "@id": "copies/xj540rr2929.jsonld#advance-annotation",
+        "@id": "copies/xj540rr2929#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xj540rr2929.jsonld#advance-belief",
+         "@id": "copies/xj540rr2929#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

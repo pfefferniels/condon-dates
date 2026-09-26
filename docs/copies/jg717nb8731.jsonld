@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jg717nb8731.jsonld",
+ "@id": "copies/jg717nb8731",
  "title": "Condon Roll 1360, WM 2703",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jg717nb8731.jsonld#copy",
+   "@id": "copies/jg717nb8731#copy",
    "label": "Condon Roll 1360",
    "identifier": "Stanford Libraries CONDON ROLL 1360",
    "seeAlso": "https://purl.stanford.edu/jg717nb8731",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jg717nb8731.jsonld#inscription",
+       "@id": "copies/jg717nb8731#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jg717nb8731%2Fjg717nb8731_0001/3470,473507,485,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jg717nb8731.jsonld#inscription-text",
-        "text": "2713  18.12.13  Sph. / Wössler Sph."
+        "@id": "copies/jg717nb8731#inscription-text",
+        "text": "2713  18.12.13  Sph. / Wössler Sph.",
+        "@annotation": {
+         "@id": "copies/jg717nb8731#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jg717nb8731#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jg717nb8731#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, two lines, plain in the upper panel of crop 1. The 8 in the day is the two-stroke form the instruction warns of, two strokes converging on one bottom bowl, but the 1 beside it and the 12 and 13 that follow leave the reading firm. The first figure of the number is a 2 with a looped top, settled by its horizontal base; the second is a 7 with a long descender. The name reads Wössler, though the vowel after the W is compressed and the umlaut is not distinct."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Sph.",
       "sameAs": [],
-      "@id": "hands.jsonld#sph",
+      "@id": "hands#sph",
       "@annotation": {
-       "@id": "copies/jg717nb8731.jsonld#hand-annotation",
+       "@id": "copies/jg717nb8731#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/jg717nb8731.jsonld#hand-belief",
+        "@id": "copies/jg717nb8731#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/jg717nb8731.jsonld#inscription-text"
+           "copies/jg717nb8731#inscription-text"
           ],
-          "note": "Read as \"Sph.; Wössler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Sph.; Wössler\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1913-12-18",
      "@annotation": {
-      "@id": "copies/jg717nb8731.jsonld#date-annotation",
+      "@id": "copies/jg717nb8731#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jg717nb8731.jsonld#date-belief",
+       "@id": "copies/jg717nb8731#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jg717nb8731.jsonld#inscription-text"
+          "copies/jg717nb8731#inscription-text"
          ],
-         "note": "ink, two lines, plain in the upper panel of crop 1. The 8 in the day is the two-stroke form the instruction warns of, two strokes converging on one bottom bowl, but the 1 beside it and the 12 and 13 that follow leave the reading firm. The first figure of the number is a 2 with a looped top, settled by its horizontal base; the second is a 7 with a long descender. The name reads Wössler, though the vowel after the W is compressed and the umlaut is not distinct."
+         "note": "\"18.12.13\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jg717nb8731#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jg717nb8731.jsonld#perforator",
+     "@id": "copies/jg717nb8731#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2198,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jg717nb8731.jsonld#punch-diameter-annotation",
+        "@id": "copies/jg717nb8731#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jg717nb8731.jsonld#punch-diameter-belief",
+         "@id": "copies/jg717nb8731#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.6942,
        "n": 315,
        "@annotation": {
-        "@id": "copies/jg717nb8731.jsonld#chain-pitch-annotation",
+        "@id": "copies/jg717nb8731#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jg717nb8731.jsonld#chain-pitch-belief",
+         "@id": "copies/jg717nb8731#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.0362,
        "n": 20819,
        "@annotation": {
-        "@id": "copies/jg717nb8731.jsonld#advance-annotation",
+        "@id": "copies/jg717nb8731#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jg717nb8731.jsonld#advance-belief",
+         "@id": "copies/jg717nb8731#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

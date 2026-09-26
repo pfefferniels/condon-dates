@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/cp145vd3423.jsonld",
+ "@id": "copies/cp145vd3423",
  "title": "Condon Roll 426, WM 1382",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/cp145vd3423.jsonld#copy",
+   "@id": "copies/cp145vd3423#copy",
    "label": "Condon Roll 426",
    "identifier": "Stanford Libraries CONDON ROLL 426",
    "seeAlso": "https://purl.stanford.edu/cp145vd3423",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/cp145vd3423.jsonld#inscription",
+       "@id": "copies/cp145vd3423#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/cp145vd3423%2Fcp145vd3423_0001/3290,239250,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/cp145vd3423.jsonld#inscription-text",
-        "text": "1382.  20. 1. 07.  [cursive signature, not read]"
+        "@id": "copies/cp145vd3423#inscription-text",
+        "text": "1382.  20. 1. 07.  [cursive signature, not read]",
+        "@annotation": {
+         "@id": "copies/cp145vd3423#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/cp145vd3423#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/cp145vd3423#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, fine cursive across the scanner's lines, upper panel upright. Same hand, layout and signature as rp146dk0477 (1352, 4.3.07) in this batch. Day and month are plain; the year is a small 0 run into a crossed 7, which is why the reading is not called high. The signature of roughly eight letters after the date I could not read."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "B. Schäfer",
       "sameAs": [],
-      "@id": "hands.jsonld#b-schaefer",
+      "@id": "hands#b-schaefer",
       "@annotation": {
-       "@id": "copies/cp145vd3423.jsonld#hand-annotation",
+       "@id": "copies/cp145vd3423#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/cp145vd3423.jsonld#hand-belief",
+        "@id": "copies/cp145vd3423#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/cp145vd3423.jsonld#inscription-text"
+           "copies/cp145vd3423#inscription-text"
           ],
           "note": "No name was read off it."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1907-01-20",
      "@annotation": {
-      "@id": "copies/cp145vd3423.jsonld#date-annotation",
+      "@id": "copies/cp145vd3423#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/cp145vd3423.jsonld#date-belief",
+       "@id": "copies/cp145vd3423#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/cp145vd3423.jsonld#inscription-text"
+          "copies/cp145vd3423#inscription-text"
          ],
-         "note": "pencil, fine cursive across the scanner's lines, upper panel upright. Same hand, layout and signature as rp146dk0477 (1352, 4.3.07) in this batch. Day and month are plain; the year is a small 0 run into a crossed 7, which is why the reading is not called high. The signature of roughly eight letters after the date I could not read."
+         "note": "\"20. 1. 07\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/cp145vd3423#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/cp145vd3423.jsonld#perforator",
+     "@id": "copies/cp145vd3423#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.257,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/cp145vd3423.jsonld#punch-diameter-annotation",
+        "@id": "copies/cp145vd3423#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cp145vd3423.jsonld#punch-diameter-belief",
+         "@id": "copies/cp145vd3423#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.5381,
        "n": 355,
        "@annotation": {
-        "@id": "copies/cp145vd3423.jsonld#chain-pitch-annotation",
+        "@id": "copies/cp145vd3423#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cp145vd3423.jsonld#chain-pitch-belief",
+         "@id": "copies/cp145vd3423#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.1159,
        "n": 11866,
        "@annotation": {
-        "@id": "copies/cp145vd3423.jsonld#advance-annotation",
+        "@id": "copies/cp145vd3423#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cp145vd3423.jsonld#advance-belief",
+         "@id": "copies/cp145vd3423#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

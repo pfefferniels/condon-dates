@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gh208gz5033.jsonld",
+ "@id": "copies/gh208gz5033",
  "title": "Condon Roll 247, WM 763",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gh208gz5033.jsonld#copy",
+   "@id": "copies/gh208gz5033#copy",
    "label": "Condon Roll 247",
    "identifier": "Stanford Libraries CONDON ROLL 247",
    "seeAlso": "https://purl.stanford.edu/gh208gz5033",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gh208gz5033.jsonld#inscription",
+       "@id": "copies/gh208gz5033#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gh208gz5033%2Fgh208gz5033_0001/3202,122933,460,2044/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gh208gz5033.jsonld#inscription-text",
-        "text": "763. Fritz. 18 Dezbr 1908."
+        "@id": "copies/gh208gz5033#inscription-text",
+        "text": "763. Fritz. 18 Dezbr 1908.",
+        "@annotation": {
+         "@id": "copies/gh208gz5033#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gh208gz5033#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gh208gz5033#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil on ruled paper, one line, upper panel upright. Roll number 763 and the name Fritz are plain, as are the day 18 and the year 1908. The month is written as a word abbreviated to about five letters; the initial capital reads to me as D (Dezbr, December), but a capital O (Octbr, October) cannot be ruled out from this crop, and the middle letters are indistinct. Region 2 of this roll carries perforations only, no writing."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Fritz",
       "sameAs": [],
-      "@id": "hands.jsonld#fritz",
+      "@id": "hands#fritz",
       "@annotation": {
-       "@id": "copies/gh208gz5033.jsonld#hand-annotation",
+       "@id": "copies/gh208gz5033#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/gh208gz5033.jsonld#hand-belief",
+        "@id": "copies/gh208gz5033#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/gh208gz5033.jsonld#inscription-text"
+           "copies/gh208gz5033#inscription-text"
           ],
           "note": "Read as \"Fritz\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1908-12-18",
      "@annotation": {
-      "@id": "copies/gh208gz5033.jsonld#date-annotation",
+      "@id": "copies/gh208gz5033#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gh208gz5033.jsonld#date-belief",
+       "@id": "copies/gh208gz5033#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gh208gz5033.jsonld#inscription-text"
+          "copies/gh208gz5033#inscription-text"
          ],
-         "note": "Pencil on ruled paper, one line, upper panel upright. Roll number 763 and the name Fritz are plain, as are the day 18 and the year 1908. The month is written as a word abbreviated to about five letters; the initial capital reads to me as D (Dezbr, December), but a capital O (Octbr, October) cannot be ruled out from this crop, and the middle letters are indistinct. Region 2 of this roll carries perforations only, no writing."
+         "note": "\"18 Dezbr 1908\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gh208gz5033#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gh208gz5033.jsonld#perforator",
+     "@id": "copies/gh208gz5033#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2951,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gh208gz5033.jsonld#punch-diameter-annotation",
+        "@id": "copies/gh208gz5033#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gh208gz5033.jsonld#punch-diameter-belief",
+         "@id": "copies/gh208gz5033#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.5764,
        "n": 100,
        "@annotation": {
-        "@id": "copies/gh208gz5033.jsonld#chain-pitch-annotation",
+        "@id": "copies/gh208gz5033#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gh208gz5033.jsonld#chain-pitch-belief",
+         "@id": "copies/gh208gz5033#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.873,
        "n": 5921,
        "@annotation": {
-        "@id": "copies/gh208gz5033.jsonld#advance-annotation",
+        "@id": "copies/gh208gz5033#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gh208gz5033.jsonld#advance-belief",
+         "@id": "copies/gh208gz5033#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rt308hy9235.jsonld",
+ "@id": "copies/rt308hy9235",
  "title": "Condon Roll 225, WM 646",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rt308hy9235.jsonld#copy",
+   "@id": "copies/rt308hy9235#copy",
    "label": "Condon Roll 225",
    "identifier": "Stanford Libraries CONDON ROLL 225",
    "seeAlso": "https://purl.stanford.edu/rt308hy9235",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rt308hy9235.jsonld#inscription",
+       "@id": "copies/rt308hy9235#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rt308hy9235%2Frt308hy9235_0001/3496,272769,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rt308hy9235.jsonld#inscription-text",
-        "text": "No 646  8. 12. 10."
+        "@id": "copies/rt308hy9235#inscription-text",
+        "text": "No 646  8. 12. 10.",
+        "@annotation": {
+         "@id": "copies/rt308hy9235#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rt308hy9235#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rt308hy9235#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink, damp-stained paper; the year is a plain 1 followed by a narrow closed loop, so 10 rather than 11. The middle figure of 646 is the least clear of the three"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1910-12-08",
      "@annotation": {
-      "@id": "copies/rt308hy9235.jsonld#date-annotation",
+      "@id": "copies/rt308hy9235#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rt308hy9235.jsonld#date-belief",
+       "@id": "copies/rt308hy9235#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rt308hy9235.jsonld#inscription-text"
+          "copies/rt308hy9235#inscription-text"
          ],
-         "note": "ink, damp-stained paper; the year is a plain 1 followed by a narrow closed loop, so 10 rather than 11. The middle figure of 646 is the least clear of the three"
+         "note": "\"8. 12. 10.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rt308hy9235#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rt308hy9235.jsonld#perforator",
+     "@id": "copies/rt308hy9235#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1555,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rt308hy9235.jsonld#punch-diameter-annotation",
+        "@id": "copies/rt308hy9235#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rt308hy9235.jsonld#punch-diameter-belief",
+         "@id": "copies/rt308hy9235#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7803,
        "n": 253,
        "@annotation": {
-        "@id": "copies/rt308hy9235.jsonld#chain-pitch-annotation",
+        "@id": "copies/rt308hy9235#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rt308hy9235.jsonld#chain-pitch-belief",
+         "@id": "copies/rt308hy9235#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5287,
        "n": 20330,
        "@annotation": {
-        "@id": "copies/rt308hy9235.jsonld#advance-annotation",
+        "@id": "copies/rt308hy9235#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rt308hy9235.jsonld#advance-belief",
+         "@id": "copies/rt308hy9235#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

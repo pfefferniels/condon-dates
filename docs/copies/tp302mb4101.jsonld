@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/tp302mb4101.jsonld",
+ "@id": "copies/tp302mb4101",
  "title": "Condon Roll 410, WM 1321",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/tp302mb4101.jsonld#copy",
+   "@id": "copies/tp302mb4101#copy",
    "label": "Condon Roll 410",
    "identifier": "Stanford Libraries CONDON ROLL 410",
    "seeAlso": "https://purl.stanford.edu/tp302mb4101",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/tp302mb4101.jsonld#inscription",
+       "@id": "copies/tp302mb4101#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/tp302mb4101%2Ftp302mb4101_0001/3382,518925,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/tp302mb4101.jsonld#inscription-text",
-        "text": "[19].10.08. [signature]"
+        "@id": "copies/tp302mb4101#inscription-text",
+        "text": "[19].10.08. [signature]",
+        "@annotation": {
+         "@id": "copies/tp302mb4101#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/tp302mb4101#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/tp302mb4101#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, upper panel upright, small and rubbed. Six figures in three pairs followed by a flourished signature I could not resolve. The month 10 and the year 08 I read with reasonable confidence; the first pair is muddied past the resolution of the scan and looks like 19, but I will not vouch for the day, so date_iso gives only the month. A quite separate later hand, in English pencil across crop 3, notes the roll's condition, is signed D. F. C. and dated 1985, and there says the roll is \"dated ... 10. 1908\"; that is an archive note, not the workshop, and I did not use it to settle the figures above. Crops 2 and 4 are blank."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "B. Schäfer",
       "sameAs": [],
-      "@id": "hands.jsonld#b-schaefer",
+      "@id": "hands#b-schaefer",
       "@annotation": {
-       "@id": "copies/tp302mb4101.jsonld#hand-annotation",
+       "@id": "copies/tp302mb4101#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/tp302mb4101.jsonld#hand-belief",
+        "@id": "copies/tp302mb4101#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/tp302mb4101.jsonld#inscription-text"
+           "copies/tp302mb4101#inscription-text"
           ],
           "note": "No name was read off it."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -111,18 +129,25 @@
      "after": "1908-10-01",
      "before": "1908-10-31",
      "@annotation": {
-      "@id": "copies/tp302mb4101.jsonld#date-annotation",
+      "@id": "copies/tp302mb4101#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/tp302mb4101.jsonld#date-belief",
+       "@id": "copies/tp302mb4101#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/tp302mb4101.jsonld#inscription-text"
+          "copies/tp302mb4101#inscription-text"
          ],
-         "note": "Pencil, upper panel upright, small and rubbed. Six figures in three pairs followed by a flourished signature I could not resolve. The month 10 and the year 08 I read with reasonable confidence; the first pair is muddied past the resolution of the scan and looks like 19, but I will not vouch for the day, so date_iso gives only the month. A quite separate later hand, in English pencil across crop 3, notes the roll's condition, is signed D. F. C. and dated 1985, and there says the roll is \"dated ... 10. 1908\"; that is an archive note, not the workshop, and I did not use it to settle the figures above. Crops 2 and 4 are blank."
+         "note": "\"[19].10.08\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/tp302mb4101#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -130,17 +155,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/tp302mb4101.jsonld#perforator",
+     "@id": "copies/tp302mb4101#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2316,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/tp302mb4101.jsonld#punch-diameter-annotation",
+        "@id": "copies/tp302mb4101#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tp302mb4101.jsonld#punch-diameter-belief",
+         "@id": "copies/tp302mb4101#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -162,10 +187,10 @@
        "bridge": 0.4357,
        "n": 289,
        "@annotation": {
-        "@id": "copies/tp302mb4101.jsonld#chain-pitch-annotation",
+        "@id": "copies/tp302mb4101#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tp302mb4101.jsonld#chain-pitch-belief",
+         "@id": "copies/tp302mb4101#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -186,10 +211,10 @@
        "strength": 0.1302,
        "n": 31972,
        "@annotation": {
-        "@id": "copies/tp302mb4101.jsonld#advance-annotation",
+        "@id": "copies/tp302mb4101#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tp302mb4101.jsonld#advance-belief",
+         "@id": "copies/tp302mb4101#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

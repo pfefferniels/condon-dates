@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rq927dq9061.jsonld",
+ "@id": "copies/rq927dq9061",
  "title": "Condon Roll 275, WM 951",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rq927dq9061.jsonld#copy",
+   "@id": "copies/rq927dq9061#copy",
    "label": "Condon Roll 275",
    "identifier": "Stanford Libraries CONDON ROLL 275",
    "seeAlso": "https://purl.stanford.edu/rq927dq9061",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rq927dq9061.jsonld#inscription",
+       "@id": "copies/rq927dq9061#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rq927dq9061%2Frq927dq9061_0001/3520,220894,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rq927dq9061.jsonld#inscription-text",
-        "text": "8 6 2 6"
+        "@id": "copies/rq927dq9061#inscription-text",
+        "text": "8 6 2 6",
+        "@annotation": {
+         "@id": "copies/rq927dq9061#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rq927dq9061#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rq927dq9061#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil on red paper, four figures, no separators, read as 8.6.26. The first figure is a two-loop 8. The second and fourth are the open-top form that reading.md warns can be 6 or 8; I take them for 6 because this hand writes 8 with two closed loops, but 8.8.28 cannot be ruled out. The third is a plain 2"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1926-06-08",
      "@annotation": {
-      "@id": "copies/rq927dq9061.jsonld#date-annotation",
+      "@id": "copies/rq927dq9061#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rq927dq9061.jsonld#date-belief",
+       "@id": "copies/rq927dq9061#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rq927dq9061.jsonld#inscription-text"
+          "copies/rq927dq9061#inscription-text"
          ],
-         "note": "pencil on red paper, four figures, no separators, read as 8.6.26. The first figure is a two-loop 8. The second and fourth are the open-top form that reading.md warns can be 6 or 8; I take them for 6 because this hand writes 8 with two closed loops, but 8.8.28 cannot be ruled out. The third is a plain 2"
+         "note": "\"8 6 2 6\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rq927dq9061#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rq927dq9061.jsonld#perforator",
+     "@id": "copies/rq927dq9061#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8738,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rq927dq9061.jsonld#punch-diameter-annotation",
+        "@id": "copies/rq927dq9061#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rq927dq9061.jsonld#punch-diameter-belief",
+         "@id": "copies/rq927dq9061#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.4954,
        "n": 288,
        "@annotation": {
-        "@id": "copies/rq927dq9061.jsonld#chain-pitch-annotation",
+        "@id": "copies/rq927dq9061#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rq927dq9061.jsonld#chain-pitch-belief",
+         "@id": "copies/rq927dq9061#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.3256,
        "n": 12093,
        "@annotation": {
-        "@id": "copies/rq927dq9061.jsonld#advance-annotation",
+        "@id": "copies/rq927dq9061#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rq927dq9061.jsonld#advance-belief",
+         "@id": "copies/rq927dq9061#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

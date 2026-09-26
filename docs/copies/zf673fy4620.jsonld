@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/zf673fy4620.jsonld",
+ "@id": "copies/zf673fy4620",
  "title": "Condon Roll 553, WM 2068",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/zf673fy4620.jsonld#copy",
+   "@id": "copies/zf673fy4620#copy",
    "label": "Condon Roll 553",
    "identifier": "Stanford Libraries CONDON ROLL 553",
    "seeAlso": "https://purl.stanford.edu/zf673fy4620",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/zf673fy4620.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/zf673fy4620#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 12621.66,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/zf673fy4620%2Fzf673fy4620_0001/3304,149199,720,2300/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/zf673fy4620.jsonld#inscription-text",
-        "text": "26525 [heavy mark]  ||  2068"
+        "@id": "copies/zf673fy4620#inscription-text",
+        "text": "26525 [heavy mark]  ||  2068",
+        "@annotation": {
+         "@id": "copies/zf673fy4620#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/zf673fy4620#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/zf673fy4620#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Stamped, not written. e1 carries five plain stamped figures, 26525, clear of the edge and whole, followed by a heavy over-inked mark. There is no blob before the figures, so the leading-mark trap does not apply here; the heavy mark falls after the last 5 and I cannot make out what it is, possibly a second slug. Read as day, month, two-figure year this is 26.5.25, and no other parse of five figures gives a possible date. The roll number is separate: a pencil 2068 at the edge in e2, matching the printed leader label in e4, 'WELTE-MIGNON. No. 2068 / Poeme / Op. 32, No. 1 / A. Scriabine / Played by A. Scriabine', which itself carries no date. e3 shows perforations only."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1925-05-26",
      "@annotation": {
-      "@id": "copies/zf673fy4620.jsonld#date-annotation",
+      "@id": "copies/zf673fy4620#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/zf673fy4620.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/zf673fy4620#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/zf673fy4620.jsonld#inscription-text"
+          "copies/zf673fy4620#inscription-text"
          ],
-         "note": "Stamped, not written. e1 carries five plain stamped figures, 26525, clear of the edge and whole, followed by a heavy over-inked mark. There is no blob before the figures, so the leading-mark trap does not apply here; the heavy mark falls after the last 5 and I cannot make out what it is, possibly a second slug. Read as day, month, two-figure year this is 26.5.25, and no other parse of five figures gives a possible date. The roll number is separate: a pencil 2068 at the edge in e2, matching the printed leader label in e4, 'WELTE-MIGNON. No. 2068 / Poeme / Op. 32, No. 1 / A. Scriabine / Played by A. Scriabine', which itself carries no date. e3 shows perforations only."
+         "note": "The figures of \"26525\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/zf673fy4620#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/zf673fy4620.jsonld#perforator",
+     "@id": "copies/zf673fy4620#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7723,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/zf673fy4620.jsonld#punch-diameter-annotation",
+        "@id": "copies/zf673fy4620#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zf673fy4620.jsonld#punch-diameter-belief",
+         "@id": "copies/zf673fy4620#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6114,
        "n": 377,
        "@annotation": {
-        "@id": "copies/zf673fy4620.jsonld#chain-pitch-annotation",
+        "@id": "copies/zf673fy4620#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zf673fy4620.jsonld#chain-pitch-belief",
+         "@id": "copies/zf673fy4620#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6394,
        "n": 9405,
        "@annotation": {
-        "@id": "copies/zf673fy4620.jsonld#advance-annotation",
+        "@id": "copies/zf673fy4620#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zf673fy4620.jsonld#advance-belief",
+         "@id": "copies/zf673fy4620#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

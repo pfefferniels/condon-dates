@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/sb487jm2092.jsonld",
+ "@id": "copies/sb487jm2092",
  "title": "Condon Roll 386, WM 1262",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/sb487jm2092.jsonld#copy",
+   "@id": "copies/sb487jm2092#copy",
    "label": "Condon Roll 386",
    "identifier": "Stanford Libraries CONDON ROLL 386",
    "seeAlso": "https://purl.stanford.edu/sb487jm2092",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/sb487jm2092.jsonld#inscription",
+       "@id": "copies/sb487jm2092#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/sb487jm2092%2Fsb487jm2092_0001/3532,192798,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/sb487jm2092.jsonld#inscription-text",
-        "text": "1262.  20. 6. 12"
+        "@id": "copies/sb487jm2092#inscription-text",
+        "text": "1262.  20. 6. 12",
+        "@annotation": {
+         "@id": "copies/sb487jm2092#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/sb487jm2092#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/sb487jm2092#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, single line, read from the lower panel. The 1 and 2 of the closing 12 match the opening 1262, which settles those figures; the 20 resolves to 2 + 0 under threshold."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1912-06-20",
      "@annotation": {
-      "@id": "copies/sb487jm2092.jsonld#date-annotation",
+      "@id": "copies/sb487jm2092#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/sb487jm2092.jsonld#date-belief",
+       "@id": "copies/sb487jm2092#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/sb487jm2092.jsonld#inscription-text"
+          "copies/sb487jm2092#inscription-text"
          ],
-         "note": "pencil, single line, read from the lower panel. The 1 and 2 of the closing 12 match the opening 1262, which settles those figures; the 20 resolves to 2 + 0 under threshold."
+         "note": "\"20. 6. 12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/sb487jm2092#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/sb487jm2092.jsonld#perforator",
+     "@id": "copies/sb487jm2092#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2308,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/sb487jm2092.jsonld#punch-diameter-annotation",
+        "@id": "copies/sb487jm2092#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sb487jm2092.jsonld#punch-diameter-belief",
+         "@id": "copies/sb487jm2092#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6315,
        "n": 267,
        "@annotation": {
-        "@id": "copies/sb487jm2092.jsonld#chain-pitch-annotation",
+        "@id": "copies/sb487jm2092#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sb487jm2092.jsonld#chain-pitch-belief",
+         "@id": "copies/sb487jm2092#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6271,
        "n": 11655,
        "@annotation": {
-        "@id": "copies/sb487jm2092.jsonld#advance-annotation",
+        "@id": "copies/sb487jm2092#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sb487jm2092.jsonld#advance-belief",
+         "@id": "copies/sb487jm2092#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

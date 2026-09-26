@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/pr464zk8674.jsonld",
+ "@id": "copies/pr464zk8674",
  "title": "Condon Roll 464, WM 1567",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/pr464zk8674.jsonld#copy",
+   "@id": "copies/pr464zk8674#copy",
    "label": "Condon Roll 464",
    "identifier": "Stanford Libraries CONDON ROLL 464",
    "seeAlso": "https://purl.stanford.edu/pr464zk8674",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/pr464zk8674.jsonld#inscription",
+       "@id": "copies/pr464zk8674#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/pr464zk8674%2Fpr464zk8674_0001/3464,167168,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/pr464zk8674.jsonld#inscription-text",
-        "text": "1569.   18.   6.12"
+        "@id": "copies/pr464zk8674#inscription-text",
+        "text": "1569.   18.   6.12",
+        "@annotation": {
+         "@id": "copies/pr464zk8674#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/pr464zk8674#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/pr464zk8674#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Crop 1, lower panel upright; pencil, one line, no name. The line settles its own 6/8 question: the 8 of the day 18 is two closed bowls, while the month figure repeats the single-bowl open-topped form of the 6 in the number 1569. Year 12."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1912-06-18",
      "@annotation": {
-      "@id": "copies/pr464zk8674.jsonld#date-annotation",
+      "@id": "copies/pr464zk8674#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/pr464zk8674.jsonld#date-belief",
+       "@id": "copies/pr464zk8674#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/pr464zk8674.jsonld#inscription-text"
+          "copies/pr464zk8674#inscription-text"
          ],
-         "note": "crop 1, lower panel upright; pencil, one line, no name. The line settles its own 6/8 question: the 8 of the day 18 is two closed bowls, while the month figure repeats the single-bowl open-topped form of the 6 in the number 1569. Year 12."
+         "note": "\"18. 6.12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/pr464zk8674#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/pr464zk8674.jsonld#perforator",
+     "@id": "copies/pr464zk8674#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0083,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/pr464zk8674.jsonld#punch-diameter-annotation",
+        "@id": "copies/pr464zk8674#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pr464zk8674.jsonld#punch-diameter-belief",
+         "@id": "copies/pr464zk8674#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.8449,
        "n": 146,
        "@annotation": {
-        "@id": "copies/pr464zk8674.jsonld#chain-pitch-annotation",
+        "@id": "copies/pr464zk8674#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pr464zk8674.jsonld#chain-pitch-belief",
+         "@id": "copies/pr464zk8674#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.397,
        "n": 7257,
        "@annotation": {
-        "@id": "copies/pr464zk8674.jsonld#advance-annotation",
+        "@id": "copies/pr464zk8674#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pr464zk8674.jsonld#advance-belief",
+         "@id": "copies/pr464zk8674#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

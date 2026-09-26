@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rc749wx0227.jsonld",
+ "@id": "copies/rc749wx0227",
  "title": "Condon Roll 501, WM 1471",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rc749wx0227.jsonld#copy",
+   "@id": "copies/rc749wx0227#copy",
    "label": "Condon Roll 501",
    "identifier": "Stanford Libraries CONDON ROLL 501",
    "seeAlso": "https://purl.stanford.edu/rc749wx0227",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rc749wx0227.jsonld#inscription",
+       "@id": "copies/rc749wx0227#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rc749wx0227%2Frc749wx0227_0001/3508,248598,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rc749wx0227.jsonld#inscription-text",
-        "text": "1. 9. 21"
+        "@id": "copies/rc749wx0227#inscription-text",
+        "text": "1. 9. 21",
+        "@annotation": {
+         "@id": "copies/rc749wx0227#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rc749wx0227#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rc749wx0227#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, one short line read from the lower panel, nothing else on the roll here. The 9 has a closed bowl and a tail below the line; the two 1s are written alike."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1921-09-01",
      "@annotation": {
-      "@id": "copies/rc749wx0227.jsonld#date-annotation",
+      "@id": "copies/rc749wx0227#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rc749wx0227.jsonld#date-belief",
+       "@id": "copies/rc749wx0227#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rc749wx0227.jsonld#inscription-text"
+          "copies/rc749wx0227#inscription-text"
          ],
-         "note": "pencil, one short line read from the lower panel, nothing else on the roll here. The 9 has a closed bowl and a tail below the line; the two 1s are written alike."
+         "note": "\"1. 9. 21\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rc749wx0227#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rc749wx0227.jsonld#perforator",
+     "@id": "copies/rc749wx0227#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.829,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rc749wx0227.jsonld#punch-diameter-annotation",
+        "@id": "copies/rc749wx0227#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rc749wx0227.jsonld#punch-diameter-belief",
+         "@id": "copies/rc749wx0227#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.5658,
        "n": 222,
        "@annotation": {
-        "@id": "copies/rc749wx0227.jsonld#chain-pitch-annotation",
+        "@id": "copies/rc749wx0227#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rc749wx0227.jsonld#chain-pitch-belief",
+         "@id": "copies/rc749wx0227#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.2996,
        "n": 14475,
        "@annotation": {
-        "@id": "copies/rc749wx0227.jsonld#advance-annotation",
+        "@id": "copies/rc749wx0227#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rc749wx0227.jsonld#advance-belief",
+         "@id": "copies/rc749wx0227#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

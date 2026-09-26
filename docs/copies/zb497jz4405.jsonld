@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/zb497jz4405.jsonld",
+ "@id": "copies/zb497jz4405",
  "title": "Condon Roll 23, WM 182",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/zb497jz4405.jsonld#copy",
+   "@id": "copies/zb497jz4405#copy",
    "label": "Condon Roll 23",
    "identifier": "Stanford Libraries CONDON ROLL 23",
    "seeAlso": "https://purl.stanford.edu/zb497jz4405",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/zb497jz4405.jsonld#inscription",
+       "@id": "copies/zb497jz4405#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/zb497jz4405%2Fzb497jz4405_0001/3503,112629,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/zb497jz4405.jsonld#inscription-text",
-        "text": "28. 10 04  Hofmann"
+        "@id": "copies/zb497jz4405#inscription-text",
+        "text": "28. 10 04  Hofmann",
+        "@annotation": {
+         "@id": "copies/zb497jz4405#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/zb497jz4405#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/zb497jz4405#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Ink, a heavier and more upright hand than the others in this batch. Day 28 and month 10 are plain. The year's second figure is the doubtful one: an arm descends from the upper left and meets the stem at mid height, which reads as the open form of 4 rather than 7, since in 7 the stem would leave the bar at its right end. 1907 cannot be excluded. The name reads Hofmann; Hohmann is possible."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -67,16 +85,16 @@
       "name": "Hofmann",
       "sameAs": [],
       "@annotation": {
-       "@id": "copies/zb497jz4405.jsonld#hand-annotation",
+       "@id": "copies/zb497jz4405#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/zb497jz4405.jsonld#hand-belief",
+        "@id": "copies/zb497jz4405#hand-belief",
         "certainty": "possible",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/zb497jz4405.jsonld#inscription-text"
+           "copies/zb497jz4405#inscription-text"
           ],
           "note": "Read as \"Hofmann\"."
          }
@@ -101,18 +119,25 @@
     "date": {
      "within": "1904-10-28",
      "@annotation": {
-      "@id": "copies/zb497jz4405.jsonld#date-annotation",
+      "@id": "copies/zb497jz4405#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/zb497jz4405.jsonld#date-belief",
+       "@id": "copies/zb497jz4405#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/zb497jz4405.jsonld#inscription-text"
+          "copies/zb497jz4405#inscription-text"
          ],
-         "note": "Ink, a heavier and more upright hand than the others in this batch. Day 28 and month 10 are plain. The year's second figure is the doubtful one: an arm descends from the upper left and meets the stem at mid height, which reads as the open form of 4 rather than 7, since in 7 the stem would leave the bar at its right end. 1907 cannot be excluded. The name reads Hofmann; Hohmann is possible."
+         "note": "\"28. 10 04\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/zb497jz4405#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -120,17 +145,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/zb497jz4405.jsonld#perforator",
+     "@id": "copies/zb497jz4405#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2325,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/zb497jz4405.jsonld#punch-diameter-annotation",
+        "@id": "copies/zb497jz4405#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zb497jz4405.jsonld#punch-diameter-belief",
+         "@id": "copies/zb497jz4405#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -152,10 +177,10 @@
        "bridge": 0.6559,
        "n": 210,
        "@annotation": {
-        "@id": "copies/zb497jz4405.jsonld#chain-pitch-annotation",
+        "@id": "copies/zb497jz4405#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zb497jz4405.jsonld#chain-pitch-belief",
+         "@id": "copies/zb497jz4405#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -176,10 +201,10 @@
        "strength": 0.0883,
        "n": 5392,
        "@annotation": {
-        "@id": "copies/zb497jz4405.jsonld#advance-annotation",
+        "@id": "copies/zb497jz4405#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zb497jz4405.jsonld#advance-belief",
+         "@id": "copies/zb497jz4405#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ps108fn1431.jsonld",
+ "@id": "copies/ps108fn1431",
  "title": "Condon Roll 389, WM 1288",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ps108fn1431.jsonld#copy",
+   "@id": "copies/ps108fn1431#copy",
    "label": "Condon Roll 389",
    "identifier": "Stanford Libraries CONDON ROLL 389",
    "seeAlso": "https://purl.stanford.edu/ps108fn1431",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ps108fn1431.jsonld#inscription",
+       "@id": "copies/ps108fn1431#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ps108fn1431%2Fps108fn1431_0001/3310,165815,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ps108fn1431.jsonld#inscription-text",
-        "text": "N. 1288  7.1.09  [signature]"
+        "@id": "copies/ps108fn1431#inscription-text",
+        "text": "N. 1288  7.1.09  [signature]",
+        "@annotation": {
+         "@id": "copies/ps108fn1431#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ps108fn1431#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ps108fn1431#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, one line, upper panel upright. The day is a crossed 7; the year 09 matches the 9 written with a descender. The roll number ends in two of the open-topped 8s described in reading.md; its second figure sits on the baseline without a descender, so I read 2 rather than 9. A short signature of some four letters follows the date, beginning with a looped capital and ending in a long descender; I could not resolve it into a name."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "Kopf",
       "sameAs": [],
-      "@id": "hands.jsonld#kopf",
+      "@id": "hands#kopf",
       "@annotation": {
-       "@id": "copies/ps108fn1431.jsonld#hand-annotation",
+       "@id": "copies/ps108fn1431#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/ps108fn1431.jsonld#hand-belief",
+        "@id": "copies/ps108fn1431#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/ps108fn1431.jsonld#inscription-text"
+           "copies/ps108fn1431#inscription-text"
           ],
           "note": "Read as \"Kopf\". The same signature as mz508vq7890 and wj177bx9196."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1909-01-07",
      "@annotation": {
-      "@id": "copies/ps108fn1431.jsonld#date-annotation",
+      "@id": "copies/ps108fn1431#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ps108fn1431.jsonld#date-belief",
+       "@id": "copies/ps108fn1431#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ps108fn1431.jsonld#inscription-text"
+          "copies/ps108fn1431#inscription-text"
          ],
-         "note": "Pencil, one line, upper panel upright. The day is a crossed 7; the year 09 matches the 9 written with a descender. The roll number ends in two of the open-topped 8s described in reading.md; its second figure sits on the baseline without a descender, so I read 2 rather than 9. A short signature of some four letters follows the date, beginning with a looped capital and ending in a long descender; I could not resolve it into a name."
+         "note": "\"7.1.09\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ps108fn1431#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ps108fn1431.jsonld#perforator",
+     "@id": "copies/ps108fn1431#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1572,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ps108fn1431.jsonld#punch-diameter-annotation",
+        "@id": "copies/ps108fn1431#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ps108fn1431.jsonld#punch-diameter-belief",
+         "@id": "copies/ps108fn1431#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.5333,
        "n": 150,
        "@annotation": {
-        "@id": "copies/ps108fn1431.jsonld#chain-pitch-annotation",
+        "@id": "copies/ps108fn1431#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ps108fn1431.jsonld#chain-pitch-belief",
+         "@id": "copies/ps108fn1431#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.0826,
        "n": 7574,
        "@annotation": {
-        "@id": "copies/ps108fn1431.jsonld#advance-annotation",
+        "@id": "copies/ps108fn1431#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ps108fn1431.jsonld#advance-belief",
+         "@id": "copies/ps108fn1431#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

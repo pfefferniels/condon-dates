@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ws250sr1272.jsonld",
+ "@id": "copies/ws250sr1272",
  "title": "Condon Roll 668, WM 2739",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ws250sr1272.jsonld#copy",
+   "@id": "copies/ws250sr1272#copy",
    "label": "Condon Roll 668",
    "identifier": "Stanford Libraries CONDON ROLL 668",
    "seeAlso": "https://purl.stanford.edu/ws250sr1272",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ws250sr1272.jsonld#inscription",
+       "@id": "copies/ws250sr1272#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ws250sr1272%2Fws250sr1272_0001/3493,168140,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ws250sr1272.jsonld#inscription-text",
-        "text": "10123"
+        "@id": "copies/ws250sr1272#inscription-text",
+        "text": "10123",
+        "@annotation": {
+         "@id": "copies/ws250sr1272#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ws250sr1272#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ws250sr1272#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, five figures run together at the edge of the sheet; read from the lower (180-degree) panel. Figures are plain: a slanted 1, a closed 0 with no descender, a second 1, a 2 with a horizontal base, and a double-bowled 3. Month and year are not in doubt, January 1923. The day is: 10123 could be read 10.1.23 or 1.01.23, and I take the first because this workshop writes a single-figure month unpadded, as in 14114 for 14.1.1914."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1923-01-10",
      "@annotation": {
-      "@id": "copies/ws250sr1272.jsonld#date-annotation",
+      "@id": "copies/ws250sr1272#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ws250sr1272.jsonld#date-belief",
+       "@id": "copies/ws250sr1272#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ws250sr1272.jsonld#inscription-text"
+          "copies/ws250sr1272#inscription-text"
          ],
-         "note": "pencil, five figures run together at the edge of the sheet; read from the lower (180-degree) panel. Figures are plain: a slanted 1, a closed 0 with no descender, a second 1, a 2 with a horizontal base, and a double-bowled 3. Month and year are not in doubt, January 1923. The day is: 10123 could be read 10.1.23 or 1.01.23, and I take the first because this workshop writes a single-figure month unpadded, as in 14114 for 14.1.1914."
+         "note": "The figures of \"10123\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ws250sr1272#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ws250sr1272.jsonld#perforator",
+     "@id": "copies/ws250sr1272#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7698,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ws250sr1272.jsonld#punch-diameter-annotation",
+        "@id": "copies/ws250sr1272#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ws250sr1272.jsonld#punch-diameter-belief",
+         "@id": "copies/ws250sr1272#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6481,
        "n": 305,
        "@annotation": {
-        "@id": "copies/ws250sr1272.jsonld#chain-pitch-annotation",
+        "@id": "copies/ws250sr1272#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ws250sr1272.jsonld#chain-pitch-belief",
+         "@id": "copies/ws250sr1272#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6201,
        "n": 7382,
        "@annotation": {
-        "@id": "copies/ws250sr1272.jsonld#advance-annotation",
+        "@id": "copies/ws250sr1272#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ws250sr1272.jsonld#advance-belief",
+         "@id": "copies/ws250sr1272#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

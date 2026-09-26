@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ps931qh5746.jsonld",
+ "@id": "copies/ps931qh5746",
  "title": "Condon Roll 665, WM 2591",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ps931qh5746.jsonld#copy",
+   "@id": "copies/ps931qh5746#copy",
    "label": "Condon Roll 665",
    "identifier": "Stanford Libraries CONDON ROLL 665",
    "seeAlso": "https://purl.stanford.edu/ps931qh5746",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ps931qh5746.jsonld#inscription",
+       "@id": "copies/ps931qh5746#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ps931qh5746%2Fps931qh5746_0001/3483,113626,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ps931qh5746.jsonld#inscription-text",
-        "text": "1. 8. 22."
+        "@id": "copies/ps931qh5746#inscription-text",
+        "text": "1. 8. 22.",
+        "@annotation": {
+         "@id": "copies/ps931qh5746#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ps931qh5746#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ps931qh5746#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil at the top edge of the paper, read from the upright panel and cross-checked against the rotated one. The month figure is the open-loop form that can pass for a 6, but under magnification it shows a closed upper loop crossing at the waist into a closed bowl, so 8. Points after the day, the month and the year. Nothing else written on this crop."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-08-01",
      "@annotation": {
-      "@id": "copies/ps931qh5746.jsonld#date-annotation",
+      "@id": "copies/ps931qh5746#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ps931qh5746.jsonld#date-belief",
+       "@id": "copies/ps931qh5746#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ps931qh5746.jsonld#inscription-text"
+          "copies/ps931qh5746#inscription-text"
          ],
-         "note": "pencil at the top edge of the paper, read from the upright panel and cross-checked against the rotated one. The month figure is the open-loop form that can pass for a 6, but under magnification it shows a closed upper loop crossing at the waist into a closed bowl, so 8. Points after the day, the month and the year. Nothing else written on this crop."
+         "note": "\"1. 8. 22.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ps931qh5746#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ps931qh5746.jsonld#perforator",
+     "@id": "copies/ps931qh5746#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7689,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ps931qh5746.jsonld#punch-diameter-annotation",
+        "@id": "copies/ps931qh5746#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ps931qh5746.jsonld#punch-diameter-belief",
+         "@id": "copies/ps931qh5746#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.561,
        "n": 254,
        "@annotation": {
-        "@id": "copies/ps931qh5746.jsonld#chain-pitch-annotation",
+        "@id": "copies/ps931qh5746#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ps931qh5746.jsonld#chain-pitch-belief",
+         "@id": "copies/ps931qh5746#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5222,
        "n": 5413,
        "@annotation": {
-        "@id": "copies/ps931qh5746.jsonld#advance-annotation",
+        "@id": "copies/ps931qh5746#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ps931qh5746.jsonld#advance-belief",
+         "@id": "copies/ps931qh5746#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

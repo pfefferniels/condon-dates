@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/vj052cw2158.jsonld",
+ "@id": "copies/vj052cw2158",
  "title": "Condon Roll 508, WM 1534",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/vj052cw2158.jsonld#copy",
+   "@id": "copies/vj052cw2158#copy",
    "label": "Condon Roll 508",
    "identifier": "Stanford Libraries CONDON ROLL 508",
    "seeAlso": "https://purl.stanford.edu/vj052cw2158",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/vj052cw2158.jsonld#inscription",
+       "@id": "copies/vj052cw2158#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/vj052cw2158%2Fvj052cw2158_0001/3490,190129,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/vj052cw2158.jsonld#inscription-text",
-        "text": "1354 .  B[...]  1. 2. 16"
+        "@id": "copies/vj052cw2158#inscription-text",
+        "text": "1354 .  B[...]  1. 2. 16",
+        "@annotation": {
+         "@id": "copies/vj052cw2158#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/vj052cw2158#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/vj052cw2158#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Crop 1, upper panel upright; pencil over the scanner's ruled lines. Number 1354, then a surname in a capital B and a run of minims that I cannot resolve and have not guessed, then the date. Day 1 and month 2 are plain. The year is 1 followed by a figure made of one descending curve closing into a single bowl on the baseline, with a short detached tick at its right: a 6 rather than the two-stroke 8 reading.md warns of, whose limbs would converge into a V above the bowl. No other 6 or 8 stands on the line to compare, so the 8 cannot be ruled out entirely."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1916-02-01",
      "@annotation": {
-      "@id": "copies/vj052cw2158.jsonld#date-annotation",
+      "@id": "copies/vj052cw2158#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/vj052cw2158.jsonld#date-belief",
+       "@id": "copies/vj052cw2158#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/vj052cw2158.jsonld#inscription-text"
+          "copies/vj052cw2158#inscription-text"
          ],
-         "note": "crop 1, upper panel upright; pencil over the scanner's ruled lines. Number 1354, then a surname in a capital B and a run of minims that I cannot resolve and have not guessed, then the date. Day 1 and month 2 are plain. The year is 1 followed by a figure made of one descending curve closing into a single bowl on the baseline, with a short detached tick at its right: a 6 rather than the two-stroke 8 reading.md warns of, whose limbs would converge into a V above the bowl. No other 6 or 8 stands on the line to compare, so the 8 cannot be ruled out entirely."
+         "note": "\"1. 2. 16\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/vj052cw2158#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/vj052cw2158.jsonld#perforator",
+     "@id": "copies/vj052cw2158#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1936,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/vj052cw2158.jsonld#punch-diameter-annotation",
+        "@id": "copies/vj052cw2158#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vj052cw2158.jsonld#punch-diameter-belief",
+         "@id": "copies/vj052cw2158#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.708,
        "n": 189,
        "@annotation": {
-        "@id": "copies/vj052cw2158.jsonld#chain-pitch-annotation",
+        "@id": "copies/vj052cw2158#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vj052cw2158.jsonld#chain-pitch-belief",
+         "@id": "copies/vj052cw2158#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5582,
        "n": 7716,
        "@annotation": {
-        "@id": "copies/vj052cw2158.jsonld#advance-annotation",
+        "@id": "copies/vj052cw2158#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vj052cw2158.jsonld#advance-belief",
+         "@id": "copies/vj052cw2158#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

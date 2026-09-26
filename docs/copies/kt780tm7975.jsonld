@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/kt780tm7975.jsonld",
+ "@id": "copies/kt780tm7975",
  "title": "Condon Roll 212, WM 568",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/kt780tm7975.jsonld#copy",
+   "@id": "copies/kt780tm7975#copy",
    "label": "Condon Roll 212",
    "identifier": "Stanford Libraries CONDON ROLL 212",
    "seeAlso": "https://purl.stanford.edu/kt780tm7975",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/kt780tm7975.jsonld#inscription",
+       "@id": "copies/kt780tm7975#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/kt780tm7975%2Fkt780tm7975_0001/2510,4306,1443,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/kt780tm7975.jsonld#inscription-text",
-        "text": "9' 9\" - 26. 1. 26"
+        "@id": "copies/kt780tm7975#inscription-text",
+        "text": "9' 9\" - 26. 1. 26",
+        "@annotation": {
+         "@id": "copies/kt780tm7975#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/kt780tm7975#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/kt780tm7975#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, written across the paper at the leader end of e2, reading up the roll. Every figure is plain: 9 feet 9 inches, a dash, then 26. 1. 26, which gives 26 January 1926 whichever way round the year stands. My reservation is over what the date records, not over the figures: it is written as one phrase with a length in feet and inches, so it may be a measuring or repair note from the American Welte side rather than the punching itself, and no roll number or puncher stands with it. e3 shows the leader label with a printed '...7. IX. 05.' (the first figure falls outside the crop), which is the label's own type and dates the autograph, not this copy. e1 is the leader and colour target."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1926-01-26",
      "@annotation": {
-      "@id": "copies/kt780tm7975.jsonld#date-annotation",
+      "@id": "copies/kt780tm7975#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/kt780tm7975.jsonld#date-belief",
+       "@id": "copies/kt780tm7975#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/kt780tm7975.jsonld#inscription-text"
+          "copies/kt780tm7975#inscription-text"
          ],
-         "note": "Pencil, written across the paper at the leader end of e2, reading up the roll. Every figure is plain: 9 feet 9 inches, a dash, then 26. 1. 26, which gives 26 January 1926 whichever way round the year stands. My reservation is over what the date records, not over the figures: it is written as one phrase with a length in feet and inches, so it may be a measuring or repair note from the American Welte side rather than the punching itself, and no roll number or puncher stands with it. e3 shows the leader label with a printed '...7. IX. 05.' (the first figure falls outside the crop), which is the label's own type and dates the autograph, not this copy. e1 is the leader and colour target."
+         "note": "\"26. 1. 26\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/kt780tm7975#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/kt780tm7975.jsonld#perforator",
+     "@id": "copies/kt780tm7975#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7055,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/kt780tm7975.jsonld#punch-diameter-annotation",
+        "@id": "copies/kt780tm7975#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kt780tm7975.jsonld#punch-diameter-belief",
+         "@id": "copies/kt780tm7975#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6621,
        "n": 224,
        "@annotation": {
-        "@id": "copies/kt780tm7975.jsonld#chain-pitch-annotation",
+        "@id": "copies/kt780tm7975#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kt780tm7975.jsonld#chain-pitch-belief",
+         "@id": "copies/kt780tm7975#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6033,
        "n": 5093,
        "@annotation": {
-        "@id": "copies/kt780tm7975.jsonld#advance-annotation",
+        "@id": "copies/kt780tm7975#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kt780tm7975.jsonld#advance-belief",
+         "@id": "copies/kt780tm7975#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

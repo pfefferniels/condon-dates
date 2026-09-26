@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/zr938kz3902.jsonld",
+ "@id": "copies/zr938kz3902",
  "title": "Condon Roll 690, WM 2823",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/zr938kz3902.jsonld#copy",
+   "@id": "copies/zr938kz3902#copy",
    "label": "Condon Roll 690",
    "identifier": "Stanford Libraries CONDON ROLL 690",
    "seeAlso": "https://purl.stanford.edu/zr938kz3902",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/zr938kz3902.jsonld#inscription",
+       "@id": "copies/zr938kz3902#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/zr938kz3902%2Fzr938kz3902_0001/3541,8802,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/zr938kz3902.jsonld#inscription-text",
-        "text": "2413"
+        "@id": "copies/zr938kz3902#inscription-text",
+        "text": "2413",
+        "@annotation": {
+         "@id": "copies/zr938kz3902#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/zr938kz3902#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/zr938kz3902#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, four figures with no separators, read at the crop turned 180 degrees; on the leader, 9k px into a 454k-px scan, at the treble paper edge. Only the first figure, a 2, is plain; the second and third are taken as 4 and 1 from their shape, and the last could as easily be an 8, which would give 2.4.18 instead of 2.4.13. Crops 1 and 2 hold no writing (crop 2 has a dark blot, not ink strokes)."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1913-04-02",
      "@annotation": {
-      "@id": "copies/zr938kz3902.jsonld#date-annotation",
+      "@id": "copies/zr938kz3902#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/zr938kz3902.jsonld#date-belief",
+       "@id": "copies/zr938kz3902#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/zr938kz3902.jsonld#inscription-text"
+          "copies/zr938kz3902#inscription-text"
          ],
-         "note": "pencil, four figures with no separators, read at the crop turned 180 degrees; on the leader, 9k px into a 454k-px scan, at the treble paper edge. Only the first figure, a 2, is plain; the second and third are taken as 4 and 1 from their shape, and the last could as easily be an 8, which would give 2.4.18 instead of 2.4.13. Crops 1 and 2 hold no writing (crop 2 has a dark blot, not ink strokes)."
+         "note": "The figures of \"2413\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/zr938kz3902#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/zr938kz3902.jsonld#perforator",
+     "@id": "copies/zr938kz3902#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.763,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/zr938kz3902.jsonld#punch-diameter-annotation",
+        "@id": "copies/zr938kz3902#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zr938kz3902.jsonld#punch-diameter-belief",
+         "@id": "copies/zr938kz3902#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6051,
        "n": 501,
        "@annotation": {
-        "@id": "copies/zr938kz3902.jsonld#chain-pitch-annotation",
+        "@id": "copies/zr938kz3902#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zr938kz3902.jsonld#chain-pitch-belief",
+         "@id": "copies/zr938kz3902#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.3446,
        "n": 37448,
        "@annotation": {
-        "@id": "copies/zr938kz3902.jsonld#advance-annotation",
+        "@id": "copies/zr938kz3902#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zr938kz3902.jsonld#advance-belief",
+         "@id": "copies/zr938kz3902#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

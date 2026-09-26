@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/sj250cc6451.jsonld",
+ "@id": "copies/sj250cc6451",
  "title": "Condon Roll 71, WM 277",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/sj250cc6451.jsonld#copy",
+   "@id": "copies/sj250cc6451#copy",
    "label": "Condon Roll 71",
    "identifier": "Stanford Libraries CONDON ROLL 71",
    "seeAlso": "https://purl.stanford.edu/sj250cc6451",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/sj250cc6451.jsonld#inscription",
+       "@id": "copies/sj250cc6451#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/sj250cc6451%2Fsj250cc6451_0001/3519,332703,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/sj250cc6451.jsonld#inscription-text",
-        "text": "277.  12.  1.  11."
+        "@id": "copies/sj250cc6451#inscription-text",
+        "text": "277.  12.  1.  11.",
+        "@annotation": {
+         "@id": "copies/sj250cc6451#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/sj250cc6451#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/sj250cc6451#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink; the number's two last figures carry the angular top of a 7, unlike the plain 1s in the date"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1911-01-12",
      "@annotation": {
-      "@id": "copies/sj250cc6451.jsonld#date-annotation",
+      "@id": "copies/sj250cc6451#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/sj250cc6451.jsonld#date-belief",
+       "@id": "copies/sj250cc6451#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/sj250cc6451.jsonld#inscription-text"
+          "copies/sj250cc6451#inscription-text"
          ],
-         "note": "ink; the number's two last figures carry the angular top of a 7, unlike the plain 1s in the date"
+         "note": "\"12. 1. 11.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/sj250cc6451#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/sj250cc6451.jsonld#perforator",
+     "@id": "copies/sj250cc6451#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2308,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/sj250cc6451.jsonld#punch-diameter-annotation",
+        "@id": "copies/sj250cc6451#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sj250cc6451.jsonld#punch-diameter-belief",
+         "@id": "copies/sj250cc6451#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7079,
        "n": 265,
        "@annotation": {
-        "@id": "copies/sj250cc6451.jsonld#chain-pitch-annotation",
+        "@id": "copies/sj250cc6451#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sj250cc6451.jsonld#chain-pitch-belief",
+         "@id": "copies/sj250cc6451#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.3869,
        "n": 18758,
        "@annotation": {
-        "@id": "copies/sj250cc6451.jsonld#advance-annotation",
+        "@id": "copies/sj250cc6451#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sj250cc6451.jsonld#advance-belief",
+         "@id": "copies/sj250cc6451#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

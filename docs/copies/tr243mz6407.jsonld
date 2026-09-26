@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/tr243mz6407.jsonld",
+ "@id": "copies/tr243mz6407",
  "title": "Condon Roll 613, WM 2540",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/tr243mz6407.jsonld#copy",
+   "@id": "copies/tr243mz6407#copy",
    "label": "Condon Roll 613",
    "identifier": "Stanford Libraries CONDON ROLL 613",
    "seeAlso": "https://purl.stanford.edu/tr243mz6407",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/tr243mz6407.jsonld#inscription",
+       "@id": "copies/tr243mz6407#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/tr243mz6407%2Ftr243mz6407_0001/3509,146874,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/tr243mz6407.jsonld#inscription-text",
-        "text": "41021"
+        "@id": "copies/tr243mz6407#inscription-text",
+        "text": "41021",
+        "@annotation": {
+         "@id": "copies/tr243mz6407#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/tr243mz6407#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/tr243mz6407#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, five figures under the paper edge, both panels agree: a 4 with its crossbar, a 1, a narrow slanted 0, a 2 and a 1. Read as 4.10.21; 41 is no day, so the month is 10."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1921-10-04",
      "@annotation": {
-      "@id": "copies/tr243mz6407.jsonld#date-annotation",
+      "@id": "copies/tr243mz6407#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/tr243mz6407.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/tr243mz6407#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/tr243mz6407.jsonld#inscription-text"
+          "copies/tr243mz6407#inscription-text"
          ],
-         "note": "pencil, five figures under the paper edge, both panels agree: a 4 with its crossbar, a 1, a narrow slanted 0, a 2 and a 1. Read as 4.10.21; 41 is no day, so the month is 10."
+         "note": "The figures of \"41021\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/tr243mz6407#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/tr243mz6407.jsonld#perforator",
+     "@id": "copies/tr243mz6407#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8324,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/tr243mz6407.jsonld#punch-diameter-annotation",
+        "@id": "copies/tr243mz6407#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tr243mz6407.jsonld#punch-diameter-belief",
+         "@id": "copies/tr243mz6407#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.533,
        "n": 309,
        "@annotation": {
-        "@id": "copies/tr243mz6407.jsonld#chain-pitch-annotation",
+        "@id": "copies/tr243mz6407#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tr243mz6407.jsonld#chain-pitch-belief",
+         "@id": "copies/tr243mz6407#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5652,
        "n": 9009,
        "@annotation": {
-        "@id": "copies/tr243mz6407.jsonld#advance-annotation",
+        "@id": "copies/tr243mz6407#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tr243mz6407.jsonld#advance-belief",
+         "@id": "copies/tr243mz6407#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

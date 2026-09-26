@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gf569df0451.jsonld",
+ "@id": "copies/gf569df0451",
  "title": "Condon Roll 102, WM 361",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gf569df0451.jsonld#copy",
+   "@id": "copies/gf569df0451#copy",
    "label": "Condon Roll 102",
    "identifier": "Stanford Libraries CONDON ROLL 102",
    "seeAlso": "https://purl.stanford.edu/gf569df0451",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gf569df0451.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/gf569df0451#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 42560.16,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gf569df0451%2Fgf569df0451_0001/3376,503098,720,2300/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gf569df0451.jsonld#inscription-text",
-        "text": "9225"
+        "@id": "copies/gf569df0451#inscription-text",
+        "text": "9225",
+        "@annotation": {
+         "@id": "copies/gf569df0451#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gf569df0451#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gf569df0451#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Stamped, not written. The slug's fixed heavy mark stands before the figures; the figures alone give a possible date, so it is not counted as a digit. Third figure over-inked but its flat base and diagonal match the plain 2 beside it. Roll number 361 is written in pencil in e4 and printed on the tab label in e6 (Welte-Mignon No. 361, Schumann, Fantasia op. 17, C major, Part I)."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1925-02-09",
      "@annotation": {
-      "@id": "copies/gf569df0451.jsonld#date-annotation",
+      "@id": "copies/gf569df0451#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gf569df0451.jsonld#date-belief",
+       "@id": "copies/gf569df0451#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gf569df0451.jsonld#inscription-text"
+          "copies/gf569df0451#inscription-text"
          ],
-         "note": "stamped, not written. The slug's fixed heavy mark stands before the figures; the figures alone give a possible date, so it is not counted as a digit. Third figure over-inked but its flat base and diagonal match the plain 2 beside it. Roll number 361 is written in pencil in e4 and printed on the tab label in e6 (Welte-Mignon No. 361, Schumann, Fantasia op. 17, C major, Part I)."
+         "note": "\"9 2 25\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gf569df0451#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gf569df0451.jsonld#perforator",
+     "@id": "copies/gf569df0451#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6699,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gf569df0451.jsonld#punch-diameter-annotation",
+        "@id": "copies/gf569df0451#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gf569df0451.jsonld#punch-diameter-belief",
+         "@id": "copies/gf569df0451#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7142,
        "n": 415,
        "@annotation": {
-        "@id": "copies/gf569df0451.jsonld#chain-pitch-annotation",
+        "@id": "copies/gf569df0451#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gf569df0451.jsonld#chain-pitch-belief",
+         "@id": "copies/gf569df0451#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5793,
        "n": 42576,
        "@annotation": {
-        "@id": "copies/gf569df0451.jsonld#advance-annotation",
+        "@id": "copies/gf569df0451#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gf569df0451.jsonld#advance-belief",
+         "@id": "copies/gf569df0451#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

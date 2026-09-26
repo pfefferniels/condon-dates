@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ky458kj7325.jsonld",
+ "@id": "copies/ky458kj7325",
  "title": "Condon Roll 689, WM 2882",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ky458kj7325.jsonld#copy",
+   "@id": "copies/ky458kj7325#copy",
    "label": "Condon Roll 689",
    "identifier": "Stanford Libraries CONDON ROLL 689",
    "seeAlso": "https://purl.stanford.edu/ky458kj7325",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ky458kj7325.jsonld#inscription",
+       "@id": "copies/ky458kj7325#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ky458kj7325%2Fky458kj7325_0001/3502,325547,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ky458kj7325.jsonld#inscription-text",
-        "text": "369  13. 5. 13.  Mo."
+        "@id": "copies/ky458kj7325#inscription-text",
+        "text": "369  13. 5. 13.  Mo.",
+        "@annotation": {
+         "@id": "copies/ky458kj7325#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ky458kj7325#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ky458kj7325#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Read here at magnification. The written number 369 does not agree with the catalogue's 2882 for this druid, which is unexplained and should be checked before the reading is used."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Mo.",
       "sameAs": [],
-      "@id": "hands.jsonld#mo",
+      "@id": "hands#mo",
       "@annotation": {
-       "@id": "copies/ky458kj7325.jsonld#hand-annotation",
+       "@id": "copies/ky458kj7325#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/ky458kj7325.jsonld#hand-belief",
+        "@id": "copies/ky458kj7325#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/ky458kj7325.jsonld#inscription-text"
+           "copies/ky458kj7325#inscription-text"
           ],
           "note": "Read as \"Mo.\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1913-05-13",
      "@annotation": {
-      "@id": "copies/ky458kj7325.jsonld#date-annotation",
+      "@id": "copies/ky458kj7325#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ky458kj7325.jsonld#date-belief",
+       "@id": "copies/ky458kj7325#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ky458kj7325.jsonld#inscription-text"
+          "copies/ky458kj7325#inscription-text"
          ],
-         "note": "read here at magnification. The written number 369 does not agree with the catalogue's 2882 for this druid, which is unexplained and should be checked before the reading is used."
+         "note": "\"13. 5. 13.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ky458kj7325#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ky458kj7325.jsonld#perforator",
+     "@id": "copies/ky458kj7325#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.9745,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ky458kj7325.jsonld#punch-diameter-annotation",
+        "@id": "copies/ky458kj7325#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ky458kj7325.jsonld#punch-diameter-belief",
+         "@id": "copies/ky458kj7325#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.81,
        "n": 265,
        "@annotation": {
-        "@id": "copies/ky458kj7325.jsonld#chain-pitch-annotation",
+        "@id": "copies/ky458kj7325#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ky458kj7325.jsonld#chain-pitch-belief",
+         "@id": "copies/ky458kj7325#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.4181,
        "n": 23249,
        "@annotation": {
-        "@id": "copies/ky458kj7325.jsonld#advance-annotation",
+        "@id": "copies/ky458kj7325#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ky458kj7325.jsonld#advance-belief",
+         "@id": "copies/ky458kj7325#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

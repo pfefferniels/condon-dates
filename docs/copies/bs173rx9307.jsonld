@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/bs173rx9307.jsonld",
+ "@id": "copies/bs173rx9307",
  "title": "Condon Roll 29, WM 188",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/bs173rx9307.jsonld#copy",
+   "@id": "copies/bs173rx9307#copy",
    "label": "Condon Roll 29",
    "identifier": "Stanford Libraries CONDON ROLL 29",
    "seeAlso": "https://purl.stanford.edu/bs173rx9307",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/bs173rx9307.jsonld#inscription",
+       "@id": "copies/bs173rx9307#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/bs173rx9307%2Fbs173rx9307_0001/3498,294605,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/bs173rx9307.jsonld#inscription-text",
-        "text": "19. 9. 24."
+        "@id": "copies/bs173rx9307#inscription-text",
+        "text": "19. 9. 24.",
+        "@annotation": {
+         "@id": "copies/bs173rx9307#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/bs173rx9307#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/bs173rx9307#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Fine pencil, small and rather faint, but each figure separates cleanly: 19, then 9 (top loop with descender), then 24."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-09-19",
      "@annotation": {
-      "@id": "copies/bs173rx9307.jsonld#date-annotation",
+      "@id": "copies/bs173rx9307#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/bs173rx9307.jsonld#date-belief",
+       "@id": "copies/bs173rx9307#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/bs173rx9307.jsonld#inscription-text"
+          "copies/bs173rx9307#inscription-text"
          ],
-         "note": "Fine pencil, small and rather faint, but each figure separates cleanly: 19, then 9 (top loop with descender), then 24."
+         "note": "\"19. 9. 24.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/bs173rx9307#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/bs173rx9307.jsonld#perforator",
+     "@id": "copies/bs173rx9307#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6894,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/bs173rx9307.jsonld#punch-diameter-annotation",
+        "@id": "copies/bs173rx9307#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bs173rx9307.jsonld#punch-diameter-belief",
+         "@id": "copies/bs173rx9307#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.701,
        "n": 377,
        "@annotation": {
-        "@id": "copies/bs173rx9307.jsonld#chain-pitch-annotation",
+        "@id": "copies/bs173rx9307#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bs173rx9307.jsonld#chain-pitch-belief",
+         "@id": "copies/bs173rx9307#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5629,
        "n": 26325,
        "@annotation": {
-        "@id": "copies/bs173rx9307.jsonld#advance-annotation",
+        "@id": "copies/bs173rx9307#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bs173rx9307.jsonld#advance-belief",
+         "@id": "copies/bs173rx9307#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

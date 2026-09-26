@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/wg598sj1504.jsonld",
+ "@id": "copies/wg598sj1504",
  "title": "Condon Roll 635, WM 2621",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/wg598sj1504.jsonld#copy",
+   "@id": "copies/wg598sj1504#copy",
    "label": "Condon Roll 635",
    "identifier": "Stanford Libraries CONDON ROLL 635",
    "seeAlso": "https://purl.stanford.edu/wg598sj1504",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/wg598sj1504.jsonld#inscription",
+       "@id": "copies/wg598sj1504#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/wg598sj1504%2Fwg598sj1504_0001/3370,92882,720,2300/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/wg598sj1504.jsonld#inscription-text",
-        "text": "4422"
+        "@id": "copies/wg598sj1504#inscription-text",
+        "text": "4422",
+        "@annotation": {
+         "@id": "copies/wg598sj1504#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/wg598sj1504#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/wg598sj1504#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Four figures in ink at the extreme paper edge, no separators, read as 4.4.22. The same hand writes the roll number 2621 further along the roll (crop e3), which gives a control on the figures: its 1 is a plain rising diagonal, while both opening figures here carry the crossbar of a 4, and its 2 is the curl with a horizontal foot that matches the last two figures here. Called medium rather than high because the strokes are thick at this resolution and 1 and 4 share a descender in this hand; if the two opening figures were 1s the reading would be 1.1.22, so the year 1922 holds either way. The printed label on the leader (e4) reads 'WELTE-MIGNON. No. 2621 / Etude Ges dur, Op. 10, No. 5 (Schwarze Tasten) / Fr. Chopin / Gespielt von Tosta di Benici', agreeing with the written number. Crop e2 holds a single figure 9 standing alone, the rest of whatever it belonged to falling outside the crop."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-04-04",
      "@annotation": {
-      "@id": "copies/wg598sj1504.jsonld#date-annotation",
+      "@id": "copies/wg598sj1504#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/wg598sj1504.jsonld#date-belief",
+       "@id": "copies/wg598sj1504#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/wg598sj1504.jsonld#inscription-text"
+          "copies/wg598sj1504#inscription-text"
          ],
-         "note": "Four figures in ink at the extreme paper edge, no separators, read as 4.4.22. The same hand writes the roll number 2621 further along the roll (crop e3), which gives a control on the figures: its 1 is a plain rising diagonal, while both opening figures here carry the crossbar of a 4, and its 2 is the curl with a horizontal foot that matches the last two figures here. Called medium rather than high because the strokes are thick at this resolution and 1 and 4 share a descender in this hand; if the two opening figures were 1s the reading would be 1.1.22, so the year 1922 holds either way. The printed label on the leader (e4) reads 'WELTE-MIGNON. No. 2621 / Etude Ges dur, Op. 10, No. 5 (Schwarze Tasten) / Fr. Chopin / Gespielt von Tosta di Benici', agreeing with the written number. Crop e2 holds a single figure 9 standing alone, the rest of whatever it belonged to falling outside the crop."
+         "note": "The figures of \"4422\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/wg598sj1504#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/wg598sj1504.jsonld#perforator",
+     "@id": "copies/wg598sj1504#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7351,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/wg598sj1504.jsonld#punch-diameter-annotation",
+        "@id": "copies/wg598sj1504#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wg598sj1504.jsonld#punch-diameter-belief",
+         "@id": "copies/wg598sj1504#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6711,
        "n": 356,
        "@annotation": {
-        "@id": "copies/wg598sj1504.jsonld#chain-pitch-annotation",
+        "@id": "copies/wg598sj1504#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wg598sj1504.jsonld#chain-pitch-belief",
+         "@id": "copies/wg598sj1504#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.3739,
        "n": 3740,
        "@annotation": {
-        "@id": "copies/wg598sj1504.jsonld#advance-annotation",
+        "@id": "copies/wg598sj1504#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wg598sj1504.jsonld#advance-belief",
+         "@id": "copies/wg598sj1504#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

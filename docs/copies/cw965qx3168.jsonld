@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/cw965qx3168.jsonld",
+ "@id": "copies/cw965qx3168",
  "title": "Condon Roll 940, WM 5661",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/cw965qx3168.jsonld#copy",
+   "@id": "copies/cw965qx3168#copy",
    "label": "Condon Roll 940",
    "identifier": "Stanford Libraries CONDON ROLL 940",
    "seeAlso": "https://purl.stanford.edu/cw965qx3168",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/cw965qx3168.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/cw965qx3168#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 13619.56,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/cw965qx3168%2Fcw965qx3168_0001/3470,160995,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/cw965qx3168.jsonld#inscription-text",
-        "text": "211125"
+        "@id": "copies/cw965qx3168#inscription-text",
+        "text": "211125",
+        "@annotation": {
+         "@id": "copies/cw965qx3168#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/cw965qx3168#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/cw965qx3168#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Stamped, upright in the upper panel. 2 1 1 1 2 5, so 21.11.25. The fourth figure is over-inked into a solid block but keeps the flag and base of the two plain 1s before it; the closing 5 is lightly inked, though its top bar and bowl are both there."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1925-11-21",
      "@annotation": {
-      "@id": "copies/cw965qx3168.jsonld#date-annotation",
+      "@id": "copies/cw965qx3168#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/cw965qx3168.jsonld#date-belief",
+       "@id": "copies/cw965qx3168#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/cw965qx3168.jsonld#inscription-text"
+          "copies/cw965qx3168#inscription-text"
          ],
-         "note": "stamped, upright in the upper panel. 2 1 1 1 2 5, so 21.11.25. The fourth figure is over-inked into a solid block but keeps the flag and base of the two plain 1s before it; the closing 5 is lightly inked, though its top bar and bowl are both there."
+         "note": "The figures of \"211125\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/cw965qx3168#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/cw965qx3168.jsonld#perforator",
+     "@id": "copies/cw965qx3168#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7884,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/cw965qx3168.jsonld#punch-diameter-annotation",
+        "@id": "copies/cw965qx3168#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cw965qx3168.jsonld#punch-diameter-belief",
+         "@id": "copies/cw965qx3168#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7187,
        "n": 256,
        "@annotation": {
-        "@id": "copies/cw965qx3168.jsonld#chain-pitch-annotation",
+        "@id": "copies/cw965qx3168#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cw965qx3168.jsonld#chain-pitch-belief",
+         "@id": "copies/cw965qx3168#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5271,
        "n": 11934,
        "@annotation": {
-        "@id": "copies/cw965qx3168.jsonld#advance-annotation",
+        "@id": "copies/cw965qx3168#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cw965qx3168.jsonld#advance-belief",
+         "@id": "copies/cw965qx3168#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

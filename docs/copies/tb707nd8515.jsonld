@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/tb707nd8515.jsonld",
+ "@id": "copies/tb707nd8515",
  "title": "Condon Roll 287, WM 993",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/tb707nd8515.jsonld#copy",
+   "@id": "copies/tb707nd8515#copy",
    "label": "Condon Roll 287",
    "identifier": "Stanford Libraries CONDON ROLL 287",
    "seeAlso": "https://purl.stanford.edu/tb707nd8515",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/tb707nd8515.jsonld#inscription",
+       "@id": "copies/tb707nd8515#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/tb707nd8515%2Ftb707nd8515_0001/3366,127700,590,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/tb707nd8515.jsonld#inscription-text",
-        "text": "M. Schäfer."
+        "@id": "copies/tb707nd8515#inscription-text",
+        "text": "M. Schäfer.",
+        "@annotation": {
+         "@id": "copies/tb707nd8515#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/tb707nd8515#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/tb707nd8515#inscription"
+            ],
+            "note": "No date was read in it, so its figures were not graded. Ink, written across the roll; a name only, no date. Crop 3 is the leader with the printed Welte label 'No. 993. Widmung, Schumann-Liszt. Gespielt von [facsimile signature] 6. XII. 05.' — printed, so the recording date, not a workshop punch date. Crops 2 and 4 blank."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "M. Schäfer",
       "sameAs": [],
-      "@id": "hands.jsonld#m-schaefer",
+      "@id": "hands#m-schaefer",
       "@annotation": {
-       "@id": "copies/tb707nd8515.jsonld#hand-annotation",
+       "@id": "copies/tb707nd8515#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/tb707nd8515.jsonld#hand-belief",
+        "@id": "copies/tb707nd8515#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/tb707nd8515.jsonld#inscription-text"
+           "copies/tb707nd8515#inscription-text"
           ],
           "note": "Read as \"M. Schäfer\"."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,17 +127,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/tb707nd8515.jsonld#perforator",
+     "@id": "copies/tb707nd8515#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8239,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/tb707nd8515.jsonld#punch-diameter-annotation",
+        "@id": "copies/tb707nd8515#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tb707nd8515.jsonld#punch-diameter-belief",
+         "@id": "copies/tb707nd8515#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -141,10 +159,10 @@
        "bridge": 0.8034,
        "n": 318,
        "@annotation": {
-        "@id": "copies/tb707nd8515.jsonld#chain-pitch-annotation",
+        "@id": "copies/tb707nd8515#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tb707nd8515.jsonld#chain-pitch-belief",
+         "@id": "copies/tb707nd8515#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -165,10 +183,10 @@
        "strength": 0.1562,
        "n": 11717,
        "@annotation": {
-        "@id": "copies/tb707nd8515.jsonld#advance-annotation",
+        "@id": "copies/tb707nd8515#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tb707nd8515.jsonld#advance-belief",
+         "@id": "copies/tb707nd8515#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

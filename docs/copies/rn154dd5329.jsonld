@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rn154dd5329.jsonld",
+ "@id": "copies/rn154dd5329",
  "title": "Condon Roll 98, WM 357",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rn154dd5329.jsonld#copy",
+   "@id": "copies/rn154dd5329#copy",
    "label": "Condon Roll 98",
    "identifier": "Stanford Libraries CONDON ROLL 98",
    "seeAlso": "https://purl.stanford.edu/rn154dd5329",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rn154dd5329.jsonld#inscription",
+       "@id": "copies/rn154dd5329#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rn154dd5329%2Frn154dd5329_0001/3502,295786,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rn154dd5329.jsonld#inscription-text",
-        "text": "357  3. 4. 11.  Mohr"
+        "@id": "copies/rn154dd5329#inscription-text",
+        "text": "357  3. 4. 11.  Mohr",
+        "@annotation": {
+         "@id": "copies/rn154dd5329#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rn154dd5329#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rn154dd5329#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. '357' and '3. 4.' are plain. What I read as the year '11.' is two tall strokes with entry ticks and could instead be an initial 'M.' belonging to the name, in which case the inscription gives no year at all. The surname is not certainly legible; 'Mohr' is my best reading."
+           }
+          ]
+         }
+        }
        }
       }
      ],
@@ -66,16 +84,16 @@
       "name": "Mohr",
       "sameAs": [],
       "@annotation": {
-       "@id": "copies/rn154dd5329.jsonld#hand-annotation",
+       "@id": "copies/rn154dd5329#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/rn154dd5329.jsonld#hand-belief",
+        "@id": "copies/rn154dd5329#hand-belief",
         "certainty": "possible",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/rn154dd5329.jsonld#inscription-text"
+           "copies/rn154dd5329#inscription-text"
           ],
           "note": "Read as \"Mohr\"."
          }
@@ -100,18 +118,25 @@
     "date": {
      "within": "1911-04-03",
      "@annotation": {
-      "@id": "copies/rn154dd5329.jsonld#date-annotation",
+      "@id": "copies/rn154dd5329#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rn154dd5329.jsonld#date-belief",
+       "@id": "copies/rn154dd5329#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rn154dd5329.jsonld#inscription-text"
+          "copies/rn154dd5329#inscription-text"
          ],
-         "note": "'357' and '3. 4.' are plain. What I read as the year '11.' is two tall strokes with entry ticks and could instead be an initial 'M.' belonging to the name, in which case the inscription gives no year at all. The surname is not certainly legible; 'Mohr' is my best reading."
+         "note": "\"3.4.11\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rn154dd5329#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -119,17 +144,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rn154dd5329.jsonld#perforator",
+     "@id": "copies/rn154dd5329#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0844,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rn154dd5329.jsonld#punch-diameter-annotation",
+        "@id": "copies/rn154dd5329#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rn154dd5329.jsonld#punch-diameter-belief",
+         "@id": "copies/rn154dd5329#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -151,10 +176,10 @@
        "bridge": 0.8,
        "n": 241,
        "@annotation": {
-        "@id": "copies/rn154dd5329.jsonld#chain-pitch-annotation",
+        "@id": "copies/rn154dd5329#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rn154dd5329.jsonld#chain-pitch-belief",
+         "@id": "copies/rn154dd5329#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -175,10 +200,10 @@
        "strength": 0.3855,
        "n": 15105,
        "@annotation": {
-        "@id": "copies/rn154dd5329.jsonld#advance-annotation",
+        "@id": "copies/rn154dd5329#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rn154dd5329.jsonld#advance-belief",
+         "@id": "copies/rn154dd5329#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

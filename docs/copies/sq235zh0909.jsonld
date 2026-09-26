@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/sq235zh0909.jsonld",
+ "@id": "copies/sq235zh0909",
  "title": "Condon Roll 226, WM 612",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/sq235zh0909.jsonld#copy",
+   "@id": "copies/sq235zh0909#copy",
    "label": "Condon Roll 226",
    "identifier": "Stanford Libraries CONDON ROLL 226",
    "seeAlso": "https://purl.stanford.edu/sq235zh0909",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/sq235zh0909.jsonld#inscription",
+       "@id": "copies/sq235zh0909#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/sq235zh0909%2Fsq235zh0909_0001/3282,128734,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/sq235zh0909.jsonld#inscription-text",
-        "text": "[Wort] 19. 1. 09 [Wort]"
+        "@id": "copies/sq235zh0909#inscription-text",
+        "text": "[Wort] 19. 1. 09 [Wort]",
+        "@annotation": {
+         "@id": "copies/sq235zh0909#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/sq235zh0909#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/sq235zh0909#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink on ruled paper; a cursive word before the date and a second group after it, neither legible at this resolution. The month figure is small but has the same flagged form as the 1 of the day, so 1 rather than 7"
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Kopf",
       "sameAs": [],
-      "@id": "hands.jsonld#kopf",
+      "@id": "hands#kopf",
       "@annotation": {
-       "@id": "copies/sq235zh0909.jsonld#hand-annotation",
+       "@id": "copies/sq235zh0909#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/sq235zh0909.jsonld#hand-belief",
+        "@id": "copies/sq235zh0909#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/sq235zh0909.jsonld#inscription-text"
+           "copies/sq235zh0909#inscription-text"
           ],
           "note": "Read as \"Kopf\". The same signature as mz508vq7890 and wj177bx9196."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1909-01-19",
      "@annotation": {
-      "@id": "copies/sq235zh0909.jsonld#date-annotation",
+      "@id": "copies/sq235zh0909#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/sq235zh0909.jsonld#date-belief",
+       "@id": "copies/sq235zh0909#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/sq235zh0909.jsonld#inscription-text"
+          "copies/sq235zh0909#inscription-text"
          ],
-         "note": "ink on ruled paper; a cursive word before the date and a second group after it, neither legible at this resolution. The month figure is small but has the same flagged form as the 1 of the day, so 1 rather than 7"
+         "note": "\"19. 1. 09\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/sq235zh0909#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/sq235zh0909.jsonld#perforator",
+     "@id": "copies/sq235zh0909#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.3865,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/sq235zh0909.jsonld#punch-diameter-annotation",
+        "@id": "copies/sq235zh0909#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sq235zh0909.jsonld#punch-diameter-belief",
+         "@id": "copies/sq235zh0909#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.5,
        "n": 335,
        "@annotation": {
-        "@id": "copies/sq235zh0909.jsonld#chain-pitch-annotation",
+        "@id": "copies/sq235zh0909#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sq235zh0909.jsonld#chain-pitch-belief",
+         "@id": "copies/sq235zh0909#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.2056,
        "n": 9140,
        "@annotation": {
-        "@id": "copies/sq235zh0909.jsonld#advance-annotation",
+        "@id": "copies/sq235zh0909#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sq235zh0909.jsonld#advance-belief",
+         "@id": "copies/sq235zh0909#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/dz112ky5575.jsonld",
+ "@id": "copies/dz112ky5575",
  "title": "Condon Roll 578, WM 2312",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/dz112ky5575.jsonld#copy",
+   "@id": "copies/dz112ky5575#copy",
    "label": "Condon Roll 578",
    "identifier": "Stanford Libraries CONDON ROLL 578",
    "seeAlso": "https://purl.stanford.edu/dz112ky5575",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/dz112ky5575.jsonld#inscription",
+       "@id": "copies/dz112ky5575#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/dz112ky5575%2Fdz112ky5575_0001/3505,529399,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/dz112ky5575.jsonld#inscription-text",
-        "text": "8124"
+        "@id": "copies/dz112ky5575#inscription-text",
+        "text": "8124",
+        "@annotation": {
+         "@id": "copies/dz112ky5575#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/dz112ky5575#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/dz112ky5575#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, four figures run together under the paper edge, both panels agree. The 8 shows two closed bowls, the 1 is a bare slanted stroke, the third figure has the arched top and left-falling diagonal of a 2, and the last is a 4 written as a diagonal, a long crossbar and a stroke descending through it. Read as 8.1.24 with the separators dropped; a four-figure group can also be a roll number, but 8124 lies outside the Welte red numbering, so a date is the only sensible parse."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1924-01-08",
      "@annotation": {
-      "@id": "copies/dz112ky5575.jsonld#date-annotation",
+      "@id": "copies/dz112ky5575#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/dz112ky5575.jsonld#date-belief",
+       "@id": "copies/dz112ky5575#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/dz112ky5575.jsonld#inscription-text"
+          "copies/dz112ky5575#inscription-text"
          ],
-         "note": "pencil, four figures run together under the paper edge, both panels agree. The 8 shows two closed bowls, the 1 is a bare slanted stroke, the third figure has the arched top and left-falling diagonal of a 2, and the last is a 4 written as a diagonal, a long crossbar and a stroke descending through it. Read as 8.1.24 with the separators dropped; a four-figure group can also be a roll number, but 8124 lies outside the Welte red numbering, so a date is the only sensible parse."
+         "note": "The figures of \"8124\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/dz112ky5575#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/dz112ky5575.jsonld#perforator",
+     "@id": "copies/dz112ky5575#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.823,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/dz112ky5575.jsonld#punch-diameter-annotation",
+        "@id": "copies/dz112ky5575#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dz112ky5575.jsonld#punch-diameter-belief",
+         "@id": "copies/dz112ky5575#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.5665,
        "n": 422,
        "@annotation": {
-        "@id": "copies/dz112ky5575.jsonld#chain-pitch-annotation",
+        "@id": "copies/dz112ky5575#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dz112ky5575.jsonld#chain-pitch-belief",
+         "@id": "copies/dz112ky5575#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.3943,
        "n": 63479,
        "@annotation": {
-        "@id": "copies/dz112ky5575.jsonld#advance-annotation",
+        "@id": "copies/dz112ky5575#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dz112ky5575.jsonld#advance-belief",
+         "@id": "copies/dz112ky5575#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

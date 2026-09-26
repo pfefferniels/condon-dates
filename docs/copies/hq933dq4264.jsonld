@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hq933dq4264.jsonld",
+ "@id": "copies/hq933dq4264",
  "title": "Condon Roll 173, WM 449",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hq933dq4264.jsonld#copy",
+   "@id": "copies/hq933dq4264#copy",
    "label": "Condon Roll 173",
    "identifier": "Stanford Libraries CONDON ROLL 173",
    "seeAlso": "https://purl.stanford.edu/hq933dq4264",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hq933dq4264.jsonld#inscription",
+       "@id": "copies/hq933dq4264#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hq933dq4264%2Fhq933dq4264_0001/3302,166157,643,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hq933dq4264.jsonld#inscription-text",
-        "text": "M. Schäfer."
+        "@id": "copies/hq933dq4264#inscription-text",
+        "text": "M. Schäfer.",
+        "@annotation": {
+         "@id": "copies/hq933dq4264#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hq933dq4264#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hq933dq4264#inscription"
+            ],
+            "note": "No date was read in it, so its figures were not graded. Ink signature across the roll, no date; region 2 carries the printed English copyright notice (M. Welte & Sons, 'not to be reproduced in any form whatsoever, in whole or in part'); regions 3 and 4 show the colour target, the leader and a taped splice"
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "M. Schäfer",
       "sameAs": [],
-      "@id": "hands.jsonld#m-schaefer",
+      "@id": "hands#m-schaefer",
       "@annotation": {
-       "@id": "copies/hq933dq4264.jsonld#hand-annotation",
+       "@id": "copies/hq933dq4264#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/hq933dq4264.jsonld#hand-belief",
+        "@id": "copies/hq933dq4264#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/hq933dq4264.jsonld#inscription-text"
+           "copies/hq933dq4264#inscription-text"
           ],
           "note": "No name was read off it."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -108,17 +126,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hq933dq4264.jsonld#perforator",
+     "@id": "copies/hq933dq4264#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.867,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hq933dq4264.jsonld#punch-diameter-annotation",
+        "@id": "copies/hq933dq4264#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hq933dq4264.jsonld#punch-diameter-belief",
+         "@id": "copies/hq933dq4264#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -140,10 +158,10 @@
        "bridge": 0.8112,
        "n": 254,
        "@annotation": {
-        "@id": "copies/hq933dq4264.jsonld#chain-pitch-annotation",
+        "@id": "copies/hq933dq4264#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hq933dq4264.jsonld#chain-pitch-belief",
+         "@id": "copies/hq933dq4264#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -164,10 +182,10 @@
        "strength": 0.3156,
        "n": 10806,
        "@annotation": {
-        "@id": "copies/hq933dq4264.jsonld#advance-annotation",
+        "@id": "copies/hq933dq4264#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hq933dq4264.jsonld#advance-belief",
+         "@id": "copies/hq933dq4264#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

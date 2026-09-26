@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/qq244fh1388.jsonld",
+ "@id": "copies/qq244fh1388",
  "title": "Condon Roll 144, WM 669",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/qq244fh1388.jsonld#copy",
+   "@id": "copies/qq244fh1388#copy",
    "label": "Condon Roll 144",
    "identifier": "Stanford Libraries CONDON ROLL 144",
    "seeAlso": "https://purl.stanford.edu/qq244fh1388",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/qq244fh1388.jsonld#inscription",
+       "@id": "copies/qq244fh1388#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/qq244fh1388%2Fqq244fh1388_0001/3507,380197,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/qq244fh1388.jsonld#inscription-text",
-        "text": "No 669  16. 11. 08  E. Naumann"
+        "@id": "copies/qq244fh1388#inscription-text",
+        "text": "No 669  16. 11. 08  E. Naumann",
+        "@annotation": {
+         "@id": "copies/qq244fh1388#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/qq244fh1388#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/qq244fh1388#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink on ruled paper; the date is plain, the surname less so and could as well be Neumann"
+           }
+          ]
+         }
+        }
        }
       }
      ],
@@ -66,16 +84,16 @@
       "name": "E. Naumann",
       "sameAs": [],
       "@annotation": {
-       "@id": "copies/qq244fh1388.jsonld#hand-annotation",
+       "@id": "copies/qq244fh1388#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/qq244fh1388.jsonld#hand-belief",
+        "@id": "copies/qq244fh1388#hand-belief",
         "certainty": "possible",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/qq244fh1388.jsonld#inscription-text"
+           "copies/qq244fh1388#inscription-text"
           ],
           "note": "Read as \"E. Naumann\"."
          }
@@ -100,18 +118,25 @@
     "date": {
      "within": "1908-11-16",
      "@annotation": {
-      "@id": "copies/qq244fh1388.jsonld#date-annotation",
+      "@id": "copies/qq244fh1388#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/qq244fh1388.jsonld#date-belief",
+       "@id": "copies/qq244fh1388#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/qq244fh1388.jsonld#inscription-text"
+          "copies/qq244fh1388#inscription-text"
          ],
-         "note": "ink on ruled paper; the date is plain, the surname less so and could as well be Neumann"
+         "note": "\"16. 11. 08\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/qq244fh1388#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -119,17 +144,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/qq244fh1388.jsonld#perforator",
+     "@id": "copies/qq244fh1388#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0785,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/qq244fh1388.jsonld#punch-diameter-annotation",
+        "@id": "copies/qq244fh1388#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qq244fh1388.jsonld#punch-diameter-belief",
+         "@id": "copies/qq244fh1388#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -151,10 +176,10 @@
        "bridge": 0.6495,
        "n": 292,
        "@annotation": {
-        "@id": "copies/qq244fh1388.jsonld#chain-pitch-annotation",
+        "@id": "copies/qq244fh1388#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qq244fh1388.jsonld#chain-pitch-belief",
+         "@id": "copies/qq244fh1388#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -175,10 +200,10 @@
        "strength": 0.1276,
        "n": 26076,
        "@annotation": {
-        "@id": "copies/qq244fh1388.jsonld#advance-annotation",
+        "@id": "copies/qq244fh1388#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qq244fh1388.jsonld#advance-belief",
+         "@id": "copies/qq244fh1388#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ds710xd1794.jsonld",
+ "@id": "copies/ds710xd1794",
  "title": "Condon Roll 520, WM 1773",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ds710xd1794.jsonld#copy",
+   "@id": "copies/ds710xd1794#copy",
    "label": "Condon Roll 520",
    "identifier": "Stanford Libraries CONDON ROLL 520",
    "seeAlso": "https://purl.stanford.edu/ds710xd1794",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ds710xd1794.jsonld#inscription",
+       "@id": "copies/ds710xd1794#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ds710xd1794%2Fds710xd1794_0001/3508,420445,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ds710xd1794.jsonld#inscription-text",
-        "text": "23222"
+        "@id": "copies/ds710xd1794#inscription-text",
+        "text": "23222",
+        "@annotation": {
+         "@id": "copies/ds710xd1794#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ds710xd1794#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ds710xd1794#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, no separators: 23 2 22. A second, smaller mark stands to the right of the figures in the same crop and is not legible. Region 2 carries the pencilled roll number 1773. jb107tz1859 (roll 1772) carries the same five figures."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-02-23",
      "@annotation": {
-      "@id": "copies/ds710xd1794.jsonld#date-annotation",
+      "@id": "copies/ds710xd1794#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ds710xd1794.jsonld#date-belief",
+       "@id": "copies/ds710xd1794#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ds710xd1794.jsonld#inscription-text"
+          "copies/ds710xd1794#inscription-text"
          ],
-         "note": "Pencil, no separators: 23 2 22. A second, smaller mark stands to the right of the figures in the same crop and is not legible. Region 2 carries the pencilled roll number 1773. jb107tz1859 (roll 1772) carries the same five figures."
+         "note": "The figures of \"23222\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ds710xd1794#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ds710xd1794.jsonld#perforator",
+     "@id": "copies/ds710xd1794#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7647,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ds710xd1794.jsonld#punch-diameter-annotation",
+        "@id": "copies/ds710xd1794#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ds710xd1794.jsonld#punch-diameter-belief",
+         "@id": "copies/ds710xd1794#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7055,
        "n": 470,
        "@annotation": {
-        "@id": "copies/ds710xd1794.jsonld#chain-pitch-annotation",
+        "@id": "copies/ds710xd1794#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ds710xd1794.jsonld#chain-pitch-belief",
+         "@id": "copies/ds710xd1794#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6546,
        "n": 32879,
        "@annotation": {
-        "@id": "copies/ds710xd1794.jsonld#advance-annotation",
+        "@id": "copies/ds710xd1794#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ds710xd1794.jsonld#advance-belief",
+         "@id": "copies/ds710xd1794#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

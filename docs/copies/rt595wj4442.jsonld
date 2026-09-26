@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rt595wj4442.jsonld",
+ "@id": "copies/rt595wj4442",
  "title": "Condon Roll 157, WM 28",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rt595wj4442.jsonld#copy",
+   "@id": "copies/rt595wj4442#copy",
    "label": "Condon Roll 157",
    "identifier": "Stanford Libraries CONDON ROLL 157",
    "seeAlso": "https://purl.stanford.edu/rt595wj4442",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rt595wj4442.jsonld#inscription",
+       "@id": "copies/rt595wj4442#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rt595wj4442%2Frt595wj4442_0001/3490,509728,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rt595wj4442.jsonld#inscription-text",
-        "text": "27. 4. 14"
+        "@id": "copies/rt595wj4442#inscription-text",
+        "text": "27. 4. 14",
+        "@annotation": {
+         "@id": "copies/rt595wj4442#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rt595wj4442#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rt595wj4442#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Read here at magnification after the first reader left it low. The last figure carries the same crossed form as the month's 4, so the year is 14; the day could be read 24 with the month 7, which does not move the year."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1914-04-27",
      "@annotation": {
-      "@id": "copies/rt595wj4442.jsonld#date-annotation",
+      "@id": "copies/rt595wj4442#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rt595wj4442.jsonld#date-belief",
+       "@id": "copies/rt595wj4442#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rt595wj4442.jsonld#inscription-text"
+          "copies/rt595wj4442#inscription-text"
          ],
-         "note": "read here at magnification after the first reader left it low. The last figure carries the same crossed form as the month's 4, so the year is 14; the day could be read 24 with the month 7, which does not move the year."
+         "note": "\"27. 4. 14\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rt595wj4442#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rt595wj4442.jsonld#perforator",
+     "@id": "copies/rt595wj4442#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8307,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rt595wj4442.jsonld#punch-diameter-annotation",
+        "@id": "copies/rt595wj4442#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rt595wj4442.jsonld#punch-diameter-belief",
+         "@id": "copies/rt595wj4442#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5672,
        "n": 304,
        "@annotation": {
-        "@id": "copies/rt595wj4442.jsonld#chain-pitch-annotation",
+        "@id": "copies/rt595wj4442#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rt595wj4442.jsonld#chain-pitch-belief",
+         "@id": "copies/rt595wj4442#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.52,
        "n": 46912,
        "@annotation": {
-        "@id": "copies/rt595wj4442.jsonld#advance-annotation",
+        "@id": "copies/rt595wj4442#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rt595wj4442.jsonld#advance-belief",
+         "@id": "copies/rt595wj4442#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

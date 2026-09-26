@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ng103jj1150.jsonld",
+ "@id": "copies/ng103jj1150",
  "title": "Condon Roll 215, WM 570",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ng103jj1150.jsonld#copy",
+   "@id": "copies/ng103jj1150#copy",
    "label": "Condon Roll 215",
    "identifier": "Stanford Libraries CONDON ROLL 215",
    "seeAlso": "https://purl.stanford.edu/ng103jj1150",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ng103jj1150.jsonld#inscription",
+       "@id": "copies/ng103jj1150#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ng103jj1150%2Fng103jj1150_0001/3489,186365,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ng103jj1150.jsonld#inscription-text",
-        "text": "5700.  4. 9. 13."
+        "@id": "copies/ng103jj1150#inscription-text",
+        "text": "5700.  4. 9. 13.",
+        "@annotation": {
+         "@id": "copies/ng103jj1150#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ng103jj1150#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ng103jj1150#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. The date is restored, having been withdrawn here earlier. Three readers gave 4.9.13 and one found the year cut; read again with the crop lengthened along the roll rather than widened across it, the line is whole. The month carries a descender, so 9 and not 8, and the year's second figure is a rounded double bowl plainly unlike the flat-topped 5 that opens the number 5700 a few centimetres away, so 3. What defeated the earlier crops was their length, not their width."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1913-09-04",
      "@annotation": {
-      "@id": "copies/ng103jj1150.jsonld#date-annotation",
+      "@id": "copies/ng103jj1150#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ng103jj1150.jsonld#date-belief",
+       "@id": "copies/ng103jj1150#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ng103jj1150.jsonld#inscription-text"
+          "copies/ng103jj1150#inscription-text"
          ],
-         "note": "the date is restored, having been withdrawn here earlier. Three readers gave 4.9.13 and one found the year cut; read again with the crop lengthened along the roll rather than widened across it, the line is whole. The month carries a descender, so 9 and not 8, and the year's second figure is a rounded double bowl plainly unlike the flat-topped 5 that opens the number 5700 a few centimetres away, so 3. What defeated the earlier crops was their length, not their width."
+         "note": "\"4. 9. 13.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ng103jj1150#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ng103jj1150.jsonld#perforator",
+     "@id": "copies/ng103jj1150#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1454,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ng103jj1150.jsonld#punch-diameter-annotation",
+        "@id": "copies/ng103jj1150#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ng103jj1150.jsonld#punch-diameter-belief",
+         "@id": "copies/ng103jj1150#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7239,
        "n": 261,
        "@annotation": {
-        "@id": "copies/ng103jj1150.jsonld#chain-pitch-annotation",
+        "@id": "copies/ng103jj1150#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ng103jj1150.jsonld#chain-pitch-belief",
+         "@id": "copies/ng103jj1150#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.204,
        "n": 10869,
        "@annotation": {
-        "@id": "copies/ng103jj1150.jsonld#advance-annotation",
+        "@id": "copies/ng103jj1150#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ng103jj1150.jsonld#advance-belief",
+         "@id": "copies/ng103jj1150#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

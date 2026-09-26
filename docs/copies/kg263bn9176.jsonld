@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/kg263bn9176.jsonld",
+ "@id": "copies/kg263bn9176",
  "title": "Condon Roll 118, WM 373",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/kg263bn9176.jsonld#copy",
+   "@id": "copies/kg263bn9176#copy",
    "label": "Condon Roll 118",
    "identifier": "Stanford Libraries CONDON ROLL 118",
    "seeAlso": "https://purl.stanford.edu/kg263bn9176",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/kg263bn9176.jsonld#inscription",
+       "@id": "copies/kg263bn9176#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/kg263bn9176%2Fkg263bn9176_0001/3498,533652,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/kg263bn9176.jsonld#inscription-text",
-        "text": "343.  19. 10. 12"
+        "@id": "copies/kg263bn9176#inscription-text",
+        "text": "343.  19. 10. 12",
+        "@annotation": {
+         "@id": "copies/kg263bn9176#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/kg263bn9176#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/kg263bn9176#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, read from the lower (180-degree) panel. Day, month and year each closed by a point. The middle figure of the roll number is an open two-stroke 4, so the number reads 343. No name or initials in the crop."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1912-10-19",
      "@annotation": {
-      "@id": "copies/kg263bn9176.jsonld#date-annotation",
+      "@id": "copies/kg263bn9176#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/kg263bn9176.jsonld#date-belief",
+       "@id": "copies/kg263bn9176#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/kg263bn9176.jsonld#inscription-text"
+          "copies/kg263bn9176#inscription-text"
          ],
-         "note": "Pencil, read from the lower (180-degree) panel. Day, month and year each closed by a point. The middle figure of the roll number is an open two-stroke 4, so the number reads 343. No name or initials in the crop."
+         "note": "\"19. 10. 12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/kg263bn9176#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/kg263bn9176.jsonld#perforator",
+     "@id": "copies/kg263bn9176#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1927,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/kg263bn9176.jsonld#punch-diameter-annotation",
+        "@id": "copies/kg263bn9176#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kg263bn9176.jsonld#punch-diameter-belief",
+         "@id": "copies/kg263bn9176#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6868,
        "n": 194,
        "@annotation": {
-        "@id": "copies/kg263bn9176.jsonld#chain-pitch-annotation",
+        "@id": "copies/kg263bn9176#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kg263bn9176.jsonld#chain-pitch-belief",
+         "@id": "copies/kg263bn9176#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5405,
        "n": 28144,
        "@annotation": {
-        "@id": "copies/kg263bn9176.jsonld#advance-annotation",
+        "@id": "copies/kg263bn9176#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kg263bn9176.jsonld#advance-belief",
+         "@id": "copies/kg263bn9176#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

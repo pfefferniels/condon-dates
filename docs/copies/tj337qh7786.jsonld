@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/tj337qh7786.jsonld",
+ "@id": "copies/tj337qh7786",
  "title": "Condon Roll 348, WM 1211",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/tj337qh7786.jsonld#copy",
+   "@id": "copies/tj337qh7786#copy",
    "label": "Condon Roll 348",
    "identifier": "Stanford Libraries CONDON ROLL 348",
    "seeAlso": "https://purl.stanford.edu/tj337qh7786",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/tj337qh7786.jsonld#inscription",
+       "@id": "copies/tj337qh7786#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/tj337qh7786%2Ftj337qh7786_0001/3475,77556,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/tj337qh7786.jsonld#inscription-text",
-        "text": "1211. f. Schiff[..], 21. 5. 10."
+        "@id": "copies/tj337qh7786#inscription-text",
+        "text": "1211. f. Schiff[..], 21. 5. 10.",
+        "@annotation": {
+         "@id": "copies/tj337qh7786#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/tj337qh7786#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/tj337qh7786#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, one sloping line. The date is plain: 21, 5 and a 1 with a narrow oval 0. Between the number and the name stands a single abbreviated letter with a descender and a crossbar, read as f. The name opens plainly Schiff and closes with one or two more letters, perhaps l or h, and a comma, which I cannot letter out."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -67,16 +85,16 @@
       "name": "Schiffh[..]",
       "sameAs": [],
       "@annotation": {
-       "@id": "copies/tj337qh7786.jsonld#hand-annotation",
+       "@id": "copies/tj337qh7786#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/tj337qh7786.jsonld#hand-belief",
+        "@id": "copies/tj337qh7786#hand-belief",
         "certainty": "possible",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/tj337qh7786.jsonld#inscription-text"
+           "copies/tj337qh7786#inscription-text"
           ],
           "note": "Read as \"Schiff[..]\"."
          }
@@ -101,18 +119,25 @@
     "date": {
      "within": "1910-05-21",
      "@annotation": {
-      "@id": "copies/tj337qh7786.jsonld#date-annotation",
+      "@id": "copies/tj337qh7786#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/tj337qh7786.jsonld#date-belief",
+       "@id": "copies/tj337qh7786#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/tj337qh7786.jsonld#inscription-text"
+          "copies/tj337qh7786#inscription-text"
          ],
-         "note": "Ink, one sloping line. The date is plain: 21, 5 and a 1 with a narrow oval 0. Between the number and the name stands a single abbreviated letter with a descender and a crossbar, read as f. The name opens plainly Schiff and closes with one or two more letters, perhaps l or h, and a comma, which I cannot letter out."
+         "note": "\"21. 5. 10.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/tj337qh7786#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -120,17 +145,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/tj337qh7786.jsonld#perforator",
+     "@id": "copies/tj337qh7786#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1394,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/tj337qh7786.jsonld#punch-diameter-annotation",
+        "@id": "copies/tj337qh7786#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tj337qh7786.jsonld#punch-diameter-belief",
+         "@id": "copies/tj337qh7786#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -152,10 +177,10 @@
        "bridge": 0.8085,
        "n": 108,
        "@annotation": {
-        "@id": "copies/tj337qh7786.jsonld#chain-pitch-annotation",
+        "@id": "copies/tj337qh7786#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tj337qh7786.jsonld#chain-pitch-belief",
+         "@id": "copies/tj337qh7786#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -176,10 +201,10 @@
        "strength": 0.4472,
        "n": 2471,
        "@annotation": {
-        "@id": "copies/tj337qh7786.jsonld#advance-annotation",
+        "@id": "copies/tj337qh7786#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tj337qh7786.jsonld#advance-belief",
+         "@id": "copies/tj337qh7786#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

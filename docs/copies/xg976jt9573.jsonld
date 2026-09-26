@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xg976jt9573.jsonld",
+ "@id": "copies/xg976jt9573",
  "title": "Condon Roll 936, WM 5521",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xg976jt9573.jsonld#copy",
+   "@id": "copies/xg976jt9573#copy",
    "label": "Condon Roll 936",
    "identifier": "Stanford Libraries CONDON ROLL 936",
    "seeAlso": "https://purl.stanford.edu/xg976jt9573",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xg976jt9573.jsonld#inscription",
+       "@id": "copies/xg976jt9573#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xg976jt9573%2Fxg976jt9573_0001/3505,207441,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xg976jt9573.jsonld#inscription-text",
-        "text": "141925"
+        "@id": "copies/xg976jt9573#inscription-text",
+        "text": "141925",
+        "@annotation": {
+         "@id": "copies/xg976jt9573#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xg976jt9573#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xg976jt9573#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Ink, upright in the lower panel, a steeply right-leaning hand; read after shearing the line upright. Six figures, evenly spaced and without separators: 1, 4, 1, 9, 2, 5. The 9 is a closed loop with a plain descender, distinct from the 2 beside it, which carries the usual base stroke. Of the possible groupings only 1 | 4 | 1925 gives a date, so 1 April 1925; 14 | 19 | 25 would need a nineteenth month. The 4 is the least certain figure. Crop 2 carries a pencilled four-figure number, 5571 or 5521, its third figure crossed like a 7; crop 3 shows the printed label, WELTE-MIGNON No. 5521, 'My Isle of Golden Dreams', Waltz, Walter Blaufuss, played by Henry Dark. Crop 4 not needed."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1925-04-01",
      "@annotation": {
-      "@id": "copies/xg976jt9573.jsonld#date-annotation",
+      "@id": "copies/xg976jt9573#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/xg976jt9573.jsonld#date-belief",
+       "@id": "copies/xg976jt9573#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/xg976jt9573.jsonld#inscription-text"
+          "copies/xg976jt9573#inscription-text"
          ],
-         "note": "ink, upright in the lower panel, a steeply right-leaning hand; read after shearing the line upright. Six figures, evenly spaced and without separators: 1, 4, 1, 9, 2, 5. The 9 is a closed loop with a plain descender, distinct from the 2 beside it, which carries the usual base stroke. Of the possible groupings only 1 | 4 | 1925 gives a date, so 1 April 1925; 14 | 19 | 25 would need a nineteenth month. The 4 is the least certain figure. Crop 2 carries a pencilled four-figure number, 5571 or 5521, its third figure crossed like a 7; crop 3 shows the printed label, WELTE-MIGNON No. 5521, 'My Isle of Golden Dreams', Waltz, Walter Blaufuss, played by Henry Dark. Crop 4 not needed."
+         "note": "The figures of \"141925\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/xg976jt9573#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xg976jt9573.jsonld#perforator",
+     "@id": "copies/xg976jt9573#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8518,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xg976jt9573.jsonld#punch-diameter-annotation",
+        "@id": "copies/xg976jt9573#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xg976jt9573.jsonld#punch-diameter-belief",
+         "@id": "copies/xg976jt9573#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.5204,
        "n": 254,
        "@annotation": {
-        "@id": "copies/xg976jt9573.jsonld#chain-pitch-annotation",
+        "@id": "copies/xg976jt9573#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xg976jt9573.jsonld#chain-pitch-belief",
+         "@id": "copies/xg976jt9573#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6656,
        "n": 12670,
        "@annotation": {
-        "@id": "copies/xg976jt9573.jsonld#advance-annotation",
+        "@id": "copies/xg976jt9573#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xg976jt9573.jsonld#advance-belief",
+         "@id": "copies/xg976jt9573#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

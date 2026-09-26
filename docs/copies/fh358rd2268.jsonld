@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/fh358rd2268.jsonld",
+ "@id": "copies/fh358rd2268",
  "title": "Condon Roll 621, WM 2586",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/fh358rd2268.jsonld#copy",
+   "@id": "copies/fh358rd2268#copy",
    "label": "Condon Roll 621",
    "identifier": "Stanford Libraries CONDON ROLL 621",
    "seeAlso": "https://purl.stanford.edu/fh358rd2268",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/fh358rd2268.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/fh358rd2268#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 30442.19,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/fh358rd2268%2Ffh358rd2268_0001/3350,359853,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/fh358rd2268.jsonld#inscription-text",
-        "text": "18225"
+        "@id": "copies/fh358rd2268#inscription-text",
+        "text": "18225",
+        "@annotation": {
+         "@id": "copies/fh358rd2268#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/fh358rd2268#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/fh358rd2268#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Crop 1 carries a stamp in printer's type, every figure plain: a vertical rule, then 1 8 2 2 5, then a block of three horizontal rules. Read as 18.2.25 on the convention that separators are dropped, which is the only valid date parse of the five figures. Low confidence because the doubt is not in the figures but in the kind of mark: set in type between rules, it could equally be a production or serial number rather than a punch date, so roll_number left null rather than claimed either way. Crop 3 has pencil at the very top edge of the scanned strip, '25' then a two-figure group, the upper half of every figure cut off by the edge in both panels, so it cannot be read and is not used here. Crops 2 and 4 hold only perforations and damp spots."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1925-02-18",
      "@annotation": {
-      "@id": "copies/fh358rd2268.jsonld#date-annotation",
+      "@id": "copies/fh358rd2268#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/fh358rd2268.jsonld#date-belief",
+       "@id": "copies/fh358rd2268#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/fh358rd2268.jsonld#inscription-text"
+          "copies/fh358rd2268#inscription-text"
          ],
-         "note": "Crop 1 carries a stamp in printer's type, every figure plain: a vertical rule, then 1 8 2 2 5, then a block of three horizontal rules. Read as 18.2.25 on the convention that separators are dropped, which is the only valid date parse of the five figures. Low confidence because the doubt is not in the figures but in the kind of mark: set in type between rules, it could equally be a production or serial number rather than a punch date, so roll_number left null rather than claimed either way. Crop 3 has pencil at the very top edge of the scanned strip, '25' then a two-figure group, the upper half of every figure cut off by the edge in both panels, so it cannot be read and is not used here. Crops 2 and 4 hold only perforations and damp spots."
+         "note": "The figures of \"18225\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/fh358rd2268#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/fh358rd2268.jsonld#perforator",
+     "@id": "copies/fh358rd2268#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7156,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/fh358rd2268.jsonld#punch-diameter-annotation",
+        "@id": "copies/fh358rd2268#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fh358rd2268.jsonld#punch-diameter-belief",
+         "@id": "copies/fh358rd2268#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.762,
        "n": 371,
        "@annotation": {
-        "@id": "copies/fh358rd2268.jsonld#chain-pitch-annotation",
+        "@id": "copies/fh358rd2268#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fh358rd2268.jsonld#chain-pitch-belief",
+         "@id": "copies/fh358rd2268#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6228,
        "n": 29501,
        "@annotation": {
-        "@id": "copies/fh358rd2268.jsonld#advance-annotation",
+        "@id": "copies/fh358rd2268#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fh358rd2268.jsonld#advance-belief",
+         "@id": "copies/fh358rd2268#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

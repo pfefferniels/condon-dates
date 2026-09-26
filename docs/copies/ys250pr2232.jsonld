@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ys250pr2232.jsonld",
+ "@id": "copies/ys250pr2232",
  "title": "Condon Roll 913, WM 5736",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ys250pr2232.jsonld#copy",
+   "@id": "copies/ys250pr2232#copy",
    "label": "Condon Roll 913",
    "identifier": "Stanford Libraries CONDON ROLL 913",
    "seeAlso": "https://purl.stanford.edu/ys250pr2232",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ys250pr2232.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/ys250pr2232#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 11019.92,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ys250pr2232%2Fys250pr2232_0001/3474,130265,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ys250pr2232.jsonld#inscription-text",
-        "text": "211125"
+        "@id": "copies/ys250pr2232#inscription-text",
+        "text": "211125",
+        "@annotation": {
+         "@id": "copies/ys250pr2232#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ys250pr2232#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ys250pr2232#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Stamped in a lighter, unevenly inked face, upright in the upper panel. The first and fifth figures are the same character, a closed curl with a tail running down to the left and no base stroke, which taken alone would read as a 9; read as 2, since 911195 gives neither a day nor a year while 211125 gives 21.11.25. The three 1s and the closing 5 are plain. Crop 2 carries a pencilled 5436, crop 3 only a crease."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1925-11-21",
      "@annotation": {
-      "@id": "copies/ys250pr2232.jsonld#date-annotation",
+      "@id": "copies/ys250pr2232#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ys250pr2232.jsonld#date-belief",
+       "@id": "copies/ys250pr2232#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ys250pr2232.jsonld#inscription-text"
+          "copies/ys250pr2232#inscription-text"
          ],
-         "note": "stamped in a lighter, unevenly inked face, upright in the upper panel. The first and fifth figures are the same character, a closed curl with a tail running down to the left and no base stroke, which taken alone would read as a 9; read as 2, since 911195 gives neither a day nor a year while 211125 gives 21.11.25. The three 1s and the closing 5 are plain. Crop 2 carries a pencilled 5436, crop 3 only a crease."
+         "note": "The figures of \"211125\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ys250pr2232#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ys250pr2232.jsonld#perforator",
+     "@id": "copies/ys250pr2232#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6234,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ys250pr2232.jsonld#punch-diameter-annotation",
+        "@id": "copies/ys250pr2232#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ys250pr2232.jsonld#punch-diameter-belief",
+         "@id": "copies/ys250pr2232#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7403,
        "n": 292,
        "@annotation": {
-        "@id": "copies/ys250pr2232.jsonld#chain-pitch-annotation",
+        "@id": "copies/ys250pr2232#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ys250pr2232.jsonld#chain-pitch-belief",
+         "@id": "copies/ys250pr2232#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4994,
        "n": 7309,
        "@annotation": {
-        "@id": "copies/ys250pr2232.jsonld#advance-annotation",
+        "@id": "copies/ys250pr2232#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ys250pr2232.jsonld#advance-belief",
+         "@id": "copies/ys250pr2232#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

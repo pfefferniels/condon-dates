@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hh095vc8073.jsonld",
+ "@id": "copies/hh095vc8073",
  "title": "Condon Roll 138, WM 662",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hh095vc8073.jsonld#copy",
+   "@id": "copies/hh095vc8073#copy",
    "label": "Condon Roll 138",
    "identifier": "Stanford Libraries CONDON ROLL 138",
    "seeAlso": "https://purl.stanford.edu/hh095vc8073",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hh095vc8073.jsonld#inscription",
+       "@id": "copies/hh095vc8073#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hh095vc8073%2Fhh095vc8073_0001/3507,538115,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hh095vc8073.jsonld#inscription-text",
-        "text": "2424"
+        "@id": "copies/hh095vc8073#inscription-text",
+        "text": "2424",
+        "@annotation": {
+         "@id": "copies/hh095vc8073#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hh095vc8073#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hh095vc8073#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Four figures, no separators and nothing else on the line. Read as 2.4.24 on the corpus convention, but 24.2.4 cannot be excluded from the image alone. Region 5 carries 662 in pencil and region 4 a later felt-pen note, 'Play the other 662'"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-04-02",
      "@annotation": {
-      "@id": "copies/hh095vc8073.jsonld#date-annotation",
+      "@id": "copies/hh095vc8073#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hh095vc8073.jsonld#date-belief",
+       "@id": "copies/hh095vc8073#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hh095vc8073.jsonld#inscription-text"
+          "copies/hh095vc8073#inscription-text"
          ],
-         "note": "four figures, no separators and nothing else on the line. Read as 2.4.24 on the corpus convention, but 24.2.4 cannot be excluded from the image alone. Region 5 carries 662 in pencil and region 4 a later felt-pen note, 'Play the other 662'"
+         "note": "The figures of \"2424\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hh095vc8073#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hh095vc8073.jsonld#perforator",
+     "@id": "copies/hh095vc8073#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7012,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hh095vc8073.jsonld#punch-diameter-annotation",
+        "@id": "copies/hh095vc8073#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hh095vc8073.jsonld#punch-diameter-belief",
+         "@id": "copies/hh095vc8073#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7013,
        "n": 432,
        "@annotation": {
-        "@id": "copies/hh095vc8073.jsonld#chain-pitch-annotation",
+        "@id": "copies/hh095vc8073#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hh095vc8073.jsonld#chain-pitch-belief",
+         "@id": "copies/hh095vc8073#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5405,
        "n": 45020,
        "@annotation": {
-        "@id": "copies/hh095vc8073.jsonld#advance-annotation",
+        "@id": "copies/hh095vc8073#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hh095vc8073.jsonld#advance-belief",
+         "@id": "copies/hh095vc8073#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

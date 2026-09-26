@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ks452px2704.jsonld",
+ "@id": "copies/ks452px2704",
  "title": "Condon Roll 577, WM 2314",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ks452px2704.jsonld#copy",
+   "@id": "copies/ks452px2704#copy",
    "label": "Condon Roll 577",
    "identifier": "Stanford Libraries CONDON ROLL 577",
    "seeAlso": "https://purl.stanford.edu/ks452px2704",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ks452px2704.jsonld#inscription",
+       "@id": "copies/ks452px2704#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ks452px2704%2Fks452px2704_0001/3502,426918,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ks452px2704.jsonld#inscription-text",
-        "text": "21124"
+        "@id": "copies/ks452px2704#inscription-text",
+        "text": "21124",
+        "@annotation": {
+         "@id": "copies/ks452px2704#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ks452px2704#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ks452px2704#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, five digits run together, no separators. Letter spacing after deslanting groups them 21|1|24; the alternative parse 2.11.24 cannot be ruled out from the figures alone"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1924-01-21",
      "@annotation": {
-      "@id": "copies/ks452px2704.jsonld#date-annotation",
+      "@id": "copies/ks452px2704#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ks452px2704.jsonld#date-belief",
+       "@id": "copies/ks452px2704#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ks452px2704.jsonld#inscription-text"
+          "copies/ks452px2704#inscription-text"
          ],
-         "note": "pencil, five digits run together, no separators. Letter spacing after deslanting groups them 21|1|24; the alternative parse 2.11.24 cannot be ruled out from the figures alone"
+         "note": "The figures of \"21124\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ks452px2704#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ks452px2704.jsonld#perforator",
+     "@id": "copies/ks452px2704#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6699,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ks452px2704.jsonld#punch-diameter-annotation",
+        "@id": "copies/ks452px2704#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ks452px2704.jsonld#punch-diameter-belief",
+         "@id": "copies/ks452px2704#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.714,
        "n": 348,
        "@annotation": {
-        "@id": "copies/ks452px2704.jsonld#chain-pitch-annotation",
+        "@id": "copies/ks452px2704#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ks452px2704.jsonld#chain-pitch-belief",
+         "@id": "copies/ks452px2704#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4217,
        "n": 36026,
        "@annotation": {
-        "@id": "copies/ks452px2704.jsonld#advance-annotation",
+        "@id": "copies/ks452px2704#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ks452px2704.jsonld#advance-belief",
+         "@id": "copies/ks452px2704#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

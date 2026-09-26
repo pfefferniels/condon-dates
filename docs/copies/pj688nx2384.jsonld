@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/pj688nx2384.jsonld",
+ "@id": "copies/pj688nx2384",
  "title": "Condon Roll 580, WM 1464",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/pj688nx2384.jsonld#copy",
+   "@id": "copies/pj688nx2384#copy",
    "label": "Condon Roll 580",
    "identifier": "Stanford Libraries CONDON ROLL 580",
    "seeAlso": "https://purl.stanford.edu/pj688nx2384",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/pj688nx2384.jsonld#inscription",
+       "@id": "copies/pj688nx2384#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/pj688nx2384%2Fpj688nx2384_0001/3486,449931,460,1980/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/pj688nx2384.jsonld#inscription-text",
-        "text": "1464.  [name]  4. 11. 09."
+        "@id": "copies/pj688nx2384#inscription-text",
+        "text": "1464.  [name]  4. 11. 09.",
+        "@annotation": {
+         "@id": "copies/pj688nx2384#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/pj688nx2384#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/pj688nx2384#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Read here at magnification after the first reader gave 1904. The year's second figure is the rounded 9 of this hand, not the angular crossed 4 that opens the date; 1909 also restores the catalogue-number ordering, which 1904 broke."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Schlegel",
       "sameAs": [],
-      "@id": "hands.jsonld#schlegel",
+      "@id": "hands#schlegel",
       "@annotation": {
-       "@id": "copies/pj688nx2384.jsonld#hand-annotation",
+       "@id": "copies/pj688nx2384#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/pj688nx2384.jsonld#hand-belief",
+        "@id": "copies/pj688nx2384#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/pj688nx2384.jsonld#inscription-text"
+           "copies/pj688nx2384#inscription-text"
           ],
           "note": "No name was read off it."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1909-11-04",
      "@annotation": {
-      "@id": "copies/pj688nx2384.jsonld#date-annotation",
+      "@id": "copies/pj688nx2384#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/pj688nx2384.jsonld#date-belief",
+       "@id": "copies/pj688nx2384#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/pj688nx2384.jsonld#inscription-text"
+          "copies/pj688nx2384#inscription-text"
          ],
-         "note": "read here at magnification after the first reader gave 1904. The year's second figure is the rounded 9 of this hand, not the angular crossed 4 that opens the date; 1909 also restores the catalogue-number ordering, which 1904 broke."
+         "note": "\"4. 11. 09.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/pj688nx2384#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/pj688nx2384.jsonld#perforator",
+     "@id": "copies/pj688nx2384#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1479,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/pj688nx2384.jsonld#punch-diameter-annotation",
+        "@id": "copies/pj688nx2384#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pj688nx2384.jsonld#punch-diameter-belief",
+         "@id": "copies/pj688nx2384#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.7422,
        "n": 282,
        "@annotation": {
-        "@id": "copies/pj688nx2384.jsonld#chain-pitch-annotation",
+        "@id": "copies/pj688nx2384#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pj688nx2384.jsonld#chain-pitch-belief",
+         "@id": "copies/pj688nx2384#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.8226,
        "n": 30721,
        "@annotation": {
-        "@id": "copies/pj688nx2384.jsonld#advance-annotation",
+        "@id": "copies/pj688nx2384#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pj688nx2384.jsonld#advance-belief",
+         "@id": "copies/pj688nx2384#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

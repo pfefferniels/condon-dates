@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/np204br1080.jsonld",
+ "@id": "copies/np204br1080",
  "title": "Condon Roll 585, WM 2844",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/np204br1080.jsonld#copy",
+   "@id": "copies/np204br1080#copy",
    "label": "Condon Roll 585",
    "identifier": "Stanford Libraries CONDON ROLL 585",
    "seeAlso": "https://purl.stanford.edu/np204br1080",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/np204br1080.jsonld#inscription",
+       "@id": "copies/np204br1080#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/np204br1080%2Fnp204br1080_0001/3544,520912,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/np204br1080.jsonld#inscription-text",
-        "text": "13423"
+        "@id": "copies/np204br1080#inscription-text",
+        "text": "13423",
+        "@annotation": {
+         "@id": "copies/np204br1080#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/np204br1080#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/np204br1080#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil on pale buff paper, read at the crop turned 180 degrees; near the end of the roll (521k of 532k px), at the treble edge. Five figures, every one plain, with a faint point between the 4 and the 2. No roll number and no name in the crop."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1923-04-13",
      "@annotation": {
-      "@id": "copies/np204br1080.jsonld#date-annotation",
+      "@id": "copies/np204br1080#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/np204br1080.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/np204br1080#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/np204br1080.jsonld#inscription-text"
+          "copies/np204br1080#inscription-text"
          ],
-         "note": "pencil on pale buff paper, read at the crop turned 180 degrees; near the end of the roll (521k of 532k px), at the treble edge. Five figures, every one plain, with a faint point between the 4 and the 2. No roll number and no name in the crop."
+         "note": "The figures of \"13423\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/np204br1080#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/np204br1080.jsonld#perforator",
+     "@id": "copies/np204br1080#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6809,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/np204br1080.jsonld#punch-diameter-annotation",
+        "@id": "copies/np204br1080#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/np204br1080.jsonld#punch-diameter-belief",
+         "@id": "copies/np204br1080#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.656,
        "n": 328,
        "@annotation": {
-        "@id": "copies/np204br1080.jsonld#chain-pitch-annotation",
+        "@id": "copies/np204br1080#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/np204br1080.jsonld#chain-pitch-belief",
+         "@id": "copies/np204br1080#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5651,
        "n": 29202,
        "@annotation": {
-        "@id": "copies/np204br1080.jsonld#advance-annotation",
+        "@id": "copies/np204br1080#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/np204br1080.jsonld#advance-belief",
+         "@id": "copies/np204br1080#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

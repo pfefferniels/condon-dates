@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ty610zx2946.jsonld",
+ "@id": "copies/ty610zx2946",
  "title": "Condon Roll 130, WM 416",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ty610zx2946.jsonld#copy",
+   "@id": "copies/ty610zx2946#copy",
    "label": "Condon Roll 130",
    "identifier": "Stanford Libraries CONDON ROLL 130",
    "seeAlso": "https://purl.stanford.edu/ty610zx2946",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ty610zx2946.jsonld#inscription",
+       "@id": "copies/ty610zx2946#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ty610zx2946%2Fty610zx2946_0001/3512,129807,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ty610zx2946.jsonld#inscription-text",
-        "text": "28622"
+        "@id": "copies/ty610zx2946#inscription-text",
+        "text": "28622",
+        "@annotation": {
+         "@id": "copies/ty610zx2946#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ty610zx2946#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ty610zx2946#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil. Region 1 carries only the five-digit group 28622, with no separators and no name. Read as 28.6.22 on the pattern reading.md gives for 14114 = 14.1.1914, but it could as well be a serial or order number rather than a date, since the roll's own number 416 is written separately in region 3 and nothing ties 28622 to a punch date. Region 2 is blank leader, region 4 carries a pencil caret only."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-06-28",
      "@annotation": {
-      "@id": "copies/ty610zx2946.jsonld#date-annotation",
+      "@id": "copies/ty610zx2946#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ty610zx2946.jsonld#date-belief",
+       "@id": "copies/ty610zx2946#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ty610zx2946.jsonld#inscription-text"
+          "copies/ty610zx2946#inscription-text"
          ],
-         "note": "pencil. Region 1 carries only the five-digit group 28622, with no separators and no name. Read as 28.6.22 on the pattern reading.md gives for 14114 = 14.1.1914, but it could as well be a serial or order number rather than a date, since the roll's own number 416 is written separately in region 3 and nothing ties 28622 to a punch date. Region 2 is blank leader, region 4 carries a pencil caret only."
+         "note": "The figures of \"28622\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ty610zx2946#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ty610zx2946.jsonld#perforator",
+     "@id": "copies/ty610zx2946#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6919,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ty610zx2946.jsonld#punch-diameter-annotation",
+        "@id": "copies/ty610zx2946#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ty610zx2946.jsonld#punch-diameter-belief",
+         "@id": "copies/ty610zx2946#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7013,
        "n": 519,
        "@annotation": {
-        "@id": "copies/ty610zx2946.jsonld#chain-pitch-annotation",
+        "@id": "copies/ty610zx2946#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ty610zx2946.jsonld#chain-pitch-belief",
+         "@id": "copies/ty610zx2946#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6756,
        "n": 9579,
        "@annotation": {
-        "@id": "copies/ty610zx2946.jsonld#advance-annotation",
+        "@id": "copies/ty610zx2946#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ty610zx2946.jsonld#advance-belief",
+         "@id": "copies/ty610zx2946#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

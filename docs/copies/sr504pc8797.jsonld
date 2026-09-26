@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/sr504pc8797.jsonld",
+ "@id": "copies/sr504pc8797",
  "title": "Condon Roll 122, WM 376",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/sr504pc8797.jsonld#copy",
+   "@id": "copies/sr504pc8797#copy",
    "label": "Condon Roll 122",
    "identifier": "Stanford Libraries CONDON ROLL 122",
    "seeAlso": "https://purl.stanford.edu/sr504pc8797",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/sr504pc8797.jsonld#inscription",
+       "@id": "copies/sr504pc8797#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/sr504pc8797%2Fsr504pc8797_0001/3454,225448,505,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/sr504pc8797.jsonld#inscription-text",
-        "text": "Wild / 5/10/1907"
+        "@id": "copies/sr504pc8797#inscription-text",
+        "text": "Wild / 5/10/1907",
+        "@annotation": {
+         "@id": "copies/sr504pc8797#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/sr504pc8797#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/sr504pc8797#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil in two lines, the name above the date, separated by slashes and with the year written out. Here the UPPER panel is the upright one. Day, month and the first three figures of the year are plain. The last figure I read as a 7: its right-hand stroke rises above the small loop and comes down as the bar and diagonal of a 7, unlike the plainly round-bowled 9 two places earlier. 1909 cannot be entirely excluded."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "M. W.?",
       "sameAs": [],
-      "@id": "hands.jsonld#pencil-monogram",
+      "@id": "hands#pencil-monogram",
       "@annotation": {
-       "@id": "copies/sr504pc8797.jsonld#hand-annotation",
+       "@id": "copies/sr504pc8797#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/sr504pc8797.jsonld#hand-belief",
+        "@id": "copies/sr504pc8797#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/sr504pc8797.jsonld#inscription-text"
+           "copies/sr504pc8797#inscription-text"
           ],
           "note": "Read as \"Wild\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1907-10-05",
      "@annotation": {
-      "@id": "copies/sr504pc8797.jsonld#date-annotation",
+      "@id": "copies/sr504pc8797#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/sr504pc8797.jsonld#date-belief",
+       "@id": "copies/sr504pc8797#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/sr504pc8797.jsonld#inscription-text"
+          "copies/sr504pc8797#inscription-text"
          ],
-         "note": "Pencil in two lines, the name above the date, separated by slashes and with the year written out. Here the UPPER panel is the upright one. Day, month and the first three figures of the year are plain. The last figure I read as a 7: its right-hand stroke rises above the small loop and comes down as the bar and diagonal of a 7, unlike the plainly round-bowled 9 two places earlier. 1909 cannot be entirely excluded."
+         "note": "\"5/10/1907\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/sr504pc8797#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/sr504pc8797.jsonld#perforator",
+     "@id": "copies/sr504pc8797#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.9838,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/sr504pc8797.jsonld#punch-diameter-annotation",
+        "@id": "copies/sr504pc8797#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sr504pc8797.jsonld#punch-diameter-belief",
+         "@id": "copies/sr504pc8797#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.8187,
        "n": 521,
        "@annotation": {
-        "@id": "copies/sr504pc8797.jsonld#chain-pitch-annotation",
+        "@id": "copies/sr504pc8797#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sr504pc8797.jsonld#chain-pitch-belief",
+         "@id": "copies/sr504pc8797#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.2351,
        "n": 19521,
        "@annotation": {
-        "@id": "copies/sr504pc8797.jsonld#advance-annotation",
+        "@id": "copies/sr504pc8797#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sr504pc8797.jsonld#advance-belief",
+         "@id": "copies/sr504pc8797#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

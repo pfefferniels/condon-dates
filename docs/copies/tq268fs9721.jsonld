@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/tq268fs9721.jsonld",
+ "@id": "copies/tq268fs9721",
  "title": "Condon Roll 727, WM 3045",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/tq268fs9721.jsonld#copy",
+   "@id": "copies/tq268fs9721#copy",
    "label": "Condon Roll 727",
    "identifier": "Stanford Libraries CONDON ROLL 727",
    "seeAlso": "https://purl.stanford.edu/tq268fs9721",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/tq268fs9721.jsonld#inscription",
+       "@id": "copies/tq268fs9721#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/tq268fs9721%2Ftq268fs9721_0001/3489,235691,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/tq268fs9721.jsonld#inscription-text",
-        "text": "[?]2 5 27"
+        "@id": "copies/tq268fs9721#inscription-text",
+        "text": "[?]2 5 27",
+        "@annotation": {
+         "@id": "copies/tq268fs9721#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/tq268fs9721#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/tq268fs9721#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, treble edge, at the tail of the roll. Five figures, very faint and cut along their tops by the crop edge. The last is the barred 7 of these hands and the one before it a 2, giving the year 27; the middle figure matches the 5 of the roll number written at the head of the roll (crop 3), giving May; the fourth-from-last is a 2, so the day ends in 2, but its first figure is illegible and I have not guessed it. Crop 4 shows the printed leader label, WELTE-MIGNON No. 3045, Debussy Preludes, M. Welte & Soehne Freiburg i. B., with a signature in the \"Played by\" box; it carries no date. Crop 2 is a damp stain."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -81,18 +99,25 @@
      "after": "1927-05-01",
      "before": "1927-05-31",
      "@annotation": {
-      "@id": "copies/tq268fs9721.jsonld#date-annotation",
+      "@id": "copies/tq268fs9721#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/tq268fs9721.jsonld#date-belief",
+       "@id": "copies/tq268fs9721#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/tq268fs9721.jsonld#inscription-text"
+          "copies/tq268fs9721#inscription-text"
          ],
-         "note": "Pencil, treble edge, at the tail of the roll. Five figures, very faint and cut along their tops by the crop edge. The last is the barred 7 of these hands and the one before it a 2, giving the year 27; the middle figure matches the 5 of the roll number written at the head of the roll (crop 3), giving May; the fourth-from-last is a 2, so the day ends in 2, but its first figure is illegible and I have not guessed it. Crop 4 shows the printed leader label, WELTE-MIGNON No. 3045, Debussy Preludes, M. Welte & Soehne Freiburg i. B., with a signature in the \"Played by\" box; it carries no date. Crop 2 is a damp stain."
+         "note": "\"?2 5 27\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/tq268fs9721#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -100,17 +125,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/tq268fs9721.jsonld#perforator",
+     "@id": "copies/tq268fs9721#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7503,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/tq268fs9721.jsonld#punch-diameter-annotation",
+        "@id": "copies/tq268fs9721#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tq268fs9721.jsonld#punch-diameter-belief",
+         "@id": "copies/tq268fs9721#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -132,10 +157,10 @@
        "bridge": 0.6299,
        "n": 464,
        "@annotation": {
-        "@id": "copies/tq268fs9721.jsonld#chain-pitch-annotation",
+        "@id": "copies/tq268fs9721#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tq268fs9721.jsonld#chain-pitch-belief",
+         "@id": "copies/tq268fs9721#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -156,10 +181,10 @@
        "strength": 0.6648,
        "n": 18391,
        "@annotation": {
-        "@id": "copies/tq268fs9721.jsonld#advance-annotation",
+        "@id": "copies/tq268fs9721#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tq268fs9721.jsonld#advance-belief",
+         "@id": "copies/tq268fs9721#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

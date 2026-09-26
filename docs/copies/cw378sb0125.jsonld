@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/cw378sb0125.jsonld",
+ "@id": "copies/cw378sb0125",
  "title": "Condon Roll 602, WM 2538",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/cw378sb0125.jsonld#copy",
+   "@id": "copies/cw378sb0125#copy",
    "label": "Condon Roll 602",
    "identifier": "Stanford Libraries CONDON ROLL 602",
    "seeAlso": "https://purl.stanford.edu/cw378sb0125",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/cw378sb0125.jsonld#inscription",
+       "@id": "copies/cw378sb0125#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/cw378sb0125%2Fcw378sb0125_0001/3462,126054,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/cw378sb0125.jsonld#inscription-text",
-        "text": "51120"
+        "@id": "copies/cw378sb0125#inscription-text",
+        "text": "51120",
+        "@annotation": {
+         "@id": "copies/cw378sb0125#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/cw378sb0125#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/cw378sb0125#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil on dark red paper, five figures run together under the paper edge, both panels agree. The 5, the 2 and the last figure, a slanted oval crossed by a stroke and so a 0, are plain. The third figure has a longer top stroke than the second and taken alone could be a 7, but 5.17.20 is no month and 51.7.20 no day, so the only parse is 5.11.20."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1920-11-05",
      "@annotation": {
-      "@id": "copies/cw378sb0125.jsonld#date-annotation",
+      "@id": "copies/cw378sb0125#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/cw378sb0125.jsonld#date-belief",
+       "@id": "copies/cw378sb0125#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/cw378sb0125.jsonld#inscription-text"
+          "copies/cw378sb0125#inscription-text"
          ],
-         "note": "pencil on dark red paper, five figures run together under the paper edge, both panels agree. The 5, the 2 and the last figure, a slanted oval crossed by a stroke and so a 0, are plain. The third figure has a longer top stroke than the second and taken alone could be a 7, but 5.17.20 is no month and 51.7.20 no day, so the only parse is 5.11.20."
+         "note": "The figures of \"51120\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/cw378sb0125#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/cw378sb0125.jsonld#perforator",
+     "@id": "copies/cw378sb0125#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6902,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/cw378sb0125.jsonld#punch-diameter-annotation",
+        "@id": "copies/cw378sb0125#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cw378sb0125.jsonld#punch-diameter-belief",
+         "@id": "copies/cw378sb0125#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.8223,
        "n": 288,
        "@annotation": {
-        "@id": "copies/cw378sb0125.jsonld#chain-pitch-annotation",
+        "@id": "copies/cw378sb0125#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cw378sb0125.jsonld#chain-pitch-belief",
+         "@id": "copies/cw378sb0125#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5008,
        "n": 9623,
        "@annotation": {
-        "@id": "copies/cw378sb0125.jsonld#advance-annotation",
+        "@id": "copies/cw378sb0125#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cw378sb0125.jsonld#advance-belief",
+         "@id": "copies/cw378sb0125#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

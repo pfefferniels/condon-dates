@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/fk960pq3086.jsonld",
+ "@id": "copies/fk960pq3086",
  "title": "Condon Roll 707, WM 2995",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/fk960pq3086.jsonld#copy",
+   "@id": "copies/fk960pq3086#copy",
    "label": "Condon Roll 707",
    "identifier": "Stanford Libraries CONDON ROLL 707",
    "seeAlso": "https://purl.stanford.edu/fk960pq3086",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/fk960pq3086.jsonld#inscription",
+       "@id": "copies/fk960pq3086#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/fk960pq3086%2Ffk960pq3086_0001/3515,482883,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/fk960pq3086.jsonld#inscription-text",
-        "text": "19 10 20."
+        "@id": "copies/fk960pq3086#inscription-text",
+        "text": "19 10 20.",
+        "@annotation": {
+         "@id": "copies/fk960pq3086#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/fk960pq3086#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/fk960pq3086#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, treble edge. Six figures grouped 2 + 2 + 2 with a closing period. The crop cuts the tops of the figures at the panel edge, but each is traceable: two plain carets for the 1s, a bowl with a descender for the 9, plain loops for the 0s."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1920-10-19",
      "@annotation": {
-      "@id": "copies/fk960pq3086.jsonld#date-annotation",
+      "@id": "copies/fk960pq3086#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/fk960pq3086.jsonld#date-belief",
+       "@id": "copies/fk960pq3086#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/fk960pq3086.jsonld#inscription-text"
+          "copies/fk960pq3086#inscription-text"
          ],
-         "note": "Pencil, treble edge. Six figures grouped 2 + 2 + 2 with a closing period. The crop cuts the tops of the figures at the panel edge, but each is traceable: two plain carets for the 1s, a bowl with a descender for the 9, plain loops for the 0s."
+         "note": "The figures of \"191020\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/fk960pq3086#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/fk960pq3086.jsonld#perforator",
+     "@id": "copies/fk960pq3086#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7055,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/fk960pq3086.jsonld#punch-diameter-annotation",
+        "@id": "copies/fk960pq3086#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fk960pq3086.jsonld#punch-diameter-belief",
+         "@id": "copies/fk960pq3086#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6652,
        "n": 372,
        "@annotation": {
-        "@id": "copies/fk960pq3086.jsonld#chain-pitch-annotation",
+        "@id": "copies/fk960pq3086#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fk960pq3086.jsonld#chain-pitch-belief",
+         "@id": "copies/fk960pq3086#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.521,
        "n": 25433,
        "@annotation": {
-        "@id": "copies/fk960pq3086.jsonld#advance-annotation",
+        "@id": "copies/fk960pq3086#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fk960pq3086.jsonld#advance-belief",
+         "@id": "copies/fk960pq3086#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/fk036vh7282.jsonld",
+ "@id": "copies/fk036vh7282",
  "title": "Condon Roll 561, WM 2254",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/fk036vh7282.jsonld#copy",
+   "@id": "copies/fk036vh7282#copy",
    "label": "Condon Roll 561",
    "identifier": "Stanford Libraries CONDON ROLL 561",
    "seeAlso": "https://purl.stanford.edu/fk036vh7282",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/fk036vh7282.jsonld#inscription",
+       "@id": "copies/fk036vh7282#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/fk036vh7282%2Ffk036vh7282_0001/3504,285453,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/fk036vh7282.jsonld#inscription-text",
-        "text": "21824"
+        "@id": "copies/fk036vh7282#inscription-text",
+        "text": "21824",
+        "@annotation": {
+         "@id": "copies/fk036vh7282#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/fk036vh7282#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/fk036vh7282#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, five figures run together, close under the paper edge; small and slanted. First 2, third 8 and fifth 4 are plain. The second is read as 1 against the 1 of the roll number on crop 2, written by the same hand, but a 2 is possible, which would give 22.8.24. The fourth carries the same top loop as that hand's 2. Roll number 2154 stands alone on crop 2; the series 2148, 2154, 2160, 2161 runs through this batch. Crop 3 carries a later English note in ink across the roll, 'good condition' over '1. 12. 198-' with the last figure of the year running off the crop: an archive hand, not a punch date. Crop 4 blank."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1924-08-21",
      "@annotation": {
-      "@id": "copies/fk036vh7282.jsonld#date-annotation",
+      "@id": "copies/fk036vh7282#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/fk036vh7282.jsonld#date-belief",
+       "@id": "copies/fk036vh7282#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/fk036vh7282.jsonld#inscription-text"
+          "copies/fk036vh7282#inscription-text"
          ],
-         "note": "pencil, five figures run together, close under the paper edge; small and slanted. First 2, third 8 and fifth 4 are plain. The second is read as 1 against the 1 of the roll number on crop 2, written by the same hand, but a 2 is possible, which would give 22.8.24. The fourth carries the same top loop as that hand's 2. Roll number 2154 stands alone on crop 2; the series 2148, 2154, 2160, 2161 runs through this batch. Crop 3 carries a later English note in ink across the roll, 'good condition' over '1. 12. 198-' with the last figure of the year running off the crop: an archive hand, not a punch date. Crop 4 blank."
+         "note": "The figures of \"21824\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/fk036vh7282#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/fk036vh7282.jsonld#perforator",
+     "@id": "copies/fk036vh7282#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7528,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/fk036vh7282.jsonld#punch-diameter-annotation",
+        "@id": "copies/fk036vh7282#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fk036vh7282.jsonld#punch-diameter-belief",
+         "@id": "copies/fk036vh7282#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6569,
        "n": 438,
        "@annotation": {
-        "@id": "copies/fk036vh7282.jsonld#chain-pitch-annotation",
+        "@id": "copies/fk036vh7282#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fk036vh7282.jsonld#chain-pitch-belief",
+         "@id": "copies/fk036vh7282#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6129,
        "n": 20910,
        "@annotation": {
-        "@id": "copies/fk036vh7282.jsonld#advance-annotation",
+        "@id": "copies/fk036vh7282#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fk036vh7282.jsonld#advance-belief",
+         "@id": "copies/fk036vh7282#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

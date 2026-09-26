@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ch197br4742.jsonld",
+ "@id": "copies/ch197br4742",
  "title": "Condon Roll 369, WM 881",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ch197br4742.jsonld#copy",
+   "@id": "copies/ch197br4742#copy",
    "label": "Condon Roll 369",
    "identifier": "Stanford Libraries CONDON ROLL 369",
    "seeAlso": "https://purl.stanford.edu/ch197br4742",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ch197br4742.jsonld#inscription",
+       "@id": "copies/ch197br4742#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ch197br4742%2Fch197br4742_0001/3198,63446,460,2044/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ch197br4742.jsonld#inscription-text",
-        "text": "881 Fritz 21 Dezb 1908"
+        "@id": "copies/ch197br4742#inscription-text",
+        "text": "881 Fritz 21 Dezb 1908",
+        "@annotation": {
+         "@id": "copies/ch197br4742#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ch197br4742#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ch197br4742#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, cursive; figures 21 and 1908 plain, the month is an abbreviated word read as Dezb (Dezember), the capital could conceivably be another letter"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "Fritz",
       "sameAs": [],
-      "@id": "hands.jsonld#fritz",
+      "@id": "hands#fritz",
       "@annotation": {
-       "@id": "copies/ch197br4742.jsonld#hand-annotation",
+       "@id": "copies/ch197br4742#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/ch197br4742.jsonld#hand-belief",
+        "@id": "copies/ch197br4742#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/ch197br4742.jsonld#inscription-text"
+           "copies/ch197br4742#inscription-text"
           ],
           "note": "Read as \"Fritz\"."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1908-12-21",
      "@annotation": {
-      "@id": "copies/ch197br4742.jsonld#date-annotation",
+      "@id": "copies/ch197br4742#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ch197br4742.jsonld#date-belief",
+       "@id": "copies/ch197br4742#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ch197br4742.jsonld#inscription-text"
+          "copies/ch197br4742#inscription-text"
          ],
-         "note": "pencil, cursive; figures 21 and 1908 plain, the month is an abbreviated word read as Dezb (Dezember), the capital could conceivably be another letter"
+         "note": "\"21 Dezb 1908\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ch197br4742#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ch197br4742.jsonld#perforator",
+     "@id": "copies/ch197br4742#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1792,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ch197br4742.jsonld#punch-diameter-annotation",
+        "@id": "copies/ch197br4742#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ch197br4742.jsonld#punch-diameter-belief",
+         "@id": "copies/ch197br4742#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.7045,
        "n": 14,
        "@annotation": {
-        "@id": "copies/ch197br4742.jsonld#chain-pitch-annotation",
+        "@id": "copies/ch197br4742#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ch197br4742.jsonld#chain-pitch-belief",
+         "@id": "copies/ch197br4742#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.7454,
        "n": 1897,
        "@annotation": {
-        "@id": "copies/ch197br4742.jsonld#advance-annotation",
+        "@id": "copies/ch197br4742#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ch197br4742.jsonld#advance-belief",
+         "@id": "copies/ch197br4742#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

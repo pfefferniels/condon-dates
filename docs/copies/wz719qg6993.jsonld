@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/wz719qg6993.jsonld",
+ "@id": "copies/wz719qg6993",
  "title": "Condon Roll 165, WM 441",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/wz719qg6993.jsonld#copy",
+   "@id": "copies/wz719qg6993#copy",
    "label": "Condon Roll 165",
    "identifier": "Stanford Libraries CONDON ROLL 165",
    "seeAlso": "https://purl.stanford.edu/wz719qg6993",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/wz719qg6993.jsonld#inscription",
+       "@id": "copies/wz719qg6993#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/wz719qg6993%2Fwz719qg6993_0001/3519,145405,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/wz719qg6993.jsonld#inscription-text",
-        "text": "8524"
+        "@id": "copies/wz719qg6993#inscription-text",
+        "text": "8524",
+        "@annotation": {
+         "@id": "copies/wz719qg6993#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/wz719qg6993#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/wz719qg6993#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil. Region 1 holds the group 8524 alone, no separators and no name; region 2 carries the roll's number 441 on its own. Read as 8.5.24. The group runs to four figures here where the comparable rolls in this batch have five (ty610zx2946 28622, fr853pn6519 22324, gb034mq5877 11822), which fits a one-figure day and tells against these groups being serial numbers."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1924-05-08",
      "@annotation": {
-      "@id": "copies/wz719qg6993.jsonld#date-annotation",
+      "@id": "copies/wz719qg6993#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/wz719qg6993.jsonld#date-belief",
+       "@id": "copies/wz719qg6993#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/wz719qg6993.jsonld#inscription-text"
+          "copies/wz719qg6993#inscription-text"
          ],
-         "note": "pencil. Region 1 holds the group 8524 alone, no separators and no name; region 2 carries the roll's number 441 on its own. Read as 8.5.24. The group runs to four figures here where the comparable rolls in this batch have five (ty610zx2946 28622, fr853pn6519 22324, gb034mq5877 11822), which fits a one-figure day and tells against these groups being serial numbers."
+         "note": "The figures of \"8524\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/wz719qg6993#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/wz719qg6993.jsonld#perforator",
+     "@id": "copies/wz719qg6993#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7884,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/wz719qg6993.jsonld#punch-diameter-annotation",
+        "@id": "copies/wz719qg6993#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wz719qg6993.jsonld#punch-diameter-belief",
+         "@id": "copies/wz719qg6993#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6189,
        "n": 398,
        "@annotation": {
-        "@id": "copies/wz719qg6993.jsonld#chain-pitch-annotation",
+        "@id": "copies/wz719qg6993#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wz719qg6993.jsonld#chain-pitch-belief",
+         "@id": "copies/wz719qg6993#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4389,
        "n": 9828,
        "@annotation": {
-        "@id": "copies/wz719qg6993.jsonld#advance-annotation",
+        "@id": "copies/wz719qg6993#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wz719qg6993.jsonld#advance-belief",
+         "@id": "copies/wz719qg6993#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

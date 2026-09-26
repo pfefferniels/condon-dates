@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/st755cm2486.jsonld",
+ "@id": "copies/st755cm2486",
  "title": "Condon Roll 171, WM 390",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/st755cm2486.jsonld#copy",
+   "@id": "copies/st755cm2486#copy",
    "label": "Condon Roll 171",
    "identifier": "Stanford Libraries CONDON ROLL 171",
    "seeAlso": "https://purl.stanford.edu/st755cm2486",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/st755cm2486.jsonld#inscription",
+       "@id": "copies/st755cm2486#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/st755cm2486%2Fst755cm2486_0001/3500,73267,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/st755cm2486.jsonld#inscription-text",
-        "text": "390,  17. 4. 12"
+        "@id": "copies/st755cm2486#inscription-text",
+        "text": "390,  17. 4. 12",
+        "@annotation": {
+         "@id": "copies/st755cm2486#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/st755cm2486#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/st755cm2486#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink on dark red paper, reads upright in the lower panel"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1912-04-17",
      "@annotation": {
-      "@id": "copies/st755cm2486.jsonld#date-annotation",
+      "@id": "copies/st755cm2486#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/st755cm2486.jsonld#date-belief",
+       "@id": "copies/st755cm2486#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/st755cm2486.jsonld#inscription-text"
+          "copies/st755cm2486#inscription-text"
          ],
-         "note": "ink on dark red paper, reads upright in the lower panel"
+         "note": "\"17. 4. 12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/st755cm2486#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/st755cm2486.jsonld#perforator",
+     "@id": "copies/st755cm2486#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0269,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/st755cm2486.jsonld#punch-diameter-annotation",
+        "@id": "copies/st755cm2486#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/st755cm2486.jsonld#punch-diameter-belief",
+         "@id": "copies/st755cm2486#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7991,
        "n": 295,
        "@annotation": {
-        "@id": "copies/st755cm2486.jsonld#chain-pitch-annotation",
+        "@id": "copies/st755cm2486#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/st755cm2486.jsonld#chain-pitch-belief",
+         "@id": "copies/st755cm2486#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.3875,
        "n": 3241,
        "@annotation": {
-        "@id": "copies/st755cm2486.jsonld#advance-annotation",
+        "@id": "copies/st755cm2486#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/st755cm2486.jsonld#advance-belief",
+         "@id": "copies/st755cm2486#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

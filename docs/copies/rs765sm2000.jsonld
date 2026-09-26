@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rs765sm2000.jsonld",
+ "@id": "copies/rs765sm2000",
  "title": "Condon Roll 688, WM 2822",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rs765sm2000.jsonld#copy",
+   "@id": "copies/rs765sm2000#copy",
    "label": "Condon Roll 688",
    "identifier": "Stanford Libraries CONDON ROLL 688",
    "seeAlso": "https://purl.stanford.edu/rs765sm2000",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rs765sm2000.jsonld#inscription",
+       "@id": "copies/rs765sm2000#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rs765sm2000%2Frs765sm2000_0001/3537,514257,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rs765sm2000.jsonld#inscription-text",
-        "text": "23 1022"
+        "@id": "copies/rs765sm2000#inscription-text",
+        "text": "23 1022",
+        "@annotation": {
+         "@id": "copies/rs765sm2000#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rs765sm2000#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rs765sm2000#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, written close to the crop edge; separators dropped, as in the documented 311022 pattern"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-10-23",
      "@annotation": {
-      "@id": "copies/rs765sm2000.jsonld#date-annotation",
+      "@id": "copies/rs765sm2000#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rs765sm2000.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/rs765sm2000#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rs765sm2000.jsonld#inscription-text"
+          "copies/rs765sm2000#inscription-text"
          ],
-         "note": "pencil, written close to the crop edge; separators dropped, as in the documented 311022 pattern"
+         "note": "The figures of \"23 1022\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rs765sm2000#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rs765sm2000.jsonld#perforator",
+     "@id": "copies/rs765sm2000#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8087,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rs765sm2000.jsonld#punch-diameter-annotation",
+        "@id": "copies/rs765sm2000#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rs765sm2000.jsonld#punch-diameter-belief",
+         "@id": "copies/rs765sm2000#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6554,
        "n": 368,
        "@annotation": {
-        "@id": "copies/rs765sm2000.jsonld#chain-pitch-annotation",
+        "@id": "copies/rs765sm2000#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rs765sm2000.jsonld#chain-pitch-belief",
+         "@id": "copies/rs765sm2000#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.3769,
        "n": 37264,
        "@annotation": {
-        "@id": "copies/rs765sm2000.jsonld#advance-annotation",
+        "@id": "copies/rs765sm2000#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rs765sm2000.jsonld#advance-belief",
+         "@id": "copies/rs765sm2000#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

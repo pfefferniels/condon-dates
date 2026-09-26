@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/mz508vq7890.jsonld",
+ "@id": "copies/mz508vq7890",
  "title": "Condon Roll 51, WM 232",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/mz508vq7890.jsonld#copy",
+   "@id": "copies/mz508vq7890#copy",
    "label": "Condon Roll 51",
    "identifier": "Stanford Libraries CONDON ROLL 51",
    "seeAlso": "https://purl.stanford.edu/mz508vq7890",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/mz508vq7890.jsonld#inscription",
+       "@id": "copies/mz508vq7890#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/mz508vq7890%2Fmz508vq7890_0001/3374,92656,476,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/mz508vq7890.jsonld#inscription-text",
-        "text": "Kopf  12 10 09"
+        "@id": "copies/mz508vq7890#inscription-text",
+        "text": "Kopf  12 10 09",
+        "@annotation": {
+         "@id": "copies/mz508vq7890#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/mz508vq7890#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/mz508vq7890#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil on dark paper. The three figure pairs read 12, 10 and 09, the last with a clear descender on the 9. The name is less secure than the figures: read as Kopf, but the letters are cramped."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Kopf",
       "sameAs": [],
-      "@id": "hands.jsonld#kopf",
+      "@id": "hands#kopf",
       "@annotation": {
-       "@id": "copies/mz508vq7890.jsonld#hand-annotation",
+       "@id": "copies/mz508vq7890#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/mz508vq7890.jsonld#hand-belief",
+        "@id": "copies/mz508vq7890#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/mz508vq7890.jsonld#inscription-text"
+           "copies/mz508vq7890#inscription-text"
           ],
           "note": "Read as \"Kopf\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1909-10-12",
      "@annotation": {
-      "@id": "copies/mz508vq7890.jsonld#date-annotation",
+      "@id": "copies/mz508vq7890#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/mz508vq7890.jsonld#date-belief",
+       "@id": "copies/mz508vq7890#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/mz508vq7890.jsonld#inscription-text"
+          "copies/mz508vq7890#inscription-text"
          ],
-         "note": "pencil on dark paper. The three figure pairs read 12, 10 and 09, the last with a clear descender on the 9. The name is less secure than the figures: read as Kopf, but the letters are cramped."
+         "note": "\"12 10 09\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/mz508vq7890#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/mz508vq7890.jsonld#perforator",
+     "@id": "copies/mz508vq7890#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1936,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/mz508vq7890.jsonld#punch-diameter-annotation",
+        "@id": "copies/mz508vq7890#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mz508vq7890.jsonld#punch-diameter-belief",
+         "@id": "copies/mz508vq7890#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.6081,
        "n": 128,
        "@annotation": {
-        "@id": "copies/mz508vq7890.jsonld#chain-pitch-annotation",
+        "@id": "copies/mz508vq7890#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mz508vq7890.jsonld#chain-pitch-belief",
+         "@id": "copies/mz508vq7890#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.1462,
        "n": 3244,
        "@annotation": {
-        "@id": "copies/mz508vq7890.jsonld#advance-annotation",
+        "@id": "copies/mz508vq7890#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mz508vq7890.jsonld#advance-belief",
+         "@id": "copies/mz508vq7890#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

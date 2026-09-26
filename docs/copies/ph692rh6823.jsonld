@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ph692rh6823.jsonld",
+ "@id": "copies/ph692rh6823",
  "title": "Condon Roll 579, WM 2311",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ph692rh6823.jsonld#copy",
+   "@id": "copies/ph692rh6823#copy",
    "label": "Condon Roll 579",
    "identifier": "Stanford Libraries CONDON ROLL 579",
    "seeAlso": "https://purl.stanford.edu/ph692rh6823",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ph692rh6823.jsonld#inscription",
+       "@id": "copies/ph692rh6823#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ph692rh6823%2Fph692rh6823_0001/3489,19214,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ph692rh6823.jsonld#inscription-text",
-        "text": "9811"
+        "@id": "copies/ph692rh6823#inscription-text",
+        "text": "9811",
+        "@annotation": {
+         "@id": "copies/ph692rh6823#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ph692rh6823#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ph692rh6823#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Two separate groups of four pencil figures on this roll, both in the same slanted hand just under the paper edge, neither with points or a name. Crop 2 reads 9811: the 8 and the two 1s are plain, the first figure is a closed loop over a descending tail, so 9, though a 2 is possible, which would give 2.8.11 instead of 9.8.11. Either way the month and year are August 1911, so only that much is entered. Crop 1 reads 4124, taken here as the roll number because 9811 cannot be one; but 4124 would also parse as 4.1.24, and nothing on the paper settles which of the two groups is the date. Crop 3 is the roll end and crop 4 holds only a crease and a smudge."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -80,18 +98,25 @@
      "after": "1911-08-01",
      "before": "1911-08-31",
      "@annotation": {
-      "@id": "copies/ph692rh6823.jsonld#date-annotation",
+      "@id": "copies/ph692rh6823#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ph692rh6823.jsonld#date-belief",
+       "@id": "copies/ph692rh6823#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ph692rh6823.jsonld#inscription-text"
+          "copies/ph692rh6823#inscription-text"
          ],
-         "note": "two separate groups of four pencil figures on this roll, both in the same slanted hand just under the paper edge, neither with points or a name. Crop 2 reads 9811: the 8 and the two 1s are plain, the first figure is a closed loop over a descending tail, so 9, though a 2 is possible, which would give 2.8.11 instead of 9.8.11. Either way the month and year are August 1911, so only that much is entered. Crop 1 reads 4124, taken here as the roll number because 9811 cannot be one; but 4124 would also parse as 4.1.24, and nothing on the paper settles which of the two groups is the date. Crop 3 is the roll end and crop 4 holds only a crease and a smudge."
+         "note": "The figures of \"9811\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ph692rh6823#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ph692rh6823.jsonld#perforator",
+     "@id": "copies/ph692rh6823#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6708,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ph692rh6823.jsonld#punch-diameter-annotation",
+        "@id": "copies/ph692rh6823#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ph692rh6823.jsonld#punch-diameter-belief",
+         "@id": "copies/ph692rh6823#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7301,
        "n": 321,
        "@annotation": {
-        "@id": "copies/ph692rh6823.jsonld#chain-pitch-annotation",
+        "@id": "copies/ph692rh6823#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ph692rh6823.jsonld#chain-pitch-belief",
+         "@id": "copies/ph692rh6823#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4537,
        "n": 52386,
        "@annotation": {
-        "@id": "copies/ph692rh6823.jsonld#advance-annotation",
+        "@id": "copies/ph692rh6823#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ph692rh6823.jsonld#advance-belief",
+         "@id": "copies/ph692rh6823#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

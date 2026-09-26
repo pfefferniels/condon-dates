@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/cw427tw4145.jsonld",
+ "@id": "copies/cw427tw4145",
  "title": "Condon Roll 549, WM 2000",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/cw427tw4145.jsonld#copy",
+   "@id": "copies/cw427tw4145#copy",
    "label": "Condon Roll 549",
    "identifier": "Stanford Libraries CONDON ROLL 549",
    "seeAlso": "https://purl.stanford.edu/cw427tw4145",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/cw427tw4145.jsonld#inscription",
+       "@id": "copies/cw427tw4145#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/cw427tw4145%2Fcw427tw4145_0001/3474,219413,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/cw427tw4145.jsonld#inscription-text",
-        "text": "2000.    30. 9.13"
+        "@id": "copies/cw427tw4145#inscription-text",
+        "text": "2000.    30. 9.13",
+        "@annotation": {
+         "@id": "copies/cw427tw4145#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/cw427tw4145#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/cw427tw4145#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Crop 1, lower panel upright; ink, one line, no name. Number 2000 with a full stop, then the date with its own stops. The month is a closed loop carrying a descender below the line, a 9 and not the plain oval the three 0s of 2000 and 30 show. Year 13."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1913-09-30",
      "@annotation": {
-      "@id": "copies/cw427tw4145.jsonld#date-annotation",
+      "@id": "copies/cw427tw4145#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/cw427tw4145.jsonld#date-belief",
+       "@id": "copies/cw427tw4145#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/cw427tw4145.jsonld#inscription-text"
+          "copies/cw427tw4145#inscription-text"
          ],
-         "note": "crop 1, lower panel upright; ink, one line, no name. Number 2000 with a full stop, then the date with its own stops. The month is a closed loop carrying a descender below the line, a 9 and not the plain oval the three 0s of 2000 and 30 show. Year 13."
+         "note": "\"30. 9.13\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/cw427tw4145#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/cw427tw4145.jsonld#perforator",
+     "@id": "copies/cw427tw4145#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1826,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/cw427tw4145.jsonld#punch-diameter-annotation",
+        "@id": "copies/cw427tw4145#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cw427tw4145.jsonld#punch-diameter-belief",
+         "@id": "copies/cw427tw4145#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.687,
        "n": 206,
        "@annotation": {
-        "@id": "copies/cw427tw4145.jsonld#chain-pitch-annotation",
+        "@id": "copies/cw427tw4145#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cw427tw4145.jsonld#chain-pitch-belief",
+         "@id": "copies/cw427tw4145#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.1702,
        "n": 11325,
        "@annotation": {
-        "@id": "copies/cw427tw4145.jsonld#advance-annotation",
+        "@id": "copies/cw427tw4145#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cw427tw4145.jsonld#advance-belief",
+         "@id": "copies/cw427tw4145#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/yx139bt6626.jsonld",
+ "@id": "copies/yx139bt6626",
  "title": "Condon Roll 74, WM 292",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/yx139bt6626.jsonld#copy",
+   "@id": "copies/yx139bt6626#copy",
    "label": "Condon Roll 74",
    "identifier": "Stanford Libraries CONDON ROLL 74",
    "seeAlso": "https://purl.stanford.edu/yx139bt6626",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/yx139bt6626.jsonld#inscription",
+       "@id": "copies/yx139bt6626#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/yx139bt6626%2Fyx139bt6626_0001/3511,232175,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/yx139bt6626.jsonld#inscription-text",
-        "text": "25614"
+        "@id": "copies/yx139bt6626#inscription-text",
+        "text": "25614",
+        "@annotation": {
+         "@id": "copies/yx139bt6626#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/yx139bt6626#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/yx139bt6626#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, separators dropped, read as 25.6.14; the tops of the figures sit right on the edge of the crop and the last two are less plain than 256"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1914-06-25",
      "@annotation": {
-      "@id": "copies/yx139bt6626.jsonld#date-annotation",
+      "@id": "copies/yx139bt6626#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/yx139bt6626.jsonld#date-belief",
+       "@id": "copies/yx139bt6626#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/yx139bt6626.jsonld#inscription-text"
+          "copies/yx139bt6626#inscription-text"
          ],
-         "note": "pencil, separators dropped, read as 25.6.14; the tops of the figures sit right on the edge of the crop and the last two are less plain than 256"
+         "note": "The figures of \"25614\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/yx139bt6626#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/yx139bt6626.jsonld#perforator",
+     "@id": "copies/yx139bt6626#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7951,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/yx139bt6626.jsonld#punch-diameter-annotation",
+        "@id": "copies/yx139bt6626#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yx139bt6626.jsonld#punch-diameter-belief",
+         "@id": "copies/yx139bt6626#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6155,
        "n": 374,
        "@annotation": {
-        "@id": "copies/yx139bt6626.jsonld#chain-pitch-annotation",
+        "@id": "copies/yx139bt6626#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yx139bt6626.jsonld#chain-pitch-belief",
+         "@id": "copies/yx139bt6626#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.468,
        "n": 20404,
        "@annotation": {
-        "@id": "copies/yx139bt6626.jsonld#advance-annotation",
+        "@id": "copies/yx139bt6626#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yx139bt6626.jsonld#advance-belief",
+         "@id": "copies/yx139bt6626#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

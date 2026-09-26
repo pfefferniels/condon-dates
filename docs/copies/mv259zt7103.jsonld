@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/mv259zt7103.jsonld",
+ "@id": "copies/mv259zt7103",
  "title": "Condon Roll 87, WM 325",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/mv259zt7103.jsonld#copy",
+   "@id": "copies/mv259zt7103#copy",
    "label": "Condon Roll 87",
    "identifier": "Stanford Libraries CONDON ROLL 87",
    "seeAlso": "https://purl.stanford.edu/mv259zt7103",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/mv259zt7103.jsonld#inscription",
+       "@id": "copies/mv259zt7103#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/mv259zt7103%2Fmv259zt7103_0001/3471,226883,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/mv259zt7103.jsonld#inscription-text",
-        "text": "29. 10 .08. Hohnrich"
+        "@id": "copies/mv259zt7103#inscription-text",
+        "text": "29. 10 .08. Hohnrich",
+        "@annotation": {
+         "@id": "copies/mv259zt7103#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/mv259zt7103#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/mv259zt7103#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, faint but the figures are plain. No roll number. The name is only partly legible; 'Hohnrich' is my best reading of it and could be a different name (Hofrichter?)."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "Hohnrieder",
       "sameAs": [],
-      "@id": "hands.jsonld#hohnrieder",
+      "@id": "hands#hohnrieder",
       "@annotation": {
-       "@id": "copies/mv259zt7103.jsonld#hand-annotation",
+       "@id": "copies/mv259zt7103#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/mv259zt7103.jsonld#hand-belief",
+        "@id": "copies/mv259zt7103#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/mv259zt7103.jsonld#inscription-text"
+           "copies/mv259zt7103#inscription-text"
           ],
           "note": "Read as \"Hohnrich\"."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1908-10-29",
      "@annotation": {
-      "@id": "copies/mv259zt7103.jsonld#date-annotation",
+      "@id": "copies/mv259zt7103#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/mv259zt7103.jsonld#date-belief",
+       "@id": "copies/mv259zt7103#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/mv259zt7103.jsonld#inscription-text"
+          "copies/mv259zt7103#inscription-text"
          ],
-         "note": "pencil, faint but the figures are plain. No roll number. The name is only partly legible; 'Hohnrich' is my best reading of it and could be a different name (Hofrichter?)."
+         "note": "\"29. 10. 08.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/mv259zt7103#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/mv259zt7103.jsonld#perforator",
+     "@id": "copies/mv259zt7103#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1217,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/mv259zt7103.jsonld#punch-diameter-annotation",
+        "@id": "copies/mv259zt7103#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mv259zt7103.jsonld#punch-diameter-belief",
+         "@id": "copies/mv259zt7103#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.6746,
        "n": 353,
        "@annotation": {
-        "@id": "copies/mv259zt7103.jsonld#chain-pitch-annotation",
+        "@id": "copies/mv259zt7103#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mv259zt7103.jsonld#chain-pitch-belief",
+         "@id": "copies/mv259zt7103#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.0891,
        "n": 9942,
        "@annotation": {
-        "@id": "copies/mv259zt7103.jsonld#advance-annotation",
+        "@id": "copies/mv259zt7103#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mv259zt7103.jsonld#advance-belief",
+         "@id": "copies/mv259zt7103#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

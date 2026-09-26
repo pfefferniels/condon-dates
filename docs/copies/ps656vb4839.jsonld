@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ps656vb4839.jsonld",
+ "@id": "copies/ps656vb4839",
  "title": "Condon Roll 573, WM 2086",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ps656vb4839.jsonld#copy",
+   "@id": "copies/ps656vb4839#copy",
    "label": "Condon Roll 573",
    "identifier": "Stanford Libraries CONDON ROLL 573",
    "seeAlso": "https://purl.stanford.edu/ps656vb4839",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ps656vb4839.jsonld#inscription",
+       "@id": "copies/ps656vb4839#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ps656vb4839%2Fps656vb4839_0001/3517,181874,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ps656vb4839.jsonld#inscription-text",
-        "text": "5. 9. 19"
+        "@id": "copies/ps656vb4839#inscription-text",
+        "text": "5. 9. 19",
+        "@annotation": {
+         "@id": "copies/ps656vb4839#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ps656vb4839#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ps656vb4839#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil/ink, one line, strongly slanted cursive; the 9s are written as a narrow closed loop with a long tail running down to the left, the 1 as a bare diagonal. Day 5 plain; month 9 arguable against 1 but the two glyph shapes differ consistently."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1919-09-05",
      "@annotation": {
-      "@id": "copies/ps656vb4839.jsonld#date-annotation",
+      "@id": "copies/ps656vb4839#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ps656vb4839.jsonld#date-belief",
+       "@id": "copies/ps656vb4839#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ps656vb4839.jsonld#inscription-text"
+          "copies/ps656vb4839#inscription-text"
          ],
-         "note": "pencil/ink, one line, strongly slanted cursive; the 9s are written as a narrow closed loop with a long tail running down to the left, the 1 as a bare diagonal. Day 5 plain; month 9 arguable against 1 but the two glyph shapes differ consistently."
+         "note": "\"5.9.19\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ps656vb4839#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ps656vb4839.jsonld#perforator",
+     "@id": "copies/ps656vb4839#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8577,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ps656vb4839.jsonld#punch-diameter-annotation",
+        "@id": "copies/ps656vb4839#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ps656vb4839.jsonld#punch-diameter-belief",
+         "@id": "copies/ps656vb4839#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5068,
        "n": 317,
        "@annotation": {
-        "@id": "copies/ps656vb4839.jsonld#chain-pitch-annotation",
+        "@id": "copies/ps656vb4839#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ps656vb4839.jsonld#chain-pitch-belief",
+         "@id": "copies/ps656vb4839#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5754,
        "n": 10935,
        "@annotation": {
-        "@id": "copies/ps656vb4839.jsonld#advance-annotation",
+        "@id": "copies/ps656vb4839#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ps656vb4839.jsonld#advance-belief",
+         "@id": "copies/ps656vb4839#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/sg713kb1834.jsonld",
+ "@id": "copies/sg713kb1834",
  "title": "Condon Roll 807, WM 3548",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/sg713kb1834.jsonld#copy",
+   "@id": "copies/sg713kb1834#copy",
    "label": "Condon Roll 807",
    "identifier": "Stanford Libraries CONDON ROLL 807",
    "seeAlso": "https://purl.stanford.edu/sg713kb1834",
@@ -50,17 +51,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/sg713kb1834.jsonld#perforator",
+     "@id": "copies/sg713kb1834#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6479,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/sg713kb1834.jsonld#punch-diameter-annotation",
+        "@id": "copies/sg713kb1834#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sg713kb1834.jsonld#punch-diameter-belief",
+         "@id": "copies/sg713kb1834#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -82,10 +83,10 @@
        "bridge": 0.7664,
        "n": 396,
        "@annotation": {
-        "@id": "copies/sg713kb1834.jsonld#chain-pitch-annotation",
+        "@id": "copies/sg713kb1834#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sg713kb1834.jsonld#chain-pitch-belief",
+         "@id": "copies/sg713kb1834#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -106,10 +107,10 @@
        "strength": 0.5933,
        "n": 17764,
        "@annotation": {
-        "@id": "copies/sg713kb1834.jsonld#advance-annotation",
+        "@id": "copies/sg713kb1834#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sg713kb1834.jsonld#advance-belief",
+         "@id": "copies/sg713kb1834#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

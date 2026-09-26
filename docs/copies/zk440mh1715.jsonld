@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/zk440mh1715.jsonld",
+ "@id": "copies/zk440mh1715",
  "title": "Condon Roll 136, WM 757",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/zk440mh1715.jsonld#copy",
+   "@id": "copies/zk440mh1715#copy",
    "label": "Condon Roll 136",
    "identifier": "Stanford Libraries CONDON ROLL 136",
    "seeAlso": "https://purl.stanford.edu/zk440mh1715",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/zk440mh1715.jsonld#inscription",
+       "@id": "copies/zk440mh1715#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/zk440mh1715%2Fzk440mh1715_0001/3513,383064,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/zk440mh1715.jsonld#inscription-text",
-        "text": "23424"
+        "@id": "copies/zk440mh1715#inscription-text",
+        "text": "23424",
+        "@annotation": {
+         "@id": "copies/zk440mh1715#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/zk440mh1715#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/zk440mh1715#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, single line, no separators; 23.4.24. Same inscription and hand as hg174cq6672."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1924-04-23",
      "@annotation": {
-      "@id": "copies/zk440mh1715.jsonld#date-annotation",
+      "@id": "copies/zk440mh1715#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/zk440mh1715.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/zk440mh1715#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/zk440mh1715.jsonld#inscription-text"
+          "copies/zk440mh1715#inscription-text"
          ],
-         "note": "pencil, single line, no separators; 23.4.24. Same inscription and hand as hg174cq6672."
+         "note": "The figures of \"23424\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/zk440mh1715#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/zk440mh1715.jsonld#perforator",
+     "@id": "copies/zk440mh1715#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7562,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/zk440mh1715.jsonld#punch-diameter-annotation",
+        "@id": "copies/zk440mh1715#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zk440mh1715.jsonld#punch-diameter-belief",
+         "@id": "copies/zk440mh1715#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7186,
        "n": 303,
        "@annotation": {
-        "@id": "copies/zk440mh1715.jsonld#chain-pitch-annotation",
+        "@id": "copies/zk440mh1715#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zk440mh1715.jsonld#chain-pitch-belief",
+         "@id": "copies/zk440mh1715#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.465,
        "n": 21043,
        "@annotation": {
-        "@id": "copies/zk440mh1715.jsonld#advance-annotation",
+        "@id": "copies/zk440mh1715#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zk440mh1715.jsonld#advance-belief",
+         "@id": "copies/zk440mh1715#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

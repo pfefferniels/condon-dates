@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hc229ht1024.jsonld",
+ "@id": "copies/hc229ht1024",
  "title": "Condon Roll 370, WM 1249",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hc229ht1024.jsonld#copy",
+   "@id": "copies/hc229ht1024#copy",
    "label": "Condon Roll 370",
    "identifier": "Stanford Libraries CONDON ROLL 370",
    "seeAlso": "https://purl.stanford.edu/hc229ht1024",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hc229ht1024.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/hc229ht1024#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 27424.47,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hc229ht1024%2Fhc229ht1024_0001/3496,324181,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hc229ht1024.jsonld#inscription-text",
-        "text": "7 10-24"
+        "@id": "copies/hc229ht1024#inscription-text",
+        "text": "7 10-24",
+        "@annotation": {
+         "@id": "copies/hc229ht1024#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hc229ht1024#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hc229ht1024#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Stamped, not written, in black on the bare red paper; the impression is uneven. The figures 7, 1, 0 and 2, 4 are plain, with a hyphen between the 0 and the 2, read 7.10.24. A small broken mark stands a digit's width to the left of the 7 and matching marks and a short vertical rule stand at the right end, which I take for the stamp's frame rather than figures; if the left mark were a weakly struck figure the day would be 17 instead of 7."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-10-07",
      "@annotation": {
-      "@id": "copies/hc229ht1024.jsonld#date-annotation",
+      "@id": "copies/hc229ht1024#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hc229ht1024.jsonld#date-belief",
+       "@id": "copies/hc229ht1024#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hc229ht1024.jsonld#inscription-text"
+          "copies/hc229ht1024#inscription-text"
          ],
-         "note": "Stamped, not written, in black on the bare red paper; the impression is uneven. The figures 7, 1, 0 and 2, 4 are plain, with a hyphen between the 0 and the 2, read 7.10.24. A small broken mark stands a digit's width to the left of the 7 and matching marks and a short vertical rule stand at the right end, which I take for the stamp's frame rather than figures; if the left mark were a weakly struck figure the day would be 17 instead of 7."
+         "note": "\"7 10-24\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hc229ht1024#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hc229ht1024.jsonld#perforator",
+     "@id": "copies/hc229ht1024#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8078,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hc229ht1024.jsonld#punch-diameter-annotation",
+        "@id": "copies/hc229ht1024#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hc229ht1024.jsonld#punch-diameter-belief",
+         "@id": "copies/hc229ht1024#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5781,
        "n": 363,
        "@annotation": {
-        "@id": "copies/hc229ht1024.jsonld#chain-pitch-annotation",
+        "@id": "copies/hc229ht1024#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hc229ht1024.jsonld#chain-pitch-belief",
+         "@id": "copies/hc229ht1024#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5173,
        "n": 26991,
        "@annotation": {
-        "@id": "copies/hc229ht1024.jsonld#advance-annotation",
+        "@id": "copies/hc229ht1024#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hc229ht1024.jsonld#advance-belief",
+         "@id": "copies/hc229ht1024#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

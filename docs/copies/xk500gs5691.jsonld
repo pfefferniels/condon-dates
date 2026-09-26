@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xk500gs5691.jsonld",
+ "@id": "copies/xk500gs5691",
  "title": "Condon Roll 96, WM 337",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xk500gs5691.jsonld#copy",
+   "@id": "copies/xk500gs5691#copy",
    "label": "Condon Roll 96",
    "identifier": "Stanford Libraries CONDON ROLL 96",
    "seeAlso": "https://purl.stanford.edu/xk500gs5691",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xk500gs5691.jsonld#inscription",
+       "@id": "copies/xk500gs5691#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xk500gs5691%2Fxk500gs5691_0001/3322,121346,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xk500gs5691.jsonld#inscription-text",
-        "text": "22. 10. 8  [signature]"
+        "@id": "copies/xk500gs5691#inscription-text",
+        "text": "22. 10. 8  [signature]",
+        "@annotation": {
+         "@id": "copies/xk500gs5691#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xk500gs5691#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xk500gs5691#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Faint pencil. '22' is plain and the last figure is an 8, so 1908 is safe; the middle is either '10' with a single-figure year 8 (22 October 1908) or a month '1' with the year '08' (22 January 1908). I read the marks as '10' then '8' from their spacing, but the other reading is possible. The flourished signature that follows may be Schäfer. Crop 3 shows the leader label 'No. 337 / Berliner Luft / Marsch / P. Lincke / Gespielt von Albrecht Kupfernagel / 4. IV. 05.' — that printed date belongs to the label, not to the punching."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "B. Schäfer",
       "sameAs": [],
-      "@id": "hands.jsonld#b-schaefer",
+      "@id": "hands#b-schaefer",
       "@annotation": {
-       "@id": "copies/xk500gs5691.jsonld#hand-annotation",
+       "@id": "copies/xk500gs5691#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/xk500gs5691.jsonld#hand-belief",
+        "@id": "copies/xk500gs5691#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/xk500gs5691.jsonld#inscription-text"
+           "copies/xk500gs5691#inscription-text"
           ],
           "note": "Read as \"Schäfer?\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1908-10-22",
      "@annotation": {
-      "@id": "copies/xk500gs5691.jsonld#date-annotation",
+      "@id": "copies/xk500gs5691#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/xk500gs5691.jsonld#date-belief",
+       "@id": "copies/xk500gs5691#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/xk500gs5691.jsonld#inscription-text"
+          "copies/xk500gs5691#inscription-text"
          ],
-         "note": "Faint pencil. '22' is plain and the last figure is an 8, so 1908 is safe; the middle is either '10' with a single-figure year 8 (22 October 1908) or a month '1' with the year '08' (22 January 1908). I read the marks as '10' then '8' from their spacing, but the other reading is possible. The flourished signature that follows may be Schäfer. Crop 3 shows the leader label 'No. 337 / Berliner Luft / Marsch / P. Lincke / Gespielt von Albrecht Kupfernagel / 4. IV. 05.' — that printed date belongs to the label, not to the punching."
+         "note": "\"22.10.8\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/xk500gs5691#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xk500gs5691.jsonld#perforator",
+     "@id": "copies/xk500gs5691#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.3222,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xk500gs5691.jsonld#punch-diameter-annotation",
+        "@id": "copies/xk500gs5691#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xk500gs5691.jsonld#punch-diameter-belief",
+         "@id": "copies/xk500gs5691#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.5425,
        "n": 203,
        "@annotation": {
-        "@id": "copies/xk500gs5691.jsonld#chain-pitch-annotation",
+        "@id": "copies/xk500gs5691#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xk500gs5691.jsonld#chain-pitch-belief",
+         "@id": "copies/xk500gs5691#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.1238,
        "n": 5218,
        "@annotation": {
-        "@id": "copies/xk500gs5691.jsonld#advance-annotation",
+        "@id": "copies/xk500gs5691#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xk500gs5691.jsonld#advance-belief",
+         "@id": "copies/xk500gs5691#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

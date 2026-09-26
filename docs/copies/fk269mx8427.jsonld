@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/fk269mx8427.jsonld",
+ "@id": "copies/fk269mx8427",
  "title": "Condon Roll 713, WM 2998",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/fk269mx8427.jsonld#copy",
+   "@id": "copies/fk269mx8427#copy",
    "label": "Condon Roll 713",
    "identifier": "Stanford Libraries CONDON ROLL 713",
    "seeAlso": "https://purl.stanford.edu/fk269mx8427",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/fk269mx8427.jsonld#inscription",
+       "@id": "copies/fk269mx8427#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/fk269mx8427%2Ffk269mx8427_0001/3508,151699,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/fk269mx8427.jsonld#inscription-text",
-        "text": "8. 11. 21"
+        "@id": "copies/fk269mx8427#inscription-text",
+        "text": "8. 11. 21",
+        "@annotation": {
+         "@id": "copies/fk269mx8427#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/fk269mx8427#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/fk269mx8427#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Faint pencil, read from the lower (180 degree) panel; the figures are at the limit of the scan and the day could be 6 or 18. A separate large G-like mark stands further along the same crop. Region 2 carries a four-figure pencil number, 1808 or 1606, not a date; region 3 shows only a fibre; region 4 is the leader with the printed label WELTE-MIGNON No. 2998, Polonaise E minor Op. 46 No. 12, E. Mac Dowell, played by O. E. Gorges."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1921-11-08",
      "@annotation": {
-      "@id": "copies/fk269mx8427.jsonld#date-annotation",
+      "@id": "copies/fk269mx8427#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/fk269mx8427.jsonld#date-belief",
+       "@id": "copies/fk269mx8427#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/fk269mx8427.jsonld#inscription-text"
+          "copies/fk269mx8427#inscription-text"
          ],
-         "note": "faint pencil, read from the lower (180 degree) panel; the figures are at the limit of the scan and the day could be 6 or 18. A separate large G-like mark stands further along the same crop. Region 2 carries a four-figure pencil number, 1808 or 1606, not a date; region 3 shows only a fibre; region 4 is the leader with the printed label WELTE-MIGNON No. 2998, Polonaise E minor Op. 46 No. 12, E. Mac Dowell, played by O. E. Gorges."
+         "note": "\"8. 11. 21\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/fk269mx8427#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/fk269mx8427.jsonld#perforator",
+     "@id": "copies/fk269mx8427#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8324,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/fk269mx8427.jsonld#punch-diameter-annotation",
+        "@id": "copies/fk269mx8427#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fk269mx8427.jsonld#punch-diameter-belief",
+         "@id": "copies/fk269mx8427#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5412,
        "n": 359,
        "@annotation": {
-        "@id": "copies/fk269mx8427.jsonld#chain-pitch-annotation",
+        "@id": "copies/fk269mx8427#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fk269mx8427.jsonld#chain-pitch-belief",
+         "@id": "copies/fk269mx8427#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5461,
        "n": 8983,
        "@annotation": {
-        "@id": "copies/fk269mx8427.jsonld#advance-annotation",
+        "@id": "copies/fk269mx8427#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fk269mx8427.jsonld#advance-belief",
+         "@id": "copies/fk269mx8427#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

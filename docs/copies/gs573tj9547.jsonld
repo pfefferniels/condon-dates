@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/gs573tj9547.jsonld",
+ "@id": "copies/gs573tj9547",
  "title": "Condon Roll 415, WM 1328",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/gs573tj9547.jsonld#copy",
+   "@id": "copies/gs573tj9547#copy",
    "label": "Condon Roll 415",
    "identifier": "Stanford Libraries CONDON ROLL 415",
    "seeAlso": "https://purl.stanford.edu/gs573tj9547",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/gs573tj9547.jsonld#inscription",
+       "@id": "copies/gs573tj9547#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/gs573tj9547%2Fgs573tj9547_0001/3521,130761,460,1924/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/gs573tj9547.jsonld#inscription-text",
-        "text": "1328  29. 1.12  Hohmüller / Wössler"
+        "@id": "copies/gs573tj9547#inscription-text",
+        "text": "1328  29. 1.12  Hohmüller / Wössler",
+        "@annotation": {
+         "@id": "copies/gs573tj9547#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/gs573tj9547#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/gs573tj9547#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, upper panel upright: the number at the left, the date in the middle, one name to the right and a second below it. Every figure of the date is plain. Wössler is the hand already known from this corpus; the name above it I read as Hohmüller, though the minims after Hohm- could as well give Hohmüler and I cannot be sure of the umlaut."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Hohnrieder",
       "sameAs": [],
-      "@id": "hands.jsonld#hohnrieder",
+      "@id": "hands#hohnrieder",
       "@annotation": {
-       "@id": "copies/gs573tj9547.jsonld#hand-annotation",
+       "@id": "copies/gs573tj9547#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/gs573tj9547.jsonld#hand-belief",
+        "@id": "copies/gs573tj9547#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/gs573tj9547.jsonld#inscription-text"
+           "copies/gs573tj9547#inscription-text"
           ],
-          "note": "Read as \"Hohmüller, Wössler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Hohmüller, Wössler\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1912-01-29",
      "@annotation": {
-      "@id": "copies/gs573tj9547.jsonld#date-annotation",
+      "@id": "copies/gs573tj9547#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/gs573tj9547.jsonld#date-belief",
+       "@id": "copies/gs573tj9547#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/gs573tj9547.jsonld#inscription-text"
+          "copies/gs573tj9547#inscription-text"
          ],
-         "note": "Ink, upper panel upright: the number at the left, the date in the middle, one name to the right and a second below it. Every figure of the date is plain. Wössler is the hand already known from this corpus; the name above it I read as Hohmüller, though the minims after Hohm- could as well give Hohmüler and I cannot be sure of the umlaut."
+         "note": "\"29. 1.12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/gs573tj9547#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/gs573tj9547.jsonld#perforator",
+     "@id": "copies/gs573tj9547#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.3585,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/gs573tj9547.jsonld#punch-diameter-annotation",
+        "@id": "copies/gs573tj9547#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gs573tj9547.jsonld#punch-diameter-belief",
+         "@id": "copies/gs573tj9547#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.6955,
        "n": 298,
        "@annotation": {
-        "@id": "copies/gs573tj9547.jsonld#chain-pitch-annotation",
+        "@id": "copies/gs573tj9547#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gs573tj9547.jsonld#chain-pitch-belief",
+         "@id": "copies/gs573tj9547#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.0714,
        "n": 7474,
        "@annotation": {
-        "@id": "copies/gs573tj9547.jsonld#advance-annotation",
+        "@id": "copies/gs573tj9547#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/gs573tj9547.jsonld#advance-belief",
+         "@id": "copies/gs573tj9547#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

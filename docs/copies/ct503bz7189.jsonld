@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ct503bz7189.jsonld",
+ "@id": "copies/ct503bz7189",
  "title": "Condon Roll 848, WM 3842",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ct503bz7189.jsonld#copy",
+   "@id": "copies/ct503bz7189#copy",
    "label": "Condon Roll 848",
    "identifier": "Stanford Libraries CONDON ROLL 848",
    "seeAlso": "https://purl.stanford.edu/ct503bz7189",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ct503bz7189.jsonld#inscription",
+       "@id": "copies/ct503bz7189#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ct503bz7189%2Fct503bz7189_0001/3508,349713,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ct503bz7189.jsonld#inscription-text",
-        "text": "2111.23"
+        "@id": "copies/ct503bz7189#inscription-text",
+        "text": "2111.23",
+        "@annotation": {
+         "@id": "copies/ct503bz7189#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ct503bz7189#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ct503bz7189#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, written across the roll; the point before the year marks 2111 as day and month, so 21.11.23. Same hand as qv976bq3639"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1923-11-21",
      "@annotation": {
-      "@id": "copies/ct503bz7189.jsonld#date-annotation",
+      "@id": "copies/ct503bz7189#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ct503bz7189.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/ct503bz7189#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ct503bz7189.jsonld#inscription-text"
+          "copies/ct503bz7189#inscription-text"
          ],
-         "note": "ink, written across the roll; the point before the year marks 2111 as day and month, so 21.11.23. Same hand as qv976bq3639"
+         "note": "The figures of \"2111.23\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ct503bz7189#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ct503bz7189.jsonld#perforator",
+     "@id": "copies/ct503bz7189#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.84,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ct503bz7189.jsonld#punch-diameter-annotation",
+        "@id": "copies/ct503bz7189#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ct503bz7189.jsonld#punch-diameter-belief",
+         "@id": "copies/ct503bz7189#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.5362,
        "n": 367,
        "@annotation": {
-        "@id": "copies/ct503bz7189.jsonld#chain-pitch-annotation",
+        "@id": "copies/ct503bz7189#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ct503bz7189.jsonld#chain-pitch-belief",
+         "@id": "copies/ct503bz7189#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5073,
        "n": 24593,
        "@annotation": {
-        "@id": "copies/ct503bz7189.jsonld#advance-annotation",
+        "@id": "copies/ct503bz7189#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ct503bz7189.jsonld#advance-belief",
+         "@id": "copies/ct503bz7189#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

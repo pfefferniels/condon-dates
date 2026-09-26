@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rb861vm6094.jsonld",
+ "@id": "copies/rb861vm6094",
  "title": "Condon Roll 729, WM 3056",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rb861vm6094.jsonld#copy",
+   "@id": "copies/rb861vm6094#copy",
    "label": "Condon Roll 729",
    "identifier": "Stanford Libraries CONDON ROLL 729",
    "seeAlso": "https://purl.stanford.edu/rb861vm6094",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rb861vm6094.jsonld#inscription",
+       "@id": "copies/rb861vm6094#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rb861vm6094%2Frb861vm6094_0001/3509,468317,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rb861vm6094.jsonld#inscription-text",
-        "text": "18722"
+        "@id": "copies/rb861vm6094#inscription-text",
+        "text": "18722",
+        "@annotation": {
+         "@id": "copies/rb861vm6094#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rb861vm6094#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rb861vm6094#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil on buff paper, five figures without separators. The 7 carries the crossbar; the two 2s match each other. The second figure is the two-lobed 8 of these hands, which read as a 6 would make the day 16."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-07-18",
      "@annotation": {
-      "@id": "copies/rb861vm6094.jsonld#date-annotation",
+      "@id": "copies/rb861vm6094#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rb861vm6094.jsonld#date-belief",
+       "@id": "copies/rb861vm6094#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rb861vm6094.jsonld#inscription-text"
+          "copies/rb861vm6094#inscription-text"
          ],
-         "note": "Pencil on buff paper, five figures without separators. The 7 carries the crossbar; the two 2s match each other. The second figure is the two-lobed 8 of these hands, which read as a 6 would make the day 16."
+         "note": "The figures of \"18722\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rb861vm6094#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rb861vm6094.jsonld#perforator",
+     "@id": "copies/rb861vm6094#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7418,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rb861vm6094.jsonld#punch-diameter-annotation",
+        "@id": "copies/rb861vm6094#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rb861vm6094.jsonld#punch-diameter-belief",
+         "@id": "copies/rb861vm6094#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7103,
        "n": 340,
        "@annotation": {
-        "@id": "copies/rb861vm6094.jsonld#chain-pitch-annotation",
+        "@id": "copies/rb861vm6094#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rb861vm6094.jsonld#chain-pitch-belief",
+         "@id": "copies/rb861vm6094#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6106,
        "n": 36826,
        "@annotation": {
-        "@id": "copies/rb861vm6094.jsonld#advance-annotation",
+        "@id": "copies/rb861vm6094#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rb861vm6094.jsonld#advance-belief",
+         "@id": "copies/rb861vm6094#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

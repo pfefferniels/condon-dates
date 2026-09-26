@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hx184ww0780.jsonld",
+ "@id": "copies/hx184ww0780",
  "title": "Condon Roll 2, WM 10",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hx184ww0780.jsonld#copy",
+   "@id": "copies/hx184ww0780#copy",
    "label": "Condon Roll 2",
    "identifier": "Stanford Libraries CONDON ROLL 2",
    "seeAlso": "https://purl.stanford.edu/hx184ww0780",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hx184ww0780.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/hx184ww0780#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 22584.81,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hx184ww0780%2Fhx184ww0780_0001/3525,266972,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hx184ww0780.jsonld#inscription-text",
-        "text": "28125"
+        "@id": "copies/hx184ww0780#inscription-text",
+        "text": "28125",
+        "@annotation": {
+         "@id": "copies/hx184ww0780#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hx184ww0780#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hx184ww0780#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Stamped, not written; small bracket marks flank the figures and the right one is over-inked into a blob, so a further figure there cannot be wholly excluded. Read as 28.1.25 on the pattern of the identically stamped 27125 on sw740gd4329. Region 5 is the printed leader label (Welte-Mignon No. 10, The harmonious Blacksmith, Handel)."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1925-01-28",
      "@annotation": {
-      "@id": "copies/hx184ww0780.jsonld#date-annotation",
+      "@id": "copies/hx184ww0780#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hx184ww0780.jsonld#date-belief",
+       "@id": "copies/hx184ww0780#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hx184ww0780.jsonld#inscription-text"
+          "copies/hx184ww0780#inscription-text"
          ],
-         "note": "stamped, not written; small bracket marks flank the figures and the right one is over-inked into a blob, so a further figure there cannot be wholly excluded. Read as 28.1.25 on the pattern of the identically stamped 27125 on sw740gd4329. Region 5 is the printed leader label (Welte-Mignon No. 10, The harmonious Blacksmith, Handel)."
+         "note": "The figures of \"28125\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hx184ww0780#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hx184ww0780.jsonld#perforator",
+     "@id": "copies/hx184ww0780#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7554,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hx184ww0780.jsonld#punch-diameter-annotation",
+        "@id": "copies/hx184ww0780#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hx184ww0780.jsonld#punch-diameter-belief",
+         "@id": "copies/hx184ww0780#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.633,
        "n": 441,
        "@annotation": {
-        "@id": "copies/hx184ww0780.jsonld#chain-pitch-annotation",
+        "@id": "copies/hx184ww0780#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hx184ww0780.jsonld#chain-pitch-belief",
+         "@id": "copies/hx184ww0780#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4085,
        "n": 22329,
        "@annotation": {
-        "@id": "copies/hx184ww0780.jsonld#advance-annotation",
+        "@id": "copies/hx184ww0780#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hx184ww0780.jsonld#advance-belief",
+         "@id": "copies/hx184ww0780#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

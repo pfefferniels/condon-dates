@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/wv912mm2332.jsonld",
+ "@id": "copies/wv912mm2332",
  "title": "Condon Roll 48, WM 225",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/wv912mm2332.jsonld#copy",
+   "@id": "copies/wv912mm2332#copy",
    "label": "Condon Roll 48",
    "identifier": "Stanford Libraries CONDON ROLL 48",
    "seeAlso": "https://purl.stanford.edu/wv912mm2332",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/wv912mm2332.jsonld#inscription",
+       "@id": "copies/wv912mm2332#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/wv912mm2332%2Fwv912mm2332_0001/3484,122549,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/wv912mm2332.jsonld#inscription-text",
-        "text": "225.  14.  114."
+        "@id": "copies/wv912mm2332#inscription-text",
+        "text": "225.  14.  114.",
+        "@annotation": {
+         "@id": "copies/wv912mm2332#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/wv912mm2332#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/wv912mm2332#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil. Every figure is plain; the grouping follows the corpus convention that 14114 stands for 14.1.1914."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1914-01-14",
      "@annotation": {
-      "@id": "copies/wv912mm2332.jsonld#date-annotation",
+      "@id": "copies/wv912mm2332#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/wv912mm2332.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/wv912mm2332#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/wv912mm2332.jsonld#inscription-text"
+          "copies/wv912mm2332#inscription-text"
          ],
-         "note": "pencil. Every figure is plain; the grouping follows the corpus convention that 14114 stands for 14.1.1914."
+         "note": "The figures of \"14. 114.\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/wv912mm2332#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/wv912mm2332.jsonld#perforator",
+     "@id": "copies/wv912mm2332#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.235,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/wv912mm2332.jsonld#punch-diameter-annotation",
+        "@id": "copies/wv912mm2332#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wv912mm2332.jsonld#punch-diameter-belief",
+         "@id": "copies/wv912mm2332#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6512,
        "n": 373,
        "@annotation": {
-        "@id": "copies/wv912mm2332.jsonld#chain-pitch-annotation",
+        "@id": "copies/wv912mm2332#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wv912mm2332.jsonld#chain-pitch-belief",
+         "@id": "copies/wv912mm2332#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4651,
        "n": 10441,
        "@annotation": {
-        "@id": "copies/wv912mm2332.jsonld#advance-annotation",
+        "@id": "copies/wv912mm2332#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wv912mm2332.jsonld#advance-belief",
+         "@id": "copies/wv912mm2332#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

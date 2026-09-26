@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/sc188ff2842.jsonld",
+ "@id": "copies/sc188ff2842",
  "title": "Condon Roll 381, WM 1260",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/sc188ff2842.jsonld#copy",
+   "@id": "copies/sc188ff2842#copy",
    "label": "Condon Roll 381",
    "identifier": "Stanford Libraries CONDON ROLL 381",
    "seeAlso": "https://purl.stanford.edu/sc188ff2842",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/sc188ff2842.jsonld#inscription",
+       "@id": "copies/sc188ff2842#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/sc188ff2842%2Fsc188ff2842_0001/3499,186161,460,1996/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/sc188ff2842.jsonld#inscription-text",
-        "text": "1260    21. 7. 11    Krämer / Wössler"
+        "@id": "copies/sc188ff2842#inscription-text",
+        "text": "1260    21. 7. 11    Krämer / Wössler",
+        "@annotation": {
+         "@id": "copies/sc188ff2842#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/sc188ff2842#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/sc188ff2842#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, the number at the left, the date in the middle, Krämer at the right with the umlaut stroke plain and Wössler written under it. The same two names and the same hand as wp442mf3514 in batch 14, which carries 25. 4. 11. The month figure is the crossbarred 7 of this hand, not the H-shaped 4 it writes elsewhere, and the year is two separate 1 strokes."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Krämer",
       "sameAs": [],
-      "@id": "hands.jsonld#kraemer",
+      "@id": "hands#kraemer",
       "@annotation": {
-       "@id": "copies/sc188ff2842.jsonld#hand-annotation",
+       "@id": "copies/sc188ff2842#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/sc188ff2842.jsonld#hand-belief",
+        "@id": "copies/sc188ff2842#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/sc188ff2842.jsonld#inscription-text"
+           "copies/sc188ff2842#inscription-text"
           ],
-          "note": "Read as \"Krämer / Wössler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Krämer / Wössler\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1911-07-21",
      "@annotation": {
-      "@id": "copies/sc188ff2842.jsonld#date-annotation",
+      "@id": "copies/sc188ff2842#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/sc188ff2842.jsonld#date-belief",
+       "@id": "copies/sc188ff2842#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/sc188ff2842.jsonld#inscription-text"
+          "copies/sc188ff2842#inscription-text"
          ],
-         "note": "Ink, the number at the left, the date in the middle, Krämer at the right with the umlaut stroke plain and Wössler written under it. The same two names and the same hand as wp442mf3514 in batch 14, which carries 25. 4. 11. The month figure is the crossbarred 7 of this hand, not the H-shaped 4 it writes elsewhere, and the year is two separate 1 strokes."
+         "note": "\"21. 7. 11\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/sc188ff2842#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/sc188ff2842.jsonld#perforator",
+     "@id": "copies/sc188ff2842#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.191,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/sc188ff2842.jsonld#punch-diameter-annotation",
+        "@id": "copies/sc188ff2842#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sc188ff2842.jsonld#punch-diameter-belief",
+         "@id": "copies/sc188ff2842#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.6645,
        "n": 266,
        "@annotation": {
-        "@id": "copies/sc188ff2842.jsonld#chain-pitch-annotation",
+        "@id": "copies/sc188ff2842#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sc188ff2842.jsonld#chain-pitch-belief",
+         "@id": "copies/sc188ff2842#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.111,
        "n": 11125,
        "@annotation": {
-        "@id": "copies/sc188ff2842.jsonld#advance-annotation",
+        "@id": "copies/sc188ff2842#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sc188ff2842.jsonld#advance-belief",
+         "@id": "copies/sc188ff2842#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

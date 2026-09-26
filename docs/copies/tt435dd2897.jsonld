@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/tt435dd2897.jsonld",
+ "@id": "copies/tt435dd2897",
  "title": "Condon Roll 86, WM 326",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/tt435dd2897.jsonld#copy",
+   "@id": "copies/tt435dd2897#copy",
    "label": "Condon Roll 86",
    "identifier": "Stanford Libraries CONDON ROLL 86",
    "seeAlso": "https://purl.stanford.edu/tt435dd2897",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/tt435dd2897.jsonld#inscription",
+       "@id": "copies/tt435dd2897#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/tt435dd2897%2Ftt435dd2897_0001/3525,261181,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/tt435dd2897.jsonld#inscription-text",
-        "text": "326,  26. 1. 14,"
+        "@id": "copies/tt435dd2897#inscription-text",
+        "text": "326,  26. 1. 14,",
+        "@annotation": {
+         "@id": "copies/tt435dd2897#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/tt435dd2897#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/tt435dd2897#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Read here at magnification; confirms the first reader, who left it at medium. Number matches the catalogue and the printed leader label."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1914-01-26",
      "@annotation": {
-      "@id": "copies/tt435dd2897.jsonld#date-annotation",
+      "@id": "copies/tt435dd2897#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/tt435dd2897.jsonld#date-belief",
+       "@id": "copies/tt435dd2897#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/tt435dd2897.jsonld#inscription-text"
+          "copies/tt435dd2897#inscription-text"
          ],
-         "note": "read here at magnification; confirms the first reader, who left it at medium. Number matches the catalogue and the printed leader label."
+         "note": "\"26. 1. 14\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/tt435dd2897#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/tt435dd2897.jsonld#perforator",
+     "@id": "copies/tt435dd2897#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0498,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/tt435dd2897.jsonld#punch-diameter-annotation",
+        "@id": "copies/tt435dd2897#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tt435dd2897.jsonld#punch-diameter-belief",
+         "@id": "copies/tt435dd2897#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.8163,
        "n": 248,
        "@annotation": {
-        "@id": "copies/tt435dd2897.jsonld#chain-pitch-annotation",
+        "@id": "copies/tt435dd2897#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tt435dd2897.jsonld#chain-pitch-belief",
+         "@id": "copies/tt435dd2897#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6187,
        "n": 12501,
        "@annotation": {
-        "@id": "copies/tt435dd2897.jsonld#advance-annotation",
+        "@id": "copies/tt435dd2897#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tt435dd2897.jsonld#advance-belief",
+         "@id": "copies/tt435dd2897#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

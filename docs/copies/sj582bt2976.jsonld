@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/sj582bt2976.jsonld",
+ "@id": "copies/sj582bt2976",
  "title": "Condon Roll 683, WM 2799",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/sj582bt2976.jsonld#copy",
+   "@id": "copies/sj582bt2976#copy",
    "label": "Condon Roll 683",
    "identifier": "Stanford Libraries CONDON ROLL 683",
    "seeAlso": "https://purl.stanford.edu/sj582bt2976",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/sj582bt2976.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/sj582bt2976#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 45430.34,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/sj582bt2976%2Fsj582bt2976_0001/2914,537026,1100,2600/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/sj582bt2976.jsonld#inscription-text",
-        "text": "19825."
+        "@id": "copies/sj582bt2976#inscription-text",
+        "text": "19825.",
+        "@annotation": {
+         "@id": "copies/sj582bt2976#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/sj582bt2976#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/sj582bt2976#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. A stamp, not a hand, set across the roll in w1 and well clear of the crop edge. Five marks and a point: a heavy leading mark shaped like a serif 1 but carrying a smear of ink at its foot, then 9, 8, an over-inked figure with a counter above a solid base which I take for 2, and 5. Read straight through this is 19. 8. 25. The warning about the stamped rolls applies here: the figures without the leading mark, 9825, already make a possible date, 9. 8. 25., so the day is either 9 or 19 and I cannot choose between them from this impression alone. August 1925 is firm; the fourth figure would have to be a 0 for 1905, and it is not an even ring. w2-w4 show a torn edge, tissue and perforations, with no second impression of the same stamp to compare the leading mark against."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -80,18 +98,25 @@
      "after": "1925-08-01",
      "before": "1925-08-31",
      "@annotation": {
-      "@id": "copies/sj582bt2976.jsonld#date-annotation",
+      "@id": "copies/sj582bt2976#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/sj582bt2976.jsonld#date-belief",
+       "@id": "copies/sj582bt2976#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/sj582bt2976.jsonld#inscription-text"
+          "copies/sj582bt2976#inscription-text"
          ],
-         "note": "A stamp, not a hand, set across the roll in w1 and well clear of the crop edge. Five marks and a point: a heavy leading mark shaped like a serif 1 but carrying a smear of ink at its foot, then 9, 8, an over-inked figure with a counter above a solid base which I take for 2, and 5. Read straight through this is 19. 8. 25. The warning about the stamped rolls applies here: the figures without the leading mark, 9825, already make a possible date, 9. 8. 25., so the day is either 9 or 19 and I cannot choose between them from this impression alone. August 1925 is firm; the fourth figure would have to be a 0 for 1905, and it is not an even ring. w2-w4 show a torn edge, tissue and perforations, with no second impression of the same stamp to compare the leading mark against."
+         "note": "\"[1]9. 8. 25.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/sj582bt2976#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/sj582bt2976.jsonld#perforator",
+     "@id": "copies/sj582bt2976#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7105,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/sj582bt2976.jsonld#punch-diameter-annotation",
+        "@id": "copies/sj582bt2976#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sj582bt2976.jsonld#punch-diameter-belief",
+         "@id": "copies/sj582bt2976#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6598,
        "n": 397,
        "@annotation": {
-        "@id": "copies/sj582bt2976.jsonld#chain-pitch-annotation",
+        "@id": "copies/sj582bt2976#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sj582bt2976.jsonld#chain-pitch-belief",
+         "@id": "copies/sj582bt2976#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5624,
        "n": 43726,
        "@annotation": {
-        "@id": "copies/sj582bt2976.jsonld#advance-annotation",
+        "@id": "copies/sj582bt2976#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/sj582bt2976.jsonld#advance-belief",
+         "@id": "copies/sj582bt2976#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

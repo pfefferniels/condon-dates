@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/bz327kz4744.jsonld",
+ "@id": "copies/bz327kz4744",
  "title": "Condon Roll 939, WM 5634",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/bz327kz4744.jsonld#copy",
+   "@id": "copies/bz327kz4744#copy",
    "label": "Condon Roll 939",
    "identifier": "Stanford Libraries CONDON ROLL 939",
    "seeAlso": "https://purl.stanford.edu/bz327kz4744",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/bz327kz4744.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/bz327kz4744#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 10070.33,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/bz327kz4744%2Fbz327kz4744_0001/3470,119040,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/bz327kz4744.jsonld#inscription-text",
-        "text": "121224"
+        "@id": "copies/bz327kz4744#inscription-text",
+        "text": "121224",
+        "@annotation": {
+         "@id": "copies/bz327kz4744#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/bz327kz4744#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/bz327kz4744#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Stamped, upright in the lower panel and running slightly uphill. All six figures plain: 1 2 1 2 2 4, so 12.12.24. The same small serifed face as rd899zb5188, here evenly inked."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-12-12",
      "@annotation": {
-      "@id": "copies/bz327kz4744.jsonld#date-annotation",
+      "@id": "copies/bz327kz4744#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/bz327kz4744.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/bz327kz4744#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/bz327kz4744.jsonld#inscription-text"
+          "copies/bz327kz4744#inscription-text"
          ],
-         "note": "stamped, upright in the lower panel and running slightly uphill. All six figures plain: 1 2 1 2 2 4, so 12.12.24. The same small serifed face as rd899zb5188, here evenly inked."
+         "note": "The figures of \"121224\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/bz327kz4744#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/bz327kz4744.jsonld#perforator",
+     "@id": "copies/bz327kz4744#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8307,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/bz327kz4744.jsonld#punch-diameter-annotation",
+        "@id": "copies/bz327kz4744#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bz327kz4744.jsonld#punch-diameter-belief",
+         "@id": "copies/bz327kz4744#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.5611,
        "n": 286,
        "@annotation": {
-        "@id": "copies/bz327kz4744.jsonld#chain-pitch-annotation",
+        "@id": "copies/bz327kz4744#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bz327kz4744.jsonld#chain-pitch-belief",
+         "@id": "copies/bz327kz4744#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.6783,
        "n": 6267,
        "@annotation": {
-        "@id": "copies/bz327kz4744.jsonld#advance-annotation",
+        "@id": "copies/bz327kz4744#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bz327kz4744.jsonld#advance-belief",
+         "@id": "copies/bz327kz4744#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xw872bc8052.jsonld",
+ "@id": "copies/xw872bc8052",
  "title": "Condon Roll 82, WM 321",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xw872bc8052.jsonld#copy",
+   "@id": "copies/xw872bc8052#copy",
    "label": "Condon Roll 82",
    "identifier": "Stanford Libraries CONDON ROLL 82",
    "seeAlso": "https://purl.stanford.edu/xw872bc8052",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xw872bc8052.jsonld#inscription",
+       "@id": "copies/xw872bc8052#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xw872bc8052%2Fxw872bc8052_0001/3511,517820,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xw872bc8052.jsonld#inscription-text",
-        "text": "2622"
+        "@id": "copies/xw872bc8052#inscription-text",
+        "text": "2622",
+        "@annotation": {
+         "@id": "copies/xw872bc8052#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xw872bc8052#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xw872bc8052#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Grey-green paper. Crop 1 carries 2622 alone, crop 3 the number 321, crop 5 the printed label 'WELTE-MIGNON. No. 321 / Carneval / Part 1 / R. Schumann'. Since the roll's number is written separately as 321, the four figures are taken as a compressed 2.6.22, on the pattern of 14114 = 14.1.1914; the grouping is inferred, not written"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-06-02",
      "@annotation": {
-      "@id": "copies/xw872bc8052.jsonld#date-annotation",
+      "@id": "copies/xw872bc8052#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/xw872bc8052.jsonld#date-belief",
+       "@id": "copies/xw872bc8052#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/xw872bc8052.jsonld#inscription-text"
+          "copies/xw872bc8052#inscription-text"
          ],
-         "note": "grey-green paper. Crop 1 carries 2622 alone, crop 3 the number 321, crop 5 the printed label 'WELTE-MIGNON. No. 321 / Carneval / Part 1 / R. Schumann'. Since the roll's number is written separately as 321, the four figures are taken as a compressed 2.6.22, on the pattern of 14114 = 14.1.1914; the grouping is inferred, not written"
+         "note": "The figures of \"2622\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/xw872bc8052#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xw872bc8052.jsonld#perforator",
+     "@id": "copies/xw872bc8052#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7215,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xw872bc8052.jsonld#punch-diameter-annotation",
+        "@id": "copies/xw872bc8052#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xw872bc8052.jsonld#punch-diameter-belief",
+         "@id": "copies/xw872bc8052#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6926,
        "n": 308,
        "@annotation": {
-        "@id": "copies/xw872bc8052.jsonld#chain-pitch-annotation",
+        "@id": "copies/xw872bc8052#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xw872bc8052.jsonld#chain-pitch-belief",
+         "@id": "copies/xw872bc8052#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4355,
        "n": 29788,
        "@annotation": {
-        "@id": "copies/xw872bc8052.jsonld#advance-annotation",
+        "@id": "copies/xw872bc8052#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xw872bc8052.jsonld#advance-belief",
+         "@id": "copies/xw872bc8052#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

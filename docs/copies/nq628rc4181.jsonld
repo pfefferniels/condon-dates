@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/nq628rc4181.jsonld",
+ "@id": "copies/nq628rc4181",
  "title": "Condon Roll 12, WM 83",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/nq628rc4181.jsonld#copy",
+   "@id": "copies/nq628rc4181#copy",
    "label": "Condon Roll 12",
    "identifier": "Stanford Libraries CONDON ROLL 12",
    "seeAlso": "https://purl.stanford.edu/nq628rc4181",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/nq628rc4181.jsonld#inscription",
+       "@id": "copies/nq628rc4181#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/nq628rc4181%2Fnq628rc4181_0001/3536,205562,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/nq628rc4181.jsonld#inscription-text",
-        "text": "14922"
+        "@id": "copies/nq628rc4181#inscription-text",
+        "text": "14922",
+        "@annotation": {
+         "@id": "copies/nq628rc4181#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/nq628rc4181#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/nq628rc4181#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, no separators. Read 14.9.22. The third figure is an oval with a descending tail, so 9 rather than 0, which a month position would in any case exclude. Region 1 holds a flourished cursive monogram, possibly initials, that I could not read."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-09-14",
      "@annotation": {
-      "@id": "copies/nq628rc4181.jsonld#date-annotation",
+      "@id": "copies/nq628rc4181#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/nq628rc4181.jsonld#date-belief",
+       "@id": "copies/nq628rc4181#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/nq628rc4181.jsonld#inscription-text"
+          "copies/nq628rc4181#inscription-text"
          ],
-         "note": "pencil, no separators. Read 14.9.22. The third figure is an oval with a descending tail, so 9 rather than 0, which a month position would in any case exclude. Region 1 holds a flourished cursive monogram, possibly initials, that I could not read."
+         "note": "The figures of \"14922\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/nq628rc4181#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/nq628rc4181.jsonld#perforator",
+     "@id": "copies/nq628rc4181#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6065,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/nq628rc4181.jsonld#punch-diameter-annotation",
+        "@id": "copies/nq628rc4181#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nq628rc4181.jsonld#punch-diameter-belief",
+         "@id": "copies/nq628rc4181#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7966,
        "n": 378,
        "@annotation": {
-        "@id": "copies/nq628rc4181.jsonld#chain-pitch-annotation",
+        "@id": "copies/nq628rc4181#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nq628rc4181.jsonld#chain-pitch-belief",
+         "@id": "copies/nq628rc4181#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.1685,
        "n": 15555,
        "@annotation": {
-        "@id": "copies/nq628rc4181.jsonld#advance-annotation",
+        "@id": "copies/nq628rc4181#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nq628rc4181.jsonld#advance-belief",
+         "@id": "copies/nq628rc4181#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

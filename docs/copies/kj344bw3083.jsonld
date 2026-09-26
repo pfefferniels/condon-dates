@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/kj344bw3083.jsonld",
+ "@id": "copies/kj344bw3083",
  "title": "Condon Roll 406, WM 1307",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/kj344bw3083.jsonld#copy",
+   "@id": "copies/kj344bw3083#copy",
    "label": "Condon Roll 406",
    "identifier": "Stanford Libraries CONDON ROLL 406",
    "seeAlso": "https://purl.stanford.edu/kj344bw3083",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/kj344bw3083.jsonld#inscription",
+       "@id": "copies/kj344bw3083#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/kj344bw3083%2Fkj344bw3083_0001/3376,102810,720,2300/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/kj344bw3083.jsonld#inscription-text",
-        "text": "81122"
+        "@id": "copies/kj344bw3083#inscription-text",
+        "text": "81122",
+        "@annotation": {
+         "@id": "copies/kj344bw3083#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/kj344bw3083#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/kj344bw3083#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, five figures run together at the treble edge, steeply slanted: [8?] 1 1 2 2, i.e. 8.11.22. The month and year are plain; the first figure is two strokes converging on a single bottom bowl with the upper loop left open, the form reading.md warns is an 8 taken for a 6, so the day is either 8 or 6 and I have left date_iso at the month. e2 carries the roll number 1307 in a neater hand, which agrees with the leader label in e4 (WELTE-MIGNON No. 1307, An den Fruehling, Op. 43 No. 1, E. Grieg); e3 shows only ink offsets around the perforations."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -81,18 +99,25 @@
      "after": "1922-11-01",
      "before": "1922-11-30",
      "@annotation": {
-      "@id": "copies/kj344bw3083.jsonld#date-annotation",
+      "@id": "copies/kj344bw3083#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/kj344bw3083.jsonld#date-belief",
+       "@id": "copies/kj344bw3083#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/kj344bw3083.jsonld#inscription-text"
+          "copies/kj344bw3083#inscription-text"
          ],
-         "note": "Pencil, five figures run together at the treble edge, steeply slanted: [8?] 1 1 2 2, i.e. 8.11.22. The month and year are plain; the first figure is two strokes converging on a single bottom bowl with the upper loop left open, the form reading.md warns is an 8 taken for a 6, so the day is either 8 or 6 and I have left date_iso at the month. e2 carries the roll number 1307 in a neater hand, which agrees with the leader label in e4 (WELTE-MIGNON No. 1307, An den Fruehling, Op. 43 No. 1, E. Grieg); e3 shows only ink offsets around the perforations."
+         "note": "\"8.11.22\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/kj344bw3083#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -100,17 +125,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/kj344bw3083.jsonld#perforator",
+     "@id": "copies/kj344bw3083#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7317,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/kj344bw3083.jsonld#punch-diameter-annotation",
+        "@id": "copies/kj344bw3083#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kj344bw3083.jsonld#punch-diameter-belief",
+         "@id": "copies/kj344bw3083#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -132,10 +157,10 @@
        "bridge": 0.7362,
        "n": 350,
        "@annotation": {
-        "@id": "copies/kj344bw3083.jsonld#chain-pitch-annotation",
+        "@id": "copies/kj344bw3083#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kj344bw3083.jsonld#chain-pitch-belief",
+         "@id": "copies/kj344bw3083#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -156,10 +181,10 @@
        "strength": 0.2433,
        "n": 4585,
        "@annotation": {
-        "@id": "copies/kj344bw3083.jsonld#advance-annotation",
+        "@id": "copies/kj344bw3083#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kj344bw3083.jsonld#advance-belief",
+         "@id": "copies/kj344bw3083#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ht339gy6128.jsonld",
+ "@id": "copies/ht339gy6128",
  "title": "Condon Roll 576, WM 2313",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ht339gy6128.jsonld#copy",
+   "@id": "copies/ht339gy6128#copy",
    "label": "Condon Roll 576",
    "identifier": "Stanford Libraries CONDON ROLL 576",
    "seeAlso": "https://purl.stanford.edu/ht339gy6128",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ht339gy6128.jsonld#inscription",
+       "@id": "copies/ht339gy6128#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ht339gy6128%2Fht339gy6128_0001/3487,229590,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ht339gy6128.jsonld#inscription-text",
-        "text": "2313.  15.  6.12"
+        "@id": "copies/ht339gy6128#inscription-text",
+        "text": "2313.  15.  6.12",
+        "@annotation": {
+         "@id": "copies/ht339gy6128#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ht339gy6128#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ht339gy6128#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, single line, no name"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1912-06-15",
      "@annotation": {
-      "@id": "copies/ht339gy6128.jsonld#date-annotation",
+      "@id": "copies/ht339gy6128#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/ht339gy6128.jsonld#date-belief",
+       "@id": "copies/ht339gy6128#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/ht339gy6128.jsonld#inscription-text"
+          "copies/ht339gy6128#inscription-text"
          ],
-         "note": "pencil, single line, no name"
+         "note": "\"15. 6.12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/ht339gy6128#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ht339gy6128.jsonld#perforator",
+     "@id": "copies/ht339gy6128#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0117,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ht339gy6128.jsonld#punch-diameter-annotation",
+        "@id": "copies/ht339gy6128#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ht339gy6128.jsonld#punch-diameter-belief",
+         "@id": "copies/ht339gy6128#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7967,
        "n": 221,
        "@annotation": {
-        "@id": "copies/ht339gy6128.jsonld#chain-pitch-annotation",
+        "@id": "copies/ht339gy6128#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ht339gy6128.jsonld#chain-pitch-belief",
+         "@id": "copies/ht339gy6128#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4497,
        "n": 12802,
        "@annotation": {
-        "@id": "copies/ht339gy6128.jsonld#advance-annotation",
+        "@id": "copies/ht339gy6128#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ht339gy6128.jsonld#advance-belief",
+         "@id": "copies/ht339gy6128#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

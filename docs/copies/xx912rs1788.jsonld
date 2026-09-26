@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xx912rs1788.jsonld",
+ "@id": "copies/xx912rs1788",
  "title": "Condon Roll 450, WM 1346",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xx912rs1788.jsonld#copy",
+   "@id": "copies/xx912rs1788#copy",
    "label": "Condon Roll 450",
    "identifier": "Stanford Libraries CONDON ROLL 450",
    "seeAlso": "https://purl.stanford.edu/xx912rs1788",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xx912rs1788.jsonld#inscription",
+       "@id": "copies/xx912rs1788#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xx912rs1788%2Fxx912rs1788_0001/3510,538653,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xx912rs1788.jsonld#inscription-text",
-        "text": "No 1346  12. 11. 10.  Hst."
+        "@id": "copies/xx912rs1788#inscription-text",
+        "text": "No 1346  12. 11. 10.  Hst.",
+        "@annotation": {
+         "@id": "copies/xx912rs1788#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xx912rs1788#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xx912rs1788#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, one line on the lower (upright) panel, in the order number, date, initials. The three pairs of the date are each plain, 12 and 11 as parallel strokes and 10 as a 1 beside an oval. Two reservations that do not touch the date: the second figure of the roll number has a flat top stroke over a single bowl and could be read 5, giving 1546 instead of 1346; and the initials at the end are three letters closed by a point, whose capital could be H or K, so Hst. is the best I can make of them."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -67,16 +85,16 @@
       "name": "Hst.",
       "sameAs": [],
       "@annotation": {
-       "@id": "copies/xx912rs1788.jsonld#hand-annotation",
+       "@id": "copies/xx912rs1788#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/xx912rs1788.jsonld#hand-belief",
+        "@id": "copies/xx912rs1788#hand-belief",
         "certainty": "possible",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/xx912rs1788.jsonld#inscription-text"
+           "copies/xx912rs1788#inscription-text"
           ],
           "note": "Read as \"Hst.\"."
          }
@@ -101,18 +119,25 @@
     "date": {
      "within": "1910-11-12",
      "@annotation": {
-      "@id": "copies/xx912rs1788.jsonld#date-annotation",
+      "@id": "copies/xx912rs1788#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/xx912rs1788.jsonld#date-belief",
+       "@id": "copies/xx912rs1788#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/xx912rs1788.jsonld#inscription-text"
+          "copies/xx912rs1788#inscription-text"
          ],
-         "note": "Ink, one line on the lower (upright) panel, in the order number, date, initials. The three pairs of the date are each plain, 12 and 11 as parallel strokes and 10 as a 1 beside an oval. Two reservations that do not touch the date: the second figure of the roll number has a flat top stroke over a single bowl and could be read 5, giving 1546 instead of 1346; and the initials at the end are three letters closed by a point, whose capital could be H or K, so Hst. is the best I can make of them."
+         "note": "\"12. 11. 10.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/xx912rs1788#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -120,17 +145,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xx912rs1788.jsonld#perforator",
+     "@id": "copies/xx912rs1788#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1411,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xx912rs1788.jsonld#punch-diameter-annotation",
+        "@id": "copies/xx912rs1788#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xx912rs1788.jsonld#punch-diameter-belief",
+         "@id": "copies/xx912rs1788#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -152,10 +177,10 @@
        "bridge": 0.8167,
        "n": 444,
        "@annotation": {
-        "@id": "copies/xx912rs1788.jsonld#chain-pitch-annotation",
+        "@id": "copies/xx912rs1788#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xx912rs1788.jsonld#chain-pitch-belief",
+         "@id": "copies/xx912rs1788#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -176,10 +201,10 @@
        "strength": 0.4435,
        "n": 33878,
        "@annotation": {
-        "@id": "copies/xx912rs1788.jsonld#advance-annotation",
+        "@id": "copies/xx912rs1788#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xx912rs1788.jsonld#advance-belief",
+         "@id": "copies/xx912rs1788#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

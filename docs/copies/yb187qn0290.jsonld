@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/yb187qn0290.jsonld",
+ "@id": "copies/yb187qn0290",
  "title": "Condon Roll 362, WM 1246",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/yb187qn0290.jsonld#copy",
+   "@id": "copies/yb187qn0290#copy",
    "label": "Condon Roll 362",
    "identifier": "Stanford Libraries CONDON ROLL 362",
    "seeAlso": "https://purl.stanford.edu/yb187qn0290",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/yb187qn0290.jsonld#inscription",
+       "@id": "copies/yb187qn0290#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/yb187qn0290%2Fyb187qn0290_0001/3477,438377,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/yb187qn0290.jsonld#inscription-text",
-        "text": "1946.  9.4.13,  74."
+        "@id": "copies/yb187qn0290#inscription-text",
+        "text": "1946.  9.4.13,  74.",
+        "@annotation": {
+         "@id": "copies/yb187qn0290#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/yb187qn0290#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/yb187qn0290#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, single line, steeply slanted; read after deshearing. Crops 3 and 4 blank. Crop 2 shows the printed leader label 'WELTE-MIGNON No. 1246 / Sonate (Mondschein) I. und II. Teil / L. v. Beethoven', so the pencil number disagrees with the label. In the date the '1' of '13' is a short tick that could instead be a separator, which would leave '9.4.3'; the '3' could also be a '2'. The trailing '74.' is legible but unexplained."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1913-04-09",
      "@annotation": {
-      "@id": "copies/yb187qn0290.jsonld#date-annotation",
+      "@id": "copies/yb187qn0290#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/yb187qn0290.jsonld#date-belief",
+       "@id": "copies/yb187qn0290#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/yb187qn0290.jsonld#inscription-text"
+          "copies/yb187qn0290#inscription-text"
          ],
-         "note": "pencil, single line, steeply slanted; read after deshearing. Crops 3 and 4 blank. Crop 2 shows the printed leader label 'WELTE-MIGNON No. 1246 / Sonate (Mondschein) I. und II. Teil / L. v. Beethoven', so the pencil number disagrees with the label. In the date the '1' of '13' is a short tick that could instead be a separator, which would leave '9.4.3'; the '3' could also be a '2'. The trailing '74.' is legible but unexplained."
+         "note": "\"9.4.13\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/yb187qn0290#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/yb187qn0290.jsonld#perforator",
+     "@id": "copies/yb187qn0290#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8197,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/yb187qn0290.jsonld#punch-diameter-annotation",
+        "@id": "copies/yb187qn0290#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yb187qn0290.jsonld#punch-diameter-belief",
+         "@id": "copies/yb187qn0290#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6421,
        "n": 542,
        "@annotation": {
-        "@id": "copies/yb187qn0290.jsonld#chain-pitch-annotation",
+        "@id": "copies/yb187qn0290#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yb187qn0290.jsonld#chain-pitch-belief",
+         "@id": "copies/yb187qn0290#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.424,
        "n": 39117,
        "@annotation": {
-        "@id": "copies/yb187qn0290.jsonld#advance-annotation",
+        "@id": "copies/yb187qn0290#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yb187qn0290.jsonld#advance-belief",
+         "@id": "copies/yb187qn0290#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

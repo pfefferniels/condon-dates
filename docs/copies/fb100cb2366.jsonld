@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/fb100cb2366.jsonld",
+ "@id": "copies/fb100cb2366",
  "title": "Condon Roll 696, WM 2948",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/fb100cb2366.jsonld#copy",
+   "@id": "copies/fb100cb2366#copy",
    "label": "Condon Roll 696",
    "identifier": "Stanford Libraries CONDON ROLL 696",
    "seeAlso": "https://purl.stanford.edu/fb100cb2366",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/fb100cb2366.jsonld#inscription",
+       "@id": "copies/fb100cb2366#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/fb100cb2366%2Ffb100cb2366_0001/3504,442008,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/fb100cb2366.jsonld#inscription-text",
-        "text": "27. 4. 17."
+        "@id": "copies/fb100cb2366#inscription-text",
+        "text": "27. 4. 17.",
+        "@annotation": {
+         "@id": "copies/fb100cb2366#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/fb100cb2366#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/fb100cb2366#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, treble edge, at the tail of the roll just past the last hole. Both 7s are the barred continental form (upstroke, long diagonal down-left, crossbar); the 1 before the second 7 is a plain caret with no crossbar, so 17 and not 11 or 77. The 4 is the open-top form. The crop clips the very tops of the figures at the panel edge, but the crossbars and diagonals are complete. The roll number 2948. is written separately at the head of the roll (region 2), in what looks like the same hand; its last figure is the open-loop form that can read as 6. Region 4, on the leader, carries a later note in English cursive about the roll's condition (\"... especially bass + treble ... over the ... election. ... bite -\"), a different and later hand with no date. Region 3 is a stain."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1917-04-27",
      "@annotation": {
-      "@id": "copies/fb100cb2366.jsonld#date-annotation",
+      "@id": "copies/fb100cb2366#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/fb100cb2366.jsonld#date-belief",
+       "@id": "copies/fb100cb2366#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/fb100cb2366.jsonld#inscription-text"
+          "copies/fb100cb2366#inscription-text"
          ],
-         "note": "Pencil, treble edge, at the tail of the roll just past the last hole. Both 7s are the barred continental form (upstroke, long diagonal down-left, crossbar); the 1 before the second 7 is a plain caret with no crossbar, so 17 and not 11 or 77. The 4 is the open-top form. The crop clips the very tops of the figures at the panel edge, but the crossbars and diagonals are complete. The roll number 2948. is written separately at the head of the roll (region 2), in what looks like the same hand; its last figure is the open-loop form that can read as 6. Region 4, on the leader, carries a later note in English cursive about the roll's condition (\"... especially bass + treble ... over the ... election. ... bite -\"), a different and later hand with no date. Region 3 is a stain."
+         "note": "\"27. 4. 17.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/fb100cb2366#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/fb100cb2366.jsonld#perforator",
+     "@id": "copies/fb100cb2366#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7511,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/fb100cb2366.jsonld#punch-diameter-annotation",
+        "@id": "copies/fb100cb2366#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fb100cb2366.jsonld#punch-diameter-belief",
+         "@id": "copies/fb100cb2366#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7387,
        "n": 318,
        "@annotation": {
-        "@id": "copies/fb100cb2366.jsonld#chain-pitch-annotation",
+        "@id": "copies/fb100cb2366#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fb100cb2366.jsonld#chain-pitch-belief",
+         "@id": "copies/fb100cb2366#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5569,
        "n": 32565,
        "@annotation": {
-        "@id": "copies/fb100cb2366.jsonld#advance-annotation",
+        "@id": "copies/fb100cb2366#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fb100cb2366.jsonld#advance-belief",
+         "@id": "copies/fb100cb2366#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

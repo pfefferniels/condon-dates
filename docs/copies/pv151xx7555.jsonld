@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/pv151xx7555.jsonld",
+ "@id": "copies/pv151xx7555",
  "title": "Condon Roll 312, WM 1083",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/pv151xx7555.jsonld#copy",
+   "@id": "copies/pv151xx7555#copy",
    "label": "Condon Roll 312",
    "identifier": "Stanford Libraries CONDON ROLL 312",
    "seeAlso": "https://purl.stanford.edu/pv151xx7555",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/pv151xx7555.jsonld#inscription",
+       "@id": "copies/pv151xx7555#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/pv151xx7555%2Fpv151xx7555_0001/3488,288496,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/pv151xx7555.jsonld#inscription-text",
-        "text": "17.12.19"
+        "@id": "copies/pv151xx7555#inscription-text",
+        "text": "17.12.19",
+        "@annotation": {
+         "@id": "copies/pv151xx7555#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/pv151xx7555#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/pv151xx7555#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, three groups separated by points. The month 12 and the year 19 are plain; in the day the second figure has a flat hooked top unlike the plain 1 that opens the other two groups, so I read 7, though 11.12.19 is not impossible"
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1919-12-17",
      "@annotation": {
-      "@id": "copies/pv151xx7555.jsonld#date-annotation",
+      "@id": "copies/pv151xx7555#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/pv151xx7555.jsonld#date-belief",
+       "@id": "copies/pv151xx7555#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/pv151xx7555.jsonld#inscription-text"
+          "copies/pv151xx7555#inscription-text"
          ],
-         "note": "pencil, three groups separated by points. The month 12 and the year 19 are plain; in the day the second figure has a flat hooked top unlike the plain 1 that opens the other two groups, so I read 7, though 11.12.19 is not impossible"
+         "note": "\"17.12.19\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/pv151xx7555#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/pv151xx7555.jsonld#perforator",
+     "@id": "copies/pv151xx7555#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7224,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/pv151xx7555.jsonld#punch-diameter-annotation",
+        "@id": "copies/pv151xx7555#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pv151xx7555.jsonld#punch-diameter-belief",
+         "@id": "copies/pv151xx7555#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.8005,
        "n": 398,
        "@annotation": {
-        "@id": "copies/pv151xx7555.jsonld#chain-pitch-annotation",
+        "@id": "copies/pv151xx7555#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pv151xx7555.jsonld#chain-pitch-belief",
+         "@id": "copies/pv151xx7555#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5449,
        "n": 13881,
        "@annotation": {
-        "@id": "copies/pv151xx7555.jsonld#advance-annotation",
+        "@id": "copies/pv151xx7555#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pv151xx7555.jsonld#advance-belief",
+         "@id": "copies/pv151xx7555#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

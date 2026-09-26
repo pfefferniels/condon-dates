@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/vs059bb4318.jsonld",
+ "@id": "copies/vs059bb4318",
  "title": "Condon Roll 13, WM 104",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/vs059bb4318.jsonld#copy",
+   "@id": "copies/vs059bb4318#copy",
    "label": "Condon Roll 13",
    "identifier": "Stanford Libraries CONDON ROLL 13",
    "seeAlso": "https://purl.stanford.edu/vs059bb4318",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/vs059bb4318.jsonld#inscription",
+       "@id": "copies/vs059bb4318#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/vs059bb4318%2Fvs059bb4318_0001/3528,148771,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/vs059bb4318.jsonld#inscription-text",
-        "text": "10.7.20"
+        "@id": "copies/vs059bb4318#inscription-text",
+        "text": "10.7.20",
+        "@annotation": {
+         "@id": "copies/vs059bb4318#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/vs059bb4318#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/vs059bb4318#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, separating dots written out; the month is a crossed 7."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1920-07-10",
      "@annotation": {
-      "@id": "copies/vs059bb4318.jsonld#date-annotation",
+      "@id": "copies/vs059bb4318#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/vs059bb4318.jsonld#date-belief",
+       "@id": "copies/vs059bb4318#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/vs059bb4318.jsonld#inscription-text"
+          "copies/vs059bb4318#inscription-text"
          ],
-         "note": "pencil, separating dots written out; the month is a crossed 7."
+         "note": "\"10.7.20\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/vs059bb4318#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/vs059bb4318.jsonld#perforator",
+     "@id": "copies/vs059bb4318#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8391,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/vs059bb4318.jsonld#punch-diameter-annotation",
+        "@id": "copies/vs059bb4318#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vs059bb4318.jsonld#punch-diameter-belief",
+         "@id": "copies/vs059bb4318#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6481,
        "n": 311,
        "@annotation": {
-        "@id": "copies/vs059bb4318.jsonld#chain-pitch-annotation",
+        "@id": "copies/vs059bb4318#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vs059bb4318.jsonld#chain-pitch-belief",
+         "@id": "copies/vs059bb4318#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6277,
        "n": 8013,
        "@annotation": {
-        "@id": "copies/vs059bb4318.jsonld#advance-annotation",
+        "@id": "copies/vs059bb4318#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vs059bb4318.jsonld#advance-belief",
+         "@id": "copies/vs059bb4318#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

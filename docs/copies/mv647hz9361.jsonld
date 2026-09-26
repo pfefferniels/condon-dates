@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/mv647hz9361.jsonld",
+ "@id": "copies/mv647hz9361",
  "title": "Condon Roll 911, WM 5669",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/mv647hz9361.jsonld#copy",
+   "@id": "copies/mv647hz9361#copy",
    "label": "Condon Roll 911",
    "identifier": "Stanford Libraries CONDON ROLL 911",
    "seeAlso": "https://purl.stanford.edu/mv647hz9361",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/mv647hz9361.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/mv647hz9361#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 12373.8,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/mv647hz9361%2Fmv647hz9361_0001/3528,146269,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/mv647hz9361.jsonld#inscription-text",
-        "text": "[over-inked figure] 8 5 2 5"
+        "@id": "copies/mv647hz9361#inscription-text",
+        "text": "[over-inked figure] 8 5 2 5",
+        "@annotation": {
+         "@id": "copies/mv647hz9361#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/mv647hz9361#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/mv647hz9361#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Stamped, upright in the upper panel, the whole impression heavily over-inked. Five positions: the first is a solid blob I cannot resolve, the other four are 8, 5, 2, 5, the 5s with their top flag and bowl and the 2 with its base stroke. Five figures read as day, month, year in the way reading.md describes for 14114, so ?8.5.25: the month and year are May 1925, the day is 8, 18 or 28 and the leading figure is not legible. Only the month is entered. Crop 3 carries a pencilled 5669 and crop 4 the printed label, WELTE-MIGNON No. 5669, 'Sergeant Percy', One-step, Richard Fall, played by Sidny Black; crop 2 is blank."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -80,18 +98,25 @@
      "after": "1925-05-01",
      "before": "1925-05-31",
      "@annotation": {
-      "@id": "copies/mv647hz9361.jsonld#date-annotation",
+      "@id": "copies/mv647hz9361#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/mv647hz9361.jsonld#date-belief",
+       "@id": "copies/mv647hz9361#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/mv647hz9361.jsonld#inscription-text"
+          "copies/mv647hz9361#inscription-text"
          ],
-         "note": "stamped, upright in the upper panel, the whole impression heavily over-inked. Five positions: the first is a solid blob I cannot resolve, the other four are 8, 5, 2, 5, the 5s with their top flag and bowl and the 2 with its base stroke. Five figures read as day, month, year in the way reading.md describes for 14114, so ?8.5.25: the month and year are May 1925, the day is 8, 18 or 28 and the leading figure is not legible. Only the month is entered. Crop 3 carries a pencilled 5669 and crop 4 the printed label, WELTE-MIGNON No. 5669, 'Sergeant Percy', One-step, Richard Fall, played by Sidny Black; crop 2 is blank."
+         "note": "\"?8.5.25\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/mv647hz9361#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/mv647hz9361.jsonld#perforator",
+     "@id": "copies/mv647hz9361#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8061,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/mv647hz9361.jsonld#punch-diameter-annotation",
+        "@id": "copies/mv647hz9361#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mv647hz9361.jsonld#punch-diameter-belief",
+         "@id": "copies/mv647hz9361#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.5833,
        "n": 297,
        "@annotation": {
-        "@id": "copies/mv647hz9361.jsonld#chain-pitch-annotation",
+        "@id": "copies/mv647hz9361#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mv647hz9361.jsonld#chain-pitch-belief",
+         "@id": "copies/mv647hz9361#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.3862,
        "n": 6745,
        "@annotation": {
-        "@id": "copies/mv647hz9361.jsonld#advance-annotation",
+        "@id": "copies/mv647hz9361#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mv647hz9361.jsonld#advance-belief",
+         "@id": "copies/mv647hz9361#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

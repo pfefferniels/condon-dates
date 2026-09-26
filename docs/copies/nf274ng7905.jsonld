@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/nf274ng7905.jsonld",
+ "@id": "copies/nf274ng7905",
  "title": "Condon Roll 38, WM 209",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/nf274ng7905.jsonld#copy",
+   "@id": "copies/nf274ng7905#copy",
    "label": "Condon Roll 38",
    "identifier": "Stanford Libraries CONDON ROLL 38",
    "seeAlso": "https://purl.stanford.edu/nf274ng7905",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/nf274ng7905.jsonld#inscription",
+       "@id": "copies/nf274ng7905#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/nf274ng7905%2Fnf274ng7905_0001/3382,190858,594,3180/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/nf274ng7905.jsonld#inscription-text",
-        "text": "No 209  1. 4. 11.  II"
+        "@id": "copies/nf274ng7905#inscription-text",
+        "text": "No 209  1. 4. 11.  II",
+        "@annotation": {
+         "@id": "copies/nf274ng7905#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/nf274ng7905#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/nf274ng7905#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, written along the roll; 'No 209', then the three figure groups, then a two-stroke mark with a bar over it that looks like a roman II. No name. The crop is only about 1500 px wide, so the figures are small; day and month are plain, the year is two upright strokes."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1911-04-01",
      "@annotation": {
-      "@id": "copies/nf274ng7905.jsonld#date-annotation",
+      "@id": "copies/nf274ng7905#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/nf274ng7905.jsonld#date-belief",
+       "@id": "copies/nf274ng7905#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/nf274ng7905.jsonld#inscription-text"
+          "copies/nf274ng7905#inscription-text"
          ],
-         "note": "pencil, written along the roll; 'No 209', then the three figure groups, then a two-stroke mark with a bar over it that looks like a roman II. No name. The crop is only about 1500 px wide, so the figures are small; day and month are plain, the year is two upright strokes."
+         "note": "\"1. 4. 11.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/nf274ng7905#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/nf274ng7905.jsonld#perforator",
+     "@id": "copies/nf274ng7905#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1318,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/nf274ng7905.jsonld#punch-diameter-annotation",
+        "@id": "copies/nf274ng7905#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nf274ng7905.jsonld#punch-diameter-belief",
+         "@id": "copies/nf274ng7905#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7893,
        "n": 253,
        "@annotation": {
-        "@id": "copies/nf274ng7905.jsonld#chain-pitch-annotation",
+        "@id": "copies/nf274ng7905#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nf274ng7905.jsonld#chain-pitch-belief",
+         "@id": "copies/nf274ng7905#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4947,
        "n": 9042,
        "@annotation": {
-        "@id": "copies/nf274ng7905.jsonld#advance-annotation",
+        "@id": "copies/nf274ng7905#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/nf274ng7905.jsonld#advance-belief",
+         "@id": "copies/nf274ng7905#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

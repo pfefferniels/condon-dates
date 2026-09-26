@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/pv279zy5193.jsonld",
+ "@id": "copies/pv279zy5193",
  "title": "Condon Roll 492, WM 1505",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/pv279zy5193.jsonld#copy",
+   "@id": "copies/pv279zy5193#copy",
    "label": "Condon Roll 492",
    "identifier": "Stanford Libraries CONDON ROLL 492",
    "seeAlso": "https://purl.stanford.edu/pv279zy5193",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/pv279zy5193.jsonld#inscription",
+       "@id": "copies/pv279zy5193#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,34 +58,51 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/pv279zy5193%2Fpv279zy5193_0001/3470,558538,492,2116/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/pv279zy5193.jsonld#inscription-text",
-        "text": "1505    28.  6.12   Hohn: / W[...]"
+        "@id": "copies/pv279zy5193#inscription-text",
+        "text": "1505    28.  6.12   Hohn: / W[...]",
+        "@annotation": {
+         "@id": "copies/pv279zy5193#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/pv279zy5193#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/pv279zy5193#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Crop 1, upper panel upright; ink, two lines. The month is the open-topped form that reading.md warns can be an 8, but the 8 in the day 28 on the same line is drawn with two closed bowls and looks nothing like it, so the month is a 6. The name beside the date is H-o-then three downstrokes: Hohn as written here, though the same strokes would also carry Holm, which German cursive does not distinguish. The second line is another name beginning with W, with a bar over its middle letters; I cannot resolve it and have not guessed."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Hohnrieder",
       "sameAs": [],
-      "@id": "hands.jsonld#hohnrieder",
+      "@id": "hands#hohnrieder",
       "@annotation": {
-       "@id": "copies/pv279zy5193.jsonld#hand-annotation",
+       "@id": "copies/pv279zy5193#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/pv279zy5193.jsonld#hand-belief",
+        "@id": "copies/pv279zy5193#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/pv279zy5193.jsonld#inscription-text"
+           "copies/pv279zy5193#inscription-text"
           ],
-          "note": "Read as \"Hohn\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Hohn\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1912-06-28",
      "@annotation": {
-      "@id": "copies/pv279zy5193.jsonld#date-annotation",
+      "@id": "copies/pv279zy5193#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/pv279zy5193.jsonld#date-belief",
+       "@id": "copies/pv279zy5193#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/pv279zy5193.jsonld#inscription-text"
+          "copies/pv279zy5193#inscription-text"
          ],
-         "note": "crop 1, upper panel upright; ink, two lines. The month is the open-topped form that reading.md warns can be an 8, but the 8 in the day 28 on the same line is drawn with two closed bowls and looks nothing like it, so the month is a 6. The name beside the date is H-o-then three downstrokes: Hohn as written here, though the same strokes would also carry Holm, which German cursive does not distinguish. The second line is another name beginning with W, with a bar over its middle letters; I cannot resolve it and have not guessed."
+         "note": "\"28. 6.12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/pv279zy5193#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/pv279zy5193.jsonld#perforator",
+     "@id": "copies/pv279zy5193#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.3958,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/pv279zy5193.jsonld#punch-diameter-annotation",
+        "@id": "copies/pv279zy5193#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pv279zy5193.jsonld#punch-diameter-belief",
+         "@id": "copies/pv279zy5193#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.5688,
        "n": 352,
        "@annotation": {
-        "@id": "copies/pv279zy5193.jsonld#chain-pitch-annotation",
+        "@id": "copies/pv279zy5193#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pv279zy5193.jsonld#chain-pitch-belief",
+         "@id": "copies/pv279zy5193#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.0755,
        "n": 29854,
        "@annotation": {
-        "@id": "copies/pv279zy5193.jsonld#advance-annotation",
+        "@id": "copies/pv279zy5193#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/pv279zy5193.jsonld#advance-belief",
+         "@id": "copies/pv279zy5193#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

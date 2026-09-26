@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/tp747vf1137.jsonld",
+ "@id": "copies/tp747vf1137",
  "title": "Condon Roll 68, WM 163",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/tp747vf1137.jsonld#copy",
+   "@id": "copies/tp747vf1137#copy",
    "label": "Condon Roll 68",
    "identifier": "Stanford Libraries CONDON ROLL 68",
    "seeAlso": "https://purl.stanford.edu/tp747vf1137",
@@ -50,17 +51,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/tp747vf1137.jsonld#perforator",
+     "@id": "copies/tp747vf1137#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8425,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/tp747vf1137.jsonld#punch-diameter-annotation",
+        "@id": "copies/tp747vf1137#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tp747vf1137.jsonld#punch-diameter-belief",
+         "@id": "copies/tp747vf1137#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -82,10 +83,10 @@
        "bridge": 0.4739,
        "n": 384,
        "@annotation": {
-        "@id": "copies/tp747vf1137.jsonld#chain-pitch-annotation",
+        "@id": "copies/tp747vf1137#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tp747vf1137.jsonld#chain-pitch-belief",
+         "@id": "copies/tp747vf1137#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -106,10 +107,10 @@
        "strength": 0.737,
        "n": 7173,
        "@annotation": {
-        "@id": "copies/tp747vf1137.jsonld#advance-annotation",
+        "@id": "copies/tp747vf1137#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/tp747vf1137.jsonld#advance-belief",
+         "@id": "copies/tp747vf1137#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

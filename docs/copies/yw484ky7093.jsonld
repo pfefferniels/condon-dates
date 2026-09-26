@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/yw484ky7093.jsonld",
+ "@id": "copies/yw484ky7093",
  "title": "Condon Roll 219, WM 589",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/yw484ky7093.jsonld#copy",
+   "@id": "copies/yw484ky7093#copy",
    "label": "Condon Roll 219",
    "identifier": "Stanford Libraries CONDON ROLL 219",
    "seeAlso": "https://purl.stanford.edu/yw484ky7093",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/yw484ky7093.jsonld#inscription",
+       "@id": "copies/yw484ky7093#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/yw484ky7093%2Fyw484ky7093_0001/3286,115596,664,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/yw484ky7093.jsonld#inscription-text",
-        "text": "588. 4. 6. 17."
+        "@id": "copies/yw484ky7093#inscription-text",
+        "text": "588. 4. 6. 17.",
+        "@annotation": {
+         "@id": "copies/yw484ky7093#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/yw484ky7093#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/yw484ky7093#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, written along the roll so the crop has to be turned a quarter turn; both panels carry it and both read once turned. Roll number 588, then the three date groups separated by dots. The 4 and the 6 are plain. The year is a plain 1 followed by a crossed 7, the bar across the stem visible under magnification, so 17 and not 11. No name in this crop."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1917-06-04",
      "@annotation": {
-      "@id": "copies/yw484ky7093.jsonld#date-annotation",
+      "@id": "copies/yw484ky7093#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/yw484ky7093.jsonld#date-belief",
+       "@id": "copies/yw484ky7093#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/yw484ky7093.jsonld#inscription-text"
+          "copies/yw484ky7093#inscription-text"
          ],
-         "note": "Ink, written along the roll so the crop has to be turned a quarter turn; both panels carry it and both read once turned. Roll number 588, then the three date groups separated by dots. The 4 and the 6 are plain. The year is a plain 1 followed by a crossed 7, the bar across the stem visible under magnification, so 17 and not 11. No name in this crop."
+         "note": "\"4. 6. 17\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/yw484ky7093#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/yw484ky7093.jsonld#perforator",
+     "@id": "copies/yw484ky7093#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1547,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/yw484ky7093.jsonld#punch-diameter-annotation",
+        "@id": "copies/yw484ky7093#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yw484ky7093.jsonld#punch-diameter-belief",
+         "@id": "copies/yw484ky7093#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7632,
        "n": 261,
        "@annotation": {
-        "@id": "copies/yw484ky7093.jsonld#chain-pitch-annotation",
+        "@id": "copies/yw484ky7093#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yw484ky7093.jsonld#chain-pitch-belief",
+         "@id": "copies/yw484ky7093#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.3573,
        "n": 4805,
        "@annotation": {
-        "@id": "copies/yw484ky7093.jsonld#advance-annotation",
+        "@id": "copies/yw484ky7093#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yw484ky7093.jsonld#advance-belief",
+         "@id": "copies/yw484ky7093#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

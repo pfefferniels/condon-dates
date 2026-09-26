@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/dw479gk0103.jsonld",
+ "@id": "copies/dw479gk0103",
  "title": "Condon Roll 382, WM 1263",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/dw479gk0103.jsonld#copy",
+   "@id": "copies/dw479gk0103#copy",
    "label": "Condon Roll 382",
    "identifier": "Stanford Libraries CONDON ROLL 382",
    "seeAlso": "https://purl.stanford.edu/dw479gk0103",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/dw479gk0103.jsonld#inscription",
+       "@id": "copies/dw479gk0103#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/dw479gk0103%2Fdw479gk0103_0001/3376,159906,720,2300/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/dw479gk0103.jsonld#inscription-text",
-        "text": "4924"
+        "@id": "copies/dw479gk0103#inscription-text",
+        "text": "4924",
+        "@annotation": {
+         "@id": "copies/dw479gk0103#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/dw479gk0103#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/dw479gk0103#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, four figures at the extreme treble edge, their tops shaved by the paper edge: [4 or 7] 9 2 4, i.e. 4.9.24 or 7.9.24. The first figure carries a crossbar over a descending stem, which in these hands can be either an open-topped 4 or a crossed 7, so I have left date_iso at the month. e2 carries the roll number 1263 in a smaller hand, clear of the edge; e3 shows the printed leader label WELTE-MIGNON No. 1263, Minuett G major, Paderewski; e4 blank."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -81,18 +99,25 @@
      "after": "1924-09-01",
      "before": "1924-09-30",
      "@annotation": {
-      "@id": "copies/dw479gk0103.jsonld#date-annotation",
+      "@id": "copies/dw479gk0103#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/dw479gk0103.jsonld#date-belief",
+       "@id": "copies/dw479gk0103#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/dw479gk0103.jsonld#inscription-text"
+          "copies/dw479gk0103#inscription-text"
          ],
-         "note": "Pencil, four figures at the extreme treble edge, their tops shaved by the paper edge: [4 or 7] 9 2 4, i.e. 4.9.24 or 7.9.24. The first figure carries a crossbar over a descending stem, which in these hands can be either an open-topped 4 or a crossed 7, so I have left date_iso at the month. e2 carries the roll number 1263 in a smaller hand, clear of the edge; e3 shows the printed leader label WELTE-MIGNON No. 1263, Minuett G major, Paderewski; e4 blank."
+         "note": "\"4.9.24\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/dw479gk0103#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -100,17 +125,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/dw479gk0103.jsonld#perforator",
+     "@id": "copies/dw479gk0103#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6852,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/dw479gk0103.jsonld#punch-diameter-annotation",
+        "@id": "copies/dw479gk0103#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dw479gk0103.jsonld#punch-diameter-belief",
+         "@id": "copies/dw479gk0103#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -132,10 +157,10 @@
        "bridge": 0.7009,
        "n": 255,
        "@annotation": {
-        "@id": "copies/dw479gk0103.jsonld#chain-pitch-annotation",
+        "@id": "copies/dw479gk0103#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dw479gk0103.jsonld#chain-pitch-belief",
+         "@id": "copies/dw479gk0103#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -156,10 +181,10 @@
        "strength": 0.4883,
        "n": 8828,
        "@annotation": {
-        "@id": "copies/dw479gk0103.jsonld#advance-annotation",
+        "@id": "copies/dw479gk0103#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dw479gk0103.jsonld#advance-belief",
+         "@id": "copies/dw479gk0103#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

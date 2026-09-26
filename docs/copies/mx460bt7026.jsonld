@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/mx460bt7026.jsonld",
+ "@id": "copies/mx460bt7026",
  "title": "Condon Roll 36, WM 198",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/mx460bt7026.jsonld#copy",
+   "@id": "copies/mx460bt7026#copy",
    "label": "Condon Roll 36",
    "identifier": "Stanford Libraries CONDON ROLL 36",
    "seeAlso": "https://purl.stanford.edu/mx460bt7026",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/mx460bt7026.jsonld#inscription",
+       "@id": "copies/mx460bt7026#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/mx460bt7026%2Fmx460bt7026_0001/3484,436086,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/mx460bt7026.jsonld#inscription-text",
-        "text": "Kummer"
+        "@id": "copies/mx460bt7026#inscription-text",
+        "text": "Kummer",
+        "@annotation": {
+         "@id": "copies/mx460bt7026#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/mx460bt7026#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/mx460bt7026#inscription"
+            ],
+            "note": "No date was read in it, so its figures were not graded. The puncher's name alone, in a large looping pencil hand, with no figures beside it. Crop 2 holds an unrelated pen flourish, crops 3 and 4 the cut end of the roll. No date on this roll."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Kummer",
       "sameAs": [],
-      "@id": "hands.jsonld#kummer",
+      "@id": "hands#kummer",
       "@annotation": {
-       "@id": "copies/mx460bt7026.jsonld#hand-annotation",
+       "@id": "copies/mx460bt7026#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/mx460bt7026.jsonld#hand-belief",
+        "@id": "copies/mx460bt7026#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/mx460bt7026.jsonld#inscription-text"
+           "copies/mx460bt7026#inscription-text"
           ],
           "note": "Read as \"Kummer\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -108,17 +126,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/mx460bt7026.jsonld#perforator",
+     "@id": "copies/mx460bt7026#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.3357,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/mx460bt7026.jsonld#punch-diameter-annotation",
+        "@id": "copies/mx460bt7026#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mx460bt7026.jsonld#punch-diameter-belief",
+         "@id": "copies/mx460bt7026#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -140,10 +158,10 @@
        "bridge": 0.5144,
        "n": 209,
        "@annotation": {
-        "@id": "copies/mx460bt7026.jsonld#chain-pitch-annotation",
+        "@id": "copies/mx460bt7026#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mx460bt7026.jsonld#chain-pitch-belief",
+         "@id": "copies/mx460bt7026#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -164,10 +182,10 @@
        "strength": 0.1083,
        "n": 22008,
        "@annotation": {
-        "@id": "copies/mx460bt7026.jsonld#advance-annotation",
+        "@id": "copies/mx460bt7026#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mx460bt7026.jsonld#advance-belief",
+         "@id": "copies/mx460bt7026#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

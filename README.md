@@ -33,33 +33,44 @@ on a judgement carries the belief it rests on, with its certainty and reasons, a
 linked-rolls annotates any statement, so an edition can take the copy's date or setting
 as a premise instead of restating it.
 
-| File | Content |
-|---|---|
-| `docs/copies/<druid>.jsonld` | one copy, the document to cite |
-| `docs/copies.jsonld` | the register, every copy in one document |
-| `docs/hands.jsonld` | the hands of `hands.json`, which the copies name as actors |
-| `docs/context.jsonld` | the terms linked-rolls does not have yet |
+| File | IRI | Content |
+|---|---|---|
+| `docs/copies/<druid>.jsonld` | `copies/<druid>` | one copy, the document to cite |
+| `docs/copies.jsonld` | `copies` | the register, every copy in one document |
+| `docs/hands.jsonld` | `hands` | the hands of `hands.json`, which the copies name as actors |
+| `docs/context.jsonld` | `context.jsonld` | the terms linked-rolls does not have yet |
 
-The IRIs are fragments of the document that states them, so they resolve on a static
-host, and they are built from the druid and the role of the node, so a rebuild keeps
-them. `copies/mf320jq4997.jsonld#copy` is Condon Roll 47; `#date-belief`, `#hand-belief`,
-`#punch-diameter-belief`, `#chain-pitch-belief` and `#advance-belief` are the beliefs in
-its punch date, its hand and its setting; `#inscription-text` is the transcription the
-date and the hand are read from. Every record validates against the `RollCopy` of the
-linked-rolls schema, and every term in it expands.
+The IRIs stand on `https://w3id.org/condon-rolls/`, which `w3id/condon-rolls/.htaccess`
+redirects to the files on GitHub Pages, so the site can move without a citation breaking.
+They are fragments of the document that states them, and are built from the druid and the
+role of the node, so a rebuild keeps them. `copies/mf320jq4997#copy` is Condon Roll 47;
+`#inscription-text` is the transcription of what is written or stamped at its end;
+`#transcription-belief`, `#date-belief`, `#hand-belief`, `#punch-diameter-belief`,
+`#chain-pitch-belief` and `#advance-belief` are the beliefs an edition can take as
+premises. Every record validates against the `RollCopy` of the linked-rolls schema, and
+every term in it expands. The data are published under CC BY 4.0.
 
 How a certainty is chosen is set at the top of `linked.py` and repeated in the reasons of
-each belief. A date is true where every figure of its reading is plain, likely where one
-is arguable, possible where the reading could be another date. A hand is likely where it
-is clustered with other rolls by letterform, possible where it is only read. The chain
-pitch is likely; the parser's hole width only possible, since it moves with the grey level
-an edge is put at. An advance is held as `settings225.py` holds it for the edition of 225.
+each belief. The reading of the inscription and the date read out of it are two beliefs:
+
+- **The transcription** carries the reader's grade, which is a grade of the figures: true
+  where every figure is plain, likely where one is arguable, possible where they could give
+  another date. A reading that gives no date was not graded and is held possible.
+- **The date** takes the transcription as its premise and is held no surer than it. Where
+  the paper runs the figures together, as in `24323` or St2's `14. 114.`, the figures are
+  read but their grouping into day, month and year is inferred, and the date is held no
+  surer than likely.
+- **A hand** is likely where it is clustered with other rolls by letterform, possible where
+  it is only read.
+- **The chain pitch** is likely; **the parser's hole width** only possible, since it moves
+  with the grey level an edge is put at. **An advance** is held as `settings225.py` holds it
+  for the edition of 225.
 
 What it does not do yet:
 
-- The IRIs stand on `pfefferniels.github.io` and change if the site moves. Nothing should
-  cite them before a lasting base is chosen.
-- No licence is stated.
+- Neither `w3id.org/condon-rolls` nor `w3id.org/reo`, whose context every document names,
+  is registered. `w3id/condon-rolls/` is the folder to submit to
+  [perma-id/w3id.org](https://github.com/perma-id/w3id.org).
 - An inscription is placed by the crop it was read from, not by its ink, and on the scanner's
   track numbering rather than the tracker bar's, since no hole was read here to fix it.
 - An act has one actor in linked-rolls, so a countersignature is named only in a note.

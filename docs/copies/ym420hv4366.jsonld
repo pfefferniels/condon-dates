@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/ym420hv4366.jsonld",
+ "@id": "copies/ym420hv4366",
  "title": "Condon Roll 3, WM 231",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/ym420hv4366.jsonld#copy",
+   "@id": "copies/ym420hv4366#copy",
    "label": "Condon Roll 3",
    "identifier": "Stanford Libraries CONDON ROLL 3",
    "seeAlso": "https://purl.stanford.edu/ym420hv4366",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/ym420hv4366.jsonld#inscription",
+       "@id": "copies/ym420hv4366#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/ym420hv4366%2Fym420hv4366_0001/3290,114407,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/ym420hv4366.jsonld#inscription-text",
-        "text": "Langenbach"
+        "@id": "copies/ym420hv4366#inscription-text",
+        "text": "Langenbach",
+        "@annotation": {
+         "@id": "copies/ym420hv4366#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/ym420hv4366#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/ym420hv4366#inscription"
+            ],
+            "note": "No date was read in it, so its figures were not graded. A name in ink, no date with it. Crop 5 shows the roll's printed leader label, 'No. 231 / Lied ohne Worte / Op. 62. No. 28 / F. Mendelssohn. / Gespielt von Hermann Möhle.', with 'Patentiert in allen Kulturstaaten' and the M. Welte & Söhne copyright slip; crop 6 is a QPcard 101 colour target. Crops 2 to 4 blank."
+           }
+          ]
+         }
+        }
        }
       }
      ],
@@ -66,16 +84,16 @@
       "name": "Langenbach",
       "sameAs": [],
       "@annotation": {
-       "@id": "copies/ym420hv4366.jsonld#hand-annotation",
+       "@id": "copies/ym420hv4366#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/ym420hv4366.jsonld#hand-belief",
+        "@id": "copies/ym420hv4366#hand-belief",
         "certainty": "possible",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/ym420hv4366.jsonld#inscription-text"
+           "copies/ym420hv4366#inscription-text"
           ],
           "note": "Read as \"Langenbach\"."
          }
@@ -99,17 +117,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/ym420hv4366.jsonld#perforator",
+     "@id": "copies/ym420hv4366#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2477,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/ym420hv4366.jsonld#punch-diameter-annotation",
+        "@id": "copies/ym420hv4366#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ym420hv4366.jsonld#punch-diameter-belief",
+         "@id": "copies/ym420hv4366#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +149,10 @@
        "bridge": 0.5525,
        "n": 313,
        "@annotation": {
-        "@id": "copies/ym420hv4366.jsonld#chain-pitch-annotation",
+        "@id": "copies/ym420hv4366#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ym420hv4366.jsonld#chain-pitch-belief",
+         "@id": "copies/ym420hv4366#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +173,10 @@
        "strength": 0.2685,
        "n": 7406,
        "@annotation": {
-        "@id": "copies/ym420hv4366.jsonld#advance-annotation",
+        "@id": "copies/ym420hv4366#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/ym420hv4366.jsonld#advance-belief",
+         "@id": "copies/ym420hv4366#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

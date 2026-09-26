@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jk702cg2022.jsonld",
+ "@id": "copies/jk702cg2022",
  "title": "Condon Roll 458, WM 1466",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jk702cg2022.jsonld#copy",
+   "@id": "copies/jk702cg2022#copy",
    "label": "Condon Roll 458",
    "identifier": "Stanford Libraries CONDON ROLL 458",
    "seeAlso": "https://purl.stanford.edu/jk702cg2022",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jk702cg2022.jsonld#inscription",
+       "@id": "copies/jk702cg2022#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jk702cg2022%2Fjk702cg2022_0001/3501,100245,460,1900/full/270/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jk702cg2022.jsonld#inscription-text",
-        "text": "23112 2"
+        "@id": "copies/jk702cg2022#inscription-text",
+        "text": "23112 2",
+        "@annotation": {
+         "@id": "copies/jk702cg2022#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jk702cg2022#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jk702cg2022#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, read from the lower panel. Six figures written without separators, the first five joined and the sixth after a pen lift: 2, 3, 1, 1, 2, 2. Both 2s carry the same loop, diagonal and foot, so the last figure is a 2 and not a 7. Day first gives 23.11.22. No roll number and no name in this crop."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-11-23",
      "@annotation": {
-      "@id": "copies/jk702cg2022.jsonld#date-annotation",
+      "@id": "copies/jk702cg2022#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jk702cg2022.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/jk702cg2022#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jk702cg2022.jsonld#inscription-text"
+          "copies/jk702cg2022#inscription-text"
          ],
-         "note": "ink, read from the lower panel. Six figures written without separators, the first five joined and the sixth after a pen lift: 2, 3, 1, 1, 2, 2. Both 2s carry the same loop, diagonal and foot, so the last figure is a 2 and not a 7. Day first gives 23.11.22. No roll number and no name in this crop."
+         "note": "The figures of \"231122\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jk702cg2022#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jk702cg2022.jsonld#perforator",
+     "@id": "copies/jk702cg2022#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6911,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jk702cg2022.jsonld#punch-diameter-annotation",
+        "@id": "copies/jk702cg2022#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jk702cg2022.jsonld#punch-diameter-belief",
+         "@id": "copies/jk702cg2022#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7229,
        "n": 270,
        "@annotation": {
-        "@id": "copies/jk702cg2022.jsonld#chain-pitch-annotation",
+        "@id": "copies/jk702cg2022#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jk702cg2022.jsonld#chain-pitch-belief",
+         "@id": "copies/jk702cg2022#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.2967,
        "n": 4277,
        "@annotation": {
-        "@id": "copies/jk702cg2022.jsonld#advance-annotation",
+        "@id": "copies/jk702cg2022#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jk702cg2022.jsonld#advance-belief",
+         "@id": "copies/jk702cg2022#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

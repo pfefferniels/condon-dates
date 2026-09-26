@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/vp438dy0628.jsonld",
+ "@id": "copies/vp438dy0628",
  "title": "Condon Roll 762, WM 3356",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/vp438dy0628.jsonld#copy",
+   "@id": "copies/vp438dy0628#copy",
    "label": "Condon Roll 762",
    "identifier": "Stanford Libraries CONDON ROLL 762",
    "seeAlso": "https://purl.stanford.edu/vp438dy0628",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/vp438dy0628.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/vp438dy0628#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 28092.87,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/vp438dy0628%2Fvp438dy0628_0001/3493,332082,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/vp438dy0628.jsonld#inscription-text",
-        "text": "291024"
+        "@id": "copies/vp438dy0628#inscription-text",
+        "text": "291024",
+        "@annotation": {
+         "@id": "copies/vp438dy0628#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/vp438dy0628#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/vp438dy0628#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Six-figure stamp in black ink, all figures plain. Day 29 forces the day-month-year order."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1924-10-29",
      "@annotation": {
-      "@id": "copies/vp438dy0628.jsonld#date-annotation",
+      "@id": "copies/vp438dy0628#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/vp438dy0628.jsonld#date-belief",
-       "certainty": "true",
+       "@id": "copies/vp438dy0628#date-belief",
+       "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/vp438dy0628.jsonld#inscription-text"
+          "copies/vp438dy0628#inscription-text"
          ],
-         "note": "Six-figure stamp in black ink, all figures plain. Day 29 forces the day-month-year order."
+         "note": "The figures of \"291024\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/vp438dy0628#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/vp438dy0628.jsonld#perforator",
+     "@id": "copies/vp438dy0628#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6826,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/vp438dy0628.jsonld#punch-diameter-annotation",
+        "@id": "copies/vp438dy0628#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vp438dy0628.jsonld#punch-diameter-belief",
+         "@id": "copies/vp438dy0628#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7912,
        "n": 456,
        "@annotation": {
-        "@id": "copies/vp438dy0628.jsonld#chain-pitch-annotation",
+        "@id": "copies/vp438dy0628#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vp438dy0628.jsonld#chain-pitch-belief",
+         "@id": "copies/vp438dy0628#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.61,
        "n": 26132,
        "@annotation": {
-        "@id": "copies/vp438dy0628.jsonld#advance-annotation",
+        "@id": "copies/vp438dy0628#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/vp438dy0628.jsonld#advance-belief",
+         "@id": "copies/vp438dy0628#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

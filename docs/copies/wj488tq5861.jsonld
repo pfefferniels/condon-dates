@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/wj488tq5861.jsonld",
+ "@id": "copies/wj488tq5861",
  "title": "Condon Roll 446, WM 1338",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/wj488tq5861.jsonld#copy",
+   "@id": "copies/wj488tq5861#copy",
    "label": "Condon Roll 446",
    "identifier": "Stanford Libraries CONDON ROLL 446",
    "seeAlso": "https://purl.stanford.edu/wj488tq5861",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/wj488tq5861.jsonld#inscription",
+       "@id": "copies/wj488tq5861#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,26 +58,43 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/wj488tq5861%2Fwj488tq5861_0001/3514,340779,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/wj488tq5861.jsonld#inscription-text",
-        "text": "22. 6 09. Hohmüller"
+        "@id": "copies/wj488tq5861#inscription-text",
+        "text": "22. 6 09. Hohmüller",
+        "@annotation": {
+         "@id": "copies/wj488tq5861#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/wj488tq5861#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/wj488tq5861#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Fine pencil, one line on the upper (upright) panel, no roll number. The month 6 and the year 09 are plain. The day is two identical glyphs run together, each a curve over the top and a diagonal down to a curled base, which I read as 22; a reading of 77 would fit the strokes less well, since this hand crosses its sevens. The name is written fast but has the same shape as the Hohmüller on gs573tj9547 in this batch, which is how I read it here."
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Hohnrieder",
       "sameAs": [],
-      "@id": "hands.jsonld#hohnrieder",
+      "@id": "hands#hohnrieder",
       "@annotation": {
-       "@id": "copies/wj488tq5861.jsonld#hand-annotation",
+       "@id": "copies/wj488tq5861#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/wj488tq5861.jsonld#hand-belief",
+        "@id": "copies/wj488tq5861#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/wj488tq5861.jsonld#inscription-text"
+           "copies/wj488tq5861#inscription-text"
           ],
           "note": "Read as \"Hohmüller\"."
          },
@@ -84,7 +102,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1909-06-22",
      "@annotation": {
-      "@id": "copies/wj488tq5861.jsonld#date-annotation",
+      "@id": "copies/wj488tq5861#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/wj488tq5861.jsonld#date-belief",
+       "@id": "copies/wj488tq5861#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/wj488tq5861.jsonld#inscription-text"
+          "copies/wj488tq5861#inscription-text"
          ],
-         "note": "Fine pencil, one line on the upper (upright) panel, no roll number. The month 6 and the year 09 are plain. The day is two identical glyphs run together, each a curve over the top and a diagonal down to a curled base, which I read as 22; a reading of 77 would fit the strokes less well, since this hand crosses its sevens. The name is written fast but has the same shape as the Hohmüller on gs573tj9547 in this batch, which is how I read it here."
+         "note": "\"22. 6 09\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/wj488tq5861#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/wj488tq5861.jsonld#perforator",
+     "@id": "copies/wj488tq5861#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2249,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/wj488tq5861.jsonld#punch-diameter-annotation",
+        "@id": "copies/wj488tq5861#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wj488tq5861.jsonld#punch-diameter-belief",
+         "@id": "copies/wj488tq5861#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.665,
        "n": 233,
        "@annotation": {
-        "@id": "copies/wj488tq5861.jsonld#chain-pitch-annotation",
+        "@id": "copies/wj488tq5861#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wj488tq5861.jsonld#chain-pitch-belief",
+         "@id": "copies/wj488tq5861#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.1059,
        "n": 19720,
        "@annotation": {
-        "@id": "copies/wj488tq5861.jsonld#advance-annotation",
+        "@id": "copies/wj488tq5861#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/wj488tq5861.jsonld#advance-belief",
+         "@id": "copies/wj488tq5861#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

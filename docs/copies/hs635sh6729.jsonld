@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/hs635sh6729.jsonld",
+ "@id": "copies/hs635sh6729",
  "title": "Condon Roll 124, WM 378",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/hs635sh6729.jsonld#copy",
+   "@id": "copies/hs635sh6729#copy",
    "label": "Condon Roll 124",
    "identifier": "Stanford Libraries CONDON ROLL 124",
    "seeAlso": "https://purl.stanford.edu/hs635sh6729",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/hs635sh6729.jsonld#inscription",
+       "@id": "copies/hs635sh6729#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/hs635sh6729%2Fhs635sh6729_0001/3514,254323,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/hs635sh6729.jsonld#inscription-text",
-        "text": "7?14"
+        "@id": "copies/hs635sh6729#inscription-text",
+        "text": "7?14",
+        "@annotation": {
+         "@id": "copies/hs635sh6729#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/hs635sh6729#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/hs635sh6729#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, read from the lower (180-degree) panel and checked against the upper one. Four figures run together without separators, close to the edge of the paper, which clips their heads. The first is a crossed 7 and the last two are 14, so the day is 7 and the year 1914. The second figure has a closed bowl at the foot with two strokes converging on it and the upper loop left open: that is the 8 described in the reading notes, but a 3 or a 5 would sit in the same space and I cannot settle it, so the month is left open."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -81,18 +99,25 @@
      "after": "1914-01-01",
      "before": "1914-12-31",
      "@annotation": {
-      "@id": "copies/hs635sh6729.jsonld#date-annotation",
+      "@id": "copies/hs635sh6729#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/hs635sh6729.jsonld#date-belief",
+       "@id": "copies/hs635sh6729#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/hs635sh6729.jsonld#inscription-text"
+          "copies/hs635sh6729#inscription-text"
          ],
-         "note": "Pencil, read from the lower (180-degree) panel and checked against the upper one. Four figures run together without separators, close to the edge of the paper, which clips their heads. The first is a crossed 7 and the last two are 14, so the day is 7 and the year 1914. The second figure has a closed bowl at the foot with two strokes converging on it and the upper loop left open: that is the 8 described in the reading notes, but a 3 or a 5 would sit in the same space and I cannot settle it, so the month is left open."
+         "note": "\"7 ? 14\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md). Only the year is read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/hs635sh6729#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -100,17 +125,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/hs635sh6729.jsonld#perforator",
+     "@id": "copies/hs635sh6729#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.807,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/hs635sh6729.jsonld#punch-diameter-annotation",
+        "@id": "copies/hs635sh6729#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hs635sh6729.jsonld#punch-diameter-belief",
+         "@id": "copies/hs635sh6729#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -132,10 +157,10 @@
        "bridge": 0.6694,
        "n": 413,
        "@annotation": {
-        "@id": "copies/hs635sh6729.jsonld#chain-pitch-annotation",
+        "@id": "copies/hs635sh6729#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hs635sh6729.jsonld#chain-pitch-belief",
+         "@id": "copies/hs635sh6729#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -156,10 +181,10 @@
        "strength": 0.5887,
        "n": 12970,
        "@annotation": {
-        "@id": "copies/hs635sh6729.jsonld#advance-annotation",
+        "@id": "copies/hs635sh6729#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/hs635sh6729.jsonld#advance-belief",
+         "@id": "copies/hs635sh6729#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/bg098gg3899.jsonld",
+ "@id": "copies/bg098gg3899",
  "title": "Condon Roll 187, WM 494",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/bg098gg3899.jsonld#copy",
+   "@id": "copies/bg098gg3899#copy",
    "label": "Condon Roll 187",
    "identifier": "Stanford Libraries CONDON ROLL 187",
    "seeAlso": "https://purl.stanford.edu/bg098gg3899",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/bg098gg3899.jsonld#inscription",
+       "@id": "copies/bg098gg3899#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/bg098gg3899%2Fbg098gg3899_0001/3358,345500,476,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/bg098gg3899.jsonld#inscription-text",
-        "text": "23.1.20."
+        "@id": "copies/bg098gg3899#inscription-text",
+        "text": "23.1.20.",
+        "@annotation": {
+         "@id": "copies/bg098gg3899#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/bg098gg3899#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/bg098gg3899#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil on the paler buff paper, written across the roll beside a perforation"
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1920-01-23",
      "@annotation": {
-      "@id": "copies/bg098gg3899.jsonld#date-annotation",
+      "@id": "copies/bg098gg3899#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/bg098gg3899.jsonld#date-belief",
+       "@id": "copies/bg098gg3899#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/bg098gg3899.jsonld#inscription-text"
+          "copies/bg098gg3899#inscription-text"
          ],
-         "note": "pencil on the paler buff paper, written across the roll beside a perforation"
+         "note": "\"23.1.20\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/bg098gg3899#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/bg098gg3899.jsonld#perforator",
+     "@id": "copies/bg098gg3899#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6665,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/bg098gg3899.jsonld#punch-diameter-annotation",
+        "@id": "copies/bg098gg3899#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bg098gg3899.jsonld#punch-diameter-belief",
+         "@id": "copies/bg098gg3899#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7089,
        "n": 388,
        "@annotation": {
-        "@id": "copies/bg098gg3899.jsonld#chain-pitch-annotation",
+        "@id": "copies/bg098gg3899#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bg098gg3899.jsonld#chain-pitch-belief",
+         "@id": "copies/bg098gg3899#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.5034,
        "n": 23970,
        "@annotation": {
-        "@id": "copies/bg098gg3899.jsonld#advance-annotation",
+        "@id": "copies/bg098gg3899#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bg098gg3899.jsonld#advance-belief",
+         "@id": "copies/bg098gg3899#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

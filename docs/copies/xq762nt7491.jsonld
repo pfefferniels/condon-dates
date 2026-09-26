@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xq762nt7491.jsonld",
+ "@id": "copies/xq762nt7491",
  "title": "Condon Roll 6, WM 26",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xq762nt7491.jsonld#copy",
+   "@id": "copies/xq762nt7491#copy",
    "label": "Condon Roll 6",
    "identifier": "Stanford Libraries CONDON ROLL 6",
    "seeAlso": "https://purl.stanford.edu/xq762nt7491",
@@ -50,17 +51,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xq762nt7491.jsonld#perforator",
+     "@id": "copies/xq762nt7491#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6344,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xq762nt7491.jsonld#punch-diameter-annotation",
+        "@id": "copies/xq762nt7491#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xq762nt7491.jsonld#punch-diameter-belief",
+         "@id": "copies/xq762nt7491#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -82,10 +83,10 @@
        "bridge": 0.6575,
        "n": 265,
        "@annotation": {
-        "@id": "copies/xq762nt7491.jsonld#chain-pitch-annotation",
+        "@id": "copies/xq762nt7491#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xq762nt7491.jsonld#chain-pitch-belief",
+         "@id": "copies/xq762nt7491#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -106,10 +107,10 @@
        "strength": 0.3916,
        "n": 20502,
        "@annotation": {
-        "@id": "copies/xq762nt7491.jsonld#advance-annotation",
+        "@id": "copies/xq762nt7491#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xq762nt7491.jsonld#advance-belief",
+         "@id": "copies/xq762nt7491#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/qw257qp8232.jsonld",
+ "@id": "copies/qw257qp8232",
  "title": "Condon Roll 232, WM 690",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/qw257qp8232.jsonld#copy",
+   "@id": "copies/qw257qp8232#copy",
    "label": "Condon Roll 232",
    "identifier": "Stanford Libraries CONDON ROLL 232",
    "seeAlso": "https://purl.stanford.edu/qw257qp8232",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/qw257qp8232.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/qw257qp8232#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 44349.2,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/qw257qp8232%2Fqw257qp8232_0001/3246,524246,540,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/qw257qp8232.jsonld#inscription-text",
-        "text": "[slug mark] - 5 6 2 8   (e2, in pencil: 690)"
+        "@id": "copies/qw257qp8232#inscription-text",
+        "text": "[slug mark] - 5 6 2 8   (e2, in pencil: 690)",
+        "@annotation": {
+         "@id": "copies/qw257qp8232#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/qw257qp8232#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/qw257qp8232#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Stamped across the roll in e1, reading along the paper: a heavy fixed mark of stacked bars, a hyphen, then 5 6 2 8, all four figures cleanly inked. The mark is the slug's own, not a digit - the figures alone already give a possible date, so I have not let it make the day 15. Day first gives 5 June 1928. e2 carries 690 in pencil, and the leader label in e3 reads 'WELTE-MIGNON No. 690, Symphonische Etude, Schumann, Gespielt von' with Otto Neitzel's signature, M. Welte & Söhne, Freiburg i. Br., so the roll number is certain and the hand is the German workshop's."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1928-06-05",
      "@annotation": {
-      "@id": "copies/qw257qp8232.jsonld#date-annotation",
+      "@id": "copies/qw257qp8232#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/qw257qp8232.jsonld#date-belief",
+       "@id": "copies/qw257qp8232#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/qw257qp8232.jsonld#inscription-text"
+          "copies/qw257qp8232#inscription-text"
          ],
-         "note": "Stamped across the roll in e1, reading along the paper: a heavy fixed mark of stacked bars, a hyphen, then 5 6 2 8, all four figures cleanly inked. The mark is the slug's own, not a digit - the figures alone already give a possible date, so I have not let it make the day 15. Day first gives 5 June 1928. e2 carries 690 in pencil, and the leader label in e3 reads 'WELTE-MIGNON No. 690, Symphonische Etude, Schumann, Gespielt von' with Otto Neitzel's signature, M. Welte & Söhne, Freiburg i. Br., so the roll number is certain and the hand is the German workshop's."
+         "note": "\"5 6 28\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/qw257qp8232#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/qw257qp8232.jsonld#perforator",
+     "@id": "copies/qw257qp8232#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.763,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/qw257qp8232.jsonld#punch-diameter-annotation",
+        "@id": "copies/qw257qp8232#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qw257qp8232.jsonld#punch-diameter-belief",
+         "@id": "copies/qw257qp8232#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6224,
        "n": 411,
        "@annotation": {
-        "@id": "copies/qw257qp8232.jsonld#chain-pitch-annotation",
+        "@id": "copies/qw257qp8232#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qw257qp8232.jsonld#chain-pitch-belief",
+         "@id": "copies/qw257qp8232#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4811,
        "n": 38020,
        "@annotation": {
-        "@id": "copies/qw257qp8232.jsonld#advance-annotation",
+        "@id": "copies/qw257qp8232#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qw257qp8232.jsonld#advance-belief",
+         "@id": "copies/qw257qp8232#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

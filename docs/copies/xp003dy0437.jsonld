@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/xp003dy0437.jsonld",
+ "@id": "copies/xp003dy0437",
  "title": "Condon Roll 261, WM 882",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/xp003dy0437.jsonld#copy",
+   "@id": "copies/xp003dy0437#copy",
    "label": "Condon Roll 261",
    "identifier": "Stanford Libraries CONDON ROLL 261",
    "seeAlso": "https://purl.stanford.edu/xp003dy0437",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/xp003dy0437.jsonld#inscription",
+       "@id": "copies/xp003dy0437#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,34 +58,51 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/xp003dy0437%2Fxp003dy0437_0001/3531,162611,460,1940/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/xp003dy0437.jsonld#inscription-text",
-        "text": "882  31. 5. 12  Kramer / Wössler"
+        "@id": "copies/xp003dy0437#inscription-text",
+        "text": "882  31. 5. 12  Kramer / Wössler",
+        "@annotation": {
+         "@id": "copies/xp003dy0437#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/xp003dy0437#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/xp003dy0437#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink; two names, the first on the date line with two dots set above it (perhaps Krämer), Wössler on a second line below"
+           }
+          ]
+         }
+        }
        }
       }
      ],
      "actor": {
       "name": "Krämer",
       "sameAs": [],
-      "@id": "hands.jsonld#kraemer",
+      "@id": "hands#kraemer",
       "@annotation": {
-       "@id": "copies/xp003dy0437.jsonld#hand-annotation",
+       "@id": "copies/xp003dy0437#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/xp003dy0437.jsonld#hand-belief",
+        "@id": "copies/xp003dy0437#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/xp003dy0437.jsonld#inscription-text"
+           "copies/xp003dy0437#inscription-text"
           ],
-          "note": "Read as \"Kramer, Wössler\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Kramer, Wössler\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -109,18 +127,25 @@
     "date": {
      "within": "1912-05-31",
      "@annotation": {
-      "@id": "copies/xp003dy0437.jsonld#date-annotation",
+      "@id": "copies/xp003dy0437#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/xp003dy0437.jsonld#date-belief",
+       "@id": "copies/xp003dy0437#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/xp003dy0437.jsonld#inscription-text"
+          "copies/xp003dy0437#inscription-text"
          ],
-         "note": "ink; two names, the first on the date line with two dots set above it (perhaps Krämer), Wössler on a second line below"
+         "note": "\"31. 5. 12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/xp003dy0437#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -128,17 +153,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/xp003dy0437.jsonld#perforator",
+     "@id": "copies/xp003dy0437#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2503,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/xp003dy0437.jsonld#punch-diameter-annotation",
+        "@id": "copies/xp003dy0437#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xp003dy0437.jsonld#punch-diameter-belief",
+         "@id": "copies/xp003dy0437#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -160,10 +185,10 @@
        "bridge": 0.5918,
        "n": 153,
        "@annotation": {
-        "@id": "copies/xp003dy0437.jsonld#chain-pitch-annotation",
+        "@id": "copies/xp003dy0437#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xp003dy0437.jsonld#chain-pitch-belief",
+         "@id": "copies/xp003dy0437#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -184,10 +209,10 @@
        "strength": 0.0998,
        "n": 5625,
        "@annotation": {
-        "@id": "copies/xp003dy0437.jsonld#advance-annotation",
+        "@id": "copies/xp003dy0437#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/xp003dy0437.jsonld#advance-belief",
+         "@id": "copies/xp003dy0437#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

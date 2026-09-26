@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/mx599qs6329.jsonld",
+ "@id": "copies/mx599qs6329",
  "title": "Condon Roll 9, WM 40",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/mx599qs6329.jsonld#copy",
+   "@id": "copies/mx599qs6329#copy",
    "label": "Condon Roll 9",
    "identifier": "Stanford Libraries CONDON ROLL 9",
    "seeAlso": "https://purl.stanford.edu/mx599qs6329",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/mx599qs6329.jsonld#inscription",
+       "@id": "copies/mx599qs6329#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/mx599qs6329%2Fmx599qs6329_0001/3551,135000,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/mx599qs6329.jsonld#inscription-text",
-        "text": "12822"
+        "@id": "copies/mx599qs6329#inscription-text",
+        "text": "12822",
+        "@annotation": {
+         "@id": "copies/mx599qs6329#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/mx599qs6329#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/mx599qs6329#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Thin pencil, no separators. Read 12.8.22. The terminal 2 carries a downward curl, the same form as the closing 2 of 16522 on py987gg6088; a reading of 9 there would give 12.8.29 but seems less likely. Region 2 carries two small cursive characters, not a date."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1922-08-12",
      "@annotation": {
-      "@id": "copies/mx599qs6329.jsonld#date-annotation",
+      "@id": "copies/mx599qs6329#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/mx599qs6329.jsonld#date-belief",
+       "@id": "copies/mx599qs6329#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/mx599qs6329.jsonld#inscription-text"
+          "copies/mx599qs6329#inscription-text"
          ],
-         "note": "thin pencil, no separators. Read 12.8.22. The terminal 2 carries a downward curl, the same form as the closing 2 of 16522 on py987gg6088; a reading of 9 there would give 12.8.29 but seems less likely. Region 2 carries two small cursive characters, not a date."
+         "note": "The figures of \"12822\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/mx599qs6329#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/mx599qs6329.jsonld#perforator",
+     "@id": "copies/mx599qs6329#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6995,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/mx599qs6329.jsonld#punch-diameter-annotation",
+        "@id": "copies/mx599qs6329#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mx599qs6329.jsonld#punch-diameter-belief",
+         "@id": "copies/mx599qs6329#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.7594,
        "n": 278,
        "@annotation": {
-        "@id": "copies/mx599qs6329.jsonld#chain-pitch-annotation",
+        "@id": "copies/mx599qs6329#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mx599qs6329.jsonld#chain-pitch-belief",
+         "@id": "copies/mx599qs6329#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.4705,
        "n": 10837,
        "@annotation": {
-        "@id": "copies/mx599qs6329.jsonld#advance-annotation",
+        "@id": "copies/mx599qs6329#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/mx599qs6329.jsonld#advance-belief",
+         "@id": "copies/mx599qs6329#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

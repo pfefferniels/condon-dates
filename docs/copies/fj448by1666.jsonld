@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/fj448by1666.jsonld",
+ "@id": "copies/fj448by1666",
  "title": "Condon Roll 481, WM 1474",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/fj448by1666.jsonld#copy",
+   "@id": "copies/fj448by1666#copy",
    "label": "Condon Roll 481",
    "identifier": "Stanford Libraries CONDON ROLL 481",
    "seeAlso": "https://purl.stanford.edu/fj448by1666",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/fj448by1666.jsonld#inscription",
+       "@id": "copies/fj448by1666#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/fj448by1666%2Ffj448by1666_0001/3485,394844,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/fj448by1666.jsonld#inscription-text",
-        "text": "8  8  04"
+        "@id": "copies/fj448by1666#inscription-text",
+        "text": "8  8  04",
+        "@annotation": {
+         "@id": "copies/fj448by1666#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/fj448by1666#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/fj448by1666#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Upper panel upright; ink. A cursive group precedes the date and a short name with a long final descender follows it, neither legible to me. Day and month are the same figure, the open-topped loop over a closed bottom bowl that reading.md gives as this hand's 8; a 6 cannot be ruled out, and the line carries no other 6 or 8 to compare."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -79,18 +97,25 @@
     "date": {
      "within": "1904-08-08",
      "@annotation": {
-      "@id": "copies/fj448by1666.jsonld#date-annotation",
+      "@id": "copies/fj448by1666#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/fj448by1666.jsonld#date-belief",
+       "@id": "copies/fj448by1666#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/fj448by1666.jsonld#inscription-text"
+          "copies/fj448by1666#inscription-text"
          ],
-         "note": "upper panel upright; ink. A cursive group precedes the date and a short name with a long final descender follows it, neither legible to me. Day and month are the same figure, the open-topped loop over a closed bottom bowl that reading.md gives as this hand's 8; a 6 cannot be ruled out, and the line carries no other 6 or 8 to compare."
+         "note": "\"8 8 04\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/fj448by1666#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -98,17 +123,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/fj448by1666.jsonld#perforator",
+     "@id": "copies/fj448by1666#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1014,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/fj448by1666.jsonld#punch-diameter-annotation",
+        "@id": "copies/fj448by1666#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fj448by1666.jsonld#punch-diameter-belief",
+         "@id": "copies/fj448by1666#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -130,10 +155,10 @@
        "bridge": 0.6773,
        "n": 220,
        "@annotation": {
-        "@id": "copies/fj448by1666.jsonld#chain-pitch-annotation",
+        "@id": "copies/fj448by1666#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fj448by1666.jsonld#chain-pitch-belief",
+         "@id": "copies/fj448by1666#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -154,10 +179,10 @@
        "strength": 0.1313,
        "n": 28127,
        "@annotation": {
-        "@id": "copies/fj448by1666.jsonld#advance-annotation",
+        "@id": "copies/fj448by1666#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fj448by1666.jsonld#advance-belief",
+         "@id": "copies/fj448by1666#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/zc118hn1152.jsonld",
+ "@id": "copies/zc118hn1152",
  "title": "Condon Roll 714, WM 2995",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/zc118hn1152.jsonld#copy",
+   "@id": "copies/zc118hn1152#copy",
    "label": "Condon Roll 714",
    "identifier": "Stanford Libraries CONDON ROLL 714",
    "seeAlso": "https://purl.stanford.edu/zc118hn1152",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/zc118hn1152.jsonld#inscription",
+       "@id": "copies/zc118hn1152#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/zc118hn1152%2Fzc118hn1152_0001/3505,488775,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/zc118hn1152.jsonld#inscription-text",
-        "text": "28422"
+        "@id": "copies/zc118hn1152#inscription-text",
+        "text": "28422",
+        "@annotation": {
+         "@id": "copies/zc118hn1152#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/zc118hn1152#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/zc118hn1152#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, treble edge, five figures without separators. The second figure is the open-topped 8 of these hands, two strokes converging on one bottom bowl; read as 6 the day would be 26. The 4 is the most broken figure of the five. Both figures of the year match the 2 that opens the group."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1922-04-28",
      "@annotation": {
-      "@id": "copies/zc118hn1152.jsonld#date-annotation",
+      "@id": "copies/zc118hn1152#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/zc118hn1152.jsonld#date-belief",
+       "@id": "copies/zc118hn1152#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/zc118hn1152.jsonld#inscription-text"
+          "copies/zc118hn1152#inscription-text"
          ],
-         "note": "Pencil, treble edge, five figures without separators. The second figure is the open-topped 8 of these hands, two strokes converging on one bottom bowl; read as 6 the day would be 26. The 4 is the most broken figure of the five. Both figures of the year match the 2 that opens the group."
+         "note": "The figures of \"28422\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/zc118hn1152#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/zc118hn1152.jsonld#perforator",
+     "@id": "copies/zc118hn1152#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7232,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/zc118hn1152.jsonld#punch-diameter-annotation",
+        "@id": "copies/zc118hn1152#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zc118hn1152.jsonld#punch-diameter-belief",
+         "@id": "copies/zc118hn1152#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.6357,
        "n": 390,
        "@annotation": {
-        "@id": "copies/zc118hn1152.jsonld#chain-pitch-annotation",
+        "@id": "copies/zc118hn1152#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zc118hn1152.jsonld#chain-pitch-belief",
+         "@id": "copies/zc118hn1152#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5605,
        "n": 25151,
        "@annotation": {
-        "@id": "copies/zc118hn1152.jsonld#advance-annotation",
+        "@id": "copies/zc118hn1152#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/zc118hn1152.jsonld#advance-belief",
+         "@id": "copies/zc118hn1152#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

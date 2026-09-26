@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/st011pr3757.jsonld",
+ "@id": "copies/st011pr3757",
  "title": "Condon Roll 155, WM 738",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/st011pr3757.jsonld#copy",
+   "@id": "copies/st011pr3757#copy",
    "label": "Condon Roll 155",
    "identifier": "Stanford Libraries CONDON ROLL 155",
    "seeAlso": "https://purl.stanford.edu/st011pr3757",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/st011pr3757.jsonld#inscription",
+       "@id": "copies/st011pr3757#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/st011pr3757%2Fst011pr3757_0001/3509,140829,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/st011pr3757.jsonld#inscription-text",
-        "text": "16823"
+        "@id": "copies/st011pr3757#inscription-text",
+        "text": "16823",
+        "@annotation": {
+         "@id": "copies/st011pr3757#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/st011pr3757#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/st011pr3757#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Pencil, single line, no separators; read as 16.8.23. Final figure is a flat-topped glyph that could equally be a 5, in which case 16.8.25. No roll number or name in this crop."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1923-08-16",
      "@annotation": {
-      "@id": "copies/st011pr3757.jsonld#date-annotation",
+      "@id": "copies/st011pr3757#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/st011pr3757.jsonld#date-belief",
+       "@id": "copies/st011pr3757#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/st011pr3757.jsonld#inscription-text"
+          "copies/st011pr3757#inscription-text"
          ],
-         "note": "pencil, single line, no separators; read as 16.8.23. Final figure is a flat-topped glyph that could equally be a 5, in which case 16.8.25. No roll number or name in this crop."
+         "note": "The figures of \"16823\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/st011pr3757#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/st011pr3757.jsonld#perforator",
+     "@id": "copies/st011pr3757#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.8484,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/st011pr3757.jsonld#punch-diameter-annotation",
+        "@id": "copies/st011pr3757#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/st011pr3757.jsonld#punch-diameter-belief",
+         "@id": "copies/st011pr3757#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.5383,
        "n": 218,
        "@annotation": {
-        "@id": "copies/st011pr3757.jsonld#chain-pitch-annotation",
+        "@id": "copies/st011pr3757#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/st011pr3757.jsonld#chain-pitch-belief",
+         "@id": "copies/st011pr3757#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5132,
        "n": 7289,
        "@annotation": {
-        "@id": "copies/st011pr3757.jsonld#advance-annotation",
+        "@id": "copies/st011pr3757#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/st011pr3757.jsonld#advance-belief",
+         "@id": "copies/st011pr3757#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

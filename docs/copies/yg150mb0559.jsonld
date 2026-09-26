@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/yg150mb0559.jsonld",
+ "@id": "copies/yg150mb0559",
  "title": "Condon Roll 39, WM 207",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/yg150mb0559.jsonld#copy",
+   "@id": "copies/yg150mb0559#copy",
    "label": "Condon Roll 39",
    "identifier": "Stanford Libraries CONDON ROLL 39",
    "seeAlso": "https://purl.stanford.edu/yg150mb0559",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/yg150mb0559.jsonld#inscription",
+       "@id": "copies/yg150mb0559#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/yg150mb0559%2Fyg150mb0559_0001/3478,120741,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/yg150mb0559.jsonld#inscription-text",
-        "text": "[short word, illegible]  1. 4. 1908."
+        "@id": "copies/yg150mb0559#inscription-text",
+        "text": "[short word, illegible]  1. 4. 1908.",
+        "@annotation": {
+         "@id": "copies/yg150mb0559#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/yg150mb0559#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/yg150mb0559#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, the clearest hand in the batch: 1. 4. 1908. with the final 8 fully formed. The short word before the date is the same mark as on yr287jf4422 and is illegible to me; it begins with M or W and appears to carry an umlaut."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "M. W.?",
       "sameAs": [],
-      "@id": "hands.jsonld#pencil-monogram",
+      "@id": "hands#pencil-monogram",
       "@annotation": {
-       "@id": "copies/yg150mb0559.jsonld#hand-annotation",
+       "@id": "copies/yg150mb0559#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/yg150mb0559.jsonld#hand-belief",
+        "@id": "copies/yg150mb0559#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/yg150mb0559.jsonld#inscription-text"
+           "copies/yg150mb0559#inscription-text"
           ],
           "note": "No name was read off it."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1908-04-01",
      "@annotation": {
-      "@id": "copies/yg150mb0559.jsonld#date-annotation",
+      "@id": "copies/yg150mb0559#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/yg150mb0559.jsonld#date-belief",
+       "@id": "copies/yg150mb0559#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/yg150mb0559.jsonld#inscription-text"
+          "copies/yg150mb0559#inscription-text"
          ],
-         "note": "Pencil, the clearest hand in the batch: 1. 4. 1908. with the final 8 fully formed. The short word before the date is the same mark as on yr287jf4422 and is illegible to me; it begins with M or W and appears to carry an umlaut."
+         "note": "\"1. 4. 1908.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/yg150mb0559#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/yg150mb0559.jsonld#perforator",
+     "@id": "copies/yg150mb0559#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2223,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/yg150mb0559.jsonld#punch-diameter-annotation",
+        "@id": "copies/yg150mb0559#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yg150mb0559.jsonld#punch-diameter-belief",
+         "@id": "copies/yg150mb0559#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.4091,
        "n": 227,
        "@annotation": {
-        "@id": "copies/yg150mb0559.jsonld#chain-pitch-annotation",
+        "@id": "copies/yg150mb0559#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yg150mb0559.jsonld#chain-pitch-belief",
+         "@id": "copies/yg150mb0559#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.1356,
        "n": 7511,
        "@annotation": {
-        "@id": "copies/yg150mb0559.jsonld#advance-annotation",
+        "@id": "copies/yg150mb0559#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/yg150mb0559.jsonld#advance-belief",
+         "@id": "copies/yg150mb0559#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

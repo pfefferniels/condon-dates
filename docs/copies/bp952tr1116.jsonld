@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/bp952tr1116.jsonld",
+ "@id": "copies/bp952tr1116",
  "title": "Condon Roll 126, WM 399",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/bp952tr1116.jsonld#copy",
+   "@id": "copies/bp952tr1116#copy",
    "label": "Condon Roll 126",
    "identifier": "Stanford Libraries CONDON ROLL 126",
    "seeAlso": "https://purl.stanford.edu/bp952tr1116",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/bp952tr1116.jsonld#inscription",
+       "@id": "copies/bp952tr1116#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/bp952tr1116%2Fbp952tr1116_0001/3398,283057,584,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/bp952tr1116.jsonld#inscription-text",
-        "text": "699  19. 4. 10  Kumer (overbar on the m) / [second signature, illegible]"
+        "@id": "copies/bp952tr1116#inscription-text",
+        "text": "699  19. 4. 10  Kumer (overbar on the m) / [second signature, illegible]",
+        "@annotation": {
+         "@id": "copies/bp952tr1116#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/bp952tr1116#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/bp952tr1116#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, two lines; the first name is written Kumer with an overbar over the m, so Kummer. A second cursive signature on the line below is not legible to me; it may be the Woessler hand seen elsewhere in the corpus, but I cannot make it out. The roll number's first figure is a single downstroke into a closed bowl, so 6 rather than 8; the two following figures match the 9 of 19 in the date"
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,26 +84,26 @@
      "actor": {
       "name": "Kummer",
       "sameAs": [],
-      "@id": "hands.jsonld#kummer",
+      "@id": "hands#kummer",
       "@annotation": {
-       "@id": "copies/bp952tr1116.jsonld#hand-annotation",
+       "@id": "copies/bp952tr1116#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/bp952tr1116.jsonld#hand-belief",
+        "@id": "copies/bp952tr1116#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/bp952tr1116.jsonld#inscription-text"
+           "copies/bp952tr1116#inscription-text"
           ],
-          "note": "Read as \"Kummer\". Countersigned by Wissler (https://pfefferniels.github.io/condon-dates/hands.jsonld#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
+          "note": "Read as \"Kummer\". Countersigned by Wissler (https://w3id.org/condon-rolls/hands#wissler); an act has one actor in linked-rolls, so the countersignature is stated here only."
          },
          {
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1910-04-19",
      "@annotation": {
-      "@id": "copies/bp952tr1116.jsonld#date-annotation",
+      "@id": "copies/bp952tr1116#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/bp952tr1116.jsonld#date-belief",
+       "@id": "copies/bp952tr1116#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/bp952tr1116.jsonld#inscription-text"
+          "copies/bp952tr1116#inscription-text"
          ],
-         "note": "ink, two lines; the first name is written Kumer with an overbar over the m, so Kummer. A second cursive signature on the line below is not legible to me; it may be the Woessler hand seen elsewhere in the corpus, but I cannot make it out. The roll number's first figure is a single downstroke into a closed bowl, so 6 rather than 8; the two following figures match the 9 of 19 in the date"
+         "note": "\"19. 4. 10\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/bp952tr1116#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/bp952tr1116.jsonld#perforator",
+     "@id": "copies/bp952tr1116#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0667,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/bp952tr1116.jsonld#punch-diameter-annotation",
+        "@id": "copies/bp952tr1116#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bp952tr1116.jsonld#punch-diameter-belief",
+         "@id": "copies/bp952tr1116#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.81,
        "n": 237,
        "@annotation": {
-        "@id": "copies/bp952tr1116.jsonld#chain-pitch-annotation",
+        "@id": "copies/bp952tr1116#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bp952tr1116.jsonld#chain-pitch-belief",
+         "@id": "copies/bp952tr1116#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.0825,
        "n": 17194,
        "@annotation": {
-        "@id": "copies/bp952tr1116.jsonld#advance-annotation",
+        "@id": "copies/bp952tr1116#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bp952tr1116.jsonld#advance-belief",
+         "@id": "copies/bp952tr1116#advance-belief",
          "certainty": "unlikely",
          "reasons": [
           {

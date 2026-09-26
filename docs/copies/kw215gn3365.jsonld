@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/kw215gn3365.jsonld",
+ "@id": "copies/kw215gn3365",
  "title": "Condon Roll 802, WM 3357",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/kw215gn3365.jsonld#copy",
+   "@id": "copies/kw215gn3365#copy",
    "label": "Condon Roll 802",
    "identifier": "Stanford Libraries CONDON ROLL 802",
    "seeAlso": "https://purl.stanford.edu/kw215gn3365",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/kw215gn3365.jsonld#inscription",
+       "@id": "copies/kw215gn3365#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/kw215gn3365%2Fkw215gn3365_0001/3505,267678,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/kw215gn3365.jsonld#inscription-text",
-        "text": "8223"
+        "@id": "copies/kw215gn3365#inscription-text",
+        "text": "8223",
+        "@annotation": {
+         "@id": "copies/kw215gn3365#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/kw215gn3365#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/kw215gn3365#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, separators dropped, read as 8.2.23. Region 6 carries 3357 in the same hand, which is the roll number. Regions 1, 2, 4 and 5 hold no writing."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1923-02-08",
      "@annotation": {
-      "@id": "copies/kw215gn3365.jsonld#date-annotation",
+      "@id": "copies/kw215gn3365#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/kw215gn3365.jsonld#date-belief",
+       "@id": "copies/kw215gn3365#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/kw215gn3365.jsonld#inscription-text"
+          "copies/kw215gn3365#inscription-text"
          ],
-         "note": "Pencil, separators dropped, read as 8.2.23. Region 6 carries 3357 in the same hand, which is the roll number. Regions 1, 2, 4 and 5 hold no writing."
+         "note": "The figures of \"8223\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/kw215gn3365#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/kw215gn3365.jsonld#perforator",
+     "@id": "copies/kw215gn3365#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7038,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/kw215gn3365.jsonld#punch-diameter-annotation",
+        "@id": "copies/kw215gn3365#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kw215gn3365.jsonld#punch-diameter-belief",
+         "@id": "copies/kw215gn3365#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7128,
        "n": 233,
        "@annotation": {
-        "@id": "copies/kw215gn3365.jsonld#chain-pitch-annotation",
+        "@id": "copies/kw215gn3365#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kw215gn3365.jsonld#chain-pitch-belief",
+         "@id": "copies/kw215gn3365#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.1248,
        "n": 10475,
        "@annotation": {
-        "@id": "copies/kw215gn3365.jsonld#advance-annotation",
+        "@id": "copies/kw215gn3365#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/kw215gn3365.jsonld#advance-belief",
+         "@id": "copies/kw215gn3365#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

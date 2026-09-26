@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/jm300wy4714.jsonld",
+ "@id": "copies/jm300wy4714",
  "title": "Condon Roll 633, WM 2622",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/jm300wy4714.jsonld#copy",
+   "@id": "copies/jm300wy4714#copy",
    "label": "Condon Roll 633",
    "identifier": "Stanford Libraries CONDON ROLL 633",
    "seeAlso": "https://purl.stanford.edu/jm300wy4714",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/jm300wy4714.jsonld#inscription",
+       "@id": "copies/jm300wy4714#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/jm300wy4714%2Fjm300wy4714_0001/3503,53197,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/jm300wy4714.jsonld#inscription-text",
-        "text": "2622,   22. 8. 12,"
+        "@id": "copies/jm300wy4714#inscription-text",
+        "text": "2622,   22. 8. 12,",
+        "@annotation": {
+         "@id": "copies/jm300wy4714#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/jm300wy4714#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/jm300wy4714#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, plain. The month figure is the open-topped 8 described in reading.md, two strokes converging on a bottom bowl, not a 6. No puncher's name in the crop."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1912-08-22",
      "@annotation": {
-      "@id": "copies/jm300wy4714.jsonld#date-annotation",
+      "@id": "copies/jm300wy4714#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/jm300wy4714.jsonld#date-belief",
+       "@id": "copies/jm300wy4714#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/jm300wy4714.jsonld#inscription-text"
+          "copies/jm300wy4714#inscription-text"
          ],
-         "note": "pencil, plain. The month figure is the open-topped 8 described in reading.md, two strokes converging on a bottom bowl, not a 6. No puncher's name in the crop."
+         "note": "\"22. 8. 12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/jm300wy4714#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/jm300wy4714.jsonld#perforator",
+     "@id": "copies/jm300wy4714#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0024,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/jm300wy4714.jsonld#punch-diameter-annotation",
+        "@id": "copies/jm300wy4714#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jm300wy4714.jsonld#punch-diameter-belief",
+         "@id": "copies/jm300wy4714#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.8545,
        "n": 307,
        "@annotation": {
-        "@id": "copies/jm300wy4714.jsonld#chain-pitch-annotation",
+        "@id": "copies/jm300wy4714#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jm300wy4714.jsonld#chain-pitch-belief",
+         "@id": "copies/jm300wy4714#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.3279,
        "n": 1380,
        "@annotation": {
-        "@id": "copies/jm300wy4714.jsonld#advance-annotation",
+        "@id": "copies/jm300wy4714#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/jm300wy4714.jsonld#advance-belief",
+         "@id": "copies/jm300wy4714#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

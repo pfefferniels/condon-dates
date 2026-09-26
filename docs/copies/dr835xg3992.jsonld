@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/dr835xg3992.jsonld",
+ "@id": "copies/dr835xg3992",
  "title": "Condon Roll 761, WM 3335",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/dr835xg3992.jsonld#copy",
+   "@id": "copies/dr835xg3992#copy",
    "label": "Condon Roll 761",
    "identifier": "Stanford Libraries CONDON ROLL 761",
    "seeAlso": "https://purl.stanford.edu/dr835xg3992",
@@ -42,8 +43,8 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/dr835xg3992.jsonld#inscription",
-       "technique": "handwriting",
+       "@id": "copies/dr835xg3992#inscription",
+       "technique": "stamp",
        "horizontal": {
         "unit": "mm",
         "from": 39886.76,
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/dr835xg3992%2Fdr835xg3992_0001/3326,471496,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/dr835xg3992.jsonld#inscription-text",
-        "text": "811025"
+        "@id": "copies/dr835xg3992#inscription-text",
+        "text": "811025",
+        "@annotation": {
+         "@id": "copies/dr835xg3992#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/dr835xg3992#transcription-belief",
+          "certainty": "possible",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/dr835xg3992#inscription"
+            ],
+            "note": "Graded low on the figures of the date: the figures could give another date. Six-figure stamp in black ink, every figure plain: 8 1 1 0 2 5. Read as day-month-year it gives day 81, which is impossible, so the day is not recoverable. If the last four figures are month and year, as on other stamped rolls in this batch, the month is October and the year 1925. 3335 is written in pencil on region 4; region 3 holds only a smudge."
+           }
+          ]
+         }
+        }
        }
       }
      ]
@@ -80,18 +98,25 @@
      "after": "1925-10-01",
      "before": "1925-10-31",
      "@annotation": {
-      "@id": "copies/dr835xg3992.jsonld#date-annotation",
+      "@id": "copies/dr835xg3992#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/dr835xg3992.jsonld#date-belief",
+       "@id": "copies/dr835xg3992#date-belief",
        "certainty": "possible",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/dr835xg3992.jsonld#inscription-text"
+          "copies/dr835xg3992#inscription-text"
          ],
-         "note": "Six-figure stamp in black ink, every figure plain: 8 1 1 0 2 5. Read as day-month-year it gives day 81, which is impossible, so the day is not recoverable. If the last four figures are month and year, as on other stamped rolls in this batch, the month is October and the year 1925. 3335 is written in pencil on region 4; region 3 holds only a smudge."
+         "note": "The figures of \"811025\" are run together, and are grouped day, month, year, the order the workshop wrote its dates in, with a two-digit year in the 1900s (punch-225/dates/reading.md). The day is not read."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/dr835xg3992#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription, and no surer than likely, since the paper does not group the figures."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/dr835xg3992.jsonld#perforator",
+     "@id": "copies/dr835xg3992#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.6962,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/dr835xg3992.jsonld#punch-diameter-annotation",
+        "@id": "copies/dr835xg3992#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dr835xg3992.jsonld#punch-diameter-belief",
+         "@id": "copies/dr835xg3992#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7914,
        "n": 253,
        "@annotation": {
-        "@id": "copies/dr835xg3992.jsonld#chain-pitch-annotation",
+        "@id": "copies/dr835xg3992#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dr835xg3992.jsonld#chain-pitch-belief",
+         "@id": "copies/dr835xg3992#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5312,
        "n": 33487,
        "@annotation": {
-        "@id": "copies/dr835xg3992.jsonld#advance-annotation",
+        "@id": "copies/dr835xg3992#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/dr835xg3992.jsonld#advance-belief",
+         "@id": "copies/dr835xg3992#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

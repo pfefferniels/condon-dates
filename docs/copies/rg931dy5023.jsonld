@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/rg931dy5023.jsonld",
+ "@id": "copies/rg931dy5023",
  "title": "Condon Roll 708, WM 2944",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/rg931dy5023.jsonld#copy",
+   "@id": "copies/rg931dy5023#copy",
    "label": "Condon Roll 708",
    "identifier": "Stanford Libraries CONDON ROLL 708",
    "seeAlso": "https://purl.stanford.edu/rg931dy5023",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/rg931dy5023.jsonld#inscription",
+       "@id": "copies/rg931dy5023#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/rg931dy5023%2Frg931dy5023_0001/3511,499310,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/rg931dy5023.jsonld#inscription-text",
-        "text": "19428"
+        "@id": "copies/rg931dy5023#inscription-text",
+        "text": "19428",
+        "@annotation": {
+         "@id": "copies/rg931dy5023#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/rg931dy5023#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/rg931dy5023#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, treble edge, near the tail of the roll. Five figures, no separators, split 3 + 2 by spacing. The 1 is a plain caret, the 9 a closed bowl with a descender matching the 9 of the roll number, the 4 the looped form this hand uses in the number. The last figure is a closed double loop, both lobes inked on the left, so an 8 and not the open-left 3; if it were a 3 the year would be 23. Crop 1 holds only an ink blot; the roll number 2944 is written at the head of the roll (crop 3)."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1928-04-19",
      "@annotation": {
-      "@id": "copies/rg931dy5023.jsonld#date-annotation",
+      "@id": "copies/rg931dy5023#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/rg931dy5023.jsonld#date-belief",
+       "@id": "copies/rg931dy5023#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/rg931dy5023.jsonld#inscription-text"
+          "copies/rg931dy5023#inscription-text"
          ],
-         "note": "Pencil, treble edge, near the tail of the roll. Five figures, no separators, split 3 + 2 by spacing. The 1 is a plain caret, the 9 a closed bowl with a descender matching the 9 of the roll number, the 4 the looped form this hand uses in the number. The last figure is a closed double loop, both lobes inked on the left, so an 8 and not the open-left 3; if it were a 3 the year would be 23. Crop 1 holds only an ink blot; the roll number 2944 is written at the head of the roll (crop 3)."
+         "note": "\"19 4 28\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/rg931dy5023#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/rg931dy5023.jsonld#perforator",
+     "@id": "copies/rg931dy5023#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7765,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/rg931dy5023.jsonld#punch-diameter-annotation",
+        "@id": "copies/rg931dy5023#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rg931dy5023.jsonld#punch-diameter-belief",
+         "@id": "copies/rg931dy5023#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.5925,
        "n": 382,
        "@annotation": {
-        "@id": "copies/rg931dy5023.jsonld#chain-pitch-annotation",
+        "@id": "copies/rg931dy5023#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rg931dy5023.jsonld#chain-pitch-belief",
+         "@id": "copies/rg931dy5023#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.4592,
        "n": 39483,
        "@annotation": {
-        "@id": "copies/rg931dy5023.jsonld#advance-annotation",
+        "@id": "copies/rg931dy5023#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/rg931dy5023.jsonld#advance-belief",
+         "@id": "copies/rg931dy5023#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/qv334zb6243.jsonld",
+ "@id": "copies/qv334zb6243",
  "title": "Condon Roll 376, WM 1254",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/qv334zb6243.jsonld#copy",
+   "@id": "copies/qv334zb6243#copy",
    "label": "Condon Roll 376",
    "identifier": "Stanford Libraries CONDON ROLL 376",
    "seeAlso": "https://purl.stanford.edu/qv334zb6243",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/qv334zb6243.jsonld#inscription",
+       "@id": "copies/qv334zb6243#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/qv334zb6243%2Fqv334zb6243_0001/3503,199846,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/qv334zb6243.jsonld#inscription-text",
-        "text": "1254,  6, 3, 14,"
+        "@id": "copies/qv334zb6243#inscription-text",
+        "text": "1254,  6, 3, 14,",
+        "@annotation": {
+         "@id": "copies/qv334zb6243#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/qv334zb6243#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/qv334zb6243#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Pencil, one line, the number first and the date after it, separated by low commas rather than dots. The 6 and the 3 are plain and the year is a 1 followed by the crossbarred 4 of this hand. No name in the crop."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1914-03-06",
      "@annotation": {
-      "@id": "copies/qv334zb6243.jsonld#date-annotation",
+      "@id": "copies/qv334zb6243#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/qv334zb6243.jsonld#date-belief",
+       "@id": "copies/qv334zb6243#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/qv334zb6243.jsonld#inscription-text"
+          "copies/qv334zb6243#inscription-text"
          ],
-         "note": "Pencil, one line, the number first and the date after it, separated by low commas rather than dots. The 6 and the 3 are plain and the year is a 1 followed by the crossbarred 4 of this hand. No name in the crop."
+         "note": "\"6, 3, 14\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/qv334zb6243#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/qv334zb6243.jsonld#perforator",
+     "@id": "copies/qv334zb6243#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.0895,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/qv334zb6243.jsonld#punch-diameter-annotation",
+        "@id": "copies/qv334zb6243#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qv334zb6243.jsonld#punch-diameter-belief",
+         "@id": "copies/qv334zb6243#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.813,
        "n": 226,
        "@annotation": {
-        "@id": "copies/qv334zb6243.jsonld#chain-pitch-annotation",
+        "@id": "copies/qv334zb6243#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qv334zb6243.jsonld#chain-pitch-belief",
+         "@id": "copies/qv334zb6243#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.5818,
        "n": 15700,
        "@annotation": {
-        "@id": "copies/qv334zb6243.jsonld#advance-annotation",
+        "@id": "copies/qv334zb6243#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qv334zb6243.jsonld#advance-belief",
+         "@id": "copies/qv334zb6243#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

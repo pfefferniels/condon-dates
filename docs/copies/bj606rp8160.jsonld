@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/bj606rp8160.jsonld",
+ "@id": "copies/bj606rp8160",
  "title": "Condon Roll 1, WM 367",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/bj606rp8160.jsonld#copy",
+   "@id": "copies/bj606rp8160#copy",
    "label": "Condon Roll 1",
    "identifier": "Stanford Libraries CONDON ROLL 109 COPY 1",
    "seeAlso": "https://purl.stanford.edu/bj606rp8160",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/bj606rp8160.jsonld#inscription",
+       "@id": "copies/bj606rp8160#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/bj606rp8160%2Fbj606rp8160_0001/3524,343877,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/bj606rp8160.jsonld#inscription-text",
-        "text": "367.  14. 9. 10.  J. H. M. / II."
+        "@id": "copies/bj606rp8160#inscription-text",
+        "text": "367.  14. 9. 10.  J. H. M. / II.",
+        "@annotation": {
+         "@id": "copies/bj606rp8160#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/bj606rp8160#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/bj606rp8160#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Read here at magnification after two readers disagreed, one giving 19.9.10 and 867, the other 14.4.10 and 864. The number reads 367, which matches the catalogue, and that agreement is the reason to prefer this reading of the figures."
+           }
+          ]
+         }
+        }
        }
       }
      ],
@@ -66,16 +84,16 @@
       "name": "J. H. M.",
       "sameAs": [],
       "@annotation": {
-       "@id": "copies/bj606rp8160.jsonld#hand-annotation",
+       "@id": "copies/bj606rp8160#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/bj606rp8160.jsonld#hand-belief",
+        "@id": "copies/bj606rp8160#hand-belief",
         "certainty": "possible",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/bj606rp8160.jsonld#inscription-text"
+           "copies/bj606rp8160#inscription-text"
           ],
           "note": "Read as \"J. H. M.\"."
          }
@@ -100,18 +118,25 @@
     "date": {
      "within": "1910-09-14",
      "@annotation": {
-      "@id": "copies/bj606rp8160.jsonld#date-annotation",
+      "@id": "copies/bj606rp8160#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/bj606rp8160.jsonld#date-belief",
+       "@id": "copies/bj606rp8160#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/bj606rp8160.jsonld#inscription-text"
+          "copies/bj606rp8160#inscription-text"
          ],
-         "note": "read here at magnification after two readers disagreed, one giving 19.9.10 and 867, the other 14.4.10 and 864. The number reads 367, which matches the catalogue, and that agreement is the reason to prefer this reading of the figures."
+         "note": "\"14. 9. 10.\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/bj606rp8160#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -119,17 +144,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/bj606rp8160.jsonld#perforator",
+     "@id": "copies/bj606rp8160#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1885,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/bj606rp8160.jsonld#punch-diameter-annotation",
+        "@id": "copies/bj606rp8160#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bj606rp8160.jsonld#punch-diameter-belief",
+         "@id": "copies/bj606rp8160#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -151,10 +176,10 @@
        "bridge": 0.7595,
        "n": 290,
        "@annotation": {
-        "@id": "copies/bj606rp8160.jsonld#chain-pitch-annotation",
+        "@id": "copies/bj606rp8160#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bj606rp8160.jsonld#chain-pitch-belief",
+         "@id": "copies/bj606rp8160#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -175,10 +200,10 @@
        "strength": 0.4889,
        "n": 19136,
        "@annotation": {
-        "@id": "copies/bj606rp8160.jsonld#advance-annotation",
+        "@id": "copies/bj606rp8160#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/bj606rp8160.jsonld#advance-belief",
+         "@id": "copies/bj606rp8160#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

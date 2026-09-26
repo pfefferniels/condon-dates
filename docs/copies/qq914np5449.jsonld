@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/qq914np5449.jsonld",
+ "@id": "copies/qq914np5449",
  "title": "Condon Roll 88, WM 324",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/qq914np5449.jsonld#copy",
+   "@id": "copies/qq914np5449#copy",
    "label": "Condon Roll 88",
    "identifier": "Stanford Libraries CONDON ROLL 88",
    "seeAlso": "https://purl.stanford.edu/qq914np5449",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/qq914np5449.jsonld#inscription",
+       "@id": "copies/qq914np5449#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/qq914np5449%2Fqq914np5449_0001/3530,302751,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/qq914np5449.jsonld#inscription-text",
-        "text": "324  5 3 09  Krämer"
+        "@id": "copies/qq914np5449#inscription-text",
+        "text": "324  5 3 09  Krämer",
+        "@annotation": {
+         "@id": "copies/qq914np5449#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/qq914np5449#transcription-belief",
+          "certainty": "true",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/qq914np5449#inscription"
+            ],
+            "note": "Graded high on the figures of the date: every figure is plain. Ink, every figure plain; the name is written below the date and carries umlaut dots. A separate pen scribble sits to the left of the number."
+           }
+          ]
+         }
+        }
        },
        "medium": "ink"
       }
@@ -66,18 +84,18 @@
      "actor": {
       "name": "Krämer",
       "sameAs": [],
-      "@id": "hands.jsonld#kraemer",
+      "@id": "hands#kraemer",
       "@annotation": {
-       "@id": "copies/qq914np5449.jsonld#hand-annotation",
+       "@id": "copies/qq914np5449#hand-annotation",
        "belief": {
         "@type": "belief",
-        "@id": "copies/qq914np5449.jsonld#hand-belief",
+        "@id": "copies/qq914np5449#hand-belief",
         "certainty": "likely",
         "reasons": [
          {
           "@type": "meaningComprehension",
           "comprehends": [
-           "copies/qq914np5449.jsonld#inscription-text"
+           "copies/qq914np5449#inscription-text"
           ],
           "note": "Read as \"Krämer\"."
          },
@@ -85,7 +103,7 @@
           "@type": "inference",
           "premises": [],
           "used": [
-           "https://pfefferniels.github.io/condon-dates/hands.jsonld"
+           "https://w3id.org/condon-rolls/hands"
           ],
           "note": "The signature is clustered with the hand's other rolls by comparing the inscription images, not by the name read."
          }
@@ -110,18 +128,25 @@
     "date": {
      "within": "1909-03-05",
      "@annotation": {
-      "@id": "copies/qq914np5449.jsonld#date-annotation",
+      "@id": "copies/qq914np5449#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/qq914np5449.jsonld#date-belief",
+       "@id": "copies/qq914np5449#date-belief",
        "certainty": "true",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/qq914np5449.jsonld#inscription-text"
+          "copies/qq914np5449#inscription-text"
          ],
-         "note": "ink, every figure plain; the name is written below the date and carries umlaut dots. A separate pen scribble sits to the left of the number."
+         "note": "\"5 3 09\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/qq914np5449#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -129,17 +154,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/qq914np5449.jsonld#perforator",
+     "@id": "copies/qq914np5449#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.2663,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/qq914np5449.jsonld#punch-diameter-annotation",
+        "@id": "copies/qq914np5449#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qq914np5449.jsonld#punch-diameter-belief",
+         "@id": "copies/qq914np5449#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -161,10 +186,10 @@
        "bridge": 0.3776,
        "n": 197,
        "@annotation": {
-        "@id": "copies/qq914np5449.jsonld#chain-pitch-annotation",
+        "@id": "copies/qq914np5449#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qq914np5449.jsonld#chain-pitch-belief",
+         "@id": "copies/qq914np5449#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -185,10 +210,10 @@
        "strength": 0.0704,
        "n": 12314,
        "@annotation": {
-        "@id": "copies/qq914np5449.jsonld#advance-annotation",
+        "@id": "copies/qq914np5449#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/qq914np5449.jsonld#advance-belief",
+         "@id": "copies/qq914np5449#advance-belief",
          "certainty": "possible",
          "reasons": [
           {

@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/cp259ms0085.jsonld",
+ "@id": "copies/cp259ms0085",
  "title": "Condon Roll 559, WM 2260",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/cp259ms0085.jsonld#copy",
+   "@id": "copies/cp259ms0085#copy",
    "label": "Condon Roll 559",
    "identifier": "Stanford Libraries CONDON ROLL 559",
    "seeAlso": "https://purl.stanford.edu/cp259ms0085",
@@ -50,17 +51,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/cp259ms0085.jsonld#perforator",
+     "@id": "copies/cp259ms0085#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 1.7393,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/cp259ms0085.jsonld#punch-diameter-annotation",
+        "@id": "copies/cp259ms0085#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cp259ms0085.jsonld#punch-diameter-belief",
+         "@id": "copies/cp259ms0085#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -82,10 +83,10 @@
        "bridge": 0.601,
        "n": 389,
        "@annotation": {
-        "@id": "copies/cp259ms0085.jsonld#chain-pitch-annotation",
+        "@id": "copies/cp259ms0085#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cp259ms0085.jsonld#chain-pitch-belief",
+         "@id": "copies/cp259ms0085#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -106,10 +107,10 @@
        "strength": 0.4098,
        "n": 15075,
        "@annotation": {
-        "@id": "copies/cp259ms0085.jsonld#advance-annotation",
+        "@id": "copies/cp259ms0085#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/cp259ms0085.jsonld#advance-belief",
+         "@id": "copies/cp259ms0085#advance-belief",
          "certainty": "likely",
          "reasons": [
           {

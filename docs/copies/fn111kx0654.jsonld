@@ -1,18 +1,19 @@
 {
  "@context": [
   "https://w3id.org/reo/context.jsonld",
-  "https://pfefferniels.github.io/condon-dates/context.jsonld",
+  "https://w3id.org/condon-rolls/context.jsonld",
   {
-   "@base": "https://pfefferniels.github.io/condon-dates/"
+   "@base": "https://w3id.org/condon-rolls/"
   }
  ],
- "@id": "copies/fn111kx0654.jsonld",
+ "@id": "copies/fn111kx0654",
  "title": "Condon Roll 344, WM 1213",
- "isPartOf": "copies.jsonld",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": "copies",
  "copies": [
   {
    "@type": "RollCopy",
-   "@id": "copies/fn111kx0654.jsonld#copy",
+   "@id": "copies/fn111kx0654#copy",
    "label": "Condon Roll 344",
    "identifier": "Stanford Libraries CONDON ROLL 344",
    "seeAlso": "https://purl.stanford.edu/fn111kx0654",
@@ -42,7 +43,7 @@
      "produced": [
       {
        "@type": "Writing",
-       "@id": "copies/fn111kx0654.jsonld#inscription",
+       "@id": "copies/fn111kx0654#inscription",
        "technique": "handwriting",
        "horizontal": {
         "unit": "mm",
@@ -57,8 +58,25 @@
        "depiction": "https://stacks.stanford.edu/image/iiif/fn111kx0654%2Ffn111kx0654_0001/3502,73438,460,1900/full/90/default.jpg",
        "transcription": {
         "@type": "text",
-        "@id": "copies/fn111kx0654.jsonld#inscription-text",
-        "text": "1213.  18. 4. 12"
+        "@id": "copies/fn111kx0654#inscription-text",
+        "text": "1213.  18. 4. 12",
+        "@annotation": {
+         "@id": "copies/fn111kx0654#transcription-annotation",
+         "belief": {
+          "@type": "belief",
+          "@id": "copies/fn111kx0654#transcription-belief",
+          "certainty": "likely",
+          "reasons": [
+           {
+            "@type": "meaningComprehension",
+            "comprehends": [
+             "copies/fn111kx0654#inscription"
+            ],
+            "note": "Graded medium on the figures of the date: one figure is arguable. Pencil, one line along the roll edge, read after a contrast stretch. Figures of 1213 and of the 4 and 12 are plain. The day figure is the open-loop form: a lower bowl with a broad upper arch hooked to the right, so 8 rather than 6, but that one figure is of the ambiguous kind the instruction warns of."
+           }
+          ]
+         }
+        }
        },
        "medium": "pencil"
       }
@@ -80,18 +98,25 @@
     "date": {
      "within": "1912-04-18",
      "@annotation": {
-      "@id": "copies/fn111kx0654.jsonld#date-annotation",
+      "@id": "copies/fn111kx0654#date-annotation",
       "belief": {
        "@type": "belief",
-       "@id": "copies/fn111kx0654.jsonld#date-belief",
+       "@id": "copies/fn111kx0654#date-belief",
        "certainty": "likely",
        "reasons": [
         {
          "@type": "meaningComprehension",
          "comprehends": [
-          "copies/fn111kx0654.jsonld#inscription-text"
+          "copies/fn111kx0654#inscription-text"
          ],
-         "note": "Pencil, one line along the roll edge, read after a contrast stretch. Figures of 1213 and of the 4 and 12 are plain. The day figure is the open-loop form: a lower bowl with a broad upper arch hooked to the right, so 8 rather than 6, but that one figure is of the ambiguous kind the instruction warns of."
+         "note": "\"18. 4. 12\" is read day first, as the workshop wrote its dates, with a two-digit year in the 1900s (punch-225/dates/reading.md)."
+        },
+        {
+         "@type": "inference",
+         "premises": [
+          "copies/fn111kx0654#transcription-belief"
+         ],
+         "note": "It is held as sure as the transcription."
         }
        ]
       }
@@ -99,17 +124,17 @@
     },
     "perforator": {
      "@type": "Perforator",
-     "@id": "copies/fn111kx0654.jsonld#perforator",
+     "@id": "copies/fn111kx0654#perforator",
      "condition": {
       "conditionType": "setting",
       "punchDiameter": {
        "value": 2.1039,
        "unit": "mm",
        "@annotation": {
-        "@id": "copies/fn111kx0654.jsonld#punch-diameter-annotation",
+        "@id": "copies/fn111kx0654#punch-diameter-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fn111kx0654.jsonld#punch-diameter-belief",
+         "@id": "copies/fn111kx0654#punch-diameter-belief",
          "certainty": "possible",
          "reasons": [
           {
@@ -131,10 +156,10 @@
        "bridge": 0.7613,
        "n": 533,
        "@annotation": {
-        "@id": "copies/fn111kx0654.jsonld#chain-pitch-annotation",
+        "@id": "copies/fn111kx0654#chain-pitch-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fn111kx0654.jsonld#chain-pitch-belief",
+         "@id": "copies/fn111kx0654#chain-pitch-belief",
          "certainty": "likely",
          "reasons": [
           {
@@ -155,10 +180,10 @@
        "strength": 0.6464,
        "n": 4828,
        "@annotation": {
-        "@id": "copies/fn111kx0654.jsonld#advance-annotation",
+        "@id": "copies/fn111kx0654#advance-annotation",
         "belief": {
          "@type": "belief",
-         "@id": "copies/fn111kx0654.jsonld#advance-belief",
+         "@id": "copies/fn111kx0654#advance-belief",
          "certainty": "likely",
          "reasons": [
           {
