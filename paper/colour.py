@@ -22,10 +22,12 @@ the leader that have seen the most light, less that of the last quarter, next to
 Every scan also has a QPcard 101 hanging above the tip of its leader, with a black, a
 dark grey and a white patch, the only neutral reference inside the scan. It is looked for
 in the first TOP_ROWS rows at 1/TOP_SHRINK, as the tallest block of wide dark neutral rows,
-then followed down its middle as three flat neutral runs of rising lightness. The middle of
-each patch is measured at full resolution: its median sRGB and how much of it the scanner
-clipped at 255. A patch channel clipped in CLIPPED or more of its pixels is not used, since
-its median is no longer the patch. The card's nominal values cannot be checked here, so the
+then followed down its middle as three flat neutral runs of rising lightness. On a bright
+scan the white patch is clipped at 255 and runs on into the white around the card, so it is
+taken no longer than the grey patch. The middle of each patch is measured at full
+resolution: its median sRGB and how much of it the scanner clipped at 255. A patch channel
+clipped in CLIPPED or more of its pixels is not used, since its median is no longer the
+patch, and the correction of that channel then rests on the black and the grey patch. The card's nominal values cannot be checked here, so the
 correction is relative: for each channel, in linear light, the gain and offset that best map
 a scan's patches onto the median patches of the corpus, one scanner, are applied to its
 paper, and the paper is reported both raw and corrected.
@@ -142,15 +144,23 @@ def find_card(top):
             blocks[-1].append(y)
         else:
             blocks.append([y])
-    if not blocks:
-        return None
-    block = max(blocks, key=len)
+    # The card hangs above everything else, so the blocks are tried from the top; a dark
+    # leader tip below it can be the taller block.
+    for block in blocks:
+        found = card_in(top, spans, block)
+        if found:
+            return found
+    return None
+
+
+def card_in(top, spans, block):
+    """The card's columns and patch rows, where the block is the card's black and grey."""
     x0 = int(np.median([spans[y][0] for y in block]))
     x1 = int(np.median([spans[y][1] for y in block]))
     inset = (x1 - x0) // 5
     middle = top[:, x0 + inset:x1 - inset]
     level = np.median(middle.mean(2), 1)
-    flat = (middle.mean(2).std(1) < 8) & (np.median(np.ptp(middle, 2), 1) < 16) & (level < 253)
+    flat = (middle.mean(2).std(1) < 8) & (np.median(np.ptp(middle, 2), 1) < 16)
     steps = []                       # flat runs of one lightness, at least 12 rows long
     for s, e in runs(flat):
         start = s
@@ -160,8 +170,11 @@ def find_card(top):
                     steps.append((start, y, float(np.median(level[start:y]))))
                 start = y
     for (b0, b1, black), (g0, g1, grey), (w0, w1, white) in zip(steps, steps[1:], steps[2:]):
-        if black < grey - 6 and grey < 120 and white > grey + 60 and g0 - b1 < 16 and w0 - g1 < 16:
-            return (x0, x1), [(b0, b1), (g0, g1), (w0, w1)]
+        if (black < grey - 6 and grey < 120 and white > grey + 60 and g0 - b1 < 16 and w0 - g1 < 16
+                and b0 <= block[-1] and b1 >= block[0]):
+            # A white patch the scanner clipped runs on into the white around the card,
+            # so it is taken no longer than the grey patch above it.
+            return (x0, x1), [(b0, b1), (g0, g1), (w0, min(w1, w0 + g1 - g0))]
     return None
 
 
