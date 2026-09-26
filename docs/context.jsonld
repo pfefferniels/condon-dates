@@ -1,16 +1,24 @@
 {
  "@context": {
-  "label": "rdfs:label",
   "comment": "rdfs:comment",
-  "identifier": "dcterms:identifier",
-  "seeAlso": {
-   "@id": "rdfs:seeAlso",
-   "@type": "@id"
-  },
-  "isPartOf": {
-   "@id": "dcterms:isPartOf",
-   "@type": "@id"
-  },
-  "exemplifies": "lrmoo:R7_exemplifies"
+  "productions": {
+   "@id": "crm:P70_documents",
+   "@context": {
+    "system": "crm:P32_used_general_technique",
+    "perforator": {
+     "@id": "crm:P16_used_specific_object",
+     "@context": {
+      "punchDiameter": "reo:punchDiameter",
+      "chainPitch": "reo:chainPitch",
+      "advance": "reo:advance",
+      "slot": "reo:slot",
+      "bridge": "reo:bridge",
+      "n": "reo:sampleSize",
+      "strength": "reo:strength",
+      "value": "crm:P90_has_value"
+     }
+    }
+   }
+  }
  }
 }
