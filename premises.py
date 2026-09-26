@@ -13,7 +13,9 @@ date carries the belief an edition names as a premise, and the reasons of that b
 link the dated copies it rests on, the data and the scripts, at the commits they stood at.
 
     docs/premises.jsonld         the premises, at premises
-    docs/evidence/<name>.json    the copies a premise rests on, at evidence/<name>
+    docs/evidence/<name>.json    the copies a premise rests on, at evidence/<name>, in groups,
+                                 each naming the premise it bears on
+    docs/premises.html           the page that shows them, for a reader who follows an IRI
     docs/context.jsonld          the terms linked-rolls does not have yet
 
 Who signed the rolls is not a premise but an identity, and hands.py publishes it apart.
@@ -151,9 +153,15 @@ def build(docs, catalogue, readings, perforator, published):
     condon = CONDON_DATES.format(commit=head(here))
     evidence = advance_evidence(catalogue, readings, perforator["rolls"])
     write(docs / "evidence" / "advance.json", {
-        "rule": f"dated to the day at confidence {' or '.join(DATED)}; advance at strength {RESOLVED} or more; "
-                f"early {EARLY[0]} to {EARLY[1]} mm, late under {LATE} mm",
-        **evidence,
+        "rule": f"dated to the day at confidence {' or '.join(DATED)}; advance at strength {RESOLVED} or more",
+        "quantity": "advance",
+        "unit": "mm",
+        "groups": [
+            {"id": "early", "label": f"advance {EARLY[0]} to {EARLY[1]} mm", "premise": "advance-1mm",
+             "copies": evidence["early"]},
+            {"id": "late", "label": f"advance under {LATE} mm", "premise": "advance-half-mm",
+             "copies": evidence["late"]},
+        ],
     })
     used = [BASE + "evidence/advance", condon + "data/readings.json", condon + "data/perforator.json",
             condon + "premises.py", PUNCH_225.format(commit=perforator["commit"] or "main") + "dates/step.py"]

@@ -147,6 +147,7 @@ function drawRegistry(data) {
   const registry = document.getElementById("registry");
   data.controllers.forEach((controller) => {
     const block = el("div", "controller");
+    block.id = controller.id;
     const head = el("div", "head");
     head.append(el("span", "label", `Controller ${controller.n}`));
     if (controller.reading) head.append(el("span", "reading", controller.reading));
@@ -184,6 +185,13 @@ async function main() {
   let buttons;
   buttons = drawChart(data, (year, bar) => showYear(data, year, buttons, bar));
   drawRegistry(data);
+
+  /* A hand's IRI on w3id.org/welte-hands arrives here with the hand as the fragment. */
+  const target = location.hash && document.getElementById(location.hash.slice(1));
+  if (target) {
+    target.classList.add("target");
+    target.scrollIntoView();
+  }
 }
 
 main();

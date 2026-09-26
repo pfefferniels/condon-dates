@@ -38,6 +38,7 @@ rests on.
 |---|---|---|
 | `docs/premises.jsonld` | `https://w3id.org/welte-premises/premises` | the premises |
 | `docs/evidence/<name>.json` | `https://w3id.org/welte-premises/evidence/<name>` | the copies a premise rests on |
+| `docs/premises.html` | | the page a browser following a premise IRI is shown |
 | `docs/context.jsonld` | `https://w3id.org/welte-premises/context.jsonld` | the terms linked-rolls does not have yet |
 | `docs/hands.jsonld` | `https://w3id.org/welte-hands/<id>` | the hands, as authority records |
 
@@ -60,6 +61,12 @@ their own, since an identity should outlast the evidence that moves a premise, a
 is kept once published even where the name read off the signature changes. Everything
 else is named by the GND: the premises name the company as
 [M. Welte & Söhne](https://d-nb.info/gnd/5125268-5).
+
+`docs/premises.html` shows each premise with the belief, its reasons and what it rests on,
+and the evidence as a timeline of the dated copies with the bound of each premise marked,
+every copy linked to its scan at Stanford. w3id sends a browser that follows a premise IRI
+there, and one that follows a hand's IRI to the hand's signatures on the main page; any
+other client is given the JSON-LD.
 
 The data are published under CC BY 4.0. Neither prefix, nor `w3id.org/reo`, whose context
 the documents name, is registered yet: `w3id/welte-premises/` and `w3id/welte-hands/` are

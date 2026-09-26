@@ -63,7 +63,7 @@ def year_counts(dates):
 def registry(hands, by_druid):
     clusters = sorted(hands["clusters"], key=lambda c: -len(c["rolls"]))
     controllers = [
-        {"n": n, "reading": c["reading"], "role": c["role"], "note": c["note"],
+        {"n": n, "id": c["id"], "reading": c["reading"], "role": c["role"], "note": c["note"],
          "count": len(c["rolls"]),
          "rolls": sorted(c["rolls"], key=lambda d: by_druid[d].get("date") or "")}
         for n, c in enumerate(clusters, start=1)
