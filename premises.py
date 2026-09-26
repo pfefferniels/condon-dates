@@ -168,14 +168,15 @@ def paper_evidence(catalogue, readings, colours, measured):
     """Each class of paper with the copies measured as of it and those of them dated to the day."""
     welte = {roll["druid"]: roll["welte_number"] for roll in catalogue}
     lab = {druid: e["corrected"]["lab"] for druid, e in colours.items() if e.get("corrected")}
+    rgb = {druid: [round(v) for v in e["corrected"]["rgb"]] for druid, e in colours.items() if e.get("corrected")}
     dated = {druid: r["date_iso"] for druid, r in readings.items()
              if druid in lab and r["confidence"] in DATED and len(r.get("date_iso") or "") == 10}
     pitch = {druid: m.get("pitch", {}).get("pitch") for druid, m in measured.items()}
     classes = {}
     for paper in PAPERS:
         members = [druid for druid in lab if paper["test"](*lab[druid])]
-        copies = sorted(({"druid": d, "welte": welte[d], "date": dated[d], "lab": lab[d]} for d in members if d in dated),
-                        key=lambda row: row["date"])
+        copies = sorted(({"druid": d, "welte": welte[d], "date": dated[d], "lab": lab[d], "rgb": rgb[d]}
+                         for d in members if d in dated), key=lambda row: row["date"])
         machines = Counter("wide" if pitch[d] >= WIDE else "narrow" for d in members if pitch.get(d))
         edge = [dated[d] for d in lab if d in dated and paper.get("edge", lambda *_: False)(*lab[d])]
         classes[paper["id"]] = {**paper, "members": len(members), "copies": copies, "machines": machines,

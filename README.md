@@ -1,10 +1,16 @@
-# Dates and Hands of Condon Welte Rolls
+# Dates, Hands, Paper and Perforators of Condon Welte Rolls
 
-A small static page showing when the red Welte rolls of the Condon collection at Stanford
-were punched, and the hands that signed them.
+A small static site on the red Welte rolls of the Condon collection at Stanford: when they
+were punched, the hands that signed them, the paper they were cut on and the perforators
+that cut them, and the premises these give for dating a roll.
 
-The page is in `docs/` and is served by GitHub Pages. Images are hot-linked from Stanford's
-IIIF endpoint; nothing is bundled.
+The site is in `docs/` and is served by GitHub Pages. The front page shows each of these in
+a section of its own, with the data behind it: the dates by year, the hands with their
+signatures, the classes of paper with every roll in the colour of its paper, the chain pitch
+and the advance of the perforator against the date, and the premises. `premises.html` states
+each premise in full and is where a premise's IRI leads. Both draw their charts with
+`docs/charts.js`, and every chart has its values in a table beside it. Images are
+hot-linked from Stanford's IIIF endpoint; nothing is bundled.
 
 ## Data
 

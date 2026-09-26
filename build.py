@@ -15,6 +15,8 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+import numpy as np
+
 import hands as hand_records
 import premises
 
@@ -26,6 +28,7 @@ PERFORATOR = HERE / "data" / "perforator.json"
 COLOURS = HERE / "paper" / "colour.json"
 DOCS = HERE / "docs"
 TARGET = DOCS / "data" / "rolls.json"
+MEASURES = DOCS / "data" / "measures.json"
 
 ISO_DATE = re.compile(r"\d{4}(-\d{2}(-\d{2})?)?")
 
@@ -73,6 +76,48 @@ def registry(hands, by_druid):
     return controllers, singles
 
 
+def measures(rolls, readings, perforator, colours):
+    """Every scanned roll's paper and perforator, with its date where it is held true or likely.
+
+    The page shows the corpus from it: the colour of every roll, the class of paper that
+    colour falls in, and the pitch and advance of the perforator against the date.
+    """
+    kinds = [p for p in premises.PAPERS if not p.get("broader")]
+    narrower = [p for p in premises.PAPERS if p.get("broader")]
+    entries = {}
+    for roll in rolls:
+        druid, reading = roll["druid"], readings.get(roll["druid"], {})
+        colour = colours.get(druid, {}).get("corrected")
+        measured = perforator["rolls"].get(druid, {})
+        entry = {"no": roll["welte_number"]}
+        if reading.get("date_iso") and reading["confidence"] in premises.DATED:
+            entry["date"] = reading["date_iso"]
+        if colour:
+            entry.update(lab=colour["lab"], rgb=[round(v) for v in colour["rgb"]],
+                         paper=next(p["id"] for p in kinds if p["test"](*colour["lab"])))
+            batch = next((p["id"] for p in narrower if p["test"](*colour["lab"])), None)
+            if batch:
+                entry["batch"] = batch
+        if measured.get("pitch", {}).get("pitch"):
+            entry["pitch"] = measured["pitch"]["pitch"]
+        step = measured.get("step")
+        if step and step["strength"] >= premises.RESOLVED:
+            entry["advance"] = step["advance"]
+        if len(entry) > 1:
+            entries[druid] = entry
+
+    papers = []
+    for paper in premises.PAPERS:
+        members = [e for e in entries.values() if paper["id"] in (e.get("paper"), e.get("batch"))]
+        days = sorted(e["date"] for e in members if len(e.get("date", "")) == 10)
+        papers.append({"id": paper["id"], "name": paper["name"], "rule": paper["rule"],
+                       "broader": paper.get("broader"), "count": len(members), "dated": len(days),
+                       "span": [days[0], days[-1]] if days else None,
+                       "rgb": [round(float(v)) for v in np.median([e["rgb"] for e in members], 0)]})
+    MEASURES.write_text(json.dumps({"papers": papers, "rolls": entries}, ensure_ascii=False, separators=(",", ":")))
+    return entries
+
+
 def main():
     rolls = json.loads(CATALOGUE.read_text())
     readings = json.loads(READINGS.read_text())
@@ -107,6 +152,9 @@ def main():
 
     colours = json.loads(COLOURS.read_text())
     stated = premises.build(DOCS, rolls, readings, perforator, colours, today)
+    measured = measures(rolls, readings, perforator, colours)
+    print(f"wrote the paper and perforator of {len(measured)} rolls to {MEASURES.relative_to(HERE)} "
+          f"({MEASURES.stat().st_size // 1024} kB)")
     named = hand_records.build(DOCS, hands)
     print(f"wrote {len(stated)} premises to docs/premises.jsonld with their evidence in docs/evidence/, "
           f"and {len(named)} hands to docs/hands.jsonld")

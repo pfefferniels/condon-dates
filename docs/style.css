@@ -313,6 +313,80 @@ a { color: inherit; }
   white-space: nowrap;
 }
 
+/* paper, perforator and premises on the front page */
+
+.lead {
+  margin: -8px 0 24px;
+  max-width: 72ch;
+  color: var(--muted);
+}
+
+.paper-classes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.paper-class {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.paper-class.narrower { border-style: solid; background: #fafafa; }
+
+.paper-class .head { align-items: center; }
+
+.paper-class .note {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.swatch {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: 3px;
+}
+
+.premise-line { margin: 8px 0 0; font-size: 14px; }
+
+.held { color: var(--muted); font-size: 13px; }
+
+.premise-list { margin: 0; padding-left: 18px; }
+
+.premise-list li { margin-bottom: 6px; }
+
+.scatter { width: 100%; }
+
+.scatter svg { display: block; overflow: visible; }
+
+.scatter text { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+
+.scatter .grid { stroke: var(--line); stroke-width: 1; }
+
+.scatter .axis { stroke: var(--line); stroke-width: 1; }
+
+.scatter .guide, .timeline .guide { stroke: var(--muted); stroke-width: 1; }
+
+.scatter .guide-label { font-size: 11px; fill: var(--ink); }
+
+.scatter .dot {
+  fill: var(--bar);
+  stroke: #fff;
+  stroke-width: 1.5;
+  paint-order: stroke;
+}
+
+.scatter .dot.on { r: 6; stroke: var(--ink); stroke-width: 1.5; }
+
+.scatter .hit { fill: transparent; cursor: pointer; outline: none; }
+
+.scatter .hit:focus-visible { stroke: var(--muted); stroke-width: 1; }
+
 /* premises */
 
 .nav {
@@ -440,7 +514,7 @@ code {
   paint-order: stroke;
 }
 
-.timeline .dot.on { fill: var(--bar-hover); r: 5.5; }
+.timeline .dot.on { r: 5.5; stroke: var(--ink); stroke-width: 1.5; }
 
 .timeline .hit {
   fill: transparent;

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Condon Welte rolls: dates and hands</title>
-<meta name="description" content="When the red Welte rolls in the Condon collection at Stanford were punched, and the hands that signed them.">
+<title>Condon Welte rolls</title>
+<meta name="description" content="When the red Welte rolls in the Condon collection at Stanford were punched, the hands that signed them, the paper they were cut on, the perforators that cut them, and the premises these give for dating a roll.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23fff'/%3E%3Cg fill='%23111'%3E%3Crect x='3' y='3' width='2' height='10'/%3E%3Crect x='7' y='5' width='2' height='8'/%3E%3Crect x='11' y='7' width='2' height='6'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -12,8 +12,11 @@
 <main>
   <header>
     <h1>Condon Welte rolls</h1>
-    <p class="sub">Dates and hands on the red Welte rolls at Stanford. <span id="count"></span></p>
-    <p class="nav"><a href="premises.html">Premises for dating a roll</a></p>
+    <p class="sub">The red Welte rolls of the Condon collection at Stanford: when they were punched, the
+      hands that signed them, the paper they were cut on and the perforators that cut them, and
+      the premises these give for dating a roll. <span id="count"></span></p>
+    <nav class="nav"><a href="#chart-section">Dates</a> · <a href="#registry-section">Hands</a> ·
+      <a href="#paper">Paper</a> · <a href="#perforator">Perforator</a> · <a href="#premises">Premises</a></nav>
   </header>
 
   <section id="chart-section">
@@ -30,11 +33,30 @@
     <div id="singles"></div>
   </section>
 
+  <section id="paper">
+    <h2>Paper</h2>
+    <p class="lead sub-count"></p>
+  </section>
+
+  <section id="perforator">
+    <h2>Perforator</h2>
+    <p class="lead">How the perforator was set, measured on every scan by punch-225: the chain pitch, the
+      distance from one slot of a held note to the next, and the advance, the step by which the machine
+      moved the paper on.</p>
+  </section>
+
+  <section id="premises">
+    <h2>Premises</h2>
+    <p class="lead">What the measurements allow an edition to conclude about a copy it measures itself. Each
+      premise is a belief with an IRI of its own; its page gives the reasons and what it rests on, and
+      <a href="premises.jsonld">premises.jsonld</a> the linked data.</p>
+  </section>
+
   <footer>
     <p>Images served by <a href="https://searchworks.stanford.edu/">Stanford Libraries</a> under IIIF.
        Built <span id="generated"></span> from the dating run in <code>punch-225</code>.</p>
   </footer>
 </main>
-<script src="app.js"></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

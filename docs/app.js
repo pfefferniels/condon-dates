@@ -1,17 +1,14 @@
-const STACKS = "https://stacks.stanford.edu/image/iiif";
-const PURL = "https://purl.stanford.edu";
+import {
+  PURL, beliefOf, day, el, fragment, installTip, lab, link as linkTo, responsive, rgb, scatter, statement,
+  tableView, timeline, yearOf,
+} from "./charts.js";
 
-const el = (tag, className, text) => {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (text != null) node.textContent = text;
-  return node;
-};
+const STACKS = "https://stacks.stanford.edu/image/iiif";
 
 const crop = (druid, roll, size) =>
   `${STACKS}/${druid}%2F${druid}_0001/${roll.box}/${size}/${roll.rot}/default.jpg`;
 
-const link = (druid) => `${PURL}/${druid}`;
+const purl = (druid) => `${PURL}/${druid}`;
 
 const caption = (roll) => [roll.performer, roll.title].filter(Boolean).join(" — ");
 
@@ -87,7 +84,7 @@ function preview(anchor, druid, roll, reading) {
 
 function rollCard(druid, roll) {
   const card = el("a", "card");
-  card.href = link(druid);
+  card.href = purl(druid);
   card.target = "_blank";
   card.rel = "noopener";
   card.append(thumbnail(druid, roll, ",400", 108));
@@ -100,7 +97,7 @@ function rollCard(druid, roll) {
 
 function signature(druid, roll, reading) {
   const anchor = el("a");
-  anchor.href = link(druid);
+  anchor.href = purl(druid);
   anchor.target = "_blank";
   anchor.rel = "noopener";
   anchor.append(thumbnail(druid, roll, ",300", 72));
@@ -170,8 +167,112 @@ function drawRegistry(data) {
   document.getElementById("singles").append(strip);
 }
 
+/* The paper: its classes with the colour they are measured in, every roll in colour
+   space, and the dated copies of each class over time. */
+function drawPaper(measures, evidence, premises) {
+  const section = document.getElementById("paper");
+  const rolls = Object.entries(measures.rolls).filter(([, r]) => r.lab);
+  const name = Object.fromEntries(measures.papers.map((p) => [p.id, p.name]));
+  section.querySelector(".sub-count").textContent =
+    `The paper of ${rolls.length} rolls is measured on the scans, in the colour of its blank paper corrected against the grey card scanned with each.`;
+
+  const classes = el("div", "paper-classes");
+  measures.papers.forEach((paper) => {
+    const card = el("div", `paper-class${paper.broader ? " narrower" : ""}`);
+    const swatch = el("span", "swatch");
+    swatch.style.background = rgb(paper.rgb);
+    swatch.title = `median colour of its ${paper.count} rolls`;
+    const head = el("div", "head");
+    head.append(swatch, el("span", "label", paper.name), el("span", "tally", `${paper.count} rolls`));
+    card.append(head, el("p", "note", paper.broader ? `${paper.rule}; within ${name[paper.broader]}` : paper.rule));
+    if (paper.span) card.append(el("p", "note", `${paper.dated} dated, ${day(paper.span[0])} to ${day(paper.span[1])}`));
+    const premise = premises.find((p) => p.paper && fragment(p.paper["@id"]) === paper.id);
+    if (premise) {
+      const line = el("p", "premise-line");
+      line.append(linkTo(`premises.html#${fragment(premise["@id"])}`, statement(premise).split(": ")[1]),
+        el("span", "held", ` · held ${beliefOf(premise).certainty}`));
+      card.append(line);
+    }
+    classes.append(card);
+  });
+
+  const map = el("div", "scatter");
+  const byDate = el("div", "timeline");
+  section.append(classes,
+    el("h3", null, "Every roll by its colour"),
+    el("p", "rule", "Each dot is a roll, in the colour of its paper, placed by how red (a*) and how yellow (b*) it is; the lines are the rules that part the classes. Hover for the values, click to open the scan."),
+    map,
+    el("h3", null, "The dated copies of each class"),
+    el("p", "rule", `Counted: copies ${evidence.rule}. Where a class is a premise, its bounds are drawn.`),
+    byDate,
+    tableView(`All ${rolls.length} rolls as a table`, ["Welte", "Punched", "Paper", "L* / a* / b*"],
+      rolls.map(([druid, r]) => ({ druid, cells: [r.no, r.date, name[r.batch || r.paper], r.lab.join(" / ")] }))));
+
+  const points = rolls.map(([druid, r]) => ({ druid, x: r.lab[1], y: r.lab[2], ...r }));
+  responsive(map, () => scatter(map, {
+    points, label: "The colour of every measured roll",
+    x: { min: -8, max: 38, ticks: [-5, 0, 5, 10, 15, 20, 25, 30, 35], label: "a*, green to red" },
+    y: { min: 4, max: 30, ticks: [5, 10, 15, 20, 25], label: "b*, blue to yellow" },
+    guides: [{ axis: "x", at: 3, note: "a* 3" }, { axis: "x", at: 10, note: "a* 10" }, { axis: "y", at: 15, note: "b* 15" }],
+    fill: (p) => rgb(p.rgb),
+    tipOf: (p) => [lab(p.lab), `Welte ${p.no}${p.date ? ` · ${day(p.date)}` : ", not dated"}`,
+      `${name[p.batch || p.paper]} · opens at Stanford`],
+  }));
+  responsive(byDate, () => timeline(byDate, {
+    groups: evidence.groups, premises,
+    tipOf: (c) => [lab(c.lab), `Welte ${c.welte} · ${day(c.date)}`, "opens at Stanford"],
+    fill: (c) => rgb(c.rgb),
+  }));
+}
+
+/* The perforator: the chain pitch of every dated copy, and the advance of those it resolves on. */
+function drawPerforator(measures, evidence, premises) {
+  const section = document.getElementById("perforator");
+  const dated = Object.entries(measures.rolls).filter(([, r]) => r.date && r.pitch);
+  const pitch = el("div", "scatter");
+  const advance = el("div", "timeline");
+  section.append(
+    el("h3", null, "The chain pitch against the date"),
+    el("p", "rule", "Each dot is a dated copy. Above 2.75 mm the copy was cut on the wide perforator, below it on the narrow one; the two ran side by side for more than ten years, so the pitch says which machine cut a copy, not when (punch-225)."),
+    pitch,
+    el("h3", null, "The advance against the date"),
+    el("p", "rule", `Counted: copies ${evidence.rule}. The advance halved once, and both premises on it are drawn.`),
+    advance,
+    tableView(`All ${dated.length} dated copies as a table`, ["Welte", "Punched", "Chain pitch (mm)", "Advance (mm)"],
+      dated.map(([druid, r]) => ({ druid, cells: [r.no, r.date, r.pitch, r.advance] }))));
+  const points = dated.map(([druid, r]) => ({ druid, x: yearOf(r.date), y: r.pitch, ...r }));
+  responsive(pitch, () => scatter(pitch, {
+    points, label: "The chain pitch of every dated copy",
+    x: { min: 1904, max: 1929, ticks: [1905, 1910, 1915, 1920, 1925], label: "punched" },
+    y: { min: 2.2, max: 3.15, ticks: [2.3, 2.5, 2.7, 2.9, 3.1], label: "chain pitch, mm" },
+    guides: [{ axis: "y", at: 2.75, note: "wide perforator above, narrow below" }],
+    tipOf: (p) => [`${p.pitch} mm`, `Welte ${p.no} · ${day(p.date)}`,
+      `${p.advance ? `advance ${p.advance} mm · ` : ""}opens at Stanford`],
+  }));
+  responsive(advance, () => timeline(advance, {
+    groups: evidence.groups, premises,
+    tipOf: (c) => [`${c.advance} mm`, `Welte ${c.welte} · ${day(c.date)}`, `strength ${c.strength} · opens at Stanford`],
+  }));
+}
+
+/* The premises, one line each, with the page that states them in full. */
+function drawPremises(premises) {
+  const list = el("ul", "premise-list");
+  premises.forEach((premise) => {
+    const item = el("li");
+    item.append(linkTo(`premises.html#${fragment(premise["@id"])}`, statement(premise)),
+      el("span", "held", ` · held ${beliefOf(premise).certainty}`));
+    list.append(item);
+  });
+  document.getElementById("premises").append(list);
+}
+
 async function main() {
-  const data = await (await fetch("data/rolls.json")).json();
+  const [data, measures, catalogue, paperEvidence, advanceEvidence] = await Promise.all(
+    ["data/rolls.json", "data/measures.json", "premises.jsonld", "evidence/paper.json", "evidence/advance.json"]
+      .map(async (path) => (await fetch(path)).json()));
+  const premises = catalogue.productions;
+  installTip();
   const { scanned, dated } = data.totals;
 
   document.body.append(overlay);
@@ -185,6 +286,9 @@ async function main() {
   let buttons;
   buttons = drawChart(data, (year, bar) => showYear(data, year, buttons, bar));
   drawRegistry(data);
+  drawPaper(measures, paperEvidence, premises);
+  drawPerforator(measures, advanceEvidence, premises);
+  drawPremises(premises);
 
   /* A hand's IRI on w3id.org/welte-hands arrives here with the hand as the fragment. */
   const target = location.hash && document.getElementById(location.hash.slice(1));
