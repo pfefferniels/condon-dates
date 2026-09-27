@@ -6130,6 +6130,7 @@
   "reading": "29825",
   "date_iso": "1925-08-29",
   "confidence": "medium",
+  "verified": "2026-09-27",
   "roll_number": null,
   "hand": null,
   "crop": {
@@ -6137,7 +6138,7 @@
    "rot": 90
   },
   "source": "batch-15.json",
-  "notes": "Stamped in black on the bare red paper, the line running diagonally across the roll at about sixty degrees; read after rotating. Five figures with no separators, 2 9 8 2 5, so 29.8.25 on the corpus convention. The third figure is blotted, but thresholding shows two loops each closed on the left, which makes it an 8 and not a 3."
+  "notes": "the editor confirmed the year 25 on the scan on 2026-09-27, the stamp being the one whose 3 and 5 were confused on Welte 5661. Stamped in black on the bare red paper, the line running diagonally across the roll at about sixty degrees; read after rotating. Five figures with no separators, 2 9 8 2 5, so 29.8.25 on the corpus convention. The third figure is blotted, but thresholding shows two loops each closed on the left, which makes it an 8 and not a 3."
  },
  "zw485gh6070": {
   "inscription": "1184   3. 8. 10   Roth / [second hand, illegible]",
