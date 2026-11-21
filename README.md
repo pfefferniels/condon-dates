@@ -42,7 +42,8 @@ Under `https://w3id.org/condon-welte/`, in the format of
 | `context.jsonld` | `docs/context.jsonld` | the terms linked-rolls does not have yet |
 
 A browser is sent to `docs/premises.html` or to the hand on the front page, any other client
-to the JSON-LD. The prefix is not registered yet.
+to the JSON-LD. The prefix is not registered yet
+([perma-id/w3id.org#7261](https://github.com/perma-id/w3id.org/pull/7261)).
 
 - **Premises.** A premise states that a setting of the perforator or a class of paper was
   used only before a day, after one, or between two. An edition measures its own copy and
