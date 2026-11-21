@@ -4,7 +4,6 @@
 # all; 303, since the IRI names a person and the document describes one. The document is
 # served from GitHub Pages; moving it means changing this file only.
 
-Options +FollowSymLinks
 RewriteEngine on
 
 # A browser is shown the hand's signatures on the page; anything else is given the

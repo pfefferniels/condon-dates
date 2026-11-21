@@ -4,7 +4,6 @@
 # premises#advance-1mm-belief is the belief that the 1.0 mm advance was not used after a
 # day. The documents are served from GitHub Pages; moving them means changing this file.
 
-Options +FollowSymLinks
 RewriteEngine on
 
 # A browser is shown the page, which finds the premise by its fragment; anything else

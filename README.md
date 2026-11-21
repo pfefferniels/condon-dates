@@ -116,6 +116,6 @@ every copy linked to its scan at Stanford. w3id sends a browser that follows a p
 there, and one that follows a hand's IRI to the hand's signatures on the main page; any
 other client is given the JSON-LD.
 
-The data are published under CC BY 4.0. Neither prefix, nor `w3id.org/reo`, whose context
-the documents name, is registered yet: `w3id/welte-premises/` and `w3id/welte-hands/` are
-the folders to submit to [perma-id/w3id.org](https://github.com/perma-id/w3id.org).
+The data are published under CC BY 4.0. `w3id.org/reo`, whose context the documents name,
+is registered. Neither prefix here is yet: `w3id/welte-premises/` and `w3id/welte-hands/`
+are the folders to submit to [perma-id/w3id.org](https://github.com/perma-id/w3id.org).
