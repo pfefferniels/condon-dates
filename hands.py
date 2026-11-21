@@ -7,28 +7,26 @@ names by the GND. A hand is not a premise: an edition names it as the actor of t
 that wrote an inscription and takes nothing from it to date a copy, since the hand and the
 date come off the same inscription (perforator/README.md).
 
-Each hand has an IRI of its own under https://w3id.org/welte-hands/, made of the id of its
-cluster in hands.json, e.g. https://w3id.org/welte-hands/fritz, which w3id redirects to the
-one document that describes them all. An id is kept once published, even where the name
-read off the signature changes, since the name is a reading and not an identification.
+Each hand has an IRI of its own, hands/ and the id of its cluster in hands.json, e.g.
+https://w3id.org/condon-welte/hands/fritz, which w3id redirects to the one document that
+describes them all. An id is kept once published, even where the name read off the
+signature changes, since the name is a reading and not an identification.
 
-    docs/hands.jsonld            the hands, at https://w3id.org/welte-hands/
+    docs/hands.jsonld            the hands, at hands
 """
 import json
 
-BASE = "https://w3id.org/welte-hands/"
-LICENSE = "https://creativecommons.org/licenses/by/4.0/"
-REO = "https://w3id.org/reo/context.jsonld"
+from iris import BASE, LICENSE, REO
 
 
 def document(hands):
     return {
         "@context": [REO, {"comment": "rdfs:comment", "@base": BASE}],
-        "@id": BASE,
+        "@id": "hands",
         "title": "The hands that signed the red Welte rolls of the Condon collection",
         "license": LICENSE,
         "comment": hands["_"],
-        "@included": [{"@id": c["id"], "name": c["reading"], "sameAs": [], "comment": c["note"]}
+        "@included": [{"@id": f"hands/{c['id']}", "name": c["reading"], "sameAs": [], "comment": c["note"]}
                       for c in hands["clusters"]],
     }
 

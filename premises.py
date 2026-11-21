@@ -21,9 +21,9 @@ link the dated copies it rests on, the data and the scripts, at the commits they
 
 Who signed the rolls is not a premise but an identity, and hands.py publishes it apart.
 
-The IRIs stand on w3id.org, which w3id/welte-premises/.htaccess redirects to the files on
-GitHub Pages. They are named after what they state, never numbered, so a rebuild keeps
-them while the bounds and the certainty of a premise move with the evidence.
+The IRIs stand on w3id.org under iris.BASE. They are named after what they state, never
+numbered, so a rebuild keeps them while the bounds and the certainty of a premise move with
+the evidence.
 """
 import json
 import statistics
@@ -34,9 +34,7 @@ from pathlib import Path
 
 import numpy as np
 
-BASE = "https://w3id.org/welte-premises/"
-LICENSE = "https://creativecommons.org/licenses/by/4.0/"
-REO = "https://w3id.org/reo/context.jsonld"
+from iris import BASE, LICENSE, REO
 
 PURL = "https://purl.stanford.edu"
 CONDON_DATES = "https://github.com/pfefferniels/condon-dates/blob/{commit}/"

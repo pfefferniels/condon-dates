@@ -295,7 +295,7 @@ async function main() {
   drawPerforator(measures, advanceEvidence, premises);
   drawPremises(premises);
 
-  /* A hand's IRI on w3id.org/welte-hands arrives here with the hand as the fragment. */
+  /* A hand's IRI on w3id.org/condon-welte/hands/ arrives here with the hand as the fragment. */
   const target = location.hash && document.getElementById(location.hash.slice(1));
   if (target) {
     target.classList.add("target");

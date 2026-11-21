@@ -1,7 +1,7 @@
 /* What both pages draw with: small DOM helpers, the tooltip, the timeline of dated copies
    and the scatter plot. Every value reaches the page as text, never as markup. */
 
-export const BASE = "https://w3id.org/welte-premises/";
+export const BASE = "https://w3id.org/condon-welte/";
 export const PURL = "https://purl.stanford.edu";
 const SVG = "http://www.w3.org/2000/svg";
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
