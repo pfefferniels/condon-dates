@@ -1,5 +1,6 @@
 import {
-  BASE, beliefOf, el, fragment, installTip, lab, link, responsive, rgb, statement, tableView, timeline,
+  BASE, beliefOf, copyButton, el, fragment, installTip, lab, link, responsive, rgb, statement, tableView,
+  timeline,
 } from "./charts.js";
 
 /* An evidence IRI stands on w3id, which serves the file beside this page. */
@@ -13,21 +14,6 @@ function usedLabel(iri) {
   if (evidencePath(iri)) return ["the dated copies", ` (${iri.slice(BASE.length)})`];
   if (iri === `${BASE}papers`) return ["the classes of paper", " (papers)"];
   return [iri, ""];
-}
-
-function copyButton(text) {
-  const button = el("button", "copy", "Copy");
-  button.type = "button";
-  button.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      button.textContent = "Copied";
-    } catch {
-      button.textContent = "Select and copy";
-    }
-    setTimeout(() => (button.textContent = "Copy"), 1600);
-  });
-  return button;
 }
 
 function field(list, term, ...content) {

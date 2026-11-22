@@ -25,6 +25,45 @@ export const link = (href, text) => {
   return a;
 };
 
+export const iriOf = (id) => new URL(id, BASE).href;
+
+export function copyButton(text) {
+  const button = el("button", "copy", "Copy");
+  button.type = "button";
+  button.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      button.textContent = "Copied";
+    } catch {
+      button.textContent = "Select and copy";
+    }
+    setTimeout(() => (button.textContent = "Copy"), 1600);
+  });
+  return button;
+}
+
+/* An entity's IRI to follow or copy, and its node with the document's context, folded
+   away, so that what unfolds is JSON-LD that stands on its own. */
+export function linkedData(id, node, context) {
+  const iri = iriOf(id);
+  const raw = el("pre", "raw", JSON.stringify({ "@context": context, ...node }, null, 2));
+  raw.hidden = true;
+  const toggle = el("button", "copy", "JSON-LD");
+  toggle.type = "button";
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.addEventListener("click", () => {
+    raw.hidden = !raw.hidden;
+    toggle.setAttribute("aria-expanded", String(!raw.hidden));
+  });
+  const anchor = link(iri);
+  anchor.append(el("code", null, iri));
+  const line = el("div", "iri-line");
+  line.append(anchor, copyButton(iri), toggle);
+  const holder = el("div", "linked-data");
+  holder.append(line, raw);
+  return holder;
+}
+
 /* A date as it reads: a day, or the month or year a partial date gives. */
 export const day = (iso) => {
   const [y, m, d] = iso.split("-").map(Number);

@@ -34,10 +34,7 @@ h1 {
   letter-spacing: -0.01em;
 }
 
-.sub {
-  margin: 6px 0 0;
-  color: var(--muted);
-}
+.sub { margin: 6px 0 0; }
 
 h2 {
   margin: 0 0 20px;
@@ -45,7 +42,6 @@ h2 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--muted);
 }
 
 h3 {
@@ -54,7 +50,6 @@ h3 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--muted);
 }
 
 section { margin-bottom: 72px; }
@@ -129,7 +124,6 @@ a { color: inherit; }
 #hint {
   margin: 28px 0 0;
   font-size: 14px;
-  color: var(--muted);
 }
 
 /* roll grids */
@@ -173,7 +167,6 @@ a { color: inherit; }
 .card .what {
   margin-top: 3px;
   font-size: 13px;
-  color: var(--muted);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -264,8 +257,6 @@ a { color: inherit; }
 
 .head .label { font-weight: 600; }
 
-.head .reading { color: var(--muted); }
-
 .head .tally {
   margin-left: auto;
   font-size: 13px;
@@ -276,7 +267,6 @@ a { color: inherit; }
 .controller .note {
   margin: 6px 0 0;
   font-size: 14px;
-  color: var(--muted);
   max-width: 62ch;
 }
 
@@ -307,7 +297,6 @@ a { color: inherit; }
 .hand .tag {
   margin-top: 5px;
   font-size: 11px;
-  color: var(--muted);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -318,7 +307,6 @@ a { color: inherit; }
 .lead {
   margin: -8px 0 24px;
   max-width: 72ch;
-  color: var(--muted);
 }
 
 .paper-classes {
@@ -341,7 +329,6 @@ a { color: inherit; }
 .paper-class .note {
   margin: 6px 0 0;
   font-size: 13px;
-  color: var(--muted);
 }
 
 .swatch {
@@ -354,11 +341,34 @@ a { color: inherit; }
 
 .premise-line { margin: 8px 0 0; font-size: 14px; }
 
-.held { color: var(--muted); font-size: 13px; }
+.held { font-size: 13px; }
 
 .premise-list { margin: 0; padding-left: 18px; }
 
-.premise-list li { margin-bottom: 6px; }
+.premise-list li { margin-bottom: 14px; }
+
+.iri-line {
+  margin-top: 8px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.iri-line code { font-size: 12px; }
+
+.raw {
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  max-height: 360px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #fafafa;
+  font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.copy[aria-expanded="true"] { border-color: var(--muted); background: var(--hover); }
 
 .scatter { width: 100%; }
 
@@ -392,7 +402,6 @@ a { color: inherit; }
 .nav {
   margin: 14px 0 0;
   font-size: 14px;
-  color: var(--muted);
 }
 
 .premise {
@@ -450,11 +459,11 @@ code {
   border-radius: 3px;
   background: #fff;
   font: 12px/1.6 inherit;
-  color: var(--muted);
+  color: var(--ink);
   cursor: pointer;
 }
 
-.copy:hover { color: var(--ink); border-color: var(--muted); }
+.copy:hover { border-color: var(--muted); }
 
 .reason {
   margin: 0 0 12px;
@@ -490,7 +499,6 @@ code {
   margin: -8px 0 20px;
   max-width: 72ch;
   font-size: 14px;
-  color: var(--muted);
 }
 
 .timeline { width: 100%; }
@@ -550,7 +558,7 @@ code {
 
 .table-view { margin-top: 20px; font-size: 14px; }
 
-.table-view summary { cursor: pointer; color: var(--muted); }
+.table-view summary { cursor: pointer; }
 
 .table-view table {
   width: 100%;

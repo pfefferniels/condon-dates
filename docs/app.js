@@ -1,7 +1,15 @@
 import {
-  PURL, beliefOf, day, el, fragment, installTip, lab, link as linkTo, responsive, rgb, scatter, statement,
-  tableView, timeline, yearOf,
+  PURL, beliefOf, day, el, fragment, installTip, lab, link as linkTo, linkedData, responsive, rgb, scatter,
+  statement, tableView, timeline, yearOf,
 } from "./charts.js";
+
+const recordOf = (doc, id) => doc["@included"].find((node) => node["@id"] === id);
+
+/* The entity's IRI and JSON-LD, where the document has a record of it. */
+const recordLine = (doc, id) => {
+  const node = recordOf(doc, id);
+  return node ? [linkedData(id, node, doc["@context"])] : [];
+};
 
 const STACKS = "https://stacks.stanford.edu/image/iiif";
 
@@ -140,7 +148,7 @@ function showYear(data, year, buttons, picked) {
   panel.append(grid);
 }
 
-function drawRegistry(data) {
+function drawRegistry(data, hands) {
   const registry = document.getElementById("registry");
   data.controllers.forEach((controller) => {
     const block = el("div", "controller");
@@ -149,7 +157,7 @@ function drawRegistry(data) {
     head.append(el("span", "label", `Controller ${controller.n}`));
     if (controller.reading) head.append(el("span", "reading", controller.reading));
     head.append(el("span", "tally", `${controller.count} rolls`));
-    block.append(head, el("p", "note", controller.note));
+    block.append(head, el("p", "note", controller.note), ...recordLine(hands, `hands/${controller.id}`));
     const strip = el("div", "strip");
     controller.rolls.forEach((druid) =>
       strip.append(signature(druid, data.rolls[druid], controller.reading)));
@@ -169,7 +177,7 @@ function drawRegistry(data) {
 
 /* The paper: its classes with the colour they are measured in, every roll in colour
    space, and the dated copies of each class over time. */
-function drawPaper(measures, evidence, premises) {
+function drawPaper(measures, evidence, premises, papers) {
   const section = document.getElementById("paper");
   const rolls = Object.entries(measures.rolls).filter(([, r]) => r.lab);
   const name = Object.fromEntries(measures.papers.map((p) => [p.id, p.name]));
@@ -196,6 +204,7 @@ function drawPaper(measures, evidence, premises) {
         el("span", "held", ` · held ${beliefOf(premise).certainty}`));
       card.append(line);
     }
+    card.append(...recordLine(papers, `papers#${paper.id}`));
     classes.append(card);
   });
 
@@ -260,21 +269,24 @@ function drawPerforator(measures, evidence, premises) {
   }));
 }
 
-/* The premises, one line each, with the page that states them in full. */
-function drawPremises(premises) {
+/* The premises, one line each, with the page that states them in full. A premise is cited
+   by its belief, so the belief's IRI is the one shown. */
+function drawPremises(catalogue) {
   const list = el("ul", "premise-list");
-  premises.forEach((premise) => {
+  catalogue.productions.forEach((premise) => {
     const item = el("li");
     item.append(linkTo(`premises.html#${fragment(premise["@id"])}`, statement(premise)),
-      el("span", "held", ` · held ${beliefOf(premise).certainty}`));
+      el("span", "held", ` · held ${beliefOf(premise).certainty}`),
+      linkedData(beliefOf(premise)["@id"], premise, catalogue["@context"]));
     list.append(item);
   });
   document.getElementById("premises").append(list);
 }
 
 async function main() {
-  const [data, measures, catalogue, paperEvidence, advanceEvidence] = await Promise.all(
-    ["data/rolls.json", "data/measures.json", "premises.jsonld", "evidence/paper.json", "evidence/advance.json"]
+  const [data, measures, catalogue, papers, hands, paperEvidence, advanceEvidence] = await Promise.all(
+    ["data/rolls.json", "data/measures.json", "premises.jsonld", "papers.jsonld", "hands.jsonld",
+      "evidence/paper.json", "evidence/advance.json"]
       .map(async (path) => (await fetch(path)).json()));
   const premises = catalogue.productions;
   installTip();
@@ -290,10 +302,10 @@ async function main() {
 
   let buttons;
   buttons = drawChart(data, (year, bar) => showYear(data, year, buttons, bar));
-  drawRegistry(data);
-  drawPaper(measures, paperEvidence, premises);
+  drawRegistry(data, hands);
+  drawPaper(measures, paperEvidence, premises, papers);
   drawPerforator(measures, advanceEvidence, premises);
-  drawPremises(premises);
+  drawPremises(catalogue);
 
   /* A hand's IRI on w3id.org/condon-welte/hands/ arrives here with the hand as the fragment. */
   const target = location.hash && document.getElementById(location.hash.slice(1));
