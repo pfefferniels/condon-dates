@@ -325,7 +325,9 @@ def papers_document(classes, method):
                    "scan, corrected against the grey card scanned above the leader, in CIELAB with a D65 white, "
                    "or by the lines printed on it, as paper/ruling.py finds them. The rules were drawn on "
                    "Stanford's scans of the Condon collection, all from one scanner.",
-        "@included": [{"@id": f"papers#{p['id']}", "name": p["name"], "seeAlso": method[p["id"] == "ruled"],
+        # E57 is the range of crm:P126_employed, by which a premise names its paper.
+        "@included": [{"@id": f"papers#{p['id']}", "@type": "crm:E57_Material", "name": p["name"],
+                       "seeAlso": method[p["id"] == "ruled"],
                        "comment": p.get("definition") or f"Paper whose corrected colour has {p['rule']}.",
                        **({"broader": f"papers#{p['broader']}"} if p.get("broader") else {})}
                       for p in classes.values()],

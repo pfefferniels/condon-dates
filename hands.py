@@ -26,7 +26,8 @@ def document(hands):
         "title": "The hands that signed the red Welte rolls of the Condon collection",
         "license": LICENSE,
         "comment": hands["_"],
-        "@included": [{"@id": f"hands/{c['id']}", "name": c["reading"], "sameAs": [], "comment": c["note"]}
+        "@included": [{"@id": f"hands/{c['id']}", "@type": "crm:E21_Person", "name": c["reading"], "sameAs": [],
+                       "comment": c["note"]}
                       for c in hands["clusters"]],
     }
 
