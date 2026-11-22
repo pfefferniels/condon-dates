@@ -13,90 +13,105 @@
  "@included": [
   {
    "@id": "hands/wissler",
+   "@type": "crm:E21_Person",
    "name": "Wissler",
    "sameAs": [],
    "comment": "Changing from Kurrent to Latin from April 1911 on? 1909-1913."
   },
   {
    "@id": "hands/fritz",
+   "@type": "crm:E21_Person",
    "name": "Fritz",
    "sameAs": [],
    "comment": "Writes month as word (Novb, Dezb, Jan, Febr). Nov 1908 - Feb 1909."
   },
   {
    "@id": "hands/b-schaefer",
+   "@type": "crm:E21_Person",
    "name": "B. Schäfer",
    "sameAs": [],
    "comment": "Signed without a roll number on some. 1904-1909. Distinct from the fine M. Schäfer."
   },
   {
    "@id": "hands/kopf",
+   "@type": "crm:E21_Person",
    "name": "Kopf",
    "sameAs": [],
    "comment": ""
   },
   {
    "@id": "hands/roth",
+   "@type": "crm:E21_Person",
    "name": "Roth",
    "sameAs": [],
    "comment": "1908-1911."
   },
   {
    "@id": "hands/hohnrieder",
+   "@type": "crm:E21_Person",
    "name": "Hohnrieder",
    "sameAs": [],
    "comment": "1908-1912."
   },
   {
    "@id": "hands/kraemer",
+   "@type": "crm:E21_Person",
    "name": "Krämer",
    "sameAs": [],
    "comment": "Umlaut over the a. 1909-1912."
   },
   {
    "@id": "hands/kummer",
+   "@type": "crm:E21_Person",
    "name": "Kummer",
    "sameAs": [],
    "comment": "1907-1910."
   },
   {
    "@id": "hands/sph",
+   "@type": "crm:E21_Person",
    "name": "Sph.",
    "sameAs": [],
    "comment": "Abbreviation. Only 1913."
   },
   {
    "@id": "hands/herrmann",
+   "@type": "crm:E21_Person",
    "name": "J. Herrmann",
    "sameAs": [],
    "comment": "No roll number and no date."
   },
   {
    "@id": "hands/m-schaefer",
+   "@type": "crm:E21_Person",
    "name": "M. Schäfer",
    "sameAs": [],
    "comment": "Written along the roll rather than across. No date."
   },
   {
    "@id": "hands/guendner",
+   "@type": "crm:E21_Person",
    "name": "Gündner",
    "sameAs": [],
    "comment": "Jan-Mar 1909."
   },
   {
    "@id": "hands/schlegel",
+   "@type": "crm:E21_Person",
    "name": "Schlegel",
    "sameAs": [],
    "comment": "Maybe Pflugel? On rb625rv7300 it follows the words Hans u. Nov 1909 - Jan 1910."
   },
   {
    "@id": "hands/pencil-monogram",
+   "@type": "crm:E21_Person",
    "name": "M. W.?",
    "sameAs": [],
    "comment": "The only pencil hand among the early rolls. Oct 1907 - Apr 1908."
   },
   {
    "@id": "hands/mo",
+   "@type": "crm:E21_Person",
    "name": "Mo.",
    "sameAs": [],
    "comment": "May-Aug 1913."
